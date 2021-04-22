@@ -1,0 +1,389 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="编辑曲线 - Unity 手册">
+<title>编辑曲线 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/AnimationEditorCurve.png">
+<meta name="description" content="Unity Editor 中有几个不同的功能和窗口使用__曲线__来显示和编辑数据。尽管存在一些例外情况，但可用于查看和操纵曲线的方法在所有这些方面基本相同。">
+<meta property="og:description" content="Unity Editor 中有几个不同的功能和窗口使用__曲线__来显示和编辑数据。尽管存在一些例外情况，但可用于查看和操纵曲线的方法在所有这些方面基本相同。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'EditingCurves';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/EditingCurves.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/EditingCurves.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/EditingCurves.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/EditingCurves.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/EditingCurves.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/EditingCurves.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/EditingCurves.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/EditingCurves.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/EditingCurves.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/EditingCurves.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/EditingCurves.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/EditingCurves.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/EditingCurves.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/EditingCurves.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/EditingCurves.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/EditingCurves.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/EditingCurves.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/EditingCurves.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/EditingCurves.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/EditingCurves.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/EditingCurves.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/EditingCurves.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/EditingCurves.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/EditingCurves.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/EditingCurves.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/EditingCurves.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/EditingCurves.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/EditingCurves.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/EditingCurves.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/EditingCurves.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/EditingCurves.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/EditingCurves.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/EditingCurves.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/EditingCurves.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/EditingCurves.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/EditingCurves.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/EditingCurves.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/EditingCurves.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/EditingCurves.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/EditingCurves.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/EditingCurves.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/EditingCurves.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/EditingCurves.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/EditingCurves.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/EditingCurves.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/EditingCurves.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/EditingCurves.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/EditingCurves.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="AnimationSection.html">动画</a></li>
+<li><a href="AnimationClips.html">动画剪辑</a></li>
+<li><a href="AnimationEditorGuide.html">Animation 窗口指南</a></li>
+<li>编辑曲线</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="animeditor-AnimationCurves.html"></a></span><div class="tip">使用动画曲线</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="animeditor-AdvancedKeySelectionAndManipulation.html"></a></span><div class="tip">关键帧清单 (Dopesheet) 模式中的关键点操作</div>
+</div>
+</div></div>
+<h1>编辑曲线</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity Editor 中有几个不同的功能和窗口使用__曲线__来显示和编辑数据。尽管存在一些例外情况，但可用于查看和操纵曲线的方法在所有这些方面基本相同。</p>
+
+<ul>
+<li>
+<a href="AnimationEditorGuide.html">Animation 窗口</a>使用曲线来显示和编辑__动画剪辑__中随时间变化的属性的值。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationEditorCurve.png" alt="Animation 窗口。">
+<figcaption>Animation 窗口。</figcaption>
+</figure>
+
+<ul>
+<li>脚本组件可具有能够用于各种事物的<a href="EditingValueProperties.html">动画曲线</a>类型的成员变量。单击 Inspector 中的曲线将打开__曲线编辑器 (Curve Editor)__。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/CurveEditorPopup.png" alt="曲线编辑器。">
+<figcaption>曲线编辑器。</figcaption>
+</figure>
+
+<ul>
+<li>
+<a href="class-AudioSource.html">Audio Source</a> 组件使用曲线来控制衰减和其他属性（作为与音频源的距离的函数）。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AudioSourceCurve.png" alt="Inspector 中 AudioSource 组件的距离函数曲线。">
+<figcaption>Inspector 中 AudioSource 组件的距离函数曲线。</figcaption>
+</figure>
+
+<ul>
+<li>
+<a href="PartSysUsage.html">粒子系统</a>使用曲线来随时间改变粒子属性。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ParticleSystemCurve.png" alt="粒子系统曲线编辑器。">
+<figcaption>粒子系统曲线编辑器。</figcaption>
+</figure>
+
+<p>虽然这些控件有细微差别，但都可以使用完全相同的方式对__曲线__进行编辑。本页将介绍如何在这些控件中导航和编辑曲线。</p>
+
+<h2>在曲线上添加和移动关键点</h2>
+
+<p>在曲线上双击应当放置__关键点__的位置，即可将关键点添加到曲线中。此外，也可以通过右键单击曲线并从上下文菜单中选择 <strong>Add Key</strong> 来添加__关键点__。</p>
+
+<p>添加__关键点__后，可使用鼠标将其四处拖动：</p>
+
+<ul>
+<li>通过单击选定__关键点<strong>。用鼠标拖动所选的__关键点</strong>。</li>
+<li>要在拖动时将__关键点__贴靠到网格，请在拖动时按住 <strong>Command</strong> 键（Mac 系统）/<strong>Control</strong> 键（Windows 系统）。</li>
+</ul>
+
+<p>另外，还可一次选择多个__关键点__：</p>
+
+<ul>
+<li>要一次选择多个__关键点__，请在按住 <strong>Shift</strong> 的同时单击关键点。</li>
+<li>要取消选择所选的__关键点__，请在按住 <strong>Ctrl</strong> 的同时再次单击该关键点。</li>
+<li>要选择矩形区域内的所有__关键点__，单击一个空白位置，然后拖出矩形选框。</li>
+<li>通过按住 __Shift__，也可以将矩形选框内的关键点添加到现有选定关键点。</li>
+</ul>
+
+<p>通过选定__关键点__并按 <strong>Delete</strong> 或者通过右键单击关键点并从上下文菜单中选择 __Delete Key__，即可删除关键点。</p>
+
+<h2>编辑关键点</h2>
+
+<p>在曲线编辑器中直接编辑关键点值是 Unity 5.1 中的一项新功能。使用 <strong>Enter/Return</strong> 或上下文菜单开始编辑选定的关键点，使用 <strong>Tab</strong> 在字段之间切换，使用 <strong>Enter/Return</strong> 提交更改，使用 <strong>Escape</strong> 取消编辑。</p>
+
+<h2>在曲线视图中导航</h2>
+
+<p>使用 __Animation 视图__时，可轻松放大要处理的曲线的细节，或进行缩小以查看全貌。</p>
+
+<p>随时都可以按 <strong>F</strong> 来完全框选显示的曲线或选定的关键点。</p>
+
+<h3>缩放</h3>
+
+<p>可以使用鼠标的滚轮、触控板的缩放功能或者在用鼠标右键拖动时按住 <strong>Alt</strong> 键来__缩放__曲线视图。</p>
+
+<p>只能在水平轴或垂直轴上进行缩放：</p>
+
+<ul>
+<li>在 Mac 上按住 <strong>Command</strong> 键/在 Windows 上按住 <strong>Control</strong> 键进行的__缩放__是水平缩放。</li>
+<li>按住 <strong>Shift</strong> 键进行__缩放__是垂直缩放。</li>
+</ul>
+
+<p>此外，可以拖动滚动条的端点来缩小或扩展曲线视图中显示的区域。</p>
+
+<h3>平移</h3>
+
+<p>可以使用鼠标中键拖动或在用鼠标左键拖动时按住 <strong>Alt</strong> 键来__平移__曲线视图。</p>
+
+<h2>编辑切线</h2>
+
+<p>一个关键点有两条__切线__：一条在左侧用于向内的斜坡，另一条在右侧用于向外的斜坡。切线可控制关键点之间的曲线形状。可从许多不同的切线类型中进行选择一种类型，用于控制曲线离开一个关键点并到达下一个关键点的方式。右键单击一个关键点可以选择该关键点的切线类型。</p>
+
+<figure>
+<img src="../uploads/Main/AnimationCurveTangentMenu.png" alt="">
+</figure>
+
+<p>要使动画值在通过关键点时实现平滑变化，左右切线必须共线。以下切线类型可确保平滑：</p>
+
+<ul>
+<li>
+<strong>Clamped Auto__：这是默认切线模式。系统会自动设置切线，使曲线通过关键点时保持平滑。编辑关键点的位置或时间时，切线会进行调整以防止曲线“超出”目标值。如果在 Clamped Auto 模式下手动调整关键点的切线，则会切换到 </strong>Free Smooth__ 模式。在下面的示例中，切线自动进入斜坡并在移动关键点时趋于平稳：</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationClampedAutoTangents.gif" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Auto__：这是<a href="UpgradeGuide55.html">旧版切线模式</a>，但此选项仍然保留着以便与旧项目向后兼容。除非有特别原因要使用此模式，否则请使用默认的 </strong>Clamped Auto<strong>。当关键点设置为此模式时，系统会自动设置切线，使曲线通过关键点时保持平滑。但是，与 </strong>Clamped Auto__ 模式相比有两个不同之处：
+1.当编辑关键点的位置或时间时，切线不会自动调整；切线仅在最初将关键点设置为此模式时进行调整。
+2.Unity 在计算切线时，不会考虑避免“超出”关键点的目标值。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationAuto.png" alt="">
+</figure>
+
+<ul>
+<li>__Free Smooth__：拖动切线控制柄来自由设置切线。它们被锁定为共线以确保平滑。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationFreeSmooth.png" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Flat__：切线设置为水平（这是 </strong>Free Smooth__ 的特例）。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationFlat.png" alt="">
+</figure>
+
+<p>有时可能不希望曲线在通过关键点时是平滑的。要在曲线中产生急剧变化，请选择 <strong>Broken</strong> 切线模式之一。</p>
+
+<figure>
+<img src="../uploads/Main/AnimationCurveTangentTypes.png" alt="">
+</figure>
+
+<p>使用中断的切线时，可以单独设置左右切线。左右切线中的每一条切线都可以设置为以下类型之一：</p>
+
+<ul>
+<li>__Broken - Free__：拖动切线控制柄来自由设置切线。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationBrokenFree.png" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Broken - Linear__：切线指向临近的关键点。要创建线性曲线段，请将两端的切线设置为 </strong>Linear<strong>。在下面的示例中，所有三个关键点都已设置为 </strong>Broken - Linear__，从而形成从关键点到关键点的直线。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationBrokenLinear.png" alt="">
+</figure>
+
+<ul>
+<li>__Broken - Constant__：曲线在两个关键点之间保持常量值。左关键点的值决定了曲线段的值。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationBrokenConstant.png" alt="">
+</figure>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="animeditor-AnimationCurves.html"></a></span><div class="tip">使用动画曲线</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="animeditor-AdvancedKeySelectionAndManipulation.html"></a></span><div class="tip">关键帧清单 (Dopesheet) 模式中的关键点操作</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

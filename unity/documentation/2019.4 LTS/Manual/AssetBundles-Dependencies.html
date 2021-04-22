@@ -1,0 +1,300 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="AssetBundle 依赖项 - Unity 手册">
+<title>AssetBundle 依赖项 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/AssetBundleDuplicate.png">
+<meta name="description" content="如果一个或多个 UnityEngine.Objects 包含对位于另一个捆绑包中的 UnityEngine.Object 的引用，则 AssetBundle 可以变为依赖于其他 AssetBundle。如果 UnityEngine.Object 包含对任何 AssetBundle 中未包含的 UnityEngine.Object 的引用，则不会发生依赖关系。在这种情况下，在构建 AssetBundle 时，捆绑包所依赖的对象的副本将复制到捆绑包中。如果多个捆绑包中的多个对象包含对未分配给捆绑包的同一对象的引用，则每个对该对象具有依赖关系的捆绑包将创建其自己的对象副本并将其打包到构建的 AssetBundle 中。">
+<meta property="og:description" content="如果一个或多个 UnityEngine.Objects 包含对位于另一个捆绑包中的 UnityEngine.Object 的引用，则 AssetBundle 可以变为依赖于其他 AssetBundle。如果 UnityEngine.Object 包含对任何 AssetBundle 中未包含的 UnityEngine.Object 的引用，则不会发生依赖关系。在这种情况下，在构建 AssetBundle 时，捆绑包所依赖的对象的副本将复制到捆绑包中。如果多个捆绑包中的多个对象包含对未分配给捆绑包的同一对象的引用，则每个对该对象具有依赖关系的捆绑包将创建其自己的对象副本并将其打包到构建的 AssetBundle 中。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'AssetBundles-Dependencies';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetBundles-Dependencies.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/AssetBundles-Dependencies.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetBundles-Dependencies.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/AssetBundles-Dependencies.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/AssetBundles-Dependencies.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/AssetBundles-Dependencies.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/AssetBundles-Dependencies.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/AssetBundles-Dependencies.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetBundles-Dependencies.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetBundles-Dependencies.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetBundles-Dependencies.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetBundles-Dependencies.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetBundles-Dependencies.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetBundles-Dependencies.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetBundles-Dependencies.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetBundles-Dependencies.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetBundles-Dependencies.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetBundles-Dependencies.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetBundles-Dependencies.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetBundles-Dependencies.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetBundles-Dependencies.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetBundles-Dependencies.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetBundles-Dependencies.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetBundles-Dependencies.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetBundles-Dependencies.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/AssetBundles-Dependencies.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/AssetBundles-Dependencies.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/AssetBundles-Dependencies.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/AssetBundles-Dependencies.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/AssetBundles-Dependencies.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/AssetBundles-Dependencies.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetBundles-Dependencies.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetBundles-Dependencies.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetBundles-Dependencies.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetBundles-Dependencies.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetBundles-Dependencies.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetBundles-Dependencies.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetBundles-Dependencies.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetBundles-Dependencies.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetBundles-Dependencies.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetBundles-Dependencies.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetBundles-Dependencies.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetBundles-Dependencies.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetBundles-Dependencies.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetBundles-Dependencies.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetBundles-Dependencies.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetBundles-Dependencies.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetBundles-Dependencies.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AssetWorkflow.html">资源工作流程</a></li>
+<li><a href="AssetBundlesIntro.html">AssetBundle</a></li>
+<li>AssetBundle 依赖项</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundles-Building.html"></a></span><div class="tip">构建 AssetBundle</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles-Native.html"></a></span><div class="tip">本机使用 AssetBundle</div>
+</div>
+</div></div>
+<h1>AssetBundle 依赖项</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>如果一个或多个 <code>UnityEngine.Objects</code> 包含对位于另一个捆绑包中的 <code>UnityEngine.Object</code> 的引用，则 AssetBundle 可以变为依赖于其他 AssetBundle。如果 <code>UnityEngine.Object</code> 包含对任何 AssetBundle 中未包含的 <code>UnityEngine.Object</code> 的引用，则不会发生依赖关系。在这种情况下，在构建 AssetBundle 时，捆绑包所依赖的对象的副本将复制到捆绑包中。如果多个捆绑包中的多个对象包含对未分配给捆绑包的同一对象的引用，则每个对该对象具有依赖关系的捆绑包将创建其自己的对象副本并将其打包到构建的 AssetBundle 中。</p>
+
+<p>如果 AssetBundle 中包含依赖项，则在加载尝试实例化的对象之前，务必加载包含这些依赖项的捆绑包。Unity 不会尝试自动加载依赖项。</p>
+
+<p>参考以下示例，__Bundle 1__ 中的材质引用了 <strong>Bundle 2</strong> 中的纹理：</p>
+
+<p>在此示例中，在从 <strong>Bundle 1</strong> 加载材质之前，需要将 <strong>Bundle 2</strong> 加载到内存中。加载 <strong>Bundle 1</strong> 和 <strong>Bundle 2</strong> 的顺序无关紧要，重要的是在从 <strong>Bundle 1</strong> 加载材质之前应加载 <strong>Bundle 2</strong>。在下一部分，我们将讨论如何使用我们在上一部分介绍的 <code>AssetBundleManifest</code> 对象在运行时确定并加载依赖项。</p>
+
+<h2>AssetBundle 之间的重复信息</h2>
+
+<p>默认情况下，Unity 不会优化 AssetBundle 之间的重复信息。这意味着您项目中的多个 AssetBundle 可能包含相同信息，例如多个预制件使用的同一种材质。在多个 AssetBundle 中使用的资源被称为公共资源。这些会影响内存资源和加载时间。</p>
+
+<p>本页介绍 Unity 如何管理 AssetBundle 之间的重复信息，以及您可以如何应用优化措施。</p>
+
+<p><a name="EditorSetup"></a></p>
+
+<h3>Editor 设置</h3>
+
+<p>默认情况下，Unity 不会执行任何优化措施来减少或最小化存储重复信息所需的内存。在创建构建版本期间，Unity 会在 AssetBundle 中对隐式引用的资源构建重复版本。
+为避免发生此类重复，请将公共资源（例如材质）分配到它们自身的 AssetBundle。</p>
+
+<p>例如：可能有一个应用程序包含两个预制件，这两个预制件都分配到它们自身的 AssetBundle。两个预制件共享相同材质，而该材质未分配到 AssetBundle。该材质引用一个纹理，而该纹理也未分配到 AssetBundle。</p>
+
+<p>如果您遵循 <a href="AssetBundles-Workflow.html">AssetBundle 工作流程</a>并使用示例类 <code>CreateAssetBundles</code> 来构建 AssetBundle，每个生成的 AssetBundle 都会包含此材质（包括其着色器和引用的纹理）。在以下示例图像中，预制件文件的大小分别为 383 KB 和 377 KB。</p>
+
+<figure>
+<img src="../uploads/Main/AssetBundleDuplicate.png" alt="">
+</figure>
+
+<p>如果项目包含更多数量的预制件，此行为会影响最终安装程序的大小以及加载这两个 AssetBundle 时的运行时内存占用量。由于 Unity 将同一材质的每个副本视为独特材质，因此 AssetBundle 之间的数据重复问题也会影响批处理。</p>
+
+<p>为了避免发生数据重复，请将材质及其引用的资源分配给其各自的 <code>modulesmaterials</code> AssetBundle。还可以仅标记材质，因为构建过程中，纹理依赖关系也会被自动包含在 AssetBundle 中。</p>
+
+<p>现在，如果重新构建 AssetBundle，则生成的输出包含单独的 <code>modulesmaterials</code> AssetBundle (359 KB)，其中包含此材质及其关联的纹理。这会显著减小预制件的其他 AssetBundle 的大小（从上一个迭代的大约 380 KB 减小到大约 20 KB）。</p>
+
+<p>下图说明了此情况。</p>
+
+<figure>
+<img src="../uploads/Main/AssetBundleSeparate.png" alt="">
+</figure>
+
+<p><a name="RuntimeLoading"></a></p>
+
+<h3>运行时加载</h3>
+
+<p>将公共资源提取到单个 AssetBundle 时，请注意依赖关系。特别要注意的是，如果仅使用预制件来实例化模块，则不会加载材质。</p>
+
+<figure>
+<img src="../uploads/Main/MaterialNotLoaded.png" alt="一个未加载材质的预制件">
+<figcaption>一个未加载材质的预制件</figcaption>
+</figure>
+
+<p>要解决此问题，请先在内存中加载材质 AssetBundle，然后再加载属于模块的 AssetBundle。在以下示例中，这个过程发生在变量 <code>materialsAB</code> 中。</p>
+
+<pre><code>using System.IO;
+using UnityEngine;
+
+public class InstantiateAssetBundles : MonoBehaviour
+{
+    void Start()
+    {
+        var materialsAB = AssetBundle.LoadFromFile(Path.Combine(Application.dataPath, Path.Combine("AssetBundles", "modulesmaterials")));
+        var moduleAB = AssetBundle.LoadFromFile(Path.Combine(Application.dataPath, Path.Combine("AssetBundles", "example-prefab")));
+
+        if (moduleAB == null)
+        {
+            Debug.Log("Failed to load AssetBundle!");
+            return;
+        }
+        var prefab = moduleAB.LoadAsset&lt;GameObject&gt;("example-prefab");
+        Instantiate(prefab);
+    }
+}
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/MaterialLoaded.png" alt="一个已正确加载材质的预制件">
+<figcaption>一个已正确加载材质的预制件</figcaption>
+</figure>
+
+<p><strong>注意：</strong>使用 LZ4 压缩和未压缩的 AssetBundle 时，<a href="../ScriptReference/AssetBundle.LoadFromFile.html">AssetBundle.LoadFromFile</a> 仅在内存中加载其内容目录，而未加载内容本身。要检查是否发生了此情况，请使用<a href="https://docs.unity3d.com/Packages/com.unity.memoryprofiler@0.2/manual/index.html">内存性能分析器 (Memory Profiler)</a> 包来<a href="https://docs.unity3d.com/Packages/com.unity.memoryprofiler@0.2/manual/workflow-memory-usage.html">检查内存使用情况</a>。</p>
+<!-- area:cloud -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundles-Building.html"></a></span><div class="tip">构建 AssetBundle</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles-Native.html"></a></span><div class="tip">本机使用 AssetBundle</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Player - Unity 手册">
+<title>Player - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/PlayerSetInspTop.png">
+<meta name="description" content="使用 Player 设置可设置 Unity 制作的最终游戏的各种选项。">
+<meta property="og:description" content="使用 Player 设置可设置 Unity 制作的最终游戏的各种选项。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-PlayerSettings';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PlayerSettings.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-PlayerSettings.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PlayerSettings.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-PlayerSettings.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-PlayerSettings.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-PlayerSettings.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-PlayerSettings.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-PlayerSettings.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PlayerSettings.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PlayerSettings.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PlayerSettings.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettings.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PlayerSettings.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettings.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettings.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettings.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettings.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettings.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettings.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettings.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettings.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettings.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettings.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettings.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettings.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-PlayerSettings.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-PlayerSettings.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-PlayerSettings.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-PlayerSettings.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-PlayerSettings.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-PlayerSettings.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PlayerSettings.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PlayerSettings.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PlayerSettings.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettings.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PlayerSettings.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettings.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettings.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettings.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettings.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettings.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettings.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettings.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettings.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettings.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettings.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettings.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettings.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="comp-ManagerGroup.html">Project Settings</a></li>
+<li>Player</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Physics2DManager.html"></a></span><div class="tip">Physics 2D</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PlayerSettingsSplashScreen.html"></a></span><div class="tip">启动画面 (Splash Screen)</div>
+</div>
+</div></div>
+<h1>Player</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用 <strong>Player</strong> 设置可设置 Unity 制作的最终游戏的各种选项。</p>
+
+<p>无论构建目标如何，有一些相同的常规设置。<a href="#general">下文</a>中介绍了这些设置。</p>
+
+<p>但是，大多数设置都是与具体平台相关的，并分为以下几个部分：</p>
+
+<ul>
+<li>
+<strong>Icon</strong>：桌面上显示的游戏图标。可从项目中的 2D 图像资源（例如精灵或导入的图像）选择图标。</li>
+<li>
+<strong>Resolution and Presentation</strong>：屏幕分辨率和其他演示详细信息（例如游戏是否应默认为全屏模式）的设置。</li>
+<li>
+<strong>Splash Image</strong>：游戏启动时显示的图像。此部分还包括用于创建启动画面的常用设置，这些设置在<a href="class-PlayerSettingsSplashScreen.html">启动画面 (Splash Screen)</a> 一节中进行了介绍。</li>
+<li>
+<strong>Other Settings</strong>：平台特有的任何其他设置。</li>
+<li>
+<strong>Publishing Settings</strong>：有关如何准备将构建的应用程序从应用商店或托管网页上进行发布的详细信息。</li>
+<li>
+<strong>XR Settings</strong>：特定于<a href="XR.html">虚拟现实、增强现实和混合现实</a>应用的设置。</li>
+</ul>
+
+<p>您可以在<a href="PlatformSpecific.html">平台特有的手册内容</a>中找到有关各个平台特定设置的信息。并非每个平台都支持所有这些部分。下表详细列出了不同平台支持的部分：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:center;">
+<col style="text-align:center;">
+<col style="text-align:center;">
+<col style="text-align:center;">
+<col style="text-align:center;">
+<col style="text-align:center;">
+<col style="text-align:center;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:center;">Icon</th>
+	<th style="text-align:center;">Resolution and Presentation</th>
+	<th style="text-align:center;">Splash Image</th>
+	<th style="text-align:center;">Debugging and Crash Reporting</th>
+	<th style="text-align:center;">Other Settings</th>
+	<th style="text-align:center;">Publishing Settings</th>
+	<th style="text-align:center;">XR Settings</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><a href="class-PlayerSettingsStandalone.html">独立平台</a></td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">√</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="class-PlayerSettingsiOS.html">iOS</a></td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">√</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="class-PlayerSettingstvOS.html">Apple TV / tvOS</a></td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="class-PlayerSettingsAndroid.html">Android</a></td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="class-PlayerSettingsWebGL.html">WebGL</a></td>
+	<td style="text-align:center;">–</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">(√)</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="class-PlayerSettingsWSA.html">通用 Windows / WSA</a></td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+	<td style="text-align:center;">√</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="general"></a></p>
+
+<h2>常规设置</h2>
+
+<figure>
+<img src="../uploads/Main/PlayerSetInspTop.png" alt="适用于所有平台的 Player 设置">
+<figcaption>适用于所有平台的 Player 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<a name="CompanyName"></a><strong>Company Name</strong>
+</td>
+	<td style="text-align:left;">输入您公司的名称。用于查找偏好设置文件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="ProductName"></a><strong>Product Name</strong>
+</td>
+	<td style="text-align:left;">输入游戏运行时显示在菜单栏上的名称。Unity 使用此名称来查找偏好设置文件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Version</strong></td>
+	<td style="text-align:left;">输入应用程序的版本号。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default Icon</strong></td>
+	<td style="text-align:left;">选择要用作每个平台上应用程序的默认图标的 Texture 2D 文件。可针对特定平台覆盖此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default Cursor</strong></td>
+	<td style="text-align:left;">选择要用作每个受支持平台上应用程序的默认光标的 Texture 2D 文件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cursor Hotspot</strong></td>
+	<td style="text-align:left;">设置从默认光标左上角到光标热点位置的偏移值（以像素为单位）。光标热点是光标图像内部由 Unity 用于根据光标位置触发事件的点。</td>
+</tr>
+</tbody>
+</table>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Physics2DManager.html"></a></span><div class="tip">Physics 2D</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PlayerSettingsSplashScreen.html"></a></span><div class="tip">启动画面 (Splash Screen)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

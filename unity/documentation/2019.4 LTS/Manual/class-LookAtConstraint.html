@@ -1,0 +1,298 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Look At 约束 (Look At Constraints) - Unity 手册">
+<title>Look At 约束 (Look At Constraints) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/class-LookAtConstraint.png">
+<meta name="description" content="Look At Constraint 可旋转游戏对象以朝向其源游戏对象。通常在摄像机上应用 Look At Constraint 来跟随一个或多个游戏对象。此外，如果导入目标摄像机，Unity 将使用目标对象作为源游戏对象创建具有 Look At Constraint 的摄像机。">
+<meta property="og:description" content="Look At Constraint 可旋转游戏对象以朝向其源游戏对象。通常在摄像机上应用 Look At Constraint 来跟随一个或多个游戏对象。此外，如果导入目标摄像机，Unity 将使用目标对象作为源游戏对象创建具有 Look At Constraint 的摄像机。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-LookAtConstraint';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-LookAtConstraint.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-LookAtConstraint.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-LookAtConstraint.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-LookAtConstraint.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-LookAtConstraint.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-LookAtConstraint.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-LookAtConstraint.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-LookAtConstraint.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-LookAtConstraint.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-LookAtConstraint.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-LookAtConstraint.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-LookAtConstraint.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-LookAtConstraint.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-LookAtConstraint.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-LookAtConstraint.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-LookAtConstraint.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-LookAtConstraint.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-LookAtConstraint.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-LookAtConstraint.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-LookAtConstraint.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-LookAtConstraint.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-LookAtConstraint.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-LookAtConstraint.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-LookAtConstraint.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-LookAtConstraint.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-LookAtConstraint.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-LookAtConstraint.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-LookAtConstraint.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-LookAtConstraint.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-LookAtConstraint.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-LookAtConstraint.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-LookAtConstraint.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-LookAtConstraint.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-LookAtConstraint.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-LookAtConstraint.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-LookAtConstraint.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-LookAtConstraint.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-LookAtConstraint.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-LookAtConstraint.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-LookAtConstraint.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-LookAtConstraint.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-LookAtConstraint.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-LookAtConstraint.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-LookAtConstraint.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-LookAtConstraint.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-LookAtConstraint.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-LookAtConstraint.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-LookAtConstraint.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
+<li><a href="Constraints.html">约束</a></li>
+<li>Look At 约束 (Look At Constraints)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-AimConstraint.html"></a></span><div class="tip">目标约束 (Aim Constraints)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-ParentConstraint.html"></a></span><div class="tip">父约束 (Parent Constraints)</div>
+</div>
+</div></div>
+<h1>Look At 约束 (Look At Constraints)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Look At Constraint 可旋转游戏对象以朝向其源游戏对象。通常在<a href="class-Camera.html">摄像机</a>上应用 Look At Constraint 来跟随一个或多个游戏对象。此外，如果<a href="FBXImporter-Model.html#CameraImportProperties">导入目标摄像机</a>，Unity 将使用目标对象作为源游戏对象创建具有 Look At Constraint 的摄像机。</p>
+
+<p>Look At Constraint 是 <a href="class-AimConstraint.html">Aim</a> Constraint 的简化版。Aim Constraint 允许选择哪个轴跟随约束游戏对象，而 Look At Constraint 始终跟随 z 轴。</p>
+
+<p>可以将 Look At Constraint 的向上方向设置为另一个游戏对象的 y 轴，也可以指定围绕 z 轴（瞄准轴）的旋转。</p>
+
+<figure>
+<img src="../uploads/Main/class-LookAtConstraint.png" alt="Look At Constraint 组件">
+<figcaption>Look At Constraint 组件</figcaption>
+</figure>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Is Active</strong></td>
+	<td style="text-align:left;">启用此选项可评估约束。若还要应用约束，请启用 <strong>Lock</strong> 属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Weight</strong></td>
+	<td style="text-align:left;">设置约束的强度。有效值的范围从 0（约束无效）到 1（此游戏对象按照与其源游戏对象移动相同的速率旋转）。<br><br>此权重值同等程度影响所有源游戏对象，但您也可以在 <strong>Sources</strong> 列表中单独更改每个游戏对象的权重。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Up Object</strong></td>
+	<td style="text-align:left;">启用此选项可将此游戏对象的向上矢量设置为 <strong>World Up Object</strong> 的 y 轴。如果禁用此选项，则向上矢量将设置为 <strong>Roll</strong> 值。游戏对象的向上矢量确定了向上方向。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Roll</strong></td>
+	<td style="text-align:left;">设置沿 z 轴的旋转角度（以度为单位）以用于此游戏对象的向上矢量（向上方向）。<br><br>仅当禁用 <strong>Use Up Object</strong> 时可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>World Up Object</strong></td>
+	<td style="text-align:left;">在此处引用需要用作向上矢量参考的游戏对象。设置此引用后，该向上矢量游戏对象的 y 轴将成为受约束游戏对象的向上方向。<br><br>仅当启用 <strong>Use Up Object</strong> 时可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Constraint Settings</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lock</strong></td>
+	<td style="text-align:left;">启用此选项可让约束旋转游戏对象（应用约束）。如果禁用此选项，则可以修改游戏对象的旋转以及 <strong>Rotation At Rest</strong> 和 <strong>Rotation Offset</strong> 属性。在对更改满意后，选中 Lock 以便让约束控制此游戏对象。<br><br>此属性在播放模式下无效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rotation At Rest</strong></td>
+	<td style="text-align:left;">设置受约束游戏对象停止时的 X、Y 和 Z 方向。当总权重（包括所有源游戏对象的各个权重）加起来为 0 时，游戏对象就会停止。<br><br>要修改此属性，请禁用 <strong>Lock</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rotation Offset</strong></td>
+	<td style="text-align:left;">设置相对于受约束方向（由约束计算的旋转）的 X、Y 和 Z 偏移。<br><br>要修改此属性，请禁用 <strong>Lock</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sources</strong></td>
+	<td style="text-align:left;">约束此游戏对象的游戏对象列表。Unity 按照源游戏对象在此列表中出现的顺序来评估源游戏对象。<br><br>此顺序会影响此约束如何旋转受约束的游戏对象（由于旋转累积方式）。要获得所需的结果，请拖放此列表中的项。不同顺序会产生不同的结果。<br><br>列表中的每个条目都包含对游戏对象的引用及其权重（即约束影响）。Unity 计算此列表中的源游戏对象的平均值，您可以通过更改每个源游戏对象的权重来调整影响。例如，如果有两个源游戏对象（立方体和球体）并想将摄像机更多地集中在球体上，则可以将球体的权重设置为 1（最大值），而将立方体的权重设置为 0.5。</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="../uploads/Main/class-LookAtConstraint_Example.png" alt="球体（权重 = 1）与立方体（权重 = 0.5）之间的影响">
+<figcaption>球体（权重 = 1）与立方体（权重 = 0.5）之间的影响</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2018–10–23 页面已发布</span></p></li>
+<li><p><span class="page-history">在 2018.2 版中添加了 Look At Constraint</span></p></li>
+</ul>
+<!-- area:none -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-AimConstraint.html"></a></span><div class="tip">目标约束 (Aim Constraints)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-ParentConstraint.html"></a></span><div class="tip">父约束 (Parent Constraints)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

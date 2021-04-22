@@ -1,0 +1,287 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="USS 编写样式表 - Unity 手册">
+<title>USS 编写样式表 - Unity 手册</title>
+<meta name="description" content="为了使各项井井有条，UIElements 已采用 BEM 作为元素的样式设置方法。虽然并非必须使用 BEM，但是建议采用。">
+<meta property="og:description" content="为了使各项井井有条，UIElements 已采用 BEM 作为元素的样式设置方法。虽然并非必须使用 BEM，但是建议采用。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UIE-USS-WritingStyleSheets';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UIE-USS-WritingStyleSheets.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UIE-USS-WritingStyleSheets.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UIE-USS-WritingStyleSheets.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UIE-USS-WritingStyleSheets.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UIE-USS-WritingStyleSheets.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UIE-USS-WritingStyleSheets.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UIE-USS-WritingStyleSheets.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UIE-USS-WritingStyleSheets.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-USS-WritingStyleSheets.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UIE-USS-WritingStyleSheets.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-USS-WritingStyleSheets.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-USS-WritingStyleSheets.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-USS-WritingStyleSheets.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-USS-WritingStyleSheets.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-USS-WritingStyleSheets.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-USS-WritingStyleSheets.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-USS-WritingStyleSheets.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-USS-WritingStyleSheets.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-USS-WritingStyleSheets.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-USS-WritingStyleSheets.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-USS-WritingStyleSheets.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-USS-WritingStyleSheets.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-USS-WritingStyleSheets.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-USS-WritingStyleSheets.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-USS-WritingStyleSheets.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UIE-USS-WritingStyleSheets.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UIE-USS-WritingStyleSheets.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UIE-USS-WritingStyleSheets.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UIE-USS-WritingStyleSheets.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UIE-USS-WritingStyleSheets.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UIE-USS-WritingStyleSheets.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-USS-WritingStyleSheets.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UIE-USS-WritingStyleSheets.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-USS-WritingStyleSheets.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-USS-WritingStyleSheets.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-USS-WritingStyleSheets.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-USS-WritingStyleSheets.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-USS-WritingStyleSheets.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-USS-WritingStyleSheets.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-USS-WritingStyleSheets.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-USS-WritingStyleSheets.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-USS-WritingStyleSheets.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-USS-WritingStyleSheets.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-USS-WritingStyleSheets.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-USS-WritingStyleSheets.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-USS-WritingStyleSheets.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-USS-WritingStyleSheets.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-USS-WritingStyleSheets.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UIToolkits.html">用户界面 (UI)</a></li>
+<li><a href="UIElements.html">UIElements 开发者指南</a></li>
+<li><a href="UIE-USS.html">样式和 Unity 样式表</a></li>
+<li>USS 编写样式表</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-USS-SupportedProperties.html"></a></span><div class="tip">USS 支持的属性</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Events.html"></a></span><div class="tip">事件系统</div>
+</div>
+</div></div>
+<h1>USS 编写样式表</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>为了使各项井井有条，UIElements 已采用 <a href="http://getbem.com">BEM</a> 作为元素的样式设置方法。虽然并非必须使用 BEM，但是建议采用。</p>
+
+<h2>关于 BEM</h2>
+
+<p>BEM 表示块元素修饰符。BEM 是一个简单的系统，有助于编写结构化、明确、易于维护的选择器。通过 BEM 可以向元素分配类，然后将这些类用作样式表中的选择器。</p>
+
+<p>BEM 类最多包含三个组件：</p>
+
+<ul>
+<li>块名称：块是有意义的独立实体或控件。例如，<code>menu</code>、<code>button</code>、<code>list-view</code>
+</li>
+<li>元素名称：块的一部分，没有独立含义，并且在语义上与其块相关。元素名称用两个下划线追加到块名称之后。例如，<code>menu__item</code>、<code>button__icon</code> 或 <code>list-view__item</code>
+</li>
+<li>修饰符：一个可更改块或元素外观或行为的标记。修饰符用两个短划线追加到块或元素名称之后。例如，<code>menu--disabled</code>、<code>menu__item--disabled</code>、<code>button--small</code> 或 <code>list-view__item--selected</code>。</li>
+</ul>
+
+<p>每个名称部分可能由拉丁字母、数字和短划线组成。每个名称部分用双下划线 <code>__</code> 或双短划线 <code>--</code> 连接起来。</p>
+
+<p>以下示例显示了菜单的 XML 代码：</p>
+
+<pre><code class="xml">&lt;VisualElement class="menu"&gt;
+    &lt;Label class="menu__item" text="Banana" /&gt;
+    &lt;Label class="menu__item" text="Apple" /&gt;
+    &lt;Label class="menu__item menu__item--disabled" text="Orange" /&gt;
+&lt;/VisualElement&gt;
+</code></pre>
+
+<h2>选择器</h2>
+
+<p>由于每个元素都配有描述其作用和外观的类，因此您可以仅使用一个类名来编写大多数选择器：</p>
+
+<pre><code class="css">.menu {
+}
+
+.menu__item {
+}
+
+.menu__item--disabled {
+}
+</code></pre>
+
+<p>应该能够使用单个类名来设置元素的样式。但是在某些情况下，可能需要使用复杂的选择器。例如，元素的样式取决于其块的修饰符时，可以使用复杂的选择器：</p>
+
+<pre><code class="css">.button {
+}
+
+.button__icon {
+}
+
+.button--small {
+}
+
+.button--small .button__icon {
+}
+</code></pre>
+
+<p>注意不要指定长选择器。长选择器可能表示 UI 的图形设计不一致。还应该避免在 BEM 选择器中使用类型名称（<code>Button</code>、<code>Label</code>）或元素名称 (<code>#my-button</code>)。</p>
+
+<h2>使 <code>VisualElement</code> 支持 BEM</h2>
+
+<p>UIElements 遵守 BEM 标准。每个视觉元素都附有必要的类名。例如，所有 <code>TextElement</code> 具有 <code>unity-text-element</code> 类。从 <code>TextElement</code> 派生的 <code>Button</code> 的每个实例在类列表中都填充有 <code>unity-button</code> 和 <code>unity-text-element</code> 类。</p>
+
+<p>如果从 <code>VisualElement</code> 或其某个后代派生新元素，请遵循以下准则以确保元素易于使用 BEM 方法进行样式设置：</p>
+
+<ul>
+<li>使用构造函数中的 <code>AddToClassList()</code>，将相关 USS 类添加到元素实例。</li>
+<li>如果新元素在其构造函数中实例化子元素，请将相关类分配给子元素。例如，<code>my-block__first-child</code>、<code>my-block__other-child</code>。</li>
+<li>如果您的元素支持多种状态或变体（例如不同大小），请在元素状态变化或选择元素变体时添加和删除相关类。</li>
+<li>如果要在其他项目中使用您的元素，请考虑给类添加前缀以避免与现有用户类名称冲突。</li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-USS-SupportedProperties.html"></a></span><div class="tip">USS 支持的属性</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Events.html"></a></span><div class="tip">事件系统</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

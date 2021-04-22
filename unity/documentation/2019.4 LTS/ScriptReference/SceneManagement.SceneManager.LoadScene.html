@@ -1,0 +1,139 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn"><head><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet" /><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="twitter:card" content="summary" /><meta property="og:title" content="SceneManagement.SceneManager-LoadScene - Unity 脚本 API" /><title>SceneManagement.SceneManager-LoadScene - Unity 脚本 API</title><meta name="description" content="按照 Build Settings 中的名称或索引加载场景。" /><meta property="og:description" content="按照 Build Settings 中的名称或索引加载场景。" /><meta name="author" content="Unity Technologies" /><link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico" /><link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png" /><link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png" /><link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png" /><link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png" /><meta name="msapplication-TileColor" content="#222c37" /><meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png" /><script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'ScriptReference';
+      var lang = 'cn';
+      var page = 'SceneManagement.SceneManager-LoadScene';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css" /><link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css" /><link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html" /><link rel="alternate" href="https://docs.unity3d.com/en/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html" hreflang="en" /><link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html" hreflang="zh" /><link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html" hreflang="ja" /><link rel="alternate" href="https://docs.unity3d.com/es/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html" hreflang="es" /><link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html" hreflang="ko" /><link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html" hreflang="ru" /><link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/ScriptReference/SceneManagement.SceneManager-LoadScene.html" hreflang="x-default" /></head><body><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="header-wrapper"><div id="header" class="header"><div class="content"><div class="spacer"><div class="menu"><div id="nav-open" for="nav-input"><span></span></div><div class="logo"><a href="./index.html"></a></div><div class="search-form"><form action="30_search.html" method="get" class="apisearch"><input type="text" name="q" placeholder="搜索脚本..." autosave="Unity Reference" results="5" class="sbox field" id="q"></input><input type="submit" class="submit"></input></form></div><ul class="menu-items"><li class="menu-item"><a href="../Manual/index.html" class="">手册</a></li><li class="menu-item"><a href="../ScriptReference/index.html" class="selected">脚本 API</a></li></ul></div></div><div class="more"><div class="filler"></div><ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul></div></div></div><div class="toolbar"><div class="content"><div class="version-switcher"><div class="current toggle" data-target=".version-list"><div class="version-number"><div class="d-inline-block">
+          Version:
+          <b>2019.4</b></div><div class="d-inline-block arrow"></div></div></div><div class="version-list" style="display:none;"><ul class="versions"><li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2021.1</a></li><li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2020.3</a></li><li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2020.2</a></li><li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2020.1</a></li><li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2019.4</a></li><li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2019.3</a></li><li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2019.2</a></li><li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2019.1</a></li><li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2018.4</a></li><li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2018.3</a></li><li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2018.2</a></li><li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2018.1</a></li><li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2017.4</a></li><li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2017.3</a></li><li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2017.2</a></li><li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2017.1</a></li><li class=""><a class="docs_version_url_560" href="/cn/560/ScriptReference/SceneManagement.SceneManager-LoadScene.html">5.6</a></li><div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div><div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div></ul><ul class="description"><li><div class="supported-box"></div>受支持</li><li><div class="legacy-box"></div>旧版</li></ul></div></div><ul class="nav-menu-items"><li class="menu-item"><a href="../Manual/index.html" class="">手册</a></li><li class="menu-item"><a href="../ScriptReference/index.html" class="selected">脚本 API</a></li></ul><div class="lang-switcher"><div class="current toggle" data-target=".lang-list"><div class="lbl">语言:
+        <span class="b">中文</span></div><div class="arrow"></div></div><div class="lang-list" style="display:none;"><ul><li><a data-lang="en" href="/2019.4/Documentation/ScriptReference/SceneManagement.SceneManager-LoadScene.html">English</a></li><li><a data-lang="cn" href="/cn/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">中文</a></li><li><a data-lang="ja" href="/ja/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">日本語</a></li><li><a data-lang="es" href="/es/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">Español</a></li><li><a data-lang="kr" href="/kr/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">한국어</a></li><li><a data-lang="ru" href="/ru/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">Русский</a></li></ul></div></div></div></div></div><div id="master-wrapper" class="master-wrapper clear"><div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>脚本 API</h2><div class="version-switcher"><div class="current toggle" data-target=".version-list"><div class="version-number"><div class="d-inline-block">
+          Version:
+          <b>2019.4</b></div><div class="d-inline-block arrow"></div></div></div><div class="version-list" style="display:none;"><ul class="versions"><li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2021.1</a></li><li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2020.3</a></li><li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2020.2</a></li><li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2020.1</a></li><li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2019.4</a></li><li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2019.3</a></li><li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2019.2</a></li><li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2019.1</a></li><li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2018.4</a></li><li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2018.3</a></li><li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2018.2</a></li><li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2018.1</a></li><li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2017.4</a></li><li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2017.3</a></li><li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2017.2</a></li><li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/ScriptReference/SceneManagement.SceneManager-LoadScene.html">2017.1</a></li><li class=""><a class="docs_version_url_560" href="/cn/560/ScriptReference/SceneManagement.SceneManager-LoadScene.html">5.6</a></li><div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div><div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div></ul><ul class="description"><li><div class="supported-box"></div>受支持</li><li><div class="legacy-box"></div>旧版</li></ul></div></div><div class="clear"></div></div></div></div></div></div><div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content"><div class="section"><div class="mb20 clear" id=""><h1 class="heading inherit"><a href="SceneManagement.SceneManager.html">SceneManager</a>.LoadScene</h1><div class="clear"></div><div class="clear"></div><a href="" class="switch-link gray-btn sbtn left hide">切换到手册</a><div class="clear"></div></div><div class="subsection"><div class="signature"><div class="signature-CS sig-block"><span style="color:red;"></span>public static void <span class="sig-kw">LoadScene</span>
+        (int <span class="sig-kw">sceneBuildIndex</span>,
+    <a href="SceneManagement.LoadSceneMode.html">SceneManagement.LoadSceneMode</a> <span class="sig-kw">mode</span>=
+      LoadSceneMode.Single);
+      </div><div class="signature-CS sig-block"><span style="color:red;"></span>public static void <span class="sig-kw">LoadScene</span>
+        (string <span class="sig-kw">sceneName</span>,
+    <a href="SceneManagement.LoadSceneMode.html">SceneManagement.LoadSceneMode</a> <span class="sig-kw">mode</span>=
+      LoadSceneMode.Single);
+      </div></div></div><div class="subsection"><h2>参数</h2><table class="list"><tr><td class="name lbl">sceneName</td><td class="desc">要加载的场景的名称或路径。</td></tr><tr><td class="name lbl">sceneBuildIndex</td><td class="desc">Build Settings 中要加载场景的索引。</td></tr><tr><td class="name lbl">mode</td><td class="desc">允许您指定是否以累加方式加载场景。有关选项的更多信息，请参阅 <a href="SceneManagement.LoadSceneMode.html">LoadSceneMode</a>。</td></tr></table></div><div class="subsection"><h2>描述</h2><p>按照 Build Settings 中的名称或索引加载场景。</p></div><div class="subsection"><p>
+        <strong>注意：</strong>在大多数情况下，为了避免在加载时出现暂停或性能中断现象，
+您应该使用此命令的异步版，即：
+<a href="SceneManagement.SceneManager.LoadSceneAsync.html">LoadSceneAsync</a>。<br /><br />使用 <a href="SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a> 时，不会立即加载场景，而是在下一帧加载。这种半异步的行为可能会导致帧卡顿，并可能令人困惑，因为加载无法立即完成。<br /><br />由于加载被设置为在下一个渲染帧中完成，调用 <a href="SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a> 会强制完成之前的所有 AsyncOperations，即使 <a href="AsyncOperation-allowSceneActivation.html">AsyncOperation.allowSceneActivation</a> 设置为 false 也一样。要避免这种情况，请改用 <a href="SceneManagement.SceneManager.LoadSceneAsync.html">LoadSceneAsync</a>。<br /><br />提供的 <code class="mono">sceneName</code> 可以只是场景名称（不包含 <code class="mono">.unity</code> 扩展名），也可以是 BuildSettings 窗口中显示的路径（仍然不包含 <code class="mono">.unity</code> 扩展名）。如果仅提供场景名称，此方法将加载场景列表中匹配的第一个场景。如果有多个名称相同但路径不同的场景，应该使用完整路径。<br /><br />请注意，除非您从 <a href="AssetBundle.html">AssetBundle</a> 加载场景，否则 <code class="mono">sceneName</code> 不区分大小写。<br /><br />有关在编辑器中打开场景的信息，请参阅 <a href="SceneManagement.EditorSceneManager.OpenScene.html">EditorSceneManager.OpenScene</a>。
+<code class="varname">SceneA</code> 能够以累加方式多次加载 <code class="varname">SceneA</code>。每个加载的场景都使用常规名称。如果 <code class="varname">SceneA</code> 加载 <code class="varname">SceneB</code> 十次，每个 <code class="varname">SceneB</code> 将具有相同的名称。无法找到特定的已添加场景。</p></div><div class="subsection">
+        <pre class="codeExampleCS">
+using UnityEngine;
+using UnityEngine.SceneManagement;<br /><br />public class ExampleClass : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    void Start()
+    {
+        // Only specifying the sceneName or sceneBuildIndex will load the <a href="SceneManagement.Scene.html">Scene</a> with the Single mode
+        <a href="SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>("OtherSceneName", <a href="SceneManagement.LoadSceneMode.Additive.html">LoadSceneMode.Additive</a>);
+    }
+}
+</pre>
+      </div><div class="subsection">
+        <pre class="codeExampleCS">
+// Load an assetbundle which contains Scenes.
+// When the user clicks a button the first <a href="SceneManagement.Scene.html">Scene</a> in the assetbundle is
+// loaded and replaces the current <a href="SceneManagement.Scene.html">Scene</a>.<br /><br />using UnityEngine;
+using UnityEngine.SceneManagement;<br /><br />public class LoadScene : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    private <a href="AssetBundle.html">AssetBundle</a> myLoadedAssetBundle;
+    private string[] scenePaths;<br /><br />    // Use this for initialization
+    void Start()
+    {
+        myLoadedAssetBundle = <a href="AssetBundle.LoadFromFile.html">AssetBundle.LoadFromFile</a>("Assets/AssetBundles/scenes");
+        scenePaths = myLoadedAssetBundle.GetAllScenePaths();
+    }<br /><br />    void OnGUI()
+    {
+        if (<a href="GUI.Button.html">GUI.Button</a>(new <a href="Rect.html">Rect</a>(10, 10, 100, 30), "Change <a href="SceneManagement.Scene.html">Scene</a>"))
+        {
+            <a href="Debug.Log.html">Debug.Log</a>("Scene2 loading: " + scenePaths[0]);
+            <a href="SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>(scenePaths[0], <a href="SceneManagement.LoadSceneMode.Single.html">LoadSceneMode.Single</a>);
+        }
+    }
+}
+</pre>
+      </div><div class="subsection"><p>以下两个脚本示例说明 <a href="SceneManagement.SceneManager.LoadScene.html">LoadScene</a> 可以如何从 Build Settings 加载场景。<code class="varname">LoadSceneA</code> 使用要加载的场景的名称。<code class="varname">LoadSceneB</code> 使用要加载的场景的编号。这些脚本将协作。<br /><br /><code class="varname">LoadSceneA</code> 文件。</p></div><div class="subsection">
+        <pre class="codeExampleCS">
+// SceneA.
+// SceneA is given the sceneName which will
+// load SceneB from the Build <a href="CameraEditor.Settings.html">Settings</a><br /><br />using UnityEngine;
+using UnityEngine.SceneManagement;<br /><br />public class LoadScenesA : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    void Start()
+    {
+        <a href="Debug.Log.html">Debug.Log</a>("LoadSceneA");
+    }<br /><br />    public void LoadA(string scenename)
+    {
+        <a href="Debug.Log.html">Debug.Log</a>("sceneName to load: " + scenename);
+        <a href="SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>(scenename);
+    }
+}
+</pre>
+      </div><div class="subsection"><p>
+        <code class="varname">LoadSceneB</code> 文件。</p></div><div class="subsection">
+        <pre class="codeExampleCS">
+// SceneB.
+// SceneB is given the sceneBuildIndex of 0 which will
+// load SceneA from the Build <a href="CameraEditor.Settings.html">Settings</a><br /><br />using UnityEngine;
+using UnityEngine.SceneManagement;<br /><br />public class LoadScenesB : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    void Start()
+    {
+        <a href="Debug.Log.html">Debug.Log</a>("LoadSceneB");
+    }<br /><br />    public void LoadB(int sceneANumber)
+    {
+        <a href="Debug.Log.html">Debug.Log</a>("sceneBuildIndex to load: " + sceneANumber);
+        <a href="SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>(sceneANumber);
+    }
+}
+</pre>
+      </div><hr class="section" /><div class="subsection"><div class="signature"><div class="signature-CS sig-block"><span style="color:red;"></span>public static <a href="SceneManagement.Scene.html">SceneManagement.Scene</a> <span class="sig-kw">LoadScene</span>
+        (int <span class="sig-kw">sceneBuildIndex</span>,
+    <a href="SceneManagement.LoadSceneParameters.html">SceneManagement.LoadSceneParameters</a> <span class="sig-kw">parameters</span>);
+      </div><div class="signature-CS sig-block"><span style="color:red;"></span>public static <a href="SceneManagement.Scene.html">SceneManagement.Scene</a> <span class="sig-kw">LoadScene</span>
+        (string <span class="sig-kw">sceneName</span>,
+    <a href="SceneManagement.LoadSceneParameters.html">SceneManagement.LoadSceneParameters</a> <span class="sig-kw">parameters</span>);
+      </div></div></div><div class="subsection"><h2>参数</h2><table class="list"><tr><td class="name lbl">sceneName</td><td class="desc">要加载的场景的名称或路径。</td></tr><tr><td class="name lbl">sceneBuildIndex</td><td class="desc">Build Settings 中要加载场景的索引。</td></tr><tr><td class="name lbl">parameters</td><td class="desc">用于加载场景的各种参数。</td></tr></table></div><div class="subsection"><h2>返回</h2><p><strong>Scene</strong>
+        正在加载的场景的句柄。
+      </p></div><div class="subsection"><h2>描述</h2><p>按照 Build Settings 中的名称或索引加载场景。</p></div><div class="subsection"><p>有关使用两个场景（名为 <code class="varname">Scene1</code> 和 /Scene2/）的示例。ExampleScript1.cs 用于 /scene1/，ExampleScript2.cs 用于 /scene2/。</p></div><div class="subsection">
+        <pre class="codeExampleCS">
+using UnityEngine;
+using UnityEngine.SceneManagement;<br /><br />// This is scene1.  It loads 3 copies of scene2.
+// Each copy has the same name.<br /><br />public class ExampleScript1 : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    private <a href="SceneManagement.Scene.html">Scene</a> scene;<br /><br />    private void Start()
+    {
+        var parameters = new <a href="SceneManagement.LoadSceneParameters.html">LoadSceneParameters</a>(<a href="SceneManagement.LoadSceneMode.Additive.html">LoadSceneMode.Additive</a>);<br /><br />        scene = <a href="SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>("scene2", parameters);
+        <a href="Debug.Log.html">Debug.Log</a>("Load 1 of scene2: " + scene.name);
+        scene = <a href="SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>("scene2", parameters);
+        <a href="Debug.Log.html">Debug.Log</a>("Load 2 of scene2: " + scene.name);
+        scene = <a href="SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>("scene2", parameters);
+        <a href="Debug.Log.html">Debug.Log</a>("Load 3 of scene2: " + scene.name);
+    }
+}
+</pre>
+      </div><div class="subsection"><p>Scene2：</p></div><div class="subsection">
+        <pre class="codeExampleCS">
+using UnityEngine;<br /><br />// create a randomly placed cube<br /><br />public class ExampleScript2 : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    private void Start()
+    {
+        <a href="GameObject.html">GameObject</a> cube = <a href="GameObject.CreatePrimitive.html">GameObject.CreatePrimitive</a>(<a href="PrimitiveType.Cube.html">PrimitiveType.Cube</a>);
+        cube.transform.position = new <a href="Vector3.html">Vector3</a>(<a href="Random.Range.html">Random.Range</a>(-5.0f, 5.0f), 0.0f, <a href="Random.Range.html">Random.Range</a>(-5.0f, 5.0f));
+    }
+}
+</pre>
+      </div></div><div class="footer-wrapper"><div class="footer clear"><div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div><div class="menu"><a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a></div></div><div></div></div></div></div></div></div></body></html>

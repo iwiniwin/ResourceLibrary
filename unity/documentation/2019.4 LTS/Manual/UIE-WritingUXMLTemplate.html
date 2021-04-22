@@ -1,0 +1,383 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="编写 UXML 模板 - Unity 手册">
+<title>编写 UXML 模板 - Unity 手册</title>
+<meta name="description" content="UXML 模板是使用 XML 标记编写的文本文件，用于定义用户界面的逻辑结构。以下代码示例演示了如何定义一个提示用户做出选择的简单面板：">
+<meta property="og:description" content="UXML 模板是使用 XML 标记编写的文本文件，用于定义用户界面的逻辑结构。以下代码示例演示了如何定义一个提示用户做出选择的简单面板：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UIE-WritingUXMLTemplate';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UIE-WritingUXMLTemplate.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UIE-WritingUXMLTemplate.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UIE-WritingUXMLTemplate.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UIE-WritingUXMLTemplate.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UIE-WritingUXMLTemplate.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UIE-WritingUXMLTemplate.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UIE-WritingUXMLTemplate.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UIE-WritingUXMLTemplate.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-WritingUXMLTemplate.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UIE-WritingUXMLTemplate.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-WritingUXMLTemplate.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-WritingUXMLTemplate.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-WritingUXMLTemplate.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-WritingUXMLTemplate.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-WritingUXMLTemplate.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-WritingUXMLTemplate.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-WritingUXMLTemplate.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-WritingUXMLTemplate.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-WritingUXMLTemplate.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-WritingUXMLTemplate.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-WritingUXMLTemplate.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-WritingUXMLTemplate.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-WritingUXMLTemplate.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-WritingUXMLTemplate.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-WritingUXMLTemplate.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UIE-WritingUXMLTemplate.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UIE-WritingUXMLTemplate.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UIE-WritingUXMLTemplate.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UIE-WritingUXMLTemplate.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UIE-WritingUXMLTemplate.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UIE-WritingUXMLTemplate.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-WritingUXMLTemplate.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UIE-WritingUXMLTemplate.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-WritingUXMLTemplate.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-WritingUXMLTemplate.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-WritingUXMLTemplate.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-WritingUXMLTemplate.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-WritingUXMLTemplate.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-WritingUXMLTemplate.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-WritingUXMLTemplate.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-WritingUXMLTemplate.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-WritingUXMLTemplate.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-WritingUXMLTemplate.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-WritingUXMLTemplate.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-WritingUXMLTemplate.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-WritingUXMLTemplate.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-WritingUXMLTemplate.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-WritingUXMLTemplate.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UIToolkits.html">用户界面 (UI)</a></li>
+<li><a href="UIElements.html">UIElements 开发者指南</a></li>
+<li><a href="UIE-UXML.html">UXML 格式</a></li>
+<li>编写 UXML 模板</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-UXML.html"></a></span><div class="tip">UXML 格式</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-LoadingUXMLcsharp.html"></a></span><div class="tip">从 C# 加载 UXML</div>
+</div>
+</div></div>
+<h1>编写 UXML 模板</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>UXML 模板是使用 XML 标记编写的文本文件，用于定义用户界面的逻辑结构。以下代码示例演示了如何定义一个提示用户做出选择的简单面板：</p>
+
+<pre><code class="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="UnityEngine.UIElements"
+    xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd"
+    xsi:schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UnityEngine.UIElements.xsd"&gt;
+
+    &lt;Label text="Select something to remove from your suitcase:"/&gt;
+    &lt;Box&gt;
+        &lt;Toggle name="boots" label="Boots" value="false" /&gt;
+        &lt;Toggle name="helmet" label="Helmet" value="false" /&gt;
+        &lt;Toggle name="cloak" label="Cloak of invisibility" value="false"/&gt;
+    &lt;/Box&gt;
+    &lt;Box&gt;
+        &lt;Button name="cancel" text="Cancel" /&gt;
+        &lt;Button name="ok" text="OK" /&gt;
+    &lt;/Box&gt;
+&lt;/UXML&gt;
+</code></pre>
+
+<p>文件的第一行是 XML 声明。此声明为可选项。如果包含此声明，它必须在第一行，并且在它之前不能出现其他内容或空格。<code>version</code> 属性是必需属性。<code>encoding</code> 属性是可选属性。如果包含 <code>encoding</code>，它必须声明文件的字符编码。</p>
+
+<p>下一行定义文档根 <code>&lt;UXML&gt;</code>。<code>&lt;UXML&gt;</code> 元素包含命名空间前缀定义的属性和架构定义文件的位置。可以按任意顺序指定这些属性。</p>
+
+<p>在 UIElements 中，每个元素都在 <code>UnityEngine.UIElements</code> 或 <code>UnityEditor.UIElements</code> 命名空间中定义：</p>
+
+<ul>
+<li>
+<code>UnityEngine.UIElements</code> 命名空间包含被定义为 Unity Runtime 一部分的元素。</li>
+<li>
+<code>UnityEditor.UIElements</code> 命名空间包含 Unity Editor 中可用的元素。要完整指定一个元素，必须在其前面添加其命名空间。</li>
+</ul>
+
+<p>例如，如果要在 UXML 模板中使用 <code>Button</code> 元素，则必须指定 <code>&lt;UnityEngine.UIElements:Button /&gt;</code>。</p>
+
+<p>要方便指定命名空间，可以定义命名空间前缀。例如，<code>xmlns:engine="UnityEngine.UIElements"</code> 将 <code>engine</code> 前缀定义为 <code>UnityEngine.UIElements</code>。定义命名空间前缀之后，可以将其用于指定命名空间。例如，<code>&lt;engine:Button /&gt;</code> 等同于 <code>&lt;UnityEngine.UIElements:Button /&gt;</code></p>
+
+<p>还可以通过排除前缀来定义默认命名空间。例如，<code>xmlns="UnityEngine.UIElements"</code> 将 <code>UnityEngine.UIElements</code> 定义为默认命名空间。这意味着指定 <code>&lt;Button /&gt;</code> 等同于 <code>&lt;UnityEngine.UIElements:Button /&gt;</code></p>
+
+<p>如果是自行定义元素，这些元素可能在其自身的命名空间中定义。如果要在 UXML 模板中使用这些元素，则必须在 <code>&lt;UXML&gt;</code> 标签中包含命名空间定义和架构文件位置以及 Unity 命名空间。</p>
+
+<p>通过选择 <strong>Asset</strong> &gt; <strong>Create</strong> &gt; <strong>UIElements Editor Window</strong> 来新建 UXML 模板资源时，Editor 自动为您定义命名空间。</p>
+
+<p>UI 的定义在 <code>&lt;UXML&gt;</code> 根中。UI 定义是一系列嵌套的 XML 元素，每个元素代表一个 <code>VisualElement</code>。</p>
+
+<p>元素名称对应于要实例化的元素的 C# 类名。大多数元素都有属性，且属性的值映射到 C# 中相应的类属性。每个元素都继承其父类类型的属性，并可在父类类型的基础上添加自己的属性集。<code>VisualElement</code> 作为所有元素的基类，为所有元素提供以下属性：</p>
+
+<ul>
+<li>
+<code>name</code>：元素的标识符。名称应具有唯一性。</li>
+<li>
+<code>picking-mode</code>：设置为 <code>Position</code>（响应鼠标事件）或 <code>Ignore</code>（忽略鼠标事件）。</li>
+<li>
+<code>focus-index</code>：（<strong>已弃用</strong>）使用 <code>tabIndex</code> 和 <code>focusable</code>。</li>
+<li>
+<code>tabindex</code>：一个整数，定义当前元素的 Tab 键移动位置。</li>
+<li>
+<code>focusable</code>：一个布尔值，指示是否可聚焦该元素。</li>
+<li>
+<code>class</code>：用于表征元素的标识符的空格分隔列表。使用类为元素指定视觉样式。还可以使用类在 UQuery 中选择一组元素。</li>
+<li>
+<code>tooltip</code>：鼠标悬停在元素上方时显示为工具提示的字符串。</li>
+<li>
+<code>view-data-key</code>：一个字符串，可定义用于元素序列化的键。</li>
+</ul>
+
+<p>UXML 模板示例未定义用户界面的视觉要素。建议您使用单独的 USS 文件来定义用于绘制 UI 的样式信息，例如尺寸、字体和颜色（请参阅<a href="UIE-USS.html">样式和 Unity 样式表</a>）。</p>
+
+<h2>向 UXML 添加样式</h2>
+
+<p>要引用样式表文件，UXML 文件可以在任何元素声明下使用 <code>&lt;Style&gt;</code> 元素。</p>
+
+<p>例如，如果您在同一文件夹中有一个 UXML 文件以及一个名为 “styles.uss” 的 USS 文件：</p>
+
+<pre><code class="xml">&lt;engine:UXML ...&gt;
+    &lt;engine:VisualElement class="root"&gt;
+        &lt;Style src="styles.uss" /&gt;
+    &lt;/engine:VisualElement&gt;
+&lt;/engine:UXML&gt;
+</code></pre>
+
+<pre><code class="css"># root {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+</code></pre>
+
+<p><strong>注意：</strong>Unity 不支持根 <code>&lt;UXML&gt;</code> 元素下的 <code>&lt;Style&gt;</code> 元素。</p>
+
+<p>还可以直接将内联样式声明为 UXML 元素的属性：</p>
+
+<pre><code class="xml">&lt;engine:UXML ...&gt;
+    &lt;engine:VisualElement style="width: 200px; height: 200px; background-color: red;" /&gt;
+&lt;/engine:UXML&gt;
+</code></pre>
+
+<h2>重用 UXML 文件</h2>
+
+<p>可通过在 UXML 文件中定义组件的方式来创建组件，
+并使用另一个 UXML 文件中的 <code>&lt;Template&gt;</code> 和 <code>&lt;Instance&gt;</code> 元素将组件导入。</p>
+
+<p>在设计大型用户界面时，可以创建一些用于定义 UI 组成部分的模板 UXML 文件。</p>
+
+<p>可能会在许多地方使用相同的 UI 定义。例如，假设有一个包含图像、名称和标签的纵向 UI 元素。可以创建一个 UXML 模板文件以便在其他 UXML 文件中重用此纵向 UI 元素。</p>
+
+<p>例如，假设在 <code>Assets/Portrait.uxml</code> 文件中有一个 <em>Portrait</em> 组件：</p>
+
+<pre><code class="xml">&lt;engine:UXML ...&gt;
+    &lt;engine:VisualElement class="portrait"&gt;
+        &lt;engine:Image name="portaitImage" style="--unity-image: url(\"a.png\")"/&gt;
+        &lt;engine:Label name="nameLabel" text="Name"/&gt;
+        &lt;engine:Label name="levelLabel" text="42"/&gt;
+    &lt;/engine:VisualElement&gt;
+&lt;/engine:UXML&gt;
+</code></pre>
+
+<p>可以将 <em>Portrait</em> 组件嵌入到其他 UXML 模板中，如下所示：</p>
+
+<pre><code class="xml">&lt;engine:UXML ...&gt;
+    &lt;engine:Template src="/Assets/Portrait.uxml" name="Portrait"/&gt;
+    &lt;engine:VisualElement name="players"&gt;
+        &lt;engine:Instance template="Portrait" name="player1"/&gt;
+        &lt;engine:Instance template="Portrait" name="player2"/&gt;
+    &lt;/engine:VisualElement&gt;
+&lt;/engine:UXML&gt;
+</code></pre>
+
+<h2>引用 UXML 的其他文件</h2>
+
+<p>UXML 文件可以通过元素引用其他 UXML 文件和 USS 文件。</p>
+
+<p><code>&lt;Template&gt;</code> 和 <code>&lt;Style&gt;</code> 元素都接受“src”属性或“path”属性。</p>
+
+<p><code>src</code> 属性允许相对路径，在导入时（例如，文件丢失时）提供错误消息，并确保 Unity 在播放器构建中正确包含 UXML 文件引用的资源。</p>
+
+<p><code>path</code> 属性允许使用 Unity 资源机制，但在导入时不提供错误报告，并且不允许使用相对路径。</p>
+
+<h3>
+<code>src</code> 属性</h3>
+
+<p><code>src</code> 属性要求文件路径相对于项目根目录或包含 UXML 文件的文件夹。必须包含文件扩展名。在以下示例中，UXML 文件位于 <em>Assets\Editor\UXML</em> 中，USS 文件位于 <em>Assets\Editor\USS</em> 中。</p>
+
+<ul>
+<li>根据 UXML 文件的位置，使用以下示例路径之一：<code>src="../USS/styles.uss"</code> 或 <code>src="template.uxml"</code>
+</li>
+<li>根据项目的位置，使用以下示例之一表示绝对路径：<code>src="/Assets/Editor/USS/styles.uss"</code> 或 <code>src="project:/Assets/Editor/UXML/template.uxml"</code>。</li>
+</ul>
+
+<h3>
+<code>path</code> 属性</h3>
+
+<p><code>path</code> 属性接受位于 <em>Resources</em> 文件夹或 <em>Editor Default Resources</em> 文件夹中的文件，并遵循以下规则：</p>
+
+<ul>
+<li>如果文件位于 <em>Resources</em> 文件夹中，不得包含文件扩展名。例如，为位于 <em>Assets/Resources/template.uxml</em> 的文件编写 <code>path="template"</code>。</li>
+<li>如果文件位于 <em>Editor Default Resources</em> 文件夹中，必须包含文件扩展名。例如，为位于 <em>Assets/Editor Default Resources/template.uxml</em> 的文件编写 <code>path="template.uxml"</code>。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–11–02 页面已修订</span></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-UXML.html"></a></span><div class="tip">UXML 格式</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-LoadingUXMLcsharp.html"></a></span><div class="tip">从 C# 加载 UXML</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="为 Unity 准备资源 - Unity 手册">
+<title>为 Unity 准备资源 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/BelievableVisuals1MeterCubeSample.jpg">
+<meta name="description" content="第一步是将资源转换为符合您需求的格式。为了从 3D 建模应用程序（如 Autodesk® 3ds Max®、Autodesk® Maya®、Blender 和 Houdini）转换到 Unity，建立适当的工作流程非常重要。从 3D 建模应用程序导出资源以便导入 Unity 时，需要考虑以下方面：">
+<meta property="og:description" content="第一步是将资源转换为符合您需求的格式。为了从 3D 建模应用程序（如 Autodesk® 3ds Max®、Autodesk® Maya®、Blender 和 Houdini）转换到 Unity，建立适当的工作流程非常重要。从 3D 建模应用程序导出资源以便导入 Unity 时，需要考虑以下方面：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'BestPracticeMakingBelievableVisuals1';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/BestPracticeMakingBelievableVisuals1.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/BestPracticeMakingBelievableVisuals1.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/BestPracticeMakingBelievableVisuals1.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/BestPracticeMakingBelievableVisuals1.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/BestPracticeMakingBelievableVisuals1.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/BestPracticeMakingBelievableVisuals1.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/BestPracticeMakingBelievableVisuals1.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/BestPracticeMakingBelievableVisuals1.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/BestPracticeMakingBelievableVisuals1.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/BestPracticeMakingBelievableVisuals1.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/BestPracticeMakingBelievableVisuals1.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/BestPracticeMakingBelievableVisuals1.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/BestPracticeMakingBelievableVisuals1.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/BestPracticeMakingBelievableVisuals1.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/BestPracticeMakingBelievableVisuals1.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/BestPracticeMakingBelievableVisuals1.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/BestPracticeMakingBelievableVisuals1.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/BestPracticeMakingBelievableVisuals1.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/BestPracticeMakingBelievableVisuals1.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/BestPracticeMakingBelievableVisuals1.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/BestPracticeMakingBelievableVisuals1.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/BestPracticeMakingBelievableVisuals1.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/BestPracticeMakingBelievableVisuals1.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/BestPracticeMakingBelievableVisuals1.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/BestPracticeMakingBelievableVisuals1.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/BestPracticeMakingBelievableVisuals1.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/BestPracticeMakingBelievableVisuals1.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/BestPracticeMakingBelievableVisuals1.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/BestPracticeMakingBelievableVisuals1.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/BestPracticeMakingBelievableVisuals1.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/BestPracticeMakingBelievableVisuals1.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/BestPracticeMakingBelievableVisuals1.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/BestPracticeMakingBelievableVisuals1.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/BestPracticeMakingBelievableVisuals1.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/BestPracticeMakingBelievableVisuals1.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html">在 Unity 中制作可信的视觉效果</a></li>
+<li>为 Unity 准备资源</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals.html"></a></span><div class="tip">在 Unity 中制作可信的视觉效果</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals2.html"></a></span><div class="tip">在 Unity 中准备渲染设置</div>
+</div>
+</div></div>
+<h1>为 Unity 准备资源</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>第一步是将资源转换为符合您需求的格式。为了从 3D 建模应用程序（如 Autodesk® 3ds Max®、Autodesk® Maya®、Blender 和 Houdini）转换到 Unity，建立适当的工作流程非常重要。<a href="HOWTO-importObject.html">从 3D 建模应用程序导出资源以便导入 Unity</a> 时，需要考虑以下方面：</p>
+
+<ul>
+<li><a href="#scale">比例和单位</a></li>
+<li><a href="#scaleModel">参考点比例模型</a></li>
+<li><a href="#textures">纹理输出和通道</a></li>
+<li><a href="#normalMap">法线贴图方向</a></li>
+</ul>
+
+<p><a name="scale"></a> </p>
+
+<h2>比例和单位</h2>
+
+<p>项目缩放比例和您偏好的测量单位在制作可信场景时起着非常重要的作用。在许多“真实世界”设置中，我们建议您假设 1 个 Unity 单位 = 1 米（100 厘米），因为许多物理系统都采用此单位大小。有关更多建议，请参阅<a href="HOWTO-ArtAssetBestPracticeGuide.html">艺术资源最佳实践指南</a>。</p>
+
+<p>为了保持 3D 建模应用程序与 Unity 之间的一致性，请始终验证导入的游戏对象比例和大小。3D 建模应用程序在 FBX 导出配置中有单位和比例设置（请参阅 3D 建模软件的文档以了解配置建议）。通常情况下，导入 Unity 时匹配比例的最佳方法是将这些工具设置为以厘米为单位并采用自动比例导出 FBX。但是，在启动新项目时，应始终检查单位和比例设置是否匹配。</p>
+
+<p>要快速验证导出设置，
+请在 3D 建模应用程序中创建一个简单的 1x1x1m 立方体，并将其导入 Unity。
+在 Unity 中，创建默认的立方体 (<strong>GameObject</strong> &gt; <strong>3D Object</strong> &gt; <strong>Cube</strong>)。此立方体为 1x1x1m。将此立方体用作比例参考，与导入的模型进行比较。
+当 Inspector 中的变换组件的 <strong>Scale</strong> 属性设置为 1,1,1 时，这些立方体应该看起来完全相同：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisuals1MeterCubeSample.jpg" alt="从 Autodesk® Maya® 和 Autodesk® 3ds Max® 导入的立方体与 Unity 中创建的立方体之间进行比例比较">
+<figcaption>从 Autodesk® Maya® 和 Autodesk® 3ds Max® 导入的立方体与 Unity 中创建的立方体之间进行比例比较</figcaption>
+</figure>
+
+<p><strong>注意</strong>：</p>
+
+<ul>
+<li>Autodesk® Maya® 和 Autodesk® 3ds Max® 可以覆盖您的默认单位，具体取决于上次打开的文件。</li>
+<li>3D 建模应用程序可以将工作空间中的不同单位显示为其内部单位设置，这可能会导致一定程度的混淆。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsFBXExport.jpg" alt="Autodesk® 3ds Max® 中的不同显示和内部单位">
+<figcaption>Autodesk® 3ds Max® 中的不同显示和内部单位</figcaption>
+</figure>
+
+<p><a name="scaleModel"></a> </p>
+
+<h2>参考点比例模型</h2>
+
+<p>通过占位体或草绘几何体阻挡场景时，使用参考点比例模型可能会有所帮助。请选择适合正在制作的场景的参考点比例模型。在 Spotlight Tunnel 示例场景案例中，我们使用了公园长椅：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsBlockingOutScale.png" alt="使用长椅作为参考点比例模型">
+<figcaption>使用长椅作为参考点比例模型</figcaption>
+</figure>
+
+<p>场景不必使用与现实生活完全相同的比例。使用参考点比例模型可以在游戏对象之间确保相对的比例一致性，即使场景试图使用夸大的比例也没有关系。</p>
+
+<p><a name="textures"></a> </p>
+
+<h2>纹理输出和通道</h2>
+
+<p>纹理内部的信息需要包含正确的信息，以便在添加到材质时提供正确的结果。纹理创作软件（如 Photoshop 和 Substance Painter）在经过正确配置后可输出一致且可预测的纹理。</p>
+
+<p>以下是 Substance Painter 预设配置的示例，此示例将输出与 Unity 标准不透明材质结合使用的纹理：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsSubstancePainter_OutputTexture.png" alt="">
+</figure>
+
+<p>Unity 标准材质中的纹理分配为：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>用于导出的输出映射</strong></th>
+	<th style="text-align:left;"><strong>Unity 标准着色器材质中的分配</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">$textureSet_Albedo</td>
+	<td style="text-align:left;">分配给 Albedo。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">$textureSet_MetallicAOGloss</td>
+	<td style="text-align:left;">分配给 Metallic 且 Occlusion.Smoothness Source 设置为 Metallic Alpha。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">$textureSet_Normal</td>
+	<td style="text-align:left;">分配给 Normal Map 字段。</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意</strong>：与将环境光遮挡 (AO) 导出为单独的纹理相比，将多个通道打包到单个纹理（例如 MetallicAOGloss）可节省纹理内存。这是使用 Unity 标准材质的最佳方式。</p>
+
+<p>创建纹理时，不得混淆 Alpha 通道。下面的示例显示了因为 Photoshop 处理 PNG Alpha 通道的方式问题（不使用外部插件），PNG 文件中的透明度如何在 Photoshop 中让创作者感到困惑。在这种情况下，具有专用 Alpha 通道的未压缩 32 位 TGA 可能是更好的选择（假设源纹理文件大小不是问题）：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsTransparentPNG.jpg" alt="">
+</figure>
+
+<p>上面显示的透明 PNG 文件是在 Photoshop 中创建的，其 Alpha 通道显示为黑色值。具有专用 Alpha 通道的 TGA 显示了预期值。如上所示，当分配给标准着色器材质的每个纹理从 Alpha 通道读取平滑度数据时，具有 PNG 纹理的材质的平滑度意外反转，而具有 TGA 纹理的材质的平滑度是正常的。</p>
+
+<p><a name="normalMap"></a> </p>
+
+<h2>法线贴图方向</h2>
+
+<p>Unity 读取切线空间法线贴图时采用以下解释：</p>
+
+<ul>
+<li>红色通道 X+ 表示 <strong>Right</strong>
+</li>
+<li>绿色通道 Y+ 表示 <strong>Up</strong>
+</li>
+</ul>
+
+<p>例如，Autodesk® 3ds Max® <strong>Render to Texture</strong> 法线贴图在默认情况下将绿色通道 Y+ 输出为 <strong>Down</strong>。这会导致沿 Y 轴反转的表面方向，并在照亮时产生错误结果。要验证法线贴图方向，请创建一个带凹形斜面的简单平面（下例中的中间图片）并将其烘焙到平坦平面。然后将烘焙后的法线贴图分配到 Unity 中具有可识别光源方向的平面内，并查看是否有任何轴被反转。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsNormalMaps.jpg" alt="基于红色和绿色通道输出的无效和有效法线贴图比较">
+<figcaption>基于红色和绿色通道输出的无效和有效法线贴图比较</figcaption>
+</figure>
+
+<p>有关轴设置的建议，请参阅 3D 建模应用程序的文档。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–04–19 页面已发布</span></li>
+<li><span class="page-history">在 Unity 2017.3 中添加了制作可信视觉效果最佳实践指南</span></li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals.html"></a></span><div class="tip">在 Unity 中制作可信的视觉效果</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals2.html"></a></span><div class="tip">在 Unity 中准备渲染设置</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

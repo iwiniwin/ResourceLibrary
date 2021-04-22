@@ -1,0 +1,344 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用 Visual Studio 来调试 DirectX 11/12 着色器 - Unity 手册">
+<title>使用 Visual Studio 来调试 DirectX 11/12 着色器 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/InstallingGraphicsDebugger.jpg">
+<meta name="description" content="使用 Microsoft Visual Studio（2012 版或更高版本）中的图形调试器从 Unity Editor、Windows 独立平台或通用 Windows 平台等平台捕获应用程序的各个帧以进行调试。">
+<meta property="og:description" content="使用 Microsoft Visual Studio（2012 版或更高版本）中的图形调试器从 Unity Editor、Windows 独立平台或通用 Windows 平台等平台捕获应用程序的各个帧以进行调试。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'SL-DebuggingD3D11ShadersWithVS';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/SL-DebuggingD3D11ShadersWithVS.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/SL-DebuggingD3D11ShadersWithVS.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/SL-DebuggingD3D11ShadersWithVS.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/SL-DebuggingD3D11ShadersWithVS.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/SL-DebuggingD3D11ShadersWithVS.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/SL-DebuggingD3D11ShadersWithVS.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/SL-DebuggingD3D11ShadersWithVS.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/SL-DebuggingD3D11ShadersWithVS.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/SL-DebuggingD3D11ShadersWithVS.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/SL-DebuggingD3D11ShadersWithVS.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/SL-DebuggingD3D11ShadersWithVS.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/SL-DebuggingD3D11ShadersWithVS.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/SL-DebuggingD3D11ShadersWithVS.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/SL-DebuggingD3D11ShadersWithVS.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/SL-DebuggingD3D11ShadersWithVS.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/SL-DebuggingD3D11ShadersWithVS.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/SL-DebuggingD3D11ShadersWithVS.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/SL-DebuggingD3D11ShadersWithVS.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/SL-DebuggingD3D11ShadersWithVS.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/SL-DebuggingD3D11ShadersWithVS.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/SL-DebuggingD3D11ShadersWithVS.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/SL-DebuggingD3D11ShadersWithVS.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/SL-DebuggingD3D11ShadersWithVS.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/SL-DebuggingD3D11ShadersWithVS.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/SL-DebuggingD3D11ShadersWithVS.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/SL-DebuggingD3D11ShadersWithVS.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/SL-DebuggingD3D11ShadersWithVS.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/SL-DebuggingD3D11ShadersWithVS.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/SL-DebuggingD3D11ShadersWithVS.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/SL-DebuggingD3D11ShadersWithVS.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/SL-DebuggingD3D11ShadersWithVS.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="Shaders.html">网格、材质、着色器和纹理</a></li>
+<li><a href="ShadersOverview.html">编写着色器</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-AdvancedTopics.html">高级 ShaderLab 主题</a></li>
+<li>使用 Visual Studio 来调试 DirectX 11/12 着色器</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-TextureArrays.html"></a></span><div class="tip">在着色器中使用纹理数组</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DebuggingShadersWithPIX.html"></a></span><div class="tip">使用 PIX 来调试 DirectX 12 着色器</div>
+</div>
+</div></div>
+<h1>使用 Visual Studio 来调试 DirectX 11/12 着色器</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用 Microsoft Visual Studio（2012 版或更高版本）中的图形调试器从 Unity Editor、Windows 独立平台或通用 Windows 平台等平台捕获应用程序的各个帧以进行调试。</p>
+
+<p>要安装 Visual Studio 中的图形调试器，请执行以下操作：</p>
+
+<p>1.选择 <strong>Tools </strong>&gt; <strong>Get Tools and Features</strong>
+ <img src="../uploads/Main/InstallingGraphicsDebugger.jpg" alt=""></p>
+
+<p>2.在 <strong>Individual components</strong> 选项卡上，滚动到 <strong>Games and Graphics__，并选中 </strong>Graphics debugger and GPU profiler for DirectX__ 的复选框</p>
+
+<p>3.单击 <strong>Modify</strong></p>
+
+<p>4.等待安装，然后按照说明重新启动计算机</p>
+
+<h2>使用 Visual Studio 来捕获 DirectX 着色器</h2>
+
+<p>应使用已构建的 Unity 应用程序版本来捕获帧，而不是使用 Unity Editor 中运行的版本。这是因为 Editor 可能同时打开多个子窗口，而图形调试器可能会从非预期窗口捕获帧。</p>
+
+<h3>从 Unity Editor 或 Windows 独立平台中捕获帧的步骤</h3>
+
+<p>要在这两个平台中的任何一个平台上使用图形调试器，您需要创建一个虚拟的 Visual Studio 项目：</p>
+
+<p>1.启动 Visual Studio 2017</p>
+
+<p>2.选择 <strong>File</strong> &gt; <strong>New</strong> &gt; <strong>Project</strong> &gt; <strong>Visual C++</strong> &gt; <strong>Empty Project</strong></p>
+
+<p>3.选择 <strong>Project</strong> &gt; <strong>Properties</strong> &gt; <strong>Configuration Properties</strong> &gt; <strong>Debugging</strong></p>
+
+<p>4.在 <strong>Command</strong> 字段中，将 $(TargetPath) 替换为 Unity Editor 或 Windows 独立平台的路径（例如 <em>C:\MyApp\MyApp.exe</em>）</p>
+
+<p>5.如果要强制 Windows 独立平台或 Unity Editor 在 DirectX 11 下运行，请选择 <strong>Command Arguments</strong> 并输入 <strong>-force-d3d11</strong>。
+ <img src="../uploads/Main/ShaderDebuggingVSProps.png" alt="项目属性"></p>
+
+<p>6.选择 <strong>Debug </strong>&gt; <strong>Graphics</strong> &gt; <strong>Start Graphics</strong> <strong>Debugging</strong></p>
+
+<p>7.如果全部配置都正确无误，Unity 会在应用程序的左上角显示以下文本：
+ <img src="../uploads/Main/ShaderDebuggingStandalone.png" alt="Unity Editor 中的调试器消息"></p>
+
+<p>8.要捕获帧，请使用键盘上的 Print Screen 键，或单击 Visual Studio 界面左侧的 <strong>Capture Frame</strong> 框。
+ <img src="../uploads/Main/ShaderDebuggingCaptureFrame.png" alt="Visual Studio 界面中的 Capture Frame"></p>
+
+<h2>使用 Visual Studio 来调试 DirectX 着色器</h2>
+
+<p>要调试着色器，必须使用调试符号进行编译。为此，需要插入 <strong>#pragma enable_d3d11_debug_symbols</strong>。</p>
+
+<p>着色器应如下所示：</p>
+
+<pre><code>Shader "Custom/NewShader" {
+    Properties {
+        _MainTex ("Base (RGB)", 2D) = "white" {}
+    }
+    SubShader {
+        Tags { "RenderType"="Opaque" }
+        LOD 200
+        
+        CGPROGRAM
+        #pragma surface surf Lambert
+        #pragma enable_d3d11_debug_symbols
+        sampler2D _MainTex;
+
+        struct Input {
+            float2 uv_MainTex;
+        };
+
+        void surf (Input IN, inout SurfaceOutput o) {
+            half4 c = tex2D (_MainTex, IN.uv_MainTex);
+            o.Albedo = c.rgb;
+            o.Alpha = c.a;
+        }
+        ENDCG
+    } 
+    FallBack "Diffuse"
+}
+
+</code></pre>
+
+<h2>示例工作流程</h2>
+
+<p>让我们创建一个基本示例来展示整个过程：</p>
+
+<p>1.创建新的 Unity 项目（请参阅<a href="GettingStarted.html">准备开始</a>文档）。</p>
+
+<p>2.在顶部菜单中，选择 <strong>Assets</strong> &gt; <strong>Create</strong> &gt; <strong>Shader</strong> &gt; <strong>Standard Surface Shader</strong>。此时将在 <strong>Project</strong> 文件夹中创建一个新的着色器文件。</p>
+
+<p>3.选择着色器文件，然后在 Inspector 窗口中单击 <strong>Open</strong>。此时将在脚本编辑器中打开着色器文件。将 <code>#pragma enable_d3d11_debug_symbols</code> 插入到着色器代码中的其他 <code>#pragma</code> 行下面。</p>
+
+<p>4.创建新的材质（菜单：__Assets__ &gt; <strong>Create</strong> &gt; __Material__）。</p>
+
+<p>5.在 Material Inspector 窗口中，选择 <strong>Shader</strong> 下拉选单，选择 __Custom__，然后选择刚创建的着色器。</p>
+
+<p>6.创建 3D 立方体游戏对象（菜单：__GameObject__ &gt; <strong>3D Object</strong> &gt; __Cube__）。</p>
+
+<p>7.将新材质分配给新的游戏对象。要执行此操作，请将材质从 <strong>Project</strong> 窗口拖到 3D 立方体上。</p>
+
+<p>8.构建适用于 Windows 独立平台的项目。请注意，实际项目可能非常大，以至于每次要调试着色器时构建它们都会很低效；在这种情况下，请在 Editor 中进行调试，但要确保您的捕获已分析正确的窗口。</p>
+
+<p>9.按照前面__使用 Visual Studio 来捕获 DirectX 着色器__部分描述的步骤捕获帧。</p>
+
+<p>10.捕获的帧出现在 Visual Studio 中。右键单击该帧，然后选择 <strong>Pixel</strong>。</p>
+
+<pre><code>![捕获的帧，__History__，选择已分配自定义着色器的对象的__像素__。](../uploads/Main/ShaderDebuggingCapturedFrame.png)
+</code></pre>
+
+<p>11.单击 Vertex Shader 旁边的 Play 按钮（以上截屏中圈出）。此时将打开顶点着色器文件：
+ <img src="../uploads/Main/ShaderDebuggingVertexShader.png" alt="调试顶点着色器"></p>
+
+<p>在使用 DirectX 12 时存在一个已知问题导致 Play 按钮不可用，并显示以下错误：此绘制调用使用干扰像素历史记录计算的系统值语义 (This draw call uses system-value semantics that interfere with pixel history computation)。如果遇到此问题，请使用 <a href="DebuggingShadersWithPIX.html">PIX</a> 来调试着色器。</p>
+
+<h3>通用 Windows 平台</h3>
+
+<p>在进行通用 Windows 平台的调试时，不需要创建虚拟 Visual Studio 项目，因为 Unity 会创建该项目。</p>
+
+<p>捕获帧和开始进行着色器调试的步骤与 Unity Editor 或 Windows 独立平台的步骤相同。</p>
+
+<h2>备用着色器调试技术</h2>
+
+<p>还可以使用 <a href="RenderDocIntegration.html">RenderDoc</a> 来调试着色器。在 RenderDoc 中，从 Editor 中捕获__场景__，然后使用独立平台工具进行调试。</p>
+
+<p><a href="DebuggingShadersWithPIX.html">PIX</a> 的工作方式与 Visual Studio 的图形调试器相似。请使用 PIX 而不是图形调试器来调试 DirectX 12 项目。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–09–14 页面已发布</span></li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-TextureArrays.html"></a></span><div class="tip">在着色器中使用纹理数组</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DebuggingShadersWithPIX.html"></a></span><div class="tip">使用 PIX 来调试 DirectX 12 着色器</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

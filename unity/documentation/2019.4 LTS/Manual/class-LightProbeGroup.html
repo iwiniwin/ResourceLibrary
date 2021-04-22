@@ -1,0 +1,395 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Light Probe Group - Unity 手册">
+<title>Light Probe Group - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/class-LightProbeGroup-20183.png">
+<meta name="description" content="要将光照探针置于场景中，必须使用已附加 Light Probe Group 组件的游戏对象。可从菜单 Component &gt; Rendering &gt; Light Probe Group 添加 Light Probe Group 组件。">
+<meta property="og:description" content="要将光照探针置于场景中，必须使用已附加 Light Probe Group 组件的游戏对象。可从菜单 Component &gt; Rendering &gt; Light Probe Group 添加 Light Probe Group 组件。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-LightProbeGroup';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-LightProbeGroup.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-LightProbeGroup.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-LightProbeGroup.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-LightProbeGroup.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-LightProbeGroup.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-LightProbeGroup.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-LightProbeGroup.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-LightProbeGroup.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-LightProbeGroup.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-LightProbeGroup.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-LightProbeGroup.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-LightProbeGroup.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-LightProbeGroup.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-LightProbeGroup.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-LightProbeGroup.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-LightProbeGroup.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-LightProbeGroup.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-LightProbeGroup.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-LightProbeGroup.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-LightProbeGroup.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-LightProbeGroup.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-LightProbeGroup.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-LightProbeGroup.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-LightProbeGroup.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-LightProbeGroup.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-LightProbeGroup.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-LightProbeGroup.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-LightProbeGroup.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-LightProbeGroup.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-LightProbeGroup.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-LightProbeGroup.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-LightProbeGroup.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-LightProbeGroup.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-LightProbeGroup.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-LightProbeGroup.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-LightProbeGroup.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-LightProbeGroup.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-LightProbeGroup.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-LightProbeGroup.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-LightProbeGroup.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-LightProbeGroup.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-LightProbeGroup.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-LightProbeGroup.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-LightProbeGroup.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-LightProbeGroup.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-LightProbeGroup.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-LightProbeGroup.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-LightProbeGroup.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="LightProbes.html">光照探针</a></li>
+<li>Light Probe Group</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightProbes-TechnicalInformation.html"></a></span><div class="tip">光照探针：技术信息</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightProbes-Placing-Scripting.html"></a></span><div class="tip">使用脚本放置光照探针</div>
+</div>
+</div></div>
+<h1>Light Probe Group</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>要将光照探针置于场景中，必须使用已附加 <strong>Light Probe Group</strong> 组件的游戏对象。可从菜单 <strong>Component &gt; Rendering &gt; Light Probe Group</strong> 添加 Light Probe Group 组件。</p>
+
+<p>可将 Light Probe Group 组件添加到场景中的任何游戏对象。但是，最好创建一个新的空游戏对象（菜单：__GameObject &gt; Create Empty__），然后将该组件添加到这个游戏对象，从而降低意外将该组件从项目中移除的可能性。</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-20183.png" alt="Light Probe Group 组件">
+<figcaption>Light Probe Group 组件</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Edit Light Probes</strong></td>
+	<td style="text-align:left;">要更改 Light Probe Group，请单击 <strong>Edit Light Probes</strong> 按钮以启用编辑。这会更改 Unity，只允许移动和编辑光照探针，因此必须记住在完成后禁用此设置。启用 <strong>Edit Light Probes</strong> 后，无法在 Unity 中移动和编辑游戏对象或其他元素。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show Wireframe</strong></td>
+	<td style="text-align:left;">启用此属性后，Unity 将在 Scene 视图中显示 Light Probe Group 的线框。禁用后，Unity 仅显示光照探针点，而不显示连接这些点的线框。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Remove Ringing</strong></td>
+	<td style="text-align:left;">启用此属性后，Unity 会自动从场景中消除光照探针振铃。有关更多信息，请参阅本节稍后部分的<a href="#Ringing">振铃</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Selected Probe Position</strong></td>
+	<td style="text-align:left;">此属性提供场景中所选光照探针的 x、y 和 z 坐标。此属性为只读。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Add Probe</strong></td>
+	<td style="text-align:left;">单击此按钮向 Light Probe Group 中添加光照探针。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Select All</strong></td>
+	<td style="text-align:left;">单击此按钮选择 Light Probe Group 中的所有光照探针。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Delete Selected</strong></td>
+	<td style="text-align:left;">单击此按钮从 Light Probe Group 中删除所选的光照探针。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Duplicate Selected</strong></td>
+	<td style="text-align:left;">单击此按钮复制所选的光照探针。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Ringing"></a></p>
+
+<h3>振铃</h3>
+
+<p>在某些情况下，光照探针会出现一种称为“振铃”的不良行为。当光照探针周围的光线存在显著差异时，通常会发生这种情况。例如，如果光照探针的一侧有明亮的光线，而另一侧没有光线，则光强会在背面“过冲”。这种过冲会在背面产生光斑。</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-Ringing.png" alt="光照探针振铃示例">
+<figcaption>光照探针振铃示例</figcaption>
+</figure>
+
+<p>有几种方法可以解决此问题：</p>
+
+<ul>
+<li>在 Light Probe Group 组件中，启用 <strong>Remove Ringing</strong>。Unity 会自动移除意外的光斑。但是，这种方法通常会使光照探针不太准确，并会降低光线对比度，因此您必须检查视觉效果。</li>
+<li>可通过这样的方式放置游戏中的障碍物，使玩家无法到达他们可以看到光斑的位置。</li>
+<li>避免将直射光烘焙到光照探针中。直射光往往具有明显的不连续性（例如阴影边缘），因此不适合光照探针。要仅烘焙间接光，请使用<a href="https://docs.unity3d.com/Manual/LightMode-Mixed.html">混合光照</a>。</li>
+<li>如果使用的是内置渲染管线，请考虑使用<a href="realtime-gi-using-enlighten.html">实时全局光照（已弃用）</a>而不是光照探针来为动态游戏对象提供光照。</li>
+</ul>
+
+<h2>放置光照探针</h2>
+
+<p>编辑 Light Probe Group 时，可按照与游戏对象类似的方式来操作单个光照探针。但是，光照探针不是游戏对象，而是 Light Probe Group 组件中的一组点。</p>
+
+<p>开始编辑新的 Light Probe Group 时，从一个立方体中排列的八个探针的默认编队开始，如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-9.png" alt="光照探针的默认排列。">
+<figcaption>光照探针的默认排列。</figcaption>
+</figure>
+
+<p>现在可以使用 Light Probe Group Inspector 中的控件向该组添加新的探针位置。探针在场景中显示为黄色球体，这些球体可按照与游戏对象相同的方式定位。还可以使用常规的“复制”键盘快捷键 (ctrl+d/cmd+d) 来选择和复制单个探针或按组进行这些操作。</p>
+
+<p>完成光照探针的编辑后，务必禁用 Light Probe Group 编辑模式，这样就可以继续正常编辑和移动场景中的游戏对象。</p>
+
+<h3>选择光照探针位置</h3>
+
+<p>与通常在对象表面具有连续分辨率的光照贴图不同，光照探针信息的分辨率取决于放置光照探针的紧密程度。</p>
+
+<p>为了优化光照探针存储的数据量以及游戏在进行时完成的计算量，通常应尝试尽可能少量放置光照探针。但是，在可以接受的范围内，建议放置足够多的光照探针来记录一个空间到另一空间的光线变化。这意味着，在具有复杂或高对比度光线的区域周围可提高光照探针的放置密度，而在光线没有显著变化的区域可降低它们的放置密度。</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-10.png" alt="在简单场景周围放置不同密度的光照探针">
+<figcaption>在简单场景周围放置不同密度的光照探针</figcaption>
+</figure>
+
+<p>在以上示例中，建筑物附近和之间的对比度和颜色变化较大，因此光照探针放置得较密集，而沿着道路的光照没有显著变化，因此放置密度较小。</p>
+
+<p>定位光照探针的最简单方法是将它们排列成常规 3D 网格图案。虽然此设置简单有效，但可能会消耗不必要的内存，并可能有大量冗余的光照探针。例如，在以上场景中，如果沿着道路放置大量光照探针，将会浪费资源。光照沿着道路的长度不会发生太大变化，因此许多光照探针将大多数相同的光照数据存储到相邻光照探针中。在此类情况下，通过在稀疏光照探针之间插入此光照数据，效率会高得多。</p>
+
+<p>光照探针不会单独存储大量信息。从技术角度来看，每个探针都是来自采样点的球形全景 HDR 图像，使用存储为 27 个浮点值的球谐函数 L2 进行编码。然而，在具有数百个光照探针的大型场景中，这些探针可以累加，而设置密集度过高的光照探针可能导致游戏中大量内存浪费。</p>
+
+<h3>创建体积</h3>
+
+<p>即使游戏位于 2D 平面上（例如，在路面上行驶的汽车），光照探针也必须形成 3D 体积。</p>
+
+<p>这意味着光照探针组中至少应有两个垂直“层”的点。</p>
+
+<p>在以下示例中，在左侧看到光照探针仅排列在地面上。因为光照探针系统无法从光照探针计算明显的四面体体积，所以这种排列方式不会产生良好光照。</p>
+
+<p>在右侧，光照探针排列为两层，一些低至地面，另一些高于地面，因此它们一起形成由大量单个四面体组成的一个 3D 体积。这是一种良好的布局。</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-11.jpg" alt="左图显示了光照探针位置的选择不当，因为光照探针定义的体积没有高度。右图显示了光照探针位置的选择较恰当。">
+<figcaption>左图显示了光照探针位置的选择不当，因为光照探针定义的体积没有高度。右图显示了光照探针位置的选择较恰当。</figcaption>
+</figure>
+
+<h3>放置光照探针以实现动态 GI</h3>
+
+<p>Unity 的实时 GI 允许移动光源针对静态景物投射动态反射光。但是，使用光照探针时，还可从移动游戏对象上的移动光源接收动态反射光。</p>
+
+<p>因此，光照探针执行两个非常相似但不同的功能：它们存储静态烘焙光源，并在运行时代表动态实时全局光照（GI 或反射光）的采样点来影响移动对象上的光照。</p>
+
+<p>所以，如果要使用动态移动光源，并希望移动游戏对象上有实时反射光，这可能会影响放置光照探针的位置以及将它们分组的密集程度。</p>
+
+<p>在这种情况下要考虑的要点是，对于大面积范围内相对不变的<em>静态光源</em>，因为光照不会在大面积范围内变化，只需放置少数几个光照探针。但是，如果计划在此区域内使用<em>移动光源</em>，并且希望移动对象用来接收反射光，则需要在该区域内建立更密集的光照探针网络，以便有足够高的准确度来匹配光源的范围和样式。</p>
+
+<p>放置光照探针需要的密集程度因光源的大小和范围、其移动速度以及希望接收反射光的移动对象的大小而异。</p>
+
+<h3>光照探针放置故障排除</h3>
+
+<p>对光照探针位置的选择必须考虑到光照将在光照探针组之间进行插值的情况。如果光照探针不能充分适应场景中光照的变化，可能会出现问题。</p>
+
+<p>以下示例显示了一个夜间场景，两侧有两个明亮街灯，中间有一个暗区。如果光照探针仅放置在街灯附近，而在暗区中没有放置，则街灯的光照会跨越黑暗间隙“渗透”到移动对象上。这是因为光照会从一个亮点插入到另一亮点，而没有关于暗区的信息。</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-12.jpg" alt="此图像显示了不佳的光照探针放置。两个街灯之间的暗区内没有光照探针，因此暗区根本不会包含在插值中。">
+<figcaption>此图像显示了不佳的光照探针放置。两个街灯之间的暗区内没有光照探针，因此暗区根本不会包含在插值中。</figcaption>
+</figure>
+
+<p>如果使用实时或混合光源，此问题可能不太明显，因为只有_间接_光才会跨越间隙渗透。如果使用完全烘焙光源，问题会更明显，因为此情况下也会从光照探针插入移动对象上的直射光。在此示例场景中会烘焙两个街灯，因此移动对象从光照探针获得直射光。在下图中，可看到结果：一个移动对象（救护车）在穿过暗区时仍然获得明亮光照，这不是想要的效果。黄色线框四面体显示出，插值发生在街道明亮光照的一端与另一端之间。</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-13.jpg" alt="">
+</figure>
+
+<p>这是不想要的效果：救护车在穿过暗区时仍然获得明亮光照，因为在暗区中没有放置光照探针。</p>
+
+<p>要解决此问题，应该在暗区中放置更多光照探针，如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-14.jpg" alt="">
+</figure>
+
+<p>现在场景的暗区中也有了光照探针。因此，移动的救护车从场景的一侧移动到另一侧时，救护车上的光照更暗。</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-15.jpg" alt="现在，救护车在场景中心时，车上的光照更暗，这符合要求。">
+<figcaption>现在，救护车在场景中心时，车上的光照更暗，这符合要求。</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2018–10–17 页面已修订</span></p></li>
+<li><p><span class="page-edit"> 2017–06–08 页面已发布</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> 版中添加了 <strong>Remove Ringing</strong> <span class="search-words">NewIn20183</span></span></p></li>
+<li><p><span class="page-history">在 5.6 版更新了光照探针</span></p></li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightProbes-TechnicalInformation.html"></a></span><div class="tip">光照探针：技术信息</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightProbes-Placing-Scripting.html"></a></span><div class="tip">使用脚本放置光照探针</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

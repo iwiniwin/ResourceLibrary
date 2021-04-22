@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="305" viewBox="0 0 1560 610">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 4px;
+        stroke-dasharray: 16 8;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #2196f3;
+      }
+
+      .cls-1, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #daedfd;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        font-size: 36px;
+        text-anchor: middle;
+      }
+
+      .cls-4, .cls-6, .cls-7 {
+        font-family: Roboto;
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        stroke: #000;
+      }
+
+      .cls-6, .cls-7 {
+        font-size: 24px;
+      }
+
+      .cls-7 {
+        fill: #2196f3;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M1040,41h2V573h-2V41Z"/>
+  <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-2" x="38" y="212" width="438" height="222" rx="10" ry="10"/>
+  <rect id="Rounded_Rectangle_2" data-name="Rounded Rectangle 2" class="cls-3" x="96" y="269" width="318" height="73" rx="10" ry="10"/>
+  <text id="In_Development" data-name="In Development" class="cls-4" x="254.399" y="316.93"><tspan x="254.399">In Development</tspan></text>
+  <rect id="Rounded_Rectangle_1_copy" data-name="Rounded Rectangle 1 copy" class="cls-2" x="559" y="212" width="438" height="222" rx="10" ry="10"/>
+  <rect id="Rounded_Rectangle_2_copy" data-name="Rounded Rectangle 2 copy" class="cls-3" x="617" y="269" width="318" height="73" rx="10" ry="10"/>
+  <text id="Preview" class="cls-4" x="774.396" y="314.93"><tspan x="774.396">Preview</tspan></text>
+  <rect id="Rounded_Rectangle_1_copy_2" data-name="Rounded Rectangle 1 copy 2" class="cls-2" x="1082" y="212" width="438" height="222" rx="10" ry="10"/>
+  <rect id="Rounded_Rectangle_2_copy_2" data-name="Rounded Rectangle 2 copy 2" class="cls-3" x="1140" y="269" width="318" height="73" rx="10" ry="10"/>
+  <text id="Verified" class="cls-4" x="1293.396" y="316.93"><tspan x="1293.396">Verified</tspan></text>
+  <path class="cls-5" d="M483,305v-2h43v-6.5l25,7.5-25,7.5V305H483Z"/>
+  <path class="cls-5" d="M1008,305v-2h43v-6.5l25,7.5-25,7.5V305h-43Z"/>
+  <text id="_0.x.y" data-name="0.x.y" class="cls-6" x="227.047" y="363.461">0.x.y</text>
+  <text id="x.y.z-preview_x.y.z-preview.a" data-name="x.y.z-preview x.y.z-preview.a" class="cls-6" x="712.394" y="363.461">x.y.z-preview<tspan x="712.394" dy="28.8">x.y.z-preview.a</tspan></text>
+  <text id="x.y.z" class="cls-6" x="1278.821" y="363.461">x.y.z</text>
+  <path class="cls-5" d="M773,124h2v61h6.5L774,210l-7.5-25H773V124Z"/>
+  <path class="cls-5" d="M773,125v-2h526v2H773Z"/>
+  <path class="cls-5" d="M1297,123.988l2,0.024-1,85-2-.024Z"/>
+  <text id="unsupported" class="cls-7" x="883.785" y="508.375">unsupported</text>
+  <text id="supported" class="cls-7" x="1055.129" y="508.375">supported</text>
+  <text id="Lorem_Ipsum" data-name="Lorem Ipsum" class="cls-6" x="1238.938" y="852.878">Lorem Ipsum</text>
+  <text id="API_changes" data-name="API changes" class="cls-6" x="986.173" y="102.169">API changes</text>
+</svg>

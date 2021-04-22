@@ -1,0 +1,676 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="升级到 Unity 2018 LTS - Unity 手册">
+<title>升级到 Unity 2018 LTS - Unity 手册</title>
+<meta name="description" content="本页面列出了从 Unity 2017 LTS 升级到 Unity 2018 LTS 时可能对现有项目造成影响的更改。">
+<meta property="og:description" content="本页面列出了从 Unity 2017 LTS 升级到 Unity 2018 LTS 时可能对现有项目造成影响的更改。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UpgradeGuide2018LTS';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UpgradeGuide2018LTS.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UpgradeGuide2018LTS.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UpgradeGuide2018LTS.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UpgradeGuide2018LTS.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UpgradeGuide2018LTS.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UpgradeGuide2018LTS.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UpgradeGuide2018LTS.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UpgradeGuide2018LTS.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UpgradeGuide2018LTS.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UpgradeGuide2018LTS.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UpgradeGuide2018LTS.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UpgradeGuide2018LTS.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UpgradeGuide2018LTS.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UpgradeGuide2018LTS.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UpgradeGuide2018LTS.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UpgradeGuide2018LTS.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UpgradeGuide2018LTS.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UpgradeGuide2018LTS.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UpgradeGuide2018LTS.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UpgradeGuide2018LTS.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UpgradeGuide2018LTS.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UpgradeGuide2018LTS.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UpgradeGuide2018LTS.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UpgradeGuide2018LTS.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UpgradeGuide2018LTS.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UpgradeGuide2018LTS.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UpgradeGuide2018LTS.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UpgradeGuide2018LTS.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UpgradeGuide2018LTS.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UpgradeGuide2018LTS.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UpgradeGuide2018LTS.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UpgradeGuide2018LTS.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UpgradeGuide2018LTS.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UpgradeGuide2018LTS.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UpgradeGuide2018LTS.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UpgradeGuide2018LTS.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UpgradeGuide2018LTS.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UpgradeGuide2018LTS.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UpgradeGuide2018LTS.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UpgradeGuide2018LTS.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UpgradeGuide2018LTS.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UpgradeGuide2018LTS.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UpgradeGuide2018LTS.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UpgradeGuide2018LTS.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UpgradeGuide2018LTS.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UpgradeGuide2018LTS.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UpgradeGuide2018LTS.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UpgradeGuide2018LTS.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li>升级到 Unity 2018 LTS</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide2019LTS.html"></a></span><div class="tip">升级到 Unity 2019 LTS</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20173.html"></a></span><div class="tip">升级到 Unity 2017.3</div>
+</div>
+</div></div>
+<h1>升级到 Unity 2018 LTS</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a name="TopOfPage"></a>
+本页面列出了从 Unity 2017 LTS 升级到 Unity 2018 LTS 时可能对现有项目造成影响的更改。</p>
+
+<h3>页面大纲</h3>
+
+<ul>
+<li><a href="#PackageManager">UnityPackageManager 目录重命名为 Packages</a></li>
+<li><a href="#ImprovedPrefabs">改进了预制件</a></li>
+<li><a href="#USSFlex">USS flex 简化扩展现在遵循 CSS 标准</a></li>
+<li><a href="#LogExceptions">支持记录托管用户线程中未处理的异常</a></li>
+<li><a href="#VFACE">现在已在 DirectX（11 和 12）中反转 VFACE 着色器变量</a></li>
+<li><a href="#PhysX">将 PhysX 从 3.3.1 升级到 3.4.2</a></li>
+<li><a href="#AssetBundleProp">已将 AssetBundle.mainAsset 属性标记为“过时”</a></li>
+<li><a href="#NavMesh">升级使用 NavMesh 组件的项目</a></li>
+<li><a href="#ParticleBug">粒子系统错误修复</a></li>
+<li><a href="#Roslyn">C# 编译器升级到 Roslyn</a></li>
+<li><a href="#JSBoo">已移除 UnityScript 和 Boo 脚本编译器</a></li>
+<li><a href="#RootMotion">Animator 根运动 (Root Motion) 播放已更改</a></li>
+<li><a href="#UIElements">UIElements.ContextualMenu 更改</a></li>
+<li><a href="#RakNet">Multiplayer：已弃用的旧版网络 API 已被删除（基于 RakNet）</a></li>
+<li><a href="#PSD">在使用透明度的情况下导入 Photoshop 数据文件 (PSD)</a></li>
+<li><a href="#Coroutines">在禁用或销毁游戏对象时，从 MonoBehaviour 返回的协程将不再启动</a></li>
+<li><a href="#BuildPipelineReport">BuildPipeline API 现在返回 BuildReport 对象，而不是字符串</a></li>
+<li><a href="#QuitNotif">播放器退出通知已从消息更改为事件</a></li>
+<li><a href="#Avatar">在 .NET 平台上已弃用 AvatarBuilder.BuildHumanAvatar</a></li>
+<li><a href="#TouchScreenKeyboard">已弃用 TouchScreenKeyboard.wasCanceled 和 TouchScreenKeyboard.done</a></li>
+<li><a href="#MonoDevelop">已从 Unity 安装程序中移除 MonoDevelop 5.9.6，并且在 Unity 中已不再提供其支持</a></li>
+<li><a href="#BuildPipeline">BuildPipeline 回调接口现在接受 BuildReport 对象</a></li>
+<li><a href="#SpecialImport">以后不再通过专用导入器来导入位于插件文件夹中的资源</a></li>
+<li><a href="#ParticlePivot">粒子系统网格粒子错误地应用了轴心偏移值</a></li>
+<li><a href="#GPUGI">GPU 实例化支持全局光照</a></li>
+<li><a href="#ComplexHandles">手柄绘制和大小函数默认值</a></li>
+<li><a href="#UnsafeC">在 Unity Editor 中编译不安全的 C# 代码现在需要启用一个选项</a></li>
+</ul>
+
+<hr>
+
+<p><a name="PackageManager"></a></p>
+
+<h3>“UnityPackageManager”目录重命名为“Packages”</h3>
+
+<p>在 2017.2 和 2017.3 版中，Unity Package Manager 引入了 <strong>UnityPackageManager</strong> 目录，用于存储名为 <strong>manifest.json</strong> 的文件。可通过脚本使用以 <strong>Packages</strong> 开头的虚拟相对路径来访问包内容。</p>
+
+<p>在 2018.1 版中，__UnityPackageManager__ 目录已重命名为 <strong>Packages__，使之与打包资源的虚拟相对路径一致。应该将 </strong>manifest.json__ 文件自动移到新目录。</p>
+
+<p>因此：</p>
+
+<ul>
+<li><p>如果项目使用 Perforce 或 Git 之类的版本控制系统 (VCS)，可能需要更新其配置来跟踪 <strong>Packages</strong> 目录，而不是 <strong>UnityPackageManager</strong> 目录。</p></li>
+<li>
+<p>如果项目因使用 Nuget（或任何外部包管理器）而需要使用 <strong>Packages</strong> 目录，则应该更改其配置以使用其他目录。之所以建议执行此操作，是为了消除 Unity Package Manager 在很小的概率下获取包而可能导致编译错误或导入错误等难以调试的问题。</p>
+
+<ul>
+<li>要配置 Nuget 以使用其他目录来存储其包，请参阅 <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior">Microsoft 官方文档</a>。</li>
+</ul>
+</li>
+<li><p>在迁移到新目录后，可以安全删除 <strong>UnityPackageManager</strong> 目录。</p></li>
+</ul>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="ImprovedPrefabs"></a></p>
+
+<h3>改进了预制件</h3>
+
+<ul>
+<li>预制件自动升级到<a href="https://unity3d.com/prefabs">新预制件系统</a>。</li>
+<li>预制件工作流程已更改，从而支持预制件嵌套。要编辑预制件，现在需要在预制件模式下将其打开。无法再在 Project Browser 中编辑预制件。</li>
+<li>还可以在预制件模式中进行结构更改，例如删除游戏对象、为游戏对象重设父子关系或将变换组件替换为 RectTransform。或者，如果希望完全移除预制件实例与预设件资源的链接，从而能够根据需要重建生成的普通游戏对象，则可以将预制件实例解压缩。无法再将预制件实例断开连接。</li>
+<li>用于创建游戏对象的 Editor 工具应该使用 <a href="../ScriptReference/ObjectFactory.CreateGameObject.html">ObjectFactory.CreateGameObject</a> 来确保当前正在预制件模式下编辑预制件资源时，游戏对象最终位于预制件场景中。</li>
+<li>作为安全预防措施，具有 [ExecuteInEditMode] 属性的脚本使 Editor 在进入播放模式时退出预制件模式（如果打开的预制件上的任何脚本具有该属性）。有关如何使此类脚本与预制件模式兼容的详细信息，请参阅 <a href="../ScriptReference/ExecuteInEditMode.html">ExecuteInEditMode</a> 和新的 <a href="../ScriptReference/ExecuteAlways.html">ExecuteAlways</a> 属性的脚本参考页面。</li>
+<li>无法再通过脚本对预制件资源进行任意修改，因为预制件现在是导入的资源。现在需要使用 <a href="../ScriptReference/PrefabUtility.LoadPrefabContents.html">PrefabUtility.LoadPrefabContents</a>、<a href="../ScriptReference/PrefabUtility.SaveAsPrefabAsset.html">PrefabUtility.SaveAsPrefabAsset</a> 和 <a href="../ScriptReference/PrefabUtility.UnloadPrefabContents.html">PrefabUtility.UnloadPrefabContents</a>。</li>
+<li>如果使用 <a href="../ScriptReference/AssetDatabase.AddObjectToAsset.html">AssetDatabase.AddObjectToAsset</a> 将额外资源添加到预制件，现在必须在添加必备对象后调用 <a href="../ScriptReference/PrefabUtility.SavePrefabAsset.html">PrefabUtility.SavePrefabAsset</a>。</li>
+</ul>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="USSFlex"></a></p>
+
+<h3>USS flex 简化扩展现在遵循 CSS 标准</h3>
+
+<ul>
+<li>USS flex 指令现在最多接受三个表示 <code>flex-grow</code>、<code>flex-shrink</code> 和 <code>flex-basis</code> 的参数。flex-shrink 和 flex-basis 参数是可选参数。如果省略，flex-basis 默认为 0，flex-shrink 默认为 1。</li>
+<li>在 2018.3 版之前，<code>flex: N</code> 等同于 <code>flex N 0 auto</code>。现在遵循 CSS 标准，等同于 <code>flex: N 1 0</code>。为了保留旧语义，您应该在 USS 文件中将所有 <code>flex: N</code> 指令替换为 <code>flex: N 0 auto</code>。</li>
+</ul>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="LogExceptions"></a></p>
+
+<h3>支持记录托管用户线程中未处理的异常</h3>
+
+<ul>
+<li>在 2018.3 版之前，Unity Editor 不会记录托管用户线程中抛出的未处理异常。在 2018.3 版之后，托管用户线程中抛出的未处理异常将记录在 Unity Editor 控制台中。</li>
+<li>因为日志记录现在包含所有托管用户线程，所以您可能会看到项目中始终已经抛出但直到现在还没有发送到控制台的异常。</li>
+</ul>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="VFACE"></a></p>
+
+<h3>现在已在 DirectX（11 和 12）中反转 VFACE 着色器变量</h3>
+
+<ul>
+<li>以前渲染到立方体贴图时，DirectX 和其他图形 API 之间的 VFACE 着色器变量不一致。现在具有相同行为。</li>
+<li>如果在 DirectX 着色器中使用了 VFACE 布尔着色器变量来渲染立方体贴图，则必须在代码中翻转逻辑。</li>
+<li>请参阅<a href="https://issuetracker.unity3d.com/issues/the-vface-variable-is-incorrect-in-shaders-when-rendered-from-a-reflection-probe">问题 ID 1027670</a>。</li>
+</ul>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="PhysX"></a></p>
+
+<h3>将 PhysX 从 3.3.1 升级到 3.4.2</h3>
+
+<p>物理行为已改变，一些项目的行为可能会不同于新版本。特别是以下情况：</p>
+
+<ul>
+<li>在 <strong>Persistent Contact Manifold</strong> 模式中，触点面片现在最多包含 6 个触点。在以前版本中，每个面片最多包含 5 个触点，因此现在有所增加。现在可以使用新代码将面片合并在复合体中，并可以使用新代码选择触点。碰撞看起来比以前精确得多。如果项目依赖于特定触点布局，可能需要对其进行处理以便与新代码兼容。凸面体与网格和图元碰撞时，最有可能注意到这一点。</li>
+<li>现在使用一种新算法来计算__与地形的触点<strong>。此算法在以前作为特殊情况，但现在与用于 MeshColliders 的网格图元代码相同。此算法稳健，更准确，性能也好。但不支持 TerrainData.thickness，这意味着现在有可能出现地形穿隧效应。要避免此问题，必须在快速移动的对象上启用连续碰撞检测。在此之前，如果发现一个物体的深度不超过地形下的 TerrainData.thickness，则会自动冒出，但法线一直不正确。为了保留以前这种行为，请取消选中 Physics 设置中的 </strong>Enable Unified Heightmaps__ 选项。</li>
+<li>
+<strong>负网格缩放</strong>在任何情况下都不再直接导致网格烘焙。不再烘焙凹面网格。然而，凸面网格仍然需要进行缩放才能烘焙。引入此变更后，负缩放将在 scale.x * scale.y * scale.z &lt; 0 时反转网格法线。另外，就像以前一样，诸如倾斜和截断之类的非普通缩放仍然需要进行烘焙。</li>
+<li>已弃用__凸面网格膨胀__，因为新的凸面外壳计算算法 (Quickhull) 更能容忍输入网格中的各种缺陷，似乎不再需要该功能。</li>
+</ul>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="AssetBundleProp"></a></p>
+
+<h3>已将 AssetBundle.mainAsset 属性标记为“过时”</h3>
+
+<ul>
+<li>在 5.0 版之前的 Unity 版本中，用户必须使用 AssetBundleBuildAssetBundle API 来构建 Asset Bundle，而这需要提供一个对象（在使用 AssetBundle 的 mainAsset 属性加载时返回该对象）。</li>
+<li>AssetBundle.BuildAssetBundle API 在 Unity 5.0 中标记为过时，已被 AssetBundle.BuildAssetBundles 替代，后者改变了从 AssetBundle 获取资源的方式。</li>
+<li>现在需要通过 AssetBundle.LoadAsset API 来获取资源名称或者路径才能从 AssetBundle 获取内容。请参阅关于“构建 AssetBundles”、“本机使用 AssetBundles”以及 AssetBundle 脚本 API 的文档。</li>
+</ul>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="NavMesh"></a></p>
+
+<h3>升级使用 NavMesh 组件的项目</h3>
+
+<ul>
+<li>如果将项目从 2018.2 或更早版本转移到 2018.3b 且项目使用从 Unity 的 GitHub 代码仓库获取的 NavMesh 组件，则现在需要使用此<a href="https://github.com/Unity-Technologies/NavMeshComponents/tree/2018.3">分支</a>。</li>
+</ul>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="ParticleBug"></a></p>
+
+<h3>粒子系统错误修复</h3>
+
+<p>Unity 2018.3 包含一些粒子错误修复，这可能会影响在以前版本中创建的项目。</p>
+
+<ul>
+<li>对公告牌粒子采用非均匀变换缩放时，Y 轴和 Z 轴会发生反转。现在，此问题已得到修复。</li>
+<li>对网格粒子采用非均匀变换缩放时，在缩放后会应用旋转。这是 2017.x 中的回归问题。在 5.6 版和更低版本中的表现是正常的，但在 2017 版周期中遭到破坏。修复此问题可以更正 5.6 及更低版本中创建的内容，但会改变 2017.x 版中创建的内容。</li>
+<li>球形风区对粒子的影响与树相反。此问题已经得到修正，所以球形风区现在会排斥而不是吸引粒子。可以通过取消外力乘数 (External Forces Multiplier) 或风区 (Wind Zone) 强度来恢复先前行为。Unity 无法自动更改这一点，因为具有树或定向风区的场景可能会受到不当影响。</li>
+</ul>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="Roslyn"></a></p>
+
+<h3>C# 编译器升级到 Roslyn</h3>
+
+<p>在 2018.3 版之前，Unity Editor 在编译项目中的 C# 文件时使用 Mono C# 编译器 (mcs)。从 2018.3 版开始，以新脚本运行时 (.NET 4.x Equivalent) 为目标的项目使用 Roslyn C# 编译器 (csc)。切换到 Roslyn 后可能会发现行为差异：</p>
+
+<ul>
+<li>C# 7.3 受支持</li>
+<li>可报告更多警告</li>
+<li>Roslyn 编译器的响应文件应该命名为 <code>csc.rsp</code>。请参阅 <a href="PlatformDependentCompilation.html">PlatformDependentCompilation</a>。</li>
+</ul>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="JSBoo"></a></p>
+
+<h3>已移除 UnityScript 和 Boo 脚本编译器</h3>
+
+<p>在 Editor 中无法再编译 UnityScript (.js) 和 Boo (.boo) 脚本文件。</p>
+
+<p>有关更多信息，请参阅发表于 2017 年 8 月的这篇<a href="https://blogs.unity3d.com/2017/08/11/unityscripts-long-ride-off-into-the-sunset/">博客文章</a>；并可使用 <a href="https://github.com/Unity-Technologies/unityscript2csharp">unityscript2csharp</a> 工具将 UnityScript 转换为 C#。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="RootMotion"></a></p>
+
+<h3>Animator 根运动 (Root Motion) 播放已更改</h3>
+
+<p>Animator 根运动播放功能已稍作更改，旨在纠正在 Animation 窗口中创作根运动动画 (Root Motion Animations) 时出现的某些不一致之处。</p>
+
+<ul>
+<li>不再需要为 AnimationClip（动画剪辑）生成根运动曲线。根运动的应用现在仅取决于 <a href="../ScriptReference/Animator-applyRootMotion.html">Animator.applyRootMotion</a>。</li>
+</ul>
+
+<h4>2018.2 到 2018.4 的等效情况</h4>
+
+<table>
+<colgroup>
+<col style="text-align:center;">
+<col style="text-align:center;">
+<col style="text-align:center;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">情况</th>
+	<th style="text-align:center;">生成根运动</th>
+	<th style="text-align:center;">Animator.applyRootMotion</th>
+	<th style="text-align:left;">2018.2</th>
+	<th style="text-align:left;">2018.3 和 2018.4 (LTS)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">A</td>
+	<td style="text-align:center;">是</td>
+	<td style="text-align:center;">是</td>
+	<td style="text-align:left;">在根变换 (Root Transform) 上累计应用根运动。</td>
+	<td style="text-align:left;">与 2018.2 相同</td>
+</tr>
+<tr>
+	<td style="text-align:center;">B</td>
+	<td style="text-align:center;">否</td>
+	<td style="text-align:center;">否</td>
+	<td style="text-align:left;">应用 AnimationClip 中编写的位置 (Position)、旋转 (Rotation) 和缩放 (Scale) 曲线。</td>
+	<td style="text-align:left;">与 2018.2 相同</td>
+</tr>
+<tr>
+	<td style="text-align:center;">C*</td>
+	<td style="text-align:center;">是</td>
+	<td style="text-align:center;">否</td>
+	<td style="text-align:left;">无根变换运动</td>
+	<td style="text-align:left;">应用 AnimationClip 中编写的位置 (Position)、旋转 (Rotation) 和缩放 (Scale)。</td>
+</tr>
+<tr>
+	<td style="text-align:center;">D*</td>
+	<td style="text-align:center;">否</td>
+	<td style="text-align:center;">是</td>
+	<td style="text-align:left;">无根变换运动</td>
+	<td style="text-align:left;">在根 (Root) 上累计应用根运动。</td>
+</tr>
+</tbody>
+</table>
+
+<p>对于情况 C 和 D，要在 2018.3 中获得相同的结果，您需要实现 <a href="../ScriptReference/MonoBehaviour.OnAnimatorMove.html">OnAnimatorMove</a>，然后在不想应用根运动的情况下放弃 <code>Animator.deltaPosition</code> 和 <code>Animator.deltaRotation</code>。</p>
+
+<p>如果项目使用 <code>applyRootMotion</code> 使根变换上的位置 (Position)、旋转 (Rotation) 和缩放动画 (Scale Animation) 进行“静音”，则需要手动覆盖根变换 (Root Transform) 属性。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="UIElements"></a></p>
+
+<h3>UIElements.ContextualMenu 更改</h3>
+
+<p><code>UIElements.ContextualMenu</code> 菜单操作回调现在接受 <code>ContextualMenu.MenuAction</code> 参数而不是 <code>EventBase</code> 参数。</p>
+
+<p><code>ContextualMenu.InsertSeparator</code> 接受一个额外的 <code>string</code> 参数。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="RakNet"></a></p>
+
+<h3>Multiplayer：已弃用的旧版网络 API 已被删除（基于 RakNet）</h3>
+
+<p>此功能在 Unity 5.1 中已弃用，现已删除。在 Unity 2018.2 版的项目中不能再使用此功能。</p>
+
+<p>请参阅<a href="UNet.html">多玩家和联网</a>部分以了解与 Unity 网络功能相关的更多信息。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="PSD"></a></p>
+
+<h3>在使用透明度的情况下导入 Photoshop 数据文件 (PSD)</h3>
+
+<p>具有实际透明度时，Photoshop 会调整像素颜色以将像素颜色与哑光（背景）颜色混合。在我们的<a href="https://docs.unity3d.com/Manual/HOWTO-alphamaps.html">如何准备 Alpha 通道</a>文档中介绍了正确准备 Alpha 通道的过程。</p>
+
+<p>可以忽略此文档中介绍的扩张，重要的是文档中指出，您会希望拥有包含单独 Alpha 通道/遮罩的“不透明”图像（而不是拥有透明度）。Unity 以前会调整颜色来“移除”哑光，但从 2018.2 版开始已经停止了此功能。如果您的 PSD 具有透明度，则可能会开始看到边缘的白色。要解决此问题，请参阅上面的手册链接，并创建一个实际的 Alpha 通道（而不是透明度）。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="Coroutines"></a></p>
+
+<h3>在禁用或销毁游戏对象时，从 MonoBehaviour 返回的协程将不再启动。</h3>
+
+<p>在以前的版本中，禁用或销毁游戏对象后，将停止其子 MonoBehaviours 上所有正在运行的协程。但是，在某些情况下，从此期间内调用的方法（例如，<code>OnBecameInvisible()</code>）进行启动的协程在以前是允许启动的。这种情况导致了与组件顺序相关的行为，在某些情况下会导致崩溃。</p>
+
+<p>在 Unity 2018.1 版中，在禁用或销毁游戏对象期间返回的协程将不再启动。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="BuildPipelineReport"></a></p>
+
+<h3>BuildPipeline API 现在返回 BuildReport 对象，而不是字符串</h3>
+
+<p>BuildPipeline API（例如 <code>BuildPipeline.BuildPlayer</code> 和 <code>BuildPipeline.BuildAssetBundles</code>）以前返回字符串。如果构建成功，返回结果为空；如果构建失败，则包含错误消息。</p>
+
+<p>在 2018.1 版中，这种返回结果已被新的 BuildReport 对象（其中包含关于构建过程的更丰富信息）所取代。</p>
+
+<p>要检查构建是否成功，请检索报告对象的 <code>summary</code> 属性，并检查其 <em>result</em> 属性：如果构建成功，该属性将为 <code>BuildResult.Succeeded</code>。例如：</p>
+
+<pre><code>var report = BuildPipeline.BuildPlayer(...);
+
+if (report.summary.result != BuildResult.Succeeded)
+{
+    throw new Exception("Build failed");
+}
+</code></pre>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="QuitNotif"></a></p>
+
+<h3>播放器退出通知已从消息更改为事件</h3>
+
+<p>以前，为了在 Unity 独立平台播放器退出时收到通知，需要在 MonoBehaviour 上实现 <code>OnApplicationQuit</code> 方法，而为了使播放器中止退出，需要调用 <code>Application.CancelQuit</code>。</p>
+
+<p>现在引入了两个新事件。这两个事件是 <code>Application.wantsToQuit</code> 和 <code>Application.quitting</code>。通过监听这些事件，即可在 Unity 独立平台播放器退出时获得通知。播放器意图退出时调用 <code>Application.wantsToQuit</code>。<code>wantsToQuit</code> 的监听器必须返回 true 或 false。如果希望播放器继续退出，则返回 true；如果希望播放器中止退出，则返回 false。播放器已确定退出而无法中止时调用 <code>Application.quitting</code> 事件。</p>
+
+<p>已弃用 <code>Application.CancelQuit</code>，请改用 <code>Application.wantsToQuit</code>。</p>
+
+<pre><code>using UnityEngine;
+
+public class PlayerQuitExample
+
+{
+
+    static bool WantsToQuit()
+
+    {
+
+        // 是否希望 Editor 退出？
+
+        return true;
+
+    }
+
+    static void Quit()
+
+    {
+
+        Debug.Log("Quitting the Player");
+
+    }
+
+    [RuntimeInitializeOnLoadMethod]
+
+    static void RunOnStart()
+
+    {
+
+        Application.wantsToQuit += WantsToQuit;
+
+        Application.quit += Quit;
+
+    }
+
+}
+</code></pre>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="Avatar"></a></p>
+
+<h3>在 .NET 平台上已弃用 AvatarBuilder.BuildHumanAvatar</h3>
+
+<p>此变化影响以下运行时平台：WSAPlayerX86、WSAPlayerX64 和 WSAPlayerARM。</p>
+
+<p>目前没有替代项。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="TouchScreenKeyboard"></a></p>
+
+<h3>已弃用 TouchScreenKeyboard.wasCanceled 和 TouchScreenKeyboard.done</h3>
+
+<p>可查询一个新的 TouchScreenKeyboard.status 来涵盖已弃用状态和更多其他状态。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="MonoDevelop"></a></p>
+
+<h3>已从 Unity 安装程序中移除 MonoDevelop 5.9.6，并且在 Unity 中已不再提供其支持。</h3>
+
+<p>在 macOS 上，已将 MonoDevelop 5.9.6 替换为 Visual Studio for Mac（作为 macOS 安装程序中的捆绑 C# 脚本编辑器）。在 Windows 上，Visual Studio 2017 Community 现在是与 Unity 一起安装的唯一 C# 脚本编辑器。</p>
+
+<p>安装在 Unity 可执行文件旁边的默认位置时，Unity 在偏好设置中不再将 MonoDevelop 视为“MonoDevelop (built-in)”外部脚本编辑器。未安装且在偏好设置中未选择 C# 代码编辑器时，Unity 使用系统默认应用程序来打开 C# (.cs) 脚本。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="BuildPipeline"></a></p>
+
+<h3>BuildPipeline 回调接口现在接受 BuildReport 对象</h3>
+
+<p>BuildPipeline 回调接口 <code>IPreprocessBuild</code>、<code>IPostprocessBuild</code> 和 <code>IProcessScene</code> 已更改，现在要求传入 <code>BuildReport</code> 对象。这取代了以前的构建路径/目标平台参数；如果要实现这些接口，需要更改代码。</p>
+
+<p>构建路径和目标平台都是可以通过 <code>BuildReport</code> 对象进行访问的。构建路径现在是 <code>report.summary.outputPath</code>，而目标平台是 <code>report.summary.platform</code>。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="SpecialImport"></a></p>
+
+<h3>以后不再通过专用导入器来导入位于插件文件夹中的资源</h3>
+
+<p>以前使用专用导入器来导入位于插件文件夹中的资源（例如，目录中扩展名为 .bundle、.plugin 或 .folder 的资源）。比如，通过纹理导入器导入纹理，通过音频导入器导入 AudioClips 等等。现在使用默认导入器来导入所有这些资源，这意味着您将不能像以前那样引用这些资源，因为它们不再具有专门的类型（纹理、AudioClip 等）。插件文件夹包含在资源包中，因此除非使用插件访问方法，否则无法从外部访问其中的资源。</p>
+
+<p>要继续使用这些资源，必须将它们移出插件文件夹。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="ParticlePivot"></a></p>
+
+<h3>粒子系统网格粒子错误地应用了轴心偏移值</h3>
+
+<p>用于将轴心偏移应用于网格的数学公式以前不正确，与用于公告牌粒子的方式不一致。为了实现正确缩放，轴心偏移应该乘以粒子大小，因此轴心偏移 1 等于粒子的一个完整宽度。</p>
+
+<p>对于网格，该大小以前被平方，这意味着轴心大小基于平方后的粒子大小。因此，在包含各种大小的粒子的系统中，无法获得一致结果。</p>
+
+<p>对于使用相同大小的粒子的系统，可以对公式进行逆向工程来确定需要将轴心偏移值调整多少才能补偿此行为变化：</p>
+
+<p>旧公式：__offset = size * size * pivot__</p>
+
+<p>新公式：__offset = size * pivot__</p>
+
+<p>因此，如果所有粒子的大小相同：</p>
+
+<p><strong>newOffset = pivot / size</strong></p>
+
+<p>在粒子大小不同的系统中，需要对相关系统进行可视化重估。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="GPUGI"></a></p>
+
+<h3>GPU 实例化支持全局光照</h3>
+
+<p>从 2018.1 版开始，Unity 中的 GPU 实例化渲染支持全局光照 (GI)。每个 GPU 实例可支持来自不同<a href="#LightProbes">光照探针</a>、一个<a href="#Lightmapping">光照贴图</a>（但为图集的不同区域）或一个<a href="#class-LightProbeProxyVolume">光照探针代理体</a>组件（为包含所有实例的空间体积进行烘焙）的 GI。标准着色器和表面着色器自动随附这些更改，但是您需要更新自定义着色器代码才能启用这些功能。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="ComplexHandles"></a></p>
+
+<h3>手柄绘制和大小函数默认值</h3>
+
+<p>UnityEditor.IMGUI.Controls 命名空间中的复杂手柄（例如 BoxBoundsHandle、CapsuleBoundsHandle、SphereBoundsHandle、ArcHandle 和 JointAngularLimitHandle）具有可以分配值的委托，从而改变其控制点的外观。以前，将 null 值分配给这些委托将回退到默认行为。现在，为它们分配 null 值不会导致任何行为，因此更容易禁用特定控制手柄。如果需要将控制手柄重置为其默认行为，现在每个类分别有默认方法的公共 API 点。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="UnsafeC"></a></p>
+
+<h3>在 Unity Editor 中编译不安全的 C# 代码现在需要启用一个选项。</h3>
+
+<p>现在，编译“不安全”的 C# 代码需要在预定义程序集（例如 Assembly-CSharp.dll）的 Player Settings 中以及程序集定义文件程序集的 Inspector 中启用 <strong>Allow ‘unsafe’ code</strong> 选项。启用此选项会让 Unity 在编译脚本时将 /unsafe 选项传递给 C# 编译器。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+<!-- area:none -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide2019LTS.html"></a></span><div class="tip">升级到 Unity 2019 LTS</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20173.html"></a></span><div class="tip">升级到 Unity 2017.3</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

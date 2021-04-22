@@ -1,0 +1,336 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="域重新加载 - Unity 手册">
+<title>域重新加载 - Unity 手册</title>
+<meta name="description" content="域重新加载将重置脚本状态，默认情况下会启用域重新加载。此功能为您提供了全新的脚本状态，并会在您每次进入运行模式时重置所有静态字段和已注册的处理程序。这意味着每次在 Unity Editor 中进入运行模式时，您的项目就会采用与在构建后首次启动时非常相似的方式开始运行。">
+<meta property="og:description" content="域重新加载将重置脚本状态，默认情况下会启用域重新加载。此功能为您提供了全新的脚本状态，并会在您每次进入运行模式时重置所有静态字段和已注册的处理程序。这意味着每次在 Unity Editor 中进入运行模式时，您的项目就会采用与在构建后首次启动时非常相似的方式开始运行。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'DomainReloading';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/DomainReloading.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/DomainReloading.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/DomainReloading.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/DomainReloading.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/DomainReloading.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/DomainReloading.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/DomainReloading.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/DomainReloading.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/DomainReloading.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/DomainReloading.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/DomainReloading.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/DomainReloading.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/DomainReloading.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/DomainReloading.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/DomainReloading.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/DomainReloading.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/DomainReloading.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/DomainReloading.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/DomainReloading.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/DomainReloading.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/DomainReloading.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/DomainReloading.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/DomainReloading.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/DomainReloading.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/DomainReloading.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/DomainReloading.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/DomainReloading.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/DomainReloading.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/DomainReloading.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/DomainReloading.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/DomainReloading.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/DomainReloading.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/DomainReloading.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/DomainReloading.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/DomainReloading.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/DomainReloading.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/DomainReloading.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/DomainReloading.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/DomainReloading.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/DomainReloading.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/DomainReloading.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/DomainReloading.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/DomainReloading.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/DomainReloading.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/DomainReloading.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/DomainReloading.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/DomainReloading.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/DomainReloading.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="ConfigurableEnterPlayMode.html">可配置的进入运行模式</a></li>
+<li>域重新加载</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ConfigurableEnterPlayMode.html"></a></span><div class="tip">可配置的进入运行模式</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SceneReloading.html"></a></span><div class="tip">场景重新加载</div>
+</div>
+</div></div>
+<h1>域重新加载</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>域重新加载将重置脚本状态，默认情况下会启用域重新加载。此功能为您提供了全新的脚本状态，并会在您每次进入运行模式时重置所有静态字段和已注册的处理程序。这意味着每次在 Unity Editor 中进入运行模式时，您的项目就会采用与在构建后首次启动时非常相似的方式开始运行。</p>
+
+<p>域重新加载需要一定的时间，并且随着项目中脚本的数量和复杂性的增加，需要的时间也会增加。如果需要很长时间才能进入运行模式，那么对项目进行快速迭代将变得越来越困难。因此，Unity 提供了关闭“域重新加载”的选项。</p>
+
+<h2>禁用域重新加载</h2>
+
+<p>禁用域重新加载后，进入运行模式的速度会更快，因为 Unity 不会每次都重置脚本状态。但是，这种情况下就需要由您自己来确保在进入运行模式时脚本状态会重置。为此，需要添加代码以便在运行模式启动时重置脚本状态。</p>
+
+<p>禁用域重新加载后，在您更新或重新导入脚本时，Unity 仍会根据<a href="Preferences.html">自动刷新设置</a>来刷新脚本状态。</p>
+
+<h2>修改脚本以确保在禁用域重新加载时正确执行：</h2>
+
+<p>为确保脚本状态在运行模式下正确重置，需要对脚本中的静态字段和静态事件处理程序进行调整。</p>
+
+<h3>静态字段</h3>
+
+<p>禁用域重新加载后，代码中的<strong>静态字段</strong>的值不会自动重置为其原始值。需要添加用于明确执行此操作的代码。</p>
+
+<p>下面的代码示例具有一个静态计数器字段，在用户按下 Jump 按钮时该计数器会递增。启用域重新加载后，在进入运行模式时，计数器自动重置为零。禁用域重新加载后，计数器不会重置，而是会在进入和退出运行模式时保持其值不变。这意味着在 Editor 中第二次运行项目时，如果计数器在上一次运行中发生了变化，则计数器可能不会为零。</p>
+
+<pre><code>using UnityEngine;
+
+public class StaticCounterExample : MonoBehaviour
+{
+// 禁用域重新加载时，此计数器不会重置为零
+    static int counter = 0; 
+
+    // 每帧调用一次 Update
+    void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+    {
+    counter++;
+    Debug.Log("Counter: " + counter);
+    }
+    }
+}
+</code></pre>
+
+<p>要确保即使禁用了域重新加载，计数器也会重置，必须使用 [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)] 属性，并显式重置该值：</p>
+
+<pre><code>using UnityEngine;
+
+public class StaticCounterExampleFixed : MonoBehaviour
+{
+    static int counter = 0;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    static void Init()
+    {
+    Debug.Log("Counter reset.");
+    counter = 0;   
+    }
+
+    // 每帧调用一次 Update
+    void Update()
+    {
+    if (Input.GetButtonDown("Jump"))
+    {
+    counter++;
+    Debug.Log("Counter: " + counter);
+    }
+    }
+}
+</code></pre>
+
+<h3>静态事件处理程序</h3>
+
+<p>禁用域重新加载后，退出运行模式时，Unity 不会从静态事件处理程序中注销方法。如果您的代码会在静态事件处理程序中注册方法，则可能导致问题复杂化。例如，在 Editor 中第一次运行项目时会正常注册方法。但是，在第二次运行项目时，这些方法将在第一次注册之外再次注册，从而导致事件发生时将这些方法调用两次。</p>
+
+<p>例如，以下代码在静态事件处理程序 <code>Application.quitting</code> 中注册了一个方法，并启用了域重新加载，当运行模式启动时，Unity 会自动重置事件处理程序，因此该方法只注册了一次。但是，在禁用域重新加载的情况下，不会清除事件处理程序，因此在 Editor 中第二次运行项目时，该方法将第二次注册，并在事件发生时被调用两次，但通常不希望发生这种情况。</p>
+
+<pre><code>using UnityEngine;
+public class StaticEventExample : MonoBehaviour
+{
+    void Start()
+    {
+    Debug.Log("Registering quit function");
+    Application.quitting += Quit;
+    }
+
+
+    static void Quit()
+    {
+    Debug.Log("Quitting!");
+    }
+}
+</code></pre>
+
+<p>禁用域重新加载后，上面的示例在您每次进入运行模式时都会再次添加 <code>Quit</code> 方法。这会导致每次退出运行模式时再次发出“Quitting”消息。</p>
+
+<p>为确保即使禁用了域重新加载，事件处理程序也会重置，必须使用 [RuntimeInitializeOnLoadMethod] 属性，并显式注销该方法，以使其不会被添加两次。</p>
+
+<pre><code>using UnityEngine;
+public class StaticEventExampleFixed : MonoBehaviour
+{
+    [RuntimeInitializeOnLoadMethod]
+    static void RunOnStart()
+    {
+    Debug.Log("Unregistering quit function");
+    Application.quitting -= Quit;
+    }
+
+    void Start()
+    {
+    Debug.Log("Registering quit function");
+    Application.quitting += Quit;
+    }
+
+    static void Quit()
+    {
+    Debug.Log("Quitting the Player");
+    }
+}
+</code></pre>
+
+<p>对于运行时脚本，必须使用 <code>[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]</code> 属性来重置静态字段和事件处理程序。</p>
+
+<p>对于 Editor 脚本（比如自定义的 Editor 窗口或使用静态对象的 Inspector），必须使用 <code>[InitializeOnEnterPlayMode]</code> 属性来重置静态字段和事件处理程序。</p>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ConfigurableEnterPlayMode.html"></a></span><div class="tip">可配置的进入运行模式</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SceneReloading.html"></a></span><div class="tip">场景重新加载</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

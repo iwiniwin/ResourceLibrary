@@ -1,0 +1,290 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Asset Store 发布 - Unity 手册">
+<title>Asset Store 发布 - Unity 手册</title>
+<meta name="description" content="将资源发布到 Asset Store 的基本工作流程如下：">
+<meta property="og:description" content="将资源发布到 Asset Store 的基本工作流程如下：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'AssetStorePublishing';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetStorePublishing.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/AssetStorePublishing.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetStorePublishing.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/AssetStorePublishing.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/AssetStorePublishing.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/AssetStorePublishing.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/AssetStorePublishing.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/AssetStorePublishing.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetStorePublishing.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetStorePublishing.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetStorePublishing.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetStorePublishing.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetStorePublishing.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetStorePublishing.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetStorePublishing.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetStorePublishing.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetStorePublishing.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetStorePublishing.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetStorePublishing.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetStorePublishing.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetStorePublishing.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetStorePublishing.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetStorePublishing.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetStorePublishing.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetStorePublishing.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/AssetStorePublishing.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/AssetStorePublishing.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/AssetStorePublishing.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/AssetStorePublishing.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/AssetStorePublishing.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/AssetStorePublishing.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetStorePublishing.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetStorePublishing.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetStorePublishing.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetStorePublishing.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetStorePublishing.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetStorePublishing.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetStorePublishing.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetStorePublishing.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetStorePublishing.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetStorePublishing.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetStorePublishing.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetStorePublishing.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetStorePublishing.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetStorePublishing.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetStorePublishing.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetStorePublishing.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetStorePublishing.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li>Asset Store 发布</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ContributingFAQ.html"></a></span><div class="tip">常见问题解答</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetStoreCreateAcct.html"></a></span><div class="tip">创建发布者帐户</div>
+</div>
+</div></div>
+<h1>Asset Store 发布</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>将资源发布到 Asset Store 的基本工作流程如下：</p>
+
+<p>1.<a href="AssetStoreCreateAcct.html">创建发布者帐户</a>。
+2.<a href="AssetStoreCreatePkg.html">创建新的资源包草案</a>。还可以随时<a href="AssetStoreDeletePkg.html">删除草案</a>，然后新建草案。
+3.<a href="AssetStoreUpload.html">将资源上传到资源包</a>。
+4.<a href="AssetStorePkgDetails.html">填写资源包详情</a>。
+5.<a href="AssetStoreSubmit.html">提交资源包以供批准</a>。
+6.<a href="AssetStoreStatus.html">查看 Asset Store 提交状态</a>。</p>
+
+<p>在等待 Unity 是否已接受将资源包发布到 Asset Store 的通知时，可以<a href="AssetStorePayouts.html">设置付款资料</a>，以便可以获取资源包带来的收入。如果尚未如此操作，还可以<a href="AssetStoreSupport.html">为您的发布者帐户设置客户支持信息</a>。</p>
+
+<p>将资源包发布到 Asset Store 后，可以执行以下操作来提高资源包被发现的可能性并鼓励客户购买您的资源包：</p>
+
+<ul>
+<li>
+<a href="AssetStoreMassLabeler.html">向资源包添加标签</a>，便于客户找到资源包。</li>
+<li>
+<a href="AssetStoreAnalytics.html">将帐户关联到 Google Analytics</a> 以跟踪您在 Asset Store 上的资源包页面的网站流量。</li>
+<li>Unity 可能会为您提供机会将资源包加入到 Asset Store 促销中。您可以<a href="AssetStorePromotion.html">参与 Unity 的促销或者创建自己的促销</a>。</li>
+<li>授权 Unity 就您的资源包<a href="AssetStoreRefunding.html">向您的客户退款</a>。</li>
+</ul>
+
+<p>如果要更新或增强现有资源包，可以<a href="AssetStoreUpgrade.html">创建主要升级版本</a>。将升级发布到 Asset Store 后，可以<a href="AssetStoreRemoving.html">弃用旧资源包</a>，以便新用户只能找到最新版本。还可以创建一个“精简”升级版本，该版本可用于让客户试用资源包，而无需付全款。</p>
+
+<p>在 Publisher Account 页面上的选项卡中可以执行以下操作：</p>
+
+<ul>
+<li>阅读关于资源包的<a href="AssetStoreAdmin.html#reviews">评论 (Reviews)</a>。</li>
+<li>检查<a href="AssetStoreAdmin.html#sales">销量 (Sales)</a> 和<a href="AssetStoreAdmin.html#revenue">收入 (Revenue)</a>。</li>
+<li>查看资源包的<a href="AssetStoreAdmin.html#downloads">下载量 (Downloads)</a> 以及您发放给客户的任何<a href="AssetStoreAdmin.html#vouchers">兑换券 (Vouchers)</a> 的相关统计信息。</li>
+<li>管理您团队中的<a href="AssetStoreAdmin.html#users">用户 (Users)</a>。</li>
+<li>管理您的帐户<a href="AssetStoreAdmin.html#info">信息 (Info)</a>。</li>
+</ul>
+
+<p>如需上述任何过程的其他帮助信息，请参阅在线的 <a href="https://support.unity3d.com/hc/en-us/sections/201163815-Asset-Store-Publishers-">Asset Store 常见问题解答</a>和 <a href="https://forum.unity.com/forums/assets-and-asset-store.32/">Asset Store 论坛</a>。资源已被 Asset Store 接受的发布者还可以申请加入<a href="https://forum.unity.com/forums/asset-store-publishers.91/">发布者论坛</a>。</p>
+
+<h2>概念</h2>
+
+<p>以下是您需要了解的关于“发布到 Unity Asset Store”的一些重要概念：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>概念：</strong></th>
+	<th style="text-align:left;"><strong>定义：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Unity ID（帐户）</strong></td>
+	<td style="text-align:left;">您在 Unity 中使用的用户帐户。Unity ID 可以用于购买订阅、管理项目并与团队协作以及在 Asset Store 上获取工具和样本。<br><br>仅在使用 Unity 帐户登录后，才能访问和管理您在 Asset Store 中的购买内容。如果您决定创建发布者帐户，也需要 Unity 帐户。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>发布者帐户</strong></td>
+	<td style="text-align:left;">该帐户与您的 Unity 帐户绑定，但还可用于创建和发布资源包、设置付款信息、查看销售额和收入以及管理您在 Asset Store 中的个人资料的各个方面。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>付款资料</strong></td>
+	<td style="text-align:left;">在付款资料中可以指定 Unity 为资源销售进行付款的方式（和频度），以及 Unity 是否需要预扣税（按某些税务机关的要求）。付款资料与<a href="OrgsUnityOrganizations.html">组织</a>相关联。您必须是该组织的<a href="OrgsManagingyourOrganization.html#membersandgroups">所有者</a>才能查看、创建或更新付款资料。有关更多信息，请参阅<a href="OrgsManagingyourOrganization.html">管理您的组织</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Asset Store Tools</strong></td>
+	<td style="text-align:left;">必须使用<a href="https://www.assetstore.unity3d.com/en/#!/content/115">这些工具</a>才能从 Unity 内部创建要在 Asset Store 中出售的资源包。可以从 Asset Store 网站本身获取这些工具，就像 Asset Store 中提供的任何其他资源一样。请将工具下载到计算机并导入到项目中。<br><br><strong>Asset Store Tools</strong> 资源包中还包含<a href="AssetStoreUpload.html#ValidatorTool">验证器 (Validator) 工具</a>。在上传和提交资源包以供审查之前，可以使用此工具来检查资源包。在您将资源提交到 Asset Store 时，Asset Store 策划团队也会使用此工具来验证资源包，这是资源审查过程的必要操作，因此您对资源包运行此工具可以缩短审查时间。但是，请注意，验证器工具无法完全模拟审批过程，有时可能会产生误报。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>资源包状态</strong></td>
+	<td style="text-align:left;">描述每个资源包位于生命周期的哪个阶段。有关更多信息，请参阅<a href="AssetStoreAdmin.html#pkg-status">资源包状态</a>。</td>
+</tr>
+</tbody>
+</table>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ContributingFAQ.html"></a></span><div class="tip">常见问题解答</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetStoreCreateAcct.html"></a></span><div class="tip">创建发布者帐户</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="填写资源包详情 - Unity 手册">
+<title>填写资源包详情 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/AssetStorePkgDetails1.png">
+<meta name="description" content="创建资源包草案时会显示 Create new package 窗口，该窗口包含几个部分，可以在其中填写有关资源包的信息。每次编辑资源包草案时，也可以使用这些部分，但是必须先填写所有必填部分，然后再提交资源包以供批准。">
+<meta property="og:description" content="创建资源包草案时会显示 Create new package 窗口，该窗口包含几个部分，可以在其中填写有关资源包的信息。每次编辑资源包草案时，也可以使用这些部分，但是必须先填写所有必填部分，然后再提交资源包以供批准。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'AssetStorePkgDetails';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetStorePkgDetails.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/AssetStorePkgDetails.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetStorePkgDetails.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/AssetStorePkgDetails.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/AssetStorePkgDetails.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/AssetStorePkgDetails.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/AssetStorePkgDetails.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/AssetStorePkgDetails.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetStorePkgDetails.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetStorePkgDetails.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetStorePkgDetails.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetStorePkgDetails.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetStorePkgDetails.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetStorePkgDetails.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetStorePkgDetails.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetStorePkgDetails.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetStorePkgDetails.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetStorePkgDetails.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetStorePkgDetails.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetStorePkgDetails.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetStorePkgDetails.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetStorePkgDetails.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetStorePkgDetails.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetStorePkgDetails.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetStorePkgDetails.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/AssetStorePkgDetails.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/AssetStorePkgDetails.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/AssetStorePkgDetails.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/AssetStorePkgDetails.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/AssetStorePkgDetails.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/AssetStorePkgDetails.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetStorePkgDetails.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetStorePkgDetails.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetStorePkgDetails.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetStorePkgDetails.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetStorePkgDetails.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetStorePkgDetails.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetStorePkgDetails.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetStorePkgDetails.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetStorePkgDetails.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetStorePkgDetails.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetStorePkgDetails.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetStorePkgDetails.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetStorePkgDetails.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetStorePkgDetails.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetStorePkgDetails.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetStorePkgDetails.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetStorePkgDetails.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="AssetStorePublishing.html">Asset Store 发布</a></li>
+<li>填写资源包详情</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetStoreUpload.html"></a></span><div class="tip">向资源包上传资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetStoreSubmit.html"></a></span><div class="tip">提交资源包以供批准</div>
+</div>
+</div></div>
+<h1>填写资源包详情</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a href="AssetStoreCreatePkg.html">创建资源包草案</a>时会显示 <strong>Create new package</strong> 窗口，该窗口包含几个部分，可以在其中填写有关资源包的信息。每次编辑资源包草案时，也可以使用这些部分，但是必须先填写所有必填部分，然后再<a href="AssetStoreSubmit.html">提交资源包以供批准</a>。</p>
+
+<p>本页的主题提供了有关如何填写以下部分的说明：</p>
+
+<ul>
+<li><a href="#Detail">Package Detail</a></li>
+<li><a href="#MetArt">Metadata &amp; Artwork</a></li>
+<li><a href="#upload">Package upload</a></li>
+<li><a href="#Review">Review</a></li>
+<li><a href="#Submit">Submit package for approval</a></li>
+</ul>
+
+<p><a name="Detail"></a></p>
+
+<h2>Package Detail</h2>
+
+<p><strong>Package Detail</strong> 部分可让您设置资源包的版本（包含描述）、类别和价格。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStorePkgDetails1.png" alt="Package Detail 部分">
+<figcaption>Package Detail 部分</figcaption>
+</figure>
+
+<p><strong>注意</strong>：虽然资源包标题会显示在 <strong>Package Detail</strong> 部分中，但是只能在 <a href="#metadata">Metadata</a> 部分中进行更改。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>信息：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Status</strong></td>
+	<td style="text-align:left;">资源包的当前状态（包括 <strong>Draft</strong>、<strong>Published</strong>、<strong>Declined</strong> 和 <strong>Pending</strong>）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Version</strong></td>
+	<td style="text-align:left;">资源包的版本号（例如 1.5、1.6、1.7）。新建资源包应该使用默认版本 1.0。<br><br>发布资源的更新时，可以在此处增大版本号。例如，如果需要修订一个错误，请更改次要版本号（将 1.3 改为 1.4）。如果是进行重大更改，请更改主版本（将 1.3 改为 2.0）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Version Changes</strong></td>
+	<td style="text-align:left;">描述触发了版本更改的所有更新，例如错误修订、新建资源或为了匹配 Unity 新版本而进行的更改。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Category</strong></td>
+	<td style="text-align:left;">选择最适合资源包的类别，因为客户在 Asset Store 中寻找资源时可以按您选择的类别来筛选资源包列表。如果您不确定要选择哪种类别，请访问 <a href="https://assetstore.unity.com/">Asset Store 的主页</a>并查看相似类别中有哪些可用的资源类型。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Price USD</strong></td>
+	<td style="text-align:left;">You can set a price of $4.99 or any higher amount in US dollars. For any lower price, enable <strong>Free</strong> instead.</td>
+</tr>
+</tbody>
+</table>
+
+<p>完成后，单击 <strong>Save</strong>。</p>
+
+<p><a name="MetArt"></a></p>
+
+<h2>Metadata &amp; Artwork</h2>
+
+<p><strong>Metadata &amp; Artwork</strong> 部分可让您设置资源包的名称，并提供营销图片、音频和视频，从而提升资源包的品牌效应。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStorePkgDetails2.png" alt="Metadata &amp; Artwork 部分">
+<figcaption>Metadata &amp; Artwork 部分</figcaption>
+</figure>
+
+<p>图稿（<a href="#image">关键图像</a>、<a href="#audvid">音频/视频</a>和<a href="#shots">截屏</a>）将在所有语言之间共享。</p>
+
+<p>必须设置英语的<a href="#metadata">名称和描述</a>，但是也可以用日语、韩语和中文来指定名称和描述；为此，请单击 <strong>Language</strong> 列下面的链接。添加语言时，在该语言的 <strong>Metadata</strong> 列下方会显示新的 <strong>Edit</strong> 链接。</p>
+
+<p>在资源包被接受并发布后，只能编辑 <strong>Tags</strong> 字段。</p>
+
+<p><a name="metadata"></a></p>
+
+<h3>Metadata</h3>
+
+<p>Metadata 包括资源包的名称、描述和关键字：即，可在客户浏览或搜索 Asset Store 时帮助客户找到资源包的任何内容。</p>
+
+<p>要编辑资源包的名称和描述，请执行以下操作：</p>
+
+<p>1.在 <strong>Metadata &amp; Artwork</strong> 部分中的 <strong>Metadata</strong> 下，单击 <strong>Edit</strong> 按钮。</p>
+
+<pre><code>此时会显示特定语言的 **Metadata** 页面：
+
+![在 English Metadata 页面上设置 **Title**、**Description** 和 **Keywords** 字段](../uploads/Main/AssetStorePkgDetails2a.png)
+</code></pre>
+
+<p>2.在 <strong>Title</strong> 字段中输入资源包的标题（必填）。标题尽可能不要以“Unity”开头。例如，不能使用“Unity Sculpting Tools”，但是可以使用“Sculpting Tools for Unity”。</p>
+
+<p>3.在 <strong>Description</strong> 中输入资源包的描述：</p>
+
+<ul>
+<li>如果资源包中含有 3D 资源，请提供有关多边形数量、纹理大小以及兼容的渲染管线的信息。</li>
+<li>如果资源包中含有脚本和工具，请提及该资源所需的所有依赖项（例如，另一个资源或第三方软件），因为您不能将这些依赖项添加到资源包中，因此用户需要单独导入这些依赖项。</li>
+</ul>
+
+<p>可以使用以下任何 HTML 标签来修饰此文本：</p>
+
+<ul>
+<li>
+<strong>EM</strong>（表示斜体）。例如：<code>This is for &lt;EM&gt;italicized&lt;/EM&gt; text</code>。</li>
+<li>
+<strong>STRONG</strong>（表示粗体）。例如：<code>This is for &lt;STRONG&gt;bold&lt;/STRONG&gt; text</code>。</li>
+<li>
+<strong>A</strong>（表示超链接）。例如：<code>This links &lt;A HREF="http://www.example.com"&gt;here&lt;/A&gt;</code>。</li>
+<li>
+<strong>P</strong>（定义段落）。例如：<code>&lt;P&gt;This is a new paragraph&lt;/P&gt;</code>。</li>
+<li>
+<strong>BR</strong>（表示换行）。例如：<code>This is the first line.&lt;/BR&gt;This text appears on the next line</code>。</li>
+</ul>
+
+<p>4.可以根据需要添加一个以空格分隔的 <strong>Keywords</strong> 列表来影响资源在 Asset Store 中的搜索结果。不超过 255 个字符。</p>
+
+<p>5.完成后，单击 <strong>Save</strong> 按钮，然后在显示对话框后，单击 <strong>OK</strong>。</p>
+
+<p>6.单击 <strong>Go Back</strong> 以返回到 <strong>Package</strong> 窗口。</p>
+
+<p><a name="image"></a></p>
+
+<h3>Key image</h3>
+
+<p>Key Images 部分的关键图像应该指出资源包的功能并帮助其脱颖而出。可以设置四种不同的分辨率，以便关键图像在客户浏览或筛选 Asset Store 中的可用资源包列表时显示为图标或缩略图，而在产品主页面或社交媒体上显示为更大图像。这些图像也可能显示在促销材料中。</p>
+
+<p>以下是在此部分中上传图像时对于图像的一些一般性要求：</p>
+
+<ul>
+<li>这些图像不能包含以下内容：
+
+<ul>
+<li>Unity 徽标</li>
+<li>销售横幅</li>
+<li>默认的 Unity 天空盒（例如，作为背景）</li>
+</ul>
+</li>
+<li>这些图像不得模糊、经过拉伸或裁切。</li>
+<li>这些图像不能只是 Unity Editor 的截屏。</li>
+<li>应该对不同大小的图像进行不同设计，从而使图标和卡片式图像中的对象或视觉效果清晰可见。</li>
+</ul>
+
+<p>下表描述了不同图像、它们在 Asset Store 中可能出现的位置以及每种图像的特定要求：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>关键图像类型：</strong></th>
+	<th style="text-align:left;"><strong>大小（以像素为单位）：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>图标</strong></td>
+	<td style="text-align:left;">160 x 160</td>
+	<td style="text-align:left;">用户使用<a href="https://assetstore.unity.com/?category=3d%2Fanimations&amp;orderBy=1">图标网格布局</a>来浏览 Asset Store 时会显示图标图像。此图像不应包含文本。<br><br><strong>注意：</strong>即使实际显示尺寸为 80x80，图标图像也必须为 160x160。尺寸为 80x80 时，图像文本会看不清，但上传更大尺寸的图像可使 Asset Store 以更小尺寸来清晰显示图标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Card</strong></td>
+	<td style="text-align:left;">420 x 280</td>
+	<td style="text-align:left;">这是您主页上显示的主要缩略图以及<a href="https://assetstore.unity.com/?category=3d&amp;orderBy=1">浏览</a> Asset Store 时的默认视图。此图像只能包含以下文本：<br>- 资源标题<br>- 发布者的徽标或名称<br><br><strong>注意：</strong>与图标图像一样，卡片图像的上传尺寸 (420x280) 必须大于最终显示在 Asset Store 中的图像尺寸。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cover</strong></td>
+	<td style="text-align:left;">1950 x 1300</td>
+	<td style="text-align:left;">这就是客户在资源包的产品主页面上看到的图像。此图像只能包含以下文本：<br>- 资源标题<br>- 发布者的徽标或名称<br>- 标签行<br><br><strong>注意：</strong>与图标图像一样，卡片图像的上传尺寸 (1950x1300) 必须大于最终显示在 Asset Store 中的图像尺寸。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Social Media</strong></td>
+	<td style="text-align:left;">1200 x 630</td>
+	<td style="text-align:left;">Unity 社区团队可能会将这些图像发布到社交媒体上，或发布在 Asset Store 主页上。此图像不应包含文本。</td>
+</tr>
+</tbody>
+</table>
+
+<p>有关更多信息，请参阅 <a href="https://support.unity3d.com/hc/en-us/articles/210122403-What-makes-a-great-key-image-">Asset Store 常见问题解答</a>。</p>
+
+<p>要设置一个或多个关键图像，请执行以下操作：</p>
+
+<p>1.在 <strong>Metadata &amp; Artwork</strong> 部分中的 <strong>Key Images</strong> 列下，单击 <strong>Edit</strong> 按钮。</p>
+
+<pre><code>此时会显示 Key Images 页面：
+
+![在 Key Images 页面上设置 **Icon**、**Card**、**Cover** 和 **Social Media** 类型的图像](../uploads/Main/AssetStorePkgDetails2b.png)
+</code></pre>
+
+<p>2.要上传图像，请单击 <strong>Choose File</strong> 或者将此图像拖放到灰色框中。</p>
+
+<pre><code>**注意：**图像的实际尺寸必须与标示尺寸一致。
+
+上传的图像下方会显示一个 **Remove** 按钮，如果需要删除该图像，可单击这个按钮。
+</code></pre>
+
+<p>3.单击 <strong>Go Back</strong> 以返回到 <strong>Package</strong> 窗口。</p>
+
+<p><a name="audvid"></a></p>
+
+<h3>Audio/Video</h3>
+
+<p>可以上传音频或视频文件来演示 Asset Store 资源包的功能或所含内容。这些音频或视频文件可在您的产品主页上播放（可单击缩略图进行播放）。</p>
+
+<p><strong>注意：</strong>如果资源包中含有音频或视频文件，必须在此处上传媒体资源的样本。如果资源包中含有工具、脚本或其他技术资源，请提供说明安装过程的视频教程，并概述资源的功能。如果资源包中含有动画，请提供所有可用动画的视频。</p>
+
+<p>可以将上传的文件和资源包的截屏一起嵌入到宣传片中。音频和视频文件可以来自本地计算机或设备，也可以指定指向以下任何服务的链接：</p>
+
+<ul>
+<li><a href="https://www.youtube.com/">YouTube</a></li>
+<li><a href="https://vimeo.com/">Vimeo</a></li>
+<li><a href="https://soundcloud.com/">SoundCloud</a></li>
+<li><a href="https://www.mixcloud.com/">MixCloud</a></li>
+<li><a href="https://sketchfab.com/">SketchFab</a></li>
+</ul>
+
+<p>要设置一个或多个关键图像，请执行以下操作：</p>
+
+<p>1.在 <strong>Metadata &amp; Artwork</strong> 部分中的 <strong>Audio/Video</strong> 列下，单击 <strong>Edit</strong> 按钮。</p>
+
+<pre><code>此时会显示 Audio/Video 页面：
+
+![在 Audio/Video 页面上添加音频或视频文件或者在线媒体的链接](../uploads/Main/AssetStorePkgDetails2c.png)
+</code></pre>
+
+<p>2.可以使用以下任一方法来上传音频或视频文件：</p>
+
+<pre><code>* 将文件拖放到灰色框中。
+* 单击 **Choose File**，从文件浏览器选择文件。
+* 在文本框中输入在线文件的链接，然后单击 **Upload link**。
+
+上传的图像下方会显示一个 **Remove** 按钮。
+</code></pre>
+
+<p>3.单击 <strong>Go Back</strong> 以返回到 <strong>Package</strong> 窗口。</p>
+
+<p><a name="shots"></a></p>
+
+<h3>Screenshots</h3>
+
+<p>在此处可以上传资源包的实际资源截屏。这些截屏会显示在您的产品主页上（可单击缩略图进行放大）。</p>
+
+<p>在销售资源时，截屏与<a href="#image">关键图像</a>一样重要。截屏用于展示资源包，向用户显示其使用方式和功能。用户通常会在实际购买之前将截屏用作资源包的预览。Asset Store 负责人倾向于大多数资源都能有相应的截屏。例如，如果资源是模型，应添加从不同角度展示资源的多张图像（包括完全纹理效果和线框）。</p>
+
+<p>要设置一个或多个截屏，请执行以下操作：</p>
+
+<p>1.在 <strong>Screenshots</strong> 部分下，单击 <strong>Edit</strong> 按钮。</p>
+
+<pre><code>此时会显示 Screenshots 页面：
+
+![在 Screenshots 页面上添加资源包的截屏](../uploads/Main/AssetStorePkgDetails2d.png)
+</code></pre>
+
+<p>2.可以使用以下任一方法来上传一张或多张截屏：</p>
+
+<pre><code>* 将文件拖放到灰色框中。
+* 单击 **Choose File**，从文件浏览器选择文件。
+
+上传的图像下方会显示一个红色 **X** 图标（用于删除图像）。
+</code></pre>
+
+<p>3.单击 <strong>Go Back</strong> 以返回到 <strong>Package</strong> 窗口。</p>
+
+<p><a name="upload"></a></p>
+
+<h2>Package upload</h2>
+
+<p><strong>Package upload</strong> 部分可让您在创建资源包草案或编辑资源包草案详情后直接启动 Unity。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStorePkgDetails3.png" alt="在将资源上传到资源包草案之前会显示 Launch Unity 按钮">
+<figcaption>在将资源上传到资源包草案之前会显示 Launch Unity 按钮</figcaption>
+</figure>
+
+<p>单击 <strong>Launch Unity</strong> 按钮时，如果 Unity 已经开启，则您的项目会显示在 Unity Editor 中。否则将打开 Hub，让您选择要打开的项目。</p>
+
+<p>如果已经将资源上传到资源包草案中，它们会显示在此部分中，并附带有 <strong>Remove</strong> 和 <strong>Edit</strong> 按钮：</p>
+
+<figure>
+<img src="../uploads/Main/AssetStorePkgDetails3a.png" alt="将资源上传到资源包草案后将会显示此资源包以及 Remove 和 Edit 按钮">
+<figcaption>将资源上传到资源包草案后将会显示此资源包以及 Remove 和 Edit 按钮</figcaption>
+</figure>
+
+<p>如果要清除资源包中的资源，请单击 <strong>Remove</strong> 按钮。</p>
+
+<p>在提交资源包进行审批之前，单击 <strong>Edit</strong> 按钮。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStorePkgDetails3b.png" alt="">
+</figure>
+
+<p>在每个部分中，请选择 <strong>Yes</strong> 以显示一个问题和一组复选框。然后，选中或取消选中相应的选项来回答有关资源包的问题。完成后，单击 <strong>Save</strong> 以返回到 <strong>Package Upload</strong> 部分。</p>
+
+<p>有关将资源添加和上传到资源包草案的更多信息，请参阅<a href="AssetStoreUpload.html">向资源包上传资源</a>。</p>
+
+<p><a name="Review"></a></p>
+
+<h2>Review</h2>
+
+<p>在 <strong>Review</strong> 部分下，单击 <strong>Preview in Asset Store</strong> 可以查看资源包在发布后在 Asset Store 中的显示效果。还可以在 <strong>Public links</strong> 下查看 URL 的预览：</p>
+
+<figure>
+<img src="../uploads/Main/AssetStorePkgDetails4.png" alt="Review 部分显示了一个按钮，用于在 Asset Store 中预览资源包草案">
+<figcaption>Review 部分显示了一个按钮，用于在 Asset Store 中预览资源包草案</figcaption>
+</figure>
+
+<p><a name="Submit"></a></p>
+
+<h2>Submit package for approval</h2>
+
+<p>在 <strong>Submit package for approval</strong> 部分下，单击 <strong>Auto publish</strong> 可以指定您是否希望该资源包在获得 Unity 批准后直接出现在 Asset Store 中。</p>
+
+<p>您还必须确认自己是否拥有出售资源的权利。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStorePkgDetails5.png" alt="如果尚未将任何资源上传到资源包，则会显示一条消息来提醒您上传一些资源">
+<figcaption>如果尚未将任何资源上传到资源包，则会显示一条消息来提醒您上传一些资源</figcaption>
+</figure>
+
+<p>有关详细说明，请参阅<a href="AssetStoreSubmit.html">提交资源包以供批准</a>。</p>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetStoreUpload.html"></a></span><div class="tip">向资源包上传资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetStoreSubmit.html"></a></span><div class="tip">提交资源包以供批准</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

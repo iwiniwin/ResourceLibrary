@@ -1,0 +1,523 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="事件类型参考 - Unity 手册">
+<title>事件类型参考 - Unity 手册</title>
+<meta name="description" content="本主题将提供每种事件类型的概要。请参阅 API 文档了解每个事件成员及其用途的完整描述。">
+<meta property="og:description" content="本主题将提供每种事件类型的概要。请参阅 API 文档了解每个事件成员及其用途的完整描述。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UIE-Events-Reference';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UIE-Events-Reference.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UIE-Events-Reference.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UIE-Events-Reference.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UIE-Events-Reference.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UIE-Events-Reference.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UIE-Events-Reference.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UIE-Events-Reference.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UIE-Events-Reference.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-Events-Reference.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UIE-Events-Reference.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-Events-Reference.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-Events-Reference.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-Events-Reference.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-Events-Reference.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-Events-Reference.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-Events-Reference.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-Events-Reference.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-Events-Reference.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-Events-Reference.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-Events-Reference.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-Events-Reference.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-Events-Reference.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-Events-Reference.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-Events-Reference.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-Events-Reference.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UIE-Events-Reference.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UIE-Events-Reference.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UIE-Events-Reference.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UIE-Events-Reference.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UIE-Events-Reference.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UIE-Events-Reference.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-Events-Reference.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UIE-Events-Reference.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-Events-Reference.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-Events-Reference.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-Events-Reference.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-Events-Reference.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-Events-Reference.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-Events-Reference.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-Events-Reference.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-Events-Reference.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-Events-Reference.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-Events-Reference.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-Events-Reference.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-Events-Reference.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-Events-Reference.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-Events-Reference.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-Events-Reference.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UIToolkits.html">用户界面 (UI)</a></li>
+<li><a href="UIElements.html">UIElements 开发者指南</a></li>
+<li><a href="UIE-Events.html">事件系统</a></li>
+<li>事件类型参考</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Events-Synthesizing.html"></a></span><div class="tip">合成事件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Controls.html"></a></span><div class="tip">内置控件</div>
+</div>
+</div></div>
+<h1>事件类型参考</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本主题将提供每种事件类型的概要。请参阅 API 文档了解每个事件成员及其用途的完整描述。</p>
+
+<h2>捕获事件</h2>
+
+<p>实现 <code>IMouseCaptureEvent</code> 的事件。</p>
+
+<h3>MouseCaptureEvent</h3>
+
+<p>元素接受鼠标捕获时发送 <code>MouseCaptureEvent</code>。</p>
+
+<p><code>target</code>：接受捕获的元素。</p>
+
+<h3>MouseCaptureOutEvent</h3>
+
+<p>元素释放鼠标捕获或以其他方式失去鼠标捕获时发送 <code>MouseCaptureOutEvent</code>。</p>
+
+<p><code>target</code>：失去捕获的元素。</p>
+
+<h2>更改事件</h2>
+
+<p>实现 <code>IChangeEvent</code> 的事件。</p>
+
+<h3>ChangeEvent</h3>
+
+<p><code>ChangeEvent&lt;T&gt;</code> 是元素值更改时发送的通用事件。通常在控件更改时发送。对于 <code>InputEvent</code> 控件，不会针对控件中的每个输入事件发送此事件，而是仅在值更改时发送。通常是控件失去焦点或按下 <code>Enter</code> 键时。</p>
+
+<p><code>&lt;T&gt;</code>
+：值的类型。</p>
+
+<p><code>target</code>
+：发生值更改的元素。</p>
+
+<p><code>previousValue</code>
+：旧控件值。</p>
+
+<p><code>newValue</code>
+：新控件值。</p>
+
+<h2>命令事件</h2>
+
+<p>实现 <code>ICommandEvent</code> 的事件。</p>
+
+<p><code>target</code>
+：获得键盘焦点的元素。如果没有元素获得焦点，则为 null。</p>
+
+<p><code>commandName</code>
+：用于验证或执行的命令。</p>
+
+<h3>ValidateCommandEvent</h3>
+
+<p>此事件由 IMGUI 发送，同时可确定该命令是否由面板中的元素处理。</p>
+
+<h3>ExecuteCommandEvent</h3>
+
+<p>当面板中的元素执行命令时，IMGUI 将发送此事件。</p>
+
+<h2>拖放事件</h2>
+
+<p>拖放操作期间发送的事件。</p>
+
+<h3>DragExitedEvent</h3>
+
+<p>已取消拖放操作。放置目标未接受拖动元素。</p>
+
+<h3>DragUpdatedEvent</h3>
+
+<p>拖动的元素移到放置目标上方。如果放置目标愿意接受拖动的元素，则此事件的回调应设置 <code>DragAndDrop.visualMode</code> 以确保在用户松开鼠标键时发送 <code>DragPerformEvent</code>。</p>
+
+<h3>DragPerformEvent</h3>
+
+<p>拖动的元素已放置在接受它们的目标上。拖放操作现在已完成。</p>
+
+<h3>DragEnterEvent</h3>
+
+<p>拖动的元素进入了新的 <code>VisualElement</code>。具体而言，此事件在拖动操作开始时发送。</p>
+
+<h3>DragLeaveEvent</h3>
+
+<p>拖动的元素离开了当前放置目标。具体而言，此事件在拖动操作结束时发送。</p>
+
+<h2>布局事件</h2>
+
+<h3>GeometryChangedEvent</h3>
+
+<p>当元素的位置或尺寸发生变化时发送的事件。此类型的事件仅发送到事件目标。它们不会传播。</p>
+
+<p><code>target</code>
+：具有新几何形状的元素。</p>
+
+<p><code>oldRect</code>
+：元素先前的位置和尺寸。</p>
+
+<p><code>newRect</code>
+：元素的新位置和尺寸。</p>
+
+<h2>焦点事件</h2>
+
+<p>实现 <code>IFocusEvent</code> 的事件。</p>
+
+<p>在元素获得或失去键盘焦点时发送这些事件。有两组焦点事件：</p>
+
+<ul>
+<li>在焦点发生变化之前沿着传播路径发送 <code>FocusOutEvent</code> 和 <code>FocusInEvent</code> 事件。</li>
+<li>在焦点变化后仅立即将 <code>FocusEvent</code> 和 <code>BlurEvent</code> 事件发送到事件目标。</li>
+</ul>
+
+<h3>FocusOutEvent</h3>
+
+<p>当元素即将失去焦点时发送的事件。</p>
+
+<p><code>target</code>
+：将失去焦点的元素。</p>
+
+<p><code>relatedTarget</code>
+：将获得焦点的元素。</p>
+
+<h3>FocusInEvent</h3>
+
+<p>当元素即将获得焦点时发送的事件。</p>
+
+<p><code>target</code>
+：将获得焦点的元素。</p>
+
+<p><code>relatedTarget</code>
+：将失去焦点的元素。</p>
+
+<h3>BlurEvent</h3>
+
+<p>当元素失去焦点后发送的事件。</p>
+
+<p><code>target</code>
+：失去焦点的元素。</p>
+
+<p><code>relatedTarget</code>
+：获得焦点的元素。</p>
+
+<h3>FocusEvent</h3>
+
+<p>当元素获得焦点后发送的事件。</p>
+
+<p><code>target</code>
+：获得焦点的元素。</p>
+
+<p><code>relatedTarget</code>
+：失去焦点的元素。</p>
+
+<h2>输入事件</h2>
+
+<h3>InputEvent</h3>
+
+<p>将数据输入到视觉元素（通常是控件）时发送的事件。此事件与 <code>ChangeEvent</code> 的不同之处在于，即使控件的值未更改，也会针对控件中的每个输入事件发送此事件。</p>
+
+<p><code>target</code>
+：执行输入的元素。</p>
+
+<p><code>previousData</code>
+：以前的数据。</p>
+
+<p><code>newData</code>
+：新数据。</p>
+
+<h2>键盘事件</h2>
+
+<p>实现 <code>IKeyboardEvent</code> 的事件。</p>
+
+<h3>KeyDownEvent</h3>
+
+<p>用户按下键盘上的键时发送的事件。</p>
+
+<p><code>target</code>
+：具有键盘焦点的元素。如果没有元素具有键盘焦点，则为面板的根元素。</p>
+
+<h3>KeyUpEvent</h3>
+
+<p>用户松开键盘上的键时发送的事件。</p>
+
+<p><code>target</code>
+：具有键盘焦点的元素。如果没有元素具有键盘焦点，则为面板的根元素。</p>
+
+<h2>鼠标事件</h2>
+
+<p>实现 <code>IKeyboardEvent</code> 的事件。</p>
+
+<p>当元素捕获鼠标时，鼠标事件仅发送到进行捕获的元素。无传播。</p>
+
+<h3>MouseDownEvent</h3>
+
+<p>用户按下其中一个鼠标键时发送的事件。</p>
+
+<p><code>target</code>
+：如果一个元素接受了鼠标捕获，此元素便是捕获鼠标的元素。否则是光标下最上层的可选元素。</p>
+
+<h3>MouseUpEvent</h3>
+
+<p>用户松开其中一个鼠标键时发送的事件。</p>
+
+<p><code>target</code>
+：如果一个元素接受了鼠标捕获，此元素便是捕获鼠标的元素。否则是光标下最上层的可选元素。</p>
+
+<h3>MouseMoveEvent</h3>
+
+<p>用户移动鼠标时发送的事件。</p>
+
+<p><code>target</code>
+：如果一个元素接受了鼠标捕获，此元素便是捕获鼠标的元素。否则是光标下最上层的可选元素。</p>
+
+<h3>ContextClickEvent（已弃用）</h3>
+
+<p>用户按下并松开第三个鼠标键时发送的事件。此事件仅用于向后兼容 IMGUI。</p>
+
+<h3>WheelEvent</h3>
+
+<p>用户激活鼠标滚轮时发送的事件。</p>
+
+<p><code>target</code>
+：如果一个元素接受了鼠标捕获，此元素便是捕获鼠标的元素。否则是光标下最上层的可选元素。</p>
+
+<h3>MouseEnterWindowEvent</h3>
+
+<p>鼠标进入窗口时发送的事件。</p>
+
+<p><code>target</code>
+：如果一个元素接受了鼠标捕获，此元素便是捕获鼠标的元素。否则是光标下最上层的可选元素。</p>
+
+<h3>MouseLeaveWindowEvent</h3>
+
+<p>鼠标离开窗口时发送的事件。</p>
+
+<p><code>target</code>
+：如果一个元素接受了鼠标捕获，此元素便是捕获鼠标的元素。否则为 null，因为光标不在元素上方。</p>
+
+<h3>MouseEnterEvent</h3>
+
+<p>鼠标进入元素或其后代之一时发送的事件。此事件与 <code>MouseOverEvent</code> 的不同之处在于，此事件将发送到鼠标进入的每个元素。此事件不会传播。</p>
+
+<p><code>target</code>
+：鼠标光标下的元素或其后代之一。</p>
+
+<h3>MouseLeaveEvent</h3>
+
+<p>鼠标离开元素或其后代之一时发送的事件。此事件与 <code>MouseOutEvent</code> 的不同之处在于，此事件将发送到鼠标退出的每个元素。此事件不会传播。</p>
+
+<p><code>target</code>
+：刚被鼠标光标退出或后代之一被鼠标光标退出的元素。</p>
+
+<h3>MouseOverEvent</h3>
+
+<p>鼠标进入元素时发送的事件。此事件与 <code>MouseEnterEvent</code> 的不同之处在于，此事件仅发送到鼠标进入的元素。.此事件不会传播。</p>
+
+<p><code>target</code>
+：现在位于鼠标光标下的元素。</p>
+
+<h3>MouseOutEvent</h3>
+
+<p>鼠标离开元素时发送的事件。此事件与 <code>MouseLeaveEvent</code> 的不同之处在于，此事件仅发送到鼠标已退出的元素并会传播。</p>
+
+<p><code>target</code>
+：鼠标光标刚退出的元素。</p>
+
+<h3>ContextualMenuPopulateEvent</h3>
+
+<p>当需要使用菜单项填充上下文菜单时由 <code>ContextualMenuManager</code> 发送的事件。</p>
+
+<p><code>target</code>
+：要构建上下文菜单的元素。</p>
+
+<h2>面板事件</h2>
+
+<h3>AttachToPanelEvent</h3>
+
+<p>在元素附加到 <code>IPanel</code> 后立即发送的事件。由于
+面板的设置是递归的，因此元素的所有后代也会
+接收该事件。</p>
+
+<p><code>target</code>
+：要附加到面板的元素。</p>
+
+<h3>DetachFromPanelEvent</h3>
+
+<p>在元素与 <code>IPanel</code> 分离之前发送的事件。由于
+面板的设置是递归的，因此元素的所有后代也会
+接收该事件。</p>
+
+<p><code>target</code>
+：要从面板分离的元素。</p>
+
+<h2>工具提示事件</h2>
+
+<h3>TooltipEvent</h3>
+
+<p>在显示工具提示之前发送的事件。处理程序应该设置 <code>TooltipEvent.tooltip</code> 字符串和 <code>TooltipEvent.rect</code>。</p>
+
+<p><code>target</code>
+：需要显示工具提示的元素。</p>
+
+<h2>IMGUI 事件</h2>
+
+<h3>IMGUIEvent</h3>
+
+<p>用于封装 IMGUI 特有事件的事件。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–11–02 页面已修订</span></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Events-Synthesizing.html"></a></span><div class="tip">合成事件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Controls.html"></a></span><div class="tip">内置控件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

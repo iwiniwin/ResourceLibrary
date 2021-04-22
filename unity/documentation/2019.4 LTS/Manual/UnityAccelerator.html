@@ -1,0 +1,671 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity Accelerator - Unity 手册">
+<title>Unity Accelerator - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/AcceleratorDiagram.png">
+<meta name="description" content="Unity Accelerator 是一种软件代理，可让您更快地共享 Unity Editor 的内容。您的团队在同一本地网络中工作时，Accelerator 会协调资源共享，因此您无需重新构建项目的某些部分。Accelerator 与 Unity Teams Advanced 配合使用时，还可共享源资源。这样可以显著减少从 Collaborate 服务下载所需的时间。">
+<meta property="og:description" content="Unity Accelerator 是一种软件代理，可让您更快地共享 Unity Editor 的内容。您的团队在同一本地网络中工作时，Accelerator 会协调资源共享，因此您无需重新构建项目的某些部分。Accelerator 与 Unity Teams Advanced 配合使用时，还可共享源资源。这样可以显著减少从 Collaborate 服务下载所需的时间。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UnityAccelerator';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityAccelerator.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UnityAccelerator.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityAccelerator.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UnityAccelerator.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UnityAccelerator.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UnityAccelerator.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UnityAccelerator.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UnityAccelerator.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnityAccelerator.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnityAccelerator.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityAccelerator.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityAccelerator.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityAccelerator.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityAccelerator.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityAccelerator.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityAccelerator.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityAccelerator.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityAccelerator.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityAccelerator.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityAccelerator.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityAccelerator.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityAccelerator.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityAccelerator.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityAccelerator.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityAccelerator.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UnityAccelerator.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UnityAccelerator.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UnityAccelerator.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UnityAccelerator.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UnityAccelerator.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UnityAccelerator.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnityAccelerator.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnityAccelerator.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityAccelerator.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityAccelerator.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityAccelerator.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityAccelerator.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityAccelerator.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityAccelerator.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityAccelerator.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityAccelerator.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityAccelerator.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityAccelerator.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityAccelerator.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityAccelerator.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityAccelerator.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityAccelerator.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityAccelerator.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityCollaborate.html">Unity Collaborate</a></li>
+<li>Unity Accelerator</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCollaborateExportProject.html"></a></span><div class="tip">将项目移动到另一个版本控制系统</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCollaborateTroubleShooting.html"></a></span><div class="tip">Collaborate 故障排除技巧</div>
+</div>
+</div></div>
+<h1>Unity Accelerator</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>概述</h2>
+
+<p>Unity Accelerator 是一种软件代理，可让您更快地共享 Unity Editor 的内容。您的团队在同一本地网络中工作时，Accelerator 会协调资源共享，因此您无需重新构建项目的某些部分。Accelerator 与 <a href="https://unity3d.com/teams">Unity Teams</a> Advanced 配合使用时，还可共享源资源。这样可以显著减少从 <a href="https://unity3d.com/unity/features/collaborate">Collaborate</a> 服务下载所需的时间。</p>
+
+<p>在本地网络中安装 Accelerator 后，Unity Editor（2019.3 版本或更高版本；请参阅下文的 <strong>Unity Editor</strong> <strong>要求</strong>）与 Accelerator 进行通信以获取其他团队成员已更改或构建的资源。Accelerator 会在网络上保留这些资源的临时副本以避免浪费时间和带宽来获取或重建构建资源。</p>
+
+<h3>内容</h3>
+
+<ul>
+<li><a href="#UsingWithTeams">将 Accelerator 与 Unity Teams Advanced 一起配合使用</a></li>
+<li><a href="#UsingWithAssetPipeline">将 Accelerator 与资源管线一起配合使用</a></li>
+<li><a href="#Monitoring">监测 Accelerator</a></li>
+<li><a href="#Service">停止并重新启动 Accelerator 服务</a></li>
+<li><a href="#Troubleshooting">故障排除</a></li>
+</ul>
+
+<h3>要求</h3>
+
+<h4>本地托管要求</h4>
+
+<p>请在您团队经常使用的每个网络上都安装 Accelerator。您必须有计算机在本地网络上运行并且可以托管 Accelerator。选择主机时，应考虑以下要求：</p>
+
+<ul>
+<li>本地主机必须运行以下操作系统之一：
+
+<ul>
+<li>Linux（Ubuntu 16.04、Ubuntu 18.04 或 CentOS 7）<br>
+对于 Linux，必须以 root 用户身份安装 Accelerator。</li>
+<li>Windows Server 2008R2 / Windows 7 或更高版本（64 位）</li>
+<li>Mac OS X 10.12 或更高版本（64 位）</li>
+</ul>
+</li>
+<li>本地主机必须具有足够的本地存储空间来托管项目的大多数文件（最好在未承载操作系统的固态驱动器上）。</li>
+<li>本地主机必须与您的团队连接到同一网络，或者必须采用允许访问 Accelerator IP 地址和端口 (TCP) 的相应防火墙策略在本地进行路由。</li>
+<li>有权访问主机的任何人都可以访问您项目的文件，而不管您 Unity 组织内的权限结构如何。因此，Unity 建议对该计算机进行限制，以便只有<a href="OrgsManagingyourOrganization.html">组织所有者或管理员</a>才能访问 Accelerator 并与之交互。</li>
+</ul>
+
+<h4>Unity Editor 要求</h4>
+
+<p>Unity 项目必须使用 2019.3 版本或更高版本的 Unity 引擎。</p>
+
+<p><a name="UsingWithTeams"></a></p>
+
+<h2>Accelerator 与 Unity Teams Advanced</h2>
+
+<p>Accelerator 与 <a href="https://unity3d.com/teams">Unity Teams</a> Advanced 配合使用可带来更多益处：</p>
+
+<ul>
+<li>
+<a href="https://unity3d.com/unity/features/collaborate">Collaborate</a> 集成可确保最近添加或修改的源资源在本地网络上传输，从而大大缩短下载时间。</li>
+<li>在<a href="https://developer.cloud.unity3d.com/projects/">开发者控制面板</a>中进行远程监测（请参阅<a href="#Monitoring">监测 Accelerator</a>）。</li>
+<li>对 Unity Editor 和 Accelerator 之间共享的源资源进行安全传输和访问控制（请参阅<a href="#Security">源资源安全性</a>）。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AcceleratorDiagram.png" alt="在常规的 Collaborate 工作流程中，用户可以向云端上传和从云端下载。凭借加速的 Collaborate 工作流程，上传内容将保存到云端和 Accelerator，但是用户可以直接从 Accelerator 下载。">
+<figcaption>在常规的 Collaborate 工作流程中，用户可以向云端上传和从云端下载。凭借加速的 Collaborate 工作流程，上传内容将保存到云端和 Accelerator，但是用户可以直接从 Accelerator 下载。</figcaption>
+</figure>
+
+<h3>设置</h3>
+
+<p>如果您拥有 Unity Teams Advanced，则您组织的某个所有者或管理员可以按照以下步骤从<a href="https://developer.cloud.unity3d.com/projects/">开发者控制面板</a>中创建 Accelerator：</p>
+
+<p>1.从控制面板的 <strong>Develop</strong> 选项卡，选择需要创建 Accelerator 的项目。
+2.在 Project 视图中，从左侧导航栏选择 <strong>Collaborate</strong> &gt; <strong>Accelerator</strong>。
+3.单击 <strong>New Accelerator</strong> 按钮。
+4.在 <strong>New Accelerator</strong> 提示符处，输入一个<strong>代理名称</strong>以供 Unity 识别 Accelerator 代理。还可以（可选）指定<strong>端口号</strong>。<br><br><strong>注意</strong>：当前限制是每个组织可有三个 Accelerator。<br><br>
+5.单击 <strong>Save</strong> 以确认您的设置。
+6.在以下屏幕中，复制<strong>注册令牌 (Registration Token)</strong>，然后单击右上角的 <strong>Download Accelerator</strong> 按钮，并选择相应操作系统。<br><br><img src="../uploads/Main/AcceleratorDetails.png" alt="从开发者控制面板下载 Accelerator。">
+7.启动下载的安装程序，然后遵循安装向导进行操作。使用所复制的<strong>注册令牌</strong>，向 Unity Collaborate 注册 Accelerator。这样就可以使用 Accelerator 来增强 Collaborate 性能。</p>
+
+<p><strong>注意</strong>：如果将 Accelerator 安装在 Linux 系统上，请参阅<a href="#verify">验证 Accelerator 版本</a>。</p>
+
+<p><a name="Security"></a></p>
+
+<h3>源资源安全性</h3>
+
+<p>与 <a href="https://unity3d.com/teams">Unity Teams</a> Advanced 配合使用时，每个 Accelerator 会收到自己的安全证书以证明有权访问您的组织。在 Accelerator 上传或下载任何内容之前，发出请求的 Unity Editor 使用 SSL/TLS 来安全连接到 Accelerator 并验证其真实性。Unity Editor 发现并连接到 Accelerator 时，Editor 不会传递普通的 Unity 用户令牌，而是从 Unity Identity 服务接收特殊令牌。这些令牌用于验证用户的身份并可以访问您组织内的单个项目，从而在使用 Accelerator 时保护任何其他组织和项目的访问权限。</p>
+
+<p><a name="UsingWithAssetPipeline"></a></p>
+
+<h2>将 Accelerator 与资源导入管线一起配合使用</h2>
+
+<p><a href="AssetDatabase.html">资源导入管线</a>提供了一个用于通过脚本访问项目资源的 API，并将 Accelerator 用作缓存机制。您或团队成员导入资源时，资源导入管线会首先检查资源是否已经以导入状态存在于 Accelerator 的存储库中。如果已存在，资源导入管线将跳过导入步骤，而改从 Accelerator 下载资源。如果不存在，资源导入管线将导入资源，然后将结果上传到 Accelerator。</p>
+
+<p>将资源导入管线与 Accelerator 配合使用可显著减少大型项目的初始启动时间。该组合仅下载导入的结果并将结果存储在本地以供项目使用，而不进行资源密集型的导入操作。同一本地网络中的用户可以共享彼此的导入内容，从而减少多人进行繁重导入工作的需求。</p>
+
+<h3>设置</h3>
+
+<p>如果您没有 Unity Teams Advanced，可以直接下载并安装 Unity Accelerator，并在安装过程中取消选中注册令牌：</p>
+
+<ul>
+<li>下载 <a href="http://collab-accelerator.cloud.unity3d.com/api/v1/accelerator/download/installer?target_os=windows&amp;download_location=documentation">Windows</a> 版</li>
+<li>下载 <a href="http://collab-accelerator.cloud.unity3d.com/api/v1/accelerator/download/installer?target_os=darwin&amp;download_location=documentation">Mac OS X</a> 版</li>
+<li>下载 <a href="http://collab-accelerator.cloud.unity3d.com/api/v1/accelerator/download/installer?target_os=linux&amp;download_location=documentation">Linux</a> 版</li>
+</ul>
+
+<p><strong>注意</strong>：如果将 Accelerator 安装在 Linux 系统上，请参阅<a href="#verify">验证 Accelerator 版本</a>。</p>
+
+<h4>在“无头”计算机中安装 Accelerator</h4>
+
+<p>在每个平台上，可以从命令行运行安装程序。如果使用参数 <code>--help</code> 来执行安装程序，它将显示各种可用选项。要在没有任何提示的情况下运行完整安装，您应该为以下项提供值：</p>
+
+<ul>
+<li>
+<code>--storagedir</code> 设置 Accelerator 的目录以存储文件和配置。</li>
+<li>
+<code>--registration-token</code> 指定创建 Accelerator 后在<a href="https://developer.cloud.unity3d.com/projects/">开发者控制面板</a>中提供的令牌。这是将 Accelerator 与 Collaborate 配合使用的必需条件。</li>
+<li>使用 <code>--mode unattended</code> 来进行自动化安装，此类型的安装不应进行任何查询。这将使用默认值或提供的其他选项标志的值。</li>
+<li>在 Mac OS X 上，需要安装磁盘映像 (DMG) 并运行位于安装程序的应用程序目录中的二进制文件（位于 <code>Contents/MacOS/installbuilder.sh</code>）。</li>
+</ul>
+
+<h4>配置 Editor 以使用 Accelerator</h4>
+
+<p>安装 Accelerator 时，安装向导的最后一步按以下格式显示 Editor 中引用的 IP 地址和端口：</p>
+
+<p><code>[IP]:[Port]</code></p>
+
+<p>要配置您的 Editor 来将该 Accelerator 用作资源管线版本 2 缓存服务器，请遵循以下步骤进行操作：</p>
+
+<p>1.在 Unity Editor 中，选择 <strong>Edit</strong> &gt; <strong>Preferences</strong> (Windows) 或 <strong>Unity</strong> &gt; <strong>Preferences</strong>(Mac OS X)。
+2.从左侧菜单中选择 <strong>Cache Server</strong>。
+3.启用 <strong>Asset pipeline v2</strong>，然后在 <strong>Default IP address</strong> 字段中输入来自安装向导的 Accelerator IP 地址。</p>
+
+<figure>
+<img src="../uploads/Main/AcceleratorCacheServer.png" alt="配置 Editor 来将 Accelerator 用于资源导入管线。">
+<figcaption>配置 Editor 来将 Accelerator 用于资源导入管线。</figcaption>
+</figure>
+
+<p>或者，在启动 Unity Editor 时，您可以使用<a href="CommandLineArguments.html">命令行参数</a>来提供 Accelerator 缓存服务器配置详细信息。</p>
+
+<p>要指定希望使用 Accelerator 缓存服务器，请使用 <code>-EnableCacheServer</code> 参数，而要指定地址和端口号，请使用 <code>-cacheServerEndpoint Address:Port</code>，并将 Address 和 Port 替换为缓存服务器的相应详细信息。</p>
+
+<p>注意：Accelerator 缓存服务器要求您的项目使用<a href="AssetDatabase.html">资源数据库 V2</a> (ADB2)。从命令行启动 Unity 时，可以使用 <code>-adb2</code> 参数来强制升级到 ADB2。</p>
+
+<p>请参阅<a href="CommandLineArguments.html">命令行参数</a>以了解更多信息。</p>
+
+<p><a name="Monitoring"></a></p>
+
+<h2>监测 Accelerator</h2>
+
+<h3>开发者控制面板（仅限 Unity Teams Advanced 用户）</h3>
+
+<p>如果您是 Unity Teams Advanced 用户，可以从<a href="https://developer.cloud.unity3d.com/projects/">开发者控制面板</a>监测 Accelerator 指标。这些指标仅适用于源资源，不适用于生成（导入）的资源。</p>
+
+<p>要查看项目的 Accelerator 汇总，请选择该项目，然后从左侧导航栏中选择 <strong>Collaborate</strong> &gt; <strong>Accelerators</strong>。在此菜单中，可查看以下信息：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>名称</strong></td>
+	<td style="text-align:left;">创建 Accelerator 时提供的名称。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Avg.Efficiency</strong></td>
+	<td style="text-align:left;">过去 24 小时内，Accelerator 的平均<a href="#Efficiency">效率</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Editors</strong></td>
+	<td style="text-align:left;">连接到 Accelerator 的 Unity Editor 数量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Latest Activity</strong></td>
+	<td style="text-align:left;">Accelerator 的最近使用情况。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Status</strong></td>
+	<td style="text-align:left;">Accelerator 可能处于以下状态之一：<br><br>- <strong>Available</strong> 表示未安装 Accelerator 或未向 Collaborate 服务注册 Accelerator。<br>- <strong>Ready</strong> 表示 Accelerator 已向 Collaborate 服务注册，但未连接 Unity Editor。<br>- <strong>In use</strong> 表示已连接 Unity Editor，或 Unity Editor 最近已连接到 Accelerator。<br>- <strong>Idle</strong> 表示 Unity Editor 以前使用过 Accelerator，但是最近没有活动。<br>- <strong>Not Listening</strong> 表示 Accelerator 无法连接到已配置的端口（很可能是因为其他服务已在使用该端口）。<br>- <strong>Disconnected</strong> 表示 Accelerator 不再连接到相应服务来报告使用情况，也不再接收配置更改。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enabled</strong></td>
+	<td style="text-align:left;">指示 Unity Editor 是否可以发现并尝试使用 Accelerator。不管已禁用的 Accelerator 是否正在运行，Unity Editor 都不会使用这些 Accelerator。</td>
+</tr>
+</tbody>
+</table>
+
+<p>单击 Accelerator 的 <strong>Details</strong> 可查看有关其使用情况的以下深入信息。这些数据每 10 分钟更新一次。</p>
+
+<p><a name="Efficiency"></a></p>
+
+<h4>效率 (Efficiency)</h4>
+
+<p>此处显示 Accelerator 在过去 24 小时内的平均性能。值的范围是 0 到 100，用于衡量从 Accelerator 本地（而不是从 Collaborate 服务远程）提供的内容下载所占的百分比。值为 0 表示 Accelerator 无助于内容下载。值为 100 表示 Accelerator 提供了所有内容下载。</p>
+
+<h4>已移除的字节数 (Bytes Removed)</h4>
+
+<p>Accelerator 会定期清理空间以存储新资源。Accelerator 清理空间时，控制面板会报告分配给旧资源并且已被 Accelerator 从本地存储中删除的字节数。</p>
+
+<p><strong>注意</strong>：这是正常操作，有助于维持 Accelerator 的健康状态。但是，如果此值似乎对 Accelerator 的效率产生了不利影响，您可能需要添加更多存储空间来适应团队的使用需求。理想情况下，运行 Accelerator 的文件系统应使用具有足够可用磁盘空间的固态硬盘驱动器来容纳最新版激活项目中的所有文件，但这不是硬性要求。如果没有足够的存储空间，Accelerator 的整体效率将下降。</p>
+
+<h4>传输的字节数 (Bytes Delivered)</h4>
+
+<p>分布式团队可能有使用 Accelerator 的本地参与者，也有使用 Collaborate 服务的远程参与者。在这些情况下，Accelerator 会监听远程发布事件，并主动为其本地网络上的用户下载受影响的内容。</p>
+
+<p>Accelerator 在使用过程中会报告从远程 Collaborate 服务请求和下载的字节总数，而不是从本地网络传输的字节总数。在本地传输更多字节会更有利于您的团队，因为这样可以减轻网络网关的负担。</p>
+
+<h4>节省的时间 (Time Saved)</h4>
+
+<p>Accelerator 在传输本地存储的资源（而不是从 Collaborate 服务下载资源）时会跟踪带宽，并将 Unity Editor 等待远程下载资源的时间差报告为节省的时间。</p>
+
+<p><strong>注意</strong>：前述指标仅适用于源资源。这些指标不适用于生成（导入）的资源。</p>
+
+<h3>直接访问 Accelerator 指标</h3>
+
+<p>如果您没有使用 Unity Teams Advanced，每个 Accelerator 将以 <code>/metrics</code> 的形式托管 <a href="https://prometheus.io/">Prometheus 指标报告</a>，您可以从本地网络查询此数据。以下是您可以访问的指标的完整列表：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>指标</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>process_resident_memory_bytes</code></td>
+	<td style="text-align:left;">Accelerator 使用的内存量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_sys_cpu_percent</code></td>
+	<td style="text-align:left;">系统使用的 CPU 量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_sys_mem_bytes_used</code></td>
+	<td style="text-align:left;">系统使用的内存量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_connects</code></td>
+	<td style="text-align:left;">Unity Editor 连接到资源导入管线的服务的次数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_bytes_in</code></td>
+	<td style="text-align:left;">从资源导入管线接收到的字节数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_bytes_out</code></td>
+	<td style="text-align:left;">发送到资源导入管线的字节数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="0",method="get"}</code></td>
+	<td style="text-align:left;">发送到资源导入管线的项数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="1",method="get"}</code></td>
+	<td style="text-align:left;">发送到资源导入管线的项中发生的错误数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="2",method="get"}</code></td>
+	<td style="text-align:left;">发送到资源导入管线的项中发生的命名空间错误数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="3",method="get"}</code></td>
+	<td style="text-align:left;">资源导入管线针对尚未缓存的项提出的请求数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="0",method="put"}</code></td>
+	<td style="text-align:left;">从资源导入管线接收到的项数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="1",method="put"}</code></td>
+	<td style="text-align:left;">从资源导入管线接收的项中发生的错误数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="2",method="put"}</code></td>
+	<td style="text-align:left;">从资源导入管线接收的项中发生的命名空间错误数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="0",method="delete"}</code></td>
+	<td style="text-align:left;">从资源导入管线提出的关于删除项的请求数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="1",method="delete"}</code></td>
+	<td style="text-align:left;">资源导入管线删除项时发生的错误数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="2",method="delete"}</code></td>
+	<td style="text-align:left;">资源导入管线提出的删除项请求中发生的命名空间错误数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_requests{code="3",method="delete"}</code></td>
+	<td style="text-align:left;">资源导入管线针对尚未缓存的项提出的删除项请求数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_cache_hits</code></td>
+	<td style="text-align:left;">从缓存满足的资源导入管线请求数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_cache_misses</code></td>
+	<td style="text-align:left;">无法从缓存满足的资源导入管线请求数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_cache_bytes_out</code></td>
+	<td style="text-align:left;">从缓存提供给资源导入管线的字节数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>uta_agent_protobuf_cache_bytes_in</code></td>
+	<td style="text-align:left;">从资源导入管线接收而存储到缓存中的字节数。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Unity Editor 日志调试</h3>
+
+<p><a href="LogFiles.html">Unity Editor 日志</a>可用于查看调试信息。要查看 Collaborate 事件的日志，请在环境变量设置为 <code>enableCollabEventLogs=true</code> 的情况下运行 Unity Editor（或 Unity Hub）。具有 <code>[collab-accelerator]</code> 标记的日志会有助于深入了解 Accelerator 的性能。</p>
+
+<p>以下代码块显示了使用资源导入管线 v2 的 Accelerator 的日志输出示例。这无需 <code>enableCollabEventLogs=true</code>，因为它不用于 Collaborate。</p>
+
+<pre><code>2019-10-07T11:34:51-0700 Using Asset Import Pipeline V2.
+  ...
+  2019-08-08T09:04:03-0700 Start importing Assets/Scenes/tame-the-unicorn.png guid(07a0d449dcaef4d2ba104e9d9b350de6)
+  2019-08-08T09:04:05-0700 Done importing asset: 'Assets/Scenes/tame-the-unicorn.png' (target hash: 'd5fddd470dd9beedcd7261b6455e436a') in 1.082988 seconds
+  2019-08-08T09:04:05-0700 RemoteAssetCache::AddArtifactToCacheServer - artifactKey='Guid(07a0d449dcaef4d2ba104e9d9b350de6) Importer(-1,)' Target hash='d5fddd470dd9beedcd7261b6455e436a'
+</code></pre>
+
+<p><a name="Service"></a></p>
+
+<h2>停止并重新启动 Accelerator 服务</h2>
+
+<p>Accelerator 作为每个平台的后台进程运行。</p>
+
+<h3>Windows</h3>
+
+<p>在“设置”菜单中搜索“服务”一词或者在<strong>运行</strong>对话框 (<strong>WIN</strong> + <strong>R</strong>) 中运行“<em>services.msc</em>”来打开<strong>服务面板</strong>。下一步，在生成的列表中找到“Unity Accelerator”服务。左面板中会显示<strong>停止服务</strong>或<strong>重新启动服务</strong>选项。</p>
+
+<h3>Mac OS X</h3>
+
+<p>在终端中运行 <code>launchctl</code> 命令以便从 LaunchControl 实用程序控制“com.unity.accelerator”服务。有关更多信息，请访问 <a href="https://www.launchd.info/">https://www.launchd.info/</a>。</p>
+
+<h3>Linux</h3>
+
+<p>使用 <code>service</code> 控制台实用程序来控制“unity-accelerator”服务。有关更多信息，请访问 <a href="http://manpages.ubuntu.com/manpages/bionic/man8/service.8.html">http://manpages.ubuntu.com/manpages/bionic/man8/service.8.html</a>。</p>
+
+<h3>维护</h3>
+
+<p>Accelerator 服务会在维护期间自动自我更新。当前，该维护期根据运行 Accelerator 的计算机而设置为当地时间凌晨 01:00–02:00。仅当 Accelerator 发现可用的更新版本时，才会进行自我更新。</p>
+
+<p>Accelerator 的安装日志和卸载日志保存在操作系统的标准临时目录中，名为 <code>unity-accelerator-*install.log</code>。Accelerator 的日志保存在存储目录中，名为 <code>unity-accelerator.log</code>。</p>
+
+<p><a name="Troubleshooting"></a></p>
+
+<h2>故障排除</h2>
+
+<p>如果您已经安装 Accelerator，但是某些 Unity Editor 无法使用它，则可能有多种原因导致出现此问题。以下故障排除选项可能有助于解决此问题：</p>
+
+<h4>检查使用的 Unity Editor 版本</h4>
+
+<p>每个项目参与者都必须使用 Editor 版本 2019.3 或更高版本才能使用 Accelerator。</p>
+
+<h4>验证用户是否在 Accelerator 的本地网络中</h4>
+
+<p>确保 Accelerator 与遇到问题的项目参与者在同一局域网中运行。Accelerator 对远程工作的参与者无效。</p>
+
+<h4>测试 Accelerator 的连接</h4>
+
+<p>检查遇到问题的计算机是否可以访问 Accelerator。如果使用 Unity Teams Advanced，请按照以下步骤在浏览器中访问 Accelerator 的运行状况页面：</p>
+
+<p>1.在<a href="https://developer.cloud.unity3d.com/">开发者控制面板</a>中，选择 <strong>Collaborate</strong> &gt; <strong>Accelerator</strong>。
+2.单击您要检测的 Accelerator 的 <strong>Details</strong>。
+3.单击 Accelerator IP 地址旁的信息图标以显示其运行状况页面的 URL。</p>
+
+<p>如果没有使用 Unity Teams Advanced，请将 Accelerator 的主机 IP 地址输入到以下 URL 路径中以显示其运行状况页面：</p>
+
+<p><code>[AcceleratorIP]:[AcceleratorPort]/api/agent-health</code></p>
+
+<p>如果测试未通过，请确保所有主机和网络防火墙都允许访问 Accelerator 的监听 IP 地址和端口 (TCP)。您可能需要与网络管理员协调以允许访问此端口。</p>
+
+<h4>检查 Accelerator 的项目配置</h4>
+
+<p>如果使用 Unity Teams Advanced，请验证是否为相关项目配置了 Accelerator。在<a href="https://developer.cloud.unity3d.com/projects/">开发者控制面板</a>中导航到此项目，然后从左侧导航栏中选择 <strong>Collaborate</strong> &gt; <strong>Accelerator</strong>。您应该会看到为该项目列出了 Accelerator。</p>
+
+<p><a name="verify"></a></p>
+
+<h3>验证 Accelerator 版本</h3>
+
+<p>对于 Linux 系统上安装的 Accelerator，所有 Linux 可执行文件均具有签名文件，您可以对这些文件进行验证以确保没有恶意实体篡改了您下载的 Accelerator 版本。您可以使用受信任的 GnuPG 版本来验证签名文件。以下密钥为最新版本签名。包含密钥的公钥块位于 <a href="https://collab-accelerator.cloud.unity3d.com/">https://collab-accelerator.cloud.unity3d.com/</a> 中。</p>
+
+<pre><code>pub rsa4096 2019-12-02
+Key fingerprint = 9BC4 B04D F2E8 74E5 64AA 47E7 6D44 3B8B 002C F61F
+uid       Unity Technologies ApS (Accelerator signing key) &lt;sst-ops@unity3d.com&gt;
+</code></pre>
+
+<p>要将密钥下载到您的 GPG 存储库，请使用以下命令之一：</p>
+
+<pre><code>$ gpg --keyserver https://collab-accelerator.cloud.unity3d.com/ --search-key "sst-ops@unity3d.com"
+
+$ gpg --keyserver https://collab-accelerator.cloud.unity3d.com/ --recv-key 9BC4B04DF2E874E564AA47E76D443B8B002CF62F
+</code></pre>
+
+<p>要检查您安装的 Accelerator 版本是不是原始版本且未经修改，请验证该文件的签名。</p>
+
+<p>Accelerator 安装文件随附了 <a href="https://storage.googleapis.com/unity-accelerator-prd/unity-accelerator-installer.sig">https://storage.googleapis.com/unity-accelerator-prd/unity-accelerator-installer.sig</a> 中提供的签名文件。使用此签名文件可以验证 Accelerator 安装程序：</p>
+
+<pre><code>$ gpg --verify unity-accelerator-installer.sig unity-accelerator-linux-x64-installer.run
+</code></pre>
+
+<p>在信任密钥之前，请将指纹与伪造或不受信任的密钥中显示的指纹进行对比。
+信任密钥后，您将看到如下内容：</p>
+
+<pre><code>gpg: Signature made Thu Jan 16 12:29:14 2020 PST
+gpg:                using RSA key 9BC4B04DF2E874E564AA47E76D443B8B002CF61F
+gpg: Good signature from "Unity Technologies ApS (Accelerator signing key) &lt;sst-ops@unity3d.com&gt;" [ultimate]
+</code></pre>
+
+<p>这意味着签名有效，并且您已信任此密钥。</p>
+
+<h4>错误密钥</h4>
+
+<p>如果没有正确的分发密钥，以上命令的输出将如下所示：</p>
+
+<pre><code>gpg: Signature made Thu Jan 16 12:29:14 2020 PST
+gpg:                using RSA key 9BC4B04DF2E874E564AA47E76D443B8B002CF61F
+gpg: Can't check signature: No public key
+</code></pre>
+
+<p>在此情况下，您必须按照上文中的说明来获取密钥。</p>
+
+<h4>伪造或不受信任的密钥</h4>
+
+<p>如果您有包含有效签名的密钥副本，但是该密钥未被标记为受信任或该密钥是伪造的，则输出将如下所示：</p>
+
+<pre><code>gpg: Signature made Thu Jan 16 12:29:14 2020 PST
+gpg:                using RSA key 9BC4B04DF2E874E564AA47E76D443B8B002CF61F
+gpg: Good signature from "Unity Technologies ApS (Accelerator signing key) &lt;sst-ops@unity3d.com&gt;" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 9BC4 B04D F2E8 74E5 64AA  47E7 6D44 3B8B 002C F61F
+</code></pre>
+
+<p>如果密钥是伪造的，则必须使用签名文件来验证指纹。
+如果密钥未被标记为受信任，请编辑密钥，将其标记为受信任。有关更多信息，请参阅 <a href="https://www.gnupg.org/gph/en/manual/x334.html">https://www.gnupg.org/gph/en/manual/x334.html</a>。</p>
+
+<h3>支持</h3>
+
+<p>有关 Accelerator 与 Unity Teams 配合使用的帮助信息，请向<a href="mailto:collabsupport@unity3d.com">支持服务部门</a>发送电子邮件，或者从<a href="https://developer.cloud.unity3d.com/projects/">开发者控制面板</a>中提交支持工单。要为 Unity Teams Advanced 项目提交支持工单，请选择项目，然后从左侧导航栏中选择 <strong>Collaborate</strong> &gt; <strong>Support</strong>。</p>
+
+<p>有关 Accelerator 与资源导入管线配合使用的帮助信息，请访问 <a href="https://forum.unity.com/forums/unity-accelerator.392/">Accelerator 论坛</a>。</p>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCollaborateExportProject.html"></a></span><div class="tip">将项目移动到另一个版本控制系统</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCollaborateTroubleShooting.html"></a></span><div class="tip">Collaborate 故障排除技巧</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

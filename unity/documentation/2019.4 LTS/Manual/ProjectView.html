@@ -1,0 +1,384 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Project 窗口 - Unity 手册">
+<title>Project 窗口 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/project-window-context.png">
+<meta name="description" content="Project 窗口显示与项目相关的所有文件，该窗口是在应用程序中导航和查找资源以及其他项目文件的主要方法。默认情况下，启动一个新项目时，此窗口将打开。然而，如果找不到该窗口或者该窗口已关闭，可以通过 Window &gt; General &gt; Project 或者使用键盘命令 Ctrl + 9__（macOS 上为 Command + 9__）将其打开。">
+<meta property="og:description" content="Project 窗口显示与项目相关的所有文件，该窗口是在应用程序中导航和查找资源以及其他项目文件的主要方法。默认情况下，启动一个新项目时，此窗口将打开。然而，如果找不到该窗口或者该窗口已关闭，可以通过 Window &gt; General &gt; Project 或者使用键盘命令 Ctrl + 9__（macOS 上为 Command + 9__）将其打开。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'ProjectView';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/ProjectView.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/ProjectView.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/ProjectView.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/ProjectView.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/ProjectView.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/ProjectView.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/ProjectView.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/ProjectView.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ProjectView.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ProjectView.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ProjectView.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ProjectView.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ProjectView.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ProjectView.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ProjectView.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ProjectView.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ProjectView.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ProjectView.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ProjectView.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ProjectView.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ProjectView.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ProjectView.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ProjectView.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ProjectView.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ProjectView.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/ProjectView.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/ProjectView.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/ProjectView.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/ProjectView.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/ProjectView.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/ProjectView.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ProjectView.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ProjectView.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ProjectView.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ProjectView.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ProjectView.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ProjectView.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ProjectView.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ProjectView.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ProjectView.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ProjectView.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ProjectView.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ProjectView.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ProjectView.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ProjectView.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ProjectView.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ProjectView.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ProjectView.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UsingTheEditor.html">Unity 的界面</a></li>
+<li>Project 窗口</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UsingTheEditor.html"></a></span><div class="tip">Unity 的界面</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingTheSceneView.html"></a></span><div class="tip">Scene 视图</div>
+</div>
+</div></div>
+<h1>Project 窗口</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Project 窗口显示与项目相关的所有文件，该窗口是在应用程序中导航和查找资源以及其他项目文件的主要方法。默认情况下，启动一个新项目时，此窗口将打开。然而，如果找不到该窗口或者该窗口已关闭，可以通过 <strong>Window &gt; General &gt; Project</strong> 或者使用键盘命令 <strong>Ctrl + 9__（macOS 上为 </strong>Command + 9__）将其打开。</p>
+
+<figure>
+<img src="../uploads/Main/project-window-context.png" alt="处于 Tall 布局中的 Project 窗口">
+<figcaption>处于 Tall 布局中的 Project 窗口</figcaption>
+</figure>
+
+<p>可以通过单击和拖动 Project 窗口的顶部来移动该窗口。可以将该窗口停靠在 Editor 中，或者将其拖出 Editor 窗口，从而用作自由浮动窗口。还可更改窗口本身的布局。为此，请选择窗口右上方的上下文按钮，然后选择 <strong>One Column Layout</strong> 或 <strong>Two Column Layout</strong>。<strong>Two Column Layout</strong> 有一个额外面板，其中显示每个文件的可视化预览。</p>
+
+<figure>
+<img src="../uploads/Main/project-window-wide-layout.png" alt="设置为 Two Column Layout 的 Project 窗口">
+<figcaption>设置为 Two Column Layout 的 Project 窗口</figcaption>
+</figure>
+
+<p>浏览器的左侧面板将项目的文件夹结构显示为层级列表。从列表中选择文件夹时，Unity 将在右侧面板中显示其内容。可单击小三角形来展开或折叠文件夹，显示文件夹包含的任何嵌套文件夹。单击时按住 <strong>Alt</strong> 键将以递归方式展开或折叠所有嵌套文件夹。</p>
+
+<p>各个资源在右侧面板中显示为图标，这些图标指示了资源的类型（例如，脚本、材质、子文件夹）。要调整图标的大小，可使用面板底部的滑动条；如果滑动条移动到最左侧，这些图标将替换为层级列表视图。滑动条左侧的空白位置显示当前选定项，包括该项的完整路径（如果正在执行搜索）。</p>
+
+<p>项目结构列表上方是 <strong>Favorites</strong> 部分，可在其中保存常用项以方便访问。可将所需项从项目结构列表拖动到 Favorites 部分，也可在此处保存搜索查询结果。</p>
+
+<h2>Project 窗口工具栏</h2>
+
+<p>沿窗口顶部边缘的是浏览器的工具栏。</p>
+
+<figure>
+<img src="../uploads/Main/project-window-toolbar.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Create menu</strong></td>
+	<td style="text-align:left;">显示可以添加到当前选定文件夹的资源和其他子文件夹的列表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Search bar</strong></td>
+	<td style="text-align:left;">使用搜索栏来搜索项目中的文件。可以选择在整个项目 (<strong>All</strong>)、项目的顶级文件夹（单独列出）、当前选择的文件夹或 Asset Store 中进行搜索。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Search by Type</strong></td>
+	<td style="text-align:left;">选择此属性可将搜索限制为特定类型，例如“网格”、“预制件”、“场景”。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Search by Label</strong></td>
+	<td style="text-align:left;">选择此属性可选择要在其中搜索的标签。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hidden packages count</strong></td>
+	<td style="text-align:left;">选择此属性可在 Project 窗口中切换包的可见性。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>搜索筛选条件</h2>
+
+<p>搜索筛选条件的工作原理是在搜索文本中添加额外的搜索词。以“t:”开头的搜索词按指定的资源类型进行筛选，而“l:”按标签筛选。如果知道要查找的具体内容，可直接在搜索框中输入这些搜索词，无需使用菜单。一次可搜索多个类型或标签。添加几个类型将使搜索扩展以便包括所有指定的类型（即，多个类型通过 OR 逻辑结合）。添加多个标签会将搜索范围缩小到具有任意指定标签的项（即，多个标签将通过 OR 逻辑组合在一起）。</p>
+
+<h2>搜索 Asset Store</h2>
+
+<p>Project Browser 的搜索也可应用于 Unity <strong>Asset Store</strong> 中可用的资源。如果从示踪导航栏的菜单中选择 __Asset Store__，则会显示 Asset Store 中与查询匹配的所有免费和付费资源。按类型和标签搜索的工作方式与 Unity 项目相同。首先根据资源名称检查搜索查询词，然后按顺序检查资源包名称、资源包标签和资源包描述（因此，名称中包含搜索词的项的排名将高于资源包描述中包含该搜索词的项）。</p>
+
+<p>如果从列表中选择一项，该项的详细信息将显示在 Inspector 中，同时还提供购买和/或下载选项。有些资源类型在此部分中提供了预览，因此可以在购买前旋转 3D 模型。Inspector 还提供了一个选项允许在常规 Asset Store 窗口中查看资源以了解更多详细信息。</p>
+
+<h2>快捷键</h2>
+
+<p>当浏览器视图获得焦点时，可使用以下键盘快捷键。请注意，其中一些快捷键仅在视图使用双列布局时才起作用（可使用右上角的面板菜单在单列和双列布局之间切换）。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>快捷键</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>F</strong></td>
+	<td style="text-align:left;">定格所选项（即，在包含文件夹中显示所选资源）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tab</strong></td>
+	<td style="text-align:left;">在第一列和第二列之间移动焦点（两列）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ctrl/Cmd + F</strong></td>
+	<td style="text-align:left;">聚焦搜索字段</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ctrl/Cmd + A</strong></td>
+	<td style="text-align:left;">选择列表中的所有可见项</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ctrl/Cmd + D</strong></td>
+	<td style="text-align:left;">复制所选资源</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Delete</strong></td>
+	<td style="text-align:left;">删除并显示对话框 (Win)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Delete + Shift</strong></td>
+	<td style="text-align:left;">删除而不显示对话框 (Win)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Delete + Cmd</strong></td>
+	<td style="text-align:left;">删除而不显示对话框 (OSX)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enter</strong></td>
+	<td style="text-align:left;">开始重命名所选项 (OSX)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cmd + 向下箭头</strong></td>
+	<td style="text-align:left;">打开所选资源 (OSX)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cmd + 向上箭头</strong></td>
+	<td style="text-align:left;">跳转到父文件夹（OSX，两列）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>F2</strong></td>
+	<td style="text-align:left;">开始重命名所选项 (Win)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enter</strong></td>
+	<td style="text-align:left;">打开所选资源 (Win)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Backspace</strong></td>
+	<td style="text-align:left;">跳转到父文件夹（Win，两列）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>向右箭头</strong></td>
+	<td style="text-align:left;">展开所选项（树视图和搜索结果）。如果该项已展开，则将选择其第一个子项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>向左箭头</strong></td>
+	<td style="text-align:left;">折叠所选项（树视图和搜索结果）。如果该项已折叠，则将选择其父项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alt + 向右箭头</strong></td>
+	<td style="text-align:left;">将资源显示为预览时展开项</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alt + 向左箭头</strong></td>
+	<td style="text-align:left;">将资源显示为预览时折叠项</td>
+</tr>
+</tbody>
+</table>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UsingTheEditor.html"></a></span><div class="tip">Unity 的界面</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingTheSceneView.html"></a></span><div class="tip">Scene 视图</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

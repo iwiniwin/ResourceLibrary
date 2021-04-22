@@ -1,0 +1,281 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="渲染模式 (Rendering Mode) - Unity 手册">
+<title>渲染模式 (Rendering Mode) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/StandardShaderParameterRenderMode.png">
+<meta name="description" content="标准着色器中的第一个材质参数为 Rendering Mode。此参数允许您选择对象是否使用透明度，如果是，使用哪种类型的混合模式。">
+<meta property="og:description" content="标准着色器中的第一个材质参数为 Rendering Mode。此参数允许您选择对象是否使用透明度，如果是，使用哪种类型的混合模式。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'StandardShaderMaterialParameterRenderingMode';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/StandardShaderMaterialParameterRenderingMode.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/StandardShaderMaterialParameterRenderingMode.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/StandardShaderMaterialParameterRenderingMode.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/StandardShaderMaterialParameterRenderingMode.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/StandardShaderMaterialParameterRenderingMode.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/StandardShaderMaterialParameterRenderingMode.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/StandardShaderMaterialParameterRenderingMode.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/StandardShaderMaterialParameterRenderingMode.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/StandardShaderMaterialParameterRenderingMode.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/StandardShaderMaterialParameterRenderingMode.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/StandardShaderMaterialParameterRenderingMode.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/StandardShaderMaterialParameterRenderingMode.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/StandardShaderMaterialParameterRenderingMode.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/StandardShaderMaterialParameterRenderingMode.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/StandardShaderMaterialParameterRenderingMode.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/StandardShaderMaterialParameterRenderingMode.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/StandardShaderMaterialParameterRenderingMode.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/StandardShaderMaterialParameterRenderingMode.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/StandardShaderMaterialParameterRenderingMode.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/StandardShaderMaterialParameterRenderingMode.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/StandardShaderMaterialParameterRenderingMode.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/StandardShaderMaterialParameterRenderingMode.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/StandardShaderMaterialParameterRenderingMode.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/StandardShaderMaterialParameterRenderingMode.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/StandardShaderMaterialParameterRenderingMode.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/StandardShaderMaterialParameterRenderingMode.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/StandardShaderMaterialParameterRenderingMode.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/StandardShaderMaterialParameterRenderingMode.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/StandardShaderMaterialParameterRenderingMode.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/StandardShaderMaterialParameterRenderingMode.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/StandardShaderMaterialParameterRenderingMode.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/StandardShaderMaterialParameterRenderingMode.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/StandardShaderMaterialParameterRenderingMode.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/StandardShaderMaterialParameterRenderingMode.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/StandardShaderMaterialParameterRenderingMode.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="Shaders.html">网格、材质、着色器和纹理</a></li>
+<li><a href="ShadersOverview.html">编写着色器</a></li>
+<li><a href="shader-StandardShader.html">标准着色器</a></li>
+<li><a href="StandardShaderMaterialParameters.html">材质参数</a></li>
+<li>渲染模式 (Rendering Mode)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="StandardShaderMaterialParameters.html"></a></span><div class="tip">材质参数</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StandardShaderMaterialParameterAlbedoColor.html"></a></span><div class="tip">反照率颜色和透明度</div>
+</div>
+</div></div>
+<h1>渲染模式 (Rendering Mode)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/StandardShaderParameterRenderMode.png" alt="此处的标准着色器材质采用了默认参数并且未分配任何值或纹理。Rendering Mode 参数已突出显示。">
+<figcaption>此处的标准着色器材质采用了默认参数并且未分配任何值或纹理。Rendering Mode 参数已突出显示。</figcaption>
+</figure>
+
+<p>标准着色器中的第一个材质参数为 <strong>Rendering Mode</strong>。此参数允许您选择对象是否使用透明度，如果是，使用哪种类型的混合模式。</p>
+
+<ul>
+<li><p><strong>Opaque</strong> - 此项为默认设置，适用于没有透明区域的普通固体对象。</p></li>
+<li><p><strong>Cutout</strong> - 用于创建在不透明区域和透明区域之间具有硬边的透明效果。在这种模式下，没有半透明区域，纹理为 100% 不透明或不可见。使用透明度来创建材质的形状时（如树叶或者有孔洞和碎布条的布料），这非常有用。</p></li>
+<li><p><strong>Transparent</strong> - 适用于渲染逼真的透明材质，如透明塑料或玻璃。在此模式下，材质本身将采用透明度值（基于纹理的 Alpha 通道和色调颜色的 Alpha），但与真实透明材质的情况一样，反射和光照高光将保持完全清晰可见。</p></li>
+<li><p><strong>Fade</strong> - 允许透明度值完全淡出对象，包括对象可能具有的任何镜面高光或反射。如果要对淡入或淡出的对象进行动画化，此模式将非常有用。它不适合渲染逼真的透明材质，如透明塑料或玻璃，因为反射和高光也会淡出。</p></li>
+</ul>
+
+<h2>使用脚本来更改渲染模式</h2>
+
+<p>当您更改渲染模式时，Unity 将对材质应用许多更改。没有单个 C# API 可以更改材质的渲染模式，但是您可以在代码中进行相同的更改。</p>
+
+<p>要查看在您更改渲染模式时 Unity 所做的更改，请执行以下操作：</p>
+
+<p>1.下载 Unity 内置着色器的源代码。请参阅<a href="https://docs.unity3d.com/Manual/StandardShaderMakeYourOwn.html">自行创建着色器</a>以查看相关说明。
+2.打开 <em>StandardShaderGUI.cs</em> 文件。
+3.找到文件中如下所示的区域，并查看每种渲染模式的更改。</p>
+
+<pre><code class="C#">switch (blendMode)
+        {
+            case BlendMode.Opaque:
+               // 此处是与不透明 (Opaque) 渲染模式相关的更改
+                break;
+            case BlendMode.Cutout:
+                // 此处是与镂空 (Cutout) 渲染模式相关的更改
+                break;
+            case BlendMode.Fade:
+                // 此处是与淡入淡出 (Fade) 渲染模式相关的更改
+                break;
+            case BlendMode.Transparent:
+                // 此处是与透明 (Transparent) 渲染模式相关的更改
+                break;
+        }
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/StandardShaderTransparencySkyBoxReflection.jpg" alt="此图像中的头盔罩使用 Transparent 模式渲染而成，因为它应该表示具有透明属性的真实物理对象。此处的头盔罩正在反射场景中的天空盒。">
+<figcaption>此图像中的头盔罩使用 Transparent 模式渲染而成，因为它应该表示具有透明属性的真实物理对象。此处的头盔罩正在反射场景中的天空盒。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/StandardShaderTransparentWindow.jpg" alt="这些窗户使用了 Transparent 模式，但在纹理中定义了一些完全不透明的区域（窗框）。来自光源的镜面反射将反射透明区域和不透明区域。">
+<figcaption>这些窗户使用了 Transparent 模式，但在纹理中定义了一些完全不透明的区域（窗框）。来自光源的镜面反射将反射透明区域和不透明区域。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/StandardShaderFadeHologram.jpg" alt="此图像中的全息图使用 Fade 模式渲染而成，因为它应该表示部分淡出的不透明对象。">
+<figcaption>此图像中的全息图使用 Fade 模式渲染而成，因为它应该表示部分淡出的不透明对象。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/StandardShaderCutoutGrassExample.jpg" alt="此图像中的草使用 Cutout 模式渲染而成。此模式为对象提供了清晰的锐利边缘（通过指定截止阈值进行定义）。Alpha 值高于此阈值的图像的所有部分都是 100% 不透明的，而低于此阈值的所有部分都是不可见的。在图像的右侧，可看到材质设置和所用纹理的 Alpha 通道。">
+<figcaption>此图像中的草使用 Cutout 模式渲染而成。此模式为对象提供了清晰的锐利边缘（通过指定截止阈值进行定义）。Alpha 值高于此阈值的图像的所有部分都是 100% 不透明的，而低于此阈值的所有部分都是不可见的。在图像的右侧，可看到材质设置和所用纹理的 Alpha 通道。</figcaption>
+</figure>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="StandardShaderMaterialParameters.html"></a></span><div class="tip">材质参数</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StandardShaderMaterialParameterAlbedoColor.html"></a></span><div class="tip">反照率颜色和透明度</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

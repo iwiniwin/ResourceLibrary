@@ -1,0 +1,351 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Memory Profiler 模块 - Unity 手册">
+<title>Memory Profiler 模块 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/profiler-memory-simple-view.png">
+<meta name="description" content="有两种方法可以在 Unity 中分析应用程序的内存使用情况：">
+<meta property="og:description" content="有两种方法可以在 Unity 中分析应用程序的内存使用情况：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'ProfilerMemory';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/ProfilerMemory.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/ProfilerMemory.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/ProfilerMemory.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/ProfilerMemory.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/ProfilerMemory.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/ProfilerMemory.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/ProfilerMemory.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/ProfilerMemory.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ProfilerMemory.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ProfilerMemory.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ProfilerMemory.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ProfilerMemory.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ProfilerMemory.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ProfilerMemory.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ProfilerMemory.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ProfilerMemory.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ProfilerMemory.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ProfilerMemory.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ProfilerMemory.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ProfilerMemory.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ProfilerMemory.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ProfilerMemory.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ProfilerMemory.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ProfilerMemory.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ProfilerMemory.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/ProfilerMemory.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/ProfilerMemory.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/ProfilerMemory.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/ProfilerMemory.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/ProfilerMemory.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/ProfilerMemory.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ProfilerMemory.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ProfilerMemory.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ProfilerMemory.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ProfilerMemory.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ProfilerMemory.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ProfilerMemory.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ProfilerMemory.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ProfilerMemory.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ProfilerMemory.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ProfilerMemory.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ProfilerMemory.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ProfilerMemory.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ProfilerMemory.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ProfilerMemory.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ProfilerMemory.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ProfilerMemory.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ProfilerMemory.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="analysis.html">分析</a></li>
+<li><a href="Profiler.html">性能分析器概述</a></li>
+<li>Memory Profiler 模块</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProfilerGPU.html"></a></span><div class="tip">GPU Usage Profiler 模块</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProfilerPhysics.html"></a></span><div class="tip">Physics Profiler 模块</div>
+</div>
+</div></div>
+<h1>Memory Profiler 模块</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>有两种方法可以在 Unity 中分析应用程序的内存使用情况：</p>
+
+<ul>
+<li>
+<strong>Memory Profiler 模块</strong>：这是 Profiler 窗口中的内置模块，可提供有关应用程序在哪些方面使用了内存的基本信息。</li>
+<li>
+<strong>Memory Profiler 包</strong>：这是可以添加到项目中的一个单独的包。这个包会向 Unity Editor 添加一个额外的 Memory Profiler 窗口，然后您可以使用该窗口来更详细地分析应用程序中的内存使用情况。可以存储和比较快照以便更轻松地查出内存泄漏，或者查看内存布局以查出内存碎片问题。</li>
+</ul>
+
+<p>本页涵盖有关内置 <strong>Memory Profiler 模块</strong>的信息。有关 Memory Profiler 包的更多信息，请参阅 <a href="https://docs.unity3d.com/Packages/com.unity.memoryprofiler@latest">Memory Profiler 文档</a>。</p>
+
+<p>Memory Profiler 模块中会显示一些代表应用程序中分配的总内存的计数器。可以使用 Memory 模块来查看信息，例如已加载对象的数量以及每个类别占用的总内存。还可以查看每个性能分析器帧的 GC 分配数。</p>
+
+<p>在 Editor 中对应用程序进行性能分析时，Memory 模块中的信息指示 Editor 中的内存使用量。这些数字通常大于在发布平台上运行时的数字，因为运行 Unity Editor 会使用占用内存的特定对象，而 Editor 窗口本身会使用额外的内存。另外，性能分析器会显示其使用的内存，因为 Unity 无法将其与运行模式播放器使用的内存完全分开。</p>
+
+<p>有关应用程序的更精确数字和内存使用情况，请通过 <strong>Attach to Player</strong> 菜单将性能分析器连接到运行的播放器。这样就可以查看目标设备上的实际使用情况。</p>
+
+<h2>图表类别</h2>
+
+<p>Memory 模块分为六个图表，这些图表显示有关应用程序在哪些方面花费了内存的详细信息。可以更改图表中类别的顺序；为此，请在图表的图例中拖放这些类别。还可以单击某个类别的有色图例以切换是否显示。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>类别</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Total Allocated</strong></td>
+	<td style="text-align:left;">应用程序已使用的内存总量</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Memory</strong></td>
+	<td style="text-align:left;">应用程序中的<a href="class-TextureImporter.html">纹理</a>已使用的内存量</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mesh Memory</strong></td>
+	<td style="text-align:left;">应用程序中的<a href="class-Mesh.html">网格</a>已使用的内存量</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Material Count</strong></td>
+	<td style="text-align:left;">应用程序中的<a href="Materials.html">材质</a>实例数量</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Object Count</strong></td>
+	<td style="text-align:left;">应用程序中的原生对象实例数量</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Total GC Allocated</strong></td>
+	<td style="text-align:left;">GC 堆使用的内存量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>GC Allocated</strong></td>
+	<td style="text-align:left;">GC 堆中每帧分配的内存量</td>
+</tr>
+</tbody>
+</table>
+
+<h2>模块详细信息面板</h2>
+
+<p>位于 Profiler 窗口底部的模块详细信息面板中有两个视图：__Simple__ 和 <strong>Detailed</strong>。要更改视图，请从模块详细信息面板左上角的下拉列表中选择相应的视图。</p>
+
+<h3>Simple 视图</h3>
+
+<p>Simple 视图显示每个帧在整个 Unity 中的实时内存使用量的概况。</p>
+
+<p>Unity 保留了可供分配的内存池，从而避免过于频繁向操作系统索取内存。此部分显示为保留量以及使用量。</p>
+
+<figure>
+<img src="../uploads/Main/profiler-memory-simple-view.png" alt="Memory 模块 Simple 视图">
+<figcaption>Memory 模块 Simple 视图</figcaption>
+</figure>
+
+<p>此部分涵盖的方面包括：</p>
+
+<ul>
+<li>
+<strong>Total：</strong>以下所有区域的累计值</li>
+<li>
+<strong>Unity：</strong>Unity 原生代码中由原生内存管理器系统跟踪并根据类型、来源和平台特有的分配模式在内存池中分配的内存分配量。</li>
+<li>
+<strong>Mono：</strong>托管代码使用的总堆大小和已用堆大小。此内存量是垃圾收集量。</li>
+<li>
+<strong>GfxDriver：</strong>驱动程序对纹理、渲染目标、着色器和网格数据使用的估计内存量。</li>
+<li>
+<strong>Audio：</strong>音频系统的估计内存使用量</li>
+<li>
+<strong>Video：</strong>视频系统的估计内存使用量</li>
+<li>
+<strong>Profiler</strong>：性能分析器使用的总内存</li>
+</ul>
+
+<p>性能分析器中的值与操作系统任务管理器中显示的值不同，因为 Memory Profiler 不会跟踪系统中的所有内存使用情况。这包括一些驱动程序和插件使用的内存以及用于可执行代码的内存。在支持从操作系统获取应用程序总内存大小的平台上，__Total System Memory Usage__ 大于 0，并且与任务管理器中的大小相同。</p>
+
+<p>性能分析器还列出一些最常见的资源和游戏对象类型的内存统计信息。这些统计信息包括计数（正斜杠之前）和已用内存。在此列表中，__Total Object Count__ 显示应用程序创建的原生游戏对象的总数。如果此数字随时间推移而上升，表示应用程序创建了一些永不销毁的游戏对象。</p>
+
+<h3>Detailed 视图</h3>
+
+<p>Detailed 视图用于创建应用程序当前状态的快照。单击 <strong>Take Sample</strong> 按钮可捕获当前目标的详细内存使用情况。性能分析器获取此数据需要大量时间，因此 <strong>Detailed</strong> 视图不会提供实时详细信息。在性能分析器获取样本之后，Profiler 窗口会显示一个树视图，您可以在其中更详细地浏览应用程序的内存使用情况。</p>
+
+<figure>
+<img src="../uploads/Main/profiler-memory-detailed-view.png" alt="Memory 模块 Detailed 视图">
+<figcaption>Memory 模块 Detailed 视图</figcaption>
+</figure>
+
+<p>启用模块详细信息面板顶部的 <strong>Gather object references</strong> 设置可以收集有关生成快照时哪些项可能引用了对象的信息。此信息显示在窗口的右侧面板中。</p>
+
+<p>在树视图中，使用内存的对象将分为以下类别：</p>
+
+<ul>
+<li>
+<strong>Other：</strong>资源、游戏对象或组件以外的对象。在此处可以找到诸如 Unity 用于不同系统的内存之类的信息。</li>
+<li>
+<strong>Not Saved</strong>：标记为 <a href="../ScriptReference/HideFlags.html">DontSave</a> 的对象</li>
+<li>
+<strong>Builtin Resources</strong>：Unity Editor 资源或 Unity 默认资源，例如已添加到 Graphics 设置的 Always Included Shaders 列表中的着色器。</li>
+<li>
+<strong>Assets：</strong>从用户或原生代码引用的资源</li>
+<li>
+<strong>Scene Memory</strong>：对象和附加的组件</li>
+</ul>
+
+<p>单击 Assets 或 Scene Memory 列表中的对象时，该对象会在 Project 视图或 Scene 视图中突出显示。</p>
+
+<p><strong>注意：</strong>在 <strong>Other</strong> 类别中，<strong>System.ExecutableAndDlls</strong> 下报告的内存为只读内存。操作系统可能会根据需要丢弃这些页面，然后从文件系统重新加载这些页面。这样可以降低内存使用量，而且通常不会直接导致操作系统决定关闭应用程序（如果应用程序使用过多内存）。此外，其中一些页面也可能与使用相同框架的其他应用程序共享。</p>
+<!-- area:core -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProfilerGPU.html"></a></span><div class="tip">GPU Usage Profiler 模块</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProfilerPhysics.html"></a></span><div class="tip">Physics Profiler 模块</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

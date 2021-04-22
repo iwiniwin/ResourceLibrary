@@ -1,0 +1,392 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="构建 Android 应用程序 - Unity 手册">
+<title>构建 Android 应用程序 - Unity 手册</title>
+<meta name="description" content="可以在两个位置配置影响应用程序构建方式的设置：">
+<meta property="og:description" content="可以在两个位置配置影响应用程序构建方式的设置：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'android-BuildProcess';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/android-BuildProcess.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/android-BuildProcess.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/android-BuildProcess.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/android-BuildProcess.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/android-BuildProcess.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/android-BuildProcess.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/android-BuildProcess.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/android-BuildProcess.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/android-BuildProcess.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/android-BuildProcess.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/android-BuildProcess.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/android-BuildProcess.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/android-BuildProcess.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/android-BuildProcess.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/android-BuildProcess.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/android-BuildProcess.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/android-BuildProcess.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/android-BuildProcess.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/android-BuildProcess.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/android-BuildProcess.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/android-BuildProcess.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/android-BuildProcess.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/android-BuildProcess.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/android-BuildProcess.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/android-BuildProcess.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/android-BuildProcess.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/android-BuildProcess.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/android-BuildProcess.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/android-BuildProcess.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/android-BuildProcess.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/android-BuildProcess.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/android-BuildProcess.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/android-BuildProcess.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/android-BuildProcess.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/android-BuildProcess.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/android-BuildProcess.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/android-BuildProcess.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/android-BuildProcess.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/android-BuildProcess.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/android-BuildProcess.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/android-BuildProcess.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/android-BuildProcess.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/android-BuildProcess.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/android-BuildProcess.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/android-BuildProcess.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/android-BuildProcess.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/android-BuildProcess.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/android-BuildProcess.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="android.html">Android</a></li>
+<li>构建 Android 应用程序</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PlayerSettingsAndroid.html"></a></span><div class="tip">Android Player 设置</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AndroidMobileCustomizeSplashScreen.html"></a></span><div class="tip">自定义 Android 启动画面</div>
+</div>
+</div></div>
+<h1>构建 Android 应用程序</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>可以在两个位置配置影响应用程序构建方式的设置：</p>
+
+<ul>
+<li>Player 设置 (Player settings) - 配置应用程序的运行时设置。有关 Player 设置的更多信息，请参阅 <a href="class-PlayerSettingsAndroid.html">Android 平台的 Player 设置</a>。</li>
+<li>构建设置 (Build settings) - 配置构建系统参数并构建应用程序。</li>
+</ul>
+
+<p>如果在 <a href="class-PlayerSettings.html">Player</a> 设置中选择了 <strong>Split Application Binary</strong> 选项，则输出包中将包含 APK 和 APK 扩展文件 (OBB)。有关 OBB 文件的更多信息，请参阅 <a href="android-OBBsupport.html">OBB 支持</a>。</p>
+
+<p>要优化下载和安装大小，请在 <a href="class-PlayerSettingsAndroid.html">Player</a> 设置中启用 <strong>Split APKs by target architecture</strong> 选项。对于 <strong>Player</strong> 设置的 <strong>Target Architecture</strong> 列表中选择的每个设备架构，__Split APKs by target architecture__ 选项为其生成一组 APK 和 OBB。可以将这组 APK（以及可能启用的 OBB）上传到 Google Play 或其他应用商店，而不是上传 FAT APK（这种情况下，所有选定的架构都包含在单个 APK 中）。有关此功能的更多信息，请参阅 <a href="https://developer.android.com/google/play/publishing/multiple-apks">Android 开发者</a>网站上的多 APK 支持。</p>
+
+<h2>配置构建设置</h2>
+
+<p>要配置和构建 Android 应用程序，请访问 Build Settings 窗口 (<strong>File</strong> &gt; <strong>Build Settings</strong>)。在 <strong>Platform</strong> 中，选择 <strong>Android</strong>。</p>
+
+<p>要将 Android 设置为默认构建平台，请单击 <strong>Switch Platform</strong> 按钮。</p>
+
+<p>指定构建设置后，单击 <strong>Build</strong> 按钮可创建构建版本。要构建应用程序，请单击 <strong>Build And Run</strong> 在指定的平台上创建并运行构建版本。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">设置</th>
+	<th style="text-align:left;">功能</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Texture Compression</td>
+	<td style="text-align:left;">Unity Android 构建系统支持以下纹理压缩格式选项：Don’t override、DXT (Tegra)、PVRTC (PowerVR)、ETC（默认值）、ETC2 (GLES 3.0) 和 ASTC。有关使用这些格式的建议，请参阅下面的“纹理压缩”部分。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ETC2 fallback</td>
+	<td style="text-align:left;">32 位、16 位以及 32 位半分辨率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Build System</td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Internal（已弃用）- 使用内部 Unity 构建过程基于 Android SDK 实用程序生成输出包 (APK)。选择 Internal 会隐藏 Export Project 复选框。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Gradle - 使用 Gradle 构建系统来生成输出包 (APK)。支持直接 Build and Run 以及将项目导出到目录。这是 Unity 的默认构建系统。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Export Project</td>
+	<td style="text-align:left;">将项目导出为可以导入 Android Studio 的 Gradle 项目。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Build AppBundle (Google Play)</td>
+	<td style="text-align:left;">构建 <a href="https://developer.android.com/platform/technology/app-bundle/">Android App Bundle</a> 以便分发到 Google Play。选择此选项还可以配置<a href="class-PlayerSettingsAndroid.html">播放器设置 (Player settings)</a> 中的 <strong>Warn about App Bundle Size</strong> 选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Run Device</td>
+	<td style="text-align:left;">一个可以测试构建结果的连接设备的下拉列表。如果是连接新设备或者在列表中未发现连接的设备，请单击 <strong>Refresh</strong> 按钮以重新加载列表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Development Build</td>
+	<td style="text-align:left;">开发版包含调试符号并启用性能分析器 (Profiler)。选择 Development Build 后可以选择 Autoconnect Profiler、Script Debugging 和 Scripts Only Build 选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Autoconnect Profiler</td>
+	<td style="text-align:left;">允许性能分析器 (Profiler) 自动连接到构建版本。选择 Development Build 选项时才可选择此项。有关性能分析器的更多信息，请参阅“性能分析器概述”。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Script Debugging</td>
+	<td style="text-align:left;">允许脚本调试器远程连接到播放器。选择 Development Build 选项时启用此项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Scripts Only Build</td>
+	<td style="text-align:left;">选中此选项可仅构建当前项目中的脚本。选择 Development Build 选项时启用此项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Compression Method</td>
+	<td style="text-align:left;">在构建时压缩项目中的数据。选择以下方法之一：</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Default - 默认压缩方法是 ZIP，此方法提供比 LZ4 和 LZ4HC 稍好的压缩结果，但数据解压缩的速度更慢。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">LZ4 - 一种快速压缩格式，对开发构建很有用。使用 LZ4 压缩可以缩短提高 Unity 构建的游戏/应用程序的加载时间。有关更多信息，请参阅 BuildOptions.CompressWithLz4。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">LZ4HC - LZ4 的高度压缩变体，构建速度更慢，但对于发行版构建可以产生更好的结果。使用 LZ4HC 压缩可以显著缩短 Unity 构建的游戏/应用程序的加载时间。有关更多信息，请参阅 <a href="../ScriptReference/BuildOptions.CompressWithLz4HC.html">BuildOptions.CompressWithLz4HC</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">SDKs for App Stores</td>
+	<td style="text-align:left;">选择要集成的第三方应用商店。要包含集成，请单击应用商店名称旁边的 Add。Unity Package Manager 自动下载并包含相关的集成包。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>纹理压缩</h2>
+
+<p>Unity 使用 Ericsson 纹理压缩 (ETC) 格式来处理没有单独纹理格式覆盖的纹理。以特定硬件为目标构建 APK 时，请使用 <strong>Texture Compression</strong> 选项来覆盖此默认行为。<strong>Texture Compression</strong> 是项目的全局设置。如果纹理上有特定的覆盖，则该纹理不受 <strong>Texture Compression</strong> 设置的影响。有关更多信息，请参阅<a href="https://docs.unity3d.com/Manual/class-TextureImporter.html">纹理</a>。</p>
+
+<p>有关纹理和纹理压缩的更多信息，请参阅<a href="class-TextureImporterOverride.html#mobile-webgl-formats">移动端和 WebGL 特有格式</a>以及<a href="class-TextureImporterOverride.html">特定于平台的覆盖的纹理压缩格式</a>页面上的<a href="class-TextureImporterOverride.html#notes-on-android">关于 Android 的注意事项</a>部分。</p>
+
+<p><strong>注意</strong>：__Texture Compression__ 是全局设置。单个纹理将覆盖全局设置。</p>
+
+<h2>ETC2 回退</h2>
+
+<p>对于不支持 ETC2 的 Android 设备（不支持 GL ES3），可以通过选择 32 位、16 位或 32 位半分辨率格式来覆盖默认的 ETC2 纹理压缩。</p>
+
+<p>此选项允许选择未压缩的图像质量和未压缩的纹理占用的内存量。32 位 RGBA 纹理是最高质量的格式，占用的磁盘空间是 16 位格式的两倍，但 16 位纹理可能会丢失一些有价值的颜色信息。32 位半分辨率格式可进一步降低内存需求，但纹理可能会变得模糊。</p>
+
+<h2>构建系统</h2>
+
+<p>Unity 支持两个 Android 构建系统：__Gradle__ 和 <strong>Internal</strong>。</p>
+
+<p>Android 构建过程所涉及的步骤如下：</p>
+
+<ul>
+<li><p>准备和构建 Unity 资源。</p></li>
+<li><p>编译脚本。</p></li>
+<li><p>处理插件。</p></li>
+<li><p>将资源拆分为放入 APK 和 OBB 的各个部分（如果已选择 __Split Application Binary__）。</p></li>
+<li><p>使用 AAPT 实用程序构建 Android 资源（仅限内部构建）。</p></li>
+<li><p>生成 Android 清单。</p></li>
+<li><p>将库清单合并到 Android 清单中（仅限内部构建）。</p></li>
+<li><p>将 Java 代码编译为 Dalvik 可执行文件格式 (DEX)（仅限内部构建）。</p></li>
+<li><p>构建 <a href="IL2CPP.html">IL2CPP</a> 库（如果已选择 __IL2CPP Scripting Backend__）。</p></li>
+<li><p>构建并优化 APK 和 OBB 包。</p></li>
+</ul>
+
+<p><strong>Gradle 构建系统</strong></p>
+
+<p>Gradle 构建系统使用 Gradle 来构建 APK 或以 Gradle 格式导出项目，然后可以将其导入 Android Studio。选择此构建系统时，Unity 将执行与 <strong>Internal</strong> 构建系统相同的步骤，但不包括使用 AAPT 进行资源编译、合并清单以及运行 DEX。然后，Unity 生成 <em>build.gradle</em> 文件（以及其他所需的配置文件），并调用 Gradle 可执行文件，在此过程中向其传递任务名称和工作目录。最后，由 Gradle 构建 APK。</p>
+
+<p>有关更多详细信息，请参阅 <a href="android-gradle-overview.html">Gradle for Android</a>。</p>
+
+<p><strong>Internal 构建系统</strong></p>
+
+<p><strong>Internal</strong> 构建系统使用 Android SDK 实用程序创建 APK，从而构建并优化 APK 和 OBB 包。有关 OBB 文件的更多信息，请参阅 <a href="android-OBBsupport.html">OBB 支持</a>。</p>
+
+<h2>导出项目</h2>
+
+<p>如果需要加强对构建管线的控制，或者要进行 Unity 通常不允许的更改（例如，微调 Unity 自动生成的清单文件），则可以导出项目并将其导入 Android Studio。仅当已选择 <strong>Gradle</strong> 作为 <strong>Build System</strong> 时，才能导出项目。</p>
+
+<p>要导出项目，请执行以下操作：</p>
+
+<p>1.从 <strong>Build System</strong> 下拉菜单中，选择 <strong>Gradle</strong>。
+2.选中 <strong>Export Project</strong> 复选框。选中 <strong>Export Project</strong> 时，__Build__ 按钮将重新标记 <strong>Export</strong> 并会禁用 <strong>Build And Run</strong> 按钮。
+3.单击 <strong>Export</strong> 按钮，然后选择导出项目的目标文件夹。</p>
+
+<p>导出完成后，打开 Android Studio 并导入项目。有关将项目导入 Android Studio 的更多信息，请参阅 Android 开发者文档的<a href="https://developer.android.com/studio/intro/migrate.html">迁移到 Android Studio (Migrate to Android Studio)</a> 部分。</p>
+
+<h2>Build 或 Build and Run</h2>
+
+<p><strong>Build Settings</strong> 窗口提供两个选项：__Build__ 和 <strong>Build and Run</strong>。使用任一选项都会将输出包（APK 以及可能启用的 OBB）保存到所选的路径。可以将这些包发布到 Google Play 应用商店，也可以借助 Android Debug Bridge (ADB) 手动将它们安装到设备上。有关手动安装应用程序的更多信息，请参阅 Android 开发者文档的<a href="https://developer.android.com/training/basics/firstapp/running-app.html">运行应用程序 (Run your app)</a> 部分。有关 <strong>ADB</strong> 命令的信息，请参阅 Android 开发者文档的 <a href="https://developer.android.com/studio/command-line/adb.html">Android Debug Bridge</a> 部分。</p>
+
+<p>选择 <strong>Build and Run</strong> 会将输出包保存到指定的文件路径，同时还会在连接到计算机的 Android 设备上安装该应用程序。</p>
+
+<p>如果启用 <strong>Split Application Binary</strong> 选项，则会将 OBB 文件推送到设备上的正确位置。如果选中 <strong>Development Build__，Unity 还会设置性能分析器 (Profiler) 隧道并启用 </strong>CheckJNI<strong>。此后将启动该应用程序。</strong>Split Application Binary__ 设置位于 <a href="class-PlayerSettingsAndroid.html#Publishing">Player</a> 设置的 <strong>Publishing Settings</strong> 部分。</p>
+
+<p><strong>提示__：请指定包的输出路径，然后使用 </strong>Ctrl+B__ (Windows) 或 <strong>Cmd+B</strong> (macOS) 键盘快捷键来根据保存的输出路径执行 <strong>Build and Run</strong>。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–11–19 页面已修订</span></p></li>
+<li><p><span class="page-history">5.5 版中的更新功能</span></p></li>
+<li><p><span class="page-history">更新了 Build Settings 配置选项</span></p></li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PlayerSettingsAndroid.html"></a></span><div class="tip">Android Player 设置</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AndroidMobileCustomizeSplashScreen.html"></a></span><div class="tip">自定义 Android 启动画面</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="地形设置 (Terrain Settings) - Unity 手册">
+<title>地形设置 (Terrain Settings) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/TerrainSettings01.png">
+<meta name="description" content="在包含五个图标的工具栏上，最后一个工具是设置工具。在 Inspector 中，单击齿轮图标以显示 Terrain settings。">
+<meta property="og:description" content="在包含五个图标的工具栏上，最后一个工具是设置工具。在 Inspector 中，单击齿轮图标以显示 Terrain settings。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'terrain-OtherSettings';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/terrain-OtherSettings.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/terrain-OtherSettings.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/terrain-OtherSettings.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/terrain-OtherSettings.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/terrain-OtherSettings.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/terrain-OtherSettings.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/terrain-OtherSettings.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/terrain-OtherSettings.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/terrain-OtherSettings.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/terrain-OtherSettings.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/terrain-OtherSettings.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/terrain-OtherSettings.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/terrain-OtherSettings.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/terrain-OtherSettings.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/terrain-OtherSettings.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/terrain-OtherSettings.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/terrain-OtherSettings.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/terrain-OtherSettings.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/terrain-OtherSettings.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/terrain-OtherSettings.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/terrain-OtherSettings.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/terrain-OtherSettings.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/terrain-OtherSettings.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/terrain-OtherSettings.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/terrain-OtherSettings.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/terrain-OtherSettings.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/terrain-OtherSettings.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/terrain-OtherSettings.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/terrain-OtherSettings.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/terrain-OtherSettings.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/terrain-OtherSettings.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/terrain-OtherSettings.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/terrain-OtherSettings.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/terrain-OtherSettings.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/terrain-OtherSettings.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/terrain-OtherSettings.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/terrain-OtherSettings.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/terrain-OtherSettings.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/terrain-OtherSettings.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/terrain-OtherSettings.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/terrain-OtherSettings.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/terrain-OtherSettings.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/terrain-OtherSettings.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/terrain-OtherSettings.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/terrain-OtherSettings.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/terrain-OtherSettings.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/terrain-OtherSettings.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/terrain-OtherSettings.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="CreatingEnvironments.html">创建环境</a></li>
+<li><a href="script-Terrain.html">地形</a></li>
+<li>地形设置 (Terrain Settings)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="terrain-Heightmaps.html"></a></span><div class="tip">使用高度贴图</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="terrain-Runtime.html"></a></span><div class="tip">在运行时使用地形</div>
+</div>
+</div></div>
+<h1>地形设置 (Terrain Settings)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>在包含五个图标的工具栏上，最后一个工具是设置工具。在 Inspector 中，单击齿轮图标以显示 <strong>Terrain settings</strong>。</p>
+
+<h2>Basic Terrain</h2>
+
+<figure>
+<img src="../uploads/Main/TerrainSettings01.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Grouping ID</strong></td>
+	<td style="text-align:left;">
+<strong>Auto connect</strong> 功能的分组 ID。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Connect</strong></td>
+	<td style="text-align:left;">选中此复选框可自动将当前地形区块连接到具有相同 <strong>Grouping ID</strong> 的相邻区块。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Reconnect</strong></td>
+	<td style="text-align:left;">在极少情况下，如果更改 <strong>Grouping ID</strong>，或者为一个或多个地形瓦片禁用 <strong>Auto connect</strong>，则可能会丢失瓦片之间的连接。要重新创建瓦片之间的连接，请单击 <strong>Reconnect</strong> 按钮。仅当两个相邻的瓦片具有相同的 <strong>Grouping ID</strong> 以及两个瓦片都启用了 <strong>Auto Connect</strong> 的情况下，<strong>Reconnect</strong> 才会连接这两个瓦片。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Draw</strong></td>
+	<td style="text-align:left;">选中此复选框可启用地形渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Draw Instanced</strong></td>
+	<td style="text-align:left;">选中此复选框可禁用实例化渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Pixel Error</strong></td>
+	<td style="text-align:left;">地形贴图（如高度贴图和纹理）与生成的地形之间的映射精度。值越高表示精度越低，但渲染开销也越低。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Base Map Dist.</strong></td>
+	<td style="text-align:left;">Unity 以全分辨率显示地形纹理的最大距离。超过此距离后，系统将使用较低分辨率的合成图像来提高效率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Cast Shadows</strong></td>
+	<td style="text-align:left;">使用此属性来定义地形如何将阴影投射到场景中的其他对象上。<a href="../ScriptReference/Rendering.ShadowCastingMode.html">Rendering.ShadowCastingMode</a> 控制地形阴影与场景对象的交互方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Off</em></td>
+	<td style="text-align:left;">地形不会投射阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>On</em></td>
+	<td style="text-align:left;">地形会投射阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Two Sided</em></td>
+	<td style="text-align:left;">从地形任一侧投射双面阴影。Enlighten 和渐进光照贴图 (Progressive Lightmapper) 不支持双面阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Shadows Only</em></td>
+	<td style="text-align:left;">地形的阴影可见，但地形本身不可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Reflection Probes</strong></td>
+	<td style="text-align:left;">使用此属性可设置 Unity 在地形上使用反射探针的方式。此设置仅在 <strong>Material</strong> 设置为 <strong>Built In Standard</strong> 时，或在使用支持反射渲染的自定义材质（__Material__ 设置为 <strong>Custom__）时有效。|
+||<em>Off</em>|禁用反射探针，并使用天空盒进行反射。|
+||<em>Blend Probes</em>|启用反射探针。混合仅在两个探针之间发生。如果附近没有反射探针，则使用默认反射，但默认反射和探针之间不会发生混合。|
+||<em>Blend Probes And Skybox</em>|启用反射探针。混合发生在探针之间或探针与默认反射之间。|
+||<em>Simple</em>|启用反射探针，但当存在两个重叠的探针体积时，探针之间不发生混合。|
+|</strong>Material<strong>||让您指定要用于渲染地形的材质。|
+||</strong>Create__</td>
+	<td style="text-align:left;">仅当选择默认地形材质时，才会出现 <strong>Create</strong> 按钮。选择自定义材质时，该按钮不会出现。单击 <strong>Create</strong> 时，Unity 会在您的 Project 文件夹中创建材质的副本（您可以对其进行修改），然后自动选择该新副本。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Tree and Detail Objects</h2>
+
+<figure>
+<img src="../uploads/Main/TerrainSettings02.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Draw</strong></td>
+	<td style="text-align:left;">选中此复选框可绘制树、草和细节。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bake Light Probes For Trees</strong></td>
+	<td style="text-align:left;">如果选中此复选框，Unity 将在每棵树的位置创建内部光照探针，并将它们应用于树渲染器以便渲染光照。这些探针是内部探针，不会影响场景中的其他渲染器。<br><br>如果不选中此复选框，树仍受<a href="class-LightProbeGroup.html">光照探针组</a>的影响。此选项仅对在原型预制件上启用了光照探针的树有效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Remove Light Probe Ringing</strong></td>
+	<td style="text-align:left;">如果选中此复选框，Unity 将消除可见的过冲（通常在受强光照射影响的<span class="no tooltip">游戏对象</span>上表现为振铃）。此设置可降低对比度，并依赖于“Bake Light Probes for Trees”设置。有关更多信息，请参阅<a href="class-LightProbeGroup.html#Ringing">光照探针组：振铃</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Preserve Tree Prototype Layers</strong></td>
+	<td style="text-align:left;">如果希望树实例采用其原型预制件的层值而非地形游戏对象的层值，请选中此复选框。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Detail Distance</strong></td>
+	<td style="text-align:left;">超过此距离（相对于摄像机）将剔除细节。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Detail Density</strong></td>
+	<td style="text-align:left;">给定单位面积内的细节/草对象数量。将此值设置得较低可以减少渲染开销。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tree Distance</strong></td>
+	<td style="text-align:left;">超过此距离（相对于摄像机）将剔除树。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Billboard Start</strong></td>
+	<td style="text-align:left;">位于此距离（相对于摄像机）的 3D 树对象将由公告牌图像取代。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Fade Length</strong></td>
+	<td style="text-align:left;">树在 3D 对象和公告牌之间过渡的距离。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max <span class="no tooltip">Mesh</span> Trees</strong></td>
+	<td style="text-align:left;">表示为实体 3D 网格的可见树的最大数量。超出此限制时，树将被公告牌取代。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Wind Settings for Grass</h2>
+
+<figure>
+<img src="../uploads/Main/TerrainSettings03.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Speed</strong></td>
+	<td style="text-align:left;">风吹过草时的速度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Size</strong></td>
+	<td style="text-align:left;">风吹过草地时出现的波纹大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bending</strong></td>
+	<td style="text-align:left;">草对象被风吹弯的程度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Grass Tint</strong></td>
+	<td style="text-align:left;">应用于草对象的整体颜色色调。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Mesh Resolution</h2>
+
+<figure>
+<img src="../uploads/Main/TerrainSettings04.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Terrain Width</strong></td>
+	<td style="text-align:left;">地形游戏对象在 X 轴上的大小（以世界单位表示）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Terrain Length</strong></td>
+	<td style="text-align:left;">地形游戏对象在 Z 轴上的大小（以世界单位表示）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Terrain Height</strong></td>
+	<td style="text-align:left;">最低可能高度贴图值与最高值之间的 Y 坐标差异（以世界单位表示）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Detail Resolution Per Patch</strong></td>
+	<td style="text-align:left;">单个面片（网格）中的单元格数量。该值经过平方后形成单元格网格，且必须是细节分辨率的除数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Detail Resolution</strong></td>
+	<td style="text-align:left;">可用于将细节放置到地形区块上的单元数。此值在经过平方后生成单元格网格。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Holes Settings</h2>
+
+<figure>
+<img src="../uploads/Main/TerrainSettings05.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Compress Holes Texture</strong></td>
+	<td style="text-align:left;">如果选中此框，则在运行时期间，Unity 会在播放器中将 Terrain Holes Texture 压缩为 DXT1 图形格式。如果不选中此框，则 Unity 不会压缩纹理。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Texture Resolutions</h2>
+
+<figure>
+<img src="../uploads/Main/TerrainSettings06.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Heightmap Resolution</strong></td>
+	<td style="text-align:left;">地形高度贴图的像素分辨率。此值必须是 2 的幂再加 1，例如 513，即 512 + 1。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Control Texture Resolution</strong></td>
+	<td style="text-align:left;">控制不同地形纹理之间混合的“泼溅贴图”(splatmap) 的分辨率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Base Texture Resolution</strong></td>
+	<td style="text-align:left;">在地形上使用的复合纹理从大于 Basemap Distance 的距离查看时的分辨率。</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Require resampling on change</strong> 表示更改 <strong>Texture Resolutions</strong> 下的属性时，Editor 会将地形瓦片的内容调整为您指定的新大小，这可能会影响内容的质量。</p>
+
+<h3>高度贴图 Import/Export 按钮</h3>
+
+<p><strong>Import Raw</strong> 和 <strong>Export Raw</strong> 按钮允许您将地形的高度贴图设置或保存为 RAW 灰度格式的图像文件。可在第三方地形编辑工具（如 Bryce）中创建 RAW 格式文件，然后可在 Photoshop 中打开、编辑和保存这些文件。因此可在 Unity 之外以复杂的方式生成和编辑地形。</p>
+
+<h2>Lighting</h2>
+
+<figure>
+<img src="../uploads/Main/TerrainSettings07.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Contribute Global Illumination</strong></td>
+	<td style="text-align:left;">启用此复选框可向 Unity 指示地形影响全局光照计算。启用此属性时，将显示 <strong>Lightmapping</strong> 属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Receive Global Illumination</strong></td>
+	<td style="text-align:left;">只有启用了上面的 <strong>Contribute Global Illumination</strong> 后，才能配置此选项。如果未启用 __Contribute Global Illumination__，则地形会注册为非静态，并从光照探针接收全局光照。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>光照贴图</h2>
+
+<figure>
+<img src="../uploads/Main/TerrainSettings08.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Scale in Lightmap</strong></td>
+	<td style="text-align:left;">指定对象的 UV 在光照贴图中的相对大小。如果将此值设置为零，则对象不进行光照贴图，但仍然会影响场景中其他对象的光照。大于 1.0 的值会增加用于此游戏对象的像素数（光照贴图分辨率），而小于 1.0 的值会减小该像素数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmap Parameters</strong></td>
+	<td style="text-align:left;">调整高级参数，这些参数会影响使用全局光照为对象生成光照贴图的过程。请参阅<a href="class-LightmapParameters.html">光照贴图参数 (Lightmap Parameters)</a> 以了解有关这些设置的更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Rendering Layer Mask</strong></td>
+	<td style="text-align:left;">确定该地形所在的渲染层。使用<a href="ScriptableRenderPipeline.html">可编程渲染管线</a>时，可以额外指定一个特定于渲染的层遮罩。这将根据渲染器具有的遮罩和传递给 <a href="../ScriptReference/Rendering.ScriptableRenderContext.DrawRenderers.html">DrawRenderers</a> 命令的遮罩筛选渲染器。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Terrain Collider</h2>
+
+<figure>
+<img src="../uploads/Main/TerrainSettings09.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Material</strong></td>
+	<td style="text-align:left;">对<a href="../ScriptReference/PhysicMaterial.html">物理材质</a>的引用，可确定该地形的碰撞体与场景中其他碰撞体之间的交互方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Terrain Data</strong></td>
+	<td style="text-align:left;">存储高度贴图、地形纹理、细节网格和树的 TerrainData 资源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Tree Colliders</strong></td>
+	<td style="text-align:left;">选中此复选框可启用树碰撞体。</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2020–01–16 页面已修订</span></p></li>
+<li><p><span class="page-history">更新了内容以反映新的 UI 和选项</span></p></li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="terrain-Heightmaps.html"></a></span><div class="tip">使用高度贴图</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="terrain-Runtime.html"></a></span><div class="tip">在运行时使用地形</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

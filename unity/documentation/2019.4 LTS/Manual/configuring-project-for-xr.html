@@ -1,0 +1,417 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="针对 XR 配置 Unity 项目 - Unity 手册">
+<title>针对 XR 配置 Unity 项目 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/xr-rig-tpd-defaults.png">
+<meta name="description" content="要针对 XR 配置您的 Unity 项目，请按照以下步骤操作：">
+<meta property="og:description" content="要针对 XR 配置您的 Unity 项目，请按照以下步骤操作：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'configuring-project-for-xr';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/configuring-project-for-xr.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/configuring-project-for-xr.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/configuring-project-for-xr.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/configuring-project-for-xr.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/configuring-project-for-xr.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/configuring-project-for-xr.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/configuring-project-for-xr.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/configuring-project-for-xr.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/configuring-project-for-xr.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/configuring-project-for-xr.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/configuring-project-for-xr.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/configuring-project-for-xr.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/configuring-project-for-xr.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/configuring-project-for-xr.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/configuring-project-for-xr.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/configuring-project-for-xr.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/configuring-project-for-xr.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/configuring-project-for-xr.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/configuring-project-for-xr.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/configuring-project-for-xr.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/configuring-project-for-xr.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/configuring-project-for-xr.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/configuring-project-for-xr.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/configuring-project-for-xr.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/configuring-project-for-xr.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/configuring-project-for-xr.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/configuring-project-for-xr.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/configuring-project-for-xr.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/configuring-project-for-xr.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/configuring-project-for-xr.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/configuring-project-for-xr.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/configuring-project-for-xr.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/configuring-project-for-xr.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/configuring-project-for-xr.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/configuring-project-for-xr.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/configuring-project-for-xr.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/configuring-project-for-xr.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/configuring-project-for-xr.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/configuring-project-for-xr.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/configuring-project-for-xr.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/configuring-project-for-xr.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/configuring-project-for-xr.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/configuring-project-for-xr.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/configuring-project-for-xr.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/configuring-project-for-xr.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/configuring-project-for-xr.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/configuring-project-for-xr.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/configuring-project-for-xr.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li>针对 XR 配置 Unity 项目</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="XRPluginArchitecture.html"></a></span><div class="tip">XR 插件框架</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VRReference.html"></a></span><div class="tip">XR API 参考</div>
+</div>
+</div></div>
+<h1>针对 XR 配置 Unity 项目</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a name="configuring-project-for-xr"></a>要针对 XR 配置您的 Unity 项目，请按照以下步骤操作：</p>
+
+<p>1.打开 <strong>Project Settings</strong> 窗口（菜单：<strong>Edit &gt; Project Settings</strong>），然后选择 <strong>XR Plug-in Management</strong>。
+2.单击 <strong>Install XR <span class="notooltip">Plug-in</span> Management</strong>（如果尚未安装此包）。还可以从 <strong>Package Manager</strong> 窗口中安装此包。
+3.安装完成后，选择 <strong>Plug-in Provider</strong> 为对应的构建目标启用此包。为此需要执行以下操作：
+ 1.选择一个构建目标（例如 Android）。
+ 2.选中要用于该构建目标的每个插件左侧的复选框。
+4.插件加载后会显示在左侧导航栏中的 XR Plug-in Management 下方。单击该插件可为每个构建目标配置相应的设置。
+5.要设置跟踪，请从 Unity 的主菜单中选择 GameObject &gt; XR &gt; Add XR Rig。</p>
+
+<p><strong>注意：</strong></p>
+
+<ul>
+<li>选择一个 XR 插件提供程序将为相应的构建目标启用该提供程序。如果该插件包还不存在，则 Unity 会自动安装该插件包。</li>
+<li>禁用插件不会自动卸载现有的包。从 <a href="ump-ui">Package Manager</a> 中卸载提供程序插件。</li>
+<li>有关第三方插件的列表，请参阅 [VROverview](Getting Started with VR Development)。</li>
+</ul>
+
+<h2>在 XR 插件框架中设置跟踪</h2>
+
+<p>在 2019.3 之前的 Unity 版本中使用的隐式摄像机跟踪已在新的 XR 插件框架中删除。隐式跟踪适用于仅支持 HMD 的简单应用程序，但是与控制器和其他交互方式关联使用时，隐式跟踪并不那么直观。</p>
+
+<p>要确保在 XR 插件框架中正确配置 XR 跟踪，请按照以下步骤操作。</p>
+
+<h2>从新场景开始</h2>
+
+<p>如果从新场景开始，或者从满足以下条件的场景开始，则需要遵循下方的说明：</p>
+
+<ul>
+<li>场景中只有一个摄像机，并且该摄像机被标记为主摄像机 (Main Camera)。</li>
+<li>场景中的摄像机位于层级视图的根目录。</li>
+</ul>
+
+<p>从 Unity 的主菜单中，选择 <strong>GameObject &gt; XR &gt; Add XR Rig</strong>。这时会尝试将新场景转换为正确支持 XR 插件框架的场景。</p>
+
+<p>如果在控制台日志中没有看到任何错误，则现在应该可以在场景中单击 <strong>Play</strong>，并看到在 XR Plug-in Management 包中配置的设备所对应的摄像机跟踪。</p>
+
+<p>如果 Unity 无法正确迁移场景，则控制台日志中会显示错误。请遵循以下<strong>从现有场景开始</strong>部分中的说明。</p>
+
+<h2>从现有场景开始</h2>
+
+<p>与迁移空场景相比，从现有场景进行迁移还需要一些其他步骤。因此，根据场景的配置方式会有不同的选项。总体目标是使场景跟踪的方式与迁移到 XR Plug-in Framework 之前的方式相同。</p>
+
+<h3>识别场景类型</h3>
+
+<p>在场景中找到被标记为主摄像机 (Main Camera) 的摄像机。Unity 使用此摄像机来渲染到 HMD 或其他主要设备。</p>
+
+<p>如果主摄像机游戏对象：</p>
+
+<ul>
+<li>位于项目层级视图的根目录，请遵循有关迁移简单场景的步骤进行操作。</li>
+<li>不在项目层级视图的根目录，请遵循有关迁移复杂场景的步骤进行操作。</li>
+</ul>
+
+<h3>迁移简单场景</h3>
+
+<p>要迁移简单的场景，请遵循以下步骤。</p>
+
+<h4>1.创建 XR 绑定 (XR Rig) 预制件的实例。</h4>
+
+<p>迁移以前位于场景层级视图根目录的摄像机，这样可以通过实例化此包所包含的 XR 绑定预制件而将现有摄像机交换为 XR 绑定。</p>
+
+<p>可以在 <code>Packages/XR Legacy Input Helpers/Prefabs</code> 文件夹中找到此预制件。将此预制件拖动到场景层级视图中即可创建该预制件的新实例。</p>
+
+<h4>2.移动 XR 绑定以匹配摄像机的位置。</h4>
+
+<p>现在有了 XR 绑定预制件的实例，接下来需要配置 XR 绑定游戏对象，以便在应用程序启动时生成的摄像机位置正确无误。</p>
+
+<p>更改 XR 绑定游戏对象的位置和旋转，使其与当前主摄像机的位置匹配。如果要将缩放变换应用于主摄像机，请确保也将此缩放比例应用于 XR 绑定游戏对象。如果缩放 XR 绑定，强烈建议在所有三个轴上使用统一的缩放比例。</p>
+
+<h4>3.如果需要，请复制位置更改。</h4>
+
+<p>如果未迁移场景中的主摄像机位于地面上方（其 Y 分量大于 0.0f），则需要复制此位置更改。可以通过几种不同的方式来执行此操作，具体取决于要复制更改的原始位置。</p>
+
+<p><strong>3.1 - 升高用于模拟用户的身高</strong></p>
+
+<p>如果将先前的主摄像机抬高到地面上方以模拟用户的身高，并且应用程序使用设备跟踪原点（有时称为“固定”跟踪模式），则 <a href="https://docs.unity3d.com/Packages/com.unity.xr.legacyinputhelpers@2.1/manual/index.html#Camera-Offset">Camera Offset</a> 组件会执行这一附加升高。否则，请参阅下一节。</p>
+
+<p>要将摄像机配置为当应用程序以设备跟踪原点模式使用时摄像机垂直升高，则可以在 XR 绑定 (XR Rig) 游戏对象的 <strong>Camera Offset</strong> 组件中设置以下选项：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>选项</strong></th>
+	<th style="text-align:left;"><strong>值</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Requested Tracking Mode</strong></td>
+	<td style="text-align:left;">设备</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Camera Y Offset</strong></td>
+	<td style="text-align:left;">将此选项设置为将现有主摄像机升高的高度（以模拟用户身高）。</td>
+</tr>
+</tbody>
+</table>
+
+<p>配置完这些选项后，将 XR 绑定 (XR Rig) 游戏对象的 <strong>Y Position</strong> 更改为您在应用程序中通常视为“地面”的值（通常是 0.0f）。<strong>Camera Offset</strong> 组件会根据需要增加任何附加升高。</p>
+
+<p><strong>3.2 - 升高指示摄像机位置</strong></p>
+
+<p>如果未迁移的场景使用地面跟踪原点（以前称为“房间规模”跟踪模式），并且主摄像机的位置代表用户的起点，但不含身高（即，摄像机实际上是在逻辑“地面”上），请按照以下步骤正确迁移场景：</p>
+
+<ul>
+<li>移动 XR 绑定以使其在 Unity 世界空间中匹配主摄像机的当前位置和旋转方式。</li>
+<li>如果应用程序使用地面跟踪原点，请在 <strong>Camera Offset</strong> 组件中将 <strong>Requested Tracking Mode</strong> 设置为 Floor。这样可以确保摄像机具有正确的垂直偏移。</li>
+<li>如果应用程序未使用地面跟踪原点，请在 <strong>Camera Offset</strong> 组件中将 <strong>Requested Tracking Mode</strong> 设置为 Default。无论应用程序以哪种设备跟踪模式启动，都将应用正确的行为。</li>
+<li>如果您以前使用其他组件垂直移动摄像机并处理设备和地面跟踪原点之间的差异，则可能需要禁用或修改此组件，以使不同组件不会多次错误地移动摄像机。</li>
+</ul>
+
+<p>接下来，从 XR 绑定实例中删除主摄像机游戏对象，并将现有的主摄像机 (Main Camera) 游戏对象设置为摄像机偏移 (Camera Offset) 游戏对象的父代。</p>
+
+<p>确保主摄像机游戏对象的位置和旋转均为 0,0,0。请始终更改 XR 绑定游戏对象的位置，而不是更改摄像机的位置。另外，请确保从游戏对象或组件到主摄像机的任何链接仍然正确。</p>
+
+<h4>5.针对 XR 配置项目</h4>
+
+<p>请参阅上文的<a href="configuring-project-for-xr.html">针对 XR 配置 Unity 项目</a>部分。</p>
+
+<h4>6.按 Play</h4>
+
+<p>现在，您的场景已成功迁移，接下来请按 <strong>Play</strong>，并确保摄像机的起始位置与迁移到 XR 插件框架之前的位置相同。如果不是，请参阅下面的“故障排除”部分。</p>
+
+<h3>迁移复杂场景</h3>
+
+<p>如果当前场景使用来自旧版 VR 系统的隐式摄像机跟踪，并且主摄像机是游戏对象层级视图的一部分，请按照以下步骤将旧版 VR 跟踪系统迁移到 XR 插件框架。</p>
+
+<p>隐式摄影机更新会在每一帧中更新主摄像机游戏对象的本地变换两次，这会使主摄像机游戏对象相对于其所在层级视图的位置、缩放和旋转进行移动。</p>
+
+<p>在这种情况下，有两种方法来迁移场景：</p>
+
+<p>1.<a href="#leave-in-place">保留现有层级视图并添加组件以在当前层级视图中启用跟踪</a>
+2.<a href="#migrate-to-xr-rig">迁移现有层级视图以使用 XR 绑定结构。</a></p>
+
+<p>如果您的场景具有依赖于现有层级视图结构的功能，通常建议保留该层级视图。如果具有相对简单的配置，则可以直接迁移到 XR 绑定。</p>
+
+<h4>保留 <a name="leave-in-place"></a>
+</h4>
+
+<p>此方法只需要对现有场景层级视图进行最少的修改，即可在 Unity 中启用跟踪。这一过程涉及将跟踪姿势驱动程序 (Tracked Pose Driver) 添加到场景中的主摄像机。这样可以确保需要当前游戏对象层级视图的任何其他功能继续正常运行。</p>
+
+<h4>1.找到主摄像机，并向其中添加一个跟踪姿势驱动程序 (Tracked Pose Driver)</h4>
+
+<p>在场景中查找主摄像机。</p>
+
+<p>使用 XR 绑定的主摄像机所用的相同设置来添加跟踪姿势驱动程序 (Tracked Pose Driver)。以下截屏显示了这些设置：</p>
+
+<figure>
+<img src="../uploads/Main/xr-rig-tpd-defaults.png" alt="Tracked Pose Driver 设置">
+<figcaption>Tracked Pose Driver 设置</figcaption>
+</figure>
+
+<p>对场景中的所有主摄像机执行此操作。如果需要跟踪场景中的其他设备，请参阅跟踪姿势驱动程序 (Tracked Pose Driver) 设置以获取适用于具体用例的正确选项。</p>
+
+<h4>2.针对 XR 配置项目</h4>
+
+<p>请参阅上文的<a href="configuring-project-for-xr.html">针对 XR 配置 Unity 项目</a>部分。</p>
+
+<h4>3.按 Play</h4>
+
+<p>现在，您的场景已成功迁移，接下来请按 <strong>Play</strong>，并确保摄像机的起始位置与迁移到 XR 插件框架之前的位置相同。如果不是，请参阅下面的<a href="#troubleshooting">故障排除</a>部分。</p>
+
+<h4>迁移到 XR 绑定 <a name="migrate-to-xr-rig"></a>
+</h4>
+
+<p>由于可能正在使用的层级视图数量有无限多，因此 Unity 无法提供迁移当前场景层级视图来使用 XR 绑定的具体步骤。请参阅 Legacy Input Helpers 包文档中的 <a href="https://docs.unity3d.com/Packages/com.unity.xr.legacyinputhelpers@2.1/manual/index.html#XR-Rig-explanation">XR 绑定说明</a>部分，以了解 XR 绑定意图表示的对象。因此，您可以将现有层级视图对应到 XR 绑定中的概念。</p>
+
+<p>要将场景配置为使用 XR Management，请参阅上文中的<a href="configuring-project-for-xr.html">针对 XR 配置 Unity 项目</a>。</p>
+
+<p>如果仍然有问题，请参阅下面的<a href="#troubleshooting">故障排除</a>部分。</p>
+
+<h3>故障排除 <a name="troubleshooting"></a>
+</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>问题</strong></th>
+	<th style="text-align:left;"><strong>可能的原因</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">摄像机在场景中太高</td>
+	<td style="text-align:left;">Camera Offset 组件的 Requested Tracking Mode 是否设置正确？<br><br>Camera Y Offset 设置是否太高？</td>
+</tr>
+</tbody>
+</table>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="XRPluginArchitecture.html"></a></span><div class="tip">XR 插件框架</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VRReference.html"></a></span><div class="tip">XR API 参考</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

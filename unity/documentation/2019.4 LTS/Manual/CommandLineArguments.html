@@ -1,0 +1,707 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="命令行参数 - Unity 手册">
+<title>命令行参数 - Unity 手册</title>
+<meta name="description" content="可以从命令行运行 Unity（从 macOS 终端或 Windows 命令提示符）。">
+<meta property="og:description" content="可以从命令行运行 Unity（从 macOS 终端或 Windows 命令提示符）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'CommandLineArguments';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/CommandLineArguments.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/CommandLineArguments.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/CommandLineArguments.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/CommandLineArguments.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/CommandLineArguments.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/CommandLineArguments.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/CommandLineArguments.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/CommandLineArguments.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/CommandLineArguments.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/CommandLineArguments.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/CommandLineArguments.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/CommandLineArguments.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/CommandLineArguments.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/CommandLineArguments.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/CommandLineArguments.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/CommandLineArguments.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/CommandLineArguments.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/CommandLineArguments.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/CommandLineArguments.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/CommandLineArguments.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/CommandLineArguments.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/CommandLineArguments.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/CommandLineArguments.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/CommandLineArguments.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/CommandLineArguments.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/CommandLineArguments.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/CommandLineArguments.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/CommandLineArguments.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/CommandLineArguments.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/CommandLineArguments.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/CommandLineArguments.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/CommandLineArguments.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/CommandLineArguments.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/CommandLineArguments.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/CommandLineArguments.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/CommandLineArguments.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/CommandLineArguments.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/CommandLineArguments.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/CommandLineArguments.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/CommandLineArguments.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/CommandLineArguments.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/CommandLineArguments.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/CommandLineArguments.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/CommandLineArguments.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/CommandLineArguments.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/CommandLineArguments.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/CommandLineArguments.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/CommandLineArguments.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li>命令行参数</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MultiSceneEditing.html"></a></span><div class="tip">多场景编辑</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CLIBatchmodeCoroutines.html"></a></span><div class="tip">批处理模式和内置协程兼容性</div>
+</div>
+</div></div>
+<h1>命令行参数</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>可以从命令行运行 Unity（从 macOS 终端或 Windows 命令提示符）。</p>
+
+<h2>启动 Unity</h2>
+
+<p>在 macOS 上，在终端中输入以下命令来启动 Unity：</p>
+
+<pre><code>/Applications/Unity/Unity.app/Contents/MacOS/Unity
+</code></pre>
+
+<p>在 Windows 上，在命令提示符下输入以下命令来启动 Unity：</p>
+
+<pre><code>"C:\Program Files\Unity\Editor\Unity.exe"
+</code></pre>
+
+<p>以这种方式启动时，Unity 会在启动时收到命令和信息，这对于测试套件、自动构建和其他生产任务非常有用。<strong>注意</strong>：使用相同方法来启动独立平台 Unity 应用程序。</p>
+
+<h2>以静默方式启动 Unity</h2>
+
+<p>在 macOS 上的终端中输入以下命令以静默方式启动 Unity：</p>
+
+<pre><code>/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchmode -serial SB-XXXX-XXXX-XXXX-XXXX-XXXX -username 'JoeBloggs@example.com' -password 'MyPassw0rd'
+</code></pre>
+
+<p><strong>注意</strong>：如果使用 Jenkins 之类的连续集成 (CI) 工具通过命令行激活时，请添加 <code>-nographics</code> 标志以防止 WindowServer 错误。</p>
+
+<p>在 Windows 上的命令提示符下输入以下命令以静默方式启动 Unity：</p>
+
+<pre><code>"C:\Program Files\Unity\Editor\Unity.exe" -batchmode -username name@example.edu.uk - password XXXXXXXXXXXXX -serial E3-XXXX-XXXX-XXXX-XXXX-XXXX –quit
+</code></pre>
+
+<h2>将许可证退回到许可证服务器</h2>
+
+<p>在 macOS 上的终端中输入以下命令来退回许可证：</p>
+
+<pre><code>/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchmode -returnlicense
+</code></pre>
+
+<p>Windows：</p>
+
+<pre><code>"C:\Program Files\Unity\Editor\Unity.exe" -quit -batchmode -returnlicense
+</code></pre>
+
+<p>当您不再想在这台计算机上使用 Unity 并想在另一台计算机上使用相同的许可证时，退回许可证很有用。</p>
+
+<h2>创建许可证激活文件并用命令导入许可证文件</h2>
+
+<p>在 macOS 上的终端中输入以下命令：</p>
+
+<pre><code>/Applications/Unity/Unity.app/Contents/MacOS/Unity -batchmode -createManualActivationFile -logfile
+
+/Applications/Unity/Unity.app/Contents/MacOS/Unity -batchmode -manualLicenseFile &lt;yourulffile&gt; -logfile
+</code></pre>
+
+<p>在 Windows 上的命令提示符下输入以下命令：</p>
+
+<pre><code>"C:\Program Files\Unity\Editor\Unity.exe" -batchmode -createManualActivationFile -logfile
+
+"C:\Program Files\Unity\Editor\Unity.exe" -batchmode -manualLicenseFile &lt;yourulffile&gt; -logfile
+</code></pre>
+
+<p>有关更多详细信息，请阅读<a href="ManualActivationGuide.html">手动激活指南</a>。</p>
+
+<h2>选项</h2>
+
+<p>可以在启动时运行 Editor 并使用其他命令和信息构建 Unity 应用程序。本节将介绍可用的命令行选项。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>命令</strong></th>
+	<th style="text-align:left;"><strong>详细信息</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>-accept-apiupdate</code></td>
+	<td style="text-align:left;">使用此命令行选项可指定在批处理模式下启动 Unity 时应运行 APIUpdater。<br><br>示例：<br><br><code>unity.exe -accept-apiupdate -batchmode [other params]</code><br><br>在批处理模式下启动 Unity 时省略此命令行参数会导致 APIUpdater 不运行。这种情况下可能导致编译器错误。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="batchmode"></a><code>-batchmode</code>
+</td>
+	<td style="text-align:left;">以批处理模式运行 Unity。请始终将此命令与其他命令行参数结合使用，从而确保不会出现弹出窗口且无需任何人为干预。在执行脚本代码期间发生异常时，资源服务器更新失败时，或其他操作失败时，Unity 将立即退出并返回代码 <strong>1</strong>。<br><br>请注意，在批处理模式下，Unity 会将其日志输出的最小版本发送到控制台。但是，<a href="LogFiles.html">日志文件</a>仍包含完整的日志信息。当 Editor 打开某个项目时，您无法以批处理模式打开相同的项目；一次只能运行一个 Unity 实例。<br><br>要检查是否正在以批处理模式运行 Editor 或独立平台播放器，请使用 <a href="../ScriptReference/Application-isBatchMode.html">Application.isBatchMode</a> 运算符。<br><br>如果在使用 <code>-batchmode</code> 时还没有导入项目，则目标平台为默认平台。要强制选择其他平台，请使用 <code>-buildTarget</code> 选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-buildLinux64Player &lt;pathname&gt;</code></td>
+	<td style="text-align:left;">构建 64 位独立平台 Linux 播放器（例如，<code>-buildLinux64Player path/to/your/build</code>）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-buildOSXUniversalPlayer &lt;pathname&gt;</code></td>
+	<td style="text-align:left;">构建 64 位独立平台 Mac OSX 播放器（例如，<code>-buildOSXUniversalPlayer path/to/your/build.app</code>）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-buildTarget &lt;name&gt;</code></td>
+	<td style="text-align:left;">在加载项目之前选择有效的构建目标。可能的选项包括：<br>Standalone、Win、Win64、OSXUniversal、Linux64、iOS、Android、WebGL、XboxOne、PS4、WindowsStoreApps、Switch、tvOS。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-buildWindowsPlayer &lt;pathname&gt;</code></td>
+	<td style="text-align:left;">构建 32 位独立平台 Windows 播放器（例如，<code>-buildWindowsPlayer path/to/your/build.exe</code>）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-buildWindows64Player &lt;pathname&gt;</code></td>
+	<td style="text-align:left;">构建 64 位独立平台 Windows 播放器（例如，<code>-buildWindows64Player path/to/your/build.exe</code>）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-createProject &lt;pathname&gt;</code></td>
+	<td style="text-align:left;">在指定路径中创建一个空项目。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-deepprofiling</code></td>
+	<td style="text-align:left;">对 <a href="ProfilerWindow.html">CPU 性能分析器</a>启用深度性能分析选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-disable-assembly-updater &lt;assembly1 assembly2&gt;</code></td>
+	<td style="text-align:left;">指定一个以空格分隔的程序集名称列表作为 Unity 在自动更新时忽略的参数。<br>以空格分隔的程序集名称列表是可选的：如果传递命令行选项时不带任何程序集名称，表示忽略所有程序集，如示例 1 所示。<br><br><strong>示例 1</strong><br><code>unity.exe -disable-assembly-updater</code><br><br><strong>示例 2</strong><br><code>unity.exe -disable-assembly-updater A1.dll subfolder/A2.dll</code><br><br>示例 2 有两个程序集名称，其中一个具有路径名。示例 2 无论 <code>A1.dll</code> 存储在哪个文件夹中都会将其忽略，但只有 <code>A2.dll</code> 存储在 <code>subfolder</code> 文件夹下时才会将其忽略：<br><br>如果在 <code>-disable-assembly-updater</code> 命令行参数中列出程序集（或者如果不指定程序集），Unity 会将以下消息记录到 <a href="LogFiles.html">Editor.log</a>：<br><br> <code>[Assembly Updater] warning: Ignoring assembly [assembly_path] as requested by command line parameter.").</code> <br><br> 可用于在导入程序集时避免不必要的 <a href="APIUpdater.html">API Updater</a> 开销。<br><br>如果知道 Unity API 不需要更新，对于导入访问 Unity API 的程序集非常有用。在导入完全不访问 Unity API 的程序集时也很有用（例如，如果在 Unity 之外构建了源代码或其中部分代码，并且想要将生成的程序集导入到 Unity 项目中）。<br><br><strong>注意：</strong>如果对任何需要更新的程序集禁用更新，则可能会在编译时和/或运行时都出现难以跟踪的错误。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-diag-debug-shader-compiler</code></td>
+	<td style="text-align:left;">Unity 仅启动一个着色器编译器实例，并将其超时强制为一小时。对于调试着色器编译器问题很有用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-enableCodeCoverage</code></td>
+	<td style="text-align:left;">启用代码覆盖率并允许访问 <a href="../ScriptReference/TestTools.Coverage.html">Coverage API</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>-executeMethod &lt;ClassName.MethodName&gt;</code> 或 <code>-executeMethod &lt;NamespaceName.ClassName.MethodName&gt;</code>
+</td>
+	<td style="text-align:left;">Unity 打开项目后以及可选的资源服务器更新完成后，立即执行静态方法。可以使用此命令来执行连续集成，执行单元测试，进行构建或准备数据等任务。要从命令行进程返回错误，要么抛出异常（这会导致 Unity 退出并显示返回代码 <strong>1__），要么调用 <a href="../ScriptReference/EditorApplication.Exit.html">EditorApplication.Exit</a>（这会显示非零返回代码）。要传递参数，请将它们添加到命令行，并使用 <code>System.Environment.GetCommandLineArgs</code> 在函数内检索它们。要使用 <code>-executeMethod</code>，需要将包裹脚本放在 Editor 文件夹中。执行的方法必须定义为 static。|
+|<code>-exportPackage &lt;exportAssetPath1 exportAssetPath2 ExportAssetPath3 exportFileName&gt;</code>|在指定路径（或指定路径集）的情况下导出资源包。在此示例中，<code>exportAssetPath</code> 是要从 Unity 项目导出的文件夹（相对于 Unity 项目根目录），<code>exportFileName</code> 是资源包名称。目前，此选项一次只导出整个文件夹。通常需要将此命令与 <code>-projectPath</code> 参数一起使用。|
+|<code>-force-d3d11</code>（仅限 Windows）| 使 Editor 使用 Direct3D 11 进行渲染。通常，图形 API 取决于 <strong>Player Settings</strong>（通常默认为 D3D11）。 |
+|<code>-force-d3d12</code>（仅限 Windows）| 使 Editor 使用 Direct3D 12 进行渲染。通常，图形 API 取决于 <strong>Player Settings</strong>。|
+|<code>-force-device-index</code>| 使用 Metal 时，通过传递 GPU 设备的索引，让 Editor 使用特定 GPU 设备（仅限 macOS）。|
+|<code>-force-metal</code>| 使 Editor 使用 Metal 作为默认图形 API（仅限 macOS）。 |
+|<code>-force-glcore</code>| 使 Editor 使用 OpenGL 3/4 Core 配置文件进行渲染。Editor 会尝试使用可用的最佳 OpenGL 版本以及 OpenGL 驱动程序公开的所有 OpenGL 扩展。如果不支持该平台，则使用 Direct3D。 |
+|<code>-force-glcoreXY</code>| 与 <code>-force-glcore</code> 类似，但请求特定的 OpenGL 上下文版本。XY 的可接受值：32、33、40、41、42、43、44 或 45。 |
+|<code>-force-gles</code>（仅限 Windows）| 使 Editor 使用 OpenGL for Embedded Systems 进行渲染。Editor 会尝试使用可用的最佳 OpenGL ES 版本以及 OpenGL 驱动程序公开的所有 OpenGL ES 扩展。 |
+|<code>-force-glesXY</code>（仅限 Windows）| 与 <code>-force-gles</code> 类似，但请求特定的 OpenGL ES 上下文版本。XY 的可接受值：30、31 或 32。 |
+|<code>-force-vulkan</code> | 使 Editor 使用 Vulkan 进行渲染。通常，图形 API 取决于 <strong>Player Settings</strong>。|
+|<code>-force-clamped</code>| 此命令与 <code>-force-glcoreXY</code> 一起使用以阻止 Unity 检查其他 OpenGL 扩展，允许在具有相同代码路径的平台之间运行。 |
+|<code>-force-free</code>| 使 Editor 运行，就像机器上有免费的 Unity 许可证一样，即使安装了 Unity Pro 许可证也是如此。|
+|<code>-force-low-power-device</code>（仅限 macOS）| 如果使用 Metal，让 Editor 使用低功耗设备。|
+|<code>-importPackage &lt;pathname&gt;</code>|导入指定的<a href="HOWTO-exportpackage.html">资源包</a>。不显示导入对话框。|
+|<code>-job-worker-count &lt;N&gt;</code>|为 Unity JobQueue <a href="../ScriptReference/Unity.Jobs.LowLevel.Unsafe.JobsUtility.JobWorkerMaximumCount.html">Job Worker Count</a> 指定最大线程数。您也可以在 Unity 独立平台播放器的 <code>boot.config</code> 中指定为 <code>job-worker-count=&lt;N&gt;</code>。|
+|<code>-logFile &lt;pathname&gt;</code>|指定 Unity 写入 Editor 或 Windows/Linux/OSX 独立日志文件的位置。要输出到控制台，请为路径名指定 <code>-</code>。在 Windows 上，指定 <code>-</code> 选项将使输出进入 <code>stdout</code>，这在默认情况下不是控制台。|
+|<code>-nographics</code>| 在批处理模式下运行此命令时，不会初始化图形设备。因此，您可以在没有 GPU 的机器上运行自动化工作流程。自动工作流程仅在有窗口获得焦点时才起作用，否则无法发送模拟输入命令。<code>-nographics</code> 不允许烘焙 GI，因为 Enlighten 需要 GPU 加速。|
+|<code>-noUpm</code>| 禁用 Unity Package Manager。 |
+|<code>-openfile &lt;path&gt;</code>|从场景或包文件的路径打开项目。另一种方法是使用 <code>-projectPath</code> 参数。 |
+|<code>-password &lt;password&gt;</code>|在激活 Unity Editor 期间，在登录窗体中输入密码。|
+|<code>-profiler-enable</code>|对播放器或 Editor 的启动进行性能分析。将此参数与播放器一起使用时，效果与在 Build Settings 中启用 </strong>Autoconnect Profiler__ 选项来构建播放器的效果相同。<br> <br> 将此参数与 Editor 一起使用时，在 Editor 启动时会开始在 Profiler 窗口中收集和显示性能分析器信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-profiler-log-file &lt;Path/To/Log/File.raw&gt;</code></td>
+	<td style="text-align:left;">此参数可以设置 <a href="Profiler.html">Unity Profiler</a> 在启动时将性能分析数据流式传输到 .raw 文件。对播放器和 Editor 都有效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-profiler-capture-frame-count &lt;NumberOfFrames&gt;</code></td>
+	<td style="text-align:left;">此参数可以设置在启动期间流式传输到 .raw 文件时性能分析器应该在性能分析中捕获多少帧。仅对播放器有效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-profiler-maxusedmemory</code></td>
+	<td style="text-align:left;">默认情况下，Unity Profiler 的 <code>maxUsedMemory</code> 值是 16MB（对于播放器）和 256MB（对于 Editor）。可以在启动时使用此参数将 <code>maxUsedMemory</code> 参数设置为自定义大小（例如，<code>-profiler-maxusedmemory 16777216</code>）。此大小以字节为单位。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-projectPath &lt;pathname&gt;</code></td>
+	<td style="text-align:left;">在指定路径下打开项目。如果路径名包含空格，请将其用引号引起来。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-quit</code></td>
+	<td style="text-align:left;">在其他命令执行完毕后退出 Unity Editor。这可能导致错误消息被隐藏（但是，它们仍会出现在 Editor.log 文件中）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-returnlicense</code></td>
+	<td style="text-align:left;">将当前激活的许可证退回到许可证服务器。在 Unity 删除许可证文件前，您应该等待几秒钟，因为 Unity 需要与许可证服务器通信。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-serial &lt;serial&gt;</code></td>
+	<td style="text-align:left;">使用指定的序列号激活 Unity。使用此参数自动激活 Unity 时，必须传递 <code>-batchmode</code>，并且最好还要传递 <code>-quit</code> 参数。在 Unity 删除许可证文件前，您应该等待几秒钟，因为 Unity 需要与许可证服务器通信。确保许可证文件的文件夹存在，并且在使用此参数运行 Unity 之前具有适当的权限。如果激活失败，请查看 <a href="LogFiles.html">Editor.log</a> 获取信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>-setDefaultPlatformTextureFormat</code>（仅限 Android）</td>
+	<td style="text-align:left;">在导入纹理或构建项目之前，将默认纹理压缩设置为所需的格式。这样就不必再使用所需的格式导入纹理。可用的格式为 dxt、pvrtc、atc、etc、etc2 和 astc。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-silent-crashes</code></td>
+	<td style="text-align:left;">阻止 Unity 显示独立平台播放器崩溃时出现的对话框。希望在自动的构建或测试中运行播放器时（此时不希望对话框提示阻碍自动化过程），此参数非常有用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-stackTraceLogType</code></td>
+	<td style="text-align:left;">允许详细调试。所有设置都允许选择 <strong>None</strong>、<strong>Script Only</strong> 和 <strong>Full</strong>。（例如，<code>-stackTraceLogType Full</code>）</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>-testPlatform</code>、<code>-testResults</code>、<code>-runTests</code>
+</td>
+	<td style="text-align:left;">运行测试。请参阅 <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@latest">Unity Test Framework</a> 包文档。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-username &lt;username&gt;</code></td>
+	<td style="text-align:left;">在激活 Unity Editor 期间，在登录窗体中输入用户名。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-vcsMode &lt;mode&gt;</code></td>
+	<td style="text-align:left;">设置此会话的版本控制模式。可用模式为 <code>"Visible Meta Files"</code>、<code>"Hidden Meta Files"</code>、<code>Perforce</code> 和 <code>PlasticSCM</code>。可以使用其他标志来填写给定版本控制模式的配置字段。这些标志基于 <a href="../ScriptReference/VersionControl.Provider.GetActiveConfigFields.html">Provider.GetActiveConfigFields</a> 方法。例如，可以使用 <code>-vcPerforceUsername</code>、<code>-vcPerforcePassword</code>、<code>-vcPerforceWorkspace</code> 和 <code>-vcPerforceServer</code> 来设置 Perforce 用户名、工作空间和服务器字段。<br><br><strong>注意：</strong>包含空格的 <code>&lt;mode&gt;</code> 参数必须用双引号 (<code>"</code>) 引起来。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-EnableCacheServer</code></td>
+	<td style="text-align:left;">告诉 Unity 启用较新的 <a href="UnityAccelerator.html">Accelerator 缓存服务器</a>。还必须使用 <code>-cacheServerEndpoint</code> 指定地址。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-cacheServerEndpoint</code></td>
+	<td style="text-align:left;">如果使用的是较新的 <strong>Accelerator</strong> 缓存服务器，指定终端地址。<br><br>示例：<br><br><code>-cacheServerEndpoint 127.0.0.1:10080</code>。这将覆盖 Editor Preferences 中存储的配置。使用此命令可将 Unity 的多个实例连接到不同缓存服务器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-cacheServerNamespacePrefix</code></td>
+	<td style="text-align:left;">设置较新的 <strong>Accelerator</strong> 缓存服务器的命名空间前缀。用于在缓存服务器上将数据分组在一起。<br><br>示例：<br><br><code>-cacheServerNamespacePrefix MyProject</code>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-cacheServerEnableDownload</code></td>
+	<td style="text-align:left;">允许从较新的 <strong>Accelerator</strong> 缓存服务器进行下载。<br><br>示例：<br><br><code>-cacheServerEnableDownload true</code>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-cacheServerEnableUpload</code></td>
+	<td style="text-align:left;">允许上传到较新的 <strong>Accelerator</strong> 缓存服务器。<br><br>示例：<br><br><code>-cacheServerEnableUpload false</code>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-CacheServerIPAddress &lt;host:port&gt;</code></td>
+	<td style="text-align:left;">允许使用较旧的 (v1) 缓存服务器并指定在启动时要连接到的 IP 地址。这将覆盖 Editor Preferences 中存储的配置。使用此命令可将 Unity 的多个实例连接到不同 v1 缓存服务器。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>示例</h2>
+
+<p><strong>项目中的 C# 脚本</strong>：</p>
+
+<pre><code>using UnityEditor;
+class MyEditorScript
+{
+     static void PerformBuild ()
+     {
+         string[] scenes = { "Assets/MyScene.unity" };
+         BuildPipeline.BuildPlayer(scenes, ...);
+     }
+}
+</code></pre>
+
+<p>以下命令以批处理模式执行 Unity，执行 <code>MyEditorScript.PerformBuild</code> 方法，然后在完成时退出。由于</p>
+
+<p><strong>Windows：</strong></p>
+
+<pre><code>"C:\Program Files\Unity\Editor\Unity.exe" -quit -batchmode -projectPath "C:\Users\UserName\Documents\MyProject" -executeMethod MyEditorScript.PerformBuild
+</code></pre>
+
+<p><strong>Mac OS：</strong></p>
+
+<pre><code>/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchmode -projectPath ~/UnityProjects/MyProject -executeMethod MyEditorScript.PerformBuild
+</code></pre>
+
+<h2>Unity Editor 特殊命令行参数</h2>
+
+<p>应该只在特殊情况下或者在 Unity 支持人员的指导下使用这些命令行参数。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>命令</strong></th>
+	<th style="text-align:left;"><strong>详细信息</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>-enableIncompatibleAssetDowngrade</code></td>
+	<td style="text-align:left;">如果资源由较新的不兼容 Unity 版本制作而成，并希望将其降级以便与当前版本的 Unity 一起使用，请使用此选项。启用此选项后，如果尝试打开需要该资源的项目，Unity 会显示一个对话框，要求确认此降级。<br><strong>注意：</strong>此过程不受支持且风险很高，应仅用作最后的手段。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Unity 独立平台播放器命令行参数</h2>
+
+<p>使用 Unity 构建的独立平台播放器也能识别一些命令行参数：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>命令</strong></th>
+	<th style="text-align:left;"><strong>详细信息</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>-monitor N</code></td>
+	<td style="text-align:left;">在指定的监视器上运行独立平台播放器，该监视器由基于 1 的索引号指示。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-batchmode</code></td>
+	<td style="text-align:left;">以“无头”模式运行游戏。游戏不显示任何内容，也不接受用户输入。适合用于运行<a href="UNet.html">联网游戏</a>的服务器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>-force-d3d11</code>（仅限 Windows）</td>
+	<td style="text-align:left;">强制游戏使用 Direct3D 11 进行渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-d3d11-singlethreaded</code></td>
+	<td style="text-align:left;">强制在使用 <code>D3D11_CREATE_DEVICE_SINGLETHREADED</code> 标志的情况下创建 DirectX 11.0。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>-force-d3d12</code>（仅限 Windows）</td>
+	<td style="text-align:left;">强制游戏使用 Direct3D 12 进行渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-device-index</code></td>
+	<td style="text-align:left;">通过向独立平台播放器传递 GPU 设备的索引，使该播放器使用特定 GPU 设备。D3D11、D3D12、Metal 和 Vulkan 图形 API 支持此选项，但 OpenGL 不支持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>-force-metal</code>（仅限 macOS）</td>
+	<td style="text-align:left;">使独立平台播放器使用 Metal 作为默认图形 API。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-glcore</code></td>
+	<td style="text-align:left;">强制游戏使用 OpenGL Core 配置文件进行渲染。Editor 会尝试使用可用的最佳 OpenGL 版本以及 OpenGL 驱动程序公开的所有 OpenGL 扩展。如果不支持该平台，则使用 Direct3D。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-glcoreXY</code></td>
+	<td style="text-align:left;">与 <code>-force-glcore</code> 类似，但请求特定的 OpenGL 上下文版本。XY 的可接受值：32、33、40、41、42、43、44 或 45。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-vulkan</code></td>
+	<td style="text-align:left;">强制游戏使用 Vulkan 进行渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-clamped</code></td>
+	<td style="text-align:left;">此命令与 <code>-force-glcoreXY</code> 一起使用可阻止检查其他 OpenGL 扩展，允许在具有相同代码路径的平台之间运行。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>-force-low-power-device</code>（仅限 macOS）</td>
+	<td style="text-align:left;">使独立平台播放器使用低功耗设备。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-wayland</code></td>
+	<td style="text-align:left;">运行 Linux 播放器时激活实验性 Wayland 支持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-nographics</code></td>
+	<td style="text-align:left;">在批处理模式下运行此命令时，不会初始化图形设备。这样，在没有 GPU 的机器上可以运行自动化工作流程。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-nolog</code></td>
+	<td style="text-align:left;">不生成输出日志。通常，Unity 将 <code>output_log.txt</code> 写入到 <a href="LogFiles.html">Log Files</a> 文件夹中，其中会打印 <a href="../ScriptReference/Debug.Log.html">Debug.Log</a> 输出。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-no-stereo-rendering</code></td>
+	<td style="text-align:left;">关闭立体渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>-parentHWND &lt;HWND&gt; delayed</code>（仅限 Windows）</td>
+	<td style="text-align:left;">将 Windows 独立平台应用程序嵌入到另一个应用程序中。使用此命令时，需要将父应用程序的窗口句柄 (‘HWND’) 传递给 Windows 独立平台应用程序。<br><br>传递 <code>-parentHWND 'HWND' delayed</code> 时，Unity 应用程序在运行时会被隐藏。还必须在应用程序中从适用于 Unity 的 <a href="https://msdn.microsoft.com/en-us/library/windows/">Microsoft Developer 库</a> 中调用 <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms633541(v=vs.85).aspx">SetParent</a>。Microsoft 的 <code>SetParent</code> 会嵌入 Unity 窗口。当它创建 Unity 进程时，Unity 窗口会采用作为 Microsoft 的 <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms686331(v=vs.85).aspx">STARTUPINFO</a> 结构的一部分提供的位置和大小。<br><br> 要调整 Unity 窗口的大小，请在 Microsoft 的 <code>GetWindowLongPtr</code> 函数中检查其 <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms633585(v=vs.85).aspx">GWLP_USERDATA</a>。图形初始化后，其最低位设置为 1，可以安全地调整大小。显示完 Unity 启动画面后，其第二个最低位设置为 1。<br>有关更多信息，请参阅此示例：<a href="../uploads/Examples/EmbeddedWindow.zip">EmbeddedWindow.zip</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-popupwindow</code></td>
+	<td style="text-align:left;">将窗口创建为弹出窗口，不带框架。macOS 上不支持该命令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-screen-fullscreen</code></td>
+	<td style="text-align:left;">覆盖默认的全屏状态。此值必须是 0 或 1。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-screen-height</code></td>
+	<td style="text-align:left;">覆盖默认屏幕高度。此值必须是受支持分辨率中的整数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-screen-width</code></td>
+	<td style="text-align:left;">覆盖默认屏幕宽度。此值必须是受支持分辨率中的整数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-screen-quality</code></td>
+	<td style="text-align:left;">覆盖默认屏幕质量。示例用法为：<code>/path/to/myGame -screen-quality Beautiful</code>。支持的选项与 <a href="class-QualitySettings.html">Quality Settings</a> 名称匹配。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>-single-instance</code>（仅限 Linux 和 Windows）</td>
+	<td style="text-align:left;">一次只运行一个应用程序实例。如果另一个实例已在运行，则使用 <code>-single-instance</code> 再次启动会聚焦现有实例。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-vrmode &lt;devicetype&gt;</code></td>
+	<td style="text-align:left;">使用特定的 VR 设备启动。请参阅<a href="VROverview.html">虚拟现实</a>以了解详细信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>-window-mode</code>（仅限 Windows）</td>
+	<td style="text-align:left;">覆盖全屏窗口模式。接受的值为 <code>exclusive</code> 或 <code>borderless</code>。请参阅<a href="class-PlayerSettingsStandalone.html">独立平台 Player 设置</a>以了解详细信息。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>通用 Windows 平台命令行参数</h2>
+
+<p>通用 Windows 应用程序默认情况下不接受命令行参数，因此要传递命令行参数，必须从 <em>MainPage.xaml.cs/cpp</em> 或 <em>MainPage.cs/cpp</em> 调用一个特殊函数。例如：</p>
+
+<pre><code>appCallbacks.AddCommandLineArg("-nolog");
+</code></pre>
+
+<p>应在 <code>appCallbacks.Initialize()</code> 函数之前调用此函数。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>命令</strong></th>
+	<th style="text-align:left;"><strong>详细信息</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>-nolog</code></td>
+	<td style="text-align:left;">不生成 UnityPlayer.log。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-driver-type-warp</code></td>
+	<td style="text-align:left;">强制使用 DirectX 11.0 驱动程序类型 WARP 设备（有关更多信息，请参阅 Microsoft 的 <a href="http://msdn.microsoft.com/en-us/library/gg615082.aspx">Windows 高级光栅化平台 (Windows Advanced Rasterization Platform)</a> 文档）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-d3d11-singlethreaded</code></td>
+	<td style="text-align:left;">强制在使用 <code>D3D11_CREATE_DEVICE_SINGLETHREADED</code> 标志的情况下创建 DirectX 11.0。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-gfx-direct</code></td>
+	<td style="text-align:left;">强制使用单线程渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-feature-level-9-3</code></td>
+	<td style="text-align:left;">强制使用 DirectX 11.0 功能级别 9.3。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-feature-level-10-0</code></td>
+	<td style="text-align:left;">强制使用 DirectX 11.0 功能级别 10.0。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-feature-level-10-1</code></td>
+	<td style="text-align:left;">强制使用 DirectX 11.0 功能级别 10.1。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-force-feature-level-11-0</code></td>
+	<td style="text-align:left;">强制使用 DirectX 11.0 功能级别 11.0。</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–04–18 页面已修订</span><br></p></li>
+<li><p><span class="page-history">在 Unity <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> 中添加了“accept-apiupdate”命令行选项 <span class="search-words">NewIn20172</span></span></p></li>
+<li><p><span class="page-history">在 Unity <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 中添加了“-force-clamped”命令行参数 <span class="search-words">NewIn20172</span></span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 中停止了 Tizen 支持 <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">在 Unity <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 中添加了“noUpm”、“setDefaultPlatformTextureFormat”和“CacheServerIPAddress”命令行选项 <span class="search-words">NewIn20181</span></span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.2/Documentation/Manual/30_search.html?q=newin20182">2018.2</a> 版中添加了“Application.isBatchMode”运算符 <span class="search-words">NewIn20182</span></span></p></li>
+</ul>
+<!-- area:none -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MultiSceneEditing.html"></a></span><div class="tip">多场景编辑</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CLIBatchmodeCoroutines.html"></a></span><div class="tip">批处理模式和内置协程兼容性</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

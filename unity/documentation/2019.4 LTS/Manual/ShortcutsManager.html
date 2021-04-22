@@ -1,0 +1,612 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Shortcuts Manager - Unity 手册">
+<title>Shortcuts Manager - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/ShortcutManager.png">
+<meta name="description" content="Shortcuts Manager 可用于查看和管理 Unity 中的键盘快捷键。">
+<meta property="og:description" content="Shortcuts Manager 可用于查看和管理 Unity 中的键盘快捷键。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'ShortcutsManager';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/ShortcutsManager.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/ShortcutsManager.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/ShortcutsManager.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/ShortcutsManager.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/ShortcutsManager.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/ShortcutsManager.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/ShortcutsManager.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/ShortcutsManager.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ShortcutsManager.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ShortcutsManager.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ShortcutsManager.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ShortcutsManager.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ShortcutsManager.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ShortcutsManager.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ShortcutsManager.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ShortcutsManager.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ShortcutsManager.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ShortcutsManager.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ShortcutsManager.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ShortcutsManager.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ShortcutsManager.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ShortcutsManager.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ShortcutsManager.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ShortcutsManager.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ShortcutsManager.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/ShortcutsManager.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/ShortcutsManager.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/ShortcutsManager.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/ShortcutsManager.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/ShortcutsManager.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/ShortcutsManager.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ShortcutsManager.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ShortcutsManager.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ShortcutsManager.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ShortcutsManager.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ShortcutsManager.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ShortcutsManager.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ShortcutsManager.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ShortcutsManager.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ShortcutsManager.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ShortcutsManager.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ShortcutsManager.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ShortcutsManager.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ShortcutsManager.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ShortcutsManager.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ShortcutsManager.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ShortcutsManager.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ShortcutsManager.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li>Shortcuts Manager</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Presets.html"></a></span><div class="tip">预设</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BuildSettings.html"></a></span><div class="tip">Build Settings</div>
+</div>
+</div></div>
+<h1>Shortcuts Manager</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Shortcuts Manager 可用于查看和管理 Unity 中的键盘快捷键。</p>
+
+<p>快捷键是绑定到 Unity 命令的任意键或键组合。命令是在 Editor 中执行的操作。例如，<strong>R</strong> 键绑定到激活 Scene 视图中的<strong>缩放</strong>工具的命令。</p>
+
+<p>可以从 Unity 的主菜单访问 Shortcuts Manager：</p>
+
+<ul>
+<li>在 Windows 和 Linux 上，选择 <strong>Edit &gt; Shortcuts</strong>。</li>
+<li>在 macOS 上，选择 <strong>Unity &gt; Shortcuts</strong>。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ShortcutManager.png" alt="Shortcuts Manager">
+<figcaption>Shortcuts Manager</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>A</strong></td>
+	<td style="text-align:left;">
+<strong>配置文件下拉菜单：</strong>允许管理不同的快捷键配置文件以及在它们之间切换。请参阅<a href="#ShortcutProfiles">快捷键配置文件</a>以了解详细信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>B</strong></td>
+	<td style="text-align:left;">
+<strong>键映射：</strong>显示分配给命令的键以及接受键分配的命令。请参阅<a href="#KeyMap">键映射</a>以了解详细信息。还可以使用键映射来<a href="#ManagingShortcuts">管理快捷键</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>C</strong></td>
+	<td style="text-align:left;">
+<strong>Category 列表：</strong>命名被分为各种类别，这些类别将显示在 <strong>Category</strong> 列表中。选择一个类别时，相应的命令将显示在右侧的 <strong>Command</strong> 列表中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>D</strong></td>
+	<td style="text-align:left;">
+<strong>Command</strong> 和 <strong>Shortcut 列表</strong>：列出所选类别中的所有命令及其被分配的快捷键。请参阅 <a href="#CommandList">Command 列表</a>以了解详细信息。还可以使用 Command 列表来<a href="#ManagingShortcuts">管理快捷键</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>为全局命令和上下文命令分配快捷键</h3>
+
+<p>Unity 命令可以是全局命令或上下文命令。</p>
+
+<p>全局命令始终可用。例如，默认情况下会将执行撤销 (Undo) 操作的命令分配给 <strong>Ctrl/Cmd + Z</strong> 快捷键。不管哪些窗口已开启以及哪些工具处于激活状态，使用该快捷键始终会撤消上一个操作。</p>
+
+<p>上下文命令仅在使用特定视图或工具集时才有效。例如，默认情况下，方括号键 <strong>[</strong> 和 <strong>]</strong> 被分配给地形工具中的一组命令和网格绘制工具中的另一组命令。按下其中任一键时，Unity 都会为激活的工具执行该命令。</p>
+
+<p>通常需要为一个全局命令或_不同上下文_的一个或多个上下文命令分配快捷键。其他多命令组合（例如，两个全局命令或_同一上下文_的两个上下文命令）会产生冲突，并需要管理这些冲突。有关快捷键冲突及其管理方法的信息，请参阅<a href="#ShortcutConflicts">快捷键冲突</a>。</p>
+
+<p>Unity 还有一些特殊的全局命令。这些命令可以与其他全局命令共享快捷键，而不会产生冲突。例如，分别将 <strong>Q</strong>、<strong>W</strong> 和 <strong>E</strong> 键分配给查看、移动和旋转工具，但是激活__飞越__模式后，可以使用这些键来向下、向前和向上移动。</p>
+
+<p><a name="KeyMap"></a></p>
+
+<h3>键映射</h3>
+
+<p>此部分说明如何使用键映射来查看快捷键分配情况。有关使用键映射来添加、删除和修改快捷键的信息，请参阅<a href="#ManagingShortcuts">管理快捷键</a>。</p>
+
+<p>键映射显示已将哪些键和组合键分配给命令。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/ShortcutManagerGlobalKey.png" alt=""></td>
+	<td style="text-align:left;">粉红键分配给全局命令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/ShortcutManagerContextKey.png" alt=""></td>
+	<td style="text-align:left;">蓝色键分配给上下文命令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/ShortcutManagerUnassignedKey.png" alt=""></td>
+	<td style="text-align:left;">白色键未分配给任何命令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/ShortcutManagerGreyKey.png" alt=""></td>
+	<td style="text-align:left;">灰色键是无法分配给命令的特殊键。<br><br>例如，修改键（比如 <strong>Shift</strong> 和 <strong>Ctrl/Cmd</strong>）或者功能键（比如 <strong>Return</strong> 和 <strong>Esc</strong>）。</td>
+</tr>
+</tbody>
+</table>
+
+<p>选择修改键（例如 <strong>Shift</strong>、<strong>Ctrl/Cmd</strong> 和 <strong>Alt</strong>）将更新键映射，从而显示将快捷键和修改键的哪些组合分配给了命令。激活的修改键在键映射中变为蓝色。</p>
+
+<figure>
+<img src="../uploads/Main/ShortCutManagerModifiers.png" alt="激活修改键会更改键映射以显示如何分配的组合键">
+<figcaption>激活修改键会更改键映射以显示如何分配的组合键</figcaption>
+</figure>
+
+<p><strong>提示：</strong>要暂时激活键映射中的修改键，请在键盘上按住这些键。</p>
+
+<p>要查看特定键分配给了哪些命令，请将鼠标指针悬停在快捷键上。工具提示中会列出该键分配到的命令。</p>
+
+<figure>
+<img src="../uploads/Main/ShortcutManagerHover.png" alt="A 键已分配到 3D Viewport 的 Fly Mode Left 命令。">
+<figcaption><strong>A</strong> 键已分配到 3D Viewport 的 Fly Mode Left 命令。</figcaption>
+</figure>
+
+<p>对于组合键，请按住键盘上的修改键或在键映射上单击修改键，从而将修改键激活，然后将鼠标指针悬停在快捷键上。</p>
+
+<figure>
+<img src="../uploads/Main/ShortcutManagerHoverMod.png" alt="Ctrl/Cmd + A 组合键已分配给 Edit &gt; Select All 命令">
+<figcaption><strong>Ctrl/Cmd + A</strong> 组合键已分配给 <strong>Edit &gt; Select All</strong> 命令</figcaption>
+</figure>
+
+<p>可以将一个快捷键分配给多个命令。只要 Unity 无法同时执行这些命令，该快捷键就会透明运作。但是，如果将快捷键映射到可以同时执行的多个命令，则会产生冲突。要了解快捷键冲突及其管理方法，请参阅下文的<a href="#ShortcutConflicts">快捷键冲突</a>。</p>
+
+<p><a name="CommandList"></a></p>
+
+<h3>Command 列表</h3>
+
+<p>此部分说明如何使用 <strong>Command</strong> 列表来查看快捷键分配情况。有关使用 <strong>Command</strong> 列表来添加、删除和修改快捷键的信息，请参阅<a href="#ManagingShortcuts">管理快捷键</a>。</p>
+
+<p><strong>Command</strong> 列表显示已将哪些键分配给特定命令。从 <strong>Category</strong> 列表中选择一个类别即可在 <strong>Command</strong> 列表中显示相应的命令以及快捷键。</p>
+
+<figure>
+<img src="../uploads/Main/ShortcutManagerLists.png" alt="">
+</figure>
+
+<p>还可以使用搜索框来搜索 <strong>Command</strong> 列表。键入搜索词时，<strong>Command</strong> 列表会自动将范围缩小到与搜索词匹配的命令。</p>
+
+<p>如果搜索特定类别，可以在 <strong>Search</strong> 行中设置范围，从而在所选类别的结果与 <strong>All Unity Commands</strong> 类别的结果之间切换。</p>
+
+<figure>
+<img src="../uploads/Main/ShortcutManagerSearch.png" alt="">
+</figure>
+
+<p><a name="ManagingShortcuts"></a></p>
+
+<h2>管理快捷键</h2>
+
+<p>Shortcuts Manager 提供分配、修改、取消分配和重置快捷键的几种方法。</p>
+
+<p>通过执行以下操作之一来分配或修改快捷键：</p>
+
+<ul>
+<li><p><a href="#AssignKeyMap">将命令从 Command 列表拖放到键映射上。</a></p></li>
+<li><p><a href="#AssignCommandList">在 Command 列表中键入快捷键。</a></p></li>
+</ul>
+
+<p>通过执行以下操作之一来取消分配或重置快捷键：</p>
+
+<ul>
+<li><p><a href="#UnassignKeyMap">使用键映射或 Command 列表中的上下文菜单。</a></p></li>
+<li><p><a href="#UnassignCommandList">在 Command 列表中直接删除分配的快捷键。</a></p></li>
+</ul>
+
+<h3>将快捷键分配给命令</h3>
+
+<p>使用键映射或 <strong>Command</strong> 列表将快捷键分配给命令。</p>
+
+<p><a name="AssignKeyMap"></a>
+<strong>要使用键映射来分配快捷键，请执行以下命令：</strong></p>
+
+<p>1.单击要包含在快捷键中的任何修改键（例如，<strong>Shift</strong> 或 <strong>Ctrl/Cmd</strong>）。</p>
+
+<p>1.将命令从 <strong>Command</strong> 列表拖放到主快捷键上。<br><br>一旦将鼠标悬停在键映射上，光标就会改变以指示可能的分配。<br><br><img src="../uploads/Main/ShortcutManagerDnDAssign.png" alt=""></p>
+
+<p><a name="AssignCommandList"></a>
+<strong>要从 Command 列表分配快捷键，请执行以下操作：</strong></p>
+
+<p>1.双击列表中的命令以编辑该命令的快捷键字段。</p>
+
+<p>1.像往常一样，光标处于快捷键字段之中时，在键盘上按下所需的快捷键。<br><br><img src="../uploads/Main/ShortcutManagerListAssign.png" alt=""><br>确保按住要包含在快捷键中的所有修改键（例如 <strong>Shift</strong> 或 <strong>Alt/Option</strong>）。</p>
+
+<p>如果已经将快捷键分配给命令，则新分配会产生冲突。有关管理冲突的信息，请参阅<a href="#ShortcutConflicts">快捷键冲突</a>。</p>
+
+<h3>取消分配和重置快捷键</h3>
+
+<p>使用键映射或 <strong>Command</strong> 列表来删除命令已分配到的快捷键，或将修改后的快捷键重置为默认映射。</p>
+
+<p><strong>注意：</strong>Unity 会将默认快捷键分配情况存储在默认配置文件中。请参阅<a href="#ShortcutProfiles">快捷键配置文件</a>以了解详细信息。</p>
+
+<p><a name="UnassignKeyMap"></a>
+<strong>要使用键映射来取消分配或重置快捷键，请执行以下操作：</strong></p>
+
+<p>1.右键单击要取消分配或重置的快捷键。<br><br>如果要取消分配/重置某个组合键，请单击包含的任何修改键（例如 <strong>Shift</strong> 或 <strong>Ctrl/Cmd</strong>），然后右键单击该快捷键。</p>
+
+<p>1.从上下文菜单中：</p>
+
+<pre><code>* 选择 **[COMMAND] &gt; Reset to default**，将默认快捷键重新分配给该命令。
+
+* 选择 **[COMMAND] &gt; Remove shortcut**，取消分配该命令的快捷键。
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/ShortcutManagerUnassignKeyMap.png" alt="">
+</figure>
+
+<p><a name="UnassignCommandList"></a>
+<strong>要使用 Command 列表来取消分配或重置快捷键，请执行以下操作：</strong></p>
+
+<p>1.右键单击要取消分配或重置的快捷键的命令。</p>
+
+<p>1.从上下文菜单中：</p>
+
+<pre><code>* 选择 **[COMMAND] &gt; Reset to default**，将默认快捷键重新分配给该命令。
+* 选择 **[COMMAND] &gt; Remove shortcut**，取消分配该命令的快捷键。
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/ShortcutMangerUnassignList.png" alt="">
+</figure>
+
+<p>或者：</p>
+
+<ul>
+<li>双击要取消分配的快捷键的命令，然后按 <strong>Return/Enter</strong> 键从快捷键字段中删除该快捷键。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ShortcutManagerListUnassign.png" alt="">
+</figure>
+
+<p><a name="ShortcutConflicts"></a></p>
+
+<h2>快捷键冲突</h2>
+
+<p>可以将相同快捷键分配给多个命令，前提是无法同时执行这些命令。例如，可能在 Scene 视图中将一个快捷键分配给一个命令，而在 Animation 窗口中将此快捷键又分配给另一个命令。由于这两个窗口不能同时具有焦点，所以使用快捷键时，对于 Unity 会执行哪个命令，并没有任何歧义。</p>
+
+<p>如果将一个快捷键分配给两个_可以_同时执行的命令，就会产生冲突。例如，将单个快捷键分配给以下命令时，会产生冲突：</p>
+
+<ul>
+<li><p>_同一上下文_的一个或多个上下文命令。</p></li>
+<li><p>多个全局命令。</p></li>
+<li><p>全局命令和上下文命令的组合。</p></li>
+</ul>
+
+<p>创建新的快捷键分配以及使用分配给冲突命令的快捷键时，Shortcuts Manager 会为您提供处理冲突的选项。</p>
+
+<h3>在 Shortcuts Manager 中查看冲突</h3>
+
+<p>出现快捷键冲突的命令在 <strong>Command</strong> 列表中带有“警告”图标。</p>
+
+<figure>
+<img src="../uploads/Main/ShortcutManagerConflictCat.png" alt="">
+</figure>
+
+<p>在 <strong>Category</strong> 列表中选择 <strong>Binding Conflicts</strong> 类别，即可获得出现快捷键冲突的命令的完整列表。</p>
+
+<figure>
+<img src="../uploads/Main/ShortctManagerBindingConflicts.png" alt="">
+</figure>
+
+<h3>管理创建快捷键时的冲突</h3>
+
+<p>将一个快捷键分配给两个冲突的命令就会打开 <strong>Binding conflict</strong> 对话框。</p>
+
+<figure>
+<img src="../uploads/Main/ShortcutManagerDlgBindingConflict.png" alt="">
+</figure>
+
+<ul>
+<li><p>选择 <strong>Create Conflict</strong> 可将快捷键分配给命令（即使已经有任何现有的命令分配）。<br><br>Unity 会将所有分配了该快捷键的命令添加到快捷键的 <strong>Binding Conflicts</strong> 类别。</p></li>
+<li><p>选择 <strong>Reassign</strong> 可将此快捷键重新分配给冲突的命令。这将清除其他的任何命令分配。</p></li>
+<li><p>选择 <strong>Cancel</strong> 可退出而不执行任何操作。</p></li>
+</ul>
+
+<h3>管理使用快捷键时的冲突</h3>
+
+<p>在 Unity 中操作时，使用分配给冲突命令的快捷键将打开 Shortcut Conflict 对话框。</p>
+
+<figure>
+<img src="../uploads/Main/ShortcutManagerDlgShortcutConflict.png" alt="">
+</figure>
+
+<ul>
+<li><p>从列表中选择一个命令，然后单击 <strong>Perform Selected</strong> 按钮即可执行该命令。<br><br>在执行命令以清除其他任何分配之前，请启用 <strong>Rebind to selected command</strong> 选项，从而仅将此快捷键分配给所选命令。这等同于删除其他分配。</p></li>
+<li><p>选择 <strong>Resolve Conflict</strong> 可打开 Shortcuts Manager，然后可以在其中修改快捷键以消除冲突。</p></li>
+<li><p>选择 <strong>Cancel</strong> 可退出而不执行任何操作。</p></li>
+</ul>
+
+<p><a name="ShortcutProfiles"></a></p>
+
+<h2>快捷键配置文件</h2>
+
+<p>快捷键存储在配置文件中。每个配置文件都是一整套的 Unity 快捷键，您可以对其进行修改以满足需求。可以创建任意数量的配置文件，并根据需要在这些配置文件之间切换。可以在任何激活的配置文件中添加、删除或修改快捷键，但默认配置文件除外（请见下文）。对激活的配置文件所做的更改会立即生效。Unity 自动保存更改，并且不会提示您接受还是拒绝这些更改。</p>
+
+<p>Unity 将快捷键配置文件存储在项目之外的 Unity 偏好设置目录中：</p>
+
+<ul>
+<li><p>在 Windows 上：<code>%APPDATA%/Unity\Editor-5.x\Preferences\shortcuts</code></p></li>
+<li><p>在 macOS 上：<code>~/Library/Preferences/Unity/Editor-5.x/shortcuts</code></p></li>
+<li><p>在 Linux 上：<code>~/.config/unity3d/Preferences/Editor-5.x/shortcuts</code></p></li>
+</ul>
+
+<p>这意味着您创建的任何配置文件在所有项目中都可用。</p>
+
+<p><strong>升级：</strong>从旧版本的 Unity 升级时，Unity 会将您在 Preferences 中配置的所有快捷键迁移到名为 UserProfile 的新快捷键配置文件。</p>
+
+<h3>管理快捷键配置文件</h3>
+
+<p>可以从 Shortcuts Manager 顶部的配置文件下拉菜单中管理配置文件：</p>
+
+<figure>
+<img src="../uploads/Main/ShortcutManagerProfileMenu.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>A</strong></td>
+	<td style="text-align:left;">
+<strong>配置文件列表：</strong>列出所有可用的配置文件。选择一个配置文件，使其成为激活的配置文件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>B</strong></td>
+	<td style="text-align:left;">
+<strong>配置文件选项：</strong>用于创建新配置文件、重命名或删除激活的配置文件的选项。</td>
+</tr>
+</tbody>
+</table>
+
+<h4>默认快捷键配置文件</h4>
+
+<p>Unity 有一个包含“出厂”快捷键设置的默认配置文件。创建新的配置文件时，Unity 都会复制默认配置文件。</p>
+
+<p>无法修改默认配置文件。如果尝试修改默认配置文件，Unity 会自动创建一个副本（名为 _Default copy_），使该副本成为激活的配置文件，并将您的更改应用于该副本。</p>
+
+<h2>绕过 Shortcuts Manager 以使用自定义工具</h2>
+
+<p>在键盘上选择一个键或组合键时，Unity 会生成一个键盘事件并将该事件发送到激活的视图。如果这个激活的视图可以使用该事件（例如，触发操作），则会使用该事件。否则会将事件发送到 Shortcuts Manager，然后 Unity 将执行此快捷键被分配到的命令。</p>
+
+<p>在开发自定义工具时，可以在键盘事件到达 Shortcuts Manager 之前以编程方式拦截此类事件。例如，有时可能希望自定义工具的按键反应方式比您使用 Shortcuts Manager 所能配置的方式更复杂。</p>
+
+<p>如何拦截键盘事件取决于您用于创建自定义工具界面的系统。</p>
+
+<p>如果使用的是 <a href="https://docs.unity3d.com/Manual/GUIScriptingGuide.html">IMGUI</a> 系统，请参阅以下脚本参考主题：</p>
+
+<ul>
+<li><a href="https://docs.unity3d.com/ScriptReference/Event-current.html">Event.current</a></li>
+</ul>
+
+<p>如果使用的是 <a href="https://docs.unity3d.com/Manual/UIElements.html">UI Elements</a> 系统，请参阅以下脚本参考主题：</p>
+
+<ul>
+<li><p><a href="https://docs.unity3d.com/ScriptReference/Experimental.UIElements.KeyDownEvent.html">KeyDownEvent</a></p></li>
+<li><p><a href="https://docs.unity3d.com/ScriptReference/Experimental.UIElements.CallbackEventHandler.RegisterCallback.html">CallbackEventHandler.RegisterCallback</a></p></li>
+<li><p><a href="https://docs.unity3d.com/ScriptReference/Experimental.UIElements.CallbackEventHandler.HandleEvent.html">CallbackEventHandler.HandleEvent</a></p></li>
+</ul>
+
+<p><a name="UserDefinedShortcuts"></a></p>
+
+<h2>用户定义的快捷键</h2>
+
+<p>除了在 Shortcuts Manager 中修改快捷键，还可以使用 UnityEditor.ShortcutManagement 命名空间中的类在其他位置（例如脚本和包）中定义快捷键。例如，使用 <a href="https://docs.unity3d.com/2019.1/Documentation/ScriptReference/ShortcutManagement.ShortcutAttribute.html"><strong>ShortcutAttribute</strong></a> 和 <a href="https://docs.unity3d.com/2019.1/Documentation/ScriptReference/ShortcutManagement.ClutchShortcutAttribute.html"><strong>ClutchShortcutAttribute</strong></a> 属性来创建新的快捷键。</p>
+
+<p>Unity 从另一来源加载命令和快捷键时会执行以下操作：</p>
+
+<ul>
+<li><p>将主菜单中的任何新命令添加到 <strong>Command</strong> 列表中的 <strong>All Unity Commands</strong> 类别中，以便您可以使用 Shortcuts Manager 为这些命令创建快捷键。</p></li>
+<li><p>将自定义命令类别添加到 <strong>Category</strong> 列表。</p></li>
+<li><p>将自定义键盘快捷键添加到快捷键数据库，以便它们显示在所有快捷键配置文件中。</p></li>
+<li><p>在 <strong>Command</strong> 列表的 <strong>Shortcut Conflicts</strong> 类别中显示自定义快捷键与当前配置文件中的快捷键之间的任何<a href="#ShortcutConflicts">冲突</a>。</p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–02–18 页面已发布</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> 中添加了 Shortcuts Manager <span class="search-words">NewIn20191</span></span></p></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Presets.html"></a></span><div class="tip">预设</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BuildSettings.html"></a></span><div class="tip">Build Settings</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

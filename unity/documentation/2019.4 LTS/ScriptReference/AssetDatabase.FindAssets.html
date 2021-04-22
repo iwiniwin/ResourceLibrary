@@ -1,0 +1,155 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn"><head><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet" /><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="twitter:card" content="summary" /><meta property="og:title" content="AssetDatabase-FindAssets - Unity 脚本 API" /><title>AssetDatabase-FindAssets - Unity 脚本 API</title><meta name="description" content="使用搜索筛选器字符串搜索资源数据库。" /><meta property="og:description" content="使用搜索筛选器字符串搜索资源数据库。" /><meta name="author" content="Unity Technologies" /><link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico" /><link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png" /><link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png" /><link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png" /><link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png" /><meta name="msapplication-TileColor" content="#222c37" /><meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png" /><script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'ScriptReference';
+      var lang = 'cn';
+      var page = 'AssetDatabase-FindAssets';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css" /><link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css" /><link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/ScriptReference/AssetDatabase-FindAssets.html" /><link rel="alternate" href="https://docs.unity3d.com/en/2019.4/ScriptReference/AssetDatabase-FindAssets.html" hreflang="en" /><link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/ScriptReference/AssetDatabase-FindAssets.html" hreflang="zh" /><link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/ScriptReference/AssetDatabase-FindAssets.html" hreflang="ja" /><link rel="alternate" href="https://docs.unity3d.com/es/2019.4/ScriptReference/AssetDatabase-FindAssets.html" hreflang="es" /><link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/ScriptReference/AssetDatabase-FindAssets.html" hreflang="ko" /><link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/ScriptReference/AssetDatabase-FindAssets.html" hreflang="ru" /><link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/ScriptReference/AssetDatabase-FindAssets.html" hreflang="x-default" /></head><body><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="header-wrapper"><div id="header" class="header"><div class="content"><div class="spacer"><div class="menu"><div id="nav-open" for="nav-input"><span></span></div><div class="logo"><a href="./index.html"></a></div><div class="search-form"><form action="30_search.html" method="get" class="apisearch"><input type="text" name="q" placeholder="搜索脚本..." autosave="Unity Reference" results="5" class="sbox field" id="q"></input><input type="submit" class="submit"></input></form></div><ul class="menu-items"><li class="menu-item"><a href="../Manual/index.html" class="">手册</a></li><li class="menu-item"><a href="../ScriptReference/index.html" class="selected">脚本 API</a></li></ul></div></div><div class="more"><div class="filler"></div><ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul></div></div></div><div class="toolbar"><div class="content"><div class="version-switcher"><div class="current toggle" data-target=".version-list"><div class="version-number"><div class="d-inline-block">
+          Version:
+          <b>2019.4</b></div><div class="d-inline-block arrow"></div></div></div><div class="version-list" style="display:none;"><ul class="versions"><li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/ScriptReference/AssetDatabase-FindAssets.html">2021.1</a></li><li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/ScriptReference/AssetDatabase-FindAssets.html">2020.3</a></li><li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/ScriptReference/AssetDatabase-FindAssets.html">2020.2</a></li><li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/ScriptReference/AssetDatabase-FindAssets.html">2020.1</a></li><li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/ScriptReference/AssetDatabase-FindAssets.html">2019.4</a></li><li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/ScriptReference/AssetDatabase-FindAssets.html">2019.3</a></li><li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/ScriptReference/AssetDatabase-FindAssets.html">2019.2</a></li><li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/ScriptReference/AssetDatabase-FindAssets.html">2019.1</a></li><li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/ScriptReference/AssetDatabase-FindAssets.html">2018.4</a></li><li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/ScriptReference/AssetDatabase-FindAssets.html">2018.3</a></li><li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/ScriptReference/AssetDatabase-FindAssets.html">2018.2</a></li><li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/ScriptReference/AssetDatabase-FindAssets.html">2018.1</a></li><li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/ScriptReference/AssetDatabase-FindAssets.html">2017.4</a></li><li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/ScriptReference/AssetDatabase-FindAssets.html">2017.3</a></li><li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/ScriptReference/AssetDatabase-FindAssets.html">2017.2</a></li><li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/ScriptReference/AssetDatabase-FindAssets.html">2017.1</a></li><li class=""><a class="docs_version_url_560" href="/cn/560/ScriptReference/AssetDatabase-FindAssets.html">5.6</a></li><div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div><div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div></ul><ul class="description"><li><div class="supported-box"></div>受支持</li><li><div class="legacy-box"></div>旧版</li></ul></div></div><ul class="nav-menu-items"><li class="menu-item"><a href="../Manual/index.html" class="">手册</a></li><li class="menu-item"><a href="../ScriptReference/index.html" class="selected">脚本 API</a></li></ul><div class="lang-switcher"><div class="current toggle" data-target=".lang-list"><div class="lbl">语言:
+        <span class="b">中文</span></div><div class="arrow"></div></div><div class="lang-list" style="display:none;"><ul><li><a data-lang="en" href="/2019.4/Documentation/ScriptReference/AssetDatabase-FindAssets.html">English</a></li><li><a data-lang="cn" href="/cn/2019.4/ScriptReference/AssetDatabase-FindAssets.html">中文</a></li><li><a data-lang="ja" href="/ja/2019.4/ScriptReference/AssetDatabase-FindAssets.html">日本語</a></li><li><a data-lang="es" href="/es/2019.4/ScriptReference/AssetDatabase-FindAssets.html">Español</a></li><li><a data-lang="kr" href="/kr/2019.4/ScriptReference/AssetDatabase-FindAssets.html">한국어</a></li><li><a data-lang="ru" href="/ru/2019.4/ScriptReference/AssetDatabase-FindAssets.html">Русский</a></li></ul></div></div></div></div></div><div id="master-wrapper" class="master-wrapper clear"><div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>脚本 API</h2><div class="version-switcher"><div class="current toggle" data-target=".version-list"><div class="version-number"><div class="d-inline-block">
+          Version:
+          <b>2019.4</b></div><div class="d-inline-block arrow"></div></div></div><div class="version-list" style="display:none;"><ul class="versions"><li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/ScriptReference/AssetDatabase-FindAssets.html">2021.1</a></li><li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/ScriptReference/AssetDatabase-FindAssets.html">2020.3</a></li><li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/ScriptReference/AssetDatabase-FindAssets.html">2020.2</a></li><li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/ScriptReference/AssetDatabase-FindAssets.html">2020.1</a></li><li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/ScriptReference/AssetDatabase-FindAssets.html">2019.4</a></li><li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/ScriptReference/AssetDatabase-FindAssets.html">2019.3</a></li><li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/ScriptReference/AssetDatabase-FindAssets.html">2019.2</a></li><li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/ScriptReference/AssetDatabase-FindAssets.html">2019.1</a></li><li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/ScriptReference/AssetDatabase-FindAssets.html">2018.4</a></li><li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/ScriptReference/AssetDatabase-FindAssets.html">2018.3</a></li><li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/ScriptReference/AssetDatabase-FindAssets.html">2018.2</a></li><li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/ScriptReference/AssetDatabase-FindAssets.html">2018.1</a></li><li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/ScriptReference/AssetDatabase-FindAssets.html">2017.4</a></li><li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/ScriptReference/AssetDatabase-FindAssets.html">2017.3</a></li><li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/ScriptReference/AssetDatabase-FindAssets.html">2017.2</a></li><li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/ScriptReference/AssetDatabase-FindAssets.html">2017.1</a></li><li class=""><a class="docs_version_url_560" href="/cn/560/ScriptReference/AssetDatabase-FindAssets.html">5.6</a></li><div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div><div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div></ul><ul class="description"><li><div class="supported-box"></div>受支持</li><li><div class="legacy-box"></div>旧版</li></ul></div></div><div class="clear"></div></div></div></div></div></div><div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content"><div class="section"><div class="mb20 clear" id=""><h1 class="heading inherit"><a href="AssetDatabase.html">AssetDatabase</a>.FindAssets</h1><div class="clear"></div><div class="clear"></div><a href="" class="switch-link gray-btn sbtn left hide">切换到手册</a><div class="clear"></div></div><div class="subsection"><div class="signature"><div class="signature-CS sig-block"><span style="color:red;"></span>public static string[] <span class="sig-kw">FindAssets</span>
+        (string <span class="sig-kw">filter</span>);
+      </div><div class="signature-CS sig-block"><span style="color:red;"></span>public static string[] <span class="sig-kw">FindAssets</span>
+        (string <span class="sig-kw">filter</span>,
+    string[] <span class="sig-kw">searchInFolders</span>);
+      </div></div></div><div class="subsection"><h2>参数</h2><table class="list"><tr><td class="name lbl">filter</td><td class="desc">筛选器字符串可以包含搜索数据。有关此字符串的详细信息，请参阅下文。</td></tr><tr><td class="name lbl">searchInFolders</td><td class="desc">要从中开始搜索的文件夹。</td></tr></table></div><div class="subsection"><h2>返回</h2><p><strong>string[]</strong>
+        匹配资源的数组。请注意将返回 GUID。
+      </p></div><div class="subsection"><h2>描述</h2><p>使用搜索筛选器字符串搜索资源数据库。</p></div><div class="subsection"><p>FindAssets 允许您搜索资源。<code class="mono">string</code> 参数可
+        提供名称、标签或类型（类名称）。筛选器字符串可包含：<br />
+<br />
+<strong>名称</strong>：按照文件名（不带扩展名）筛选资源。由空格分隔的文字
+被视为独立的名称搜索。因此，例如 <code class="mono">"test asset"</code> 是将要
+搜索的资源的名称。请注意，<code class="mono">name:</code> 可用来标识资源。此外，可将
+筛选器 <code class="mono">string</code> 中使用的名称指定为细分部分。例如，上述的 <code class="mono">test asset</code> 示例
+可使用 <code class="mono">test</code> 进行匹配。<br />
+<br />
+<strong>标签</strong>：资源可与标签关联。在每个标签前面使用关键字“l:”
+可查找带有特定标签的资源。这表明字符串正在
+搜索标签。<br />
+<br />
+<strong>类型</strong>：基于显式标识的类型查找资源。关键字“t:”可用于
+指定正在查找的资源类型。如果筛选器 <code class="mono">string</code> 包含
+多个类型，那么将返回与一个类匹配的资源。类型
+可以是 <code class="mono">Texture2D</code> 等内置类型，也可以是用户创建的脚本类。用户创建的
+类是从项目中的 ScriptableObject 类中创建的资源。如果需要所有资源，
+请在所有资源都派生自对象时使用 <code class="mono">Object</code>。使用 <code class="mono">searchInFolders</code> 参数
+指定一个或多个文件夹时，会将搜索限定到这些文件夹及其
+子文件夹。这要比在所有文件夹中搜索所有资源快。<br />
+<br />
+<strong>注意：</strong>搜索不区分大小写。<br />
+<br />
+使用 <a href="AssetDatabase.GUIDToAssetPath.html">AssetDatabase.GUIDToAssetPath</a> 获取资源路径，并使用 <a href="AssetDatabase.LoadAssetAtPath.html">AssetDatabase.LoadAssetAtPath</a>
+加载资源。</p></div><div class="subsection">
+        <pre class="codeExampleCS">
+using UnityEngine;
+using <a href="UnityEditor.html">UnityEditor</a>;<br /><br />public class Example
+{
+    [<a href="MenuItem.html">MenuItem</a>("Example/FindAssets Example")]
+    static void ExampleScript()
+    {
+        // Find all assets labelled with 'architecture' :
+        string[] guids1 = <a href="AssetDatabase.FindAssets.html">AssetDatabase.FindAssets</a>("l:architecture", null);<br /><br />        foreach (string guid1 in guids1)
+        {
+            <a href="Debug.Log.html">Debug.Log</a>(<a href="AssetDatabase.GUIDToAssetPath.html">AssetDatabase.GUIDToAssetPath</a>(guid1));
+        }<br /><br />        // Find all Texture2Ds that have 'co' in their filename, that are labelled with 'architecture' and are placed in 'MyAwesomeProps' folder
+        string[] guids2 = <a href="AssetDatabase.FindAssets.html">AssetDatabase.FindAssets</a>("co l:architecture t:texture2D", new[] {"Assets/MyAwesomeProps"});<br /><br />        foreach (string guid2 in guids2)
+        {
+            <a href="Debug.Log.html">Debug.Log</a>(<a href="AssetDatabase.GUIDToAssetPath.html">AssetDatabase.GUIDToAssetPath</a>(guid2));
+        }
+    }
+}
+</pre>
+      </div><div class="subsection"><p>以下脚本示例显示了如何定位添加到资源的名称、
+          标签和类型细节。演示了 <a href="AssetDatabase.FindAssets.html">FindAssets</a> 函数。该示例中
+          创建的资源使用的是 <code class="mono">ScriptObj</code> 类。</p></div><div class="subsection">
+        <pre class="codeExampleCS">
+// This script file has two CS classes.  The first is a simple Unity <a href="ScriptableObject.html">ScriptableObject</a> script.
+// The class it defines is used by the Example class below.
+// (This is a single Unity script file. You could split this file into a ScriptObj.cs and an
+// Example.cs file which is more structured.)<br /><br />using UnityEngine;
+using <a href="UnityEditor.html">UnityEditor</a>;<br /><br />public class ScriptObj : <a href="ScriptableObject.html">ScriptableObject</a>
+{
+    public void Awake()
+    {
+        <a href="Debug.Log.html">Debug.Log</a>("ScriptObj created");
+    }
+}<br /><br />// Use ScriptObj to show how AssetDabase.FindAssets can be used<br /><br />public class Example
+{
+    static ScriptObj testI;
+    static ScriptObj testJ;
+    static ScriptObj testK;<br /><br />    [<a href="MenuItem.html">MenuItem</a>("Examples/FindAssets Example two")]
+    static void ExampleScript()
+    {
+        CreateAssets();
+        NamesExample();
+        LabelsExample();
+        TypesExample();
+    }<br /><br />    static void CreateAssets()
+    {
+        testI = (ScriptObj)<a href="ScriptableObject.CreateInstance.html">ScriptableObject.CreateInstance</a>(typeof(ScriptObj));
+        <a href="AssetDatabase.CreateAsset.html">AssetDatabase.CreateAsset</a>(testI, "Assets/AssetFolder/testI.asset");<br /><br />        testJ = (ScriptObj)<a href="ScriptableObject.CreateInstance.html">ScriptableObject.CreateInstance</a>(typeof(ScriptObj));
+        <a href="AssetDatabase.CreateAsset.html">AssetDatabase.CreateAsset</a>(testJ, "Assets/AssetFolder/testJ.asset");<br /><br />        // create an asset in a sub-folder and with a name which contains a space
+        testK = (ScriptObj)<a href="ScriptableObject.CreateInstance.html">ScriptableObject.CreateInstance</a>(typeof(ScriptObj));
+        <a href="AssetDatabase.CreateAsset.html">AssetDatabase.CreateAsset</a>(testK, "Assets/AssetFolder/SpecialFolder/testK example.asset");<br /><br />        // an asset with a material will be used later
+        <a href="Material.html">Material</a> material = new <a href="Material.html">Material</a>(<a href="Shader.Find.html">Shader.Find</a>("Standard"));
+        <a href="AssetDatabase.CreateAsset.html">AssetDatabase.CreateAsset</a>(material, "Assets/AssetFolder/SpecialFolder/MyMaterial.mat");
+    }<br /><br />    static void NamesExample()
+    {
+        <a href="Debug.Log.html">Debug.Log</a>("*** FINDING ASSETS BY NAME ***");<br /><br />        string[] results;<br /><br />        results = <a href="AssetDatabase.FindAssets.html">AssetDatabase.FindAssets</a>("testI");
+        foreach (string guid in results)
+        {
+            <a href="Debug.Log.html">Debug.Log</a>("testI: " + <a href="AssetDatabase.GUIDToAssetPath.html">AssetDatabase.GUIDToAssetPath</a>(guid));
+        }<br /><br />        results = <a href="AssetDatabase.FindAssets.html">AssetDatabase.FindAssets</a>("testJ");
+        foreach (string guid in results)
+        {
+            <a href="Debug.Log.html">Debug.Log</a>("testJ: " + <a href="AssetDatabase.GUIDToAssetPath.html">AssetDatabase.GUIDToAssetPath</a>(guid));
+        }<br /><br />        results = <a href="AssetDatabase.FindAssets.html">AssetDatabase.FindAssets</a>("testK example");
+        foreach (string guid in results)
+        {
+            <a href="Debug.Log.html">Debug.Log</a>("testK example: " + <a href="AssetDatabase.GUIDToAssetPath.html">AssetDatabase.GUIDToAssetPath</a>(guid));
+        }<br /><br />        <a href="Debug.Log.html">Debug.Log</a>("*** More complex asset search ***");<br /><br />        // find all assets that contain test (which is all assets)
+        results = <a href="AssetDatabase.FindAssets.html">AssetDatabase.FindAssets</a>("test");
+        foreach (string guid in results)
+        {
+            <a href="Debug.Log.html">Debug.Log</a>("name:test - " + <a href="AssetDatabase.GUIDToAssetPath.html">AssetDatabase.GUIDToAssetPath</a>(guid));
+        }
+    }<br /><br />    static void LabelsExample()
+    {
+        <a href="Debug.Log.html">Debug.Log</a>("*** FINDING ASSETS BY LABELS ***");<br /><br />        string[] setLabels;<br /><br />        setLabels = new string[] {"wrapper"};
+        <a href="AssetDatabase.SetLabels.html">AssetDatabase.SetLabels</a>(testI, setLabels);<br /><br />        setLabels = new string[] {"bottle", "banana", "carrot"};
+        <a href="AssetDatabase.SetLabels.html">AssetDatabase.SetLabels</a>(testJ, setLabels);<br /><br />        setLabels = new string[] {"swappable", "helmet"};
+        <a href="AssetDatabase.SetLabels.html">AssetDatabase.SetLabels</a>(testK, setLabels);<br /><br />        // label searching:
+        //   testI has wrapper, testK has swappable, so both have 'app'
+        //   testJ has bottle, so have a label searched as 'bot'
+        string[] getGuids = <a href="AssetDatabase.FindAssets.html">AssetDatabase.FindAssets</a>("l:app l:bot");
+        foreach (string guid in getGuids)
+        {
+            <a href="Debug.Log.html">Debug.Log</a>("label lookup: " + <a href="AssetDatabase.GUIDToAssetPath.html">AssetDatabase.GUIDToAssetPath</a>(guid));
+        }
+    }<br /><br />    static void TypesExample()
+    {
+        <a href="Debug.Log.html">Debug.Log</a>("*** FINDING ASSETS BY TYPE ***");<br /><br />        string[] guids;<br /><br />        // search for a ScriptObject called ScriptObj
+        guids = <a href="AssetDatabase.FindAssets.html">AssetDatabase.FindAssets</a>("t:ScriptObj");
+        foreach (string guid in guids)
+        {
+            <a href="Debug.Log.html">Debug.Log</a>("ScriptObj: " + <a href="AssetDatabase.GUIDToAssetPath.html">AssetDatabase.GUIDToAssetPath</a>(guid));
+        }<br /><br />        guids = <a href="AssetDatabase.FindAssets.html">AssetDatabase.FindAssets</a>("t:ScriptObj l:helmet");
+        foreach (string guid in guids)
+        {
+            <a href="Debug.Log.html">Debug.Log</a>("ScriptObj+bottle: " + <a href="AssetDatabase.GUIDToAssetPath.html">AssetDatabase.GUIDToAssetPath</a>(guid));
+        }
+    }
+}
+</pre>
+      </div></div><div class="footer-wrapper"><div class="footer clear"><div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div><div class="menu"><a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a></div></div><div></div></div></div></div></div></div></body></html>

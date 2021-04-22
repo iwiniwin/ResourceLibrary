@@ -1,0 +1,291 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="连续碰撞检测 (CCD) - Unity 手册">
+<title>连续碰撞检测 (CCD) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/SpeculativeCCD1.gif">
+<meta name="description" content="CCD 确保快速移动的物体与对象碰撞，而不会穿过这些对象。Unity 提供以下 CCD 方法：">
+<meta property="og:description" content="CCD 确保快速移动的物体与对象碰撞，而不会穿过这些对象。Unity 提供以下 CCD 方法：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'ContinuousCollisionDetection';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/ContinuousCollisionDetection.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/ContinuousCollisionDetection.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/ContinuousCollisionDetection.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/ContinuousCollisionDetection.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/ContinuousCollisionDetection.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/ContinuousCollisionDetection.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/ContinuousCollisionDetection.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/ContinuousCollisionDetection.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ContinuousCollisionDetection.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ContinuousCollisionDetection.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ContinuousCollisionDetection.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ContinuousCollisionDetection.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ContinuousCollisionDetection.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ContinuousCollisionDetection.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ContinuousCollisionDetection.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ContinuousCollisionDetection.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ContinuousCollisionDetection.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ContinuousCollisionDetection.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ContinuousCollisionDetection.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ContinuousCollisionDetection.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ContinuousCollisionDetection.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ContinuousCollisionDetection.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ContinuousCollisionDetection.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ContinuousCollisionDetection.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ContinuousCollisionDetection.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/ContinuousCollisionDetection.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/ContinuousCollisionDetection.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/ContinuousCollisionDetection.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/ContinuousCollisionDetection.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/ContinuousCollisionDetection.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/ContinuousCollisionDetection.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ContinuousCollisionDetection.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ContinuousCollisionDetection.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ContinuousCollisionDetection.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ContinuousCollisionDetection.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ContinuousCollisionDetection.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ContinuousCollisionDetection.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ContinuousCollisionDetection.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ContinuousCollisionDetection.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ContinuousCollisionDetection.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ContinuousCollisionDetection.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ContinuousCollisionDetection.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ContinuousCollisionDetection.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ContinuousCollisionDetection.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ContinuousCollisionDetection.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ContinuousCollisionDetection.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ContinuousCollisionDetection.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ContinuousCollisionDetection.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PhysicsSection.html">物理系统</a></li>
+<li><a href="PhysicsOverview.html">面向对象的项目的 3D 物理系统</a></li>
+<li>连续碰撞检测 (CCD)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CharacterControllers.html"></a></span><div class="tip">角色控制器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="physics-multi-scene.html"></a></span><div class="tip">多场景物理</div>
+</div>
+</div></div>
+<h1>连续碰撞检测 (CCD)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>CCD 确保快速移动的物体与对象碰撞，而不会穿过这些对象。Unity 提供以下 CCD 方法：</p>
+
+<ul>
+<li><a href="#sweep">基于扫掠的 CCD</a></li>
+<li><a href="#speculative">推断性 CCD</a></li>
+</ul>
+
+<p>要使用基于扫掠的 CCD，请在 Inspector 窗口中选择一个<a href="class-Rigidbody.html">刚体 (RigidBody)</a>，并将 <strong>Collision Detection</strong> 设置为 <strong>Continuous</strong> 或 <strong>Continuous Dynamic</strong>。要使用推断性 CCD，请将 <strong>Collision Detection</strong> 设置为 <strong>Continuous Speculative</strong>。</p>
+
+<p><a name="sweep"></a></p>
+
+<h2>基于扫掠的 CCD</h2>
+
+<p>基于扫掠的 CCD 采用撞击时间 (TOI) 算法，通过扫掠对象的前向轨迹来计算对象的潜在碰撞（采用对象的当前速度）。如果沿对象移动方向有接触，该算法会计算撞击时间并移动对象直至达到该时间。该算法可从该时间开始执行子步骤，即计算 TOI 之后的速度，然后重新扫掠，代价是需要经历更多的 CPU 周期。</p>
+
+<p>然而，因为此方法依赖于线性扫掠，所以会忽略物体的角运动，这在对象迅速旋转时会引起穿隧效应。例如，弹球机上的弹球杆固定在一端，围绕一个固定点旋转。弹球杆只做角运动，不做线性运动。因此，很容易打不中弹球：</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD1.gif" alt="已启用 Continuous Dynamic 属性的细杆游戏对象。绕轴心点快速旋转时，此杆不会与球体接触。">
+<figcaption>已启用 Continuous Dynamic 属性的细杆游戏对象。绕轴心点快速旋转时，此杆不会与球体接触。</figcaption>
+</figure>
+
+<p>此方法的另一个问题是性能问题。如果附近有大量启用 CCD 的高速对象，CCD 的开销将由于进行额外的扫掠而很快增加，因此物理引擎不得不执行更多的 CCD 子步骤。</p>
+
+<p><a name="speculative"></a></p>
+
+<h2>推断性 CCD</h2>
+
+<p>推断性 CCD 的工作原理是基于对象的线性运动和角运动增大一个对象的粗筛阶段轴对齐最小包围盒 (AABB)。该算法是一种推测性的算法，因为会选取下一物理步骤中的所有潜在触点。然后将所有触点送入解算器，因此可确保满足所有的触点约束，使对象不会穿过任何碰撞。</p>
+
+<p>下图显示了从 <strong>t0</strong> 开始移动的球体如何获得预期的 <strong>t1</strong> 位置（如果其路径中没有墙）。通过使用目标姿势将 AABB 扩大，推测性算法选取与 <strong>n1</strong> 和 <strong>n2</strong> 法线之间的两个触点。然后，该算法告诉解算器遵循这些触点，使球体不会穿过墙壁。</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD2.png" alt="">
+</figure>
+
+<p>基于当前速度并扩大的 AABB 有助于检测沿运动轨迹的所有潜在触点，使解算器能够防止对象穿过去。</p>
+
+<p>推测性 CCD 的成本通常低于基于扫掠的方法，因为只在碰撞检测阶段（而不在求解和积分阶段）计算触点。此外，由于推测性 CCD 根据对象的线性运动和角运动来扩展粗筛阶段 AABB，因此能发现基于扫掠的 CCD 可能遗漏的触点。</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD3.gif" alt="已启用推测性 CCD 的细杆游戏对象。绕轴心点快速旋转时，此杆与球体接触并发生碰撞。">
+<figcaption>已启用推测性 CCD 的细杆游戏对象。绕轴心点快速旋转时，此杆与球体接触并发生碰撞。</figcaption>
+</figure>
+
+<p>但是，推测性 CCD 可能会导致幽灵碰撞；在这种碰撞中，对象的运动受到推测性触点的影响，而这是不应发生的。这是因为推测性 CCD 根据最近点算法收集所有潜在触点，所以触点法线不太准确。这通常会使高速对象沿着细分的碰撞特征滑动并跳起来，但不应该这样。例如，下图中，球体从 <strong>t0</strong> 开始向右水平移动，积分后的预测位置为 <strong>t1</strong>。扩大后的 AABB 与框形 <strong>b0</strong> 和 <strong>b1</strong> 重叠，而 CCD 在 <strong>c0</strong> 和 <strong>c1</strong> 产生两个推测性触点。由于推测性 CCD 使用最近点算法来生成触点，__c0__ 具有非常倾斜的法线，因此解算器会将其视作斜坡。</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD4.png" alt="解算器认为 c0 处的触点是斜坡，因为最近点算法生成了不准确的触点法线">
+<figcaption>解算器认为 <strong>c0</strong> 处的触点是斜坡，因为最近点算法生成了不准确的触点法线</figcaption>
+</figure>
+
+<p>这种非常倾斜的法线导致 <strong>t1</strong> 在积分后向上跳动，而不是笔直向前移动：</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD5.gif" alt="在 c0 处产生的幽灵碰撞导致球体错误地向上跳跃，而不是笔直向前移动">
+<figcaption>在 c0 处产生的幽灵碰撞导致球体错误地向上跳跃，而不是笔直向前移动</figcaption>
+</figure>
+
+<p>推测性 CCD 还可能导致发生穿隧，因为只会在碰撞检测阶段计算推测性触点。在触点求解过程中，如果一个对象从解算器获得太多能量，在积分后，其最终位置可能在初始扩大的 AABB 之外。如果在紧邻 AABB 的外部发生碰撞，对象会从右边穿出。</p>
+
+<p>例如，下图显示了球体从 <strong>t0</strong> 向左移动，而球杆顺时针旋转。如果球体从撞击中获得太多能量，最终可能离开扩大的 AABB（红点矩形），落在 <strong>t1</strong> 处。如果在紧邻 AABB 的外部发生碰撞（如下面的蓝色框所示），球体最终可能会从右边穿出。这是因为解算器只计算扩大的 AABB 的内部触点，在求解和积分阶段不会执行碰撞检测。</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD6.png" alt="具有扩大的 AABB 的球体使用推测性 CCD，此算法仅在碰撞检测阶段计算触点，因此可能会发生穿过事件">
+<figcaption>具有扩大的 AABB 的球体使用推测性 CCD，此算法仅在碰撞检测阶段计算触点，因此可能会发生穿过事件</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–10–12 页面已发布</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> 版中添加了推测性碰撞检测 <span class="search-words">NewIn20183</span></span></p></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CharacterControllers.html"></a></span><div class="tip">角色控制器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="physics-multi-scene.html"></a></span><div class="tip">多场景物理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

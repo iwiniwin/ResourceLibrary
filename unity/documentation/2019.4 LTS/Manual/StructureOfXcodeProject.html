@@ -1,0 +1,352 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity Xcode 项目的结构 - Unity 手册">
+<title>Unity Xcode 项目的结构 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/Unity-iPhone-Project-Folder.png">
+<meta name="description" content="为 iOS 平台构建 Unity 项目时，Unity 将创建一个包含 Xcode 项目的文件夹。为了在将应用程序部署到设备上之前对此应用程序进行编译和签名，您需要该项目。此外，还需要使用该项目来准备和捆绑游戏，以便分发到 App Store 上。自 Unity 2019.3 起，Xcode 项目结构已更改，旨在支持通过 Unity 用作库将 Unity 集成到原生 iOS 应用程序中。">
+<meta property="og:description" content="为 iOS 平台构建 Unity 项目时，Unity 将创建一个包含 Xcode 项目的文件夹。为了在将应用程序部署到设备上之前对此应用程序进行编译和签名，您需要该项目。此外，还需要使用该项目来准备和捆绑游戏，以便分发到 App Store 上。自 Unity 2019.3 起，Xcode 项目结构已更改，旨在支持通过 Unity 用作库将 Unity 集成到原生 iOS 应用程序中。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'StructureOfXcodeProject';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/StructureOfXcodeProject.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/StructureOfXcodeProject.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/StructureOfXcodeProject.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/StructureOfXcodeProject.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/StructureOfXcodeProject.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/StructureOfXcodeProject.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/StructureOfXcodeProject.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/StructureOfXcodeProject.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/StructureOfXcodeProject.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/StructureOfXcodeProject.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/StructureOfXcodeProject.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/StructureOfXcodeProject.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/StructureOfXcodeProject.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/StructureOfXcodeProject.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/StructureOfXcodeProject.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/StructureOfXcodeProject.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/StructureOfXcodeProject.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/StructureOfXcodeProject.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/StructureOfXcodeProject.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/StructureOfXcodeProject.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/StructureOfXcodeProject.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/StructureOfXcodeProject.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/StructureOfXcodeProject.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/StructureOfXcodeProject.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/StructureOfXcodeProject.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/StructureOfXcodeProject.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/StructureOfXcodeProject.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/StructureOfXcodeProject.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/StructureOfXcodeProject.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/StructureOfXcodeProject.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/StructureOfXcodeProject.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/StructureOfXcodeProject.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/StructureOfXcodeProject.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/StructureOfXcodeProject.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/StructureOfXcodeProject.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/StructureOfXcodeProject.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/StructureOfXcodeProject.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/StructureOfXcodeProject.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/StructureOfXcodeProject.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/StructureOfXcodeProject.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/StructureOfXcodeProject.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/StructureOfXcodeProject.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/StructureOfXcodeProject.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/StructureOfXcodeProject.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/StructureOfXcodeProject.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/StructureOfXcodeProject.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/StructureOfXcodeProject.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/StructureOfXcodeProject.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="iphone.html">iOS</a></li>
+<li><a href="iphone-GettingStarted.html">iOS 开发入门</a></li>
+<li>Unity Xcode 项目的结构</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-BuildProcess.html"></a></span><div class="tip">iOS 构建过程详解</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileCustomizeSplashScreen.html"></a></span><div class="tip">自定义 iOS 启动画面</div>
+</div>
+</div></div>
+<h1>Unity Xcode 项目的结构</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>为 iOS 平台构建 Unity 项目时，Unity 将创建一个包含 Xcode 项目的文件夹。为了在将应用程序部署到设备上之前对此应用程序进行编译和签名，您需要该项目。此外，还需要使用该项目来准备和捆绑游戏，以便分发到 App Store 上。自 Unity 2019.3 起，Xcode 项目结构已更改，旨在支持通过 <a href="UnityasaLibrary-iOS.html">Unity 用作库</a>将 Unity 集成到原生 iOS 应用程序中。</p>
+
+<p>构建 iOS 项目之前，务必在 iOS <a href="PlayerSettingsiOS-Other.html"><strong>Player Settings</strong></a>****（菜单：<strong>Edit &gt; Project Settings &gt; Player Settings</strong>）中设置 <strong>Bundle Identifier</strong>。还可以选择应用程序的目标是模拟器还是实际设备。为此，请更改 <strong>SDK version</strong> 字段。</p>
+
+<h2>项目目标</h2>
+
+<p>每个生成的 Unity iOS Xcode 项目都具有以下结构和目标：</p>
+
+<figure>
+<img src="../uploads/Main/Unity-iPhone-Project-Folder.png" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>UnityFramework</strong>：<strong>UnityFramework</strong> 目标中的一个库部分。此部分包括 <em>Classes</em>、<em>UnityFramework</em> 和 <em>Libraries</em> 文件夹，以及相关的框架。另外，Xcode 将此部分用于构建 <em>UnityFramework.framework</em> 文件。</li>
+<li>
+<strong>Unity-iPhone</strong>：<strong>Unity-iPhone</strong> 目标中的一个瘦启动器部分。此部分包括 <em>MainApp</em> 文件夹和应用程序表现数据（例如启动屏幕、<em>.xib</em> 文件、图标、数据和 <em>/Info.plist</em> 文件），并可运行该库。<strong>Unity-iPhone</strong> 目标对 <strong>UnityFramework</strong> 目标具有单一依赖关系。</li>
+</ul>
+
+<h2>Classes 文件夹</h2>
+
+<p><em>Classes</em> 文件夹包含用于集成 Unity Runtime 和 Objective-C 的代码。Unity 将应用程序的入口点存储在此文件夹内的 <em>main.mm</em> 和 <em>UnityAppController.mm/h</em> 文件中。您可以自行创建派生自 UnityAppController 的 AppDelegate，或者如果您的任何插件包含 <em>AppController.h_，则您可以改为包含 </em>UnityAppController.h<em>。如果 </em>Plugins/iOS_ 文件夹包含 _AppController.mm/h_，可以对它们进行合并和重命名。</p>
+
+<p><em>InternalProfiler.h</em> 文件还定义一个条件编译器来启用内部性能分析器。此文件夹中的代码不会经常更改，您可以在此处放置自定义类。如果您选择 <strong>Append</strong> 模式，Xcode 会在不同构建中保留对此文件夹的更改。但是，此功能不支持多个构建目标，并且需要固定结构的 <em>Libraries</em> 文件夹。</p>
+
+<p>Unity 的内部性能分析器具有快速且不易察觉的特点，并提供以下相关基本信息：</p>
+
+<ul>
+<li>哪个子系统占用最多的帧时间。</li>
+<li>.NET 堆大小。</li>
+<li>GC 事件计数和持续时间。</li>
+</ul>
+
+<p>有关更多信息，请参阅<a href="iphone-InternalProfiler.html">内置性能分析器</a>的相关文档。</p>
+
+<h2>Data 文件夹</h2>
+
+<p>此文件夹包含应用程序的序列化资源以及 .NET 程序集（.dll 或 .dat 文件），其形式为完整代码或元数据（取决于代码剥离设置）。<em>machine.config</em> 文件可以设置各种 .NET 服务（例如安全性和 WebRequest）。Xcode 在每次构建时都会刷新此文件夹的内容。您不应对其进行任何更改。</p>
+
+<p>默认情况下，_Data_ 文件夹的 <strong>Target Membership</strong> 设置为 <strong>Unity-iPhone</strong> 目标，并且 Unity Runtime 会在 <code>mainBundle</code> 中搜索该文件夹。要更改 Unity Runtime 用于查找 <em>Data</em> 文件夹的默认捆绑包，请在 UnityFramework 实例上调用 <code>setDataBundleId: "com.my.product"</code>，然后调用运行函数之一。例如，如果您希望拥有 <em>Data</em> 以及 UnityFramework 调用，请使用 <code>setDataBundleId: "com.unity3d.framework"</code> 并将 <strong>Target Membership</strong> 设置为 <strong>UnityFramework</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/Xcode-Data-Folder.png" alt="">
+</figure>
+
+<p><strong>注意：</strong>仅当 <em>Data</em> 文件夹是应用程序目标的一部分而不是 UnityFramework 目标的一部分时，才支持按需加载资源 (On-Demand Resources)。</p>
+
+<h2>Libraries 文件夹</h2>
+
+<p><em>Libraries</em> 文件夹包含用于 IL2CPP 的 <em>libil2cpp.a</em>。<em>libiPhone-lib.a</em> 文件是 Unity Runtime 静态库，_RegisterMonoModules.cpp_ 将 Unity 原生代码与 .NET 绑定。Xcode 在每次构建时都会刷新此文件夹的内容。您不应对其进行任何更改。</p>
+
+<h2>自定义文件夹</h2>
+
+<p>您可以将自定义文件放置于此。</p>
+
+<h2>图形文件</h2>
+
+<p>图标和启动画面（.png 文件）位于 <em>Unity-iPhone</em> 文件夹中的资源目录中。Unity 自动管理这些文件。启动屏幕、它们的 XML 接口构建器（.xib 文件）和 Storyboard 文件存储在项目的根文件夹中。要在 Unity 中设置它们，请使用 <strong>Player</strong> <strong>Settings</strong> 窗口（菜单：<strong>Edit &gt; Project Settings &gt; Player Settings</strong>）。创建自定义启动图像时，请确保图像遵守 Apple 的<a href="https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/">人机接口指南</a>。</p>
+
+<h2>属性列表 (.plist) 文件</h2>
+
+<p>可从 Unity 的 <strong>Player Settings</strong>（菜单：<strong>Edit &gt; Project Settings &gt; Player Settings</strong>，然后选择 <strong>Other</strong> 部分并向下滚动到 <strong>Identification</strong> 部分；有关更多详细信息，请参阅 <a href="https://docs.unity3d.com/2019.3/Documentation/Manual/PlayerSettingsiOS-Other.html#Identification">iOS Player 设置 - Identification</a> 的相关文档）中管理 Unity-iPhone 目标内的 <em>/Info.plist</em> 文件（通过 <code>mainBundle</code> 进行访问）。Unity 在构建播放器时会更新此文件，而不是进行替换。除非迫不得已，否则不要对其进行更改。</p>
+
+<p><em>/UnityFramework/Info.plist</em> 文件（通过 <code>bundleWithIdentifier:@"com.unity3d.framework"</code> 进行访问）是 UnityFramework 的一部分。您可以将一些值保留在此处，而不是 mainBundle 的 <em>/Info.plist</em> 文件中，这样能确保如果将 UnityFramework 移至另一个应用程序中，您仍然可以获取这些值。</p>
+
+<h2>其他文件</h2>
+
+<p>这些文件包括 Xcode 项目文件（<em>.xcodeproj</em> 文件）以及仅在 <strong>Project Navigator</strong> 中显示的框架链接。</p>
+
+<figure>
+<img src="../uploads/Main/Xcode-Other-Files.png" alt="">
+</figure>
+
+<h4>通过 xcodebuild 构建 Xcode 项目</h4>
+
+<p>使用命令行参数来指定构建设置时，这些设置会影响所有 Xcode 项目目标。为了防止发生这种情况，某些构建设置具有后缀版本。您可以使用这些后缀版本来指定构建设置影响的目标。这是通过用户定义的设置来实现的（*<em>APP 后缀用于应用程序目标，*</em>FRAMEWORK 后缀用于框架目标）。</p>
+
+<p>使用 xcodebuild 进行构建时，请将后缀版本用于：</p>
+
+<p>PRODUCT_NAME -&gt; PRODUCT_NAME_APP</p>
+
+<p>PROVISIONING_PROFILE -&gt; PROVISIONING_PROFILE_APP</p>
+
+<p>PROVISIONING_PROFILE_SPECIFIER -&gt; PROVISIONING_PROFILE_SPECIFIER_APP</p>
+
+<p>OTHER_LDFLAGS -&gt; OTHER_LDFLAGS_FRAMEWORK</p>
+
+<p>根据您的自定义构建管线，您可以扩展此列表以涵盖其他设置。</p>
+
+<h4>修改 Xcode 项目</h4>
+
+<p>要修改生成的 Xcode 项目，请使用 <a href="../ScriptReference/iOS.Xcode.PBXProject.html">Xcode.PBXProject</a>。</p>
+
+<h2>项目目标</h2>
+
+<p>从 Unity 2019.3 开始，已弃用 <code>PBXProject.GetUnityTargetName</code> 和 <code>pbxProject-&gt;TargetGuidByName("Unity-iPhone")</code>。接下来可以改用 <code>pbxProject-&gt;GetUnityFrameworkTargetGuid()</code> 或 <code>pbxProject-&gt;GetUnityMainTargetGuid()</code>：</p>
+
+<pre><code>// 已弃用
+string targetGuid = proj.TargetGuidByName("Unity-iPhone");
+string targetGuid = proj.TargetGuidByName(PBXProject.GetUnityTargetName());
+
+// 改为以下调用之一
+string targetGuid = proj.GetUnityFrameworkTargetGuid(); 
+string targetGuid = proj.GetUnityMainTargetGuid();
+</code></pre>
+
+<p>如果需要在包或自定义构建后处理器中同时支持新旧代码路径，请遵循以下步骤：</p>
+
+<p>1.尽可能依靠插件导入器功能（例如，用于指定其他框架）。
+2.使用反射：</p>
+
+<pre><code>string mainTargetGuid;
+string unityFrameworkTargetGuid;
+        
+var unityMainTargetGuidMethod = proj.GetType().GetMethod("GetUnityMainTargetGuid");
+var unityFrameworkTargetGuidMethod = proj.GetType().GetMethod("GetUnityFrameworkTargetGuid");
+                
+if (unityMainTargetGuidMethod != null &amp;&amp; unityFrameworkTargetGuidMethod != null)
+{
+    mainTargetGuid = (string)unityMainTargetGuidMethod.Invoke(proj, null);
+    unityFrameworkTargetGuid = (string)unityFrameworkTargetGuidMethod.Invoke(proj, null);
+}
+else
+{
+    mainTargetGuid = proj.TargetGuidByName ("Unity-iPhone");
+    unityFrameworkTargetGuid = mainTargetGuid;
+}
+</code></pre>
+
+<ul>
+<li>
+<span class="page-history">在 <a href="https://docs.unity3d.com/Manual/30_search.html?q=newin20193">2019.3</a> 中添加了“Unity 用作 iOS 库”。</span><span class="search-words">NewIn20193</span>
+</li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-BuildProcess.html"></a></span><div class="tip">iOS 构建过程详解</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileCustomizeSplashScreen.html"></a></span><div class="tip">自定义 iOS 启动画面</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

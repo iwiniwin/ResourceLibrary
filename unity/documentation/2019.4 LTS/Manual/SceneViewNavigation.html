@@ -1,0 +1,408 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Scene 视图导航 - Unity 手册">
+<title>Scene 视图导航 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/Editor-SceneGizmo.png">
+<meta name="description" content="Scene 视图具有一组可用于快速有效移动的导航控件：">
+<meta property="og:description" content="Scene 视图具有一组可用于快速有效移动的导航控件：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'SceneViewNavigation';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/SceneViewNavigation.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/SceneViewNavigation.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/SceneViewNavigation.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/SceneViewNavigation.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/SceneViewNavigation.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/SceneViewNavigation.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/SceneViewNavigation.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/SceneViewNavigation.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/SceneViewNavigation.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/SceneViewNavigation.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/SceneViewNavigation.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/SceneViewNavigation.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/SceneViewNavigation.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/SceneViewNavigation.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/SceneViewNavigation.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/SceneViewNavigation.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/SceneViewNavigation.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/SceneViewNavigation.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/SceneViewNavigation.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/SceneViewNavigation.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/SceneViewNavigation.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/SceneViewNavigation.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/SceneViewNavigation.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/SceneViewNavigation.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/SceneViewNavigation.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/SceneViewNavigation.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/SceneViewNavigation.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/SceneViewNavigation.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/SceneViewNavigation.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/SceneViewNavigation.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/SceneViewNavigation.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/SceneViewNavigation.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/SceneViewNavigation.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/SceneViewNavigation.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/SceneViewNavigation.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/SceneViewNavigation.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/SceneViewNavigation.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/SceneViewNavigation.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/SceneViewNavigation.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/SceneViewNavigation.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/SceneViewNavigation.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/SceneViewNavigation.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/SceneViewNavigation.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/SceneViewNavigation.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/SceneViewNavigation.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/SceneViewNavigation.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/SceneViewNavigation.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/SceneViewNavigation.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UsingTheEditor.html">Unity 的界面</a></li>
+<li><a href="UsingTheSceneView.html">Scene 视图</a></li>
+<li>Scene 视图导航</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UsingTheSceneView.html"></a></span><div class="tip">Scene 视图</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ScenePicking.html"></a></span><div class="tip">拾取和选择游戏对象</div>
+</div>
+</div></div>
+<h1>Scene 视图导航</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Scene 视图具有一组可用于快速有效移动的导航控件：</p>
+
+<ul>
+<li><a href="#gizmo">场景视图辅助图标</a></li>
+<li>
+<a href="#tools">移动、旋转和缩放</a>工具</li>
+<li>
+<a href="#center">居中</a>工具</li>
+</ul>
+
+<p><a name="gizmo"></a></p>
+
+<h2>场景视图辅助图标</h2>
+
+<p>场景视图辅助图标 (Scene Gizmo) 显示在 Scene 视图的右上角。此控件用于显示 Scene 视图摄像机的当前方向，并允许快速修改视角和投影模式。</p>
+
+<figure>
+<img src="../uploads/Main/Editor-SceneGizmo.png" alt="">
+</figure>
+
+<p>场景视图辅助图标在立方体的每一面都有一个锥形臂。最前面的锥形臂标有 <strong>X</strong>、<strong>Y</strong> 和 <strong>Z</strong>。单击任何锥形轴臂会将 Scene 视图摄像机对齐到该锥形轴臂所代表的轴（例如：顶视图、左视图和前视图）。还可以右键单击该立方体来显示一个包含视角列表的菜单。要返回默认视角，请右键单击场景视图辅助图标，然后单击 <strong>Free</strong>。</p>
+
+<p>此外还可启用和关闭__透视图 (Perspective)<strong>。这种情况下会在__透视图 (Perspective)</strong> 和__正交视图 (Orthographic)__（有时称为“等距”）之间更改 Scene 视图的投影模式。为此，请单击场景视图辅助图标中心的立方体或其下方的文本。正交视图没有透视，可与其中一个锥形轴臂的单击操作结合使用来获得前视图、顶视图或侧视图。</p>
+
+<figure>
+<img src="../uploads/Main/CameraPerspectiveAndOrtho.jpg" alt="在透视模式（左）和正交模式（右）下显示的场景">
+<figcaption>在透视模式（左）和正交模式（右）下显示的场景</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/SceneViewOrthoTopAndSide.jpg" alt="在正交模式下以顶视图和前视图显示的同一场景">
+<figcaption>在正交模式下以顶视图和前视图显示的同一场景</figcaption>
+</figure>
+
+<p><em>（上述场景来自于 <a href="https://www.assetstore.unity3d.com/en/#!/publisher/1299">BITGEM</a>）</em></p>
+
+<p>如果 Scene 视图处于一个尴尬的视点（颠倒或是让人感到困惑的角度），请按住 <strong>Shift</strong> 键并单击场景视图辅助图标中心的立方体，即可返回__透视图__，使用从侧面和略微从上方观察的角度查看场景。</p>
+
+<p>单击场景视图辅助图标右上角的挂锁可启用或禁用场景的旋转。禁用场景旋转后，右键单击鼠标可以平移视图而不是旋转视图。这与<a href="#handtool">手形工具</a>相同。</p>
+
+<p>请注意，在 __2D 模式__中，场景视图辅助图标不显示，因为此情况下唯一的选择是让视图垂直于 XY 平面。</p>
+
+<h3>Mac 触控板手势</h3>
+
+<p>在带触控板的 Mac 上，可用两根手指拖动来缩放视图。</p>
+
+<p>还可以使用三根手指来模拟单击__场景视图辅助图标__锥形臂的效果：向上、向左、向右或向下拖动可将 Scene 视图摄像机对齐到相应的方向。<!-- HIDDEN AS OF 2019.3 (PROBABLY NONE OF OUR CLIENTS STILL USE OSX 10.7) == In OS X 10.7 Lion you may have to change your trackpad settings in order to enable this feature:--></p>
+<!-- * 打开 System Preferences 并找到 Trackpad（或在 Spotlight 中输入 trackpad）。-->
+<!-- * 单击进入"More Gestures"选项。-->
+<!-- * 单击名称为"Swipe between pages"的第一个选项，然后将其设置为"Swipe left or right with three fingers"或"Swipe with two or three fingers"。-->
+
+<p><a name="tools"></a></p>
+
+<h2>在 Scene 视图中移动、旋转和缩放</h2>
+
+<p>移动、旋转和缩放是 Scene 视图导航中的关键操作。Unity 提供了几种方法来执行这些操作以提供最大的便利性：</p>
+
+<ul>
+<li><a href="#arrow">箭头移动</a></li>
+<li><a href="#handtool">手形工具</a></li>
+<li><a href="#flythrough">飞越模式</a></li>
+<li><a href="#speed">摄像机速度</a></li>
+<li><a href="#shortcuts">移动快捷键</a></li>
+</ul>
+
+<p><a name="arrow"></a></p>
+
+<h3>箭头移动</h3>
+
+<p>可使用__箭头键__在场景中移动，就好像在场景中“走动”一样。向上和向下箭头使摄像机朝所在方向前后移动。向左和向右箭头可横向平移视图。使用箭头时按住 <strong>Shift</strong> 键可以加快移动速度。</p>
+
+<p><a name="handtool"></a> </p>
+
+<h3>手形工具</h3>
+
+<p>选择手形工具（快捷键：__Q__）时，可使用以下鼠标控制方式：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>控制：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>移动</strong></td>
+	<td style="text-align:left;">
+<img src="../uploads/Main/Editor-MoveTool.png" alt="在手形工具模式下会显示移动图标"><br><br>单击并拖动可移动摄像机。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>旋转</strong></td>
+	<td style="text-align:left;">
+<img src="../uploads/Main/Editor-EyeTool.png" alt="在手形工具模式下按住 Alt 键时会显示旋转图标"> <br><br>按住 <strong>Alt</strong> (Windows) 或 <strong>Option</strong> (macOS)，然后左键单击并拖动可围绕当前轴心点旋转摄像机。<br><br>此选项在 2D 模式下不可用，因为该模式下采用正交视图。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>缩放</strong></td>
+	<td style="text-align:left;">
+<img src="../uploads/Main/Editor-ZoomTool.png" alt=""> <br><br>按住 <strong>Alt</strong> (Windows) 或 <strong>Option</strong> (macOS)，然后单击鼠标右键并拖动可缩放 Scene 视图。<br><br>在 macOS 上也可以按住 <strong>Control</strong>，然后左键单击并拖动。</td>
+</tr>
+</tbody>
+</table>
+
+<p>按住 <strong>Shift</strong> 可提高移动和缩放的速度。</p>
+
+<p><a name="flythrough"></a></p>
+
+<h3>飞越模式</h3>
+
+<p>使用__飞越模式 (Flythrough mode)__ 可以通过第一人称飞行来导航 Scene 视图，类似于在许多游戏中导航的方式：</p>
+
+<ul>
+<li>单击并按住鼠标右键。</li>
+<li>使用鼠标移动视图，使用 <strong>WASD</strong> 键向左/向右/向前/向后移动，使用 <strong>Q</strong> 和 <strong>E</strong> 键向上和向下移动。</li>
+<li>按住 <strong>Shift</strong> 键可以加快移动速度。</li>
+</ul>
+
+<p>飞越模式是专为__透视模式__设计的。在__正交模式__中，按住鼠标右键并移动鼠标会使摄像机旋转。</p>
+
+<p>请注意，飞越模式在 2D 模式中不可用。相反，按住鼠标右键并移动鼠标可以在 Scene 视图中平移。</p>
+
+<p><a name="speed"></a></p>
+
+<h3>摄像机速度</h3>
+
+<p>要在 Scene 视图中更改摄像机的当前速度，请单击工具栏中的摄像机图标。在__飞越模式__中，可以在场景中移动时更改摄像机速度。为此，请使用鼠标滚轮或在触控板上拖动两根手指。</p>
+
+<p>有关更多信息，请参阅<a href="SceneViewCamera.html">摄像机设置</a>文档。</p>
+
+<p><a name="shortcuts"></a></p>
+
+<h3>移动快捷键</h3>
+
+<p>为了提高效率，无论选择哪种变换组件工具，都可以使用所有以下控制方式。
+最方便的控制方式取决于所使用的鼠标或触控板：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>操作</strong></th>
+	<th style="text-align:left;"><strong>3 键鼠标</strong></th>
+	<th style="text-align:left;"><strong>2 键鼠标或触控板</strong></th>
+	<th style="text-align:left;"><strong>只有一个鼠标键或触控板的 Mac</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>移动</strong></td>
+	<td style="text-align:left;">按住 <strong>Alt</strong>+鼠标中键，然后拖动</td>
+	<td style="text-align:left;">按住 <strong>Alt</strong>+<strong>Control</strong>+左键单击，然后拖动</td>
+	<td style="text-align:left;">按住 <strong>Alt</strong>+<strong>Command</strong>+左键单击，然后拖动</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>旋转__（在 2D 模式中不可用） |按住 <strong>Alt</strong>+左键单击，然后拖动 |按住 <strong>Alt</strong>+左键单击，然后拖动 |按住 <strong>Alt</strong>+左键单击，然后拖动 |
+|</strong>缩放__</td>
+	<td style="text-align:left;">使用鼠标滚轮，或按住 <strong>Alt</strong>+右键单击，然后拖动</td>
+	<td style="text-align:left;">按住 <strong>Alt</strong>+右键单击，然后拖动</td>
+	<td style="text-align:left;">使用双指轻扫方法可放大或缩小，或按住 <strong>Alt</strong>+<strong>Control</strong>+左键单击，然后拖动</td>
+</tr>
+<tr>
+	<td style="text-align:left;">__更改速度__（仅在飞越模式中可用）</td>
+	<td style="text-align:left;">在移动时使用滚轮。</td>
+	<td style="text-align:left;">在移动时用两根手指拖动。</td>
+	<td style="text-align:left;">在移动时用两根手指拖动。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="center"></a></p>
+
+<h2>将视图居中于游戏对象上</h2>
+
+<p>要将 Scene 视图居中于游戏对象上，请在层级视图中选择该游戏对象，然后将鼠标移到 Scene 视图上并按 <strong>F</strong>。此功能也可在菜单栏中的 <strong>Edit</strong> &gt; <strong>Frame Selected</strong> 下找到。</p>
+
+<p>要将视图锁定到游戏对象（即使游戏对象正在移动），请按 <strong>Shift+F</strong>。此功能也可在菜单栏中的 <strong>Edit</strong> &gt; <strong>Lock View to Selected</strong> 下找到。</p>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UsingTheSceneView.html"></a></span><div class="tip">Scene 视图</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ScenePicking.html"></a></span><div class="tip">拾取和选择游戏对象</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

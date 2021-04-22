@@ -1,0 +1,481 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="了解自动内存管理 - Unity 手册">
+<title>了解自动内存管理 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/gc_spike.png">
+<meta name="description" content="创建对象、字符串或数组时，用于存储它的内存是从称为堆的中央池分配的。当此项不再使用时，其先前占用的内存可被回收并用于其他目的。在过去，通常由程序员通过适当的函数调用显式地分配和释放这些堆内存块。如今，Unity 的 Mono 引擎等运行时系统会自动为您管理内存。自动内存管理比显式分配/释放的做法需要更少的编码工作，并且大大降低了内存泄漏的可能性（即分配了内存但后续从未释放的情况）。">
+<meta property="og:description" content="创建对象、字符串或数组时，用于存储它的内存是从称为堆的中央池分配的。当此项不再使用时，其先前占用的内存可被回收并用于其他目的。在过去，通常由程序员通过适当的函数调用显式地分配和释放这些堆内存块。如今，Unity 的 Mono 引擎等运行时系统会自动为您管理内存。自动内存管理比显式分配/释放的做法需要更少的编码工作，并且大大降低了内存泄漏的可能性（即分配了内存但后续从未释放的情况）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UnderstandingAutomaticMemoryManagement';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UnderstandingAutomaticMemoryManagement.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnderstandingAutomaticMemoryManagement.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnderstandingAutomaticMemoryManagement.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnderstandingAutomaticMemoryManagement.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnderstandingAutomaticMemoryManagement.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnderstandingAutomaticMemoryManagement.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnderstandingAutomaticMemoryManagement.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnderstandingAutomaticMemoryManagement.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnderstandingAutomaticMemoryManagement.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnderstandingAutomaticMemoryManagement.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnderstandingAutomaticMemoryManagement.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnderstandingAutomaticMemoryManagement.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnderstandingAutomaticMemoryManagement.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnderstandingAutomaticMemoryManagement.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnderstandingAutomaticMemoryManagement.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnderstandingAutomaticMemoryManagement.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnderstandingAutomaticMemoryManagement.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UnderstandingAutomaticMemoryManagement.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnderstandingAutomaticMemoryManagement.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnderstandingAutomaticMemoryManagement.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnderstandingAutomaticMemoryManagement.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnderstandingAutomaticMemoryManagement.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnderstandingAutomaticMemoryManagement.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnderstandingAutomaticMemoryManagement.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnderstandingAutomaticMemoryManagement.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnderstandingAutomaticMemoryManagement.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnderstandingAutomaticMemoryManagement.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnderstandingAutomaticMemoryManagement.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnderstandingAutomaticMemoryManagement.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnderstandingAutomaticMemoryManagement.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnderstandingAutomaticMemoryManagement.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnderstandingAutomaticMemoryManagement.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnderstandingAutomaticMemoryManagement.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnderstandingAutomaticMemoryManagement.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnderstandingAutomaticMemoryManagement.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingConcepts.html">脚本概述</a></li>
+<li>了解自动内存管理</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ExecutionOrder.html"></a></span><div class="tip">事件函数的执行顺序</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PlatformDependentCompilation.html"></a></span><div class="tip">平台相关的编译</div>
+</div>
+</div></div>
+<h1>了解自动内存管理</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>创建对象、字符串或数组时，用于存储它的内存是从称为<strong>堆</strong>的中央池分配的。当此项不再使用时，其先前占用的内存可被回收并用于其他目的。在过去，通常由程序员通过适当的函数调用显式地分配和释放这些堆内存块。如今，Unity 的 Mono 引擎等运行时系统会自动为您管理内存。自动内存管理比显式分配/释放的做法需要更少的编码工作，并且大大降低了内存泄漏的可能性（即分配了内存但后续从未释放的情况）。</p>
+
+<h2>值和引用类型</h2>
+
+<p>调用某个函数时，其参数的值将复制到为该特定调用保留的内存区域。只占几个字节的数据类型可以非常快速和轻松地完成复制。但是，对象、字符串和数组通常要大得多，如果需要经常复制这些类型的数据，效率会非常低。幸运的是，并不是非要这样做；可从堆中分配大项的实际存储空间，并使用小“指针”值来记住它的位置。此后，在参数传递期间只需要复制指针。只要运行时系统能找到该指针所标识的项，就可以根据需要频繁使用该数据的同一个副本。</p>
+
+<p>在参数传递期间直接存储和复制的类型称为值类型。这些类型包括整数、浮点数、布尔值和 Unity 的结构类型（例如，__Color__ 和 __Vector3__）。在堆上分配后再通过指针访问的类型称为引用类型，因为在变量中存储的值仅“引用”实际数据。引用类型的示例包括对象、字符串和数组。</p>
+
+<h2>分配和垃圾收集</h2>
+
+<p>内存管理器跟踪已知未使用的堆区域。当请求新的内存块时（例如，当实例化对象时），管理器选择一个未使用的区域来分配内存块，然后从已知的未使用空间中移除分配的内存。后续请求以相同的方式处理，直到没有足够大的可用区域来分配所需的块大小。此时极不可能从堆中分配的所有内存都仍在使用中。若要访问堆上的引用项，前提是仍有引用变量可以定位到该项。如果对内存块的所有引用都消失（即，引用变量已被重新分配，或者引用变量是局部变量但现在已超出范围），则可安全地重新分配其占用的内存。</p>
+
+<p>为确定哪些堆块已不再使用，内存管理器会搜索所有当前处于活动状态的引用变量，并将它们引用的块标记为“实时”。在搜索结束时，内存管理器会认为实时块之间的任何空间都是空的并可用于后续分配。由于显而易见的原因，定位和释放未使用的内存的过程称为垃圾收集（或简称 GC）。</p>
+
+<p>Unity 使用 <a href="https://www.hboehm.info/gc/">Boehm–Demers–Weiser 垃圾回收器</a>，这是一种可停止所有工作的垃圾回收器。每当 Unity 需要执行垃圾收集时，它都会停止运行程序代码，并且仅在垃圾回收器完成所有工作后才恢复正常执行。此中断可能会导致游戏执行延迟，持续时间从不到一毫秒到几百毫秒不等，这取决于垃圾回收器需要处理多少内存以及运行游戏的平台。对于像游戏这样的实时应用程序，这可能会成为一个重大问题，因为垃圾回收器暂停游戏的执行时，您无法维持平滑动画所需的稳定帧率。这些中断也被称为 GC 尖峰，因为它们在性能分析器帧时间图中显示为尖峰。在接下来的部分中，您将更详细了解如何编写代码以避免在运行游戏时对分配的内存进行不必要的垃圾收集，从而减少垃圾回收器的工作量。</p>
+
+<h2>优化</h2>
+
+<p>垃圾收集是自动完成的，对程序员来说不可见，但收集过程实际上在<span class="no tooltip">后台</span>需要耗费大量 CPU 时间。如果使用得当，自动内存管理通常在整体性能上能达到或超过手动分配。但是，程序员必须避免错误以免导致不必要的频繁触发垃圾回收器并在执行中引起暂停。</p>
+
+<p>有一些臭名昭着的算法虽然一眼看上去好像是无辜的，但可能成为 GC 的噩梦。重复的字符串连接便是一个典型的例子：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void ConcatExample(int[] intArray) {
+        string line = intArray[0].ToString();
+        
+        for (i = 1; i &lt; intArray.Length; i++) {
+            line += ", " + intArray[i].ToString();
+        }
+        
+        return line;
+    }
+}
+
+</code></pre>
+
+<p>此处的关键细节是新的部分不会逐一添加到字符串。实际情况的是，每次循环时，line 变量的先前内容变为死亡状态：分配的整个新字符串将包含原始部分加上末尾的新部分。由于字符串随着 i 值的增加而变长，因此消耗的堆空间量也会增加，所以每次调用此函数时都很容易用掉数百个字节的空闲堆空间。如果需要将大量字符串连接在一起，那么 Mono 库的 <a href="http://msdn.microsoft.com/en-gb/library/system.text.stringbuilder.aspx">System.Text.StringBuilder</a> 类将是更好的选择。</p>
+
+<p>但是，即使重复的连接也不会造成太大麻烦，除非频繁调用，而在 Unity 中这通常意味着帧更新。类似以下脚本：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public Text scoreBoard;
+    public int score;
+    
+    void Update() {
+        string scoreText = "Score: " + score.ToString();
+        scoreBoard.text = scoreText;
+    }
+}
+
+</code></pre>
+
+<p>…在每次调用 Update 时都会分配新的字符串，并生成源源不断的垃圾。通过仅在 score 发生变化时才更新 text，可避免大部分的垃圾：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public Text scoreBoard;
+    public string scoreText;
+    public int score;
+    public int oldScore;
+    
+    void Update() {
+        if (score != oldScore) {
+            scoreText = "Score: " + score.ToString();
+            scoreBoard.text = scoreText;
+            oldScore = score;
+        }
+    }
+}
+</code></pre>
+
+<p>另一个潜在问题是在函数返回数组值时出现的问题：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    float[] RandomList(int numElements) {
+        var result = new float[numElements];
+        
+        for (int i = 0; i &amp;lt; numElements; i++) {
+            result[i] = Random.value;
+        }
+        
+        return result;
+    }
+}
+</code></pre>
+
+<p>在新建包含值的数组时，这种类型的函数非常从容和方便。但是，如果重复调用这种函数，则每次都会分配全新的内存。由于数组可能非常大，因此空闲堆空间可能会迅速耗尽，导致频繁进行垃圾收集。避免此问题的一种方法是利用数组为引用类型这一特点。作为参数传入该函数的数组可在该函数内予以修改，且结果在函数返回后仍然保留。像上面这样的函数通常可替换为如下所示的函数：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void RandomList(float[] arrayToFill) {
+        for (int i = 0; i &lt; arrayToFill.Length; i++) {
+            arrayToFill[i] = Random.value;
+        }
+    }
+}
+
+</code></pre>
+
+<p>此函数仅将数组的现有内容替换为新值。虽然这需要在调用代码中完成数组的初始分配（看起来有点不方便），但在调用该函数时不会产生任何新的垃圾。</p>
+
+<h3>禁用垃圾收集</h3>
+
+<p>如果使用的是 Mono 或 IL2CPP 脚本后端，则可以通过在运行时禁用垃圾收集来避免垃圾收集期间的 CPU 使用率激增。禁用垃圾收集时，内存使用量完全不会减少，因为垃圾回收器不会收集不再有任何引用的对象。事实上，禁用垃圾收集时，内存使用量只会增加。为避免一段时间内内存使用量增加，请在管理内存时慎重操作。理想情况下，在禁用垃圾回收器之前分配所有内存，并在禁用垃圾回收器时避免进行其他分配。</p>
+
+<p>有关如何在运行时启用和禁用垃圾收集的更多详细信息，请参阅 <a href="../ScriptReference/Scripting.GarbageCollector.html">GarbageCollector</a> 脚本 API 页面。</p>
+
+<p>还可以尝试<a href="#incremental_gc">增量垃圾收集选项</a>。</p>
+
+<h3>请求进行垃圾收集</h3>
+
+<p>如上所述，最好尽量避免内存分配。但是，鉴于无法完全消除这些行为，可采用两种主要策略来最小化这些行为对游戏运行过程的干扰。</p>
+
+<h4>快速和频繁进行垃圾收集的小堆</h4>
+
+<p>这种策略通常最适合游戏运行过程很长且主要关注帧率平滑性的游戏。像这样的游戏通常会频繁分配小块，但这些块的使用时间很短暂。在 iOS 上使用此策略时的典型堆大小约为 200KB，在 iPhone 3G 上的垃圾收集时间大约需要 5ms。如果堆大小增加到 1MB，则收集时间将大约需要 7ms。因此，有时，以定期的帧间隔请求进行垃圾收集可能是有利的。这种情况下通常会使垃圾收集频率高于严格意义上的要求，但是这些行为将得到快速处理，并且对游戏运行过程的影响极小：</p>
+
+<pre><code>if (Time.frameCount % 30 == 0)
+{
+   System.GC.Collect();
+}
+</code></pre>
+
+<p>但是，应谨慎使用此技术并检查性能分析器的统计信息，以确保真正减少了游戏的垃圾收集时间。</p>
+
+<h4>慢速但不频繁进行垃圾收集的大堆</h4>
+
+<p>这种策略最适合内存分配（因此垃圾收集）相对不频繁并可在游戏运行过程的暂停期间进行处理的游戏。一种非常有用的方法是，尽可能增大堆的大小，但不至于因为系统内存不足而导致操作系统终止您的应用程序。但是，Mono 运行时会尽可能避免自动扩展堆。这种情况下，可通过在启动期间预先分配一些占位空间来手动扩展堆（即，实例化一个纯粹为了影响内存管理器而分配的“无用”对象）：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void Start() {
+        var tmp = new System.Object[1024];
+        
+        // 以较小的块进行分配，从而避免以适合大块的特殊方式处理它们
+        for (int i = 0; i &lt; 1024; i++)
+            tmp[i] = new byte[1024];
+        
+        // 释放引用
+        tmp = null;
+    }
+}
+
+</code></pre>
+
+<p>一个足够大的堆不应在游戏运行过程中配合进行垃圾收集的暂停期间完全耗尽。发生此类暂停时，可显式请求垃圾收集：</p>
+
+<pre><code>System.GC.Collect();
+</code></pre>
+
+<p>同样，在使用此策略时应谨慎，并注意性能分析器的统计信息，而不能仅仅期待其具有所需的效果。</p>
+
+<h3>可重用的对象池</h3>
+
+<p>在许多情况下，通过减少创建和销毁的对象数量即可避免生成垃圾。游戏中存在某些类型的对象，例如飞弹，可能会多次反复遇到，但是只有少数对象会同时处于游戏中。在这种情况下，通常可以重用对象，而不是销毁旧对象并替换为新对象。</p>
+
+<p><a name="incremental_gc"></a></p>
+
+<h1>增量垃圾收集</h1>
+
+<p>_增量垃圾收集_将垃圾收集工作分散到多个帧中。</p>
+
+<p>进行增量垃圾收集时，Unity 仍然使用 Boehm–Demers–Weiser 垃圾回收器，但是以增量模式运行。Unity 不会在每次运行时进行完整的垃圾收集，而是将垃圾收集工作负载拆分到多个帧中。因此，不必单次长时间中断程序的执行来让垃圾回收器完成工作，而是进行多次短时间的中断。虽然这不能整体上加快垃圾收集速度，但可以通过将工作负载分布到多个帧来极大减少垃圾收集“尖峰”破坏游戏流畅性的问题。</p>
+
+<p>以下来自 Unity Profiler 的截屏（未启用和已启用增量垃圾收集）说明了增量收集如何减少帧率不稳问题。在这些性能分析跟踪中，帧的浅蓝色部分显示脚本操作所用的时间，黄色部分显示在 Vsync 之前（等待下一帧开始）的帧中剩余时间，而深绿色部分显示垃圾收集花费的时间。</p>
+
+<figure>
+<img src="../uploads/Main/gc_spike.png" alt="非增量垃圾收集性能分析">
+<figcaption>非增量垃圾收集性能分析</figcaption>
+</figure>
+
+<p>如果不进行增量 GC（上图），您会发现尖峰中断了原本平滑的 60fps 帧率。此尖峰使得接受垃圾收集的帧远远超过维持 60FPS 所需的 16 毫秒限制。（实际上，由于垃圾收集，此示例丢弃了多个帧。）</p>
+
+<figure>
+<img src="../uploads/Main/gc_incremental.png" alt="增量垃圾收集性能分析">
+<figcaption>增量垃圾收集性能分析</figcaption>
+</figure>
+
+<p>启用增量垃圾收集（上图）后，同一项目将保持一致的 60fps 帧率，因为垃圾收集操作被分解到若干帧中，只占用每帧的一小段时间（位于黄色 Vsync 跟踪上方的深绿色条纹）。</p>
+
+<figure>
+<img src="../uploads/Main/gc_auto.png" alt="使用帧中剩余时间的增量垃圾收集">
+<figcaption>使用帧中剩余时间的增量垃圾收集</figcaption>
+</figure>
+
+<p>此截屏显示了同一项目，该项目也在启用增量垃圾收集的情况下运行，但是这次每帧脚本操作减少。同样，垃圾收集操作也分解到若干帧中。差异在于这次垃圾收集占用每帧的更多时间，而需要更少的总帧数即可完成。这是因为如果使用 <a href="../ScriptReference/QualitySettings-vSyncCount.html">Vsync</a> 或 <a href="../ScriptReference/Application-targetFrameRate.html">Application.targetFrameRate</a>，我们可以根据剩余的可用帧时间来调整分配给垃圾收集的时间。这样，我们可以及时运行垃圾收集，不必花时间等待，从而“无代价地”完成垃圾收集。</p>
+
+<h2>启用增量垃圾收集</h2>
+
+<p>增量垃圾收集当前在以下平台上受支持：</p>
+
+<ul>
+<li>Mac 独立平台播放器</li>
+<li>Windows 独立平台播放器</li>
+<li>Linux 独立平台播放器</li>
+<li>iOS</li>
+<li>Android</li>
+<li>Windows UWP 播放器</li>
+<li>PS4</li>
+<li>Xbox One</li>
+<li>Nintendo Switch</li>
+<li>Unity Editor</li>
+</ul>
+
+<p>请注意，增量垃圾收集当前在 WebGL 上不受支持。增量垃圾收集需要 .NET 4.x Equivalent 脚本运行时版本。</p>
+
+<p>在受支持的配置中，Unity 在 Player Settings 窗口的“Other settings”区域中将增量垃圾收集作为一个选项。只需选中 <strong>Use incremental GC</strong> 复选框。</p>
+
+<figure>
+<img src="../uploads/Main/gc_settings.png" alt="在 Player Settings 中启用增量垃圾收集">
+<figcaption>在 Player Settings 中启用增量垃圾收集</figcaption>
+</figure>
+
+<p>此外，如果在项目 <a href="class-QualitySettings.html">Quality</a> 设置中或通过<a href="../ScriptReference/QualitySettings-vSyncCount.html">Application.VSync</a> 属性将 <strong>VSync Count</strong> 设置为 <strong>Don’t Sync</strong> 之外的选项，或者设置 <a href="../ScriptReference/Application-targetFrameRate.html">Application.targetFrameRate</a> 属性，则 Unity 会自动使用给定帧末尾剩余的空闲时间来进行增量垃圾收集。</p>
+
+<p>可以使用 <a href="../ScriptReference/Scripting.GarbageCollector.html">Scripting.GarbageCollector</a> 类，对增量垃圾收集行为进行更精确的控制。例如，如果不想使用 VSync 或目标帧率，则可以自行计算帧结束之前的可用时间，并将该时间提供给垃圾回收器使用。</p>
+
+<h2>增量垃圾收集的可能问题</h2>
+
+<p>在大多数情况下，增量垃圾收集可以减轻垃圾收集尖峰的问题。但是，在某些情况下，增量垃圾收集在实践中可能没有益处。</p>
+
+<p>增量垃圾收集中断工作时，它将中断标记阶段（该阶段扫描所有托管对象以确定哪些对象仍在使用中以及可以清除哪些对象）。当对象之间的大多数引用在工作片段之间不变时，拆分标记阶段没有问题。对象引用会改变时，必须在下一次迭代中再次扫描那些对象。因此，太多的更改会使增量垃圾回收器不堪重负，并导致标记遍历永远不能完成，因为它总是有更多的工作要做；在这种情况下，垃圾收集会退回到进行完整的非增量收集。</p>
+
+<p>此外，在使用增量垃圾收集时，只要引用发生更改，Unity 就需要生成其他代码（称为写屏障）来通知垃圾收集（因此垃圾收集将知道是否需要重新扫描对象）。更改引用时，这会增加一些开销，可能会对某些托管代码产生明显的性能影响。</p>
+
+<p>尽管如此，大多数典型的 Unity 项目（如果有这样的“典型”Unity 项目）仍可从增量垃圾收集中受益，尤其是项目遭受垃圾收集尖峰时。</p>
+
+<p>始终使用<a href="Profiler.html">性能分析器</a>来验证您的游戏或程序是否按预期执行。</p>
+
+<h1>其他信息</h1>
+
+<p>内存管理是一个微妙而复杂的主题，业界已投入了大量的学术努力。如果有兴趣了解这一主题，<a href="http://www.memorymanagement.org/">memorymanagement.org</a> 将是极好的资源，其中列出了大量出版物和在线文章。如需了解对象池的更多信息，请访问 <a href="http://en.wikipedia.org/wiki/Object_pool_pattern">Wikipedia 页面</a>以及 <a href="http://sourcemaking.com/design_patterns/object_pool">Sourcemaking.com</a>。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2019–01–17</span></li>
+<li><span class="page-history">在 Unity <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> 版中添加了在 Mono 和 IL2CPP 脚本后端禁用垃圾收集的功能 <span class="search-words">NewIn20183</span></span></li>
+<li><span class="page-history">在 Unity <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> 中添加了实验性的“增量垃圾收集”功能 <span class="search-words">NewIn20191</span></span></li>
+<li><span class="page-history">添加了其他平台（PS4、XBox One、Nintendo Switch 和 Unity Editor）上对增量垃圾收集的支持。<a href="https://docs.unity3d.com/2019.2/Documentation/Manual/30_search.html?q=newin20192">2019.2</a> <span class="search-words">NewIn20192</span></span></li>
+</ul>
+<!-- area:core -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ExecutionOrder.html"></a></span><div class="tip">事件函数的执行顺序</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PlatformDependentCompilation.html"></a></span><div class="tip">平台相关的编译</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

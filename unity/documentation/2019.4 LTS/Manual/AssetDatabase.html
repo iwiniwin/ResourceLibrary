@@ -1,0 +1,376 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="资源数据库 - Unity 手册">
+<title>资源数据库 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/AssetDatabaseModeSwitcher.png">
+<meta name="description" content="对于大多数类型的资源，Unity 需要将资源的源文件中的数据转换为可用于游戏或实时应用程序的格式。这些转换后的文件及其关联的数据会存储在资源数据库 (Asset Database) 中。">
+<meta property="og:description" content="对于大多数类型的资源，Unity 需要将资源的源文件中的数据转换为可用于游戏或实时应用程序的格式。这些转换后的文件及其关联的数据会存储在资源数据库 (Asset Database) 中。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'AssetDatabase';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetDatabase.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/AssetDatabase.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetDatabase.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/AssetDatabase.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/AssetDatabase.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/AssetDatabase.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/AssetDatabase.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/AssetDatabase.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetDatabase.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetDatabase.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetDatabase.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetDatabase.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetDatabase.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetDatabase.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetDatabase.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetDatabase.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetDatabase.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetDatabase.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetDatabase.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetDatabase.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetDatabase.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetDatabase.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetDatabase.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetDatabase.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetDatabase.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/AssetDatabase.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/AssetDatabase.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/AssetDatabase.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/AssetDatabase.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/AssetDatabase.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/AssetDatabase.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetDatabase.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetDatabase.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetDatabase.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetDatabase.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetDatabase.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetDatabase.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetDatabase.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetDatabase.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetDatabase.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetDatabase.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetDatabase.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetDatabase.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetDatabase.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetDatabase.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetDatabase.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetDatabase.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetDatabase.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AssetWorkflow.html">资源工作流程</a></li>
+<li>资源数据库</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetPackagesImport.html"></a></span><div class="tip">导入本地资源包</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetDatabaseRefreshing.html"></a></span><div class="tip">刷新资源数据库</div>
+</div>
+</div></div>
+<h1>资源数据库</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>对于大多数类型的资源，Unity 需要将资源的源文件中的数据转换为可用于游戏或实时应用程序的格式。这些转换后的文件及其关联的数据会存储在<strong>资源数据库 (Asset Database)</strong> 中。</p>
+
+<p>由于大多数文件格式都经过优化来节省存储空间，所以需要执行转换过程，而在游戏或实时应用程序中，资源数据需要采用可用于硬件（例如 CPU、显卡或音频硬件）的格式才能立即使用。例如，Unity 将 .png 图像文件导入为纹理时，在运行时不会使用原始的 .png 格式数据。而在导入纹理时，Unity 将以另一种格式创建图像的新表示形式，并将其存储在项目的 <em>Library</em> 文件夹中。Unity 引擎中的 Texture 类会使用此导入版本，然后 Unity 将其上传到 GPU 以进行实时显示。</p>
+
+<p>如果随后修改资源已导入的源文件（或更改其任何依赖项），Unity 会重新导入该文件并更新导入版本的数据。请参阅<a href="AssetDatabaseRefreshing.html">刷新资源数据库</a>以了解关于此过程的更多信息。</p>
+
+<p>资源数据库还提供了 <a href="../ScriptReference/AssetDatabase.html">AssetDatabase API</a> 来访问资源以及控制或自定义导入过程。</p>
+
+<p><strong>注意</strong>：_本文档引用的是资源数据库<strong>版本 2</strong>_。请参阅下面的<a href="#version">资源数据库版本</a>以了解更多信息。</p>
+
+<h2>资源导入依赖项</h2>
+
+<p>资源数据库可以跟踪每个资源的所有依赖项，并保留导入版本的所有资源的缓存。</p>
+
+<p>资源的导入依赖项包括可能影响所导入数据的全部数据。例如，一个资源的源文件是一个依赖项以及资源的导入设置（例如纹理的压缩类型）或项目的目标平台（例如，PS4 硬件要求的数据格式与 Android 硬件不同）。如果修改其中任意一个依赖项，则缓存版本的已导入资源都将变为无效状态，并且 Unity 必须将其重新导入才能反映所做的更改。</p>
+
+<h2>资源缓存</h2>
+
+<p>资源缓存是 Unity 存储导入版本的资源的位置。由于 Unity 始终可以从源资源文件及其依赖项重新创建这些导入的版本，所以这些导入的版本被视为预先计算的数据的缓存。在使用 Unity 时，此缓存可节省时间。因此，应该从版本控制系统中排除资源缓存中的文件。</p>
+
+<p>默认情况下，Unity 使用本地缓存，这意味着导入版本的资源将缓存在本地计算机上项目文件夹的 <em>Library</em> 文件夹中。应该使用 <strong>ignore file</strong> 从版本控制中排除此文件夹。</p>
+
+<p>但是，如果您是团队成员并且使用版本控制系统，最好也使用 <a href="UnityAccelerator.html">Unity Accelerator</a>，它可以跨 LAN 共享资源缓存。</p>
+
+<p>由于缓存的资源不适合存储在版本控制系统中，所以您的团队共同处理项目并使用本地缓存时，如果资源或依赖项发生改变，则每个团队成员的 Unity 副本都将执行导入过程，这可能会很耗时。</p>
+
+<p>Unity 为此提供的解决方案称为 <a href="UnityAccelerator.html">Unity Accelerator</a>。Accelerator 的功能之一是软件代理，它存储缓存版本的资源并将其提供给同一本地网络上共同从事同一项目的每个人。这意味着只有一个团队成员需要导入任何给定资源。随后，导入版本的资源将存储在 Accelerator 中，其他团队成员可以下载缓存的版本，而不必在本地等待导入过程。</p>
+
+<h2>源资源和 Artifact</h2>
+
+<p>Unity 在 Library 文件夹中保留两个数据库文件，它们统称为资源数据库。这两个数据库可以跟踪有关源资源文件和 Artifact（这是有关导入结果的信息）的信息。</p>
+
+<h3>源资源数据库</h3>
+
+<p>源资源数据库包含有关源资源文件的元数据信息，Unity 将这些信息用来确定文件是否被修改，从而决定是否应该重新导入文件。这些信息中包括诸如上次修改日期、文件内容哈希、GUID 和其他元数据信息之类的信息。</p>
+
+<h3>Artifact 数据库</h3>
+
+<p>Artifact 是导入过程的结果。Artifact 数据库包含有关每个源资源的导入结果的信息。每个 Artifact 都包含导入依赖项信息、Artifact 元数据信息和 Artifact 文件列表。</p>
+
+<p><strong>注意：</strong>数据库文件位于项目的 <em>Library</em> 文件夹中，因此应从版本控制系统中将这些文件排除。可以在以下位置找到它们：</p>
+
+<ul>
+<li>源资源数据库：<code>Library\SourceAssetDB</code>
+</li>
+<li>Artifact 数据库：<code>Library\ArtifactDB</code>
+</li>
+</ul>
+
+<h2>导入资源</h2>
+
+<p>Unity 通常会在资源被拖入项目时自动导入资源，但也可以在脚本控制下导入资源。为此，可以使用 <a href="../ScriptReference/AssetDatabase.ImportAsset.html">AssetDatabase.ImportAsset</a> 方法，如以下示例所示。</p>
+
+<pre><code>using UnityEngine;
+using UnityEditor;
+
+public class ImportAsset {
+    [MenuItem ("AssetDatabase/ImportExample")]
+    static void ImportExample ()
+    {
+        AssetDatabase.ImportAsset("Assets/Textures/texture.jpg", ImportAssetOptions.Default);
+    }
+}
+
+</code></pre>
+
+<p>还可以将 <a href="../ScriptReference/ImportAssetOptions.html">AssetDatabase.ImportAssetOptions</a> 类型的额外参数传递给 AssetDatabase.ImportAsset 调用。脚本参考页面介绍了不同的选项及其对函数行为的影响。</p>
+
+<h2>加载资源</h2>
+
+<p>编辑器仅在需要时加载资源，例如，是否将资源添加到场景或从 Inspector 面板中进行编辑。但是，可以使用 <a href="../ScriptReference/AssetDatabase.LoadAssetAtPath.html">AssetDatabase.LoadAssetAtPath</a>、<a href="../ScriptReference/AssetDatabase.LoadMainAssetAtPath.html">AssetDatabase.LoadMainAssetAtPath</a>、<a href="../ScriptReference/AssetDatabase.LoadAllAssetRepresentationsAtPath.html">AssetDatabase.LoadAllAssetRepresentationsAtPath</a> 和 <a href="../ScriptReference/AssetDatabase.LoadAllAssetsAtPath.html">AssetDatabase.LoadAllAssetsAtPath</a> 从脚本加载和访问资源。有关更多详细信息，请参阅脚本文档。</p>
+
+<pre><code>using UnityEngine;
+using UnityEditor;
+
+public class ImportAsset {
+    [MenuItem ("AssetDatabase/LoadAssetExample")]
+    static void ImportExample ()
+    {
+        Texture2D t = AssetDatabase.LoadAssetAtPath("Assets/Textures/texture.jpg", typeof(Texture2D)) as Texture2D;
+    }
+}
+
+</code></pre>
+
+<h2>使用 AssetDatabase 进行文件操作</h2>
+
+<p>由于 Unity 保留有关资源文件的元数据，因此不应使用文件系统创建、移动或删除这些文件。相反，可以使用 <a href="../ScriptReference/AssetDatabase.Contains.html">AssetDatabase.Contains</a>、<a href="../ScriptReference/AssetDatabase.CreateAsset.html">AssetDatabase.CreateAsset</a>、<a href="../ScriptReference/AssetDatabase.CreateFolder.html">AssetDatabase.CreateFolder</a>、<a href="../ScriptReference/AssetDatabase.RenameAsset.html">AssetDatabase.RenameAsset</a>、<a href="../ScriptReference/AssetDatabase.CopyAsset.html">AssetDatabase.CopyAsset</a>、<a href="../ScriptReference/AssetDatabase.MoveAsset.html">AssetDatabase.MoveAsset</a>、<a href="../ScriptReference/AssetDatabase.MoveAssetToTrash.html">AssetDatabase.MoveAssetToTrash</a> 和 <a href="../ScriptReference/AssetDatabase.DeleteAsset.html">AssetDatabase.DeleteAsset</a>。</p>
+
+<pre><code>public class AssetDatabaseIOExample {
+    [MenuItem ("AssetDatabase/FileOperationsExample")]
+    static void Example ()
+    {
+        string ret;
+        
+        // 创建
+        Material material = new Material (Shader.Find("Specular"));
+        AssetDatabase.CreateAsset(material, "Assets/MyMaterial.mat");
+        if(AssetDatabase.Contains(material))
+            Debug.Log("Material asset created");
+        
+        // 重命名
+        ret = AssetDatabase.RenameAsset("Assets/MyMaterial.mat", "MyMaterialNew");
+        if(ret == "")
+            Debug.Log("Material asset renamed to MyMaterialNew");
+        else
+            Debug.Log(ret);
+        
+        // 创建文件夹
+        ret = AssetDatabase.CreateFolder("Assets", "NewFolder");
+        if(AssetDatabase.GUIDToAssetPath(ret) != "")
+            Debug.Log("Folder asset created");
+        else
+            Debug.Log("Couldn't find the GUID for the path");
+        
+        // 移动
+        ret = AssetDatabase.MoveAsset(AssetDatabase.GetAssetPath(material), "Assets/NewFolder/MyMaterialNew.mat");
+        if(ret == "")
+            Debug.Log("Material asset moved to NewFolder/MyMaterialNew.mat");
+        else
+            Debug.Log(ret);
+        
+        // 复制
+        if(AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(material), "Assets/MyMaterialNew.mat"))
+            Debug.Log("Material asset copied as Assets/MyMaterialNew.mat");
+        else
+            Debug.Log("Couldn't copy the material");
+        // 手动刷新数据库以通知更改
+        AssetDatabase.Refresh();
+        Material MaterialCopy = AssetDatabase.LoadAssetAtPath("Assets/MyMaterialNew.mat", typeof(Material)) as Material;
+        
+        // 移到垃圾箱
+        if(AssetDatabase.MoveAssetToTrash(AssetDatabase.GetAssetPath(MaterialCopy)))
+            Debug.Log("MaterialCopy asset moved to trash");
+        
+        // 删除
+        if(AssetDatabase.DeleteAsset(AssetDatabase.GetAssetPath(material)))
+            Debug.Log("Material asset deleted");
+        if(AssetDatabase.DeleteAsset("Assets/NewFolder"))
+            Debug.Log("NewFolder deleted");
+        
+        // 进行所有更改后刷新 AssetDatabase
+        AssetDatabase.Refresh();
+    }
+}
+
+</code></pre>
+
+<p><a name="version"></a></p>
+
+<h2>资源数据库版本</h2>
+
+<p>本文档引用的是资源数据库<strong>版本 2</strong>，这是使用 Unity 2019.3 或更高版本来创建新项目时包含的默认版本。旧版本（版本 1）是 Unity 早期版本中的默认版本，其运行方式有所不同。如果要将较旧版本的项目导入到 Unity 2019.3 或更高版本中，可以选择升级到新的资源数据库以获得更高版本的优点。</p>
+
+<p>在项目的设置中可以切换旧版 (v1) 和新版 (v2) 模式。请选择 <strong>Edit</strong> &gt; <strong>Project Settings</strong> 以打开 Project Settings 窗口。然后选择左侧的 <strong>Editor</strong> 部分，随后在右侧的设置列表中查找 <strong>Asset Pipeline</strong>。随后可以使用 Mode 下拉菜单来更改版本。</p>
+
+<figure>
+<img src="../uploads/Main/AssetDatabaseModeSwitcher.png" alt="">
+</figure>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetPackagesImport.html"></a></span><div class="tip">导入本地资源包</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetDatabaseRefreshing.html"></a></span><div class="tip">刷新资源数据库</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

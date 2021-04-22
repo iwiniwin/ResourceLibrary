@@ -1,0 +1,352 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Scene 视图光照绘制模式 - Unity 手册">
+<title>Scene 视图光照绘制模式 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/GIVis2.png">
+<meta name="description" content="如果您的项目使用内置渲染管线，则 Scene 视图具有多种绘制模式，可以帮助您了解和调试场景中的光照。">
+<meta property="og:description" content="如果您的项目使用内置渲染管线，则 Scene 视图具有多种绘制模式，可以帮助您了解和调试场景中的光照。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'GIVis';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/GIVis.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/GIVis.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/GIVis.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/GIVis.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/GIVis.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/GIVis.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/GIVis.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/GIVis.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/GIVis.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/GIVis.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/GIVis.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/GIVis.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/GIVis.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/GIVis.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/GIVis.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/GIVis.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/GIVis.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/GIVis.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/GIVis.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/GIVis.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/GIVis.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/GIVis.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/GIVis.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/GIVis.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/GIVis.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/GIVis.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/GIVis.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/GIVis.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/GIVis.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/GIVis.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/GIVis.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/GIVis.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/GIVis.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/GIVis.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/GIVis.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/GIVis.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/GIVis.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/GIVis.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/GIVis.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/GIVis.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/GIVis.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/GIVis.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/GIVis.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/GIVis.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/GIVis.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/GIVis.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/GIVis.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/GIVis.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li>Scene 视图光照绘制模式</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GICache.html"></a></span><div class="tip">GI 缓存</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Shaders.html"></a></span><div class="tip">网格、材质、着色器和纹理</div>
+</div>
+</div></div>
+<h1>Scene 视图光照绘制模式</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>如果您的项目使用内置渲染管线，则 Scene 视图具有多种<a href="ViewModes.html">绘制模式</a>，可以帮助您了解和调试场景中的光照。</p>
+
+<p>使用 Scene 视图控制栏选择所需的绘制模式。</p>
+
+<h2>Shading Mode</h2>
+
+<h3>Shaded</h3>
+
+<p><strong>Shading Mode</strong> 的默认设置为 <strong>Shaded</strong>。此选项表示场景根据当前的光照设置完全点亮。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis2.png" alt="">
+</figure>
+
+<h2>Miscellaneous</h2>
+
+<h3>Shadow Cascades</h3>
+
+<p>使用颜色可以采用不同的级联级别显示场景的各个部分。此模式有助于正确设置阴影距离、级联计数和级联分割比率。请注意，此可视化方法会使用通常大于阴影距离的 Scene 视图远平面，因此如果要将摄像机的游戏内行为与小远平面匹配，可能需要缩短阴影距离。</p>
+
+<figure>
+<img src="../uploads/Main/ShadCascade4Visualization.png" alt="Scene 视图中的阴影级联绘制模式">
+<figcaption>Scene 视图中的阴影级联绘制模式</figcaption>
+</figure>
+
+<h2>Global Illumination</h2>
+
+<h3>Systems</h3>
+
+<p>预计算阶段将基于接近度和光照贴图参数自动将场景细分为系统（即，共享相同实时光照贴图的对象组）。这样做是为了在更新间接光照时允许多线程和优化。此可视化将显示具有不同颜色的系统。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis4.png" alt="">
+</figure>
+
+<h3>Clustering</h3>
+
+<p>此选项显示 Enlighten 通过标记为 <strong>Contribute GI</strong> 的几何体生成的聚类。Enlighten 使用在“创建聚类”(Clustering) 步骤中生成的聚类来计算间接光照。生成的聚类应该大于光照贴图纹理像素（比率由<a href="class-LightmapParameters.html">光照贴图参数</a>中的 Cluster Resolution 参数控制）。如果未正确设置比例，几何体转换为聚类的步骤可能会占用大量内存。
+如果您看到内存使用量高或烘焙时间长，可能是因为场景中的静态几何体被切割成的数量超过了实际需要的聚类数量。聚类 Scene 视图模式可以帮助您识别需要调整 UV 或实时分辨率 (Realtime Resolution) 的几何体。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis10.png" alt="">
+</figure>
+
+<h3>Lit Clustering</h3>
+
+<p>这些是与聚类视图中看到的相同聚类，但应用了实时全局光照。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis11.png" alt="">
+</figure>
+
+<h3>UV Charts</h3>
+
+<p>此选项显示在计算预计算实时全局光照时使用的优化 UV 布局。这是预计算过程中自动生成的。完成了实例预计算阶段便立即可用。UV Charts 的 Scene 视图模式可以帮助您识别需要调整 UV 或缩放的几何体（使用光照贴图参数中的 Resolution 参数来更改比例）。调整实时分辨率时，此视图也很有用。每个图表的颜色不同。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis3.png" alt="">
+</figure>
+
+<h2>Realtime Global Illumination</h2>
+
+<h3>Albedo</h3>
+
+<p>此选项显示计算 GI 时使用的反照率。反照率是根据材质信息生成的，可以通过添加自定义 Meta pass 来完全自定义。方格覆盖层可显示传递给 Enlighten 的反照率纹理的分辨率。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis5.png" alt="">
+</figure>
+
+<h3>Emissive</h3>
+
+<p>显示计算 GI 时使用的发射。发射是根据材质信息生成的，可通过添加自定义 Meta pass 来完全自定义。方格覆盖层可显示传递给 Enlighten 的发射纹理的分辨率。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis6.png" alt="">
+</figure>
+
+<h3>Indirect</h3>
+
+<p>此选项仅显示间接光照（Enlighten 生成的实时全局光照贴图的内容）。方格覆盖层可显示辐照度纹理的分辨率。如果禁用 Realtime Global Illumination，则此视图模式不可选。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis7.png" alt="">
+</figure>
+
+<h3>Directionality</h3>
+
+<p>该视图显示最主要的光线方向矢量。请参阅<a href="LightmappingDirectional.html">方向光照贴图</a>页面以了解更多信息。方格覆盖层可显示方向性纹理的分辨率。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis8.png" alt="">
+</figure>
+
+<h2>Baked Global Illumination</h2>
+
+<h3>Baked Lightmap</h3>
+
+<p>此选项显示应用于场景几何体的烘焙光照贴图。方格覆盖层可显示烘焙光照贴图分辨率。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis9.jpg" alt="">
+</figure>
+
+<h3>Shadowmask</h3>
+
+<p>此选项显示阴影遮罩纹理遮挡值。它以相同的颜色为网格和光源辅助图标着色，因此用户可以验证光照遮挡因子是否按预期烘焙。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis12.jpg" alt="">
+</figure>
+
+<h3>Texel Validity</h3>
+
+<p>此模式显示哪些纹理像素由于主要看到背面而被标记为无效。在光照贴图烘焙期间，Unity 从每个纹理像素发出光线。如果纹理像素光线的很大一部分照射到背面几何体，则该纹理像素被标记为无效。这是因为纹理像素首先不应该能够看到背面。Unity 处理此问题的方法是用有效相邻纹理像素替换无效纹理像素。您可以使用 <strong>Backface Tolerance</strong> 参数 (<strong>LightmapParameters</strong> &gt; <strong>General GI</strong>) 来调整此行为。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis14.jpg" alt="">
+</figure>
+
+<h3>UV Overlap</h3>
+
+<p>如果光照贴图图表在 UV 空间中距离太近，则当 GPU 对光照贴图进行采样时，它们内部的像素值可能会相互渗色。这可能导致意外瑕疵。此模式允许您识别哪些纹理像素过于靠近其他图表中的纹理像素。在解决 UV 问题时，这非常有用。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis15.jpg" alt="">
+</figure>
+
+<h2>Light Overlap</h2>
+
+<p>此模式允许您查看是否所有静态光源都已烘焙到阴影遮罩。如果关卡某个区域被四个以上的静态光源照亮，超出的光源将回退到完全烘焙并显示为红色。与此计算相关的不是实际光照表面，而是光源的体积的交点区域。因此，即使在下面的截屏中看起来好像网格上的彩色斑点不重叠，但四个聚光灯的锥体最终也会与方向光一起重叠在地平面下方。</p>
+
+<figure>
+<img src="../uploads/Main/GIVis13.jpg" alt="">
+</figure>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GICache.html"></a></span><div class="tip">GI 缓存</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Shaders.html"></a></span><div class="tip">网格、材质、着色器和纹理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

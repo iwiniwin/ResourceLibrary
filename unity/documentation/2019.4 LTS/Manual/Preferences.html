@@ -1,0 +1,862 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Preferences - Unity 手册">
+<title>Preferences - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/PrefsGeneral.png">
+<meta name="description" content="Unity 提供了许多偏好设置以用于自定义 Unity Editor 的行为。">
+<meta property="og:description" content="Unity 提供了许多偏好设置以用于自定义 Unity Editor 的行为。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'Preferences';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/Preferences.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/Preferences.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/Preferences.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/Preferences.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/Preferences.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/Preferences.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/Preferences.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/Preferences.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/Preferences.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/Preferences.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/Preferences.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/Preferences.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/Preferences.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/Preferences.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/Preferences.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/Preferences.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/Preferences.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/Preferences.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/Preferences.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/Preferences.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/Preferences.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/Preferences.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/Preferences.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/Preferences.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/Preferences.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/Preferences.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/Preferences.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/Preferences.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/Preferences.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/Preferences.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/Preferences.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/Preferences.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/Preferences.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/Preferences.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/Preferences.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/Preferences.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/Preferences.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/Preferences.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/Preferences.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/Preferences.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/Preferences.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/Preferences.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/Preferences.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/Preferences.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/Preferences.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/Preferences.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/Preferences.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/Preferences.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li>Preferences</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="2DAnd3DModeSettings.html"></a></span><div class="tip">2D 和 3D 模式设置</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Presets.html"></a></span><div class="tip">预设</div>
+</div>
+</div></div>
+<h1>Preferences</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 提供了许多偏好设置以用于自定义 Unity Editor 的行为。</p>
+
+<p>要访问 <strong>Preferences</strong> 窗口，请从 Unity 的主菜单中选择 <strong>Edit</strong> &gt; <strong>Preferences</strong> (Windows) 或 <strong>Unity</strong> &gt; <strong>Preferences</strong> (Mac)。可使用以下偏好设置类别：</p>
+
+<ul>
+<li><a href="#General">General</a></li>
+<li><a href="#2D">2D</a></li>
+<li><a href="#Analysis">Analysis</a></li>
+<li><a href="#Cache-Server">Cache Server</a></li>
+<li><a href="#Colors">Colors</a></li>
+<li><a href="#External-Tools">External Tools</a></li>
+<li><a href="#GI-Cache">GI Cache</a></li>
+<li><a href="#UI-Scaling">UI Scaling</a></li>
+<li><a href="#Custom">包的自定义偏好设置</a></li>
+</ul>
+
+<h2>浏览 Preferences 窗口</h2>
+
+<p>使用搜索框可以筛选设置类别列表，并在右侧的详细信息面板中突出显示关键字。</p>
+
+<p><a name="General"></a></p>
+
+<h2>General</h2>
+
+<p><strong>General</strong> 偏好设置可用于在总体上自定义 Unity 的使用方式。</p>
+
+<figure>
+<img src="../uploads/Main/PrefsGeneral.png" alt="Preferences 窗口中的 General 范围">
+<figcaption>Preferences 窗口中的 General 范围</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Refresh</strong></td>
+	<td style="text-align:left;">启用此设置可在资源更改时自动更新资源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Load Previous Project on Startup</strong></td>
+	<td style="text-align:left;">启用此设置可在启动时始终加载上一个项目。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Compress Assets on Import</strong></td>
+	<td style="text-align:left;">启用此设置可在导入期间自动压缩资源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>Disable Editor Analytics</strong> (Pro only)</td>
+	<td style="text-align:left;">启用此设置可禁止 Editor 自动将信息发送回 Unity。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Show Asset Store search hits</strong></td>
+	<td style="text-align:left;">启用此设置可在 Project Browser 中显示 Asset Store 中的免费/付费资源数量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Verify Saving Assets</strong></td>
+	<td style="text-align:left;">如果要在退出 Unity 时单独验证要保存的资源，请启用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Script Changes While Playing</strong></td>
+	<td style="text-align:left;">选择在 Editor 中运行游戏时脚本发生更改的情况下 Unity 采取的行为。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Recompile And Continue Playing</em></td>
+	<td style="text-align:left;">重新编译脚本并继续运行场景。这是默认行为，但如果脚本依赖于任何不可序列化的数据，可能需要更改默认行为。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Recompile After Finished Playing</em></td>
+	<td style="text-align:left;">推迟重新编译，直到手动停止场景，从而避免发生任何中断。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Stop Playing And Recompile</em></td>
+	<td style="text-align:left;">立即停止场景的重新编译，允许您快速重新启动测试。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Editor Theme</strong></td>
+	<td style="text-align:left;">选择要在 Unity Editor 中使用的皮肤。此设置仅适用于 Plus 和 Pro 版 Unity 订阅。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Personal</em></td>
+	<td style="text-align:left;">使用浅灰色背景和黑色文本。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Professional</em></td>
+	<td style="text-align:left;">使用深灰色背景和白色文本。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Editor Font</strong></td>
+	<td style="text-align:left;">选择要在 Unity Editor 中显示的字体。默认字体为 Inter。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Alpha Numeric Sorting</strong></td>
+	<td style="text-align:left;">启用此设置可在 <a href="Hierarchy.html">Hierarchy</a> 窗口的右上角显示一个按钮，用于在变换 (Transform) 排序（默认）和字母数字 (Alphanumeric) 排序之间切换。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Code Coverage</strong></td>
+	<td style="text-align:left;">启用此设置可访问 Mono 公开的代码覆盖率数据的接口。<a href="https://en.wikipedia.org/wiki/Code_coverage">代码覆盖率</a>可显示在代码运行时执行了多少代码。此功能通常与自动化的单元测试相关联，但是当 Editor 正在运行时，可以随时收集 Unity 中的覆盖率数据。有关更多信息，请参阅 <a href="https://docs.unity3d.com/ScriptReference/TestTools.Coverage.html">Coverage API</a> 的文档。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Interaction Mode</strong></td>
+	<td style="text-align:left;">指定 Editor 在最长空闲多长时间之后更新。一帧结束后，Editor 将等待指定的时间，直到下一帧开始。<br><br>这样可以调节 Editor 的性能，并减少 CPU 资源消耗和功耗。<br><br>例如，如果要测试 Editor 的性能，请将此属性设置为 <strong>No Throttling</strong>。如果要降低功耗（例如，延长笔记本电脑的电池续航时间），请将此属性设置为调速模式之一。<br><br>在调速模式下，如果与 Editor 进行交互（例如，通过在 Scene 视图中平移），Editor 将停止空闲模式。<br><br><strong>注意：</strong>在运行模式下，Unity 会忽略您使用此偏好设置应用的任何调速模式。除非在 <a href="GameView.html">Game 视图</a>中启用了 VSync 选项，或者将 <code>Application.targetFrameRate</code> 设置为 –1 以外的值，否则 Editor 会尽快更新。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Default</em></td>
+	<td style="text-align:left;">每次勾选时，Editor 最多闲置 4 毫秒。如果一帧用时 5 毫秒或更长时间，则 Editor 完全不会空闲，并且下一帧会自动开始。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>No Throttling</em></td>
+	<td style="text-align:left;">每一帧结束时，下一帧立即开始。Editor 永远不会等待，并且会尽快更新。<br><br>此模式消耗大量 CPU 资源。如果使用的是笔记本电脑，可能会导致电池电量快速耗尽。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Monitor Refresh Rate</em></td>
+	<td style="text-align:left;">Editor 空闲的最长时间是监视器的帧率（以毫秒为单位）。对于大多数监视器，此值为 16 毫秒。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Custom</em></td>
+	<td style="text-align:left;">指定应用程序可以处于空闲状态的最长时间。<br><br>选择此选项时，将显示 <strong>Frame Throttling (milliseconds)</strong> 属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Frame Throttling (milliseconds)</strong></td>
+	<td style="text-align:left;">当 <strong>Interaction Mode</strong> 设置为 <strong>Custom</strong> 时，此属性指定 Editor 可以在帧之间处于空闲状态的时间长度。该值可介于 0 到 33 毫秒之间。0 等效于将 <strong>Interaction Mode</strong> 设置为 <strong>No Throttling</strong>。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="2D"></a></p>
+
+<h2>2D</h2>
+
+<p>使用 <strong>Max Sprite Atlas Cache Size (GB)</strong> 偏好设置可设置<a href="class-SpriteAtlas.html">精灵图集</a>缓存文件夹的最大大小。Unity 会尽可能使此文件夹的大小低于此水平。</p>
+
+<figure>
+<img src="../uploads/Main/Prefs2D.png" alt="Preferences 窗口中的 2D 范围">
+<figcaption>Preferences 窗口中的 2D 范围</figcaption>
+</figure>
+
+<p><a name="Analysis"></a></p>
+
+<h2>Analysis</h2>
+
+<p><strong>Analysis</strong> 偏好设置可定义<a href="https://docs.unity3d.com/Manual/Profiler.html">性能分析器 (Profiler)</a> 的设置。</p>
+
+<figure>
+<img src="../uploads/Main/PrefsAnalysis.png" alt="Preferences 窗口中的 Analysis 范围">
+<figcaption>Preferences 窗口中的 Analysis 范围</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Frame Count</strong></td>
+	<td style="text-align:left;">选择要在 Profiler 窗口中显示的帧数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Remember last recording state</strong></td>
+	<td style="text-align:left;">保存和加载性能分析器会话之间的记录状态。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default recording state</strong></td>
+	<td style="text-align:left;">选择在性能分析器启动时是启用还是禁用记录。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Cache-Server"></a></p>
+
+<h2>Cache Server</h2>
+
+<p>只要资源发生变化，Unity 就会自动重新导入该资源。设置缓存服务器 (Cache Server) 可以大大减少导入资源所需的时间。可以将缓存服务器设置为远程托管，也可以存储在本地计算上。</p>
+
+<figure>
+<img src="../uploads/Main/PrefsCacheServer.png" alt="Preferences 窗口中的 Cache Server 范围">
+<figcaption>Preferences 窗口中的 Cache Server 范围</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>New Projects default asset pipeline</strong></td>
+	<td style="text-align:left;">选择新项目的默认资源管线。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Active version</strong></td>
+	<td style="text-align:left;">显示当前的资源管线版本。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Asset Pipeline v1 (deprecated)</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Server Mode</strong></td>
+	<td style="text-align:left;">定义<a href="CacheServer.html">缓存服务器</a>模式。<br><strong>Local__：使用此计算机上的本地缓存服务器。此时将显示<a href="#local">本地存储</a>偏好设置。<br></strong>Remote__：使用远程计算机上托管的缓存服务器。此时将显示<a href="#remote">远程托管</a>偏好设置。<br>默认情况下会禁用缓存服务器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Asset Pipeline v2</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Server Default Mode</strong></td>
+	<td style="text-align:left;">定义默认情况下是启用还是禁用缓存服务器。可以在 Unity Editor 设置中根据每个项目覆盖此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default IP address</strong></td>
+	<td style="text-align:left;">设置要使用的缓存服务器的默认 IP 地址。可以在 Unity Editor 设置中根据每个项目覆盖此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Check Connection</strong></td>
+	<td style="text-align:left;">单击此按钮尝试连接到远程缓存服务器。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="remote"></a></p>
+
+<h3>远程托管</h3>
+
+<p>仅当 <strong>Use Cache Server</strong> 设置为 <strong>Remote</strong> 时，这些偏好设置才可用。</p>
+
+<figure>
+<img src="../uploads/Main/PrefsCacheServer-Remote.png" alt="远程缓存服务器的偏好设置">
+<figcaption>远程缓存服务器的偏好设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>IP Address</strong></td>
+	<td style="text-align:left;">输入<a href="CacheServer.html#admin-setup">管理员设置</a>的专用缓存服务器的 IP 地址。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Check Connection</strong></td>
+	<td style="text-align:left;">单击此按钮尝试连接到远程缓存服务器。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="local"></a></p>
+
+<h3>本地存储</h3>
+
+<p>仅当 <strong>Use Cache Server</strong> 设置为 <strong>Local</strong> 时，这些偏好设置才可用。</p>
+
+<figure>
+<img src="../uploads/Main/PrefsCacheServer-Local.png" alt="本地缓存服务器的偏好设置">
+<figcaption>本地缓存服务器的偏好设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Maximum Cache Size (GB)</strong></td>
+	<td style="text-align:left;">指定缓存服务器在此计算机存储中的最大大小（以 GB 为单位）。最小大小为 1GB。最大大小为 200GB。<br>默认缓存大小为 10GB。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom cache location</strong></td>
+	<td style="text-align:left;">启用此选项可指定所需的缓存存储位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Folder Location</strong></td>
+	<td style="text-align:left;">单击 <strong>Browse</strong> 按钮可指定缓存的位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Cache size is</strong> …</td>
+	<td style="text-align:left;">用于显示当前缓存大小的消息。在单击 <strong>Check Cache Size</strong> 按钮之前，此消息显示为 <strong>Cache size is unknown</strong>。单击此按钮后，消息中将显示计算出的缓存大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Check Cache Size</strong></td>
+	<td style="text-align:left;">单击此按钮可查看本地缓存服务器使用的存储量。如果项目很大，此操作可能需要一些时间才能完成。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Clean Cache</strong></td>
+	<td style="text-align:left;">删除缓存的内容。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Folder Location</strong></td>
+	<td style="text-align:left;">显示当前缓存文件夹的位置。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Colors"></a></p>
+
+<h2>Colors</h2>
+
+<figure>
+<img src="../uploads/Main/PrefsColors.png" alt="Preferences 窗口中的 Colors 范围">
+<figcaption>Preferences 窗口中的 Colors 范围</figcaption>
+</figure>
+
+<p><strong>Colors</strong> 偏好设置允许选择 Unity 在显示各种用户界面元素时使用的颜色。</p>
+
+<p><a name="External-Tools"></a></p>
+
+<h2>External Tools</h2>
+
+<p>使用 <strong>External Tools</strong> 偏好设置可设置用于编写脚本、处理图像和进行源代码控制的外部应用程序。</p>
+
+<figure>
+<img src="../uploads/Main/PrefsExtToolsNew.png" alt="Preferences 窗口中的 External Tools 范围">
+<figcaption>Preferences 窗口中的 External Tools 范围</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>External Script Editor</strong></td>
+	<td style="text-align:left;">选择 Unity 应使用哪个应用程序来打开脚本文件。Unity 会自动将正确的参数传递给内置支持的脚本编辑器。Unity 内置支持 Visual Studio Community、Visual Studio Code (VSCode) 和 JetBrains Rider。<strong>Open by file extension</strong> 选项会将设备的默认应用程序用于打开相关的文件类型。如果没有默认应用程序可用，设备会打开一个窗口，提示选择用于打开文件的应用程序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>External Script Editor Args</strong></td>
+	<td style="text-align:left;">This field controls parameters that Unity can send to your code editor when you open a file. The <code>$(File)</code>, <code>$(Line)</code> and <code>$(Column)</code> arguments pass the filename, line number and column number to your external code editor. Your code editor uses these arguments to open the correct file with the cursor at the correct position. For example, if you double click an error message in the Unity Console, Unity passes these arguments from that error message to the external editor, which then opens the right file at the position where that error occurred.<br><br>You can manually edit this field to customize the arguments Unity sends to your external code editor. Click the <strong>Reset argument</strong> button to reset this field to its default setting, which is shown in the above screenshot.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate all .csproj files.</strong></td>
+	<td style="text-align:left;">启用此设置可生成所有 .csproj 文件。代码编辑器使用 .sln 和 .csproj 文件来访问有关项目的数据。.csproj 文件以 XML 格式存储描述性数据或元数据。此数据可能包括版本信息、平台要求、构建文件或数据库设置。<br><br>当这些文件存在时，代码编辑器可以使用其中包含的数据来提供有用的功能，例如突出显示潜在的编译错误。启用此设置可指示 Unity 在项目中尽可能创建 .csproj 文件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Extensions handled</strong><br><em>（仅当在 External Script Editor 中选择 Rider 或 Visual Studio Code 时才可用）</em>
+</td>
+	<td style="text-align:left;">此字段确定<strong>外部脚本编辑器 (External Script Editor)</strong> 打开的文件类型。此字段预先填充了脚本编辑器默认打开的文件列表。要将其他文件类型添加到此列表，请键入文件扩展名，并用分号分隔每个扩展名。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Add .unityproj’s to .sln</strong><br><em>（已弃用）</em>
+</td>
+	<td style="text-align:left;">此设置永久无效，因为已经弃用 Unityscript（这是生成 .unityproj 文件的脚本语言）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Editor Attaching</strong></td>
+	<td style="text-align:left;">启用此设置可允许外部代码编辑器调试在 Unity Editor 中运行的脚本。如果禁用此选项，则无法通过将脚本调试器附加到 Unity 来调试脚本。有关调试的更多信息，请参阅<a href="ManagedCodeDebugging.html">在 Unity 中调试 C#</a> 文档。<br><br><strong>注意：</strong>更改此设置时，需要重新启动 Unity 才能使更改生效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Image application</strong></td>
+	<td style="text-align:left;">选择希望 Unity 使用哪个应用程序来打开图像文件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Revision Control Diff/Merge</strong></td>
+	<td style="text-align:left;">选择希望 Unity 使用哪个应用程序解决源代码控制代码仓库中的文件差异。Unity 在工具的默认安装位置检测这些工具。在 Windows 上，Unity 会检查 TortoiseMerge、WinMerge、PlasticSCM Merge 和 Beyond Compare 4 的注册表项。<br><br>有关更多信息，请参阅下面的 <a href="#diffmerge">Revision Control Diff/Merge</a> 部分。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="diffmerge"></a></p>
+
+<h3>Revision Control Diff/Merge</h3>
+
+<p>Unity 目前支持以下工具：</p>
+
+<ul>
+<li>SourceGear DiffMerge</li>
+<li>TkDiff</li>
+<li>P4Merge</li>
+<li>TortoiseMerge</li>
+<li>WinMerge</li>
+<li>PlasticSCM Merge</li>
+<li>Beyond Compare 4</li>
+</ul>
+
+<p>__注意：__这些是 Unity 默认未包含的第三方工具。必须单独下载和安装这些工具。</p>
+
+<p>要设置自定义修订工具，请按照下列步骤操作：</p>
+
+<p>1.从 <strong>Revision Control Diff/Merge</strong> 下拉列表中，选择 <strong>Custom Tool</strong>。
+2.输入自定义工具的安装文件夹的路径。在 Mac 上，应指向该工具的安装文件夹中的 <em>Contents / MacOS</em> 文件夹。
+3.输入有关双向差异、三向差异和合并的参数。</p>
+
+<p>要指定修订工具中的文件布局，请使用以下参数：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>#LTITLE</code></td>
+	<td style="text-align:left;">左侧标题</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#RTITLE</code></td>
+	<td style="text-align:left;">右侧标题</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ATITLE</code></td>
+	<td style="text-align:left;">上级标题</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#LEFT</code></td>
+	<td style="text-align:left;">左侧文件</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#RIGHT</code></td>
+	<td style="text-align:left;">右侧文件</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ANCESTOR</code></td>
+	<td style="text-align:left;">上级文件</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#OUTPUT</code></td>
+	<td style="text-align:left;">输出文件</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ABSLEFT</code></td>
+	<td style="text-align:left;">左侧文件的绝对路径</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ABSRIGHT</code></td>
+	<td style="text-align:left;">右侧文件的绝对路径</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ABSANCESTOR</code></td>
+	<td style="text-align:left;">上级文件的绝对路径</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ABSOUTPUT</code></td>
+	<td style="text-align:left;">输出文件的绝对路径</td>
+</tr>
+</tbody>
+</table>
+
+<p>例如：</p>
+
+<figure>
+<img src="../uploads/Main/SourceGearDiffMerge.png" alt="SourceGear DiffMerge">
+<figcaption>SourceGear DiffMerge</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/P4DiffMerge.png" alt="P4Merge">
+<figcaption>P4Merge</figcaption>
+</figure>
+
+<p><a name="GI-Cache"></a></p>
+
+<h2>GI Cache</h2>
+
+<p><a href="GIIntro">全局光照</a> (GI) 系统使用<a href="GICache.html">每台计算机上的缓存</a>来存储用于预先计算实时全局光照的中间文件。计算机上的所有项目共享缓存。</p>
+
+<figure>
+<img src="../uploads/Main/PrefsGICache.png" alt="Preferences 窗口中的 GI Cache 范围">
+<figcaption>Preferences 窗口中的 GI Cache 范围</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Maximum Cache Size (GB)</strong></td>
+	<td style="text-align:left;">使用滑动条来设置最大的 GI 缓存文件夹大小。Unity 会尽量将 GI 缓存文件夹大小保持低于此数字。Unity 会定期删除未使用的文件以创建更多的空间（首先删除最老的文件）。这是一项自动过程，不需要您执行任何操作。<br><strong>注意：</strong>如果当前场景使用了 GI 缓存中的所有文件，请增加缓存大小。否则，在烘焙时会进行非常耗费资源的重新计算。当场景非常大或缓存太小时，就会发生这种情况。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom cache location</strong></td>
+	<td style="text-align:left;">启用此选项可允许设置 GI 缓存文件夹的自定义位置。默认情况下，GI 缓存存储在 <em>Caches</em> 文件夹中。所有项目共享缓存文件夹。<br><strong>提示</strong>：将 GI 缓存存储在 SSD 驱动器上可以在烘焙过程受 I/O 限制的情况下加速进行烘焙。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Folder Location</strong></td>
+	<td style="text-align:left;">单击 <strong>Browse</strong> 按钮可指定缓存的位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache compression</strong></td>
+	<td style="text-align:left;">启用此选项可以使 Unity 压缩 GI 缓存中的文件，并减小生成数据的大小。默认情况下，文件采用 LZ4 压缩格式，命名方式为哈希与文件扩展名的组合。哈希计算是基于光照系统的输入进行的，因此更改以下任何内容都可能导致重新计算光照：<br>- 材质（纹理、反照率、发光）<br>- 光源<br>- 几何体<br>- 静止标记<br>- 光照探针组<br>- 反射探针<br>- 光照贴图参数<br><strong>提示：</strong>如果需要访问原始 Enlighten 数据，请禁用 Cache Compression 并清除缓存。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Clean Cache</strong></td>
+	<td style="text-align:left;">使用此按钮可清除缓存目录。<br>在 Editor 运行时手动删除 GI Cache 目录是不安全的做法。这是因为 Editor 在启动时会创建 <em>GiCache</em> 文件夹，并且不断引用这些文件。<strong>Clean Cache</strong> 按钮可确保 Editor 在删除磁盘上的文件之前释放对这些文件的所有引用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache size is</strong></td>
+	<td style="text-align:left;">显示当前缓存大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Folder Location</strong></td>
+	<td style="text-align:left;">显示当前缓存文件夹的位置。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="UI-Scaling"></a></p>
+
+<h2>UI Scaling</h2>
+
+<p>UI Scaling 偏好设置可定义如何在 Unity Editor 中缩放 UI 文本和图标。</p>
+
+<figure>
+<img src="../uploads/Main/PrefsUIScaling.png" alt="Preferences 窗口中的 UI Scaling 范围">
+<figcaption>Preferences 窗口中的 UI Scaling 范围</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Use default desktop setting</strong></td>
+	<td style="text-align:left;">启用此设置可使用计算机的默认设置来缩放 UI 文本和图标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Current scaling</strong></td>
+	<td style="text-align:left;">显示当前缩放值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use custom scaling value</strong></td>
+	<td style="text-align:left;">覆盖缩放值。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Custom"></a></p>
+
+<h2>包的自定义偏好设置</h2>
+
+<p>一些 Asset Store 包或 Unity 包会将自己的自定义偏好设置添加到 <strong>Preferences</strong> 窗口中。通常，它们使用包名称作为偏好设置类别。在以下示例中，可以看到 <a href="https://docs.unity3d.com/Packages/com.unity.cinemachine@latest">Cinemachine 包</a>的偏好设置：</p>
+
+<figure>
+<img src="../uploads/Main/PrefsPackages.png" alt="范围列表中显示特定于包的偏好设置">
+<figcaption>范围列表中显示特定于包的偏好设置</figcaption>
+</figure>
+
+<p>有关特定包的偏好设置的信息，请参阅该包的文档。本部分仅包含标准 Unity 偏好设置的文档。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2020–05–04 页面已修订</span></p></li>
+<li><p><span class="page-history">在 2019.3 版中添加了 Interaction Mode 偏好设置</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2019.3/Documentation/Manual/30_search.html?q=newin20193">2019.3</a> 版中添加了 Analysis 和 UI Scaling 选项卡，并删除了 Grid Brush 和 Tile Palette 选项卡</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> 版中为 External Tools 部分添加了 Gradle for Android 选项。</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> 版中删除了关键字并且为 Tile Palette 偏好设置添加了更多选项。<span class="search-words">NewIn20191</span></span></p></li>
+<li><p><span class="page-history">在 2018.3 版中添加了子游戏对象的选择轮廓线颜色偏好设置</span></p></li>
+<li><p><span class="page-history">为 Unity 2018.3 新增了统一设置和其他更新</span></p></li>
+<li><p><span class="page-history">在 Unity 2018.2 中添加了 Script Changes While Playing 和 Device To Use 下拉菜单</span></p></li>
+<li><p><span class="page-history">在 2018.1 版中更新了外部脚本编辑器的列表</span></p></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="2DAnd3DModeSettings.html"></a></span><div class="tip">2D 和 3D 模式设置</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Presets.html"></a></span><div class="tip">预设</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

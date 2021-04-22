@@ -1,0 +1,1018 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity XR 输入 - Unity 手册">
+<title>Unity XR 输入 - Unity 手册</title>
+<meta name="description" content="Unity 用户手册的本节将介绍 Unity 对于虚拟现实、增强现实和 Windows Mixed Reality 应用程序支持的所有输入设备。本页涵盖以下主题：">
+<meta property="og:description" content="Unity 用户手册的本节将介绍 Unity 对于虚拟现实、增强现实和 Windows Mixed Reality 应用程序支持的所有输入设备。本页涵盖以下主题：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'xr_input';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/xr_input.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/xr_input.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/xr_input.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/xr_input.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/xr_input.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/xr_input.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/xr_input.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/xr_input.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/xr_input.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/xr_input.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/xr_input.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/xr_input.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/xr_input.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/xr_input.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/xr_input.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/xr_input.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/xr_input.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/xr_input.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/xr_input.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/xr_input.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/xr_input.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/xr_input.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/xr_input.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/xr_input.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/xr_input.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/xr_input.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/xr_input.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/xr_input.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/xr_input.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/xr_input.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/xr_input.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/xr_input.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/xr_input.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/xr_input.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/xr_input.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/xr_input.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/xr_input.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/xr_input.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/xr_input.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/xr_input.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/xr_input.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/xr_input.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/xr_input.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/xr_input.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/xr_input.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/xr_input.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/xr_input.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/xr_input.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Input.html">输入</a></li>
+<li>Unity XR 输入</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileKeyboard.html"></a></span><div class="tip">移动键盘</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Unity2D.html"></a></span><div class="tip">2D</div>
+</div>
+</div></div>
+<h1>Unity XR 输入</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 用户手册的本节将介绍 Unity 对于虚拟现实、增强现实和 Windows Mixed Reality 应用程序支持的所有输入设备。本页涵盖以下主题：</p>
+
+<ul>
+<li><a href="#XRInputMappings">XR 输入映射</a></li>
+<li><a href="#AccessingInputDevices">访问输入设备</a></li>
+<li><a href="#AccessingInputFeatures">访问输入设备上的输入功能</a></li>
+<li><a href="#XRInputLegacySystem">通过旧版输入系统访问 XR 输入</a></li>
+<li><a href="#Haptics">触觉</a></li>
+</ul>
+
+<p>XR 平台具有多种输入功能，您可以在设计用户交互时加以利用。您的应用程序可以使用某些特定数据，这些数据引用位置、旋转、触摸、按钮、游戏杆和手指传感器。但是，在不同平台之间访问这些输入功能可能有很大差别。例如，Vive 和 Oculus Rift 之间的差异很小，但是支持 VR 的桌面平台和 Daydream 等移动平台之间的差异则很大。</p>
+
+<p>Unity 提供了一个名为 <a href="../ScriptReference/XR.InputFeatureUsage.html">InputFeatureUsage</a> 的 C# 结构，该结构定义了一组标准的物理设备控件（例如按钮和扳机键），以访问任何平台上的用户输入。这些控件可帮助您通过名称识别输入类型。有关每个 <code>InputFeatureUsage</code> 的定义，请参阅 <a href="../ScriptReference/XR.CommonUsages.html">XR.Input.CommonUsages</a>。</p>
+
+<p>每个 <code>InputFeatureUsage</code> 对应一个常见的输入操作或类型。例如，Unity 将名为 <code>trigger</code> 的 <code>InputFeatureUsage</code> 定义为食指控制的单轴输入（无论您使用哪种 XR 平台）。您可以使用 <code>InputFeatureUsage</code> 通过名称来获取 <code>trigger</code> 状态，因此无需为常规 Unity 输入系统设置一个轴（或某些 XR 平台上的按钮）。</p>
+
+<p><a name="XRInputMappings"></a></p>
+
+<h2>XR 输入映射</h2>
+
+<p>下表列出了标准控制器 <code>InputFeatureUsage</code> 的名称以及它们与常见 XR 系统的控制器之间的映射关系：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>InputFeatureUsage</strong></th>
+	<th style="text-align:left;"><strong>功能类型</strong></th>
+	<th style="text-align:left;">
+<strong>旧版输入索引__（左控制器/右控制器） | </strong>WMR__</th>
+	<th style="text-align:left;"><strong>Oculus</strong></th>
+	<th style="text-align:left;"><strong>GearVR</strong></th>
+	<th style="text-align:left;"><strong>Daydream</strong></th>
+	<th style="text-align:left;"><strong>OpenVR (Full)</strong></th>
+	<th style="text-align:left;"><strong>Vive</strong></th>
+	<th style="text-align:left;"><strong>基于 OpenVR 的 Oculus</strong></th>
+	<th style="text-align:left;"><strong>基于 OpenVR 的 WMR</strong></th>
+	<th style="text-align:left;"><strong>Magic Leap</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-primary2DAxis.html">primary2DAxis</a></td>
+	<td style="text-align:left;">2D 轴</td>
+	<td style="text-align:left;">[(1,2)/(4,5)]</td>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;">游戏杆</td>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;">触控板/游戏杆</td>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;">游戏杆</td>
+	<td style="text-align:left;">游戏杆</td>
+	<td style="text-align:left;">触控板</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-trigger.html">trigger</a></td>
+	<td style="text-align:left;">轴</td>
+	<td style="text-align:left;">[9/10]</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-grip.html">grip</a></td>
+	<td style="text-align:left;">轴</td>
+	<td style="text-align:left;">[11/12]</td>
+	<td style="text-align:left;">握把</td>
+	<td style="text-align:left;">握把</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">缓冲键</td>
+	<td style="text-align:left;">握把</td>
+	<td style="text-align:left;">握把</td>
+	<td style="text-align:left;">握把</td>
+	<td style="text-align:left;">握把</td>
+	<td style="text-align:left;">缓冲键</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-secondary2DAxis.html">secondary2DAxis</a></td>
+	<td style="text-align:left;">2D 轴</td>
+	<td style="text-align:left;">[(17,18)/(19,20)]</td>
+	<td style="text-align:left;">游戏杆</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">secondary2DAxisClick</td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;">[18/19]</td>
+	<td style="text-align:left;">游戏杆 - 单击</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-primaryButton.html">primaryButton</a></td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;">[2/0]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">[X/A] - 按压</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">应用程序</td>
+	<td style="text-align:left;">主要</td>
+	<td style="text-align:left;">主要（三明治按钮）(1)</td>
+	<td style="text-align:left;">主要 (Y/B)</td>
+	<td style="text-align:left;">菜单</td>
+	<td style="text-align:left;">菜单</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-primaryTouch.html">primaryTouch</a></td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;">[12/10]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">[X/A] - 触控</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-secondaryButton.html">secondaryButton</a></td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;">[3/1]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">[Y/B] - 按压</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">备用</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">备用 (X/A)</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-secondaryTouch.html">secondaryTouch</a></td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;">[13/11]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">[Y/B] - 触控</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-gripButton.html">gripButton</a></td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;">[4/5]</td>
+	<td style="text-align:left;">握把 - 按下</td>
+	<td style="text-align:left;">握把 - 按下</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">握把 - 按下</td>
+	<td style="text-align:left;">握把 - 按下</td>
+	<td style="text-align:left;">握把 - 按下</td>
+	<td style="text-align:left;">握把 - 按下</td>
+	<td style="text-align:left;">缓冲键 - 按下</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-triggerButton.html">triggerButton</a></td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;">[14/15]</td>
+	<td style="text-align:left;">触发器 - 按下</td>
+	<td style="text-align:left;">触发器 - 按下</td>
+	<td style="text-align:left;">触发器 - 按下</td>
+	<td style="text-align:left;">触发器 - 按下</td>
+	<td style="text-align:left;">触发器 - 按下</td>
+	<td style="text-align:left;">触发器 - 按下</td>
+	<td style="text-align:left;">触发器 - 触控</td>
+	<td style="text-align:left;">触发器 - 按下</td>
+	<td style="text-align:left;">触发器 - 按下</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-menuButton.html">menuButton</a></td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;">[6/7]</td>
+	<td style="text-align:left;">菜单</td>
+	<td style="text-align:left;">开始（仅限左控制器）</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-primary2DAxisClick.html">primary2DAxisClick</a></td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;">[8/9]</td>
+	<td style="text-align:left;">触控板 - 单击</td>
+	<td style="text-align:left;">控制杆 - 按下</td>
+	<td style="text-align:left;">触控板 - 按下</td>
+	<td style="text-align:left;">触控板 - 按下</td>
+	<td style="text-align:left;">触控板/游戏杆 - 按下</td>
+	<td style="text-align:left;">触控板 - 按下</td>
+	<td style="text-align:left;">游戏杆 - 按下</td>
+	<td style="text-align:left;">触控板 - 按下</td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-primary2DAxisTouch.html">primary2DAxisTouch</a></td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;">[16/17]</td>
+	<td style="text-align:left;">触控板 - 触摸</td>
+	<td style="text-align:left;">控制杆 - 触控</td>
+	<td style="text-align:left;">触控板 - 触摸</td>
+	<td style="text-align:left;">触控板 - 触摸</td>
+	<td style="text-align:left;">触控板/游戏杆 - 触控</td>
+	<td style="text-align:left;">触控板 - 触控</td>
+	<td style="text-align:left;">游戏杆 - 触控</td>
+	<td style="text-align:left;">触控板 - 触摸</td>
+	<td style="text-align:left;">触控板 - 触摸</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-batteryLevel.html">batteryLevel</a></td>
+	<td style="text-align:left;">轴</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">电池电量</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.XRDevice-userPresence.html">userPresence</a></td>
+	<td style="text-align:left;">按钮</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">用户存在状态</td>
+	<td style="text-align:left;">用户存在状态</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+</tbody>
+</table>
+
+<p>(1) 三明治按钮是指 Vive 菜单按钮。为了更好地处理跨平台应用程序，此按钮映射到 primaryButton 而不是 menuButton。</p>
+
+<p>有关每个 <code>InputFeatureUsage</code> 的定义，请参阅 <a href="../ScriptReference/XR.CommonUsages.html">XR.Input.CommonUsages</a>。</p>
+
+<p><a name="AccessingInputDevices"></a></p>
+
+<h2>访问输入设备</h2>
+
+<p><a href="../ScriptReference/XR.InputDevice.html">InputDevice</a> 代表任何物理设备，例如控制器、移动电话或头盔。它可以包含有关设备跟踪、按钮、游戏杆和其他输入控件的信息。有关 <code>InputDevice</code> API 的更多信息，请参阅 <a href="../ScriptReference/XR.InputDevice.html">InputDevice</a> 文档。</p>
+
+<p>使用 <a href="../ScriptReference/XR.InputDevices.html">XR.InputDevices</a> 类可访问当前连接到 XR 系统的输入设备。要获取所有已连接设备的列表，请使用 <a href="../ScriptReference/XR.InputDevices.GetDevices.html">InputDevices.GetDevices</a>：</p>
+
+<pre><code>var inputDevices = new List&lt;UnityEngine.XR.InputDevice&gt;();
+UnityEngine.XR.InputDevices.GetDevices(inputDevices);
+
+foreach (var device in inputDevices)
+{
+    Debug.Log(string.Format("Device found with name '{0}' and role '{1}'", device.name, device.role.ToString()));
+}
+</code></pre>
+
+<p>在 XR 系统断开与输入设备的连接之前，输入设备将跨帧保持有效。使用 <a href="../ScriptReference/XR.InputDevice-isValid.html">InputDevice.IsValid</a> 属性来确定 <code>InputDevice</code> 是否仍代表激活的控制器。</p>
+
+<p>您可以通过以下方式访问输入设备：</p>
+
+<ul>
+<li>特征</li>
+<li>角色</li>
+<li>XR 节点</li>
+</ul>
+
+<h3>按特征访问输入设备</h3>
+
+<p>设备特征描述了设备的功能或用途（例如，是否为头戴式）。<a href="../ScriptReference/XR.InputDeviceCharacteristics.html">InputDeviceCharacteristics</a> 是一系列标志，可以添加到代码中，用于搜索符合特定规格的设备。可以按以下特征筛选设备：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设备</strong></th>
+	<th style="text-align:left;"><strong>特征</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.HeadMounted.html">HeadMounted</a></td>
+	<td style="text-align:left;">设备连接到用户的头部。它具有设备跟踪和眼球中心跟踪功能。此标志最常用于标识头戴式显示器 (HMD)。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.Camera.html">Camera</a></td>
+	<td style="text-align:left;">设备具有摄像机跟踪功能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.HeldInHand.html">HeldInHand</a></td>
+	<td style="text-align:left;">用户将设备握在手中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.HandTracking.html">HandTracking</a></td>
+	<td style="text-align:left;">设备代表物理跟踪的手。它具有设备跟踪功能，并且可能包含手和骨骼数据。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.EyeTracking.html">EyeTracking</a></td>
+	<td style="text-align:left;">设备可以执行眼球跟踪并具有 <a href="../ScriptReference/XR.CommonUsages-eyesData.html">EyesData</a> 功能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.TrackedDevice.html">TrackedDevice</a></td>
+	<td style="text-align:left;">可以在 3D 空间中跟踪设备。它具有设备跟踪功能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.Controller.html">Controller</a></td>
+	<td style="text-align:left;">设备具有按钮和轴的输入数据，并且可以用作控制器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.TrackingReference.html">TrackingReference</a></td>
+	<td style="text-align:left;">设备代表静态跟踪参考对象。它具有设备跟踪功能，但该跟踪数据不应该更改。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.Left.html">Left</a></td>
+	<td style="text-align:left;">将此特征与 HeldInHand 或 HandTracking 特征组合使用，可以将设备标识为与左手关联。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.Right.html">Right</a></td>
+	<td style="text-align:left;">将此特征与 HeldInHand 或 HandTracking 特征组合使用，可以将设备标识为与右手关联。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.Simulated6DOF.html">Simulated6DOF</a></td>
+	<td style="text-align:left;">设备报告 6DOF 数据，但仅具有 3DOF 传感器。Unity 负责模拟位置数据。</td>
+</tr>
+</tbody>
+</table>
+
+<p>底层 XR SDK 会报告这些特征。您可以使用 <a href="../ScriptReference/XR.InputDevice-characteristics.html">InputDevice.Characteristics</a> 查找这些特征。设备可以并且通常应该具有多个特征，可以使用位标志来筛选和访问这些特征。</p>
+
+<p><a href="../ScriptReference/XR.InputDevices.GetDevicesWithCharacteristics.html">InputDevices.GetDevicesWithCharacteristics</a> 提供了一种方法来搜索具有给定特征集的所有设备。例如，您可以使用以下代码搜索系统中可用的 Left、HeldInHand、Controller InputDevices：</p>
+
+<pre><code>var leftHandedControllers = new List&lt;UnityEngine.XR.InputDevice&gt;();
+var desiredCharacteristics = UnityEngine.XR.InputDeviceCharacteristics.HeldInHand | UnityEngine.XR.InputDeviceCharacteristics.Left | UnityEngine.XR.InputDeviceCharacteristics.Controller;
+UnityEngine.XR.InputDevices.GetDevicesWithCharacteristics(desiredCharacteristics, leftHandedControllers);
+
+foreach (var device in leftHandedControllers)
+{
+    Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", device.name, device.characteristics.ToString()));
+}
+</code></pre>
+
+<p>此函数找到的设备至少包含指定的特征，但可能也包含其他特征。例如，要查找惯用左手的控制器，您只能查找 InputDeviceCharacteristic.Left，而不能查找 InputDeviceCharacteristic.Controller。</p>
+
+<h3>按角色访问输入设备</h3>
+
+<p>设备角色描述输入设备的一般功能。请使用 <a href="../ScriptReference/XR.InputDeviceRole.html">InputDeviceRole</a> 枚举来指定设备角色。定义的角色有：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>角色</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.GameController.html">GameController</a></td>
+	<td style="text-align:left;">游戏主机风格的游戏控制器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.Generic.html">Generic</a></td>
+	<td style="text-align:left;">代表核心 XR 设备的设备，例如头戴式显示器或移动设备。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.HardwareTracker.html">HardwareTracker</a></td>
+	<td style="text-align:left;">跟踪设备。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.LeftHanded.html">LeftHanded</a></td>
+	<td style="text-align:left;">与用户左手关联的设备。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.RightHanded.html">RightHanded</a></td>
+	<td style="text-align:left;">与用户右手关联的设备。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.TrackingReference.html">TrackingReference</a></td>
+	<td style="text-align:left;">跟踪其他设备的设备，例如 Oculus 跟踪摄像机。</td>
+</tr>
+</tbody>
+</table>
+
+<p>底层 XR SDK 会报告这些角色，但是不同的提供商可能会以不同的方式组织他们的设备角色。此外，用户可以换手，因此角色分配结果可能与用户握住输入设备的手不匹配。例如，用户必须将 Daydream 控制器设置为惯用右手或左手，但可以选择将控制器放在另一只手中。</p>
+
+<p><a href="../ScriptReference/XR.InputDevices.GetDevicesWithRole.html">GetDevicesWithRole</a> 提供具有特定 <code>InputDeviceRole</code> 的所有设备的列表。例如，您可以使用 <code>InputDeviceRole.GameController</code> 获取任何已连接的 <code>GameController</code> 设备：</p>
+
+<pre><code>var gameControllers = new List&lt;UnityEngine.XR.InputDevice&gt;();
+UnityEngine.XR.InputDevices.GetDevicesWithRole(UnityEngine.XR.InputDeviceRole.GameController, gameControllers);
+
+foreach (var device in gameControllers)
+{
+    Debug.Log(string.Format("Device name '{0}' has role '{1}'", device.name, device.role.ToString()));
+}
+</code></pre>
+
+<h3>按 XR 节点访问输入设备</h3>
+
+<p>XR 节点表示 XR 系统中的物理参考点（例如，用户的头部位置、他们的左右手或诸如 Oculus 摄像机之类的跟踪参考）。</p>
+
+<p><a href="../ScriptReference/XR.XRNode.html">XRNode</a> 枚举定义了以下节点：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>XR 节点</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.CenterEye.html">CenterEye</a></td>
+	<td style="text-align:left;">用户的两个瞳孔之间的中点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.GameController.html">GameController</a></td>
+	<td style="text-align:left;">游戏主机风格的游戏控制器。您的应用程序可以有多个游戏控制器设备。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.HardwareTracker.html">HardwareTracker</a></td>
+	<td style="text-align:left;">硬件跟踪设备，通常连接到用户或物理项。可以存在多个硬件跟踪器节点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.Head.html">Head</a></td>
+	<td style="text-align:left;">由 XR 系统计算出的用户头部的中心点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.LeftEye.html">LeftEye</a></td>
+	<td style="text-align:left;">用户的左眼。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.LeftHand.html">LeftHand</a></td>
+	<td style="text-align:left;">用户的左手。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.RightEye.html">RightEye</a></td>
+	<td style="text-align:left;">用户的右眼。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.RightHand.html">RightHand</a></td>
+	<td style="text-align:left;">用户的右手。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.TrackingReference.html">TrackingReference</a></td>
+	<td style="text-align:left;">跟踪参考点，例如 Oculus 摄像机。可以存在多个跟踪参考节点。</td>
+</tr>
+</tbody>
+</table>
+
+<p>请使用 <a href="../ScriptReference/XR.InputDevices.GetDevicesAtXRNode.html">InputDevices.GetDevicesAtXRNode</a> 来获取与特定 <code>XRNode</code> 关联的设备列表。下面的示例演示了如何获取惯用左手的控制器：</p>
+
+<pre><code>var leftHandDevices = new List&lt;UnityEngine.XR.InputDevice&gt;();
+UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.LeftHand, leftHandDevices);
+
+if(leftHandDevices.Count == 1)
+{
+    UnityEngine.XR.InputDevice device = leftHandDevices[0];
+    Debug.Log(string.Format("Device name '{0}' with role '{1}'", device.name, device.role.ToString()));
+}
+else if(leftHandDevices.Count &gt; 1)
+{
+    Debug.Log("Found more than one left hand!");
+}
+</code></pre>
+
+<h3>监听设备连接和断开连接</h3>
+
+<p>输入设备在各帧之间是一致的，但是可以随时连接或断开连接。为避免反复检查设备是否已连接到平台，请使用 <a href="../ScriptReference/XR.InputDevices-deviceConnected.html">InputDevices.deviceConnected</a> 和 <a href="../ScriptReference/XR.InputDevices-deviceDisconnected.html">InputDevices.deviceDisconnected</a> 在设备连接或断开连接时通知您的应用程序。这些还为您提供了有关新连接的输入设备的参考。</p>
+
+<p>由于您可以在多个帧上保留这些引用，因此设备可能会断开连接，或者不再可用。要检查设备的输入是否仍然可用，请使用 <a href="../ScriptReference/XR.InputDevice-isValid.html">InputDevice.isValid</a>。访问输入设备的脚本在尝试使用该设备之前，应在每个帧的开头进行此检查。</p>
+
+<p><a name="AccessingInputFeatures"></a></p>
+
+<h2>访问输入设备上的输入功能</h2>
+
+<p>您可以从特定的 <a href="../ScriptReference/XR.InputDevice.html">InputDevice</a> 读取输入功能，例如扳机键按钮的状态。例如，要读取右扳机键的状态，请按照下列步骤操作：</p>
+
+<p>1.使用 <a href="../ScriptReference/XR.InputDeviceRole.RightHanded.html">InputDeviceRole.RightHanded</a> 或 <a href="../ScriptReference/XR.XRNode.RightHand.html">XRNode.RightHand</a> 获取惯用右手设备的实例。
+2.有了正确的设备后，请使用 <a href="../ScriptReference/XR.InputDevice.TryGetFeatureValue.html">InputDevice.TryGetFeatureValue</a> 方法访问当前状态。</p>
+
+<p><code>TryGetFeatureValue()</code> 尝试访问功能的当前值，并根据情况返回不同的值：</p>
+
+<ul>
+<li>如果成功获取指定的功能值，则返回 true</li>
+<li>如果当前设备不支持指定的功能，或者该设备无效（即控制器不再处于激活状态），则返回 false</li>
+</ul>
+
+<p>要获取特定的按钮、触摸输入或游戏杆轴值，请使用 <a href="../ScriptReference/XR.CommonUsages.html">CommonUsages</a> 类。<code>CommonUsages</code> 包括 <a href="#XRInputMappings">XR 输入映射表</a>中的每个 <code>InputFeatureUsage</code>，以及诸如位置和旋转之类的跟踪功能。以下代码示例使用 <a href="../ScriptReference/XR.CommonUsages-triggerButton.html">CommonUsages.triggerButton</a> 来检测用户当前是否在特定 <code>InputDevice</code> 实例上按下扳机键按钮：</p>
+
+<pre><code>bool triggerValue;
+if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) &amp;&amp; triggerValue)
+{
+    Debug.Log("Trigger button is pressed.");
+}
+</code></pre>
+
+<p>您也可以使用 <a href="../ScriptReference/XR.InputDevice.TryGetFeatureUsages.html">InputDevice.TryGetFeatureUsages</a> 方法来获取设备提供的每个 <code>InputFeatureUsage</code> 的列表。此函数返回 <a href="../ScriptReference/XR.InputFeatureUsage.html">InputFeatureUsage</a> 项的列表，这些项包含描述该功能的类型和名称属性。下面的示例枚举了一个给定输入设备提供的所有布尔值功能：</p>
+
+<pre><code>var inputFeatures = new List&lt;UnityEngine.XR.InputFeatureUsage&gt;();
+if (device.TryGetFeatureUsages(inputFeatures))
+{
+    foreach (var feature in inputFeatures)
+    {
+        if (feature.type == typeof(bool))
+        {
+            bool featureValue;
+            if (device.TryGetFeatureValue(feature.As&lt;bool&gt;(), out featureValue))
+            {
+                Debug.Log(string.Format("Bool feature {0}'s value is {1}", feature.name, featureValue.ToString()));
+            }
+        }
+    }
+}
+</code></pre>
+
+<h3>primaryButton 的示例</h3>
+
+<p>不同的控制器配置提供对不同功能的访问。例如，您可能在一个系统上有多个控制器，在不同系统上有不同的控制器，或者在具有不同 SDK 的同一控制器上有不同的按钮。这种多样性造成了支持各种 XR 系统的输入变得更加复杂。Unity <code>InputFeatureUsage</code> API 可帮助您获得与平台无关的输入。</p>
+
+<p>以下示例将访问名为 <code>primaryButton</code> 的<code>InputFeatureUsage</code>，无论是由哪个控制器或输入设备提供。该示例包括一个类，该类在可用设备连接后扫描可用设备的 <code>primaryButton</code>。该类监视任何已连接设备上的功能值，如果值更改，则该类将调度 <a href="../ScriptReference/Events.UnityEvent.html">UnityEvent</a>。</p>
+
+<p>要使用该类，请将该类作为组件添加到场景中的任何游戏对象。例如：</p>
+
+<pre><code>using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.XR;
+
+[System.Serializable]
+public class PrimaryButtonEvent : UnityEvent&lt;bool&gt; { }
+
+public class PrimaryButtonWatcher : MonoBehaviour
+{
+    public PrimaryButtonEvent primaryButtonPress;
+
+    private bool lastButtonState = false;
+    private List&lt;InputDevice&gt; devicesWithPrimaryButton;
+
+    private void Awake()
+    {
+        if (primaryButtonPress == null)
+        {
+            primaryButtonPress = new PrimaryButtonEvent();
+        }
+
+        devicesWithPrimaryButton = new List&lt;InputDevice&gt;();
+    }
+
+    void OnEnable()
+    {
+        List&lt;InputDevice&gt; allDevices = new List&lt;InputDevice&gt;();
+        InputDevices.GetDevices(allDevices);
+        foreach(InputDevice device in allDevices)
+            InputDevices_deviceConnected(device);
+
+        InputDevices.deviceConnected += InputDevices_deviceConnected;
+        InputDevices.deviceDisconnected += InputDevices_deviceDisconnected;
+    }
+
+    private void OnDisable()
+    {
+        InputDevices.deviceConnected -= InputDevices_deviceConnected;
+        InputDevices.deviceDisconnected -= InputDevices_deviceDisconnected;
+        devicesWithPrimaryButton.Clear();
+    }
+
+    private void InputDevices_deviceConnected(InputDevice device)
+    {
+        bool discardedValue;
+        if (device.TryGetFeatureValue(CommonUsages.primaryButton, out discardedValue))
+        {
+            devicesWithPrimaryButton.Add(device); // 添加任何具有主按钮的设备。
+        }
+    }
+
+    private void InputDevices_deviceDisconnected(InputDevice device)
+    {
+        if (devicesWithPrimaryButton.Contains(device))
+            devicesWithPrimaryButton.Remove(device);
+    }
+
+    void Update()
+    {
+        bool tempState = false;
+        foreach (var device in devicesWithPrimaryButton)
+        {
+            bool primaryButtonState = false;
+            tempState = device.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButtonState) // 确实获得了值
+                        &amp;&amp; primaryButtonState // 我们获得的值
+                        || tempState; // 来自其他控制器的累计结果
+        }
+
+        if (tempState != lastButtonState) // 自上一帧以来按钮状态已更改
+        {
+            primaryButtonPress.Invoke(tempState);
+            lastButtonState = tempState;
+        }
+    }
+}
+</code></pre>
+
+<p>以下 <code>PrimaryReactor</code> 类使用 <code>PrimaryButtonWatcher</code> 来检测您何时按下主按钮，然后为了响应按下操作而旋转其父级游戏对象。要使用该类，请将该类添加到可见的游戏对象（例如立方体），然后将 <code>PrimaryButtonWatcher</code> 引用拖到 <strong>Watcher</strong> 属性上。</p>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+
+public class PrimaryReactor : MonoBehaviour
+{
+    public PrimaryButtonWatcher watcher;
+    public bool IsPressed = false; // 用于在 Unity Inspector 窗口中显示按钮状态
+    public Vector3 rotationAngle = new Vector3(45, 45, 45);
+    public float rotationDuration = 0.25f; // 秒
+    private Quaternion offRotation;
+    private Quaternion onRotation;
+    private Coroutine rotator;
+
+    void Start()
+    {
+        watcher.primaryButtonPress.AddListener(onPrimaryButtonEvent);
+        offRotation = this.transform.rotation;
+        onRotation = Quaternion.Euler(rotationAngle) * offRotation;
+    }
+
+    public void onPrimaryButtonEvent(bool pressed)
+    {
+        IsPressed = pressed;
+        if (rotator != null)
+            StopCoroutine(rotator);
+        if (pressed)
+            rotator = StartCoroutine(AnimateRotation(this.transform.rotation, onRotation));
+        else
+            rotator = StartCoroutine(AnimateRotation(this.transform.rotation, offRotation));
+    }
+
+    private IEnumerator AnimateRotation(Quaternion fromRotation, Quaternion toRotation)
+    {
+        float t = 0;
+        while (t &lt; rotationDuration)
+        {
+            transform.rotation = Quaternion.Lerp(fromRotation, toRotation, t / rotationDuration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+    }
+}
+</code></pre>
+
+<h3>访问手部跟踪数据</h3>
+
+<p>InputDevices 支持手部跟踪设备。手部跟踪设备始终：</p>
+
+<ul>
+<li>具有 <a href="../ScriptReference/XR.InputDeviceCharacteristics.HandTracking.html">HandTracking</a> 特征</li>
+<li>包含 <a href="../ScriptReference/XR.Hand.html">Hand</a> 类型的 <a href="../ScriptReference/XR.CommonUsages-handData.html">CommonUsages.HandData</a> 用途</li>
+</ul>
+
+<p>手部跟踪数据由一个 Hand 对象以及一系列（最多 21个）Bone 输入功能组成。每个 <a href="../ScriptReference/XR.Bone.html">Bone</a> 都有一个位置和方向，以及对层级视图中其父级和任何子级骨骼的引用。Hand 对象可以获取根骨骼，也可以获取每根手指的骨骼列表。</p>
+
+<p>当 <a href="../ScriptReference/XR.Hand.TryGetRootBone.html">Hand.TryGetRootBone</a> 取得根骨骼时，将获取表示位于腕部上方的骨骼的对象。您还可以获取代表每根手指的骨骼的列表。调用 <a href="../ScriptReference/Hand.TryGetFingerBones.html">Hand.TryGetFingerBones</a> 将返回一个列表，其中包含代表该手指的骨骼（从指关节到指尖）。</p>
+
+<h3>访问眼球跟踪数据</h3>
+
+<p>输入设备支持眼球跟踪设备以及手部跟踪设备。眼球跟踪包括左眼和右眼位置、用户在 3D 空间中正在注视的位置以及每只眼睛眨眼的次数。数据类型为 <a href="../ScriptReference/XR.Eyes.html">Eyes</a>。要从设备中获取该数据，请使用 <a href="../ScriptReference/XR.CommonUsages-eyesData.html">CommonUsages.eyesData</a>。</p>
+
+<h3>XRInputSubsystem 和 InputDevice 关联</h3>
+
+<p>Unity 提供了两个输入系统：旧版输入系统和 2019.2 中引入的 <a href="https://forum.unity.com/threads/xr-plugins-and-subsystems.693463/">XR 插件架构</a>。在新设置中，每个 InputDevice 都与一个 <a href="../ScriptReference/XR.XRInputSubsystem.html">XRInputSubsystem</a> 关联。这些子系统对象控制与任何特定输入设备都无关联的全局输入行为（例如，管理跟踪原点或将跟踪的设备重新居中）。</p>
+
+<p>每个 InputDevice 都包含对其关联子系统的引用。如果设备来自集成平台，则此引用为 null。还可以使用 <a href="../ScriptReference/SubsystemManager.GetInstances.html">SubsystemManager.GetInstances&lt;XRInputSubsystem&gt;</a> 获得所有激活的 XRInputSubsystem 对象，每个 XRInputSubsystem 都可以使用 <a href="../ScriptReference/XR.XRInputSubsystem.TryGetInputDevices.html">XRInputSubsystem.TryGetInputDevices</a> 获取其设备。</p>
+
+<p>您可以使用输入子系统通过 <a href="../ScriptReference/XR.XRInputSubsystem.html">UnityEngine.XR.XRInputSubsystem</a> 将设备重新居中。“重新居中”可将 HMD 的当前位置设置为所有设备的新原点。对于无法重新居中的设备，或者如果平台不支持重新居中，则返回 false。</p>
+
+<p>要获取跟踪边界，请使用 <a href="../ScriptReference/XR.XRInputSubsystem.TryGetBoundaryPoints.html">TryGetBoundaryPoints</a>。这包含一系列顺时针排序的 3D 点，其中 y 值位于地面，它们标记出用户指定的“安全区域”以放置内容和交互。您可以使用 <a href="../ScriptReference/XR.XRInputSubsystem-boundaryChanged.html">XRInputSubsystem.boundaryChanged</a> 来监听此边界的变化。</p>
+
+<p>XRInputSubsystem 还负责跟踪原点模式，该模式提供了跟踪世界原点的上下文。Unity 支持以下跟踪原点模式：</p>
+
+<ul>
+<li>
+<a href="../ScriptReference/XR.TrackingOriginModeFlags.Device.html">设备</a>：原点的位置在主显示设备（通常是 HMD 或手机）的第一个已知位置。</li>
+<li>
+<a href="../ScriptReference/XR.TrackingOriginModeFlags.Floor.html">地面</a>：原点的位置在地面上的已知位置。</li>
+<li>
+<a href="../ScriptReference/XR.TrackingOriginModeFlags.TrackingReference.html">跟踪参考</a>：原点的位置在设置了 TrackingReference 特征的 InputDevice 上。</li>
+<li>
+<a href="../ScriptReference/XR.TrackingOriginModeFlags.Unknown.html">未知</a>：跟踪原点的类型未知。这可能是由于系统故障或缺少跟踪原点模式支持所致。</li>
+</ul>
+
+<p>您可以使用三种 API 来管理跟踪原点模式：</p>
+
+<ul>
+<li>
+<a href="../ScriptReference/XR.XRInputSubsystem.TrySetTrackingOriginMode.html">XRInputSubsystem.TrySetTrackingOriginMode</a> 设置跟踪原点模式</li>
+<li>
+<a href="../ScriptReference/XR.XRInputSubsystem.GetTrackingOriginMode.html">XRInputSubystem.GetTrackingOriginMode</a> 获取跟踪原点模式</li>
+<li>
+<a href="../ScriptReference/XR.XRInputSubsystem.GetSupportedTrackingOriginModes.html">XRInputSubsystem.GetSupportedTrackingOriginModes</a> 获取 SDK 支持的所有跟踪原点模式</li>
+</ul>
+
+<p><a name="XRInputLegacySystem"></a></p>
+
+<h2>通过旧版输入系统实现 XR 输入</h2>
+
+<p>您仍然可以使用包含 <a href="../ScriptReference/Input.html">Input</a> 和 <a href="../ScriptReference/XR.InputTracking.html">XR.InputTracking</a> 的旧版输入系统来获取 XR 输入功能。为此，请使用此页面上的 <a href="#XRInputMappings">XR 输入映射表</a>中的相应旧输入索引。在 <strong>Player Settings</strong> 的 <strong>Input</strong> 部分（菜单：__Edit__ &gt; <strong>Project Settings</strong> &gt; __Input__），创建一个轴映射，从而为平台设备功能添加从输入名称到轴索引的适当映射。要获取按钮或轴的值，请使用 <a href="../ScriptReference/Input.GetAxis.html">Input.GetAxis</a> 或 <a href="../ScriptReference/Input.GetButton.html">Input.GetButton</a> 并传入现在映射的轴或按钮的名称。</p>
+
+<p>有关如何使用按钮和游戏杆轴的更多信息，请参阅 <a href="class-InputManager.html">InputManager</a> 文档。</p>
+
+<p><a name="Haptics"></a></p>
+
+<h2>触觉</h2>
+
+<p>您可以将触觉事件发送到 <a href="../ScriptReference/XR.InputDevice.html">InputDevice</a>。触觉呈脉冲形式，具有振幅和持续时间。</p>
+
+<p>并非所有平台都支持所有类型的触觉，但您可以查询设备的触觉功能。以下示例获取右手的输入设备，检查设备是否具有触觉功能，然后在有触觉功能的情况下再现脉冲：</p>
+
+<pre><code>List&lt;UnityEngine.XR.InputDevice&gt; devices = new List&lt;UnityEngine.XR.InputDevice&gt;(); 
+
+UnityEngine.XR.InputDevices.GetDevicesWithRole(UnityEngine.XR.InputDeviceRole.RightHanded, devices);
+
+foreach (var device in devices)
+{
+    UnityEngine.XR.HapticCapabilities capabilities;
+    if (device.TryGetHapticCapabilities(out capabilities))
+    {
+            if (capabilities.supportsImpulse)
+            {
+                uint channel = 0;
+                float amplitude = 0.5f;
+                float duration = 1.0f;
+                device.SendHapticImpulse(channel, amplitude, duration);
+            }
+    }
+}
+</code></pre>
+
+<hr>
+
+<ul>
+<li><span class="page-history">在 <a href="https://docs.unity3d.com/Documentation/Manual/30_search.html?q=newin20192">2019.2</a> 中更新了 XR 输入映射表并更新了代码示例</span></li>
+<li><span class="page-history"><a href="https://docs.unity3d.com/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> 中新增的功能和行为 <span class="search-words">NewIn20191,NewIn20192</span></span></li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileKeyboard.html"></a></span><div class="tip">移动键盘</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Unity2D.html"></a></span><div class="tip">2D</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

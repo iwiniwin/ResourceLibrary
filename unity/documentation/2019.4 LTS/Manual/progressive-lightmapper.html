@@ -1,0 +1,474 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="渐进光照贴图程序 - Unity 手册">
+<title>渐进光照贴图程序 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/ProgressiveLightmapper20191-AdvancedFiltering.png">
+<meta name="description" content="渐进光照贴图程序 (Progressive Lightmapper) 是一种基于路径追踪的光照贴图系统，提供了能在 Editor 中逐渐刷新的烘焙光照贴图和光照探针。要求不重叠的 UV 具有较小的面积和角度误差，以及棋盘格图表之间有足够的填充。">
+<meta property="og:description" content="渐进光照贴图程序 (Progressive Lightmapper) 是一种基于路径追踪的光照贴图系统，提供了能在 Editor 中逐渐刷新的烘焙光照贴图和光照探针。要求不重叠的 UV 具有较小的面积和角度误差，以及棋盘格图表之间有足够的填充。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'progressive-lightmapper';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/progressive-lightmapper.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/progressive-lightmapper.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/progressive-lightmapper.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/progressive-lightmapper.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/progressive-lightmapper.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/progressive-lightmapper.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/progressive-lightmapper.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/progressive-lightmapper.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/progressive-lightmapper.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/progressive-lightmapper.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/progressive-lightmapper.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/progressive-lightmapper.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/progressive-lightmapper.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/progressive-lightmapper.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/progressive-lightmapper.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/progressive-lightmapper.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/progressive-lightmapper.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/progressive-lightmapper.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/progressive-lightmapper.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/progressive-lightmapper.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/progressive-lightmapper.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/progressive-lightmapper.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/progressive-lightmapper.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/progressive-lightmapper.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/progressive-lightmapper.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/progressive-lightmapper.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/progressive-lightmapper.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/progressive-lightmapper.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/progressive-lightmapper.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/progressive-lightmapper.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/progressive-lightmapper.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/progressive-lightmapper.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/progressive-lightmapper.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/progressive-lightmapper.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/progressive-lightmapper.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/progressive-lightmapper.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/progressive-lightmapper.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/progressive-lightmapper.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/progressive-lightmapper.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/progressive-lightmapper.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/progressive-lightmapper.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/progressive-lightmapper.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/progressive-lightmapper.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/progressive-lightmapper.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/progressive-lightmapper.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/progressive-lightmapper.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/progressive-lightmapper.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/progressive-lightmapper.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="Lightmappers.html">光照贴图</a></li>
+<li>渐进光照贴图程序</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Lightmappers.html"></a></span><div class="tip">光照贴图</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GPUProgressiveLightmapper.html"></a></span><div class="tip">渐进 GPU 光照贴图 (Progressive GPU Lightmapper)（预览）</div>
+</div>
+</div></div>
+<h1>渐进光照贴图程序</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>渐进光照贴图程序 (Progressive Lightmapper) 是一种基于路径追踪的光照贴图系统，提供了能在 Editor 中逐渐刷新的烘焙光照贴图和光照探针。要求不重叠的 UV 具有较小的面积和角度误差，以及棋盘格图表之间有足够的填充。</p>
+
+<p>渐进光照贴图程序采取了一个短暂的准备步骤来处理几何体与实例的更新，同时生成 G-buffer 和图表遮罩。然后，它会立即生成输出，并随着时间的推移逐步细化输出，以实现更完善的交互式照明工作流。此外，烘焙时间更加可预测，因为渐进光照贴图程序在烘焙时提供估计时间。</p>
+
+<p>渐进光照贴图程序还可单独为每个纹素分别以光照贴图分辨率烘焙全局光照 (GI)，无需采用上采样方案或依赖任何辐照度缓存或其他全局数据结构。因此，渐进光照贴图程序具有强大的功能，并允许您烘焙光照贴图的选定部分，从而更快测试和迭代场景。</p>
+
+<p>如需观看介绍交互式工作流程的深入视频，请参阅 Unity 的视频演练：<a href="https://youtu.be/foMZJrwRGr0">开发中 - 渐进光照贴图 (In Development - Progressive Lightmapper) (YouTube)</a>。</p>
+
+<h2>渐进 CPU 光照贴图程序和渐进 GPU 光照贴图程序（预览）</h2>
+
+<p>可以在渐进光照贴图程序的两个后端之间进行选择。渐进 CPU 光照贴图程序后端是使用计算机 CPU 和系统 RAM 的渐进光照贴图程序的后端。渐进 GPU 光照贴图程序是使用计算机 GPU 和 VRAM 的渐进光照贴图程序的后端。</p>
+
+<p>注意，渐进 GPU 光照贴图程序是正在开发中的预览功能并且会随时改变。有关渐进 GPU 光照贴图程序后端的信息，请参阅<a href="GPUProgressiveLightmapper.html">渐进 GPU 光照贴图程序（预览）</a>。</p>
+
+<h2>渲染管线支持</h2>
+
+<ul>
+<li>内置渲染管线支持渐进光照贴图程序。</li>
+<li>通用渲染管线 (URP) 支持渐进光照贴图程序。</li>
+<li>高清渲染管线 (HDRP) 支持渐进光照贴图程序。</li>
+</ul>
+
+<h2>使用渐进光照贴图程序</h2>
+
+<p>要使用渐进光照贴图程序，请执行以下操作：</p>
+
+<p>1.选择 <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>
+2.导航到 <strong>Lightmapping Settings</strong>
+3.将 <strong>Lightmapper</strong> 设置为 <strong>Progressive CPU</strong> 或 <strong>Progressive GPU</strong></p>
+
+<p>可以使用 <a href="../ScriptReference/LightmapEditorSettings.html">LightmapEditorSettings</a> 和 <a href="../ScriptReference/Lightmapping.html">Lightmapping</a> API，通过脚本执行此窗口中提供的许多函数。</p>
+
+<h2>设置</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmapper</strong></td>
+	<td style="text-align:left;">使用此设置来指定用于计算场景中的光照贴图的内部光照计算软件。选项为：<br><br><a href="progressive-lightmapper.html">Progressive CPU</a><br><a href="GPUProgressiveLightmapper.html">Progressive GPU</a><br><a href="GI-Enlighten.html">Enlighten（已弃用）</a><br><br>默认值为 <strong>Progressive CPU</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Prioritize View</strong></td>
+	<td style="text-align:left;">启用此设置可使渐进光照贴图程序将更改应用于 Scene 视图中当前可见的纹素，然后将更改应用于视图外的纹素。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Multiple Importance Sampling</strong></td>
+	<td style="text-align:left;">启用此设置可将多重重要性采样方法用于对环境采样。通常，这会在生成光照贴图时加快收敛速度，但在某些低频环境中会产生噪声较大的结果。默认处于禁用状态。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Direct Samples</strong></td>
+	<td style="text-align:left;">从每个纹素截取的样本（路径）数。此设置可控制渐进光照贴图程序用于直接光照计算的样本数。增加此值可以提高光照贴图的质量，但会延长烘焙时间。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Indirect Samples</strong></td>
+	<td style="text-align:left;">从每个纹素截取的样本（路径）数。此设置可控制渐进光照贴图程序用于间接光照计算的样本数。对于某些场景，尤其是室外场景，100 个样本应该足够了。对于具有发射性几何体的室内场景，请增加该值，直到看到所需的结果。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Environment Samples</strong></td>
+	<td style="text-align:left;">定义光照贴图程序用于环境光照计算的样本数。更高值可提高光照贴图的质量，但会增加完成烘焙所需要的时间。默认情况下，该值设置为 500。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Light Probe Sample Multiplier</strong></td>
+	<td style="text-align:left;">控制将多少个样本用于光照探针（作为上述样本值的乘数）。更高值可改善光照探针的质量，但会延长烘焙时间。要启用此功能，请选择 <strong>Project Settings &gt; Editor</strong>，然后禁用 <strong>Use legacy Light Probe sample counts</strong>。默认值为 4。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Bounces</strong></td>
+	<td style="text-align:left;">使用此值来指定在追踪路径时要执行的间接反弹次数。对于大多数场景，两次反弹就足够了。对于某些室内场景，可能需要更多次反弹。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Filtering</strong></td>
+	<td style="text-align:left;">配置渐进光照贴图程序将后期处理应用于光照贴图的方式，以便限制噪点。为进行光照贴图的后期处理，光照贴图分为 <strong>Direct</strong>、<strong>Indirect</strong>和 <strong>Ambient Occlusion</strong> 目标，Unity 分别对它们进行后期处理，然后将它们组合为一个光照贴图。<br><br>- <strong>Direct</strong>：从光源直接到达传感器（通常是摄像机）的任何光。<br>- <strong>Indirect</strong>：从光源间接到达传感器的任何光。这最常应用于反射其他游戏对象的光。<br>- <strong>Ambient Occlusion</strong>：光照系统计算的任何环境光。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>无</strong></td>
+	<td style="text-align:left;">选择此设置表示不对光照贴图应用过滤和进行去噪。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Auto</strong></td>
+	<td style="text-align:left;">选择此设置表示将依赖于平台的预设用于对光照贴图进行后期处理。<br><strong>如果开发计算机满足运行 OptiX</strong> (<a href="https://developer.nvidia.com/optix-denoiser">NVIDIA OptiX AI-Accelerated Denoiser</a>) 的要求，渐进光照贴图程序将此降噪器与 Gaussian 过滤器结合使用。对于所有目标，该过滤器的半径均为 1 纹素。<br><strong>如果开发计算机无法运行 OptiX</strong>，渐进光照贴图程序将使用 Gaussian 过滤器。对于 <strong>Direct</strong>、<strong>Indirect</strong> 和 <strong>Ambient Occlusion</strong> 目标，该过滤器的半径分别为 1 纹素、5 纹素和 2 纹素。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Advanced</strong></td>
+	<td style="text-align:left;">选择 <strong>Advanced</strong> 可为每种类型的光照贴图目标手动配置选项。目标类型为 <strong>Direct</strong>、<strong>Indirect</strong> 和 <strong>Ambient Occlusion</strong>。有关更多信息，请参阅下文的<a href="#AdvancedFilteringSettings"><em>高级过滤设置</em></a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Indirect Resolution</strong></td>
+	<td style="text-align:left;">使用此设置来指定光照贴图程序用于间接光照计算的样本数。更高值可提高光照贴图的质量，但会增加完成烘焙所需要的时间。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmap Resolution</strong></td>
+	<td style="text-align:left;">使用此设置来指定用于光照贴图的每个单位的纹素数。增大此值可提高光照贴图质量，但也会增加烘焙时间。请注意，将此值加倍会导致纹素数量变为四倍（因为此值同时指代光照贴图的高度和宽度）。查看 Lighting 窗口底部的统计信息区域中的 <strong>Occupied texels</strong> 计数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmap Padding</strong></td>
+	<td style="text-align:left;">使用此设置来指定烘焙光照贴图中不同形状之间的间距（以纹素为单位）。默认值为 2。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmap Size</strong></td>
+	<td style="text-align:left;">完整光照贴图纹理的大小（以像素为单位），其中包含单个游戏对象纹理的单独区域。默认值为 1024。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Compress Lightmaps</strong></td>
+	<td style="text-align:left;">压缩的光照贴图需要的磁盘空间较少，但是压缩过程可能在纹理中引入不需要的视觉效果。勾选此复选框可压缩光照贴图，而取消选中则可保持未压缩状态。默认情况下会勾选该复选框。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Ambient Occlusion</strong></td>
+	<td style="text-align:left;">勾选此复选框可打开一组设置，用于控制<a href="LightingBakedAmbientOcclusion.html">烘焙环境光遮挡</a>中的表面相对亮度。值越高，表示遮挡区域和完全照亮区域之间的对比度越大。这仅适用于 GI 系统计算的间接光照。默认情况下会启用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Max Distance</strong></td>
+	<td style="text-align:left;">设置一个值以控制光照系统投射光线的距离，从而确定是否将遮挡应用于对象。较大的值会产生较长的光线并为光照贴图提供更多阴影，而较小的值会产生较短的光线，只有当对象彼此非常接近时才会产生阴影。值为 0 会投射无限长光线，没有最大距离。默认值为 1。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Indirect Contribution</strong></td>
+	<td style="text-align:left;">使用滑动条在值 0 到 10 之间缩放最终光照贴图中所见的间接光（即环境光，或从对象反射和发出的光）的亮度。默认值为 1。小于 1 的值会减小强度，而大于 1 的值会增加强度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Direct Contribution</strong></td>
+	<td style="text-align:left;">使用滑动条可以从值 0 到 10 之间缩放直射光的亮度。默认值为 0。此值越大，应用于直接光照的对比度越大。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Directional Mode</strong></td>
+	<td style="text-align:left;">可以设置光照贴图以存储有关对象表面上每个点的主要入射光的信息。请参阅有关<a href="LightmappingDirectional.html">方向光照贴图</a>的文档以了解更多详细信息。默认模式为 <strong>Directional</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Directional</strong></td>
+	<td style="text-align:left;">在 <strong>Directional</strong> 模式下，Unity 将再生成一个光照贴图以存储入射光的主要方向。因此，可将漫射法线贴图材质用于 GI。Directional 模式需要大约两倍的存储空间来存储额外的光照贴图数据。无法在 SM2.0 硬件上或使用 GLES2.0 时解码方向光照贴图。此时将回退到非方向光照贴图。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Non-directional</strong></td>
+	<td style="text-align:left;">
+<strong>Non-directional</strong> 模式禁止 Unity 再生成一个光照贴图来存储入射光的主要方向。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Indirect Intensity</strong></td>
+	<td style="text-align:left;">使用此滑动条控制实时和烘焙光照贴图中存储的间接光的亮度，值在 0 到 5之间。大于 1 的值会增加间接光的强度，而小于 1 的值会降低间接光强度。默认值为 1。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Albedo Boost</strong></td>
+	<td style="text-align:left;">使用此滑动条可控制 Unity 在表面之间反弹的光量，值在 1 到 10 之间。为此，Unity 加强了场景中材质的反照率。增加此值会将反照率值倾向于绘制为白色以进行间接光计算。默认值 1 在物理上是准确的。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmap Parameters</strong></td>
+	<td style="text-align:left;">除了 Lighting 窗口的属性之外，Unity 还将一组常规参数用于光照贴图。此属性的菜单中提供了一些默认值，但您也可以使用 <strong>Create New</strong> 选项来创建自己的光照贴图参数文件。请参阅<a href="class-LightmapParameters.html">光照贴图参数</a>页面以了解更多详细信息。默认值为 <strong>Default-Medium</strong>。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="AdvancedFilteringSettings"> </a></p>
+
+<h2>高级过滤设置</h2>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper20191-AdvancedFiltering.png" alt="Filtering 设置为 Advanced 时可用的 Filtering 设置。">
+<figcaption><strong>Filtering</strong> 设置为 <strong>Advanced</strong> 时可用的 <strong>Filtering</strong> 设置。</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Advanced</strong></td>
+	<td style="text-align:left;">将 <strong>Filtering</strong> 设置为 <strong>Advanced</strong> 可为每种类型的光照贴图目标手动配置选项。目标类型为：<br><br>- <strong>Direct</strong>：从光源直接到达传感器（通常是摄像机）的任何光。<br>- <strong>Indirect</strong>：从光源间接到达传感器的任何光。这最常应用于反射其他游戏对象的光。<br>- <strong>Ambient Occlusion</strong>：光照系统计算的任何环境光。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Denoiser</strong></td>
+	<td style="text-align:left;">选择用于光照贴图目标的降噪器。选项为：<br><br><strong>Optix</strong>：NVIDIA Optix 降噪器是一种 AI 加速降噪器，可减少烘焙光照贴图中的噪点。它需要一个 NVIDIA GPU（包含 4GB 以上的 VRAM 和版本 390 以上的驱动程序），并且仅在 Windows 平台上受支持。<br><strong>RadeonPro</strong>：RadeonPro 降噪器是一种 AI 加速降噪器，可减少烘焙光照贴图中的噪点。它需要一个支持 OpenCL 的 GPU（包含 4GB 以上的 VRAM）。<br>- <strong>OpenImageDenoise</strong>：Intel Open Image 降噪器是一种 AI 加速降噪器，可减少烘焙光照贴图中的噪点。<br>- <strong>None</strong>：不使用降噪器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Filter</strong></td>
+	<td style="text-align:left;">选择要用于光照贴图目标的过滤器：<br>- <strong>Gaussian：</strong>选择此选项可将 Gaussian 过滤器用于光照贴图目标。Gaussian 过滤器将双向 Gaussian 过滤器应用于光照贴图。这会使光照贴图模糊并减少可见噪点。<br>- <strong>A-Trous：</strong>选择此选项可将 A-Trous 过滤器用于光照贴图目标。A-Trous 过滤器可以将模糊程度降至最低，同时可以消除光照贴图中的可见噪点。<br>- <strong>None</strong><em>：</em>选择此选项可禁用对光照贴图目标的所有过滤。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Radius</strong></td>
+	<td style="text-align:left;">仅当 <strong>Filter</strong> 设置为 <strong>Gaussian</strong> 时，此选项才可用。使用 <strong>Radius</strong> 值可设置 Gaussian 过滤器内核的半径（以纹素为单位）。较高的 <strong>Radius</strong> 值可以提高模糊强度并减少可察觉的噪点，但可能导致光照中的细节丢失。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Sigma</strong></td>
+	<td style="text-align:left;">仅当 <strong>Filter</strong> 设置为 <strong>A-Trous</strong> 时，此选项才可用。使用 <strong>Sigma</strong> 值可调整保留细节或使光照模糊的程度。较高的 <strong>Sigma</strong> 值可以提高模糊强度并减少可察觉的噪点，但可能导致光照中的细节丢失。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>统计信息</h2>
+
+<p><strong>Auto Generate</strong> 和 <strong>Generate Lighting</strong> 选项下方的面板将显示有关光照贴图的统计信息，包括：</p>
+
+<ul>
+<li>Unity 已创建的光照贴图数量</li>
+<li>
+<strong>内存使用量 (Memory Usage)</strong>：当前光照贴图所需的内存量。</li>
+<li>
+<strong>占用的纹理像素 (Occupied Texels)</strong>：在光照贴图 UV 空间中占用的纹理像素数量。</li>
+<li>
+<strong>视图中的光照贴图 (Lightmaps in view)</strong>：Scene 视图中的光照贴图数量。</li>
+<li>
+<strong>不在视图中的光照贴图 (Lightmaps not in view)</strong>：不在视图中的光照贴图数量。
+
+<ul>
+<li>
+<strong>融合 (Converged)</strong>：这些光照贴图的所有计算都已完成。</li>
+<li>
+<strong>未融合 (Not Converged)</strong>：这些光照贴图的烘焙仍在进行中。</li>
+</ul>
+</li>
+<li>
+<strong>烘焙性能 (Bake Performance)</strong>：每秒的光线数量。如果此值很低（即小于 2），则应调整设置或硬件以便一次处理更多光线。</li>
+</ul>
+
+<h2>在烘焙期间</h2>
+
+<p>渐进光照贴图提供了在必要时监控和停止烘焙的选项。</p>
+
+<h3>ETA</h3>
+
+<p>Unity 烘焙光照贴图时出现的进度条提供了“预计到达时间”（显示为 __ETA__）。这是完成当前烘焙的估计时间（秒）。这样可以实现更加可预测的烘焙时间，并可让您快速了解当前光照设置所需的烘焙时间。</p>
+
+<h3>强制停止 (Force Stop)</h3>
+
+<p>在手动烘焙过程中，随时单击 <strong>Force Stop</strong> 即可停止烘焙过程。此按钮可让您在看到结果很理想时立即停止该过程。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Lightmappers.html"></a></span><div class="tip">光照贴图</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GPUProgressiveLightmapper.html"></a></span><div class="tip">渐进 GPU 光照贴图 (Progressive GPU Lightmapper)（预览）</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

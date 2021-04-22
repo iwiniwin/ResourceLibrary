@@ -1,0 +1,253 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn"><head><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet" /><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="twitter:card" content="summary" /><meta property="og:title" content="UnityEditor.Editor - Unity 脚本 API" /><title>UnityEditor.Editor - Unity 脚本 API</title><meta name="description" content="从此基类派生，以便为自定义对象创建自定义检视面板和编辑器。" /><meta property="og:description" content="从此基类派生，以便为自定义对象创建自定义检视面板和编辑器。" /><meta name="author" content="Unity Technologies" /><link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico" /><link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png" /><link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png" /><link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png" /><link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png" /><meta name="msapplication-TileColor" content="#222c37" /><meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png" /><script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'ScriptReference';
+      var lang = 'cn';
+      var page = 'UnityEditor.Editor';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css" /><link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css" /><link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/ScriptReference/UnityEditor.Editor.html" /><link rel="alternate" href="https://docs.unity3d.com/en/2019.4/ScriptReference/UnityEditor.Editor.html" hreflang="en" /><link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/ScriptReference/UnityEditor.Editor.html" hreflang="zh" /><link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/ScriptReference/UnityEditor.Editor.html" hreflang="ja" /><link rel="alternate" href="https://docs.unity3d.com/es/2019.4/ScriptReference/UnityEditor.Editor.html" hreflang="es" /><link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/ScriptReference/UnityEditor.Editor.html" hreflang="ko" /><link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/ScriptReference/UnityEditor.Editor.html" hreflang="ru" /><link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/ScriptReference/UnityEditor.Editor.html" hreflang="x-default" /></head><body><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="header-wrapper"><div id="header" class="header"><div class="content"><div class="spacer"><div class="menu"><div id="nav-open" for="nav-input"><span></span></div><div class="logo"><a href="./index.html"></a></div><div class="search-form"><form action="30_search.html" method="get" class="apisearch"><input type="text" name="q" placeholder="搜索脚本..." autosave="Unity Reference" results="5" class="sbox field" id="q"></input><input type="submit" class="submit"></input></form></div><ul class="menu-items"><li class="menu-item"><a href="../Manual/index.html" class="">手册</a></li><li class="menu-item"><a href="../ScriptReference/index.html" class="selected">脚本 API</a></li></ul></div></div><div class="more"><div class="filler"></div><ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul></div></div></div><div class="toolbar"><div class="content"><div class="version-switcher"><div class="current toggle" data-target=".version-list"><div class="version-number"><div class="d-inline-block">
+          Version:
+          <b>2019.4</b></div><div class="d-inline-block arrow"></div></div></div><div class="version-list" style="display:none;"><ul class="versions"><li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/ScriptReference/UnityEditor.Editor.html">2021.1</a></li><li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/ScriptReference/UnityEditor.Editor.html">2020.3</a></li><li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/ScriptReference/UnityEditor.Editor.html">2020.2</a></li><li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/ScriptReference/UnityEditor.Editor.html">2020.1</a></li><li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/ScriptReference/UnityEditor.Editor.html">2019.4</a></li><li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/ScriptReference/UnityEditor.Editor.html">2019.3</a></li><li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/ScriptReference/UnityEditor.Editor.html">2019.2</a></li><li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/ScriptReference/UnityEditor.Editor.html">2019.1</a></li><li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/ScriptReference/UnityEditor.Editor.html">2018.4</a></li><li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/ScriptReference/UnityEditor.Editor.html">2018.3</a></li><li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/ScriptReference/UnityEditor.Editor.html">2018.2</a></li><li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/ScriptReference/UnityEditor.Editor.html">2018.1</a></li><li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/ScriptReference/UnityEditor.Editor.html">2017.4</a></li><li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/ScriptReference/UnityEditor.Editor.html">2017.3</a></li><li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/ScriptReference/UnityEditor.Editor.html">2017.2</a></li><li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/ScriptReference/UnityEditor.Editor.html">2017.1</a></li><li class=""><a class="docs_version_url_560" href="/cn/560/ScriptReference/UnityEditor.Editor.html">5.6</a></li><div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div><div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div></ul><ul class="description"><li><div class="supported-box"></div>受支持</li><li><div class="legacy-box"></div>旧版</li></ul></div></div><ul class="nav-menu-items"><li class="menu-item"><a href="../Manual/index.html" class="">手册</a></li><li class="menu-item"><a href="../ScriptReference/index.html" class="selected">脚本 API</a></li></ul><div class="lang-switcher"><div class="current toggle" data-target=".lang-list"><div class="lbl">语言:
+        <span class="b">中文</span></div><div class="arrow"></div></div><div class="lang-list" style="display:none;"><ul><li><a data-lang="en" href="/2019.4/Documentation/ScriptReference/UnityEditor.Editor.html">English</a></li><li><a data-lang="cn" href="/cn/2019.4/ScriptReference/UnityEditor.Editor.html">中文</a></li><li><a data-lang="ja" href="/ja/2019.4/ScriptReference/UnityEditor.Editor.html">日本語</a></li><li><a data-lang="es" href="/es/2019.4/ScriptReference/UnityEditor.Editor.html">Español</a></li><li><a data-lang="kr" href="/kr/2019.4/ScriptReference/UnityEditor.Editor.html">한국어</a></li><li><a data-lang="ru" href="/ru/2019.4/ScriptReference/UnityEditor.Editor.html">Русский</a></li></ul></div></div></div></div></div><div id="master-wrapper" class="master-wrapper clear"><div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>脚本 API</h2><div class="version-switcher"><div class="current toggle" data-target=".version-list"><div class="version-number"><div class="d-inline-block">
+          Version:
+          <b>2019.4</b></div><div class="d-inline-block arrow"></div></div></div><div class="version-list" style="display:none;"><ul class="versions"><li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/ScriptReference/UnityEditor.Editor.html">2021.1</a></li><li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/ScriptReference/UnityEditor.Editor.html">2020.3</a></li><li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/ScriptReference/UnityEditor.Editor.html">2020.2</a></li><li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/ScriptReference/UnityEditor.Editor.html">2020.1</a></li><li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/ScriptReference/UnityEditor.Editor.html">2019.4</a></li><li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/ScriptReference/UnityEditor.Editor.html">2019.3</a></li><li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/ScriptReference/UnityEditor.Editor.html">2019.2</a></li><li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/ScriptReference/UnityEditor.Editor.html">2019.1</a></li><li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/ScriptReference/UnityEditor.Editor.html">2018.4</a></li><li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/ScriptReference/UnityEditor.Editor.html">2018.3</a></li><li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/ScriptReference/UnityEditor.Editor.html">2018.2</a></li><li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/ScriptReference/UnityEditor.Editor.html">2018.1</a></li><li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/ScriptReference/UnityEditor.Editor.html">2017.4</a></li><li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/ScriptReference/UnityEditor.Editor.html">2017.3</a></li><li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/ScriptReference/UnityEditor.Editor.html">2017.2</a></li><li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/ScriptReference/UnityEditor.Editor.html">2017.1</a></li><li class=""><a class="docs_version_url_560" href="/cn/560/ScriptReference/UnityEditor.Editor.html">5.6</a></li><div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div><div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div></ul><ul class="description"><li><div class="supported-box"></div>受支持</li><li><div class="legacy-box"></div>旧版</li></ul></div></div><div class="clear"></div></div></div></div></div></div><div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content"><div class="section"><div class="mb20 clear" id=""><h1 class="heading inherit">Editor</h1><div class="clear"></div><p class="cl mb0 left mr10">class in UnityEditor</p><p class="cl mb0 left mr10">/</p><p class="cl mb0 left">继承自：<a href="ScriptableObject.html" class="cl">ScriptableObject</a></p><div class="clear"></div><a href="" class="switch-link gray-btn sbtn left hide">切换到手册</a><div class="clear"></div></div><div class="subsection"><div class="signature"><div class="signature-CS sig-block"><span style="color:red;"></span></div></div></div><div class="subsection"><h2>描述</h2><p>从此基类派生，以便为自定义对象创建自定义检视面板和编辑器。</p></div><div class="subsection">
+        <pre class="codeExampleCS">using UnityEngine;
+using System.Collections;<br /><br />// This is not an editor script.
+public class MyPlayer : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    public int armor = 75;
+    public int damage = 25;
+    public <a href="GameObject.html">GameObject</a> gun;<br /><br />    void <a href="PlayerLoop.Update.html">Update</a>()
+    {
+        // <a href="PlayerLoop.Update.html">Update</a> logic here...
+    }
+}
+</pre>
+      </div><div class="subsection"><p>例如，使用自定义编辑器在检视面板中更改脚本外观。<br /><br />您可以使用 <a href="CustomEditor.html">CustomEditor</a> 属性将编辑器附加到自定义组件。<br /><br />可通过多种方式设计自定义编辑器。
+如果您希望编辑器支持多对象编辑，可以使用 <a href="CanEditMultipleObjects.html">CanEditMultipleObjects</a> 属性。
+与直接修改脚本变量相比，使用 <a href="SerializedObject.html">SerializedObject</a> 和 <a href="SerializedProperty.html">SerializedProperty</a>
+系统进行编辑更为有利，因为这会自动处理多对象编辑、撤消和预制件重载。如果使用此方法，用户可以在层级视图窗口中选择多个资源并一次性更改所有资源的值。<br /><br />可以使用 UIElements 构建自定义 UI，也可以使用 IMGUI。若要使用 UIElements 创建自定义检视面板，必须对 <a href="Editor.html">Editor</a> 类覆盖 <a href="Editor.CreateInspectorGUI.html">Editor.CreateInspectorGUI</a>。若要使用 IMGUI 创建自定义检视面板，必须对 <a href="Editor.html">Editor</a> 类覆盖 <a href="Editor.OnInspectorGUI.html">Editor.OnInspectorGUI</a>。如果使用 UIElements 并覆盖了 <a href="Editor.CreateInspectorGUI.html">Editor.CreateInspectorGUI</a>，则会忽略相同编辑器上使用 <a href="Editor.OnInspectorGUI.html">Editor.OnInspectorGUI</a> 的任何现有 IMGUI 实现。<br /><br />以下是自定义检视面板的示例：<br /><br /><img src="../StaticFiles/ScriptRefImages/CustomEditorUIElements.png" /><br />
+<em>检视面板中的自定义编辑器。</em></p></div><div class="subsection">
+        <pre class="codeExampleCS">using <a href="UnityEditor.html">UnityEditor</a>;
+using UnityEditor.UIElements;
+using UnityEngine;
+using UnityEngine.UIElements;
+[<a href="CustomEditor.html">CustomEditor</a>(typeof(MyPlayer))]
+public class MyPlayerEditor : <a href="Editor.html">Editor</a>
+{
+    const string resourceFilename = "custom-editor-uie";
+    public override <a href="UIElements.VisualElement.html">VisualElement</a> CreateInspectorGUI()
+    {
+        <a href="UIElements.VisualElement.html">VisualElement</a> customInspector = new <a href="UIElements.VisualElement.html">VisualElement</a>();
+        var visualTree = <a href="Resources.Load.html">Resources.Load</a>(resourceFilename) as <a href="UIElements.VisualTreeAsset.html">VisualTreeAsset</a>;
+        visualTree.CloneTree(customInspector);
+        customInspector.styleSheets.Add(<a href="Resources.Load.html">Resources.Load</a>($"{resourceFilename}-style") as <a href="UIElements.StyleSheet.html">StyleSheet</a>);
+        return customInspector;
+    }
+}</pre>
+      </div><div class="subsection"><p>以下示例使用 uxml 定义自定义检视面板的布局。该定义作为资源进行加载，<a href="UIElements.VisualTreeAsset.CloneTree.html">VisualTreeAsset.CloneTree</a> 方法会将层级视图放入 <a href="UIElements.VisualElement.html">VisualElement</a> 对象中。<br /><br />InspectorWindow 会实例化包含自定义检视面板的 <a href="UIElements.InspectorElement.html">InspectorElement</a>。<a href="UIElements.InspectorElement.html">InspectorElement</a> 会对自定义检视面板调用 Bind，从而将它绑定到 MyPlayer 对象。</p></div><div class="subsection">
+        <pre class="codeExampleCS">&lt;UXML xmlns="UnityEngine.UIElements" xmlns:e="UnityEditor.UIElements"&gt;
+    &lt;<a href="UIElements.VisualElement.html">VisualElement</a> class="player-property"&gt;
+        &lt;<a href="UIElements.VisualElement.html">VisualElement</a> class="slider-row"&gt;
+            &lt;<a href="UIElements.Label.html">Label</a> class="player-property-label" text="Damage"/&gt;
+            &lt;<a href="UIElements.VisualElement.html">VisualElement</a> class="input-container"&gt;
+                &lt;<a href="UIElements.SliderInt.html">SliderInt</a> class="player-slider" name="damage-slider" high-value="100" direction="Horizontal" binding-path="damage"/&gt;
+                &lt;e:<a href="UIElements.IntegerField.html">IntegerField</a> class="player-int-field" binding-path="damage"/&gt;
+            &lt;/<a href="UIElements.VisualElement.html">VisualElement</a>&gt;
+        &lt;/<a href="UIElements.VisualElement.html">VisualElement</a>&gt;
+        &lt;e:<a href="UIElements.ProgressBar.html">ProgressBar</a> class="player-property-progress-bar" name="damage-progress" binding-path="damage" title="Damage"/&gt;
+    &lt;/<a href="UIElements.VisualElement.html">VisualElement</a>&gt;<br /><br />    &lt;<a href="UIElements.VisualElement.html">VisualElement</a> class="player-property"&gt;
+        &lt;<a href="UIElements.VisualElement.html">VisualElement</a> class="slider-row"&gt;
+            &lt;<a href="UIElements.Label.html">Label</a> class="player-property-label" text="Armor"/&gt;
+            &lt;<a href="UIElements.VisualElement.html">VisualElement</a> class="input-container"&gt;
+                &lt;<a href="UIElements.SliderInt.html">SliderInt</a> class="player-slider" name="armor-slider" high-value="100" direction="Horizontal" binding-path="armor"/&gt;
+                &lt;e:<a href="UIElements.IntegerField.html">IntegerField</a> class="player-int-field" binding-path="armor"/&gt;
+            &lt;/<a href="UIElements.VisualElement.html">VisualElement</a>&gt;
+        &lt;/<a href="UIElements.VisualElement.html">VisualElement</a>&gt;
+        &lt;e:<a href="UIElements.ProgressBar.html">ProgressBar</a> class="player-property-progress-bar" name="armor-progress" binding-path="armor" title="Armor"/&gt;
+    &lt;/<a href="UIElements.VisualElement.html">VisualElement</a>&gt;<br /><br />    &lt;e:<a href="UIElements.PropertyField.html">PropertyField</a> class="gun-field" binding-path="gun" label="Gun Object"/&gt;
+&lt;/UXML&gt;</pre>
+      </div><div class="subsection"><p>UIElements 会在数据更改时自动更新 UI，反之亦然。若要绑定数据并自动更新数据和 UI，请为“binding-path”属性设置值。<br /><br />检视面板的样式使用 uss 进行设置。</p></div><div class="subsection">
+        <pre class="codeExampleCS">.slider-row {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+.input-container {
+    flex-direction: row;
+    flex-grow: .6;
+    margin-right: 4px;
+}
+.player-property {
+    margin-bottom: 4px;
+}
+.player-property-label {
+    flex:1;
+    margin-left: 16;
+}
+.player-slider {
+    flex:3;
+    margin-right: 4px;
+}
+.player-property-progress-bar {
+    margin-left: 16px;
+    margin-right: 4px;
+}
+.player-int-field {
+    min-width: 48px;
+}
+.gun-field {
+    justify-content: space-between;
+    margin-left: 16px;
+    margin-right: 4px;
+    margin-top: 6px;
+    flex-grow: .6;
+}</pre>
+      </div><div class="subsection"><p>以下是使用 IMGUI 和多重选择的自定义检视面板示例：</p></div><div class="subsection">
+        <pre class="codeExampleCS">
+using <a href="UnityEditor.html">UnityEditor</a>;
+using UnityEngine;
+using System.Collections;<br /><br />// Custom <a href="Editor.html">Editor</a> using SerializedProperties.
+// Automatic handling of multi-object editing, undo, and Prefab overrides.
+[<a href="CustomEditor.html">CustomEditor</a>(typeof(MyPlayer))]
+[<a href="CanEditMultipleObjects.html">CanEditMultipleObjects</a>]
+public class MyPlayerEditor : <a href="Editor.html">Editor</a>
+{
+    <a href="SerializedProperty.html">SerializedProperty</a> damageProp;
+    <a href="SerializedProperty.html">SerializedProperty</a> armorProp;
+    <a href="SerializedProperty.html">SerializedProperty</a> gunProp;<br /><br />    void OnEnable()
+    {
+        // Setup the SerializedProperties.
+        damageProp = serializedObject.FindProperty ("damage");
+        armorProp = serializedObject.FindProperty ("armor");
+        gunProp = serializedObject.FindProperty ("gun");
+    }<br /><br />    public override void OnInspectorGUI()
+    {
+        // <a href="PlayerLoop.Update.html">Update</a> the serializedProperty - always do this in the beginning of OnInspectorGUI.
+        serializedObject.Update ();<br /><br />        // Show the custom <a href="GUI.html">GUI</a> controls.
+        <a href="EditorGUILayout.IntSlider.html">EditorGUILayout.IntSlider</a> (damageProp, 0, 100, new <a href="GUIContent.html">GUIContent</a> ("Damage"));<br /><br />        // Only show the damage progress bar if all the objects have the same damage value:
+        if (!damageProp.hasMultipleDifferentValues)
+            <a href="UIElements.ProgressBar.html">ProgressBar</a> (damageProp.intValue / 100.0f, "Damage");<br /><br />        <a href="EditorGUILayout.IntSlider.html">EditorGUILayout.IntSlider</a> (armorProp, 0, 100, new <a href="GUIContent.html">GUIContent</a> ("Armor"));<br /><br />        // Only show the armor progress bar if all the objects have the same armor value:
+        if (!armorProp.hasMultipleDifferentValues)
+            <a href="UIElements.ProgressBar.html">ProgressBar</a> (armorProp.intValue / 100.0f, "Armor");<br /><br />        <a href="EditorGUILayout.PropertyField.html">EditorGUILayout.PropertyField</a> (gunProp, new <a href="GUIContent.html">GUIContent</a> ("Gun Object"));<br /><br />        // Apply changes to the serializedProperty - always do this in the end of OnInspectorGUI.
+        serializedObject.ApplyModifiedProperties ();
+    }<br /><br />    // Custom <a href="GUILayout.html">GUILayout</a> progress bar.
+    void <a href="UIElements.ProgressBar.html">ProgressBar</a> (float value, string label)
+    {
+        // Get a rect for the progress bar using the same margins as a textfield:
+        <a href="Rect.html">Rect</a> rect = <a href="GUILayoutUtility.GetRect.html">GUILayoutUtility.GetRect</a> (18, 18, "<a href="UIElements.TextField.html">TextField</a>");
+        <a href="EditorGUI.ProgressBar.html">EditorGUI.ProgressBar</a> (rect, value, label);
+        <a href="EditorGUILayout.Space.html">EditorGUILayout.Space</a> ();
+    }
+}
+</pre>
+      </div><div class="subsection"><p>如果不需要自动处理多对象编辑、撤消
+和预制件重写，可直接通过编辑器修改
+脚本变量，而无需使用 <a href="SerializedObject.html">SerializedObject</a>
+和 <a href="SerializedProperty.html">SerializedProperty</a> 系统，如以下 IMGUI 示例所示。</p></div><div class="subsection">
+        <pre class="codeExampleCS">
+using <a href="UnityEditor.html">UnityEditor</a>;
+using UnityEngine;
+using System.Collections;<br /><br />// Example script with properties.
+public class MyPlayerAlternative : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    public int damage;
+    public int armor;
+    public <a href="GameObject.html">GameObject</a> gun;<br /><br />    // ...other code...
+}<br /><br />// Custom <a href="Editor.html">Editor</a> the "old" way by modifying the script variables directly.
+// No handling of multi-object editing, undo, and Prefab overrides!
+[<a href="CustomEditor.html">CustomEditor</a> (typeof(MyPlayerAlternative))]
+public class MyPlayerEditorAlternative : <a href="Editor.html">Editor</a>
+{<br /><br />    public override void OnInspectorGUI()
+    {
+        MyPlayerAlternative mp = (MyPlayerAlternative)target;<br /><br />        mp.damage = <a href="EditorGUILayout.IntSlider.html">EditorGUILayout.IntSlider</a> ("Damage", mp.damage, 0, 100);
+        <a href="UIElements.ProgressBar.html">ProgressBar</a> (mp.damage / 100.0f, "Damage");<br /><br />        mp.armor = <a href="EditorGUILayout.IntSlider.html">EditorGUILayout.IntSlider</a> ("Armor", mp.armor, 0, 100);
+        <a href="UIElements.ProgressBar.html">ProgressBar</a> (mp.armor / 100.0f, "Armor");<br /><br />        bool allowSceneObjects = !<a href="EditorUtility.IsPersistent.html">EditorUtility.IsPersistent</a> (target);
+        mp.gun = (<a href="GameObject.html">GameObject</a>)<a href="EditorGUILayout.ObjectField.html">EditorGUILayout.ObjectField</a> ("Gun Object", mp.gun, typeof(<a href="GameObject.html">GameObject</a>), allowSceneObjects);
+    }<br /><br />    // Custom <a href="GUILayout.html">GUILayout</a> progress bar.
+    void <a href="UIElements.ProgressBar.html">ProgressBar</a> (float value, string label)
+    {
+        // Get a rect for the progress bar using the same margins as a textfield:
+        <a href="Rect.html">Rect</a> rect = <a href="GUILayoutUtility.GetRect.html">GUILayoutUtility.GetRect</a> (18, 18, "<a href="UIElements.TextField.html">TextField</a>");
+        <a href="EditorGUI.ProgressBar.html">EditorGUI.ProgressBar</a> (rect, value, label);
+        <a href="EditorGUILayout.Space.html">EditorGUILayout.Space</a> ();
+    }
+}
+</pre>
+      </div><div class="subsection"><h2>变量</h2><table class="list">
+      <tr><td class="lbl"><a href="Editor-serializedObject.html">serializedObject</a></td><td class="desc">表示正在检查的一个或多个对象的 SerializedObject。</td></tr>
+      <tr><td class="lbl"><a href="Editor-target.html">target</a></td><td class="desc">所检查的对象。</td></tr>
+      <tr><td class="lbl"><a href="Editor-targets.html">targets</a></td><td class="desc">正在检查的所有对象的数组。</td></tr>
+    </table></div><div class="subsection"><h2>公共函数</h2><table class="list">
+      <tr><td class="lbl"><a href="Editor.CreateInspectorGUI.html">CreateInspectorGUI</a></td><td class="desc">实现此方法以创建自定义 UIElements 检视面板。</td></tr>
+      <tr><td class="lbl"><a href="Editor.DrawDefaultInspector.html">DrawDefaultInspector</a></td><td class="desc">绘制内置检视面板。</td></tr>
+      <tr><td class="lbl"><a href="Editor.DrawHeader.html">DrawHeader</a></td><td class="desc">调用此函数以绘制编辑器标头。</td></tr>
+      <tr><td class="lbl"><a href="Editor.DrawPreview.html">DrawPreview</a></td><td class="desc">预览绘制的第一个入口点。</td></tr>
+      <tr><td class="lbl"><a href="Editor.GetInfoString.html">GetInfoString</a></td><td class="desc">实现此方法以在资源预览上显示资源信息。</td></tr>
+      <tr><td class="lbl"><a href="Editor.GetPreviewTitle.html">GetPreviewTitle</a></td><td class="desc">如果要更改 Preview 区域的标签，可重载此方法。</td></tr>
+      <tr><td class="lbl"><a href="Editor.HasPreviewGUI.html">HasPreviewGUI</a></td><td class="desc">如果实现 OnPreviewGUI，可在子类中重载此方法。</td></tr>
+      <tr><td class="lbl"><a href="Editor.OnInspectorGUI.html">OnInspectorGUI</a></td><td class="desc">实现此函数以创建自定义检视面板。</td></tr>
+      <tr><td class="lbl"><a href="Editor.OnInteractivePreviewGUI.html">OnInteractivePreviewGUI</a></td><td class="desc">实现此方法可创建您自己的交互式自定义预览。交互式自定义预览用于检视面板和对象选择器的预览区域。</td></tr>
+      <tr><td class="lbl"><a href="Editor.OnPreviewGUI.html">OnPreviewGUI</a></td><td class="desc">实现此方法可为检视面板、主编辑器标头和对象选择器的预览区域创建自己的自定义预览。</td></tr>
+      <tr><td class="lbl"><a href="Editor.OnPreviewSettings.html">OnPreviewSettings</a></td><td class="desc">如果要在预览标头中显示自定义控件，可重载此方法。</td></tr>
+      <tr><td class="lbl"><a href="Editor.RenderStaticPreview.html">RenderStaticPreview</a></td><td class="desc">如果要渲染静态预览，可重载此方法。</td></tr>
+      <tr><td class="lbl"><a href="Editor.Repaint.html">Repaint</a></td><td class="desc">重新绘制显示此编辑器的任意检视面板。</td></tr>
+      <tr><td class="lbl"><a href="Editor.RequiresConstantRepaint.html">RequiresConstantRepaint</a></td><td class="desc">检查此编辑器在其当前状态下是否需要不断重绘。</td></tr>
+      <tr><td class="lbl"><a href="Editor.UseDefaultMargins.html">UseDefaultMargins</a></td><td class="desc">如果您不想使用默认边距，可在子类中重载此方法以返回 false。</td></tr>
+    </table></div><div class="subsection"><h2>受保护的函数</h2><table class="list">
+      <tr><td class="lbl"><a href="Editor.ShouldHideOpenButton.html">ShouldHideOpenButton</a></td><td class="desc">返回检视面板中“open”按钮的可见性设置。</td></tr>
+    </table></div><div class="subsection"><h2>静态函数</h2><table class="list">
+      <tr><td class="lbl"><a href="Editor.CreateCachedEditor.html">CreateCachedEditor</a></td><td class="desc">返回时，previousEditor 是 targetObject 或 targetObjects 的编辑器。如果该编辑器已经在跟踪对象，则函数会返回，否则该函数会销毁之前的编辑器并创建一个新编辑器。</td></tr>
+      <tr><td class="lbl"><a href="Editor.CreateCachedEditorWithContext.html">CreateCachedEditorWithContext</a></td><td class="desc">使用上下文对象创建缓存的编辑器。</td></tr>
+      <tr><td class="lbl"><a href="Editor.CreateEditor.html">CreateEditor</a></td><td class="desc">为 targetObject 或 targetObjects 创建自定义编辑器。</td></tr>
+      <tr><td class="lbl"><a href="Editor.CreateEditorWithContext.html">CreateEditorWithContext</a></td><td class="desc">使用上下文对象为 targetObject 或 targetObjects 创建自定义编辑器。</td></tr>
+      <tr><td class="lbl"><a href="Editor.DrawFoldoutInspector.html">DrawFoldoutInspector</a></td><td class="desc">为 target 绘制带有折叠标头的检视面板 GUI。</td></tr>
+    </table></div><div class="subsection"><h2>消息</h2><table class="list">
+      <tr><td class="lbl"><a href="Editor.OnSceneGUI.html">OnSceneGUI</a></td><td class="desc">使编辑器在场景视图中处理事件。</td></tr>
+    </table></div><div class="subsection"><h2>Events</h2><table class="list">
+      <tr><td class="lbl"><a href="Editor-finishedDefaultHeaderGUI.html">finishedDefaultHeaderGUI</a></td><td class="desc">在绘制默认标题项之后，在绘制 Inspector 窗口的标题时引发的事件。</td></tr>
+    </table></div><div class="subsection"><h2>继承的成员</h2>
+      
+      <div class="subsection"><h2>变量</h2><table class="list">
+        <tr><td class="lbl"><a href="Object-hideFlags.html">hideFlags</a></td><td class="desc">该对象应该隐藏、随场景一起保存还是由用户修改？</td></tr>
+        <tr><td class="lbl"><a href="Object-name.html">name</a></td><td class="desc">对象的名称。</td></tr>
+      </table></div>
+      
+      
+      
+      <div class="subsection"><h2>公共函数</h2><table class="list">
+        <tr><td class="lbl"><a href="Object.GetInstanceID.html">GetInstanceID</a></td><td class="desc">返回对象的实例 ID。</td></tr>
+        <tr><td class="lbl"><a href="Object.ToString.html">ToString</a></td><td class="desc">返回对象的名称。</td></tr>
+      </table></div>
+      
+      <div class="subsection"><h2>静态函数</h2><table class="list">
+        <tr><td class="lbl"><a href="Object.Destroy.html">Destroy</a></td><td class="desc">移除 GameObject、组件或资源。</td></tr>
+        <tr><td class="lbl"><a href="Object.DestroyImmediate.html">DestroyImmediate</a></td><td class="desc">立即销毁对象 /obj/。强烈建议您改用 Destroy。</td></tr>
+        <tr><td class="lbl"><a href="Object.DontDestroyOnLoad.html">DontDestroyOnLoad</a></td><td class="desc">在加载新的 Scene 时，请勿销毁 Object。</td></tr>
+        <tr><td class="lbl"><a href="Object.FindObjectOfType.html">FindObjectOfType</a></td><td class="desc">返回第一个类型为 type 的已加载的激活对象。</td></tr>
+        <tr><td class="lbl"><a href="Object.FindObjectsOfType.html">FindObjectsOfType</a></td><td class="desc">返回所有类型为 type 的已加载的激活对象的列表。</td></tr>
+        <tr><td class="lbl"><a href="Object.Instantiate.html">Instantiate</a></td><td class="desc">克隆 original 对象并返回克隆对象。</td></tr>
+        <tr><td class="lbl"><a href="ScriptableObject.CreateInstance.html">CreateInstance</a></td><td class="desc">创建脚本化对象的实例。</td></tr>
+      </table></div>
+      <div class="subsection"><h2>运算符</h2><table class="list">
+        <tr><td class="lbl"><a href="Object-operator_Object.html">bool</a></td><td class="desc">该对象是否存在？</td></tr>
+        <tr><td class="lbl"><a href="Object-operator_ne.html">operator !=</a></td><td class="desc">比较两个对象是否引用不同的对象。</td></tr>
+        <tr><td class="lbl"><a href="Object-operator_eq.html">operator ==</a></td><td class="desc">比较两个对象引用，判断它们是否引用同一个对象。</td></tr>
+      </table></div>
+      <div class="subsection"><h2>消息</h2><table class="list">
+        <tr><td class="lbl"><a href="ScriptableObject.Awake.html">Awake</a></td><td class="desc">当 ScriptableObject 脚本启动时调用此函数。</td></tr>
+        <tr><td class="lbl"><a href="ScriptableObject.OnDestroy.html">OnDestroy</a></td><td class="desc">当脚本化对象将销毁时调用此函数。</td></tr>
+        <tr><td class="lbl"><a href="ScriptableObject.OnDisable.html">OnDisable</a></td><td class="desc">当脚本化对象超出范围时调用此函数。</td></tr>
+        <tr><td class="lbl"><a href="ScriptableObject.OnEnable.html">OnEnable</a></td><td class="desc">当对象加载时调用此函数。</td></tr>
+      </table></div>
+      
+      
+    </div></div><div class="footer-wrapper"><div class="footer clear"><div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div><div class="menu"><a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a></div></div><div></div></div></div></div></div></div></body></html>

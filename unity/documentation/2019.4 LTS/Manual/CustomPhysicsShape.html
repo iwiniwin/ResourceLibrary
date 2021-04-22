@@ -1,0 +1,393 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Sprite Editor：Custom Physics Shape - Unity 手册">
+<title>Sprite Editor：Custom Physics Shape - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/2D_CustomPS_image_0.png">
+<meta name="description" content="Sprite Editor 的 Custom Physics Shape 用于编辑精灵的物理形状；物理形状定义了精灵 2D 碰撞体网格 (Collider 2D Mesh) 的初始形状。可以通过碰撞体的组件设置进一步优化物理形状。">
+<meta property="og:description" content="Sprite Editor 的 Custom Physics Shape 用于编辑精灵的物理形状；物理形状定义了精灵 2D 碰撞体网格 (Collider 2D Mesh) 的初始形状。可以通过碰撞体的组件设置进一步优化物理形状。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'CustomPhysicsShape';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/CustomPhysicsShape.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/CustomPhysicsShape.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/CustomPhysicsShape.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/CustomPhysicsShape.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/CustomPhysicsShape.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/CustomPhysicsShape.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/CustomPhysicsShape.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/CustomPhysicsShape.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/CustomPhysicsShape.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/CustomPhysicsShape.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/CustomPhysicsShape.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/CustomPhysicsShape.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/CustomPhysicsShape.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/CustomPhysicsShape.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/CustomPhysicsShape.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/CustomPhysicsShape.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/CustomPhysicsShape.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/CustomPhysicsShape.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/CustomPhysicsShape.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/CustomPhysicsShape.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/CustomPhysicsShape.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/CustomPhysicsShape.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/CustomPhysicsShape.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/CustomPhysicsShape.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/CustomPhysicsShape.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/CustomPhysicsShape.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/CustomPhysicsShape.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/CustomPhysicsShape.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/CustomPhysicsShape.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/CustomPhysicsShape.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/CustomPhysicsShape.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/CustomPhysicsShape.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/CustomPhysicsShape.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/CustomPhysicsShape.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/CustomPhysicsShape.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/CustomPhysicsShape.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/CustomPhysicsShape.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/CustomPhysicsShape.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/CustomPhysicsShape.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/CustomPhysicsShape.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/CustomPhysicsShape.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/CustomPhysicsShape.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/CustomPhysicsShape.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/CustomPhysicsShape.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/CustomPhysicsShape.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/CustomPhysicsShape.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/CustomPhysicsShape.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/CustomPhysicsShape.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Sprites.html">精灵</a></li>
+<li><a href="SpriteEditor.html">Sprite Editor</a></li>
+<li>Sprite Editor：Custom Physics Shape</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpriteOutlineEditor.html"></a></span><div class="tip">Sprite Editor：Custom Outline</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpriteEditor-SecondaryTextures.html"></a></span><div class="tip">Sprite Editor：Secondary Textures</div>
+</div>
+</div></div>
+<h1>Sprite Editor：Custom Physics Shape</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>概述</h2>
+
+<p>Sprite Editor 的 <strong>Custom Physics Shape</strong> 用于编辑精灵的物理形状；物理形状定义了精灵 <a href="Collider2D.html">2D 碰撞体</a>网格 (Collider 2D Mesh) 的初始形状。可以通过碰撞体的组件设置进一步优化物理形状。</p>
+
+<p>要编辑精灵的物理形状，请执行以下操作：</p>
+
+<p>1.在 Project 窗口中，选择要更改的精灵。</p>
+
+<p>2.在 Inspector 窗口中，单击 <strong>Sprite Editor</strong> 按钮。</p>
+
+<p>3.在 Sprite Editor 窗口中，选择左上角的下拉菜单，然后选择 <strong>Custom Physics Shape</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/2D_CustomPS_image_0.png" alt="编辑 Custom Physics Shape">
+<figcaption>编辑 <strong>Custom Physics Shape</strong></figcaption>
+</figure>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Snap</strong></td>
+	<td style="text-align:left;">将控制点贴靠到最近的像素。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Outline Tolerance</strong></td>
+	<td style="text-align:left;">使用此属性可控制生成的轮廓贴合精灵纹理轮廓的紧密程度。在最小值 (0) 时，Sprite Editor 会在精灵周围生成基本轮廓。在最大值 (1) 时，Sprite Editor 生成一个尽可能贴合精灵像素轮廓的轮廓。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate</strong></td>
+	<td style="text-align:left;">单击可自动创建物理形状轮廓。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>标准工作流程</h2>
+
+<p>首先打开所选精灵的 Sprite Editor。然后，从 Editor 的左上角下拉菜单中选择 <strong>Custom Physics Shape</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/2D_CustomPS_image_1.png" alt="">
+</figure>
+
+<p>然后单击 <strong>Generate</strong> 创建物理形状的轮廓。默认情况下，Unity 会生成贴合原始<strong>精灵</strong>纹理形状的轮廓，并会考虑透明区域。</p>
+
+<figure>
+<img src="../uploads/Main/2D_CustomPS_image_2.png" alt="生成的轮廓和控制点">
+<figcaption>生成的轮廓和控制点</figcaption>
+</figure>
+
+<p>调整 <strong>Outline Tolerance</strong> 滑动条可优化物理形状的轮廓。调整 <strong>Outline Tolerance</strong> 值后，单击 <strong>Generate</strong> 可刷新轮廓。</p>
+
+<figure>
+<img src="../uploads/Main/2D_CustomPS_image_3.png" alt="Outline Tolerance 滑动条">
+<figcaption>Outline Tolerance 滑动条</figcaption>
+</figure>
+
+<p>单击并拖动每个控制点可优化物理形状的轮廓。要删除控制点，请选择控制点，然后按 <strong>Command+Del/Del</strong> 键。</p>
+
+<figure>
+<img src="../uploads/Main/2D_CustomPS_image_4.png" alt="移动控制点">
+<figcaption>移动控制点</figcaption>
+</figure>
+
+<p>当鼠标悬停在轮廓上时，边缘上会出现透明控制点。单击即可在该位置创建新控制点。选择控制点并按 <strong>Del/Command+Del</strong> 键，即可删除控制点。</p>
+
+<table>
+<colgroup>
+<col style="text-align:center;">
+<col style="text-align:center;">
+</colgroup>
+
+<tbody>
+<tr>
+	<td style="text-align:center;"><img src="../uploads/Main/2D_CustomPS_image_5.png" alt=""></td>
+	<td style="text-align:center;"><img src="../uploads/Main/2D_CustomPS_image_6.png" alt=""></td>
+</tr>
+<tr>
+	<td style="text-align:center;">
+<em>Fig.1:</em> Transparent control point.</td>
+	<td style="text-align:center;">
+<em>Fig.2:</em> Click to create new control point.</td>
+</tr>
+</tbody>
+</table>
+
+<p>单击并拖动一个区域可选择多个控制点。在选择多个控制点后可以将它们一起放置在某个位置或将它们全部删除。</p>
+
+<figure>
+<img src="../uploads/Main/2D_CustomPS_image_7.png" alt="选择多个控制点">
+<figcaption>选择多个控制点</figcaption>
+</figure>
+
+<p>按住 <strong>Control/Ctrl</strong> 键可以选择边缘而不是控制点。单击突出显示的边缘可以将它们拖动到新位置。</p>
+
+<table>
+<colgroup>
+<col style="text-align:center;">
+<col style="text-align:center;">
+</colgroup>
+
+<tbody>
+<tr>
+	<td style="text-align:center;"><img src="../uploads/Main/2D_CustomPS_image_8.png" alt=""></td>
+	<td style="text-align:center;"><img src="../uploads/Main/2D_CustomPS_image_9.png" alt=""></td>
+</tr>
+<tr>
+	<td style="text-align:center;">
+<em>Fig.1:</em> Select the edge of the outline.</td>
+	<td style="text-align:center;">
+<em>Fig.2:</em> Drag and move the edge freely once selected.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>使用多个轮廓</h2>
+
+<p>单个物理形状可以包含多个单独的轮廓。如果只有精灵的特定区域需要 2D 碰撞体网格 (Collider 2D Mesh) 进行碰撞，这将非常有用。例如，作为游戏机制的一部分，可能希望角色仅响应其精灵特定区域上的碰撞以实现损坏效果。</p>
+
+<p>在 Sprite Editor 窗口中单击并拖动任何空白区域，可创建包含 4 个控制点的新矩形轮廓。重复此步骤可以创建更多轮廓。可使用与单个物理形状轮廓相同的方式优化每个轮廓。</p>
+
+<table>
+<colgroup>
+<col style="text-align:center;">
+<col style="text-align:center;">
+</colgroup>
+
+<tbody>
+<tr>
+	<td style="text-align:center;"><img src="../uploads/Main/2D_CustomPS_image_10.png" alt=""></td>
+	<td style="text-align:center;"><img src="../uploads/Main/2D_CustomPS_image_11.png" alt=""></td>
+</tr>
+<tr>
+	<td style="text-align:center;">
+<em>Fig. 1:</em> Click and drag to create 4-point box.</td>
+	<td style="text-align:center;">
+<em>Fig. 2:</em> Box physics shape with 4 control points.</td>
+</tr>
+<tr>
+	<td style="text-align:center;"><img src="../uploads/Main/2D_CustomPS_image_12.png" alt=""></td>
+	<td style="text-align:center;"><img src="../uploads/Main/2D_CustomPS_image_13.png" alt=""></td>
+</tr>
+<tr>
+	<td style="text-align:center;">
+<em>Fig. 3:</em> Click and drag again for another box.</td>
+	<td style="text-align:center;">
+<em>Fig. 4:</em> Repeat to create more separate outlines.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>更多提示</h2>
+
+<p>如果编辑了现有游戏对象正在引用的精灵的轮廓，请右键单击 <strong>Collider 2D</strong> 组件的标题，然后选择 <strong>Reset</strong>。此时将更新 2D 碰撞体网格的形状。</p>
+
+<figure>
+<img src="../uploads/Main/2D_CustomPS_image_14.png" alt="">
+</figure>
+
+<hr>
+
+<p><span class="page-edit"> 2018–05–24页面已发布</span></p>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpriteOutlineEditor.html"></a></span><div class="tip">Sprite Editor：Custom Outline</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpriteEditor-SecondaryTextures.html"></a></span><div class="tip">Sprite Editor：Secondary Textures</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

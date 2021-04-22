@@ -1,0 +1,376 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="扩展 UnityPlayerActivity Java 代码 - Unity 手册">
+<title>扩展 UnityPlayerActivity Java 代码 - Unity 手册</title>
+<meta name="description" content="本页面包含以下部分：">
+<meta property="og:description" content="本页面包含以下部分：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'AndroidUnityPlayerActivity';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/AndroidUnityPlayerActivity.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/AndroidUnityPlayerActivity.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/AndroidUnityPlayerActivity.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/AndroidUnityPlayerActivity.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/AndroidUnityPlayerActivity.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/AndroidUnityPlayerActivity.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/AndroidUnityPlayerActivity.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/AndroidUnityPlayerActivity.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AndroidUnityPlayerActivity.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AndroidUnityPlayerActivity.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AndroidUnityPlayerActivity.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AndroidUnityPlayerActivity.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AndroidUnityPlayerActivity.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AndroidUnityPlayerActivity.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AndroidUnityPlayerActivity.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AndroidUnityPlayerActivity.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AndroidUnityPlayerActivity.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AndroidUnityPlayerActivity.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AndroidUnityPlayerActivity.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AndroidUnityPlayerActivity.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AndroidUnityPlayerActivity.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AndroidUnityPlayerActivity.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AndroidUnityPlayerActivity.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AndroidUnityPlayerActivity.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AndroidUnityPlayerActivity.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/AndroidUnityPlayerActivity.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/AndroidUnityPlayerActivity.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/AndroidUnityPlayerActivity.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/AndroidUnityPlayerActivity.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/AndroidUnityPlayerActivity.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/AndroidUnityPlayerActivity.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AndroidUnityPlayerActivity.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AndroidUnityPlayerActivity.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AndroidUnityPlayerActivity.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AndroidUnityPlayerActivity.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AndroidUnityPlayerActivity.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AndroidUnityPlayerActivity.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AndroidUnityPlayerActivity.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AndroidUnityPlayerActivity.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AndroidUnityPlayerActivity.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AndroidUnityPlayerActivity.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AndroidUnityPlayerActivity.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AndroidUnityPlayerActivity.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AndroidUnityPlayerActivity.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AndroidUnityPlayerActivity.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AndroidUnityPlayerActivity.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AndroidUnityPlayerActivity.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AndroidUnityPlayerActivity.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="PluginsForAndroid.html">构建和使用适用于 Android 的插件</a></li>
+<li>扩展 UnityPlayerActivity Java 代码</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AndroidJARPlugins.html"></a></span><div class="tip">JAR 插件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AndroidNativePlugins.html"></a></span><div class="tip">适用于 Android 的原生 (C++) 插件</div>
+</div>
+</div></div>
+<h1>扩展 UnityPlayerActivity Java 代码</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面包含以下部分：</p>
+
+<ul>
+<li><a href="#ExtendingUnityPlayerActivity">扩展 UnityPlayerActivity 文件</a></li>
+<li><a href="#StartupArguments">从自定义 UnityPlayerActivity 文件指定 Unity 启动参数</a></li>
+<li><a href="#UnityPlayerActivityExample">包含示例清单的 UnityPlayerActivity 示例文件</a></li>
+</ul>
+
+<p><a name="ExtendingUnityPlayerActivity"></a></p>
+
+<h2>扩展 UnityPlayerActivity 文件</h2>
+
+<p>在开发 Unity Android 应用程序时，可使用插件来扩展标准的 <code>UnityPlayerActivity</code> 类（这是 Android 上的 Unity Player 的主 Java 类，类似于 Unity iOS 上的 <em>AppController.mm</em>）。应用程序可以覆盖 Android 操作系统和 Unity Android 应用程序之间的任何及所有基本交互。</p>
+
+<p>要覆盖默认活动，请执行以下操作：</p>
+
+<ul>
+<li>新建一个从 <code>UnityPlayerActivity</code> 派生的 <code>Activity</code>（请参阅 Android 文档中有关<a href="http://developer.android.com/reference/android/app/Activity.html">活动 (Activity)</a> 的部分）；</li>
+<li>修改 <a href="android-manifest.html">Android 清单</a>以将新 <code>Activity</code> 作为应用程序的入口点。</li>
+</ul>
+
+<p>为实现此目的，最简单的方法是从 Unity 导出项目，然后在 Android Studio 中对 <code>UnityPlayerActivity</code> 类进行必要的修改。</p>
+
+<p>要用新 <code>Activity</code> 创建插件并将其添加到项目，必须执行以下步骤：</p>
+
+<p>1.扩展 UnityPlayerActivity 文件。默认情况下，<em>UnityPlayerActivity.java</em> 文件位于：<br><br></p>
+
+<pre><code>__Mac：__
+
+*/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/src/com/unity3d/player*&lt;br/&gt;&lt;br/&gt;
+
+__Windows：__
+
+*C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\src\com\unity3d\player* &lt;br/&gt;&lt;br/&gt;
+
+要扩展 `UnityPlayerActivity` 文件，请找到 Unity 附带的 *classes.jar* 文件。该文件位于安装文件夹（Windows 上为 *C:\Program Files\Unity\Editor\Data*，Mac 上为 */Applications/Unity*）的以下其中一个子文件夹中：
+
+* *PlaybackEngines/AndroidPlayer/Variations/mono*
+
+* *il2cpp/Development*
+
+* *Release/Classes/*
+
+找到该文件，然后将 *classes.jar* 添加到 Unity 用于编译新 `Activity` 的类路径中。编译 `Activity` 源文件并将其打包到 JAR 或 AAR 包中，然后将其复制到项目文件夹。
+</code></pre>
+
+<p>1.创建一个新的 Android 清单以将新的 <code>Activity</code> 设置为应用程序的入口点，然后将 <em>AndroidManifest.xml</em> 文件放在项目的 <em>Assets/Plugins/Android</em> 文件夹中。</p>
+
+<p><a name="#StartupArguments"></a></p>
+
+<h1>从自定义 UnityPlayerActivity 文件指定 Unity 启动参数</h1>
+
+<p>扩展 <code>UnityPlayerActivity</code> 时，可覆盖 <code>String UnityPlayerActivity.updateUnityCommandLineArguments</code>(String cmdLine) 以将启动参数传递给 Unity。</p>
+
+<p><code>UnityPlayerActivity</code> 会在启动期间调用此方法。它接受当前的命令行参数（这些参数可为 null 或为空），并返回新的命令行参数字符串以传递给 Unity。</p>
+
+<p>有关 Unity 命令行界面的一般概述，请参阅<a href="CommandLineArguments.html">命令行参数</a>。</p>
+
+<p>下面的示例演示了如何使用该文件根据当前设备选择图形 API：</p>
+
+<pre><code>package com.company.product;
+import com.unity3d.player.UnityPlayerActivity;
+import android.os.Bundle;
+import android.os.Build;
+
+public class OverrideExample extends UnityPlayerActivity {
+    private boolean preferVulkan() {
+        // 在 Google Pixel 设备上使用 Vulkan
+        if (Build.MANUFACTURER.equals("Google") &amp;&amp; Build.MODEL.startsWith("Pixel"))
+            return true;
+        else
+            return false;
+    }
+
+    private boolean preferES2() {
+        // 在运行 Android 5.1 或更早版本的设备上使用 OpenGL ES 2.0
+        if (Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.LOLLIPOP_MR1)
+            return true;
+        else
+            return false;
+    }
+
+    private String appendCommandLineArgument(String cmdLine, String arg) {
+        if (arg == null || arg.isEmpty())
+            return cmdLine;
+        else if (cmdLine == null || cmdLine.isEmpty())
+            return arg;
+        else
+            return cmdLine + " " + arg; 
+    } 
+
+    @Override protected String updateUnityCommandLineArguments(String cmdLine)
+    {
+        if (preferVulkan())
+            return appendCommandLineArgument(cmdLine, "-force-vulkan");
+        else if (preferES2())
+            return appendCommandLineArgument(cmdLine, "-force-gles20");
+        else
+            return cmdLine; // 让 Unity 根据 PlayerSettings 选择图形 API
+    }
+
+    @Override protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+    }
+}
+</code></pre>
+
+<p><a name="UnityPlayerActivityExample"></a></p>
+
+<h1>UnityPlayerActivity 示例文件</h1>
+
+<p>以下是 <code>UnityPlayerActivity</code> 文件的示例：</p>
+
+<pre><code>OverrideExample.java:
+package com.company.product;
+import com.unity3d.player.UnityPlayerActivity;
+import android.os.Bundle;
+import android.util.Log;
+
+public class OverrideExample extends UnityPlayerActivity {
+  protected void onCreate(Bundle savedInstanceState) {
+    // 调用 UnityPlayerActivity.onCreate()
+    super.onCreate(savedInstanceState);
+    // 将调试消息打印至 logcat
+    Log.d("OverrideActivity", "onCreate called!");
+  }
+  public void onBackPressed()
+  {
+    // 不调用 UnityPlayerActivity.onBackPressed()，而是直接忽略 Back 按钮事件
+    // super.onBackPressed();
+  }
+}
+</code></pre>
+
+<p>相应的 <em>AndroidManifest.xml</em> 可能如下所示：</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.company.product"&gt;
+  &lt;application android:icon="@drawable/app_icon" android:label="@string/app_name"&gt;
+    &lt;activity android:name="com.YourPackage.name.OverrideExample"
+             android:label="@string/app_name"
+             android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"&gt;
+        &lt;intent-filter&gt;
+            &lt;action android:name="android.intent.action.MAIN" /&gt;
+            &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+        &lt;/intent-filter&gt;
+    &lt;/activity&gt;
+  &lt;/application&gt;
+&lt;/manifest&gt;
+
+</code></pre>
+
+<hr>
+
+<ul>
+<li><span class="page-history">在 2019.2 中添加了新代码示例。</span></li>
+<li><span class="page-history">针对 Unity 2019.3 或更高版本更新了 AndroidManifest 示例</span></li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AndroidJARPlugins.html"></a></span><div class="tip">JAR 插件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AndroidNativePlugins.html"></a></span><div class="tip">适用于 Android 的原生 (C++) 插件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

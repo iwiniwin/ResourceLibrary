@@ -1,0 +1,603 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="版本控制 - Unity 手册">
+<title>版本控制 - Unity 手册</title>
+<meta name="description" content="包必须遵循语义版本控制 (SemVer)。语义版本控制是一种策略，让包创作者能够以一种自动化工具可以使用的格式来提供有关给定版本中与先前版本相比的更改类型的信息。">
+<meta property="og:description" content="包必须遵循语义版本控制 (SemVer)。语义版本控制是一种策略，让包创作者能够以一种自动化工具可以使用的格式来提供有关给定版本中与先前版本相比的更改类型的信息。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'upm-semver';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/upm-semver.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/upm-semver.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/upm-semver.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/upm-semver.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/upm-semver.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/upm-semver.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/upm-semver.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/upm-semver.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/upm-semver.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/upm-semver.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/upm-semver.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/upm-semver.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/upm-semver.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/upm-semver.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/upm-semver.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/upm-semver.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/upm-semver.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/upm-semver.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/upm-semver.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/upm-semver.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/upm-semver.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/upm-semver.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/upm-semver.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/upm-semver.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/upm-semver.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/upm-semver.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/upm-semver.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/upm-semver.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/upm-semver.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/upm-semver.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/upm-semver.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/upm-semver.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/upm-semver.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/upm-semver.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/upm-semver.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/upm-semver.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/upm-semver.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/upm-semver.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/upm-semver.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/upm-semver.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/upm-semver.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/upm-semver.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/upm-semver.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/upm-semver.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/upm-semver.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/upm-semver.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/upm-semver.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/upm-semver.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PackagesList.html">包</a></li>
+<li><a href="CustomPackages.html">创建自定义包</a></li>
+<li><a href="upm-manifestPkg.html">包清单</a></li>
+<li>版本控制</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-manifestPkg.html"></a></span><div class="tip">包清单</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="cus-asmdef.html"></a></span><div class="tip">程序集定义和包</div>
+</div>
+</div></div>
+<h1>版本控制</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>包必须遵循<strong>语义版本控制</strong> (SemVer)。语义版本控制是一种策略，让包创作者能够以一种自动化工具可以使用的格式来提供有关给定版本中与先前版本相比的更改类型的信息。</p>
+
+<p>语义版本控制将版本表示为 <strong>MAJOR.MINOR.PATCH</strong>，MAJOR 表示引入了一个或多个重大更改，MINOR 表示引入了一个或多个向后兼容的 API 更改，而 PATCH 表示仅引入了错误修正，API 无任何变化。</p>
+
+<p>开始开发包时，版本号从 <code>0.1.0</code> 开始。MAJOR 版本号 <code>0</code> 保留给包的初始开发阶段。在最初的开发过程中，包 API 经常频繁进行重大更改，因此，在您认为包足够稳定并可以在实际生产中使用之前，请将 MAJOR 版本号保持为 <code>0</code>。</p>
+
+<p>在包正式进入实际生产阶段后，应将 MAJOR 版本递增到 <code>1</code>，并在后续更改时遵循以下准则：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>递增该值：</strong></th>
+	<th style="text-align:left;"><strong>在这些条件下：</strong></th>
+	<th style="text-align:left;"><strong>示例：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>MAJOR</strong></td>
+	<td style="text-align:left;">至少有一个重大更改，而该包的任何一个版本都不能替代另一个版本。重大更改包括：<br><br>• 更改 API 表面（API 的公开部分）或功能，可能导致编译或运行时错误。<br>• 删除非 API 功能，包括删除资源或更改资源的 GUID。<br>• 删除或重命名程序集和资源（因为编译器可能无法找到它们）。<br><br><strong>注意</strong>：将主要版本递增时，请务必将 <strong>PATCH</strong> 和 <strong>MINOR</strong> 值重置为 <code>0</code>。</td>
+	<td style="text-align:left;">版本 1.2.3 和 2.0.0 不兼容，不能安全地互换使用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>MINOR</strong><br>（<strong>MAJOR</strong> 值相同）</td>
+	<td style="text-align:left;">最高的 <strong>MINOR</strong> 以向后兼容方式引入功能。向后兼容（或非重大）的 API 更改包括：<br><br>• 更改 API 表面或功能，但不存在导致编译或运行时错误的风险。<br>• 添加非 API 功能。<br>• 添加程序集和资源（因为新项没有预先存在的引用）。<br><br><strong>注意</strong>：将次要版本递增时，请务必将 <strong>PATCH</strong> 版本重置为 <code>0</code>。</td>
+	<td style="text-align:left;">可以使用 1.3.0 版来实现对 1.2.0 的依赖，因为 1.3.0 向后兼容。<br><br> 不能使用 1.2.0 来实现对 1.3.0 的依赖。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>PATCH</strong><br>（<strong>MAJOR.MINOR</strong> 值相同）</td>
+	<td style="text-align:left;">最高的 <strong>PATCH</strong> 以向后兼容的方式引入了错误修复，但不更改任何 API。如果满足以下条件，表示 API 没有更改：<br><br>• API 表面相同，并且功能保持不变。<br>• 所做的更改不会更改公共 API。</td>
+	<td style="text-align:left;">版本 1.3.0 和 1.3.1 应该可以互换，因为它们具有相同的 API，即使 1.3.1 包含 1.3.0 中不存在的错误修复。</td>
+</tr>
+</tbody>
+</table>
+
+<p>通过遵循这些版本控制做法，Package Manager 可以自动解决冲突（如果可能），或将包升级到更高的向后兼容版本。</p>
+
+<p>以下各部分介绍的一些情况可以帮助您确定这些规则如何影响各种包元素：</p>
+
+<ul>
+<li>
+<a href="#general">常规资源</a>（例如音频、纹理和模型）。</li>
+<li><a href="#asmdefs">程序集定义（<em>.asmdef</em> 文件）和预编译的程序集（托管的 <em>.dll</em> 文件）</a></li>
+<li>
+<a href="#manifests">包清单文件</a> (<em>package.json</em>)</li>
+<li><a href="#obsolete">已弃用的 API</a></li>
+</ul>
+
+<p>除了上述情况之外，某些通常仅需要增加 MINOR 或 PATCH 版本的更改可能还会受到如下因素的影响：启用还是禁用了 <a href="#autoref">Auto Referenced</a> 属性。</p>
+
+<p><a name="autoref"></a></p>
+
+<h2>自动引用</h2>
+
+<p>您可以为<a href="ScriptCompilationAssemblyDefinitionFiles.html">程序集定义</a>设置的其中一个属性是 <strong>Auto Referenced</strong>，该属性控制 Unity 在编译过程中是否自动引用文件。启用此属性后，某些通常只需要增加 MINOR 或 PATCH 版本的更改现在将成为重大更改。</p>
+
+<p><strong>禁用</strong>自动引用时，如果进行的任何更改导致有新的程序集可用，则会引入向后兼容的 API 更改。向后兼容的 API 更改（比如<a href="#asm-addPlatform">添加平台</a>、<a href="#asm-testRefs">禁用 Unity 测试引用</a>、<a href="#asm-newAsmdefs">添加新的 <em>.asmdef</em></a> 或<a href="#asm-defCns">删除定义约束</a>）只需要增加 <strong>MINOR</strong> 版本。</p>
+
+<p>但在<strong>启用</strong>自动引用时，新添加的程序集将隐式添加到其他各种程序集的引用中。由于这些情况可能导致这些其他程序集中出现编译错误，因此需要增加 <strong>MAJOR</strong> 版本。</p>
+
+<p>另一种常见情况是在因为包依赖关系而添加或更改版本时。在大部分情况下，<a href="#mani-dep">更改包依赖关系</a>仅需要增加 <strong>PATCH</strong> 版本。但是，新的包版本可能包含<strong>启用</strong>了 <strong>Auto Referenced</strong> 属性的程序集，这就会成为一个重大更改，因此需要增加 <strong>MAJOR</strong> 版本。</p>
+
+<p>为避免此类问题，请始终避免将第三方 DLL 文件放入不相关的包中（例如，在 SaveGameManager 包中包含 <em>Newtonsoft.Json.dll</em>）。</p>
+
+<p><a name="general"></a></p>
+
+<h2>资源</h2>
+
+<p>项目可以引用资源数据库可见的任何资源。资源数据库使用在 <em>.meta</em> 文件中定义的 GUID 来唯一跟踪这些资源。</p>
+
+<p>将以下某一个更改引入公共 API 中时，需要新的 <strong>MAJOR</strong> 版本，因为它们属于<strong>重大更改</strong>：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>情况：</strong></th>
+	<th style="text-align:left;"><strong>为何属于重大更改：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">删除资源数据库可见的资源</td>
+	<td style="text-align:left;">如果删除资源，这可能会破坏用户项目中的引用或其他包。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">更改资源的 GUID</td>
+	<td style="text-align:left;">如果更改资源 GUID，则资源数据库将此做法理解为先删除原始资源再添加新的（相同）资源。这会导致引用被破坏，因为原始 GUID 不再指向该资源，因此资源数据库无法解析该引用。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="asmdefs"></a></p>
+
+<h2>程序集</h2>
+
+<p><a href="ScriptCompilationAssemblyDefinitionFiles.html">程序集定义</a> (<em>.asmdef</em>) 定义一组脚本，Unity Editor 的编译管线会将这些脚本转换成单独的托管程序集 (<em>.dll</em>)。这些 <em>.asmdef</em> 资源包含的属性可驱动生成的程序集的属性。这些属性包括：</p>
+
+<ul>
+<li>导入器设置，例如包含的平台和排除的平台</li>
+<li>与编译相关的属性，例如输出程序集名称和引用（提供给编译器以构建程序集）。</li>
+</ul>
+
+<p>大多数属性都会影响程序集的使用者，因此更改其中任何一个属性都将更改包的公共 API。其他属性对程序集的使用者没有影响，因此更改其中任何一个都不会被视为更改包 API。</p>
+
+<p><strong>警告</strong>：<strong>Auto Referenced</strong> 属性是一种特殊情况，因为很多通常<a href="#asm-none">完全不会更改 API</a> 或<a href="#asm-bcomp">以向后兼容方式更改 API</a> 的更改都可能会导致编译错误，具体取决于是否启用了此属性。有关更多信息，请参阅<a href="#autoref">自动引用</a>。</p>
+
+<p>Unity 既可以预编译程序集，也可以通过脚本和程序集定义来编译程序集。因此，适用于程序集定义的所有内容通常也适用于预编译的程序集。</p>
+
+<p>本节详细介绍了程序集定义和预编译程序集的更改，以及对包版本的影响：</p>
+
+<ul>
+<li>
+<a href="#asm-break">重大更改</a>（仅在新的 MAJOR 版本中允许）</li>
+<li>
+<a href="#asm-bcomp">向后兼容的 API 更改</a>（在新的 MAJOR 或 MINOR 版本中允许）</li>
+<li>不会改变 API 的<a href="#asm-none">向后兼容更改</a>（在新的 MAJOR、MINOR 或 PATCH 版本中允许）</li>
+</ul>
+
+<p><a name="asm-break"></a></p>
+
+<h3>仅限 MAJOR 版本：重大更改</h3>
+
+<p>在引入公共 API 的<strong>重大更改</strong>时，这需要新的 <strong>MAJOR</strong> 版本，因为这可能会导致编译错误和运行时错误。所有这些情况下都会从引用某个程序集的所有其他程序集中删除或隐藏该程序集。如果编译的程序集使用了在引用的程序集中定义的类型，则在编译器找不到另一个程序集的情况下，会导致编译错误。有关使用程序集和程序集定义的更多信息，请参阅<a href="ScriptCompilationAssemblyDefinitionFiles.html">程序集定义</a>。</p>
+
+<p>请注意，以下内容适用于包使用的运行时程序集和 Editor 程序集。这些内容不适用于测试程序集，因为包通常不使用它们，所以它们不是包 API 的一部分。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>情况：</strong></th>
+	<th style="text-align:left;"><strong>为何编译器找不到引用的程序集：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">删除程序集定义或预编译的程序集</td>
+	<td style="text-align:left;">删除程序集定义文件会阻止编译管线生成对应的程序集。<br><br><strong>注意</strong>：从 2019.1 开始，允许缺失的引用，目的是支持“可选引用”用例，但如果重命名 Unity 在编译程序集定义时所需要的程序集，则会导致编译错误。同样，如果编译后的代码需要程序集中的某个类型，则重命名该程序集可能会导致运行时错误，例如 <code>TypeLoadException</code>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">更改程序集名称（在 <em>.asmdef</em> 文件中更改，或者重命名 <em>.dll</em> 文件）</td>
+	<td style="text-align:left;">更改程序集名称等同于先删除程序集，然后又添加不同名称的新程序集。这意味着虽然 API 仍包含相同的程序集代码，只不过名称不同，但 Unity 也会认为缺少原始程序集。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">在 <em>.asmdef</em> 中添加<a href="../ScriptReference/PluginImporter.DefineConstraints.html">定义约束</a>
+</td>
+	<td style="text-align:left;">如果添加定义约束，那么只要不满足定义约束，Unity 就会跳过程序集的编译。这将导致程序集丢失的情况，即使程序集以前可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="ScriptCompilationAssemblyDefinitionFiles.html#AsmdefFileFormat">删除平台</a></td>
+	<td style="text-align:left;">如果删除对特定平台的支持，则 Unity 不再在该平台上导入程序集，这相当于删除程序集。<br><br>您可以通过启用以下属性之一来删除平台：<br>• <strong>includePlatforms</strong>，这将破坏与所有未列出平台的兼容性<br>• <strong>excludePlatforms</strong>，这会向其中添加条目</td>
+</tr>
+<tr>
+	<td style="text-align:left;">将公共 API 从一个程序集移动到另一个程序集</td>
+	<td style="text-align:left;">当您将可公开访问的代码从程序集 A 移到程序集 B 时，任何引用 A 但未引用 B 的程序集都将编译失败。<br><br>对于程序集定义，如果移动脚本，则可能会将公共 API 移至其他程序集。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">更改 <strong>Auto Referenced</strong> 属性</td>
+	<td style="text-align:left;">
+<em>禁用</em> <strong>Auto Referenced</strong> 属性时，如果不显式引用，那么您将无法再使用该程序集的公共 API：<br><br>• 对于预编译的程序集，禁用此属性会阻止 Unity 隐式添加预编译的程序集作为对程序集定义和项目编译的程序集的引用。<br>• 对于程序集定义，禁用此属性会阻止 Unity 隐式添加生成的程序集作为对项目编译的程序集的引用。<br><br><em>启用</em> <strong>Auto Referenced</strong> 属性时，可能会与 API、属性或依赖关系的其他更改产生冲突。有关更多信息，请参阅<a href="#autoref">自动引用</a>部分。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">在程序集定义中启用 <strong>Unity References → Test Assemblies</strong> 属性</td>
+	<td style="text-align:left;">启用 <strong>Unity References → Test Assemblies</strong> 属性会将此程序集标记为测试程序集，而 Unity 通常不会将测试程序集包含在构建中（也不会在某些情况下进行编译）。发生这种情况时，任何引用缺失程序集的程序集都无法找到该程序集，除非它也是测试程序集。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="asm-bcomp"></a></p>
+
+<h3>MAJOR、MINOR：非重大 API 更改</h3>
+
+<p>下列更改属于<strong>向后兼容</strong>的、非重大的 API 更改。这些情况都添加了程序集，这与删除程序集的重大更改不同。由于添加程序集会增加 API 表面（API 的公开部分），因此被认为是 API 更改。但是，由于没有现有引用，因此添加新程序集不会影响使用更低版本 API 创建的其他程序集。</p>
+
+<p>向后兼容的更改至少需要新的 <strong>MINOR</strong> 版本。如果您要包含属于重大更改的其他更新，则这些更新也可以成为新的 <strong>MAJOR</strong> 版本的一部分。</p>
+
+<p><strong>警告</strong>：仅当禁用 <strong>Auto Referenced</strong> 属性时，这些更改才向后兼容。启用 <strong>Auto Referenced</strong> 属性后，此表中列出的更改可能会导致重大更改。有关更多信息，请参阅<a href="#autoref">自动引用</a>部分。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>情况</strong></th>
+	<th style="text-align:left;"><strong>为何这些更改不会破坏编译</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<a name="asm-defCns"></a>在 .asmdef 中删除<a href="../ScriptReference/PluginImporter.DefineConstraints.html">定义约束</a>
+</td>
+	<td style="text-align:left;">删除定义约束意味着编译和脚本管线不再跳过该程序集。由于 Unity 始终会构建该程序集，因此无论是否满足这个定义约束，编译器都可以始终解析对该程序集的引用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="asm-addPlatform"></a>添加平台</td>
+	<td style="text-align:left;">添加平台对现有平台支持没有影响，因此是向后兼容的。这是 API 更改，因为增加了 API 表面。<br><br>可以通过修改以下属性来添加平台：<br>• 向 <strong>includePlatforms</strong> 属性中添加条目。<br>• 完全删除 <strong>includePlatforms</strong> 属性。这等效于添加 <strong>includePlatforms</strong> 属性中还不存在的所有平台。<br>• 从 <strong>excludePlatforms</strong> 属性中删除条目。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="asm-newAsmdefs"></a>使用新脚本创建程序集定义（与以前不同，使用不同的 <em>.asmdef</em> 文件）</td>
+	<td style="text-align:left;">添加新程序集将增加 API 表面（API 的公开部分），而不会改变任何现有的实现。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="asm-testRefs"></a>在程序集定义文件中禁用 <strong>Unity References → Test Assemblies</strong> 属性</td>
+	<td style="text-align:left;">禁用 <strong>Unity References → Test Assemblies</strong> 属性会将此程序集标记为常规程序集，因此 Unity 不再将此程序集与任何程序集定义区别对待。这是 API 更改，因为它会增加 API 表面。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="asm-none"></a></p>
+
+<h3>MAJOR、MINOR、PATCH：无 API 更改</h3>
+
+<p>以下更改不会影响公共 API，并且在 <strong>PATCH</strong> 版本中允许。这些情况下的更改不会改变公共 API，因为它们不会影响 API 表面（API 的公开部分），并且不会对其他使用者产生任何影响。</p>
+
+<p>不会改变公共 API 的更改至少需要新的 <strong>PATCH</strong> 版本。如果您要包含引入了重大更改或非重大更改的其他更新，那么也可以将这些更新包含在 <strong>MAJOR</strong> 或 <strong>MINOR</strong> 版本中。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>情况</strong></th>
+	<th style="text-align:left;"><strong>为何这些更改不会影响其他使用者</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">在 <em>.asmdef</em> 文件中更改引用的程序集和程序集定义的列表</td>
+	<td style="text-align:left;">引用另一个程序集的程序集不会自动引用另一个程序集自身的引用，而必须显式列出这些引用。因此，更改程序集定义或程序集内的引用不会影响其他使用者。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">更改程序集定义中的 <strong>Allow unsafe code</strong> 属性</td>
+	<td style="text-align:left;">此属性控制是否允许编译器编译具有 <strong>unsafe</strong> 修饰符的代码。仅更改该标志并不会改变公共 API。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">更改程序集定义中的 <strong>Override References</strong> 属性</td>
+	<td style="text-align:left;">此属性控制 Unity 如何为该程序集调用编译器，并且对生成的程序集的使用者没有影响。仅更改该标志并不会改变公共 API。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="manifests"></a></p>
+
+<h2>包清单文件</h2>
+
+<p><a href="upm-manifestPkg.html">包清单</a>文件 (<em>package.json</em>) 指定名称、版本、包依赖关系以及有关包本身的其他元数据。</p>
+
+<p>本节详细介绍包清单文件中的更改以及对包版本的影响：</p>
+
+<ul>
+<li>
+<a href="#mani-name">名称更改</a>（不允许）</li>
+<li>
+<a href="#mani-dep">依赖关系更改</a>（上下文确定了最低版本更改）</li>
+<li>
+<a href="#mani-other">其他更改</a>（在 MAJOR、MINOR 或 PATCH 版本中允许）</li>
+</ul>
+
+<p><a name="mani-name"></a></p>
+
+<h3>名称更改（不允许）</h3>
+
+<p>更改 <strong>name</strong> 属性等同于删除一个包并添加一个不同名称的新包，这是不支持的。不能通过尝试发布更新来重命名包：必须作为一个全新的包来发布。不允许更改名称，因为现有的项目和包无法将这些名称解释为同义词。</p>
+
+<p><a name="mani-dep"></a></p>
+
+<h3>依赖关系更改</h3>
+
+<p>更改项目中的依赖关系本身并不需要改变 MAJOR 或 MINOR 版本，除非它是 API 更改的一部分，或者启用了 <a href="#autoref">Auto Referenced</a> 属性。</p>
+
+<p>本节提供了依赖关系更改及其应用上下文的示例（假设已禁用 <a href="#autoref">Auto Referenced</a> 属性，并且除了每种情况所描述的更改以外，没有其他 API 更改）：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>依赖关系更改</strong></th>
+	<th style="text-align:left;"><strong>上下文</strong></th>
+	<th style="text-align:left;"><strong>最低版本更改</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">添加新的依赖关系</td>
+	<td style="text-align:left;">• 使用新包，但不更改功能行为，也不更改 API 表面。</td>
+	<td style="text-align:left;">PATCH</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">• 使用新包引入新行为，但不修改 API 表面。<br>• 创建新的 API 以公开在新包中定义的类型。</td>
+	<td style="text-align:left;">MINOR</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">• 使用新包以非向后兼容的方式更改现有行为，但不修改 API 表面。<br>• 以非向后兼容的方式修改现有的 API 以公开新包中定义的类型。</td>
+	<td style="text-align:left;">MAJOR</td>
+</tr>
+<tr>
+	<td style="text-align:left;">删除依赖关系</td>
+	<td style="text-align:left;">• 删除包，但不更改功能行为，也不更改 API 表面。</td>
+	<td style="text-align:left;">PATCH</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">• 删除包会导致以非向后兼容的方式更改现有行为，但不会更改 API 表面。<br>• 删除公开该依赖关系中定义的类型的 API。</td>
+	<td style="text-align:left;">MAJOR</td>
+</tr>
+<tr>
+	<td style="text-align:left;">更改依赖关系</td>
+	<td style="text-align:left;">• 使用修改后的包，但不更改功能行为，也不更改 API 表面。</td>
+	<td style="text-align:left;">PATCH</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">• 使用修改后的包引入新行为，但不修改 API 表面。<br>• 创建新 API 以公开修改后的包中定义的类型。</td>
+	<td style="text-align:left;">MINOR</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">• 使用修改后的包以非向后兼容的方式更改现有行为，但不修改 API 表面。<br>• 以一种非向后兼容的方式更改现有的 API，以公开修改后的包中定义的类型。<br>• 公开 API 中的某些类型，这些类型在修改后的包中以非向后兼容的方式更改。<br>• 公开 API 中的某些类型，这些类型在修改后的包中不再定义。</td>
+	<td style="text-align:left;">MAJOR</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="mani-other"></a></p>
+
+<h3>MAJOR、MINOR 或 PATCH：其他更改</h3>
+
+<p>您可以更改对任何发行版中的 Package Manager、构建管线、脚本管线或资源数据库没有特殊影响的包清单属性。这包括更改 <strong>description</strong>、<strong>category</strong>、<strong>keywords</strong> 或 <strong>displayName</strong>。</p>
+
+<p>如果更改了这些字段，可能表明您所做的更改不仅仅涉及错误修复。请务必考虑新版本中的其他更改是否实际上需要新的 MINOR 或 MAJOR 版本，而不是 PATCH 版本。</p>
+
+<p><a name="obsolete"></a></p>
+
+<h2>已弃用和过时的 API</h2>
+
+<p>需要从 API 中删除某些功能时，请首先发布至少一个包含弃用功能的 MINOR 版本。这会提醒用户即将删除功能，让他们能够顺利过渡到新的 API。然后，您可以在新的 MAJOR 版本中删除该功能。</p>
+
+<p>如果另一个开发者通过警告将一个包标记为过时，并且您在项目中启用了 <strong>Warnings as Errors</strong> 属性，则从技术上来讲，过时的包可能会破坏您的项目，但这不是真正的破坏，因为代码仍然可以像之前一样正常工作。</p>
+
+<p>在这种情况下，您可以选择如何修复警告型错误（按照常规的合理性降序排列）：</p>
+
+<ul>
+<li>更改您的代码，以便不再使用该 API。</li>
+<li>在 <code>#pragma warning</code> 指令中包裹使用该 API 的代码，以便不再显示该警告。</li>
+<li>禁用 <strong>CS0612 (Obsolete)</strong> 和 <strong>CS0618 (Obsolete with a message)</strong> 警告。</li>
+<li>在项目中禁用 <strong>Warnings as Errors</strong> 属性。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-manifestPkg.html"></a></span><div class="tip">包清单</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="cus-asmdef.html"></a></span><div class="tip">程序集定义和包</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

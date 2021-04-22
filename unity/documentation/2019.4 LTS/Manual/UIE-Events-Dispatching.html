@@ -1,0 +1,542 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="分发事件 - Unity 手册">
+<title>分发事件 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/focus-order.png">
+<meta name="description" content="UIElements 监听来自操作系统或脚本的事件，并使用 EventDispatcher 将这些事件分发给视觉元素。事件分发程序为发送的每个事件确定相应分发策略。一旦确定后，分发程序就会执行该策略。">
+<meta property="og:description" content="UIElements 监听来自操作系统或脚本的事件，并使用 EventDispatcher 将这些事件分发给视觉元素。事件分发程序为发送的每个事件确定相应分发策略。一旦确定后，分发程序就会执行该策略。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UIE-Events-Dispatching';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UIE-Events-Dispatching.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UIE-Events-Dispatching.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UIE-Events-Dispatching.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UIE-Events-Dispatching.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UIE-Events-Dispatching.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UIE-Events-Dispatching.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UIE-Events-Dispatching.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UIE-Events-Dispatching.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-Events-Dispatching.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UIE-Events-Dispatching.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-Events-Dispatching.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-Events-Dispatching.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-Events-Dispatching.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-Events-Dispatching.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-Events-Dispatching.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-Events-Dispatching.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-Events-Dispatching.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-Events-Dispatching.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-Events-Dispatching.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-Events-Dispatching.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-Events-Dispatching.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-Events-Dispatching.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-Events-Dispatching.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-Events-Dispatching.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-Events-Dispatching.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UIE-Events-Dispatching.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UIE-Events-Dispatching.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UIE-Events-Dispatching.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UIE-Events-Dispatching.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UIE-Events-Dispatching.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UIE-Events-Dispatching.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-Events-Dispatching.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UIE-Events-Dispatching.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-Events-Dispatching.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-Events-Dispatching.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-Events-Dispatching.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-Events-Dispatching.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-Events-Dispatching.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-Events-Dispatching.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-Events-Dispatching.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-Events-Dispatching.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-Events-Dispatching.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-Events-Dispatching.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-Events-Dispatching.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-Events-Dispatching.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-Events-Dispatching.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-Events-Dispatching.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-Events-Dispatching.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UIToolkits.html">用户界面 (UI)</a></li>
+<li><a href="UIElements.html">UIElements 开发者指南</a></li>
+<li><a href="UIE-Events.html">事件系统</a></li>
+<li>分发事件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Events.html"></a></span><div class="tip">事件系统</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Events-Handling.html"></a></span><div class="tip">事件响应</div>
+</div>
+</div></div>
+<h1>分发事件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>UIElements 监听来自操作系统或脚本的事件，并使用 <code>EventDispatcher</code> 将这些事件分发给视觉元素。事件分发程序为发送的每个事件确定相应分发策略。一旦确定后，分发程序就会执行该策略。</p>
+
+<p>视觉元素和其他支持类实现了几个事件的默认行为。有时，涉及创建和发送额外的事件。例如，<code>MouseMoveEvent</code> 可能生成额外的 <code>MouseEnterEvent</code> 和 <code>MouseLeaveEvent</code>。这些额外的事件将放置在队列中，并会在当前事件完成后处理这些事件。例如，完成 <code>MouseMoveEvent</code> 后处理 <code>MouseEnterEvent</code> 和 <code>MouseLeaveEvent</code> 事件。</p>
+
+<h2>事件目标</h2>
+
+<p><code>EventDispatcher.DispatchEvent()</code> 的首个任务是查找事件目标。</p>
+
+<p>有时，这很容易，因为已经设置事件 <code>target</code> 属性。但是，对于源自操作系统的大多数事件，则并非如此。</p>
+
+<p>事件的目标取决于事件类型。对于鼠标事件，目标通常是直接位于鼠标下面最上层的可选择元素。对于键盘事件，目标是当前聚焦的元素。</p>
+
+<p>找到目标后，目标会存储在 <code>EventBase.target</code> 中，且在分发过程中不会改变。属性 <code>Event.currentTarget</code> 会更新为当前正在处理该事件的元素。</p>
+
+<h3>拾取模式和自定义形状</h3>
+
+<p>大多数鼠标事件使用拾取模式来确定其目标。<code>VisualElement</code> 类有一个支持以下值的 <code>pickingMode</code> 属性：</p>
+
+<ul>
+<li>
+<code>PickingMode.Position</code>（默认值）：根据位置矩形执行拾取。</li>
+<li>
+<code>PickingMode.Ignore</code>：阻止因鼠标事件而拾取。</li>
+</ul>
+
+<p>可以覆盖 <code>VisualElement.ContainsPoint()</code> 方法来执行自定义的交集逻辑。</p>
+
+<h3>捕获鼠标</h3>
+
+<p>有时，在鼠标按下后，元素必须捕获鼠标位置以确保所有后续的鼠标事件都只发送给自己（即使指针不再悬停在该元素上）。如果一个控件会响应鼠标按下和鼠标松开序列 - 在鼠标按下和鼠标松开事件之间可能会移动鼠标，通常便会有此要求。例如，在单击按钮、滑动条或滚动条时就属于这种情况。</p>
+
+<p>要捕获鼠标，请调用 <code>element.CaptureMouse()</code> 或 <code>MouseCaptureController.CaptureMouse()</code>。</p>
+
+<p>要释放鼠标，请调用 <code>MouseCaptureController.ReleaseMouse()</code>。如果在调用 <code>CaptureMouse()</code> 时已经有另一个元素正在捕获鼠标，该元素将收到 <code>MouseCaptureOutEvent</code>
+并失去此捕获。</p>
+
+<p>在应用程序中，任何时候都只能有一个元素具有捕获。当元素具有捕获时，该元素便是除鼠标滚轮事件之外的所有后续鼠标事件的目标。</p>
+
+<p>注意：这只适用于尚未设置目标的鼠标事件。</p>
+
+<h3>焦点环和 Tab 顺序</h3>
+
+<p>每个 UIElement 面板都有一个焦点环用于定义元素的焦点顺序。默认情况下，元素的焦点顺序是通过对视觉元素树执行深度优先搜索 (DFS) 来确定的。例如，以下所示的树的焦点顺序将是 F、B、A、D、C、E、G、I、H。</p>
+
+<figure>
+<img src="../uploads/Main/focus-order.png" alt="焦点顺序">
+<figcaption>焦点顺序</figcaption>
+</figure>
+
+<p>有些事件使用焦点顺序来确定哪个元素获得焦点。例如，键盘事件的目标是当前获得焦点的元素。</p>
+
+<p>使用 <code>focusable</code> 属性可控制元素的可聚焦性。默认情况下，无法聚焦 <code>VisualElements</code>，但是默认可聚焦某些子类（例如 <code>TextField</code>）。</p>
+
+<p>使用 <code>tabIndex</code> 属性可按如下方式控制焦点顺序（<code>tabIndex</code> 默认值为 0）：</p>
+
+<ul>
+<li>如果 <code>tabIndex</code> 为负，则无法用 Tab 键导航该元素。</li>
+<li>如果 <code>tabIndex</code> 为零，该元素保持默认的 Tab 顺序（通过焦点环算法确定的顺序）。</li>
+<li>如果 <code>tabIndex</code> 为正，该元素将置于 <code>tabIndex</code> 为零 (<code>tabIndex = 0</code>) 或具有更高 <code>tabIndex</code> 的其他元素之前。</li>
+</ul>
+
+<h2>事件传播</h2>
+
+<p>选择事件目标后，分发程序将计算事件的传播路径。传播路径是接收事件的视觉元素的有序列表。</p>
+
+<p>元素列表的获得方式是从视觉元素树的根开始，朝着目标往下，再朝着树的根往上。</p>
+
+<figure>
+<img src="../uploads/Main/UIElementsEvents.png" alt="传播路径">
+<figcaption>传播路径</figcaption>
+</figure>
+
+<p>传播路径的第一阶段从根下降到目标父级。此阶段称为<em>涓滴 (trickle down) 阶段</em>。</p>
+
+<p>传播路径的最后一个阶段从目标父级上升到根。此阶段称为<em>冒泡 (bubble-up) 阶段</em>。</p>
+
+<p>事件目标位于传播路径中间。</p>
+
+<p>大多数事件类型将发送到传播路径上的所有元素。但是，一些事件类型会跳过冒泡阶段。此外，一些事件类型仅发送到事件目标。</p>
+
+<p>如果元素被隐藏或禁用，它将不会接收事件。事件仍会传播到被隐藏或禁用的元素的祖先和后代。</p>
+
+<p>在沿着传播路径发送事件时，<code>Event.currentTarget</code> 更新为当前正在处理事件的元素。这意味着，在事件回调函数中，<code>Event.currentTarget</code> 是对回调注册的元素，而 <code>Event.target</code> 是发生事件的元素。</p>
+
+<h2>事件类型的分发行为</h2>
+
+<p>每个事件类型都有自己的分发行为。下表以三列的形式汇总了每个事件类型的行为：</p>
+
+<ul>
+<li>涓滴：在涓滴阶段将此类型的事件发送到元素。</li>
+<li>冒泡：在冒泡阶段将此类型的事件发送到元素。</li>
+<li>可取消：此类事件可以取消、停止或阻止默认操作的执行。</li>
+</ul>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:center;">
+<col style="text-align:center;">
+<col style="text-align:center;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:center;">涓滴</th>
+	<th style="text-align:center;">冒泡</th>
+	<th style="text-align:center;">可取消</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">MouseCaptureOutEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">MouseCaptureEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">ChangeEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">ValidateCommandEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ExecuteCommandEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">DragExitedEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">DragUpdatedEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">DragPerformEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">DragEnterEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">DragLeaveEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">FocusOutEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">BlurEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">FocusInEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">FocusEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">InputEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">KeyDownEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">KeyUpEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">GeometryChangedEvent</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">MouseDownEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MouseUpEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MouseMoveEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ContextClickEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">WheelEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MouseEnterEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MouseLeaveEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MouseEnterWindowEvent</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MouseLeaveWindowEvent</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MouseOverEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MouseOutEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ContextualMenuPopulateEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">AttachToPanelEvent</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">DetachFromPanelEvent</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">TooltipEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">IMGUIEvent</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+	<td style="text-align:center;">✔</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–11–02 页面已修订</span></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Events.html"></a></span><div class="tip">事件系统</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Events-Handling.html"></a></span><div class="tip">事件响应</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

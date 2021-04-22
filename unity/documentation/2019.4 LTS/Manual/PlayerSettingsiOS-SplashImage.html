@@ -1,0 +1,432 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="iOS Player 设置 - Splash image - Unity 手册">
+<title>iOS Player 设置 - Splash image - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/PlayerSetiOSSplash.png">
+<meta name="description" content="使用 Splash Image 部分可为 iOS 支持的不同设备自定义应用程序的启动画面。">
+<meta property="og:description" content="使用 Splash Image 部分可为 iOS 支持的不同设备自定义应用程序的启动画面。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'PlayerSettingsiOS-SplashImage';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/PlayerSettingsiOS-SplashImage.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/PlayerSettingsiOS-SplashImage.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/PlayerSettingsiOS-SplashImage.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/PlayerSettingsiOS-SplashImage.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/PlayerSettingsiOS-SplashImage.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/PlayerSettingsiOS-SplashImage.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/PlayerSettingsiOS-SplashImage.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/PlayerSettingsiOS-SplashImage.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/PlayerSettingsiOS-SplashImage.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/PlayerSettingsiOS-SplashImage.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/PlayerSettingsiOS-SplashImage.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/PlayerSettingsiOS-SplashImage.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/PlayerSettingsiOS-SplashImage.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/PlayerSettingsiOS-SplashImage.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/PlayerSettingsiOS-SplashImage.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/PlayerSettingsiOS-SplashImage.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/PlayerSettingsiOS-SplashImage.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/PlayerSettingsiOS-SplashImage.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/PlayerSettingsiOS-SplashImage.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/PlayerSettingsiOS-SplashImage.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/PlayerSettingsiOS-SplashImage.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/PlayerSettingsiOS-SplashImage.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/PlayerSettingsiOS-SplashImage.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/PlayerSettingsiOS-SplashImage.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/PlayerSettingsiOS-SplashImage.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/PlayerSettingsiOS-SplashImage.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/PlayerSettingsiOS-SplashImage.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/PlayerSettingsiOS-SplashImage.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/PlayerSettingsiOS-SplashImage.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/PlayerSettingsiOS-SplashImage.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/PlayerSettingsiOS-SplashImage.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/PlayerSettingsiOS-SplashImage.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/PlayerSettingsiOS-SplashImage.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/PlayerSettingsiOS-SplashImage.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/PlayerSettingsiOS-SplashImage.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/PlayerSettingsiOS-SplashImage.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/PlayerSettingsiOS-SplashImage.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/PlayerSettingsiOS-SplashImage.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/PlayerSettingsiOS-SplashImage.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/PlayerSettingsiOS-SplashImage.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/PlayerSettingsiOS-SplashImage.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/PlayerSettingsiOS-SplashImage.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/PlayerSettingsiOS-SplashImage.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/PlayerSettingsiOS-SplashImage.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/PlayerSettingsiOS-SplashImage.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/PlayerSettingsiOS-SplashImage.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/PlayerSettingsiOS-SplashImage.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/PlayerSettingsiOS-SplashImage.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="iphone.html">iOS</a></li>
+<li><a href="class-PlayerSettingsiOS.html">iOS Player 设置</a></li>
+<li>iOS Player 设置 - Splash image</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PlayerSettingsiOS-Resolution.html"></a></span><div class="tip">iOS Player 设置 - Resolution and Presentation</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PlayerSettingsiOS-Debugging.html"></a></span><div class="tip">iOS Player 设置 - Debugging and crash reporting</div>
+</div>
+</div></div>
+<h1>iOS Player 设置 - Splash image</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用 <strong>Splash Image</strong> 部分可为 iOS 支持的不同设备自定义应用程序的启动画面。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetiOSSplash.png" alt="iOS 平台的启动画面设置">
+<figcaption>iOS 平台的启动画面设置</figcaption>
+</figure>
+
+<p><strong>Virtual Reality Splash Image</strong> 设置（位于<a href="https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html">通用 Splash Screen 设置</a> 上方）允许您为虚拟现实显示选择自定义的启动画面。</p>
+
+<p><strong>Use Storyboard for Launch</strong> 选项（位于通用 Splash Screen 设置下方）可切换 <strong>Custom Storyboard</strong> 按钮与单独的启动屏幕选择。</p>
+
+<h2>自定义故事板</h2>
+
+<figure>
+<img src="../uploads/Main/PlayerSetiOSSplashStory.png" alt="使用故事板作为 iOS 的启动屏幕">
+<figcaption>使用故事板作为 iOS 的启动屏幕</figcaption>
+</figure>
+
+<p>启用 <strong>Use Storyboard for Launch Screen</strong> 复选框时，将显示 <strong>Custom Storyboard</strong> 按钮。</p>
+
+<p>单击 <strong>Custom Storyboard</strong> 按钮可选择一个故事板，以便游戏在设备上启动时显示该故事板。要让故事板出现在这里，必须首先在 Xcode 中创建故事板并将其复制到您的项目中。有关更多信息，请参阅关于<a href="https://help.apple.com/xcode/mac/10.2/#/dev62c993289">故事板、场景和连接</a>的 Apple 开发者文档。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetiOSSplashLaunch.png" alt="对 iOS 使用启动屏幕或旧版启动图像">
+<figcaption>对 iOS 使用启动屏幕或旧版启动图像</figcaption>
+</figure>
+
+<p>禁用 <strong>Use Storyboard for Launch Screen</strong> 复选框时，可以采用下列方法之一来实现启动画面：</p>
+
+<ul>
+<li>启动屏幕 (Launch screens)</li>
+<li>旧版启动图像 (Legacy launch images)</li>
+</ul>
+
+<p><a name="LaunchScreens"></a></p>
+
+<h3>启动屏幕</h3>
+
+<p><strong>启动屏幕</strong>是一个 XIB 文件，iOS 通过该文件在设备上创建一个启动画面。具有以下局限性：</p>
+
+<ul>
+<li>无法根据 iPad 的设备方向来显示不同内容。</li>
+<li>所有的 iPhone 都支持横向启动屏幕，但是，由于有个缺陷，某些 iOS 版本中显示 <strong>Landscape Left</strong> 启动屏幕，而不是 <strong>Landscape Right</strong>。</li>
+</ul>
+
+<p>在 <strong>iPhone Launch Screen</strong> 和 <strong>iPad Launch Screen</strong> 部分中，为 iPhone 和 iPad 选择 <strong>Launch screen type</strong> 选项：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Value</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default</strong></td>
+	<td style="text-align:left;">When you select this option, Unity adds a solid blue-black image that’s the same color as the background for Unity’s default splash screen. The image is used for both portrait and landscape orientations, and displays using aspect-fill mode.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>None</strong></td>
+	<td style="text-align:left;">When you select this option, the Xcode project that Unity generates doesn’t contain an XIB file.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Image and background (relative size)</strong></td>
+	<td style="text-align:left;">Displays an image in the center of the screen and fills the remaining area with a solid color.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Portrait Image</em></td>
+	<td style="text-align:left;">Select an image for portrait orientation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Landscape Image</em></td>
+	<td style="text-align:left;">Select an image for landscape orientation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Background Color</em></td>
+	<td style="text-align:left;">Select a background color to fill any screen space that the image doesn’t cover.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Fill percentage</em></td>
+	<td style="text-align:left;">Specify image size as a percentage of the screen size. Unity calculates image size based on the length or width of the screen, whichever one is smaller (vertical for landscape displays, horizontal for portrait ones).</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Image and background (constant size)</strong></td>
+	<td style="text-align:left;">Displays an image in the center of the screen and fills the area with a solid color. This has the same options as <strong>Image and background (relative size)</strong>, except that you specify image size in points rather than as a percentage.<br><br><strong>Tip:</strong> Points and pixels are not the same. A pixel (px) is a single dot in your image. A point (pt) is a unit of length that measures 1/72th of an inch. Pixel sizes are relative to the screen size and resolution, while point sizes are the size on any screen. For more information, see <a href="https://www.w3.org/Style/Examples/007/units.en.html">W3C guidance</a> on size units.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Custom XIB</strong></td>
+	<td style="text-align:left;">When you select this option, the <strong>Custom XIB</strong> button appears. Click the button to select a custom XIB file to use as a loading screen.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Unity 根据您的设置来选择要使用的启动屏幕或图像，顺序如下（如果首选的选项不存在，Unity 将移至列表中的下一个选项）：</p>
+
+<p>1.iPhone 6+ 启动图像（首选）
+2.共享的移动端启动图像
+3.iPhone 6+ 的默认 Unity 启动图像</p>
+
+<p><strong>注意：</strong>如果使用的是 Unity Personal 订阅，<a href="https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html">Unity 启动画面</a>将在引擎初始化后立即显示，此外还会显示您选择的启动画面。</p>
+
+<p><a name="LaunchImages"></a></p>
+
+<h3>旧版启动图像</h3>
+
+<p>启动图像是静态启动画面图像，将占据整个屏幕。可以在资源目录 (<code>Images.xcassets/LaunchImage</code>) 中定义启动图像。请务必为每种受支持的大小和方向组合添加一个启动屏幕：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>屏幕大小和类型</strong></th>
+	<th style="text-align:left;"><strong>启动画面大小（像素）</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>iPhone 3.5"</strong></td>
+	<td style="text-align:left;">3.5" Retina 显示屏</td>
+	<td style="text-align:left;">640 x 940</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPhone 4"</strong></td>
+	<td style="text-align:left;">4" Retina 显示屏</td>
+	<td style="text-align:left;">640 x 1136</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPhone 4.7"</strong></td>
+	<td style="text-align:left;">4.7" Retina HD 显示屏</td>
+	<td style="text-align:left;">750 x 134</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPhone 5.5"</strong></td>
+	<td style="text-align:left;">5.5" Retina HD 显示屏</td>
+	<td style="text-align:left;">1242 x 2208</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPhone 5.5" Landscape</strong></td>
+	<td style="text-align:left;">5.5" Retina HD 显示屏</td>
+	<td style="text-align:left;">2208 x 1242</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPhone 6.1"</strong></td>
+	<td style="text-align:left;">6.1" Liquid Retina HD 显示屏</td>
+	<td style="text-align:left;">828 x 1792</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPhone 6.1" Landscape</strong></td>
+	<td style="text-align:left;">6.1" Liquid Retina HD 显示屏</td>
+	<td style="text-align:left;">1972 x 828</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPhone 6.5"</strong></td>
+	<td style="text-align:left;">6.5" Super Retina HD 显示屏</td>
+	<td style="text-align:left;">1242 x 2688</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPhone 6.5" Landscape</strong></td>
+	<td style="text-align:left;">6.5" Super Retina HD 显示屏</td>
+	<td style="text-align:left;">2688 x 1242</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPad Portrait</strong></td>
+	<td style="text-align:left;">7.9" 或 9.7" 非 Retina</td>
+	<td style="text-align:left;">768 x 1024</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPad Landscape</strong></td>
+	<td style="text-align:left;">7.9" 或 9.7" 非 Retina</td>
+	<td style="text-align:left;">1024 x 768</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPad Portrait</strong></td>
+	<td style="text-align:left;">7.9" 或 10.5" Retina 显示屏</td>
+	<td style="text-align:left;">1536 x 2048</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iPad Landscape</strong></td>
+	<td style="text-align:left;">7.9" 或 9.7" Retina 显示屏</td>
+	<td style="text-align:left;">2048 x 1536</td>
+</tr>
+</tbody>
+</table>
+
+<p>有关更多信息，请参阅 Apple 开发者文档的<a href="https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/">启动屏幕</a>部分。</p>
+
+<p>iPhone 6+ 之前的 iPhone 仅支持 <strong>Portrait</strong> 纵向启动图像。更新的 iPhone 还支持 <strong>Landscape</strong> 横向启动图像。</p>
+
+<p>Unity 按以下顺序选择<strong>启动图像</strong>：</p>
+
+<ul>
+<li>如果指定了特定<strong>启动图像</strong>，则特定启动图像优先</li>
+<li>默认的 Unity 启动画面启动图像，也就是纯蓝黑色</li>
+</ul>
+
+<p><strong>注意：</strong>您需要为自己的构建版本设置所有<strong>启动图像</strong>。</p>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PlayerSettingsiOS-Resolution.html"></a></span><div class="tip">iOS Player 设置 - Resolution and Presentation</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PlayerSettingsiOS-Debugging.html"></a></span><div class="tip">iOS Player 设置 - Debugging and crash reporting</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

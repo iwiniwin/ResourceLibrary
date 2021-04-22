@@ -1,0 +1,685 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Using UDP with other services - Unity 手册">
+<title>Using UDP with other services - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/UDPUsingCloudBuild_03.png">
+<meta name="description" content="Implementing Google Play games services in your Android games lets you leverage Google’s service layer for features such as achievements and leaderboards. If your game implements Google Play game services, additional configuration is required to support the builds that UDP creates for different stores.">
+<meta property="og:description" content="Implementing Google Play games services in your Android games lets you leverage Google’s service layer for features such as achievements and leaderboards. If your game implements Google Play game services, additional configuration is required to support the builds that UDP creates for different stores.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'udp-service-interoperability';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/udp-service-interoperability.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/udp-service-interoperability.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/udp-service-interoperability.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/udp-service-interoperability.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/udp-service-interoperability.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/udp-service-interoperability.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/udp-service-interoperability.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/udp-service-interoperability.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp-service-interoperability.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/udp-service-interoperability.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp-service-interoperability.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp-service-interoperability.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp-service-interoperability.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp-service-interoperability.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp-service-interoperability.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp-service-interoperability.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp-service-interoperability.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp-service-interoperability.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp-service-interoperability.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp-service-interoperability.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp-service-interoperability.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp-service-interoperability.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp-service-interoperability.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp-service-interoperability.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp-service-interoperability.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/udp-service-interoperability.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/udp-service-interoperability.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/udp-service-interoperability.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/udp-service-interoperability.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/udp-service-interoperability.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/udp-service-interoperability.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp-service-interoperability.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/udp-service-interoperability.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp-service-interoperability.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp-service-interoperability.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp-service-interoperability.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp-service-interoperability.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp-service-interoperability.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp-service-interoperability.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp-service-interoperability.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp-service-interoperability.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp-service-interoperability.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp-service-interoperability.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp-service-interoperability.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp-service-interoperability.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp-service-interoperability.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp-service-interoperability.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp-service-interoperability.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="udp.html">Unity 分发平台</a></li>
+<li>Using UDP with other services</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp-managing-and-publishing.html"></a></span><div class="tip">在 UDP 控制台上管理和发布游戏</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-reference.html"></a></span><div class="tip">UDP 参考</div>
+</div>
+</div></div>
+<h1>Using UDP with other services</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Google Play games services in UDP builds</h2>
+
+<h3>Overview</h3>
+
+<p>Implementing <a href="https://developers.google.com/games/services/console/enabling">Google Play games services</a> in your Android games lets you leverage Google’s service layer for features such as achievements and leaderboards. If your game implements Google Play game services, additional configuration is required to support the builds that <a href="https://unity.com/udp">UDP</a> creates for different stores.</p>
+
+<p>When your game invokes Google Play games services, Google Play games services checks that the following details match the information registered on the Google Play Console:</p>
+
+<ul>
+<li>The application’s <strong>package name</strong>
+</li>
+<li>The <strong>certificate</strong> the application was signed with</li>
+</ul>
+
+<p>If they don’t match, the player can’t log into the application with Google Play games services.</p>
+
+<p>For certain stores that you publish your game to via UDP, UDP adds a store-specific suffix to the package name. Additionally, if you don’t use your own private key to generate the certificate, UDP generates a certificate for each repacked build. These events would cause your certificate and/or package name to no longer match the information on the Google Play Console. This would prevent users from logging into the game with Google Play game services.</p>
+
+<p>The following section explains how to resolve this issue.</p>
+
+<h3>Configuring Google Play games services for UDP builds</h3>
+
+<p>This section explains how to link your UDP versions to a Google Play application so that Google Play game services can work on all of them.</p>
+
+<ol>
+<li>In the Google Play Console, go to the target app.</li>
+<li>Go to <strong>Play Games Services</strong> &gt; <strong>Setup and management</strong> &gt; <strong>Configuration</strong>.
+
+<ul>
+<li>If your Google Play game has Google Play games services implemented, your game will already be linked to a Google Play games services project. In this case:
+
+<ol>
+<li>Select <strong>Use an existing Play Games Services project</strong>.</li>
+<li>Select your game project and select <strong>Use</strong>.</li>
+<li>Follow the steps in <a href="#link">Link the UDP apps to your game service</a>.</li>
+</ol>
+</li>
+<li>If your Google Play game doesn’t have Google Play games services implemented:
+
+<ol>
+<li>In the Play Games Services setup page, select <strong>Yes, my game already uses Google APIs</strong> or <strong>No, my game doesn’t use Google APIs</strong>.</li>
+<li>Follow the steps in <a href="#create">Creating and linking a Google Play games services project</a>.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+
+<p><a name="create"></a></p>
+
+<h4>Creating and linking a Google Play games services project</h4>
+
+<p>This section explains how to create a Google Play games services project and link it to a new or existing cloud project.</p>
+
+<p>If you selected <strong>Yes, my game already uses Google APIs</strong> in the Play Games Services setup page:</p>
+
+<ol>
+<li>Select a cloud project.</li>
+<li>Select Use to create a new Play Games Services project and link it to your existing cloud project.</li>
+</ol>
+
+<p>If you selected <strong>No, my game doesn’t use Google APIs</strong> in the Play Games Services setup page:</p>
+
+<ol>
+<li>Enter a game name.</li>
+<li>Select Create to create a new Play Games Services project and link it to a new cloud project.</li>
+</ol>
+
+<p>When you create a new Play Games Services project, the <strong>Add credential</strong> link is disabled.</p>
+
+<ol>
+<li>Select <strong>Configure OAuth consent screen</strong>.</li>
+<li>In the Play Games Services configuration screen, select Refresh.<br>The Add credential option is now enabled.</li>
+<li>Select <strong>Add credential</strong>.<br>This opens the Add credential page.</li>
+<li>In the Add credential page:
+
+<ol>
+<li>Select <strong>Android</strong> as the <strong>Type</strong>.</li>
+<li>Set <strong>Enable anti-piracy</strong> to <strong>Off</strong>. This lets users access your game if they have installed it from a different app store than Google Play.</li>
+<li>In the Authorization section, select <strong>Create OAuth client</strong>. This opens a popup.</li>
+<li>Select <strong>Create OAuth Client ID</strong> and use the details from the popup to complete the form.</li>
+</ol>
+</li>
+</ol>
+
+<p>When you’ve completed the above steps, your Google Play game is linked to its Google Play games services. The next step is to <a href="#link">link your UDP builds to the games services</a>.</p>
+
+<p><a name="link"></a></p>
+
+<h4>Linking UDP apps to your games services</h4>
+
+<p>When you have linked your app to Google Play games services you can link the other (UDP) apps to the games services.</p>
+
+<ol>
+<li>In the Google Play Console, select <strong>Play Games Services</strong> &gt; <strong>Setup and management</strong> &gt; <strong>Configuration</strong>.
+
+<ol>
+<li>In the Play Games Services configuration page, select <strong>Add credential</strong>.</li>
+</ol>
+</li>
+<li>In the Add credential page:
+
+<ol>
+<li>Select <strong>Android</strong>.</li>
+<li>Set <strong>Enable anti-piracy to off</strong>. This lets users access your game if they have installed it from a different app store than Google Play.</li>
+<li>In the <strong>Authorization</strong> section, select <strong>Create OAuth client</strong>. This opens a popup.</li>
+<li>Select <strong>Create OAuth Client ID</strong> and use the details from the popup to complete the form.</li>
+</ol>
+</li>
+<li>In the Create OAuth client ID form, enter the required details to create an entry for one of your UDP builds.
+
+<ol>
+<li>In the <strong>Name</strong> field, name the build after the corresponding store, for example “Samsung version”.</li>
+<li>In the <strong>Package name</strong> field, specify the package name for the build registered with the corresponding store via the UDP console.<br>The store-specific package name is displayed in the UDP console:
+
+<ol>
+<li>Go to My Games &gt; Publish tab.</li>
+<li>Select <strong>Advanced</strong> for the corresponding store.<br>The package name is displayed in the Basic Information section.</li>
+</ol>
+</li>
+<li>In the certificate field, use the certificate used for the corresponding UDP store. UDP signs the app with the new certificate after the Repack operation.<br>The store-specific certificate is displayed in the UDP console:
+
+<ol>
+<li>Go to My Games &gt; Publish tab.</li>
+<li>Select <strong>Advanced</strong> for the corresponding store.<br>The certificate is displayed in the Basic Information section.<br><strong>Note</strong>: You can also download the APK Certificate and get the fingerprint information via the command:<br><code>openssl x509 -in [downloaded-pem-filepath] -fingerprint -noout</code>
+</li>
+<li>Copy the SHA–1 from the UDP console into the certificate field.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>When you’ve completed the form, select <strong>Create</strong> and return to Google Play Console.</li>
+<li>Select <strong>Refresh OAuth clients</strong>.</li>
+<li>Select your new OAuth client.
+
+<ol>
+<li>Select <strong>Save changes</strong> to save the credential.</li>
+</ol>
+</li>
+<li>Repeat the above steps for each store-specific UDP build that you want to link to your Google Play application.</li>
+</ol>
+
+<p>You can view the UDP builds you’ve linked to your Google Play application in the Google Cloud Platform &gt; Google API &amp; Services dashboard, under Credentials.</p>
+
+<p>These steps enable Google Play games services to work successfully on all the UDP store versions that are linked that way, excluding Mi GetApps (whose SDK integrates an old version of Google Mobile Services, which creates conflicts).</p>
+
+<p><strong>Note</strong>: Any changes to Google’s systems could impact the solution described above. For more information on Google’s troubleshooting information, see the <a href="https://www.google.com/url?q=https://developers.google.com/games/services/android/troubleshooting&amp;sa=D&amp;ust=1611571996561000&amp;usg=AOvVaw00u3uXWmm9qmGpqo4yuFQX">Google documentation</a>.</p>
+
+<h2>Using Cloud Build with UDP</h2>
+
+<p>可通过以下方式使用 <a href="https://docs.unity3d.com/Manual/UnityCloudBuild.html">Cloud Build</a> 将游戏部署到 UDP 控制台：</p>
+
+<ul>
+<li>
+<a href="#upload">将 APK 上传到 Cloud Build</a>，然后从那里部署到 UDP</li>
+<li>
+<a href="#build">使用 Cloud Build 构建你的游戏</a>，然后从那里部署到 UDP</li>
+</ul>
+
+<p><a name="upload"></a></p>
+
+<h2>通过 Cloud Build 将构建版本推送到 UDP 控制台</h2>
+
+<p>本节介绍如何使用 Cloud Build 将游戏推送到 UDP。
+在 Unity 编辑器中通过 <strong>Unity Services</strong> 窗口启用 Cloud Build。</p>
+
+<h3>在编辑器中使用 Cloud Build 将游戏部署到 UDP</h3>
+
+<p>要通过 Unity 编辑器中的 Cloud Build 功能将游戏部署到 UDP，你需要上传 UDP 构建版本并将其推送到 UDP。</p>
+
+<p>1.在 <strong>Cloud Build Services</strong> 窗口中，如果先前从未上传过任何构建版本，请选择 <strong>Upload Build</strong>。<br>
+1.在 <strong>FILE</strong> 中：<br>
+ * 选择 UDP 构建版本的 APK
+ * 在 <strong>LABEL</strong> 中输入有用的标签
+ * 将 <strong>PLATFORM</strong> 字段设置为 Android。<br>
+1.选择 <strong>UPLOAD</strong>，然后等待完成上传过程。
+1.在 <strong>Cloud Build Services</strong> 窗口中，根据构建版本的 <strong>History</strong> 时间轴找到所需的构建版本，然后选择 <strong>Push to Unity Distribution Portal</strong>。
+ 1.确认想要推送，然后确认操作完成。<br>
+ <img src="../uploads/Main/UDPUsingCloudBuild_03.png" alt=""></p>
+
+<h3>使用 Unity Dashboard 将游戏部署到 UDP</h3>
+
+<p>要通过 Unity Dashboard 中的 Cloud Build 功能将游戏部署到 UDP，你需要将 UDP 构建版本上传到 Unity Dashboard 并从其中推送到 UDP。</p>
+
+<p>1.在 <a href="https://developer.cloud.unity3d.com/build">Unity 开发者控制面板 (Developer Dashboard)</a> 中，导航到项目的 <strong>Cloud Build</strong> &gt; <strong>History</strong>。
+1.选择 <strong>Upload</strong>，然后选择 APK 文件。
+1.在 <strong>Platform</strong> 字段中，选择 <strong>Android</strong>。
+1.选择 <strong>Upload</strong>。
+1.选择构建版本旁边的 More 菜单以展开下拉菜单。
+1.选择 <strong>Push to Unity Distribution Portal</strong>。</p>
+
+<p><a name="build"></a></p>
+
+<h2>通过 Cloud Build 进行构建和部署</h2>
+
+<p>如果使用的是 Unity Teams Advanced，你可以<a href="https://docs.unity3d.com/Manual/UnityCloudBuildContinuousIntegration.html">自动生成构建版本</a>。</p>
+
+<p>在 Cloud Build Services 窗口中：</p>
+
+<p>1.选择 <strong>Manage Build Targets</strong> &gt; <strong>Add new build target</strong>
+1.在 <strong>TARGET SETUP</strong> 窗口中，将 <strong>PLATFORM</strong> 字段设置为 Android 并输入有用的 <strong>TARGET LABEL</strong>。
+1.选择 <strong>Next: Save</strong>。
+1.选择 <strong>Start Cloud Build</strong>，然后选择刚才创建的目标构建版本。</p>
+
+<p>通过 Unity Cloud Build 开发者控制面板 (Developer Dashboard) 将构建版本直接推送到 UDP（如上所示）。</p>
+
+<h2>服务互操作性</h2>
+
+<p>UDP 可以让游戏使用的其他服务了解该游戏是从哪个商店下载的。</p>
+
+<p>Unity 服务以及第三方服务或你自己的服务可以多种方式使用这一信息。</p>
+
+<p>例如，在使用 <a href="https://unity.com/remote-config">Unity Remote Config</a> 时，你可以根据定义的规则（例如，从哪个商店下载的游戏）来调整游戏设置。</p>
+
+<p>本节介绍如何让其他服务访问此信息，并提供了一个<a href="#example">示例</a>。</p>
+
+<h2>工作原理</h2>
+
+<p>当游戏首次在玩家的设备上启动时，UDP 将创建 <code>udp.json</code> 文件并将其放入游戏的“持久数据路径”(Persistent Data Path) 中。此文件包含的字段 <code>udpStore</code> 会显示游戏是从哪个商店下载的。可获取该信息以按预期方式使用它。</p>
+
+<p><strong>注意：</strong>这不会在游戏清单中添加任何新的权限。</p>
+
+<h2>查找 udp.json</h2>
+
+<p><code>udp.json</code> 文件保存在：</p>
+
+<p><code>Application.PersistentDataPath + '/Unity' + /Application.CloudProjectID + /udp/udp.json</code></p>
+
+<p>其中：</p>
+
+<ul>
+<li>
+<code>Application.PersistentDataPath</code> 是游戏的持久数据路径</li>
+<li>
+<code>Application.CloudProjectID</code> 是游戏的 Unity 项目 ID</li>
+</ul>
+
+<p>以下是一个 <code>udp.json</code> 文件路径示例：</p>
+
+<p><code>path/storage/emulated/0/Android/data/com.mystudio.mygame/files/Unity/c83d2de2-de74-4b75-83fc-ade948bda064/udp/udp.json</code></p>
+
+<p>其中：</p>
+
+<ul>
+<li>
+<code>Application.PersistentDataPath</code>= <code>path/storage/emulated/0/Android/data/com.mystudio.mygame</code>
+</li>
+<li>
+<code>Application.CloudProjectID</code>= <code>c83d2de2-de74-4b75-83fc-ade948bda064</code>
+</li>
+</ul>
+
+<h2>读取 udp.json</h2>
+
+<p><code>udp.json</code> 文件包含以下信息：</p>
+
+<pre><code>{"key":"UDP","udpStore":"StoreName","udpClientId":"value_of_udpClientId","CloudProjectId":"value_of_CloudProjectId"}
+</code></pre>
+
+<p><code>udpStore</code> 字段包含的值就是下载游戏的 UDP 商店。</p>
+
+<p>以下是一个 <code>udp.json</code> 文件示例：</p>
+
+<p>{“key”:“UDP”,“udpStore”:“SamsungGalaxyStore”,“udpClientId”:“icjaB7wmu_q7AOjrSLH8yw”,“cloudProjectId”:“bc2be074–09f3–450f–8e98-a0f79c9746f7”}</p>
+
+<p>在此示例中，游戏是从 Samsung Galaxy Store 下载的。</p>
+
+<p><strong>提示：</strong>使用 <code>JSONUtility.FromJsonOverwrite</code> 可将文件内容作为文本资源读取。</p>
+
+<p><a name="udp-values"></a></p>
+
+<h2>udpStore 值</h2>
+
+<p>下表列出了 UDP 商店可能的 <code>udpStore</code> 值。</p>
+
+<p>这些值区分大小写。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">商店（UDP 上的通道名称）</th>
+	<th style="text-align:left;">udpStore 的值</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">UDP Sandbox（适用于通用 UDP 构建版本）</td>
+	<td style="text-align:left;">UdpSandbox</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ONE store</td>
+	<td style="text-align:left;">OneStore</td>
+</tr>
+<tr>
+	<td style="text-align:left;">APPTUTTi</td>
+	<td style="text-align:left;">Apptutti</td>
+</tr>
+<tr>
+	<td style="text-align:left;">VIVEPORT</td>
+	<td style="text-align:left;">Htc</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Mi GetApps (Xiaomi)</td>
+	<td style="text-align:left;">XiaomiStore</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Mi Game Center (Xiaomi China)</td>
+	<td style="text-align:left;">XiaomiStoreCn</td>
+</tr>
+<tr>
+	<td style="text-align:left;">HUAWEI AppGallery</td>
+	<td style="text-align:left;">Huawei</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Samsung Galaxy Store</td>
+	<td style="text-align:left;">SamsungGalaxyStore</td>
+</tr>
+<tr>
+	<td style="text-align:left;">QooApp Game Store</td>
+	<td style="text-align:left;">QooApp</td>
+</tr>
+<tr>
+	<td style="text-align:left;">TPAY MOBILE Stores</td>
+	<td style="text-align:left;">Tpay</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Uptodown</td>
+	<td style="text-align:left;">Uptodown</td>
+</tr>
+<tr>
+	<td style="text-align:left;">SHAREit</td>
+	<td style="text-align:left;">ShareIt</td>
+</tr>
+<tr>
+	<td style="text-align:left;">JioGames</td>
+	<td style="text-align:left;">JioGamesStore</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="example"></a></p>
+
+<h2>将 udpStore 用于 Remote Config</h2>
+
+<p>使用 <a href="https://unity.com/remote-config">Unity Remote Config</a> 可以在不部署应用程序新版本的情况下优化游戏设置。当玩家启动游戏时，Remote Config 会检测用作规则条件的上下文属性（基于 Unity、应用程序、用户或你定义的自定义条件）。然后，相应服务会根据适用于每个玩家的规则为玩家返回自定义设置。</p>
+
+<p>在规则条件中使用 <code>udpStore</code> 作为属性，就可以根据游戏是从哪个 UDP 商店下载的来确定游戏设置。</p>
+
+<p>要使用 Remote Config 实现 udpStore，请遵循以下步骤。</p>
+
+<p>1.下载并安装 UDP 包。
+1.下载并安装 Unity Remote Config 包。请参阅 <a href="https://docs.unity3d.com/Packages/com.unity.remote-config@latest/index.html">Remote Config 文档</a>。
+1.创建一个 AppAttributes 结构，其中至少包含参数“udpStore”：<br>
+ <code>
+    public struct AppAttributes
+    {
+      public string udpStore;
+    }
+</code>
+1.在游戏代码中，实现 Remote Config ConfigManager.FetchConfigs 调用。
+1.调用 FetchConfigs 时，创建 AppAttributes 结构的新实例，从以下位置读取 UDP 商店数据文件：
+Application.PersistentDataPath + ‘/Unity’ + /Application.CloudProjectId + /udp/udp.json
+使用 JSONUtility.FromJsonOverwrite 可将文件内容作为文本资源读取。<br>
+ <code>
+    {
+        string udpFilePath = System.IO.Path.Combine(Application.persistentDataPath, "Unity", Application.cloudProjectId, "udp", "udp.json");
+        string udpFileContents = System.IO.File.ReadAllText(udpFilePath);
+        var appAttr = JsonUtility.FromJson&amp;lt;AppAttributes&amp;gt;(udpFileContents);
+        Unity.RemoteConfig.ConfigManager.FetchCompleted += ConfigManager_FetchCompleted;
+        Unity.RemoteConfig.ConfigManager.FetchConfigs(null, appAttr);
+    }
+</code>
+1.确保在 ConfigManager.FetchConfigs 中使用 AppAttributes 结构。
+1.打开 <strong>Remote Config</strong> 窗口 (<strong>Window</strong> &gt; <strong>Remote Config</strong>)，然后创建需要根据 UDP 商店而改变的参数。
+1.设置好参数并插入到游戏代码中后，请在 Remote Config 窗口中为每个商店创建一个规则。
+1.在每个规则的条件中，放入：app.udpStore == “[storeName]”<br>
+ * 请参阅 <a href="#udp-values">udpStore 的值</a><br>
+ <img src="../uploads/Main/UDPServiceInteroperability_01.png" alt="">
+1.要启用相应的设置，请在 Remote Config 窗口的左面板上选中规则名称旁边的复选框。
+1.针对设备构建应用程序，并确保正确应用规则，然后发布。</p>
+
+<p><a name="iap"></a></p>
+
+<h2>使用 Unity IAP 实现用于 UDP 的 IAP 商品</h2>
+
+<p>如果要使用 Unity IAP 实现 UDP，请首先<a href="https://docs.unity3d.com/Manual/UnityIAPSettingUp.html">设置 Unity IAP</a>。</p>
+
+<p><strong>注意</strong>：如果选择使用 Unity IAP 版本 1.22.0–1.23.5 来实现 UDP（而不是使用 UDP 包），则仅通过 Unity IAP 实现即可。</p>
+
+<p>Unity IAP 自动进行以下处理：</p>
+
+<ul>
+<li>初始化 UDP</li>
+<li>查询商店的 IAP 商品库存</li>
+<li>请求购买某个商品</li>
+<li>消耗所购买的商品</li>
+</ul>
+
+<p>但是，你的游戏必须根据 <a href="https://docs.unity3d.com/Manual/UnityIAP.html">Unity IAP 文档</a>正确使用 Unity IAP 的类似功能（例如初始化和购买）。</p>
+
+<p>使用 Unity IAP 实现游戏的应用内购后，请按照以下步骤使用 Unity IAP 设置 UDP。</p>
+
+<p><a name="query-iap"></a></p>
+
+<h3>查询 IAP 库存</h3>
+
+<h4>使用 Unity IAP（代码实现）</h4>
+
+<h5>获取编辑器中定义的 IAP 商品</h5>
+
+<p>在获取 IAP 商品以传递给 <code>queryInventory</code> 方法时，请调用 <code>ProductCatalog.LoadDefaultCatalog()</code>。此时会返回编辑器的 <strong>IAP Catalog</strong> (<strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>IAP Catalog</strong>) 中定义的 IAP 商品。</p>
+
+<p>例如：</p>
+
+<pre><code>var catalog = ProductCatalog.LoadDefaultCatalog();
+
+foreach (var product in catalog.allValidProducts)
+{
+   if (product.allStoreIDs.Count &gt; 0)
+   {
+       var ids = new IDs();
+       foreach (var storeID in product.allStoreIDs)
+       {
+           ids.Add(storeID.id, storeID.store);
+       }
+       builder.AddProduct(product.id, product.type, ids);
+   }
+   else
+   {
+       builder.AddProduct(product.id, product.type);
+   }
+}
+</code></pre>
+
+<h5>从 UDP 控制台获取 IAP 商品信息</h5>
+
+<p>如果你打算在 UDP 控制台上修改游戏的 IAP 目录，请准备好游戏以便从 UDP 控制台获取 IAP 商品信息。</p>
+
+<p>在获取 IAP 商品以便传递给 <code>queryInventory</code> 方法时，请调用 builder.AddProduct 以获取 UDP 控制台上定义的特定 IAP 商品：</p>
+
+<p><code>builder.AddProduct(product.id, product.type, new IDs{})</code></p>
+
+<p>要显示带有货币格式的商品价格，请使用 <code>productInfo.Value.Price</code>。</p>
+
+<h5>从 UDP 控制台获取 IAP 目录</h5>
+
+<p>要获取在 UDP 控制台上定义的所有 IAP 商品，请不要调用任何 IAP 商品检索方法。你的游戏随后将从 UDP 控制台获取整个 IAP 目录。</p>
+
+<p>注意：将 IAP 商品的 CSV 文件上传到 UDP 控制台上会完全覆盖你的 IAP 目录。</p>
+
+<h4>使用 Unity IAP 包填充 IAP 目录</h4>
+
+<p>在 <a href="udp.html#iap-catalog">IAP 目录</a>中添加和配置 UDP 应用内购。</p>
+
+<p><strong>注意</strong>：如果未在游戏客户端中使用 IAP 目录（例如，如果仅在游戏服务器上维护 IAP 商品），仍必须<a href="udp-implementing-iap.html#create">在 UDP 控制台上创建 IAP 目录</a>。</p>
+
+<p>1.在 Unity 编辑器中，选择 <strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>IAP Catalog</strong>。
+1.选择 <strong>Add Product</strong>，然后输入每个 IAP 商品的详细信息。
+ 1.在 Unity Distribution Portal Configuration 下添加 IAP 商品的价格。
+ <img src="../uploads/Main/UDPGamesWithIAP_09.png" alt="">
+1.要将 IAP 商品保存到 UDP 控制台，请选择 <strong>Sync to UDP</strong>。对你创建的每个 IAP 商品执行此操作。</p>
+
+<p>为了确保正确保存了 IAP 目录，请检查 UDP 控制台中是否显示了所添加的商品。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp-managing-and-publishing.html"></a></span><div class="tip">在 UDP 控制台上管理和发布游戏</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-reference.html"></a></span><div class="tip">UDP 参考</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

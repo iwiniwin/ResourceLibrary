@@ -1,0 +1,427 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="物理 (Physics) - Unity 手册">
+<title>物理 (Physics) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/PhysicsSet.png">
+<meta name="description" content="使用 Physics 设置（主菜单：Edit &gt; Project Settings，然后选择 Physics 类别）可应用 3D 物理全局设置。">
+<meta property="og:description" content="使用 Physics 设置（主菜单：Edit &gt; Project Settings，然后选择 Physics 类别）可应用 3D 物理全局设置。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-PhysicsManager';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PhysicsManager.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-PhysicsManager.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PhysicsManager.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-PhysicsManager.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-PhysicsManager.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-PhysicsManager.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-PhysicsManager.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-PhysicsManager.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PhysicsManager.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PhysicsManager.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PhysicsManager.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PhysicsManager.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PhysicsManager.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PhysicsManager.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PhysicsManager.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PhysicsManager.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PhysicsManager.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PhysicsManager.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PhysicsManager.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PhysicsManager.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PhysicsManager.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PhysicsManager.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PhysicsManager.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PhysicsManager.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PhysicsManager.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-PhysicsManager.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-PhysicsManager.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-PhysicsManager.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-PhysicsManager.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-PhysicsManager.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-PhysicsManager.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PhysicsManager.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PhysicsManager.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PhysicsManager.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PhysicsManager.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PhysicsManager.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PhysicsManager.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PhysicsManager.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PhysicsManager.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PhysicsManager.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PhysicsManager.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PhysicsManager.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PhysicsManager.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PhysicsManager.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PhysicsManager.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PhysicsManager.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PhysicsManager.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PhysicsManager.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="comp-ManagerGroup.html">Project Settings</a></li>
+<li>物理 (Physics)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-GraphicsSettings.html"></a></span><div class="tip">Graphics</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Physics2DManager.html"></a></span><div class="tip">Physics 2D</div>
+</div>
+</div></div>
+<h1>物理 (Physics)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用 <strong>Physics</strong> 设置（主菜单：<strong>Edit</strong> &gt; <strong>Project Settings</strong>，然后选择 <strong>Physics</strong> 类别）可应用 3D 物理全局设置。</p>
+
+<p><strong>注意：</strong>要管理 2D 物理的全局设置，请改用 <a href="class-Physics2DManager.html">Physics 2D</a> 设置。</p>
+
+<figure>
+<img src="../uploads/Main/PhysicsSet.png" alt="3D Physics 设置">
+<figcaption>3D Physics 设置</figcaption>
+</figure>
+
+<p>这些设置定义了物理模拟精度的限制。一般来说，更精确的模拟需要更多的处理开销，因此这些设置提供了一种精度与性能的折衷方法。有关更多信息，请参阅本手册的<a href="PhysicsSection.html">物理</a>部分。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Gravity</strong></td>
+	<td style="text-align:left;">使用 x、y 和 z 轴设置应用于所有刚体组件的重力。对于真实的重力设置，应将负数应用于 y 轴。重力以每平方秒的世界单位定义。<br><strong>注意</strong>：如果增大重力，可能还需要增大 <strong>Default Solver Iterations</strong> 值以保持稳定的接触。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Material</strong></td>
+	<td style="text-align:left;">设置在没有为单独碰撞体分配材质的情况下需要使用的默认物理材质。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Bounce Threshold</strong></td>
+	<td style="text-align:left;">设置速度值。如果两个碰撞对象的相对速度低于此值，则它们在碰撞后不会相互反弹。此值还可以减少抖动，因此不建议将其设置为非常低的值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Sleep Threshold</strong></td>
+	<td style="text-align:left;">设置一个全局能量阈值；当低于该阈值时，非运动刚体（即不受物理系统控制的刚体）可进入睡眠状态。刚体处于睡眠状态不会每帧更新，因此可减少资源消耗。如果刚体的动能除以其质量低于此阈值，该刚体将作为睡眠候选者。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Contact Offset</strong></td>
+	<td style="text-align:left;">设置碰撞检测系统用于产生碰撞接触的距离。该值必须为正，如果设置得太接近零，可能导致抖动。默认情况下，该值设置为 0.01。仅当碰撞体的距离小于其接触偏移值的总和时，碰撞体才产生碰撞接触。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Solver Iterations</strong></td>
+	<td style="text-align:left;">定义 Unity 在每个物理帧运行的解算器进程数。解算器是小型物理引擎任务，决定了许多物理交互，例如关节运动或管理重叠刚体组件之间的接触。<br>此设置会影响解算器输出的质量，如果使用非默认的 <code>Time.fixedDeltaTime</code>，或者配置要求极高，建议更改此属性。通常，此属性用于减少关节或接触引起的抖动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Solver Velocity Iterations</strong></td>
+	<td style="text-align:left;">设置解算器在每个物理帧中执行的速度进程数。解算器执行的进程越多，刚体反弹后产生的退回速度的精度就越高。如果遇到连接的刚体组件或布娃娃在碰撞后移动太多的问题，请尝试增加此值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Queries Hit Backfaces</strong></td>
+	<td style="text-align:left;">如果希望物理查询（例如 <code>Physics.Raycast</code>）检测是否命中 MeshColliders 的背面三角形，请启用此选项。默认情况下会禁用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Queries Hit Triggers</strong></td>
+	<td style="text-align:left;">如果希望物理命中测试（例如射线投射、SphereCasts 和 SphereTests）在与标记为触发器的碰撞体相交时返回命中，请启用此选项。单个射线投射可以覆盖此行为。默认情况下会启用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Adaptive Force</strong></td>
+	<td style="text-align:left;">启用此选项可启用自适应作用力。自适应作用力会影响通过一堆对象传递力的方式，可提供更真实的行为。默认情况下会禁用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Contacts Generation</strong></td>
+	<td style="text-align:left;">选择接触生成方法。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Legacy Contacts Generation</em></td>
+	<td style="text-align:left;">在 Unity 5.5 之前，Unity 使用了基于分离轴定理 (<a href="http://www.dyn4j.org/2010/01/sat/">SAT</a>) 的接触生成方法。<br><br>PCM 效率更高，但对于较旧的项目，您可能发现继续使用 SAT 会更方便，因为无需略微重新调整物理设置。PCM 可以产生稍微不同的反弹，并且在接触缓冲区中出现的无用接触更少（即在 <a href="../ScriptReference/Collision.html">Collision</a> 实例中得到的传递给 <code>OnCollisionEnter</code>、<code>OnCollisionStay</code> 和 <code>OnCollisionExit</code> 的数组）。<br><br><strong>升级建议</strong>：要迁移使用 Unity 2018.2 或更低版本制作的项目，可能需要更新脚本以便使用代码在复合体中合并面片以及选择接触。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Persistent Contacts Manifold (PCM)</em></td>
+	<td style="text-align:left;">每个物理帧生成更少的接触，跨帧共享更多接触数据。PCM 接触生成路径也更准确，并通常在大多数情况下产生更好的碰撞反馈。如需了解更多信息，请参阅<a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/AdvancedCollisionDetection.html#persistent-contact-manifold-pcm">有关 Persistent Contact Manifold 的 Nvidia 文档</a>。<br>这是默认值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Simulation</strong></td>
+	<td style="text-align:left;">启用此选项可自动运行物理模拟或允许对其进行显式控制。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Sync Transforms</strong></td>
+	<td style="text-align:left;">启用此选项可在变换组件发生更改时自动将变换更改与物理系统同步。默认情况下会禁用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Contact Pairs Mode</strong></td>
+	<td style="text-align:left;">选择要使用的接触对生成类型。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Default Contact Pairs</em></td>
+	<td style="text-align:left;">接收来自除运动/运动和运动/静态接触对之外的所有接触对的碰撞和触发事件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Enable Kinematic Kinematic Pairs</em></td>
+	<td style="text-align:left;">接收来自运动/运动接触对的碰撞和触发事件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Enable Kinematic Static Pairs</em></td>
+	<td style="text-align:left;">接收来自运动/静态接触对的碰撞和触发事件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Enable All Contact Pairs</em></td>
+	<td style="text-align:left;">接收来自所有接触对的碰撞和触发事件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Broadphase Type</strong></td>
+	<td style="text-align:left;">选择要在物理模拟中使用的<a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/3.3.4/Manual/RigidBodyCollision.html#broad-phase-algorithms">粗筛阶段算法</a>。请参阅有关 <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/apireference/files/structPxBroadPhaseType.html">PhysX SDK</a> 和<a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/RigidBodyCollision.html">刚体碰撞 (Rigid Body Collision)</a> 的 NVIDIA 文档。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Sweep and Prune Broadphase</em></td>
+	<td style="text-align:left;">使用“扫掠修剪”粗筛阶段碰撞方法（即沿单个轴排序对象以避免必须检查相距很远的对）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Multibox Pruning Broadphase</em></td>
+	<td style="text-align:left;">多盒修剪使用网格，每个网格单元格执行扫掠修剪。这通常有助于提高性能，例如在平坦世界中有大量游戏对象时。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Automatic Box Pruning</em></td>
+	<td style="text-align:left;">该算法与 Multibox Pruning 的算法相似，不同之处在于该算法还可以自动计算世界边界和细分数量。该算法将维护一组网格单元格，并使用常规的“扫掠修剪”方法来计算可能重叠的碰撞体对。该算法通常适用于大型场景，在这样的场景中单个“扫掠修剪”会产生很多额外的误报。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>World Bounds</strong></td>
+	<td style="text-align:left;">使用 <strong>Multibox Pruning Broadphase</strong> 算法时，定义包围世界的 2D 网格以防止相距遥远的对象相互影响。<br>仅在 <strong>Broadphase Type</strong> 设置为 <strong>Multibox Pruning Broadphase</strong> 时使用此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>World Subdivisions</strong></td>
+	<td style="text-align:left;">2D 网格算法中沿 x 和 z 轴的单元格数。<br>仅在 <strong>Broadphase Type</strong> 设置为 <strong>Multibox Pruning Broadphase</strong> 时使用此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Friction Type</strong></td>
+	<td style="text-align:left;">选择用于模拟的摩擦力算法。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Patch Friction Type</em></td>
+	<td style="text-align:left;">一种基本的强大摩擦力算法，通常可以在较低的解算器迭代次数下产生最稳定的结果。此方法为每对触摸对象仅使用最多四个标量解算器约束。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>One Directional Friction Type</em></td>
+	<td style="text-align:left;">库仑摩擦力模型的简化版，其中将给定接触点的摩擦力施加在接触法线的交替切线方向上。可减少收敛所需的迭代次数，但不如双向模型精确。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Two Directional Friction Type</em></td>
+	<td style="text-align:left;">与单向模型一样，但同时在两个切线方向上施加摩擦力。这需要更多的解算器迭代次数，但更精确。对于具有许多接触点的情况，比面片摩擦的成本更高，因为这会应用于每个接触点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Enhanced Determinism</strong></td>
+	<td style="text-align:left;">无论角色是否存在，场景中的模拟都是一致的（前提是游戏以确定的顺序插入角色）。此模式牺牲了一些性能来确保这种额外的确定性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Unified Heightmaps</strong></td>
+	<td style="text-align:left;">启用此选项可以像处理网格碰撞一样处理地形碰撞。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Solver Type</strong></td>
+	<td style="text-align:left;">选择要用于模拟的 PhysX 解算器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Projected Gauss Seidel</em></td>
+	<td style="text-align:left;">默认 PhysX 解算器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Temporal Gauss Seidel</em></td>
+	<td style="text-align:left;">该解算器提供更好的收敛性和更好的高质量比处理方式，在校正穿透时可以最大限度减小引入的能量，并可提高关节抗过度拉伸的能力。使用默认解算器在模拟过程中遇到一些不稳定的行为时，使用这种解算器通常会有帮助。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Layer Collision Matrix</strong></td>
+	<td style="text-align:left;">定义<a href="LayerBasedCollision.html">基于层的碰撞</a>检测系统的行为方式。选择碰撞矩阵中的哪些层与其他层交互（勾选相应层即可）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Cloth Inter-Collision</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Distance</strong></td>
+	<td style="text-align:left;">定义每个<a href="class-Cloth.html#intercollision">互碰撞的布料</a>粒子的包裹球体的直径。Unity 确保这些球体在模拟过程中不会重叠。Distance 属性的值应小于配置中的两个粒子之间的最小距离。如果距离较大，则布料碰撞可能违反某些距离约束并导致抖动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Stiffness</strong></td>
+	<td style="text-align:left;">
+<a href="class-Cloth.html#intercollision">互碰撞的布料</a>粒子之间的分离冲力的强度。此值由布料解算器进行计算，应足以保持粒子分离。</td>
+</tr>
+</tbody>
+</table>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2018–10–12 页面已修订</span></p></li>
+<li><p><span class="page-history">在 5.5 版中添加的设置：Default Solver Iterations、Default Solver Velocity Iterations、Queries Hit Backfaces、Enable PCM</span></p></li>
+<li><p><span class="page-history">在 2017.4 版中更新了 Physics Manager 设置文档</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> 版本中添加了 Friction Type、Enhanced Determinism 和 Unified Heightmaps 物理设置<span class="search-words">NewIn20183</span></span></p></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-GraphicsSettings.html"></a></span><div class="tip">Graphics</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Physics2DManager.html"></a></span><div class="tip">Physics 2D</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

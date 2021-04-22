@@ -1,0 +1,491 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="刷新资源数据库 - Unity 手册">
+<title>刷新资源数据库 - Unity 手册</title>
+<meta name="description" content="Unity 在以下情况下会刷新资源数据库：">
+<meta property="og:description" content="Unity 在以下情况下会刷新资源数据库：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'AssetDatabaseRefreshing';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetDatabaseRefreshing.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/AssetDatabaseRefreshing.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetDatabaseRefreshing.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/AssetDatabaseRefreshing.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/AssetDatabaseRefreshing.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/AssetDatabaseRefreshing.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/AssetDatabaseRefreshing.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/AssetDatabaseRefreshing.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetDatabaseRefreshing.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetDatabaseRefreshing.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetDatabaseRefreshing.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetDatabaseRefreshing.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetDatabaseRefreshing.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetDatabaseRefreshing.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetDatabaseRefreshing.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetDatabaseRefreshing.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetDatabaseRefreshing.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetDatabaseRefreshing.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetDatabaseRefreshing.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetDatabaseRefreshing.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetDatabaseRefreshing.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetDatabaseRefreshing.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetDatabaseRefreshing.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetDatabaseRefreshing.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetDatabaseRefreshing.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/AssetDatabaseRefreshing.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/AssetDatabaseRefreshing.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/AssetDatabaseRefreshing.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/AssetDatabaseRefreshing.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/AssetDatabaseRefreshing.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/AssetDatabaseRefreshing.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetDatabaseRefreshing.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetDatabaseRefreshing.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetDatabaseRefreshing.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetDatabaseRefreshing.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetDatabaseRefreshing.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetDatabaseRefreshing.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetDatabaseRefreshing.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetDatabaseRefreshing.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetDatabaseRefreshing.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetDatabaseRefreshing.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetDatabaseRefreshing.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetDatabaseRefreshing.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetDatabaseRefreshing.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetDatabaseRefreshing.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetDatabaseRefreshing.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetDatabaseRefreshing.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetDatabaseRefreshing.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AssetWorkflow.html">资源工作流程</a></li>
+<li><a href="AssetDatabase.html">资源数据库</a></li>
+<li>刷新资源数据库</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetDatabase.html"></a></span><div class="tip">资源数据库</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetDatabaseBatching.html"></a></span><div class="tip">AssetDatabase 批处理</div>
+</div>
+</div></div>
+<h1>刷新资源数据库</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 在以下情况下会刷新资源数据库：</p>
+
+<ul>
+<li>Unity Editor 重新获得焦点时（如果已在 Preferences 窗口中启用 <a href="Preferences.html">Auto-Refresh</a>）</li>
+<li>从菜单中选择 <strong>Assets &gt; Refresh</strong> 时</li>
+<li>从 C# 调用 <a href="../ScriptReference/AssetDatabase.Refresh.html">AssetDatabase.Refresh</a> 时</li>
+</ul>
+
+<p>其他一些 AssetDatabase API 会触发 Refresh()，但是仅针对您指定的资源。例如，<a href="../ScriptReference/AssetDatabase.CreateAsset.html">CreateAsset()</a> 和 <a href="../ScriptReference/AssetDatabase.ImportAsset.html">ImportAsset()</a>。</p>
+
+<p>Unity 在资源数据库刷新期间执行以下步骤：</p>
+
+<p>1.查找资源文件的更改，然后更新源资源数据库
+2.导入并编译与代码相关的文件，例如 .dll、.asmdef、.asmref、.rsp 和 .cs 文件。
+3.然后，如果未从脚本调用 <a href="../ScriptReference/AssetDatabase.Refresh.html">Refresh</a>，重新加载该域。
+4.对导入的代码相关文件的所有资源进行后期处理
+5.然后导入与代码无关的资源，并对所有剩余的导入资源进行后期处理
+6.随后对资源进行<a href="#hotreloading">热重载</a></p>
+
+<h2>资源数据库详细刷新过程</h2>
+
+<p>Unity 在资源数据库刷新期间执行以上部分中描述的步骤。本部分将进一步详细描述这一过程。这些步骤在一个循环中执行，某些步骤可能导致刷新过程重新启动（例如，导入资源时会创建其他资源，Unity 也需要导入这些资源）。</p>
+
+<p>Unity 在以下情况下会重新启动资源数据库刷新循环：</p>
+
+<ul>
+<li>如果导入资源后，导入器用过的文件在磁盘中发生改变。</li>
+<li>如果在 OnPostProcessAllAssets 中调用了以下任一项：
+
+<ul>
+<li><a href="https://docs.unity3d.com/ScriptReference/AssetDatabase.ForceReserializeAssets.html">ForceReserializeAssets</a></li>
+<li><a href="https://docs.unity3d.com/ScriptReference/AssetImporter.SaveAndReimport.html">AssetImporter.SaveAndImport</a></li>
+<li>导致出现额外“刷新”排队情况的任何 AssetDatabase API，例如 MoveAsset、CreateAsset 和 ImportAsset</li>
+</ul>
+</li>
+<li>如果所导入文件的时间戳在导入时发生改变，会使该文件排队等待重新导入</li>
+<li>导入器在导入过程中创建了文件（例如，FBX 模型可以通过从模型提取纹理来重新启动“刷新”）。</li>
+</ul>
+
+<h3>查找磁盘中的更改</h3>
+
+<p>Unity 查找磁盘中的更改时会扫描项目中的 <em><strong>Assets</strong></em> 和 <em><strong>Packages</strong></em> 文件夹，从而检查自上次扫描以来是否已添加、修改或删除任何文件。它将所有更改收集到列表中，以供下一步处理。</p>
+
+<h3>更新源资源数据库</h3>
+
+<p>Unity 收集文件列表后，将为添加或修改的文件获取文件哈希。然后会使用这些文件的 GUID 来更新资源数据库，并会删除被检测到“已删除”的文件的条目。</p>
+
+<h3>依赖项跟踪</h3>
+
+<p>资源数据库跟踪两类资源依赖项：<strong>静态依赖项</strong>和<strong>动态依赖项</strong>。如果资源的任何依赖项改变，Unity 都会触发该资源的重新导入。</p>
+
+<h5>静态依赖项</h5>
+
+<p>静态依赖项是导入器所依赖的值、设置或属性。静态依赖项在导入资源之前为已知状态，并且在导入过程中不受导入器行为的影响。如果资源的静态依赖项改变，Unity 将重新导入该资源。</p>
+
+<p>一些常见静态依赖项如下：</p>
+
+<ul>
+<li>资源的名称</li>
+<li>资源关联的导入器的 ID</li>
+<li>导入器的版本</li>
+<li>当前选择的构建目标平台</li>
+</ul>
+
+<h5>动态依赖项</h5>
+
+<p>Unity 通常会在导入过程中发现资源的动态依赖项。这是因为这些依赖项是按源资源的_内容_定义的。例如，一个着色器可能引用另一个着色器，而一个预制件可能依赖于其他预制件。</p>
+
+<p>导入器还可以根据源资源的内容，_有条件地_使用全局状态，在这种情况下也将成为动态依赖项。这种情况的示例包括目标平台、项目的颜色空间、图形 API、脚本运行时版本或纹理压缩状态。</p>
+
+<p>Unity 将资源的这些动态依赖项存储在<a href="https://docs.unity3d.com/ScriptReference/Experimental.AssetImporters.AssetImportContext.html">资源导入上下文 (Asset Import Context)</a> 中。</p>
+
+<h3>导入和编译代码相关文件</h3>
+
+<p>在一系列已更改或已添加的文件中，Unity 收集与代码相关的文件，并将其发送到脚本编译管线。编译器从项目中的脚本文件和程序集定义文件生成程序集。有关此步骤的更多信息，请参阅<a href="https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html">脚本编译程序集定义文件</a>的相关文档。</p>
+
+<h3>重新加载域</h3>
+
+<p>如果 Unity 检测到任何脚本更改，则会重新加载 C# 域。这样做的原因是可能已创建新的脚本化导入器 (Scripted Importer)，它们的逻辑可能会影响“刷新”队列中的资源导入结果。此步骤会重新启动 Refresh() 以确保所有新的脚本化导入器生效。</p>
+
+<h3>导入与代码无关的资源</h3>
+
+<p>Unity 导入所有与代码相关的资源并重新加载域后，将继续导入其余资源。每个资源的导入器都会处理该类型的资源，并根据文件扩展名来识别应导入的文件类型。例如，TextureImporter 负责导入 .jpg、.png 和 .psd 文件等。</p>
+
+<p>导入器分为两组：<strong>原生导入器 (Native Importer)</strong> 和<strong>脚本化导入器 (Scripted Importer)</strong>。</p>
+
+<h4>原生导入器</h4>
+
+<p>原生导入器内置于 Unity 中，并为 Unity 的大多数基本资源类型（例如 3D 模型、纹理和音频文件）提供导入功能。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">导入器</th>
+	<th style="text-align:left;">文件格式</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">AssemblyDefinitionImporter</td>
+	<td style="text-align:left;">asmdef</td>
+</tr>
+<tr>
+	<td style="text-align:left;">AssemblyDefinitionReferenceImporter</td>
+	<td style="text-align:left;">asmref</td>
+</tr>
+<tr>
+	<td style="text-align:left;">AudioImporter</td>
+	<td style="text-align:left;">ogg、aif、aiff、flac、wav、mp3、mod、it、s3m、xm</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ComputeShaderImporter</td>
+	<td style="text-align:left;">compute</td>
+</tr>
+<tr>
+	<td style="text-align:left;">DefaultImporter</td>
+	<td style="text-align:left;">rsp、unity</td>
+</tr>
+<tr>
+	<td style="text-align:left;">FBXImporter</td>
+	<td style="text-align:left;">fbx、mb、ma、max、jas、dae、dxf、obj、c4d、blend、lxo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">IHVImageFormatImporter</td>
+	<td style="text-align:left;">astc、dds、ktx、pvr</td>
+</tr>
+<tr>
+	<td style="text-align:left;">LocalizationImporter</td>
+	<td style="text-align:left;">po</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Mesh3DSImporter</td>
+	<td style="text-align:left;">3ds</td>
+</tr>
+<tr>
+	<td style="text-align:left;">NativeFormatImporter</td>
+	<td style="text-align:left;">anim、animset、asset、blendtree、buildreport、colors、controller、cubemap、curves、curvesNormalized、flare、fontsettings、giparams、gradients、guiskin、ht、mask、mat、mesh、mixer、overrideController、particleCurves、particleCurvesSigned、particleDoubleCurves、particleDoubleCurvesSigned、physicMaterial、physicsMaterial2D、playable、preset、renderTexture、shadervariants、spriteatlas、state、statemachine、texture2D、transition、webCamTexture、brush、terrainlayer、signal</td>
+</tr>
+<tr>
+	<td style="text-align:left;">PackageManifestImporter</td>
+	<td style="text-align:left;">json</td>
+</tr>
+<tr>
+	<td style="text-align:left;">PluginImporter</td>
+	<td style="text-align:left;">dll、winmd、so、jar、java、kt、aar、suprx、prx、rpl、cpp、cc、c、h、jslib、jspre、bc、a、m、mm、swift、xib、bundle、dylib、config</td>
+</tr>
+<tr>
+	<td style="text-align:left;">PrefabImporter</td>
+	<td style="text-align:left;">prefab</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RayTracingShaderImporter</td>
+	<td style="text-align:left;">raytrace</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ShaderImporter</td>
+	<td style="text-align:left;">cginc、cg、glslinc、hlsl、shader</td>
+</tr>
+<tr>
+	<td style="text-align:left;">SketchUpImporter</td>
+	<td style="text-align:left;">skp</td>
+</tr>
+<tr>
+	<td style="text-align:left;">SpeedTreeImporter</td>
+	<td style="text-align:left;">spm、st</td>
+</tr>
+<tr>
+	<td style="text-align:left;">SubstanceImporter</td>
+	<td style="text-align:left;">.sbsar</td>
+</tr>
+<tr>
+	<td style="text-align:left;">TextScriptImporter</td>
+	<td style="text-align:left;">txt、html、htm、xml、json、csv、yaml、bytes、fnt、manifest、md、js、boo、rsp</td>
+</tr>
+<tr>
+	<td style="text-align:left;">TextureImporter</td>
+	<td style="text-align:left;">jpg、jpeg、tif、tiff、tga、gif、png、psd、bmp、iff、pict、pic、pct、exr、hdr</td>
+</tr>
+<tr>
+	<td style="text-align:left;">TrueTypeFontImporter</td>
+	<td style="text-align:left;">ttf、dfont、otf、ttc</td>
+</tr>
+<tr>
+	<td style="text-align:left;">VideoClipImporter</td>
+	<td style="text-align:left;">avi、asf、wmv、mov、dv、mp4、m4v、mpg、mpeg、ogv、vp8、webm</td>
+</tr>
+<tr>
+	<td style="text-align:left;">VisualEffectImporter</td>
+	<td style="text-align:left;">vfx、vfxoperator、vfxblock</td>
+</tr>
+</tbody>
+</table>
+
+<h4>脚本化导入器</h4>
+
+<p>您可以定义自己的导入器，从而添加新文件类型的导入功能，或覆盖现有文件类型的导入器。这些导入器被称为脚本化导入器。</p>
+
+<p><strong>注意：</strong>除了自定义导入器，Unity 自身的一些导入器也被算作脚本化导入器，并且 Unity 会在此阶段（而不是原生导入器阶段）处理它们。</p>
+
+<p>Unity 随附的脚本化导入器为：</p>
+
+<ul>
+<li>StyleSheetImporter（用于 .uss 文件）</li>
+<li>UIElementsViewImporter（用于 .uxml 文件）</li>
+</ul>
+
+<p>导入器导入资源文件时，会生成 <strong>AssetImportContext</strong>。</p>
+
+<p>AssetImportContext 用于报告资源的静态依赖项。
+</p>
+
+<p>另外，在导入步骤中，会发生多次回调。</p>
+
+<p>预处理资源导入器调用：</p>
+
+<ul>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessAsset.html"><code>OnPreprocessAsset</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessAnimation.html"><code>OnPreprocessAnimation</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessAudio.html"><code>OnPreprocessAudio</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessModel.html"><code>OnPreprocessModel</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessSpeedTree.html"><code>OnPreprocessSpeedTree</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessTexture.html"><code>OnPreprocessTexture</code></a></li>
+</ul>
+
+<p>后处理资源导入器调用：</p>
+
+<ul>
+<li><a href="../ScriptReference/AssetPostprocessor.OnAssignMaterialModel.html"><code>OnAssignMaterialModel</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessAnimation.html"><code>OnPostprocessAnimation</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessAssetbundleNameChanged.html"><code>OnPostprocessAssetbundleNameChanged</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessAudio.html"><code>OnPostprocessAudio</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessCubemap.html"><code>OnPostprocessCubemap</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessGameObjectWithAnimatedUserProperties.html"><code>OnPostprocessGameObjectWithAnimatedUserProperties</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessGameObjectWithUserProperties.html"><code>OnPostprocessGameObjectWithUserProperties</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessMaterial.html"><code>OnPostprocessMaterial</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessMeshHierarchy.html"><code>OnPostprocessMeshHierarchy</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessModel.html"><code>OnPostprocessModel</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessSpeedTree.html"><code>OnPostprocessSpeedTree</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessSprites.html"><code>OnPostprocessSprites</code></a></li>
+<li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessTexture.html"><code>OnPostprocessTexture</code></a></li>
+</ul>
+
+<p>所有导入完成后触发的最后一个后处理回调是 <a href="https://docs.unity3d.com/ScriptReference/AssetPostprocessor.OnPostprocessAllAssets.html"><code>OnPostprocessAllAssets</code></a>。</p>
+
+<p>过程中可能会发生许多事件，这些事件将对 Asset 文件夹重新启动刷新过程，其中一些事件包括：</p>
+
+<ul>
+<li><p>如果资源导入失败</p></li>
+<li><p>如果在刷新的导入阶段修改了资源。例如，如果列表中的文件被修改，因此其修改日期与上次刷新的日期不符。如果在 Editor 获得焦点时开始从版本控制系统中提取文件，则会发生这种情况。</p></li>
+<li><p>如果资源在导入期间创建了其他资源。例如：导入 FBX 时，可以从 FBX 中提取纹理并将其置于项目中，这意味着 Unity 必须导入这些纹理（及其生成的任何 Artifact）。</p></li>
+<li><p>如果在某次预处理/或后处理回调期间或者在 OnPostProcessAllAssets 内强制重新导入某个文件，例如，使用 <code>AssetDatabase.ForceReserializeAssets</code> 或 <code>AssetImport.SaveAndReimport</code>。注意，如果执行此操作，必须小心，不要引起无限的重新导入循环。</p></li>
+<li><p>如果在编译脚本后发生程序集重新加载。如果在刷新过程中生成 C# 文件，必须先编译这个新文件，以便 Unity 重新启动刷新。</p></li>
+<li><p>如果将资源另存为“仅文本”，但是必须将此资源序列化为二进制文件，这时会发生重新启动。（例如，必须将包含地形的场景序列化为二进制文件，因为如果在文本文件中将地形数据视为一系列字符，则此数据将很难处理。）</p></li>
+</ul>
+
+<p><a name="hotreloading"></a></p>
+
+<h4>热重载</h4>
+
+<p>热重载是指在 Editor 开启的状态下由 Unity 导入脚本和资源并应用所有更改的过程。无论 Editor 是否处于运行模式 (Play Mode)，都可能发生此情况。无需重新启动应用程序和 Editor 即可使更改生效。</p>
+
+<p>更改并保存脚本时，Unity 会热重载所有当前加载的脚本数据。它首先将所有可序列化变量存储在所有加载的脚本中，并在加载脚本后恢复这些变量。热重载后，所有不可序列化的数据都会丢失。</p>
+
+<p><strong>注意：</strong>默认资源先于脚本资源导入，因此不会为默认资源调用任何由脚本定义的 PostProcessAllAssets 回调。</p>
+
+<h4>刷新结束</h4>
+
+<p>一旦完成所有这些步骤，就完成了 Refresh() 并使用相关信息更新了 <strong>Artifact 数据库</strong>，还会在磁盘中生成必要的导入结果文件。</p>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetDatabase.html"></a></span><div class="tip">资源数据库</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetDatabaseBatching.html"></a></span><div class="tip">AssetDatabase 批处理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

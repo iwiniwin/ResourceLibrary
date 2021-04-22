@@ -1,0 +1,309 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity CCD Develop Dashboard - Unity 手册">
+<title>Unity CCD Develop Dashboard - Unity 手册</title>
+<meta name="description" content="您可以在 Develop Dashboard 中使用 Cloud Content Delivery (CCD) 来创建和维护存储桶、标示和发布版本。但是，必须先使用命令行界面 (CLI) 上传、删除和同步文件和文件夹，然后才能在 Develop Dashboard 中进行相关的管理。">
+<meta property="og:description" content="您可以在 Develop Dashboard 中使用 Cloud Content Delivery (CCD) 来创建和维护存储桶、标示和发布版本。但是，必须先使用命令行界面 (CLI) 上传、删除和同步文件和文件夹，然后才能在 Develop Dashboard 中进行相关的管理。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UnityCCDDashboard';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityCCDDashboard.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UnityCCDDashboard.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityCCDDashboard.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UnityCCDDashboard.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UnityCCDDashboard.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UnityCCDDashboard.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UnityCCDDashboard.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UnityCCDDashboard.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnityCCDDashboard.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnityCCDDashboard.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityCCDDashboard.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityCCDDashboard.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityCCDDashboard.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityCCDDashboard.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityCCDDashboard.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityCCDDashboard.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityCCDDashboard.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityCCDDashboard.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityCCDDashboard.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityCCDDashboard.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityCCDDashboard.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityCCDDashboard.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityCCDDashboard.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityCCDDashboard.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityCCDDashboard.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UnityCCDDashboard.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UnityCCDDashboard.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UnityCCDDashboard.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UnityCCDDashboard.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UnityCCDDashboard.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UnityCCDDashboard.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnityCCDDashboard.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnityCCDDashboard.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityCCDDashboard.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityCCDDashboard.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityCCDDashboard.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityCCDDashboard.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityCCDDashboard.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityCCDDashboard.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityCCDDashboard.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityCCDDashboard.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityCCDDashboard.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityCCDDashboard.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityCCDDashboard.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityCCDDashboard.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityCCDDashboard.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityCCDDashboard.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityCCDDashboard.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityCCD.html">Unity Cloud Content Delivery</a></li>
+<li><a href="UnityCCDInterfaces.html">Cloud Content Delivery 界面</a></li>
+<li>Unity CCD Develop Dashboard</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCCDCLI.html"></a></span><div class="tip">Unity CCD 命令行界面 (CLI)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCCDCLIWalkthrough.html"></a></span><div class="tip">通过命令行界面使用 CCD</div>
+</div>
+</div></div>
+<h1>Unity CCD Develop Dashboard</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>您可以在 Develop Dashboard 中使用 Cloud Content Delivery (CCD) 来创建和维护存储桶、标示和发布版本。但是，必须先使用命令行界面 (CLI) 上传、删除和同步文件和文件夹，然后才能在 Develop Dashboard 中进行相关的管理。</p>
+
+<p>例如，您可以使用 Develop Dashboard 以比 CLI 更为直观的用户界面来交互式管理应用程序的资源。</p>
+
+<p>要在 Develop Dashboard 中访问 CCD，请执行以下操作：</p>
+
+<p>1.如果是首次使用 Unity 服务：
+ 1. 创建一个 <a href="https://id.unity.com/">Unity ID</a> 帐户（如果还没有此帐户）。
+ 2.从 <strong>Develop</strong> 选项卡登录到 <a href="https://dashboard.unity3d.com/">Develop Dashboard</a>。
+ 3.单击 <strong>Create New Project</strong>。在 Create New Project 窗口中，填写详细信息。
+2.选择项目名称，或单击 <strong>View</strong>。
+3.在此项目的 <strong>Overview</strong> 页面左侧导航栏中，选择 <strong>Content Delivery</strong> &gt; <strong>Buckets</strong>。</p>
+
+<h2>存储桶</h2>
+
+<p>在您项目的 <strong>Cloud Content Delivery</strong> 页面中，您需要创建存储桶来托管您的内容。</p>
+
+<p>要添加存储桶，请执行以下操作：</p>
+
+<p>1.单击 <strong>Create Bucket</strong>。
+2.在 Create Bucket 窗口中，为存储桶指定名称和可选描述。</p>
+
+<p>在存储桶列表视图中，每个存储桶都有一个详细信息行，其中包含以下信息：</p>
+
+<ul>
+<li>存储桶名称</li>
+<li>存储桶的描述</li>
+<li>当前状态的快照：
+
+<ul>
+<li>当前发布版本的版本号，或有关未发布更改的通知。</li>
+<li>对存储桶进行最后更改的日期。</li>
+<li>进行最新更改的人员的用户名，或自动更改的来源的名称。</li>
+</ul>
+</li>
+</ul>
+
+<p>您可以通过存储桶所在行末尾的 <strong>More Items</strong> 菜单 (⋮) 来编辑或删除存储桶。</p>
+
+<p>要查看有关存储桶的更多信息，请在列表视图中单击存储桶的名称。在存储桶详细信息屏幕中有以下选项卡：</p>
+
+<ul>
+<li>
+<strong>Latest</strong>：显示存储桶的当前状态及其所有内容的最新版本。在这里，您可以创建发布版本。
+资源列表是分页的，可搜索，并包含筛选条件。
+如果您的存储桶没有任何未发布的更改，则可以从此选项卡推进某个发布版本。</li>
+<li>
+<strong>Releases</strong>：显示您为此项目创建的所有发布版本。</li>
+<li>
+<strong>Badges</strong>：列出此发布版本可用的所有标示。</li>
+</ul>
+
+<h2>发布版本</h2>
+
+<p>您可以在 <strong>Releases</strong> 选项卡上管理为项目创建的发布版本。如果您的存储桶中有任何未发布的内容，则会在发布版本的详细信息行中看到 <strong>Create Release</strong> 按钮。</p>
+
+<p>要创建发布版本，请执行以下操作：</p>
+
+<p>1.从 <strong>Content Delivery Buckets</strong> 页面中选择一个包含未发布更改的存储桶。
+2.在存储桶的页面中，选择 <strong>Latest</strong> 选项卡。
+3.选择 <strong>Create Release</strong> 按钮。
+4.在 <strong>Create Release</strong> 对话框中，输入可选的发行说明，然后单击 <strong>Next</strong>。
+5.在下一页上，选择要分配给该发布版本的标示（将这些标示从当前发布版本中移除），然后选择 <strong>Next</strong>。
+6.查看您的更改，然后选择 <strong>Submit</strong> 以完成操作，或选择 <strong>Back</strong> 以继续编辑。<strong>Unreleased Changes</strong> 通知会更改以反映新状态。</p>
+
+<p>创建发布版本后，该发布版本将显示在 <strong>Releases</strong> 选项卡的列表中，并带有创建日期和所有关联的标示。您可以通过发布版本所在行末尾的 <strong>More Items</strong> 菜单 (⋮) 来为发布版本分配标示。</p>
+
+<p>当您单击列表中某个发布版本的 <strong>Release #</strong> 时，您会看到一个页面，其中包含该发布版本的详细信息以及与该发布版本相关联的资源和捆绑包列表。</p>
+
+<p>在项目发布管线中的某些情况下，可能需要将发布版本从一个存储桶移至另一个存储桶，此过程称为推进。如果您的存储桶中没有任何未发布的更改，则会在发布版本的详细信息行中看到 <strong>Promote Release</strong> 按钮。</p>
+
+<p>要推进发布版本，请执行以下操作：</p>
+
+<p>1.在 <strong>Releases</strong> 选项卡中单击要推进的发布版本的 <strong>Release #</strong>。
+2.在发布版本摘要中，单击 <strong>Promote Release</strong>。
+3.在 Promote Release 窗口中，从 <strong>Target Bucket</strong> 下拉选单中选择要将发布版本推进到的存储桶。
+4.添加任何可选的发行说明，然后选择 <strong>Next</strong>。
+5.在下一页上，选择要分配给该发布版本的标示（将这些标示从当前发布版本中移除），然后选择 <strong>Next</strong>。
+6.查看您的更改，然后选择 <strong>Promote Release</strong> 以完成操作，或选择 <strong>Back</strong> 以继续编辑。</p>
+
+<h2>标示</h2>
+
+<p>为发布版本附加标示可使您的应用程序从该标示所分配到的任何发布版本加载内容。</p>
+
+<p>要创建标示，请执行以下操作：</p>
+
+<p>1.从 <strong>Content Delivery Buckets</strong> 页面中选择一个存储桶。
+2.选择 <strong>Badges</strong> 选项卡。
+3.选择 <strong>Add New</strong>。
+4.在 Add New Badge 窗口中，为标示指定一个唯一的名称，然后从下拉列表中选择相应的发布版本。
+5.选择 <strong>Submit</strong>。</p>
+
+<p>现在，该标示会显示在 <strong>Badges</strong> 选项卡的标示列表中。您可以通过标示所在行末尾的 <strong>More Items</strong> 菜单 (⋮) 来编辑该标示的相关发布版本或删除该标示。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCCDCLI.html"></a></span><div class="tip">Unity CCD 命令行界面 (CLI)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCCDCLIWalkthrough.html"></a></span><div class="tip">通过命令行界面使用 CCD</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

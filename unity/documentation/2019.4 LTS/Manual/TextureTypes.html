@@ -1,0 +1,939 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="纹理类型 - Unity 手册">
+<title>纹理类型 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/TextureTypes-Default-0.png">
+<meta name="description" content="通过纹理导入器 (Texture Importer) 可将不同类型的纹理导入 Unity Editor。">
+<meta property="og:description" content="通过纹理导入器 (Texture Importer) 可将不同类型的纹理导入 Unity Editor。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'TextureTypes';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/TextureTypes.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/TextureTypes.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/TextureTypes.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/TextureTypes.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/TextureTypes.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/TextureTypes.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/TextureTypes.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/TextureTypes.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/TextureTypes.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/TextureTypes.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/TextureTypes.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/TextureTypes.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/TextureTypes.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/TextureTypes.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/TextureTypes.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/TextureTypes.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/TextureTypes.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/TextureTypes.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/TextureTypes.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/TextureTypes.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/TextureTypes.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/TextureTypes.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/TextureTypes.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/TextureTypes.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/TextureTypes.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/TextureTypes.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/TextureTypes.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/TextureTypes.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/TextureTypes.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/TextureTypes.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/TextureTypes.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/TextureTypes.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/TextureTypes.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/TextureTypes.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/TextureTypes.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/TextureTypes.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/TextureTypes.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/TextureTypes.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/TextureTypes.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/TextureTypes.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/TextureTypes.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/TextureTypes.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/TextureTypes.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/TextureTypes.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/TextureTypes.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/TextureTypes.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/TextureTypes.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/TextureTypes.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="Shaders.html">网格、材质、着色器和纹理</a></li>
+<li><a href="Textures.html">纹理</a></li>
+<li><a href="ImportingTextures.html">导入纹理</a></li>
+<li>纹理类型</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TextureImporter.html"></a></span><div class="tip">Texture Import Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-TextureImporterOverride.html"></a></span><div class="tip">特定于平台的覆盖的纹理压缩格式</div>
+</div>
+</div></div>
+<h1>纹理类型</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>通过<a href="class-TextureImporter.html">纹理导入器 (Texture Importer)</a> 可将不同类型的<a href="Textures.html">纹理</a>导入 Unity Editor。</p>
+
+<p>以下是纹理检视面板 (Texture Inspector) 窗口中可用于在 Unity 中配置各种纹理类型的属性。请向下滚动页面或从以下列表中选择，查看所需了解的纹理类型的详细信息。</p>
+
+<ul>
+<li><a href="#Default">Default</a></li>
+<li><a href="#NormalMap">Normal Map</a></li>
+<li><a href="#Editor">Editor GUI and Legacy</a></li>
+<li><a href="#Sprite">Sprite (2D and UI)</a></li>
+<li><a href="#Cursor">Cursor</a></li>
+<li><a href="#Cookie">Cookie</a></li>
+<li><a href="#Lightmap">Lightmap</a></li>
+<li><a href="#SingleChannel">Single Channel</a></li>
+</ul>
+
+<p><a name="Default"></a> </p>
+
+<h2>Default</h2>
+
+<p><strong>Default</strong> 是用于所有纹理的最常见纹理类型。此选项可用于访问大多数纹理导入属性。对于此纹理类型，还可以更改 <strong>Texture Shape</strong> 属性来定义<a href="class-TextureImporter.html#textureshape">纹理形状</a>。</p>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Default-0.png" alt="Default 纹理类型的设置">
+<figcaption>Default 纹理类型的设置</figcaption>
+</figure>
+
+<p>选择 <strong>Default</strong> 纹理类型时，可使用以下属性（单击链接可以获取有关每个属性的详细信息）：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>sRGB (Color Texture)</strong></td>
+	<td style="text-align:left;">启用此属性可指定将纹理存储在伽马空间中。<a href="class-TextureImporter.html#sRGB">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">指定如何生成纹理的 Alpha 通道。<a href="class-TextureImporter.html#AlphaSrc">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">如果指定的 Alpha 通道为透明度 (Transparency)，则启用此属性可扩充颜色并避免边缘上的过滤瑕疵。<a href="class-TextureImporter.html#AlphaTrans">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Remove Matte (PSD)</strong></td>
+	<td style="text-align:left;">对使用透明度（将彩色像素与白色像素混合）的 Photoshop 文件启用特殊处理。<a href="class-TextureImporter.html#Cursor">更多信息</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ignore PNG file gamma</strong></td>
+	<td style="text-align:left;">启用此属性可忽略 PNG 文件中的伽马 (Gamma) 特性。<a href="class-TextureImporter.html#PSD">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">如果纹理具有“非 2 的幂”(NPOT) 尺寸大小，此属性将定义导入时的缩放行为。<a href="class-TextureImporter.html#NPOT">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">启用此属性可以使用 <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>、<a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> 和其他 <a href="../ScriptReference/Texture2D.html">Texture2D</a> 方法从脚本访问纹理数据。<a href="class-TextureImporter.html#ReadWrite">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Virtual Texture Only</strong></td>
+	<td style="text-align:left;">启用此纹理可将纹理仅与纹理栈结合使用以实现虚拟纹理。<a href="class-TextureImporter.html#VTO">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Streaming Mip Maps</strong></td>
+	<td style="text-align:left;">启用此复选框可对该纹理使用<a href="TextureStreaming.html">纹理串流</a>。<a href="class-TextureImporter.html#Streaming">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">选中此复选框可允许生成 Mipmap。<a href="class-TextureImporter.html#GenerateMipMaps">更多信息</a>。<br><br>默认情况下会启用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">选择纹理平铺时的行为方式。<a href="class-TextureImporter.html#WrapMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤。<a href="class-TextureImporter.html#FilterMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。<a href="class-TextureImporter.html#AnisoLevel">更多信息</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>此外，可以使用<a href="class-TextureImporter.html#platform">特定于平台的覆盖</a>面板来设置默认选项以及其针对特定平台的覆盖。</p>
+
+<p><a name="NormalMap"></a> </p>
+
+<h2>法线贴图</h2>
+
+<p>选择 <strong>Normal map</strong> 可将颜色通道转换为适合实时法线贴图的格式。对于此纹理类型，还可以更改 <strong>Texture Shape</strong> 属性来定义<a href="class-TextureImporter.html#textureshape">纹理形状</a>。</p>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-NormalMap-1.png" alt="Normal map 纹理类型的设置">
+<figcaption>Normal map 纹理类型的设置</figcaption>
+</figure>
+
+<p>选择 <strong>Normal map</strong> 纹理类型时，可以设置以下附加属性：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Create from Greyscale</strong></td>
+	<td style="text-align:left;">启用此属性可从灰度高度贴图创建法线贴图。启用此属性后，__Bumpiness__ 和 <strong>Filtering</strong> 选项变为可用状态。默认情况下会禁用此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Bumpiness</strong></td>
+	<td style="text-align:left;">控制凹凸的程度。较低的凹凸值意味着，即使高度贴图中的鲜明对比度也会转换为平缓的角度和凹凸。较高的值会产生夸张的凹凸和对凹凸的高对比度光照响应。仅当选中 <strong>Create from Greyscale</strong> 时才显示此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Filtering</strong></td>
+	<td style="text-align:left;">确定如何计算凹凸值：<br><br>- <strong>Smooth</strong> 使用标准（前向差异）算法来生成法线贴图。<br>- <strong>Sharp</strong> 生成比标准模式更锐利的法线贴图。这也称为 Sobel 过滤器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Ignore PNG file gamma</strong></td>
+	<td style="text-align:left;">启用此属性可忽略 PNG 文件中的伽马 (Gamma) 特性。<a href="class-TextureImporter.html#PSD">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">如果纹理具有“非 2 的幂”(NPOT) 尺寸大小，此属性将定义导入时的缩放行为。<a href="class-TextureImporter.html#NPOT">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">启用此属性可以使用 <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>、<a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> 和其他 <a href="../ScriptReference/Texture2D.html">Texture2D</a> 方法从脚本访问纹理数据。<a href="class-TextureImporter.html#ReadWrite">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Virtual Texture Only</strong></td>
+	<td style="text-align:left;">启用此纹理可将纹理仅与纹理栈结合使用以实现虚拟纹理。<a href="class-TextureImporter.html#VTO">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Streaming Mip Maps</strong></td>
+	<td style="text-align:left;">启用此复选框可对该纹理使用<a href="TextureStreaming.html">纹理串流</a>。<a href="class-TextureImporter.html#Streaming">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">选中此复选框可允许生成 Mipmap。<a href="class-TextureImporter.html#GenerateMipMaps">更多信息</a>。<br><br>默认情况下会启用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">选择纹理平铺时的行为方式。<a href="class-TextureImporter.html#WrapMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤。<a href="class-TextureImporter.html#FilterMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。<a href="class-TextureImporter.html#AnisoLevel">更多信息</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>此外，可以使用<a href="class-TextureImporter.html#platform">特定于平台的覆盖</a>面板来设置默认选项以及其针对特定平台的覆盖。</p>
+
+<p><a name="Editor"></a> </p>
+
+<h2>Editor GUI and Legacy GUI</h2>
+
+<p>如果要在任何 HUD 或 GUI 控件上使用纹理，请选择 <strong>Editor GUI and Legacy GUI</strong>。对于此纹理类型，__Texture Shape__ 属性始终设置为 <strong>2D</strong>。有关更多信息，请参阅<a href="class-TextureImporter.html#textureshape">纹理形状</a>的文档。</p>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Editor-2.png" alt="Editor GUI and Legacy GUI 纹理类型的设置">
+<figcaption>Editor GUI and Legacy GUI 纹理类型的设置</figcaption>
+</figure>
+
+<p>选择 <strong>Editor GUI and Legacy GUI</strong> 纹理类型时，可以设置以下附加属性：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">指定如何生成纹理的 Alpha 通道。<a href="class-TextureImporter.html#AlphaSrc">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">如果指定的 Alpha 通道为透明度 (Transparency)，则启用此属性可扩充颜色并避免边缘上的过滤瑕疵。<a href="class-TextureImporter.html#AlphaTrans">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Remove Matte (PSD)</strong></td>
+	<td style="text-align:left;">对使用透明度（将彩色像素与白色像素混合）的 Photoshop 文件启用特殊处理。<a href="class-TextureImporter.html#Cursor">更多信息</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ignore PNG file gamma</strong></td>
+	<td style="text-align:left;">启用此属性可忽略 PNG 文件中的伽马 (Gamma) 特性。<a href="class-TextureImporter.html#PSD">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">如果纹理具有“非 2 的幂”(NPOT) 尺寸大小，此属性将定义导入时的缩放行为。<a href="class-TextureImporter.html#NPOT">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">启用此属性可以使用 <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>、<a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> 和其他 <a href="../ScriptReference/Texture2D.html">Texture2D</a> 方法从脚本访问纹理数据。<a href="class-TextureImporter.html#ReadWrite">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">选中此复选框可允许生成 Mipmap。<a href="class-TextureImporter.html#GenerateMipMaps">更多信息</a>。<br><br>默认情况下会禁用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">选择纹理平铺时的行为方式。<a href="class-TextureImporter.html#WrapMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤。<a href="class-TextureImporter.html#FilterMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。<a href="class-TextureImporter.html#AnisoLevel">更多信息</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>此外，可以使用<a href="class-TextureImporter.html#platform">特定于平台的覆盖</a>面板来设置默认选项以及其针对特定平台的覆盖。</p>
+
+<p><a name="Sprite"></a> </p>
+
+<h2>Sprite (2D and UI)</h2>
+
+<p>如果要在 2D 游戏中使用该纹理作为<a href="Sprites.html">精灵</a>，请选择 <strong>Sprite (2D and UI)</strong>。对于此纹理类型，__Texture Shape__ 属性始终设置为 <strong>2D</strong>。有关更多信息，请参阅<a href="class-TextureImporter.html#textureshape">纹理形状</a>的文档。</p>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Sprite-3.png" alt="Sprite (2D and UI) 纹理类型的设置">
+<figcaption>Sprite (2D and UI) 纹理类型的设置</figcaption>
+</figure>
+
+<p>选择 <strong>Sprite (2D and UI)</strong> 纹理类型时，可以设置以下附加属性：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="SpriteMode"></a><strong>Sprite Mode</strong>
+</td>
+	<td style="text-align:left;">指定从图像中提取精灵图形的方式。此选项的默认设置为 <strong>Single</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Single</strong></td>
+	<td style="text-align:left;">按原样使用精灵图像。您可以在 <a href="SpriteEditor.html">Sprite Editor</a> 中剪辑和编辑图像以进一步优化图像，但是 Unity 会将从导入纹理生成的精灵视为单个资源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Multiple</strong></td>
+	<td style="text-align:left;">如果您的图像在同一图像中有多个元素，请选择此值。然后，可以在 <a href="SpriteEditor.html">Sprite Editor</a> 中定义元素的位置，以便 Unity 知道如何将图像拆分为不同的子资源。例如，可从具有多个姿势的单个图集创建动画帧，从单个瓦片图集创建<a href="Tilemap-TileAsset.html">瓦片</a>，或创建角色的不同部位。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Polygon</strong></td>
+	<td style="text-align:left;">选择此值可根据 Sprite Editor 的 <a href="SpriteOutlineEditor.html">Sprite Custom Outline</a> 中定义的网格来剪辑精灵纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Packing Tag</strong></td>
+	<td style="text-align:left;">（按名称）指定要将此纹理打包到的精灵图集。仅当项目中已启用 <a href="SpritePacker.html">Legacy Sprite Packer</a> 时，此属性才可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Pixels Per Unity</strong></td>
+	<td style="text-align:left;">精灵图像中对应于世界空间一个距离单位的宽度/高度像素数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Mesh Type</strong></td>
+	<td style="text-align:left;">定义您希望 Unity 为精灵生成的网格类型。此选项的默认值为 <strong>Tight</strong>。<br><br><strong>注意：</strong>只有 <strong>Single</strong> 和 <strong>Multiple</strong> <a href="#SpriteMode">精灵模式</a>才能使用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Full Rect</strong></td>
+	<td style="text-align:left;">选择此值可创建一个四边形，从而将精灵映射到四边形上。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Tight</strong></td>
+	<td style="text-align:left;">选择此值可基于像素 Alpha 值来生成网格。Unity 生成的网格通常贴合精灵的形状。<br><br><strong>注意：</strong>任何小于 32x32 的精灵都使用 <strong>Full Rect__，即使指定了 </strong>Tight__ 也是如此。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Extrude Edges</strong></td>
+	<td style="text-align:left;">使用滑动条确定在生成的网格中的精灵周围留出的区域大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Pivot</strong></td>
+	<td style="text-align:left;">精灵本地坐标系所在的图像中的位置。选择预设选项之一，或者选择 <strong>Custom</strong> 在 <strong>X</strong> 和 <strong>Y</strong> 轴中设置自定义的轴心位置。<br><br><strong>注意：</strong>只有 <strong>Single</strong> <a href="#SpriteMode">精灵模式</a>才能使用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Generate Physics Shape</strong></td>
+	<td style="text-align:left;">启用此属性后，如果尚未为此精灵定义 <a href="CustomPhysicsShape.html">Custom Physics Shape</a>，Unity 会从精灵的轮廓生成默认的物理性状。<br><br><strong>注意：</strong>只有 <strong>Single</strong> 和 <strong>Multiple</strong> <a href="#SpriteMode">精灵模式</a>才能使用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Sprite Editor</strong></td>
+	<td style="text-align:left;">单击此按钮可定义您希望 Unity 如何分离具有<a href="#SpriteMode">多个</a>元素的图像上的元素（以创建子资源）或优化<a href="#SpriteMode">多边形</a>的形状、大小和轴心位置。<br><br><strong>注意：</strong>需要安装 <a href="https://docs.unity3d.com/Packages/com.unity.2d.sprite@latest">2D Sprite</a> 包才能使用 <a href="SpriteEditor.html">Sprite Editor</a>。有关如何在 Unity Package Manager 中查找和安装包的信息，请参阅<a href="upm-ui-find.html">查找包</a>和<a href="upm-ui-install.html">从注册表中安装</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>sRGB (Color Texture)</strong></td>
+	<td style="text-align:left;">启用此属性可指定将纹理存储在伽马空间中。<a href="class-TextureImporter.html#sRGB">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">指定如何生成纹理的 Alpha 通道。<a href="class-TextureImporter.html#AlphaSrc">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">如果指定的 Alpha 通道为透明度 (Transparency)，则启用此属性可扩充颜色并避免边缘上的过滤瑕疵。<a href="class-TextureImporter.html#AlphaTrans">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Remove Matte (PSD)</strong></td>
+	<td style="text-align:left;">对使用透明度（将彩色像素与白色像素混合）的 Photoshop 文件启用特殊处理。<a href="class-TextureImporter.html#Cursor">更多信息</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Ignore PNG file gamma</strong></td>
+	<td style="text-align:left;">启用此属性可忽略 PNG 文件中的伽马 (Gamma) 特性。<a href="class-TextureImporter.html#PSD">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">启用此属性可以使用 <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>、<a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> 和其他 <a href="../ScriptReference/Texture2D.html">Texture2D</a> 方法从脚本访问纹理数据。<a href="class-TextureImporter.html#ReadWrite">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">选中此复选框可允许生成 Mipmap。<a href="class-TextureImporter.html#GenerateMipMaps">更多信息</a>。<br><br>默认情况下会禁用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">选择纹理平铺时的行为方式。<a href="class-TextureImporter.html#WrapMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤。<a href="class-TextureImporter.html#FilterMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。<a href="class-TextureImporter.html#AnisoLevel">更多信息</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>此外，可以使用<a href="class-TextureImporter.html#platform">特定于平台的覆盖</a>面板来设置默认选项以及其针对特定平台的覆盖。</p>
+
+<p><a name="Cursor"></a> </p>
+
+<h2>Cursor</h2>
+
+<p>选择 <strong>Cursor</strong> 可将纹理用作自定义光标。对于此纹理类型，__Texture Shape__ 属性始终设置为 <strong>2D</strong>。有关更多信息，请参阅<a href="class-TextureImporter.html#textureshape">纹理形状</a>的文档。</p>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Cursor-4.png" alt="Cursor 纹理类型的设置">
+<figcaption>Cursor 纹理类型的设置</figcaption>
+</figure>
+
+<p>选择 <strong>Cursor</strong> 纹理类型时，可以设置以下附加属性：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">指定如何生成纹理的 Alpha 通道。<a href="class-TextureImporter.html#AlphaSrc">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">如果指定的 Alpha 通道为透明度 (Transparency)，则启用此属性可扩充颜色并避免边缘上的过滤瑕疵。<a href="class-TextureImporter.html#AlphaTrans">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Remove Matte (PSD)</strong></td>
+	<td style="text-align:left;">对使用透明度（将彩色像素与白色像素混合）的 Photoshop 文件启用特殊处理。<a href="class-TextureImporter.html#Cursor">更多信息</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ignore PNG file gamma</strong></td>
+	<td style="text-align:left;">启用此属性可忽略 PNG 文件中的伽马 (Gamma) 特性。<a href="class-TextureImporter.html#PSD">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">如果纹理具有“非 2 的幂”(NPOT) 尺寸大小，此属性将定义导入时的缩放行为。<a href="class-TextureImporter.html#NPOT">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">启用此属性可以使用 <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>、<a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> 和其他 <a href="../ScriptReference/Texture2D.html">Texture2D</a> 方法从脚本访问纹理数据。<a href="class-TextureImporter.html#ReadWrite">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">选中此复选框可允许生成 Mipmap。<a href="class-TextureImporter.html#GenerateMipMaps">更多信息</a>。<br><br>默认情况下会禁用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">选择纹理平铺时的行为方式。<a href="class-TextureImporter.html#WrapMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤。<a href="class-TextureImporter.html#FilterMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。<a href="class-TextureImporter.html#AnisoLevel">更多信息</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>此外，可以使用<a href="class-TextureImporter.html#platform">特定于平台的覆盖</a>面板来设置默认选项以及其针对特定平台的覆盖。</p>
+
+<p><a name="Cookie"></a> </p>
+
+<h2>Cookie</h2>
+
+<p>选择 <strong>Cookie</strong> 可通过内置渲染管线中用于剪影的基本参数来设置纹理。对于此纹理类型，Unity 基于所选的 <strong>Light Type</strong> 选项来自动更新 <a href="class-TextureImporter.html#textureshape">Texture Shapes</a> 属性：</p>
+
+<ul>
+<li>
+<strong>Directional</strong> 和 <strong>Spotlight</strong> 光源剪影始终为 2D 纹理（__2D__ 形状类型）。</li>
+<li>
+<strong>Point</strong> 光源剪影必须为立方体贴图（__Cube__ 形状类型）。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Cookie-5.png" alt="Cookie 纹理类型的设置">
+<figcaption>Cookie 纹理类型的设置</figcaption>
+</figure>
+
+<p>选择 <strong>Cookie</strong> 纹理类型时，可以设置以下附加属性：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Light Type</strong></td>
+	<td style="text-align:left;">定义将剪影应用于的光源类型。<br><br>请注意，必须创建具有适当布局的源纹理：点光源的剪影必须布置为立方体贴图，而方向光和聚光灯的剪影必须布置成常规 2D 纹理。<br><br>如果将剪影应用于方向光，则可以使用为方向光配置的剪影或为聚光灯配置的剪影。如果方向光使用了为方向光配置的剪影，则会在整个场景中以平铺模式重复剪影。如果方向光使用了为聚光灯配置的剪影，则会在“光束”的直接路径中仅将剪影投影一次。只有在此情况下，方向光的位置才很重要。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Spotlight</strong></td>
+	<td style="text-align:left;">对于此类型的光源，您希望剪影纹理的边缘为纯黑色以获得适当效果，因此 Unity 默认将 <a href="class-TextureImporter.html#WrapMode">Wrap Mode</a> 设置为 <strong>Clamp</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Directional</strong></td>
+	<td style="text-align:left;">对于此类型的光源，此纹理将会平铺，因此 Unity 默认将 <a href="class-TextureImporter.html#WrapMode">Wrap Mode</a> 设置为 <strong>Repeat</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Point</strong></td>
+	<td style="text-align:left;">选择此类型的光源时，还可以进行特定于<a href="class-TextureImporter.html#textureshape">立方体形状</a>的自定义设置</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">指定如何生成纹理的 Alpha 通道。<a href="class-TextureImporter.html#AlphaSrc">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">如果指定的 Alpha 通道为透明度 (Transparency)，则启用此属性可扩充颜色并避免边缘上的过滤瑕疵。<a href="class-TextureImporter.html#AlphaTrans">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Remove Matte (PSD)</strong></td>
+	<td style="text-align:left;">对使用透明度（将彩色像素与白色像素混合）的 Photoshop 文件启用特殊处理。<a href="class-TextureImporter.html#Cursor">更多信息</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Ignore PNG file gamma</strong></td>
+	<td style="text-align:left;">启用此属性可忽略 PNG 文件中的伽马 (Gamma) 特性。<a href="class-TextureImporter.html#PSD">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">如果纹理具有“非 2 的幂”(NPOT) 尺寸大小，此属性将定义导入时的缩放行为。<a href="class-TextureImporter.html#NPOT">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">启用此属性可以使用 <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>、<a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> 和其他 <a href="../ScriptReference/Texture2D.html">Texture2D</a> 方法从脚本访问纹理数据。<a href="class-TextureImporter.html#ReadWrite">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">选中此复选框可允许生成 Mipmap。<a href="class-TextureImporter.html#GenerateMipMaps">更多信息</a>。<br><br>切换到 <strong>Cookie</strong> 纹理类型时，此属性不会改变。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">选择纹理平铺时的行为方式。<a href="class-TextureImporter.html#WrapMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤。<a href="class-TextureImporter.html#FilterMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。<a href="class-TextureImporter.html#AnisoLevel">更多信息</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>此外，可以使用<a href="class-TextureImporter.html#platform">特定于平台的覆盖</a>面板来设置默认选项以及其针对特定平台的覆盖。</p>
+
+<p><a name="Lightmap"></a> </p>
+
+<h2>Lightmap</h2>
+
+<p>如果要将纹理用作<a href="class-LightmapParameters.html">光照贴图</a>，请选择 <strong>Lightmap</strong>。此选项允许将纹理编码为特定格式（RGBM 或 dLDR，具体取决于平台）并通过后期处理步骤对纹理数据进行处理（推拉式扩张通道）。对于此纹理类型，__Texture Shape__ 属性始终设置为 <strong>2D</strong>。有关更多信息，请参阅<a href="class-TextureImporter.html#textureshape">纹理形状</a>的文档。</p>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Lightmap-6.png" alt="Lightmap 纹理类型的设置">
+<figcaption>Lightmap 纹理类型的设置</figcaption>
+</figure>
+
+<p>选择 <strong>Lightmap</strong> 纹理类型时，可以设置以下附加属性：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Ignore PNG file gamma</strong></td>
+	<td style="text-align:left;">启用此属性可忽略 PNG 文件中的伽马 (Gamma) 特性。<a href="class-TextureImporter.html#PSD">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">如果纹理具有“非 2 的幂”(NPOT) 尺寸大小，此属性将定义导入时的缩放行为。<a href="class-TextureImporter.html#NPOT">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">启用此属性可以使用 <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>、<a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> 和其他 <a href="../ScriptReference/Texture2D.html">Texture2D</a> 方法从脚本访问纹理数据。<a href="class-TextureImporter.html#ReadWrite">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Streaming Mip Maps</strong></td>
+	<td style="text-align:left;">启用此复选框可对该纹理使用<a href="TextureStreaming.html">纹理串流</a>。<a href="class-TextureImporter.html#Streaming">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">选中此复选框可允许生成 Mipmap。<a href="class-TextureImporter.html#GenerateMipMaps">更多信息</a>。<br><br>切换到 <strong>Lightmap</strong> 纹理类型时，此属性不会改变。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">选择纹理平铺时的行为方式。<a href="class-TextureImporter.html#WrapMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤。<a href="class-TextureImporter.html#FilterMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。<a href="class-TextureImporter.html#AnisoLevel">更多信息</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>此外，可以使用<a href="class-TextureImporter.html#platform">特定于平台的覆盖</a>面板来设置默认选项以及其针对特定平台的覆盖。</p>
+
+<p><a name="SingleChannel"></a> </p>
+
+<h2>Single Channel</h2>
+
+<p>如果在纹理中只需要一个通道，请选择 <strong>Single Channel</strong>。对于此纹理类型，还可以更改 <strong>Texture Shape</strong> 属性来定义<a href="class-TextureImporter.html#textureshape">纹理形状</a>。</p>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-SingleChannel-7.png" alt="Single Channel 纹理类型的设置">
+<figcaption>Single Channel 纹理类型的设置</figcaption>
+</figure>
+
+<p>选择 <strong>Single Channel</strong> 纹理类型时，可以设置以下附加属性：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="Channel"></a><strong>Channel</strong>
+</td>
+	<td style="text-align:left;">指定您希望 Unity 将纹理处理为 <strong>Alpha</strong> 还是 <strong>Red</strong> 通道。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Alpha</strong></td>
+	<td style="text-align:left;">使用 Alpha 通道。此设置不允许进行压缩。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Red</strong></td>
+	<td style="text-align:left;">使用红色组件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">指定如何生成纹理的 Alpha 通道。<a href="class-TextureImporter.html#AlphaSrc">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">如果指定的 Alpha 通道为透明度 (Transparency)，则启用此属性可扩充颜色并避免边缘上的过滤瑕疵。<a href="class-TextureImporter.html#AlphaTrans">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Remove Matte (PSD)</strong></td>
+	<td style="text-align:left;">对使用透明度（将彩色像素与白色像素混合）的 Photoshop 文件启用特殊处理。<a href="class-TextureImporter.html#Cursor">更多信息</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Ignore PNG file gamma</strong></td>
+	<td style="text-align:left;">启用此属性可忽略 PNG 文件中的伽马 (Gamma) 特性。<a href="class-TextureImporter.html#PSD">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">如果纹理具有“非 2 的幂”(NPOT) 尺寸大小，此属性将定义导入时的缩放行为。<a href="class-TextureImporter.html#NPOT">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">启用此属性可以使用 <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>、<a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> 和其他 <a href="../ScriptReference/Texture2D.html">Texture2D</a> 方法从脚本访问纹理数据。<a href="class-TextureImporter.html#ReadWrite">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Streaming Mip Maps</strong></td>
+	<td style="text-align:left;">启用此复选框可对该纹理使用<a href="TextureStreaming.html">纹理串流</a>。<a href="class-TextureImporter.html#Streaming">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">选中此复选框可允许生成 Mipmap。<a href="class-TextureImporter.html#GenerateMipMaps">更多信息</a>。<br><br>切换到 <strong>Single Channel</strong> 纹理类型时，此属性不会改变。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">选择纹理平铺时的行为方式。<a href="class-TextureImporter.html#WrapMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤。<a href="class-TextureImporter.html#FilterMode">更多信息</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。<a href="class-TextureImporter.html#AnisoLevel">更多信息</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>此外，可以使用<a href="class-TextureImporter.html#platform">特定于平台的覆盖</a>面板来设置默认选项以及其针对特定平台的覆盖。</p>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TextureImporter.html"></a></span><div class="tip">Texture Import Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-TextureImporterOverride.html"></a></span><div class="tip">特定于平台的覆盖的纹理压缩格式</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

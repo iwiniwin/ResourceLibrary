@@ -1,0 +1,273 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="适用于 Android 的原生 (C++) 插件 - Unity 手册">
+<title>适用于 Android 的原生 (C++) 插件 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/AndroidNativePlugins.png">
+<meta name="description" content="Unity 支持用 C/C ++ 编写并封装在共享库 (.so) 或静态库 (.a) 中的 Android 原生插件。使用 IL2CPP 脚本后端时，可以使用 C/C++ 源文件作为插件，Unity 会将这些文件与 IL2CPP 生成的文件一起编译。这包括扩展名为 .c、.cc、.cpp 和 .h 的所有 C/C++ 源文件。">
+<meta property="og:description" content="Unity 支持用 C/C ++ 编写并封装在共享库 (.so) 或静态库 (.a) 中的 Android 原生插件。使用 IL2CPP 脚本后端时，可以使用 C/C++ 源文件作为插件，Unity 会将这些文件与 IL2CPP 生成的文件一起编译。这包括扩展名为 .c、.cc、.cpp 和 .h 的所有 C/C++ 源文件。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'AndroidNativePlugins';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/AndroidNativePlugins.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/AndroidNativePlugins.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/AndroidNativePlugins.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/AndroidNativePlugins.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/AndroidNativePlugins.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/AndroidNativePlugins.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/AndroidNativePlugins.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/AndroidNativePlugins.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AndroidNativePlugins.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AndroidNativePlugins.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AndroidNativePlugins.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AndroidNativePlugins.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AndroidNativePlugins.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AndroidNativePlugins.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AndroidNativePlugins.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AndroidNativePlugins.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AndroidNativePlugins.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AndroidNativePlugins.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AndroidNativePlugins.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AndroidNativePlugins.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AndroidNativePlugins.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AndroidNativePlugins.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AndroidNativePlugins.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AndroidNativePlugins.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AndroidNativePlugins.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/AndroidNativePlugins.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/AndroidNativePlugins.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/AndroidNativePlugins.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/AndroidNativePlugins.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/AndroidNativePlugins.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/AndroidNativePlugins.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AndroidNativePlugins.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AndroidNativePlugins.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AndroidNativePlugins.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AndroidNativePlugins.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AndroidNativePlugins.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AndroidNativePlugins.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AndroidNativePlugins.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AndroidNativePlugins.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AndroidNativePlugins.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AndroidNativePlugins.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AndroidNativePlugins.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AndroidNativePlugins.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AndroidNativePlugins.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AndroidNativePlugins.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AndroidNativePlugins.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AndroidNativePlugins.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AndroidNativePlugins.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="PluginsForAndroid.html">构建和使用适用于 Android 的插件</a></li>
+<li>适用于 Android 的原生 (C++) 插件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AndroidUnityPlayerActivity.html"></a></span><div class="tip">扩展 UnityPlayerActivity Java 代码</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AndroidJavaSourcePlugins.html"></a></span><div class="tip">使用 Java 或 Kotlin 源文件作为插件</div>
+</div>
+</div></div>
+<h1>适用于 Android 的原生 (C++) 插件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 支持用 C/C ++ 编写并封装在共享库 (.so) 或静态库 (.a) 中的 Android 原生插件。使用 IL2CPP 脚本后端时，可以使用 C/C++ 源文件作为插件，Unity 会将这些文件与 IL2CPP 生成的文件一起编译。这包括扩展名为 .c、.cc、.cpp 和 .h 的所有 C/C++ 源文件。</p>
+
+<p>要构建适用于 Android 的 C++ 插件，请使用 <a href="https://developer.android.com/ndk/index.html">Android NDK</a> 并熟悉构建共享库所需的步骤。静态库也是如此。</p>
+
+<p>如果使用 C++ 来实现该插件，必须确保使用 C 链接来声明方法以免发生<a href="http://en.wikipedia.org/wiki/Name_mangling">名称错用问题</a>。默认情况下，只有插件中具有 .c 文件扩展名的 C 源文件才具有 C 链接（不是 C++）。</p>
+
+<pre><code>extern "C" {
+  float Foopluginmethod ();
+}
+</code></pre>
+
+<p>构建库后，将输出的 .so 文件复制到 Unity 项目中。在 Inspector 中，将 .so 文件标记为与 Android 兼容，并在下拉框中设置所需的 CPU 架构：</p>
+
+<figure>
+<img src="../uploads/Main/AndroidNativePlugins.png" alt="Inspector 窗口中显示的原生 (C++) 插件导入设置">
+<figcaption>Inspector 窗口中显示的原生 (C++) 插件导入设置</figcaption>
+</figure>
+
+<p>要从 C# 脚本调用原生插件中的方法，请使用以下代码：</p>
+
+<pre><code>[DllImport ("pluginName")]
+private static extern float Foopluginmethod();
+</code></pre>
+
+<p>请注意，pluginName 不应包含文件名的前缀（“lib”）和扩展名（“.so”）。建议使用额外的 C# 代码层包装所有的原生插件方法调用。此代码将检查 <a href="../ScriptReference/Application-platform.html">Application.platform</a> 并仅当应用程序在实际设备上运行时才调用本机方法；在 Editor 中运行时，将从 C# 代码返回虚拟值。请使用<a href="https://docs.unity3d.com/Manual/PlatformDependentCompilation.html">平台定义</a>来控制依赖于平台的代码编译。</p>
+
+<p>在使用 C/C++ 源文件作为插件时，可以用相同的方式从 C# 调用这些文件，不同之处是插件名称使用 <code>__Internal</code>，例如：</p>
+
+<pre><code>[DllImport ("__Internal")]
+private static extern float Foopluginmethod();
+</code></pre>
+
+<h2>原生 (C++) 插件示例</h2>
+
+<p><a href="../uploads/Examples/AndroidNativePlugin.zip">AndroidNativePlugin.unitypackage</a> zip 文件包含一个分发为 Unity 包的原生代码插件的简单示例。</p>
+
+<p>该示例演示如何从 Unity 应用程序调用 C++ 代码。该包中包含的一个场景显示了由原生插件计算的两个值之和。要编译该插件，必须安装 <a href="https://developer.android.com/ndk/index.html">Android NDK</a>。</p>
+
+<p>要安装该示例，请执行以下操作：</p>
+
+<p>1.下载 zip 文件。
+2.解压缩 <em>AndroidNativePlugin.unitypackage</em> 文件。
+3.打开 Unity Editor。
+4.创建一个新的项目。
+5.在新项目中，单击 <strong>Assets</strong> &gt; <strong>Import Package</strong> &gt; <strong>Custom Package</strong>。
+6.在 <strong>Import Package</strong> 文件对话框中，导航到解压缩文件的位置，然后选择该文件。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–12–21 页面已修订</span></li>
+<li><span class="page-edit">2018–03–10 页面已发布</span></li>
+<li><span class="page-history">5.5 版中的更新功能</span></li>
+<li><span class="page-history">在 <a href="https://docs.unity3d.com/2018.2/Documentation/Manual/30_search.html?q=newin20182">2018.2</a> 版本中添加了使用 C++ 源文件和静态库作为 Android 插件的支持 <span class="search-words">NewIn20182</span></span></li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AndroidUnityPlayerActivity.html"></a></span><div class="tip">扩展 UnityPlayerActivity Java 代码</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AndroidJavaSourcePlugins.html"></a></span><div class="tip">使用 Java 或 Kotlin 源文件作为插件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

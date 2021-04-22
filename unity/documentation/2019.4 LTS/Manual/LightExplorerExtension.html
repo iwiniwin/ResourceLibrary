@@ -1,0 +1,328 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Light Explorer 扩展 - Unity 手册">
+<title>Light Explorer 扩展 - Unity 手册</title>
+<meta name="description" content="通过 Light Explorer 扩展，可以创建自定义版本的 Light Explorer 窗口。可以将这种扩展用于调整 Light Explorer 窗口的功能，以便处理可编程渲染管线 (SRP) 或者高清渲染管线的自定义光源。">
+<meta property="og:description" content="通过 Light Explorer 扩展，可以创建自定义版本的 Light Explorer 窗口。可以将这种扩展用于调整 Light Explorer 窗口的功能，以便处理可编程渲染管线 (SRP) 或者高清渲染管线的自定义光源。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'LightExplorerExtension';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/LightExplorerExtension.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/LightExplorerExtension.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/LightExplorerExtension.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/LightExplorerExtension.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/LightExplorerExtension.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/LightExplorerExtension.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/LightExplorerExtension.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/LightExplorerExtension.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LightExplorerExtension.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/LightExplorerExtension.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LightExplorerExtension.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LightExplorerExtension.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LightExplorerExtension.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/LightExplorerExtension.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/LightExplorerExtension.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/LightExplorerExtension.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/LightExplorerExtension.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/LightExplorerExtension.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/LightExplorerExtension.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/LightExplorerExtension.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/LightExplorerExtension.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/LightExplorerExtension.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/LightExplorerExtension.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/LightExplorerExtension.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/LightExplorerExtension.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/LightExplorerExtension.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/LightExplorerExtension.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/LightExplorerExtension.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/LightExplorerExtension.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/LightExplorerExtension.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/LightExplorerExtension.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LightExplorerExtension.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/LightExplorerExtension.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LightExplorerExtension.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LightExplorerExtension.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LightExplorerExtension.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/LightExplorerExtension.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/LightExplorerExtension.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/LightExplorerExtension.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/LightExplorerExtension.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/LightExplorerExtension.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/LightExplorerExtension.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/LightExplorerExtension.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/LightExplorerExtension.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/LightExplorerExtension.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/LightExplorerExtension.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/LightExplorerExtension.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/LightExplorerExtension.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="LightingExplorer.html">Light Explorer 窗口</a></li>
+<li>Light Explorer 扩展</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightingExplorer.html"></a></span><div class="tip">Light Explorer 窗口</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Lightmappers.html"></a></span><div class="tip">光照贴图</div>
+</div>
+</div></div>
+<h1>Light Explorer 扩展</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>通过 Light Explorer 扩展，可以创建自定义版本的 <a href="LightingExplorer.html">Light Explorer 窗口</a>。可以将这种扩展用于调整 Light Explorer 窗口的功能，以便处理可编程渲染管线 (SRP) 或者<a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/index.html?preview=1">高清渲染管线</a>的自定义<a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/index.html?subfolder=/manual/Light-Component.html?">光源</a>。</p>
+
+<p>在 Light Explorer 窗口中，可以看到场景中的所有<a href="class-Light.html">光源</a>并可编辑它们的属性。使用此扩展，可以通过多种方式扩展当前窗口。例如，可以执行以下操作：</p>
+
+<ul>
+<li>更改选项卡（从简单地更改选项卡名称到添加您自己的自定义选项卡）以显示不同类型的游戏对象的列表。例如，如果要显示自己的自定义反射探针的属性信息，这将很有用。</li>
+<li>更改选项卡上的列（同样从更改名称到添加您自己的自定义列）。如果要查看其他光源属性，添加列很有用。</li>
+</ul>
+
+<h2>扩展 Light Explorer</h2>
+
+<p>要扩展 Light Explorer，可以继承自：</p>
+
+<ul>
+<li>
+<code>ILightingExplorerExtension</code> 接口，然后覆盖 <code>GetContentTabs</code> 方法。</li>
+<li>
+<code>DefaultLightingExplorerExtension</code> 类（继承自 <code>ILightingExplorerExtension</code>）。此类提供窗口中已经存在的所有内容。如果只希望覆盖选项卡的数量、每个选项卡的标题或要显示的光源，请使用此选项。要了解如何以这种方式扩展 Light Explorer，请参阅下面的示例。</li>
+</ul>
+
+<h3>示例代码</h3>
+
+<p>本节中的示例展示了如何扩展默认的 Light Explorer 类以仅显示光源的名称 (Name) 列，以及如何更改选项卡的数量。在您自己的实现中，可以根据需要覆盖任意数量的方法。</p>
+
+<p>以下示例显示了光源的名称列：</p>
+
+<pre><code>namespace UnityEditor
+{
+    [LightingExplorerExtensionAttribute(typeof(SomeRenderPipelineAsset))]
+    public class SimpleExplorerExtension : DefaultLightingExplorerExtension
+    {
+        protected override LightingExplorerTableColumn[] GetLightColumns()
+        {
+            return new[]
+            {
+                new LightingExplorerTableColumn(LightingExplorerTableColumn.DataType.Name, Styles.Name, null, 200), // 0：名称
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>以下示例仅显示光源的名称和启用状态，并隐藏 Emissive Materials 选项卡（仅显示 3 个选项卡，而不是 4 个）</p>
+
+<pre><code>namespace UnityEditor
+{
+    [LightingExplorerExtensionAttribute(typeof(SomeOtherRenderPipelineAsset))]
+    public class ComplexLightExplorerExtension : DefaultLightingExplorerExtension
+    {
+       protected virtual UnityEngine.Object[] GetLights()
+        {
+            return Resources.FindObjectsOfTypeAll&lt;Light&gt;();
+        }
+
+        protected virtual LightingExplorerTableColumn[] GetLightColumns()
+        {
+            return new[]
+            {
+                new LightingExplorerTableColumn(LightingExplorerTableColumn.DataType.Name, Styles.Name, null, 200), // 0：名称
+                new LightingExplorerTableColumn(LightingExplorerTableColumn.DataType.Checkbox, Styles.On, "m_Enabled", 25), // 1：已启用
+            {
+        {
+
+        public virtual LightingExplorerTab[] GetContentTabs()
+        {
+            return new[]
+            {
+                new LightingExplorerTab("Light Table", GetLights, GetLightColumns),
+                new LightingExplorerTab("Reflection Probes", GetReflectionProbes, GetReflectionProbeColumns),
+                new LightingExplorerTab("Light Probes", GetLightProbes, GetLightProbeColumns)            };
+        }
+    }
+}
+</code></pre>
+
+<h3>有用的类和方法</h3>
+
+<p>下面列出了可用于扩展 Light Explorer 的类和方法：</p>
+
+<p>ILightingExplorerExtension：</p>
+
+<pre><code>public virtual LightingExplorerTab[] GetContentTabs();
+public virtual void OnEnable() {}
+public virtual void OnDisable() {}
+</code></pre>
+
+<p>DefaultLightingExplorerExtension（继承自 ILightingExplorerExtension）：</p>
+
+<pre><code>public virtual LightingExplorerTab[] GetContentTabs();
+public virtual void OnEnable() {}
+public virtual void OnDisable() {}
+
+protected virtual UnityEngine.Object[] GetLights();
+protected virtual LightingExplorerTableColumn[] GetLightColumns();
+
+protected virtual UnityEngine.Object[] GetReflectionProbes();
+protected virtual LightingExplorerTableColumn[] GetReflectionProbeColumns();
+
+protected virtual UnityEngine.Object[] GetLightProbes();
+protected virtual LightingExplorerTableColumn[] GetLightProbeColumns();
+
+protected virtual UnityEngine.Object[] GetEmissives();
+protected virtual LightingExplorerTableColumn[] GetEmissivesColumns();
+</code></pre>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2019–08–13 页面已发布</span></li>
+<li><span class="page-history">在 <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> 中添加了 Light Explorer 扩展 <span class="search-words">NewIn20183</span></span></li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightingExplorer.html"></a></span><div class="tip">Light Explorer 窗口</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Lightmappers.html"></a></span><div class="tip">光照贴图</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

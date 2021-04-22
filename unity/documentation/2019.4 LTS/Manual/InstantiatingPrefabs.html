@@ -1,0 +1,489 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="在运行时实例化预制件 - Unity 手册">
+<title>在运行时实例化预制件 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/PrefabDragIntoField.png">
+<meta name="description" content="想要在运行时实例化复杂的游戏对象或游戏对象的集合时，预制件非常方便。与使用代码从头开始创建游戏对象相比，使用代码实例化预制件有许多优点，因为您可以：">
+<meta property="og:description" content="想要在运行时实例化复杂的游戏对象或游戏对象的集合时，预制件非常方便。与使用代码从头开始创建游戏对象相比，使用代码实例化预制件有许多优点，因为您可以：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'InstantiatingPrefabs';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/InstantiatingPrefabs.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/InstantiatingPrefabs.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/InstantiatingPrefabs.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/InstantiatingPrefabs.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/InstantiatingPrefabs.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/InstantiatingPrefabs.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/InstantiatingPrefabs.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/InstantiatingPrefabs.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/InstantiatingPrefabs.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/InstantiatingPrefabs.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/InstantiatingPrefabs.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/InstantiatingPrefabs.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/InstantiatingPrefabs.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/InstantiatingPrefabs.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/InstantiatingPrefabs.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/InstantiatingPrefabs.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/InstantiatingPrefabs.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/InstantiatingPrefabs.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/InstantiatingPrefabs.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/InstantiatingPrefabs.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/InstantiatingPrefabs.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/InstantiatingPrefabs.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/InstantiatingPrefabs.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/InstantiatingPrefabs.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/InstantiatingPrefabs.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/InstantiatingPrefabs.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/InstantiatingPrefabs.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/InstantiatingPrefabs.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/InstantiatingPrefabs.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/InstantiatingPrefabs.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/InstantiatingPrefabs.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/InstantiatingPrefabs.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/InstantiatingPrefabs.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/InstantiatingPrefabs.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/InstantiatingPrefabs.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/InstantiatingPrefabs.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/InstantiatingPrefabs.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/InstantiatingPrefabs.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/InstantiatingPrefabs.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/InstantiatingPrefabs.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/InstantiatingPrefabs.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/InstantiatingPrefabs.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/InstantiatingPrefabs.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/InstantiatingPrefabs.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/InstantiatingPrefabs.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/InstantiatingPrefabs.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/InstantiatingPrefabs.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/InstantiatingPrefabs.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
+<li><a href="Prefabs.html">预制件</a></li>
+<li>在运行时实例化预制件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnpackingPrefabInstances.html"></a></span><div class="tip">解压缩预制件实例</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Transforms.html"></a></span><div class="tip">变换组件</div>
+</div>
+</div></div>
+<h1>在运行时实例化预制件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>想要在运行时实例化复杂的游戏对象或游戏对象的集合时，<a href="https://docs.unity3d.com/Manual/Prefabs.html">预制件</a>非常方便。与使用代码从头开始创建游戏对象相比，使用代码实例化预制件有许多优点，因为您可以：</p>
+
+<ul>
+<li><p>使用一行代码实例化一个预制件。从头开始创建等效的游戏对象需要更多的代码行。</p></li>
+<li><p>使用 <strong>Scene 视图、Hierarchy 窗口</strong>和 <strong>Inspector</strong> 快速轻松地设置、测试和修改预制件。</p></li>
+<li><p>无需更改代码即可更改所实例化的预制件。无需更改任何代码，即可将简单的火箭变成增压火箭。</p></li>
+</ul>
+
+<p><strong>注意</strong>：可以从以下页面下载一个包含所有示例的 Unity 项目：</p>
+
+<p><strong><a href="../uploads/Examples/InstantiatingPrefabsExamples.zip">InstantiatingPrefabsExamples.zip</a></strong></p>
+
+<h2>实例化预制件的基础知识</h2>
+
+<p>要在运行时实例化预制件，代码需要对该预制件的引用。要进行此应用，可以在代码中创建一个公共变量来保存预制件引用。代码中的公共变量在 Inspector 中显示为可分配的字段。然后，可以在 Inspector 中分配要使用的实际预制件。</p>
+
+<p>下面的脚本示例有一个公共变量<strong>“myPrefab”</strong>，这是对预制件的引用。该脚本在 <strong>Start()</strong> 方法中创建该预制件的实例。</p>
+
+<pre><code>using UnityEngine;
+public class InstantiationExample : MonoBehaviour 
+{
+    // 引用预制件。在 Inspector 中，将预制件拖动到该字段中。
+    public GameObject myPrefab;
+
+    // 该脚本将在游戏开始时简单地实例化预制件。
+    void Start()
+    {
+        // 实例化为位置 (0, 0, 0) 和零旋转。
+        Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+    }
+}
+</code></pre>
+
+<p>要使用此示例，请执行以下操作：</p>
+
+<ul>
+<li><p>在项目中创建一个新的 C# 脚本，并将其命名为“InstantiationExample”。</p></li>
+<li><p>将上面的脚本示例复制并粘贴到新脚本中，然后保存。</p></li>
+<li><p>使用<strong>GameObject &gt; Create Empty</strong> 菜单创建空游戏对象。</p></li>
+<li><p>通过将脚本拖动到空游戏对象上，将脚本作为一个组件添加到新的游戏对象。</p></li>
+<li><p><a href="CreatingPrefabs.html">创建任何预制件</a>，然后将其从 <strong>Project 窗口</strong>拖动到脚本组件的 <strong>My Prefab</strong> 字段中。</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/PrefabDragIntoField.png" alt="将一个预制件从 Project 窗口拖动到脚本组件的 My Prefab 字段中">
+<figcaption>将一个预制件从 Project 窗口拖动到脚本组件的 My Prefab 字段中</figcaption>
+</figure>
+
+<p>启动运行模式时，应该会看到预制件在场景中实例化为位置 (0, 0, 0)。</p>
+
+<p>只需将其他预制件拖到 Inspector 的 <strong>My Prefab</strong> 字段中，即可更改要进行实例化的预制件，而无需更改脚本。</p>
+
+<p>因为第一个示例非常简单，相比您自己手动将预制件自己放置到场景中，似乎并没有任何优势。但是，能够使用代码实例化预制件将实现强大的功能，可以在游戏或应用程序正在运行时动态创建游戏对象的复杂配置，如下文中的示例所示。</p>
+
+<h2>常见情况</h2>
+
+<p>为了说明在运行时实例化预制件的优势，下面介绍了预制件非常有用的几种基本情况：</p>
+
+<ul>
+<li><p>通过在不同位置（例如在网格或圆形结构中）多次复制单个预制件来构建一个结构。</p></li>
+<li><p>从发射器发射飞弹预制件。飞弹预制件可能是一个复杂的配置，其中包含<strong>网格</strong>、<strong>刚体</strong>、<strong>碰撞体</strong>、<strong>音频源</strong>、<strong>动态光源</strong>以及一个具有自己的轨迹<strong>粒子系统</strong>的子游戏对象。</p></li>
+<li><p>车辆、建筑物或角色（例如机器人）分解成许多部分。在这种情况中，示例脚本将删除完整正常的机器人预制件，并替换为残骸机器人预制件。这种残骸预制件由机器人的单独破碎部分组成，每个部分都具有自己的刚体和粒子系统。通过这种方法，只需一行代码即可将机器人炸成许多碎片，这种情况下会将原始游戏对象替换为一个残骸预制件。</p></li>
+</ul>
+
+<p>以下各节说明如何实现这些情况。</p>
+
+<h3>构建结构</h3>
+
+<p>可以使用代码几乎立即在特定配置中创建预制件的许多副本。使用代码以这种方式生成结构的过程称为程序化生成。以下示例将创建一堵墙的实例。</p>
+
+<p>要尝试该示例，请创建以下脚本，将其命名为 <strong>Wall</strong>，并将其放置在场景中的空游戏对象上。</p>
+
+<pre><code>using UnityEngine;
+public class Wall : MonoBehaviour
+{
+   public GameObject block;
+   public int width = 10;
+   public int height = 4;
+  
+   void Start()
+   {
+       for (int y=0; y&lt;height; ++y)
+       {
+           for (int x=0; x&lt;width; ++x)
+           {
+               Instantiate(block, new Vector3(x,y,0), Quaternion.identity);
+           }
+       }       
+   }
+}
+</code></pre>
+
+<p>完成上述操作后，应该会在 Inspector 中看到 <strong>Block</strong> 变量，字段中包含文字 <strong>None</strong>。值为“None”表示还没有为该变量分配任何预制件。</p>
+
+<figure>
+<img src="../uploads/Main/InstantiatingWallBlockNotAssigned.png" alt="尚未分配任何预制件的 Block 变量">
+<figcaption>尚未分配任何预制件的 <strong>Block</strong> 变量</figcaption>
+</figure>
+
+<p>在将预制件分配给 <strong>Block</strong> 变量之前，以上示例脚本将无效。要创建一个简单的 Block 预制件，请执行以下操作：</p>
+
+<p>1.选择 <strong>GameObject &gt; 3D Object &gt; Cube</strong>。</p>
+
+<p>2.将立方体从 <strong>Hierarchy</strong> <strong>窗口</strong>中拖入 <strong>Project 窗口</strong>中的 <strong>Assets</strong> 文件夹。****这将创建一个预制件资源。</p>
+
+<p>3.将预制件重命名为“Block”。</p>
+
+<p>4.现在 <strong>Block</strong> 预制件作为资源存在了，因此可以安全地从层级视图中删除立方体。</p>
+
+<p>现在已经创建了 Block 预制件，接下来可以将其分配给 <strong>Block</strong> 变量。选择原始游戏对象（附加了“Wall”脚本的游戏对象）。然后将“Block”预制件从 <strong>Project 窗口</strong> 拖入“Block”变量字段（其中显示“None”）。</p>
+
+<figure>
+<img src="../uploads/Main/InstantiatingWallBlockAssigned.png" alt="分配了 Block 预制件的 Block 变量 ">
+<figcaption>分配了 Block 预制件的 <strong><em>Block</em></strong> 变量
+</figcaption>
+</figure>
+
+<p>完成此设置后，单击 <strong>Play</strong> 就会看到 Unity 使用预制件来构建一堵墙：</p>
+
+<figure>
+<img src="../uploads/Main/InstantiatingWallComplete.png" alt="由 4 排（每排 10 块）构成的墙，按以上示例生成。">
+<figcaption>由 4 排（每排 10 块）构成的墙，按以上示例生成。</figcaption>
+</figure>
+
+<p>这是一种可以在 Unity 中反复使用的灵活工作流程模式。因为在此脚本中使用的是预制件，所以无需改动脚本即可轻松替换或编辑预制件来修改墙的砖块属性。还可以在场景中的其他游戏对象上使用 Wall 脚本，并为这些游戏对象分配不同的预制件，以使用不同类型的预制件构建各种墙。</p>
+
+<p>可以使用代码将游戏对象放置在网格、圆形图案、随机分散的形状或任何其他配置中（只要您认为适合所要创建的任何游戏或应用程序）。下面是另一个示例，显示了如何以圆形形式放置实例：</p>
+
+<pre><code>using UnityEngine;
+public class CircleFormation : MonoBehaviour
+{
+   // 以圆形形式实例化预制件
+   public GameObject prefab;
+   public int numberOfObjects = 20;
+   public float radius = 5f;
+   void Start()
+   {
+       for (int i = 0; i &lt; numberOfObjects; i++)
+       {
+           float angle = i * Mathf.PI * 2 / numberOfObjects;
+           float x = Mathf.Cos(angle) * radius;
+           float z = Mathf.Sin(angle) * radius;
+           Vector3 pos = transform.position + new Vector3(x, 0, z);
+           float angleDegrees = -angle*Mathf.Rad2Deg;
+           Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
+           Instantiate(prefab, pos, rot);
+       }
+   }
+}
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/InstantiatingCircle.png" alt="圆形排列的墙块，按以上示例生成">
+<figcaption>圆形排列的墙块，按以上示例生成</figcaption>
+</figure>
+
+<h3>实例化飞弹和爆炸</h3>
+
+<p>在此情况中：</p>
+
+<p>1.玩家按下发射按钮时，“Launcher”游戏对象将实例化一个飞弹预制件。该预制件包含一个网格、一个刚体和一个碰撞体，因此它可以在空中飞行并检测何时发生碰撞。</p>
+
+<p>2.飞弹与物体碰撞，然后实例化爆炸预制件。爆炸预制件包含粒子系统效果，以及一个对周围游戏对象施力的脚本。</p>
+
+<p>按照与上面的 Block 预制件相同的方式，无论飞弹预制件有多复杂，仅用一行代码即可实例化飞弹。在实例化预制件之后，还可以修改实例化的游戏对象的任何属性。例如，可以设置飞弹的刚体的速度。</p>
+
+<p>除了易于使用之外，还可以稍后修改预制件，而无需改动代码。因此，如果飞弹为火箭，那么稍后可以添加粒子系统，从而产生云迹。完成此操作后，所有实例化的火箭都会具有粒子轨迹。</p>
+
+<p>以下脚本显示了如何使用 <strong>Instantiate()</strong> 函数来发射飞弹。</p>
+
+<pre><code>using UnityEngine;
+public class FireProjectile : MonoBehaviour
+{
+    public Rigidbody projectile;
+    public float speed = 4;
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Rigidbody p = Instantiate(projectile, transform.position, transform.rotation);
+            p.velocity = transform.forward * speed;
+        }
+    }
+}
+</code></pre>
+
+<p>在代码中，预制件变量类型是刚体，而不是游戏对象。这样有两个有用的效果：</p>
+
+<p>1.只能为此变量分配具有刚体组件的游戏对象。这很有用，因为它有助于确保您为变量分配了正确的游戏对象。</p>
+
+<p>2.Instantiate 方法返回对新实例上的刚体组件的引用。这很有用，因为这样可以轻松地在实例化刚体之后立即设置刚体的速度。</p>
+
+<p>生成公共预制件变量时，变量类型可以是游戏对象，也可以是任何有效的组件类型（内置的 Unity 组件或您自己的 MonoBehaviour 脚本之一）。</p>
+
+<p>对于游戏对象类型的变量，可以将任何游戏对象分配给该变量，并且 Instantiate 函数将返回对新游戏对象实例的引用。</p>
+
+<p>对于组件类型变量（例如刚体、碰撞体和光源），只能将该组件类型的游戏对象分配给变量，并且 Instantiate 函数将返回新游戏对象实例上对该特定组件的引用。</p>
+
+<p>以下脚本（放置在飞弹预制件上）执行以下操作：在飞弹碰撞物体后，在飞弹的当前位置实例化爆炸，然后删除飞弹游戏对象。</p>
+
+<pre><code>using UnityEngine;
+public class Projectile : MonoBehaviour
+{
+   public GameObject explosion;
+   void OnCollisionEnter()
+   {
+       Instantiate(explosion,transform.position,transform.rotation);
+       Destroy(gameObject);
+   }
+}
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/PrefabsProjectileAndExplosion.gif" alt="这是实例化飞弹预制件的示例，在发生撞击时替换为爆炸预制件">
+<figcaption>这是实例化飞弹预制件的示例，在发生撞击时替换为爆炸预制件</figcaption>
+</figure>
+
+<p>请注意，上图中显示了在运行模式下运行的脚本，实例化的游戏对象出现在层级视图中，并在名称后附加了文字“(Clone)”。</p>
+
+<h3>用布娃娃或残骸替换角色</h3>
+
+<p>在游戏中，通常可能会希望将角色、车辆、建筑物或其他资源从“完好无损”状态切换到“损毁”状态。通常的做法不是尝试修改游戏对象的完好无损版本（例如删除脚本、添加刚体组件等），而是删除整个完好无损游戏对象并将其替换为实例化的损毁预制件，这样做的效率会更高得多。这样可以提供很大的灵活性。可以对损毁版本使用其他材质、附加完全不同的脚本或者实例化某个预制件（其中包含分解为不同部分的游戏对象，用于模拟原始游戏对象破碎的残骸版本）。只需一次调用 Instantiate() 就可以实现上述任意方案，从而将损毁版本引入场景中，同时删除原始游戏对象。</p>
+
+<p>最重要的是，您可以创建损毁版本，然后通过与原始游戏对象完全不同的游戏对象来对损毁版本执行 Instantiate()。例如，要创建一个可破坏的机器人，需要对两个版本进行建模：一个版本包含单个游戏对象（附加了网格渲染器</p>
+
+<p>以及用于机器人移动的脚本），另一个版本包含多个可以由物理系统单独控制的骨骼部件。使用仅包含一个游戏对象的模型时，游戏运行速度更快，因为模型包含的三角形数量较少，因此其渲染速度比具有许多小部件的机器人要快。此外，机器人四处自由走动时，没有理由将机器人拆分为单独部件。</p>
+
+<p>要构建残骸机器人预制件，可以执行以下操作：</p>
+
+<p>1.在偏好的 3D 建模软件中适用大量不同的骨架部件对机器人建模，然后将机器人导出到 Unity 项目的 Assets 文件夹中。</p>
+
+<p>2.在 Unity Editor 中创建一个空场景。</p>
+
+<p>3.将模型从 Project 窗口拖入空场景中。</p>
+
+<p>4.通过选中所有部件并选择 <strong>Component &gt; Physics &gt; Rigidbody</strong>，将刚体添加到所有部件。</p>
+
+<p>5.通过选中所有部件并选择 <strong>Component &gt; Physics &gt; Mesh Collider</strong>（启用 <strong>Convex</strong> 选项以获得更快的性能），将碰撞体添加到所有部件。</p>
+
+<p>6.确保将残骸机器人的所有部件设为单个根游戏对象的子代。</p>
+
+<p>7.要获得额外的特殊效果，请将类似烟雾的粒子系统添加为每个部件的子游戏对象。</p>
+
+<p>8.现在获得了一个具有多个可爆炸部件的机器人。这些部件可能会掉落到地面，因为它们受物理原理控制，并且每个部件都会产生一个粒子轨迹（由于附加了粒子系统）。</p>
+
+<p>9.单击 Play 来预览模型的反应并进行任何必要的调整。</p>
+
+<p>10.将根游戏对象拖动到 <strong>Project 窗口</strong>的 <strong>Assets </strong>文件夹内以创建一个新的预制件。</p>
+
+<p>以下示例演示了如何在代码中对上述步骤建模。</p>
+
+<pre><code>using UnityEngine;
+public class WreckOnCollision : MonoBehaviour
+{
+   public GameObject wreckedVersion;
+   // 每帧调用一次 Update
+   void OnCollisionEnter()
+   {
+       Destroy(gameObject);
+       Instantiate(wreckedVersion,transform.position,transform.rotation);
+   }
+}
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/PrefabWreckSwap.gif" alt="此示例演示了当机器人预制件被飞弹击中时被替换为残骸预制件">
+<figcaption>此示例演示了当机器人预制件被飞弹击中时被替换为残骸预制件</figcaption>
+</figure>
+
+<p>可以从此处下载包含上述所有示例的项目：
+<strong><a href="../uploads/Examples/InstantiatingPrefabsExamples.zip">InstantiatingPrefabsExamples.zip</a></strong></p>
+<!-- area:none -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnpackingPrefabInstances.html"></a></span><div class="tip">解压缩预制件实例</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Transforms.html"></a></span><div class="tip">变换组件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

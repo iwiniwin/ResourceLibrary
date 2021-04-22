@@ -1,0 +1,835 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="独立平台 Player 设置 - Unity 手册">
+<title>独立平台 Player 设置 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/class-PlayerSettingsStandalone.png">
+<meta name="description" content="本页面将详细介绍独立平台（Mac OSX、Windows 和 Linux）特有的 Player 设置。有关常规 Player 设置的描述，请参阅 Player 设置。">
+<meta property="og:description" content="本页面将详细介绍独立平台（Mac OSX、Windows 和 Linux）特有的 Player 设置。有关常规 Player 设置的描述，请参阅 Player 设置。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-PlayerSettingsStandalone';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PlayerSettingsStandalone.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-PlayerSettingsStandalone.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PlayerSettingsStandalone.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-PlayerSettingsStandalone.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-PlayerSettingsStandalone.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-PlayerSettingsStandalone.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-PlayerSettingsStandalone.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-PlayerSettingsStandalone.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PlayerSettingsStandalone.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PlayerSettingsStandalone.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PlayerSettingsStandalone.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettingsStandalone.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PlayerSettingsStandalone.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettingsStandalone.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettingsStandalone.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettingsStandalone.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettingsStandalone.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettingsStandalone.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettingsStandalone.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettingsStandalone.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettingsStandalone.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettingsStandalone.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettingsStandalone.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettingsStandalone.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettingsStandalone.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-PlayerSettingsStandalone.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-PlayerSettingsStandalone.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-PlayerSettingsStandalone.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-PlayerSettingsStandalone.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-PlayerSettingsStandalone.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-PlayerSettingsStandalone.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PlayerSettingsStandalone.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PlayerSettingsStandalone.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PlayerSettingsStandalone.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettingsStandalone.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PlayerSettingsStandalone.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettingsStandalone.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettingsStandalone.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettingsStandalone.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettingsStandalone.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettingsStandalone.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettingsStandalone.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettingsStandalone.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettingsStandalone.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettingsStandalone.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettingsStandalone.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettingsStandalone.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettingsStandalone.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="Standalone.html">独立平台</a></li>
+<li>独立平台 Player 设置</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Standalone.html"></a></span><div class="tip">独立平台</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BuildSettingsStandalone.html"></a></span><div class="tip">PC、Mac 和 Linux 独立平台构建设置</div>
+</div>
+</div></div>
+<h1>独立平台 Player 设置</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面将详细介绍独立平台（Mac OSX、Windows 和 Linux）特有的 <strong>Player</strong> 设置。有关常规 <strong>Player</strong> 设置的描述，请参阅 <a href="class-PlayerSettings.html#general">Player 设置</a>。</p>
+
+<figure>
+<img src="../uploads/Main/class-PlayerSettingsStandalone.png" alt="独立平台 Mac Player 设置">
+<figcaption>独立平台 Mac Player 设置</figcaption>
+</figure>
+
+<p>您可以在以下部分找到这些属性的文档：</p>
+
+<ul>
+<li><a href="#Icon">Icon</a></li>
+<li><a href="#Resolution">Resolution and Presentation</a></li>
+<li><a href="#Splash">Splash Image</a></li>
+<li><a href="#Other">Other Settings</a></li>
+<li><a href="#XR">XR Settings</a></li>
+</ul>
+
+<p><a name="Icon"></a></p>
+
+<h2>Icon</h2>
+
+<p>启用 <strong>Override for Standalone</strong> 设置可指定用于独立平台游戏的自定义图标。可以上传不同大小的图标来填充提供的每个方块。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCIcon.png" alt="独立平台播放器平台的 Icon 设置">
+<figcaption>独立平台播放器平台的 Icon 设置</figcaption>
+</figure>
+
+<p><a name="Resolution"></a></p>
+
+<h2>Resolution and Presentation</h2>
+
+<p>使用 <strong>Resolution and Presentation</strong> 部分可在 <a href="#Resolution1">Resolution</a> 和 <a href="#Resolution2">Standalone Player Options</a> 部分中自定义屏幕的外观方面。</p>
+
+<p><a name="Resolution1"></a></p>
+
+<h3>Resolution 部分</h3>
+
+<p>此部分可以自定义屏幕模式和默认大小。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCRes.png" alt="独立平台播放器平台的 Resolution 部分">
+<figcaption>独立平台播放器平台的 Resolution 部分</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="fullscreen"></a><strong>Fullscreen Mode</strong>
+</td>
+	<td style="text-align:left;">选择全屏模式。此设置定义了启动时的默认窗口模式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Fullscreen Window</em></td>
+	<td style="text-align:left;">将应用程序窗口设置为显示器的全屏原始分辨率。Unity 以脚本设置的分辨率（或在构建的应用程序启动时由用户选择）渲染应用程序内容，但是将其缩放以填充窗口。缩放时，Unity 会在渲染输出中添加黑条以匹配 <strong>Player</strong> 设置中选择的宽高比，这样就不会拉伸内容。这个过程称为<a href="https://en.wikipedia.org/wiki/Letterboxing_(filming)">边框化 (letterboxing)</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<em>Exclusive Fullscreen</em> (Windows only)</td>
+	<td style="text-align:left;">设置应用程序以保持对显示器的单独全屏使用。与 <em>Fullscreen Window</em> 不同，此模式会更改显示器的操作系统分辨率来匹配应用程序选择的分辨率。此选项仅在 Windows 上受支持；在其他平台上，设置将回退到 <em>Fullscreen Window</em>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<em>Maximized Window</em> (Mac only)</td>
+	<td style="text-align:left;">将应用程序窗口设置为操作系统的“最大化”定义。在 macOS 上，这意味着显示带有自动隐藏菜单栏和停靠栏的全屏窗口。此选项仅在 macOS 上受支持；在其他平台上，设置将回退到 <em>Fullscreen Window</em>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Windowed</em></td>
+	<td style="text-align:left;">将应用程序设置为标准的非全屏可移动窗口，其大小取决于应用程序分辨率。在此模式中，默认情况下可以调整窗口大小。要禁用此功能，请禁用 <a href="#resizable">Resizable Window</a> 设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Is Native Resolution</strong></td>
+	<td style="text-align:left;">启用此选项可使游戏使用目标机器上使用的默认分辨率。如果 <strong>Fullscreen Mode</strong> 设置为 <em>Windowed_，此选项不可用。|
+|<strong>Default Screen Width</strong> ||设置游戏画面的默认宽度（以像素为单位）。仅在 <strong>Fullscreen Mode</strong> 设置为 </em>Windowed_ 时，此选项才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Screen Height</strong></td>
+	<td style="text-align:left;">设置游戏画面的默认高度（以像素为单位）。仅在 <strong>Fullscreen Mode</strong> 设置为 <em>Windowed</em> 时，此选项才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Mac Retina Support</strong></td>
+	<td style="text-align:left;">启用此选项可在 Mac 上启用高 DPI (Retina) 屏幕支持。Unity 默认情况下启用此功能。此功能可增强 Retina 显示屏上的项目显示效果，但在激活状态下会有点耗费资源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Run In background</strong></td>
+	<td style="text-align:left;">启用此选项可在应用程序失去焦点时让游戏继续运行（而不是暂停）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Resolution2"></a></p>
+
+<h3>Standalone Player Options 部分</h3>
+
+<p>此部分可以指定用户自定义屏幕的方式。例如，在此处可以决定用户是否可以调整屏幕大小以及可以同时运行多少个实例。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCStand.png" alt="独立平台播放器平台的 Standalone Player Options 设置">
+<figcaption>独立平台播放器平台的 Standalone Player Options 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Capture Single Screen</strong></td>
+	<td style="text-align:left;">启用此选项可确保<a href="#fullscreen">全屏模式 (Fullscreen Mode)</a> 下的独立平台游戏不会使多显示屏设置中的辅助显示屏变暗。Mac OS X 上不支持该功能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="UsePlayerLog"></a><strong>Use Player Log</strong>
+</td>
+	<td style="text-align:left;">启用此选项可向日志文件写入调试信息。默认已启用。<br><strong>警告：</strong>如果计划将应用程序提交到 Mac App Store，请禁用此选项。有关更多信息，请参阅<a href="#AppStore">发布到 Mac App Store</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="resizable"></a><strong>Resizable Window</strong>
+</td>
+	<td style="text-align:left;">启用此选项可允许用户调整独立平台播放器窗口的大小。<br><strong>注意：</strong>如果禁用此选项，您的应用程序无法将 <a href="#fullscreen">Fullscreen Mode</a> 设置为 <em>Windowed</em>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Visible in Background</strong></td>
+	<td style="text-align:left;">如果已将 <a href="#fullscreen">Fullscreen Mode</a> 设置为 _Windowed_，启用此选项可在背景中显示应用程序（在 Windows 中）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Allow Fullscreen Switch</strong></td>
+	<td style="text-align:left;">启用此选项可允许通过默认操作系统全屏按键在全屏模式和窗口模式之间切换。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Force Single Instance</strong></td>
+	<td style="text-align:left;">启用此选项可将独立平台播放器限制为单个并发运行实例。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Supported Aspect Ratios</strong></td>
+	<td style="text-align:left;">启用希望游戏启动时出现在分辨率对话框中的每个宽高比（只要用户的显示屏支持这些宽高比设置）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Splash"></a></p>
+
+<h2>Splash Image</h2>
+
+<p>在<a href="class-PlayerSettingsSplashScreen.html">通用 Splash Screen</a> 设置上方，__Player Settings__ 设置允许您为独立平台指定启动画面。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCSplash.png" alt="独立平台的 Splash Image Player 设置">
+<figcaption>独立平台的 Splash Image Player 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Virtual Reality Splash Image</strong></td>
+	<td style="text-align:left;">选择要在<a href="XR.html">虚拟现实</a>显示中显示的自定义启动画面。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Other"></a></p>
+
+<h2>Other Settings</h2>
+
+<p>此部分可以自定义一系列选项，这些选项分为以下几组：</p>
+
+<ul>
+<li><a href="#Rendering">Rendering</a></li>
+<li><a href="#Vulkan">Vulkan Settings</a></li>
+<li><a href="#AppStore">Mac App Store Options</a></li>
+<li><a href="#Configuration">Configuration</a></li>
+<li><a href="#Optimization">Optimization</a></li>
+<li><a href="#Logging">Logging</a></li>
+<li><a href="#Legacy">Legacy</a></li>
+</ul>
+
+<p><a name="Rendering"></a></p>
+
+<h3>Rendering</h3>
+
+<p>使用这些设置可自定义 Unity 针对独立平台渲染游戏的方式。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Rendering.png" alt="独立平台的 Rendering Player 设置">
+<figcaption>独立平台的 Rendering Player 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Color Space</strong></td>
+	<td style="text-align:left;">选择应该用于渲染的颜色空间，选项为：__Gamma__ 或 <strong>Linear</strong>。<br>请参阅<a href="LinearLighting.html">线性渲染概述</a>以了解这两者之间的区别。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Graphics API for Windows</strong></td>
+	<td style="text-align:left;">启用此选项可在运行游戏的 Windows 计算机上使用最佳图形 API。禁用此选项可添加和删除支持的图形 API。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Graphics API for Mac</strong></td>
+	<td style="text-align:left;">启用此选项可在运行游戏的 Mac 上使用最佳图形 API。禁用此选项可添加和删除支持的图形 API。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Graphics API for Linux</strong></td>
+	<td style="text-align:left;">启用此选项可在运行游戏的 Linux 计算机上使用最佳图形 API。禁用此选项可添加和删除支持的图形 API。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Color Gamut for Mac</strong></td>
+	<td style="text-align:left;">可以为独立 Mac 平台添加或删除<a href="https://color.viewsonic.com/zh-cn/explore/content/Color-gamut_6.html">色域</a>以用于渲染。单击加号 (+) 图标查看可用色域的列表。色域定义了给定设备（如监视器或屏幕）可以使用的所有颜色范围。sRGB 色域是默认色域（也是必需色域）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Metal Editor Support</strong></td>
+	<td style="text-align:left;">启用此选项可在 Unity Editor 中使用 Metal API，并释放更快速的着色器迭代以定位 Metal API。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Metal API Validation</strong></td>
+	<td style="text-align:left;">如果需要调试着色器问题，请启用此选项。<br><strong>注意：</strong>验证会提高 CPU 使用率，因此仅在进行调试时使用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Metal Write-Only Backbuffer</strong></td>
+	<td style="text-align:left;">允许在非默认设备方向上提高性能。此属性会在后缓冲区上设置 frameBufferOnly 标志，因此会阻止从后缓冲区的回读，但可实现一定程度的驱动程序优化。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Memoryless Depth</strong></td>
+	<td style="text-align:left;">选择何时使用<a href="../ScriptReference/RenderTextureMemoryless.Depth.html">无记忆渲染纹理</a>。无记忆渲染纹理在渲染时临时存储在区块内存中，而不是存储在 CPU 或 GPU 内存中。这可减少应用的内存使用量，但您无法读取或写入这些渲染纹理。<br><strong>注意：</strong>只有 iOS、tvOS 10.0+ Metal 和 Vulkan 上支持无记忆渲染纹理。在其他平台上，渲染纹理受读/写保护并存储在 CPU 或 GPU 内存中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Unused</em></td>
+	<td style="text-align:left;">从不使用无记忆帧缓冲区深度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Forced</em></td>
+	<td style="text-align:left;">始终使用无记忆帧缓冲区深度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Automatic</em></td>
+	<td style="text-align:left;">让 Unity 决定何时使用无记忆帧缓冲区深度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Static Batching</strong></td>
+	<td style="text-align:left;">启用此选项可使用静态批处理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Dynamic Batching</strong></td>
+	<td style="text-align:left;">启用此选项可在构建中使用<a href="DrawCallBatching.html">动态批处理</a>（默认情况下启用）。<br><strong>注意：</strong>当<a href="ScriptableRenderPipeline.html">可编程渲染管线</a>激活时，动态批处理无效，所以仅当 <strong>Scriptable Render Pipeline Asset</strong> <a href="class-GraphicsSettings.html#SRLoop">Graphics</a> 设置中未设置任何内容时，此设置才可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Compute Skinning</strong></td>
+	<td style="text-align:left;">启用此选项可使用 DX11/ES3 GPU 计算蒙皮，这样可以释放 CPU 资源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Graphics Jobs</strong></td>
+	<td style="text-align:left;">启用此选项可指示 Unity 将图形任务（渲染循环）卸载到在其他 CPU 核心上运行的工作线程。此功能旨在减少主线程上 <code>Camera.Render</code> 所花费的时间，该时间通常成为瓶颈。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmap Encoding</strong></td>
+	<td style="text-align:left;">选择 <em>Normal Quality</em> 或 <em>High Quality</em> 来设置光照贴图编码。此设置影响光照贴图的编码方案和压缩格式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmap Streaming Enabled</strong></td>
+	<td style="text-align:left;">启用此选项可根据需要仅加载光照贴图 Mipmap 以渲染当前游戏摄像机。此值适用于生成的光照贴图纹理。<br><strong>注意：</strong>要使用此设置，必须启用 <a href="class-QualitySettings.html#texStream">Texture Streaming Quality</a> 设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Streaming Priority</strong></td>
+	<td style="text-align:left;">设置光照贴图 Mipmap 串流优先级以解决资源冲突。这些值应用于生成的光照贴图纹理。<br>正数提供更高的优先级。有效值范围为 –128 到 127。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Use Display In HDR Mode__（仅限 Windows）||选中此复选框可使游戏在运行时自动切换到 HDR 模式输出。这项设置仅适用于支持该功能的显示屏。如果显示屏不支持 HDR 模式，则游戏将在标准模式下运行。||
+|</strong>Swap Chain Bit Depth_<em>||选择每个颜色通道中用于交换链缓冲区的位数。仅在启用 HDR 模式的情况下可用。|
+||</em>Bit Depth 10<em>|Unity 将使用 R10G10B10A2 缓冲区格式和 Rec2020 原色（采用 ST2084 PQ 编码）。|
+||</em>Bit Depth 16_</td>
+	<td style="text-align:left;">Unity 将使用 R16G16B16A16 缓冲区格式和 Rec709 原色及线性颜色（无编码）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Vulkan"></a></p>
+
+<h3>Vulkan Settings</h3>
+
+<p>启用 <strong>SRGB Write Mode</strong> 选项可允许 Vulkan 渲染器上的 Graphics.SetSRGBWrite() 在帧期间切换 sRGB 写模式。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Vulkan.png" alt="独立平台的 Vulkan Player 设置">
+<figcaption>独立平台的 Vulkan Player 设置</figcaption>
+</figure>
+
+<p><strong>注意：</strong>启用此功能可能会降低性能，尤其是基于区块的 GPU。</p>
+
+<p><a name="AppStore"></a></p>
+
+<h3>Mac App Store Options</h3>
+
+<figure>
+<img src="../uploads/Main/DeliverAppMacStore1.png" alt="Mac App Store Options">
+<figcaption>Mac App Store Options</figcaption>
+</figure>
+
+<p>有关设置这些选项的详细信息，请参阅<a href="HOWTO-PortToAppleMacStore.html">将应用程序提交到 Mac App Store</a>。</p>
+
+<h4>发布到 Mac App Store</h4>
+
+<p><a href="#UsePlayerLog">Use Player Log</a> 属性允许将调试信息写入日志文件。这对于调查游戏问题很有用。但是，在为 Apple 的 Mac App Store 发布游戏时，需要禁用此功能，因为如果启用此功能，Apple 可能会拒绝您提交。有关日志文件的更多信息，请参阅 Unity 手册<a href="LogFiles.html">日志文件</a>页面。</p>
+
+<p><strong>Use Mac App Store Validation</strong> 属性可启用 Mac App Store 的收据验证。如果启用此属性，则只有当游戏包含来自 Mac App Store 的有效收据时才会运行。将游戏提交给 Apple 以便在 App Store 上发布时，应使用此功能。这样可以防止用户不在购买游戏的计算机上而在另一台计算机上运行游戏。</p>
+
+<p>请注意，此功能不实现任何强大的复制保护。特别需要说明的是，针对一个 Unity 游戏的任何潜在破解都将对所有其他 Unity 内容有效。因此，建议使用 Unity 的插件功能在此基础上实现您自己的收据验证代码。但是，由于 Apple 要求在显示屏幕设置对话框之前的最初阶段进行插件验证，因此您仍应启用此属性，以免 Apple 拒绝您的提交。</p>
+
+<p><a name="Configuration"></a></p>
+
+<h3>配置</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Config.png" alt="独立平台播放器平台的 Configuration 设置">
+<figcaption>独立平台播放器平台的 Configuration 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="backend"></a><strong>Scripting Backend</strong>
+</td>
+	<td style="text-align:left;">选择要使用的脚本后端。脚本后端确定 Unity 如何在项目中编译和执行 C# 代码。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Mono</em></td>
+	<td style="text-align:left;">将 C# 代码编译为 .NET 公共中间语言 (CIL) 并使用公共语言运行时执行该 CIL。有关更多信息，请参阅 <a href="https://www.mono-project.com/">Mono Project</a> 网站。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>IL2CPP</em></td>
+	<td style="text-align:left;">将 C# 代码编译为 CIL，将 CIL 转换为 C++，然后将该 C++ 编译为本机机器代码，该代码在运行时直接执行。请参阅 <a href="IL2CPP.html">IL2CPP</a> 以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>API Compatibility Level</strong></td>
+	<td style="text-align:left;">选择可以在项目中使用的 .NET API 运行时。此设置可能会影响与第三方库的兼容性。<br><strong>提示：</strong>如果您遇到第三方程序集的问题，可以尝试下文的 <a href="#apiComp">API Compatibility Level</a> 部分中的建议。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.Net 2.0</em></td>
+	<td style="text-align:left;">.Net 2.0 库。最高的 .net 兼容性，最大的文件大小。属于已弃用的 .NET 3.5 运行时。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.Net 2.0 Subset</em></td>
+	<td style="text-align:left;">完整 .net 兼容性的子集，最小的文件大小。属于已弃用的 .NET 3.5 运行时。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.Net Standard 2.0</em></td>
+	<td style="text-align:left;">兼容 <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">.NET Standard 2.0</a>。生成较小的构建并具有完整的跨平台支持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.Net 4.x</em></td>
+	<td style="text-align:left;">兼容 .NET Framework 4（包括 .NET Standard 2.0 配置文件中的所有内容以及其他 API）。如果使用的库需要访问 .NET Standard 2.0 中未包含的 API，请选择此选项。生成更大的构建，并且任何可用的其他 API 不一定在所有平台上都受支持。有关更多信息，请参阅<a href="dotnetProfileAssemblies.html">引用其他类库程序集</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>C++ Compiler Configuration</strong></td>
+	<td style="text-align:left;">选择在编译 IL2CPP 生成的代码时使用的 C++ 编译器配置。<br><strong>注意：</strong>除非 <strong>Scripting Backend</strong> 设置为 <em>IL2CPP_，否则此属性被禁用。|
+|<strong>Use incremental GC</strong>||使用增量式垃圾回收器，这种垃圾回收器将垃圾收集工作分布在多个帧上，因此可以在帧持续时间中减少与 gc 相关的峰值。|
+|<strong>Scripting Define Symbols</strong>||设置自定义编译标志。有关更多详细信息，请参阅<a href="PlatformDependentCompilation.html">平台相关的编译</a>。|
+|<strong>Allow ‘unsafe’ Code</strong>|| 允许在预定义的程序集（例如，<code>Assembly-CSharp.dll</code>）中编译<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unsafe">“不安全”的 C# 代码</a>。<br>对于程序集定义文件 (<code>.asmdef</code>)，请单击其中一个 <code>.asmdef</code> 文件，并在出现的 Inspector 窗口中启用该选项。 |
+|<strong>Active Input Handling</strong>|| 选择您希望如何处理来自用户的输入。 |
+||</em>Input Manager<em>| 使用传统的 <a href="class-InputManager.html">Input</a> 设置。 |
+||</em>Input System (Preview)<em>| 使用较新的<a href="../ScriptReference/Input.html">输入</a>系统。输入系统作为此版本的预览包提供。要试用输入系统的预览版，请安装 <a href="https://github.com/Unity-Technologies/InputSystem">InputSystem 包</a>。|
+||</em>Both_</td>
+	<td style="text-align:left;">并排使用两个系统。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="apiComp"></a></p>
+
+<h4>API Compatibility Level</h4>
+
+<p>可为所有目标选择 mono API 兼容性级别。有时，第三方 .NET 库会使用 .NET 兼容性级别之外的功能。为了解在这种情况下可能发生的问题以及如何以最佳方案修复问题，请尝试以下解决方案：</p>
+
+<p>1.安装适用于 Windows 的 <a href="http://www.airsquirrels.com/reflector/">Reflector</a>。
+2.将出现问题的相关 API 兼容性级别的 .NET 程序集拖到 Reflector 中。可以在 <code>Frameworks/Mono/lib/mono/YOURSUBSET/</code> 下找到它们。
+3.拖入第三方程序集。
+4.右键单击第三方程序集并选择 <strong>Analyze</strong>。
+5.在分析报告中，检查 <strong>Depends on</strong> 部分。此报告以红色突出显示第三方程序集所依赖的但在您选择的 .NET 兼容性级别中不可用的任何内容。</p>
+
+<p><a name="Optimization"></a></p>
+
+<h3>Optimization</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Optimize.png" alt="独立平台播放器平台的 Optimization 设置">
+<figcaption>独立平台播放器平台的 Optimization 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Prebake Collision Meshes</strong></td>
+	<td style="text-align:left;">启用此选项可在构建时将碰撞数据添加到网格。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Keep Loaded Shaders Alive</strong></td>
+	<td style="text-align:left;">启用此选项可防止卸载着色器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Preloaded Assets</strong></td>
+	<td style="text-align:left;">设置一个资源数组，供播放器在启动时加载。<br>要添加新资源，请增大 <strong>Size</strong> 属性的值，然后在出现的新 <strong>Element</strong> 框中设置对要加载的资源的引用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>Strip Engine Code__（仅限 IL2CPP）||指定 Unity Linker 工具是否删除项目不使用的 Unity 引擎功能的代码。|
+|</strong>Managed Stripping Level<strong>||定义 Unity 剥离未使用的托管 (C#) 代码时的激进程度。<br>当 Unity 构建游戏或应用程序时，Unity Linker 进程可以从项目中使用的托管动态链接库中剥离未使用的代码。剥离代码可以使生成的可执行文件显著减小，但有时可能会错误地删除实际在使用的代码。此设置允许您选择 Unity 删除未使用代码时应采取的激进程度。|
+||<em>Disabled_（仅限 Mono）|不要剥离任何代码。（使用 IL2CPP 时会始终启用托管代码剥离。）|
+||</em>Normal<em>|删除无法访问的托管代码以减少构建大小和 Mono/IL2CPP 构建时间。|
+||</em>Aggressive_（实验性功能）|比 <em>Normal</em> 选项更激进地删除代码。代码大小进一步降低，但这种额外降低可能会产生副作用。例如，某些方法可能在调试器中不再可见，并且可以剥离通过反射访问的代码。您可以创建自定义 link.xml 文件以保留特定的类和方法。有关更多信息，请参阅<a href="IL2CPP-BytecodeStripping">使用 IL2CPP 进行托管字节码剥离</a>。|
+|<strong>Enable Internal profiler (Deprecated)</strong>||启用此选项可在测试项目时从 Android SDK 的 <a href="https://developer.android.com/studio/command-line/logcat.html">adblogcat</a> 输出中获取设备中的性能分析器数据。此选项适用于开发版。|
+|<a name="scriptCallOpt"></a></strong>Script Call Optimization__</td>
+	<td style="text-align:left;">选择如何在运行时选择性地禁用异常处理以提高速度。有关详细信息，请参阅 <a href="iphone-iOS-Optimization.html">iOS 优化</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Slow and Safe</em></td>
+	<td style="text-align:left;">使用完整的异常处理（使用 Mono 脚本后端时会对设备的性能有一些影响）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Fast but no Exceptions</em></td>
+	<td style="text-align:left;">不为设备上的异常提供数据（使用 Mono 脚本后端时游戏运行速度更快）。<br><strong>注意</strong>：将此选项与 <em>IL2CPP</em> <a href="#backend">脚本后端</a> 一起使用不会影响性能；但是，使用此选项可以避免发布版本中出现未定义的行为。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Vertex Compression</strong></td>
+	<td style="text-align:left;">设置每个通道的顶点压缩。例如，可以为除位置和光照贴图 UV 之外的所有内容启用压缩。为每个导入对象设置的整个网格压缩将覆盖在对象上设置顶点压缩。所有其他内容都遵循这些顶点压缩设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Optimize Mesh Data</strong></td>
+	<td style="text-align:left;">启用此选项可从网格中删除应用于网格的材质不需要的所有数据（例如切线、法线、颜色和 UV）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Logging"></a></p>
+
+<h3>Logging</h3>
+
+<p>选择在特定上下文中允许的日志记录类型。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Logging.png" alt="独立平台播放器平台的 Logging 设置">
+<figcaption>独立平台播放器平台的 Logging 设置</figcaption>
+</figure>
+
+<p>选中运行脚本时 (<strong>ScriptOnly</strong>)、始终 (<strong>Full</strong>) 或从不 (<strong>None</strong>) 条件下对应于每个 Log Type（__Error<strong>、</strong>Assert<strong>、</strong>Warning<strong>、</strong>Log__ 和 __Exception__）的复选框。</p>
+
+<p><a name="Legacy"></a> </p>
+
+<h3>Legacy</h3>
+
+<p>启用 <strong>Clamp BlendShapes (Deprecated)</strong> 选项可在 <a href="class-SkinnedMeshRenderer.html">SkinnedMeshRenderers</a> 中钳制混合形状权重的范围。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Legacy.png" alt="独立平台播放器平台的 Legacy 设置">
+<figcaption>独立平台播放器平台的 Legacy 设置</figcaption>
+</figure>
+
+<p><a name="XR"></a></p>
+
+<h2>XR Settings</h2>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCXR.png" alt="独立平台播放器的 XR Settings">
+<figcaption>独立平台播放器的 XR Settings</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Virtual Reality Supported</strong></td>
+	<td style="text-align:left;">为 Unity Editor 和游戏版本启用本机 VR 支持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Virtual Reality SDKs</strong></td>
+	<td style="text-align:left;">在列表中添加和删除虚拟现实 SDK。此列表仅在启用 <strong>Virtual Reality Supported</strong> 时可用。<br>要将 SDK 添加到列表中，请单击加号 (+) 按钮。<br>要从列表中删除 SDK，请选择它，然后单击减号 (-) 按钮。<br>某些 SDK 提供了额外设置，这些设置显示在此处。有关详细信息，请参阅 <a href="XR-SDK_overviews">XR SDK</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Stereo Rendering Mode</strong></td>
+	<td style="text-align:left;">选择要为虚拟现实设备渲染的方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Multi Pass</em></td>
+	<td style="text-align:left;">这是正常的渲染模式。Unity 渲染场景两次：首先渲染左眼图像；然后再次为右眼图像。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Single Pass</em></td>
+	<td style="text-align:left;">将两个眼睛图像同时渲染到一个打包的渲染纹理中。这意味着整个场景只渲染一次，这大大减少了 CPU 处理时间。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Single Pass Instanced (Preview)</em></td>
+	<td style="text-align:left;">GPU 执行单个渲染通道，将每个绘制调用都替换为实例化绘制调用。由于两个绘制调用之间的缓存一致性，因此可大大降低 CPU 的使用，并略微减少 GPU 的使用。使用此模式可显著降低应用程序的功耗。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>360 Stereo Capture</strong></td>
+	<td style="text-align:left;">启用此选项可使用支持 360 度捕获的着色器变体。默认情况下会禁用此选项，并且 Unity 不会生成这些着色器变体。</td>
+</tr>
+</tbody>
+</table>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-history"> 2017–09–04 &gt; 在 <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> 版中添加了 MacOS Retina Support 复选框 <span class="search-words">NewIn20171</span></span></p></li>
+<li><p><span class="page-history">在 Unity <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 中添加了 Allow ‘unsafe’ Code 复选框 <span class="search-words">NewIn20181</span></span></p></li>
+<li><p><span class="page-history">在 2018.1 版中添加了 .NET 4.x 运行时</span></p></li>
+<li><p><span class="page-history">针对 United Settings 进行了更新，在 Unity <a href="../Manual/30_search.html?q=newin20183">2018.3</a> 中已弃用 .Net 3.5 脚本运行时 <span class="search-words">NewIn20183</span></span></p></li>
+<li><p><span class="page-history">在 Unity 2019.1 中添加了输入系统预览</span></p></li>
+<li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20193">2019.3</a> 将 GPU Skinning 重命名为 Compute Skinning <span class="search-words">NewIn20193</span></span></p></li>
+<li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20193">2019.3</a> 中删除了 Vuforia</span></p></li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Standalone.html"></a></span><div class="tip">独立平台</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BuildSettingsStandalone.html"></a></span><div class="tip">PC、Mac 和 Linux 独立平台构建设置</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

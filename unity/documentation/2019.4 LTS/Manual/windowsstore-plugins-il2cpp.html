@@ -1,0 +1,305 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="通用 Windows 平台：IL2CPP 脚本后端上的插件 - Unity 手册">
+<title>通用 Windows 平台：IL2CPP 脚本后端上的插件 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/NativeFunctions.png">
+<meta name="description" content="通用 Windows 平台的插件模型与其他 Unity 平台（例如 Windows 独立平台）类似。">
+<meta property="og:description" content="通用 Windows 平台的插件模型与其他 Unity 平台（例如 Windows 独立平台）类似。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'windowsstore-plugins-il2cpp';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/windowsstore-plugins-il2cpp.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/windowsstore-plugins-il2cpp.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/windowsstore-plugins-il2cpp.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/windowsstore-plugins-il2cpp.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/windowsstore-plugins-il2cpp.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/windowsstore-plugins-il2cpp.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/windowsstore-plugins-il2cpp.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/windowsstore-plugins-il2cpp.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/windowsstore-plugins-il2cpp.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/windowsstore-plugins-il2cpp.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/windowsstore-plugins-il2cpp.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/windowsstore-plugins-il2cpp.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/windowsstore-plugins-il2cpp.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/windowsstore-plugins-il2cpp.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/windowsstore-plugins-il2cpp.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/windowsstore-plugins-il2cpp.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/windowsstore-plugins-il2cpp.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/windowsstore-plugins-il2cpp.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/windowsstore-plugins-il2cpp.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/windowsstore-plugins-il2cpp.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/windowsstore-plugins-il2cpp.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/windowsstore-plugins-il2cpp.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/windowsstore-plugins-il2cpp.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/windowsstore-plugins-il2cpp.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/windowsstore-plugins-il2cpp.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/windowsstore-plugins-il2cpp.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/windowsstore-plugins-il2cpp.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/windowsstore-plugins-il2cpp.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/windowsstore-plugins-il2cpp.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/windowsstore-plugins-il2cpp.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/windowsstore-plugins-il2cpp.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/windowsstore-plugins-il2cpp.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/windowsstore-plugins-il2cpp.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/windowsstore-plugins-il2cpp.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/windowsstore-plugins-il2cpp.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/windowsstore-plugins-il2cpp.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/windowsstore-plugins-il2cpp.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/windowsstore-plugins-il2cpp.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/windowsstore-plugins-il2cpp.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/windowsstore-plugins-il2cpp.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/windowsstore-plugins-il2cpp.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/windowsstore-plugins-il2cpp.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/windowsstore-plugins-il2cpp.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/windowsstore-plugins-il2cpp.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/windowsstore-plugins-il2cpp.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/windowsstore-plugins-il2cpp.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/windowsstore-plugins-il2cpp.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/windowsstore-plugins-il2cpp.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="Windows.html">Windows</a></li>
+<li><a href="WindowsStore.html">通用 Windows 平台</a></li>
+<li><a href="windowsstore-il2cpp.html">通用 Windows 平台：IL2CPP 脚本后端</a></li>
+<li>通用 Windows 平台：IL2CPP 脚本后端上的插件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsstore-generatedproject-il2cpp.html"></a></span><div class="tip">通用 Windows 平台：使用 IL2CPP 脚本后端生成的项目</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsstore-debugging-il2cpp.html"></a></span><div class="tip">通用 Windows 平台：IL2CPP 脚本后端上的调试</div>
+</div>
+</div></div>
+<h1>通用 Windows 平台：IL2CPP 脚本后端上的插件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>通用 Windows 平台的插件模型与其他 Unity 平台（例如 Windows 独立平台）类似。</p>
+
+<h2>托管插件</h2>
+
+<p>默认情况下，IL2CPP 以 .NET 2.0 API 兼容性级别为目标。这意味着，它不支持以 .NET 4.5 为目标或使用任何 Windows 运行时 API 的托管插件。使用此兼容性级别时，所有托管插件必须以 .NET 4.5 或同等 API 为目标。如果要解除这些限制，可在 <strong>Player</strong> 设置中切换到 .NET 4.6 API 兼容性级别。</p>
+
+<p>IL2CPP 脚本后端表现出与 Unity Editor 或独立平台播放器完全相同的 .NET API 表面，因此可以使用相同的插件而无需针对通用 Windows 平台的不同 .NET API 来编译单独的版本。</p>
+
+<h2>原生插件</h2>
+
+<p>IL2CPP 脚本后端支持通过 P/Invoke 机制使用原生插件。也就是说，可通过指定原生函数原型再调用该函数来直接从 C# 代码调用原生插件。例如：</p>
+
+<pre><code>[DllImport("MyPlugin.dll")]
+private static extern int CountLettersInString([MarshalAs(UnmanagedType.LPWSTR)]string str);
+
+private void Start()
+{
+    Debug.Log(CountLettersInString("Hello, native plugin!"));
+}
+</code></pre>
+
+<p>此类函数在 MyPlugin.dll 内的实现如下所示：</p>
+
+<pre><code>extern "C" __declspec(dllexport)
+int __stdcall CountLettersInString(wchar_t* str)
+{
+    int length = 0;
+    while (*str++ != nullptr)
+        length++;
+    return length;
+}
+</code></pre>
+
+<p>P/Invoke 编组规则与官方 .NET 编组规则一致，但少数不受支持的类型除外：</p>
+
+<ul>
+<li>AnsiBStr</li>
+<li>Currency</li>
+<li>SAFEARRAY</li>
+<li>IDispatch</li>
+<li>TBStr</li>
+<li>VBByRefStr</li>
+</ul>
+
+<p>在 x86 上，P/Invoke 函数的默认调用约定为 <code>__stdcall</code>。</p>
+
+<p>可通过两种方式编写原生插件：预编译的 DLL 或 C++ 源代码。</p>
+
+<h3>预编译的原生插件</h3>
+
+<p>对预编译的原生插件进行 P/Invoke 调用的工作原理是在运行时加载 DLL，找到函数入口点，然后调用它。必须针对目标 CPU 架构的适当 Windows SDK 编译这些 DLL。添加到 Unity 项目时，还必须在 Plugin Inspector 中配置这些 DLL。</p>
+
+<h3>C++ 源代码原生插件</h3>
+
+<p>可以将 C++ (.cpp) 代码文件直接添加到 Unity 项目中作为 Plugin Inspector 中的插件。如果配置为与通用 Windows 平台和 IL2CPP 脚本后端兼容，这些 C++ 文件将与从托管程序集生成的 C++ 代码一起编译：</p>
+
+<figure>
+<img src="../uploads/Main/NativeFunctions.png" alt="">
+</figure>
+
+<p>由于函数与生成的 C++ 代码链接在一起，所以没有单独的 DLL 可进行 P/Invoke 调用。因此，可以使用“__Internal”关键字代替 DLL 名称，从而使 C++ 链接器负责解析函数，而不是在运行时加载函数：</p>
+
+<pre><code>[DllImport("__Internal")]
+private static extern int CountLettersInString([MarshalAs(UnmanagedType.LPWSTR)]string str);
+</code></pre>
+
+<p>由于调用由链接器解析，因此在托管端的函数声明中发生错误将产生链接器错误，而不是运行时的错误。这也意味着，在运行时不需要进行动态加载，而直接调用函数。这种方式显著降低了 P/Invoke 调用的开销。</p>
+
+<h3>P/Invoke 限制</h3>
+
+<p>在通用 Windows 平台上，无法在使用 IL2CPP 脚本后端时指定 dll 名称（如“kernelbase.dll”）来对特定系统库进行 P/Invoke 调用。尝试对项目外部的任何 DLL 进行 P/Invoke 调用将导致运行时出现 DllNotFoundException。</p>
+
+<p>但是，仍然可以通过指定“**Internal”关键字而不是 DLL 名称来对这些系统函数进行 P/Invoke 调用，这会使链接器在构建时解析函数。</p>
+
+<h2>另请参阅</h2>
+
+<p><a href="PluginInspector.html" title="Plugin Inspector">Plugin Inspector</a></p>
+
+<hr>
+
+<ul>
+<li>
+<span class="page-edit">• 2018–08–03 页面已修订</span><br>
+</li>
+<li><span class="page-history">在 2018.3 版中已弃用 .NET 3.5 脚本运行时</span></li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsstore-generatedproject-il2cpp.html"></a></span><div class="tip">通用 Windows 平台：使用 IL2CPP 脚本后端生成的项目</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsstore-debugging-il2cpp.html"></a></span><div class="tip">通用 Windows 平台：IL2CPP 脚本后端上的调试</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Asset Store Publisher 门户 - Unity 手册">
+<title>Asset Store Publisher 门户 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/AssetStoreAdmin.png">
+<meta name="description" content="Asset Store Publisher 门户可让您管理自己作为 Asset Store 提供商角色的多个方面。">
+<meta property="og:description" content="Asset Store Publisher 门户可让您管理自己作为 Asset Store 提供商角色的多个方面。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'AssetStoreAdmin';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetStoreAdmin.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/AssetStoreAdmin.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetStoreAdmin.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/AssetStoreAdmin.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/AssetStoreAdmin.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/AssetStoreAdmin.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/AssetStoreAdmin.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/AssetStoreAdmin.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetStoreAdmin.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetStoreAdmin.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetStoreAdmin.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetStoreAdmin.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetStoreAdmin.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetStoreAdmin.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetStoreAdmin.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetStoreAdmin.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetStoreAdmin.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetStoreAdmin.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetStoreAdmin.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetStoreAdmin.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetStoreAdmin.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetStoreAdmin.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetStoreAdmin.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetStoreAdmin.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetStoreAdmin.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/AssetStoreAdmin.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/AssetStoreAdmin.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/AssetStoreAdmin.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/AssetStoreAdmin.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/AssetStoreAdmin.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/AssetStoreAdmin.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetStoreAdmin.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetStoreAdmin.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetStoreAdmin.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetStoreAdmin.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetStoreAdmin.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetStoreAdmin.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetStoreAdmin.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetStoreAdmin.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetStoreAdmin.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetStoreAdmin.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetStoreAdmin.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetStoreAdmin.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetStoreAdmin.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetStoreAdmin.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetStoreAdmin.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetStoreAdmin.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetStoreAdmin.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="AssetStorePublishing.html">Asset Store 发布</a></li>
+<li>Asset Store Publisher 门户</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetStoreUsers.html"></a></span><div class="tip">管理您的发布团队</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PlatformSpecific.html"></a></span><div class="tip">平台开发</div>
+</div>
+</div></div>
+<h1>Asset Store Publisher 门户</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a href="https://publisher.assetstore.unity3d.com/info.html">Asset Store Publisher</a> 门户可让您管理自己作为 Asset Store 提供商角色的多个方面。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin.png" alt="Asset Store Publisher 门户可让您管理自己的资源包和帐户">
+<figcaption>Asset Store Publisher 门户可让您管理自己的资源包和帐户</figcaption>
+</figure>
+
+<p>Asset Store Publisher 门户在以下多个选项卡中为您提供帐户信息：</p>
+
+<ul>
+<li><a href="#packages">Packages</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#upgrades">Upgrades</a></li>
+<li><a href="#sales">Sales</a></li>
+<li><a href="#downloads">Downloads</a></li>
+<li><a href="#revenue">Revenue</a></li>
+<li><a href="#verify-invoice">Verify Invoice</a></li>
+<li><a href="#vouchers">Vouchers</a></li>
+<li><a href="#users">Users</a></li>
+<li><a href="#payout">Payout</a></li>
+<li><a href="#info">Info</a></li>
+</ul>
+
+<p><a name="packages"></a></p>
+
+<h2>Packages</h2>
+
+<p>使用 <strong>Packages</strong> 选项卡可以管理资源包以及创建新资源包以进行提交。此选项卡的内容根据从 Package Status 下拉菜单中选择的<a href="#pkg-status">状态</a>而异。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStorePackagesInDraft.png" alt="Package Status 下拉菜单位于 Create New Package 按钮右侧">
+<figcaption>Package Status 下拉菜单位于 Create New Package 按钮右侧</figcaption>
+</figure>
+
+<p>请参阅<a href="AssetStorePkgDetails.html">填写资源包详情</a>以了解关于发布资源包的工作流程和程序。</p>
+
+<p><a name="pkg-status"></a></p>
+
+<h3>资源包状态</h3>
+
+<p>资源包在其生命周期中可能会经历许多状态。打开 <a href="https://publisher.assetstore.unity3d.com/">Asset Store Publisher</a> 门户并导航到 <strong>Packages</strong> 选项卡时，可以从 Package Status 下拉菜单中选择一个状态，从而查看处于该状态的所有资源包：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Status:</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Draft</strong></td>
+	<td style="text-align:left;">这是您将资源包提交到 Asset Store 之前的资源包版本。一个草案至少体现 <strong>Create new package</strong> 页面上的信息，但是还可以包括来自项目的资源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Pending</strong></td>
+	<td style="text-align:left;">这是 Asset Store 专家收到的供审查的资源包。仅当资源包在提交后数月仍然处于待定状态的情况下，才应该联系 <a href="https://docs.unity3d.com/Manual/mailto:assetstore@unity3d.com.html">Asset Store 团队</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Published</strong></td>
+	<td style="text-align:left;">这是当前在 Asset Store 上发布的资源包，可供用户购买和下载。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Declined</strong></td>
+	<td style="text-align:left;">如果 Asset Store 专家审查资源包后决定不予发布，则会将其标记为 Declined。这种情况下可以进行 Asset Store 专家建议的任何改进，然后创建一个新草案来重新提交。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Disabled</strong></td>
+	<td style="text-align:left;">Asset Store 禁用某个资源包时，就意味着发布者或用户（甚至包括已经购买的用户）无法使用此资源包。发生此情况的原因往往是发布者<a href="http://response.unity3d.com/takedown-notice?_ga=2.175653543.486288397.1585517171-1395087459.1585343727">提交</a>了侵犯版权 (<a href="https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act">DMCA</a>) 或商标冲突的下架通知。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Deprecated</strong></td>
+	<td style="text-align:left;">Asset Store 弃用某个资源包时，就意味着先前未下载或购买此资源包的客户不再能够发现此资源包。但是，已经下载或购买此资源包的任何客户仍然可以从自己的 Unity 帐户中访问此资源包。<br><br>您可以将 Asset Store 中的某个资源包标记为已弃用，这样该资源包就不再可用（已购买或下载该资源包的客户除外）。有关更多信息，请参阅<a href="AssetStoreRemoving.html">弃用资源</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="reviews"></a></p>
+
+<h2>Reviews</h2>
+
+<p><strong>Reviews</strong> 选项卡显示用户对资源包的相关反馈。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin-reviews.png" alt="Publisher Reviews 选项卡显示有关资源包的评论">
+<figcaption>Publisher Reviews 选项卡显示有关资源包的评论</figcaption>
+</figure>
+
+<p>如果您回复用户评论，请确保您的回复应该非常专业。如果您看到任何辱骂性语言（形象性或文字性），或者评论内容与该资源本身无关，请单击 <strong>Report this review</strong> 按钮以通知 Asset Store 团队。有关更多信息，请参阅<a href="https://forum.unity.com/forums/asset-store-publishers.91/">发布者论坛</a>。</p>
+
+<p>可以通过 RSS 订阅源获得评论（请参阅底部的链接）。您可以设置一种服务来使用第三方提供商（例如 <a href="https://ifttt.com/">IFTTT</a> 或 <a href="https://zapier.com/">Zapier</a>）将 RSS 直接提供到您的电子邮件帐户。</p>
+
+<p><a name="upgrades"></a></p>
+
+<h2>Upgrades</h2>
+
+<p>准备好发布新版本的资源包时，可以在 <strong>Upgrades</strong> 选项卡中进行相关的管理。</p>
+
+<p>有关更多信息，请参阅<a href="AssetStoreUpgrade.html">升级资源包</a>。</p>
+
+<p><a name="sales"></a></p>
+
+<h2>Sales</h2>
+
+<p><strong>Sales</strong> 选项卡显示每个付费资源包的销售数据（一行表示一个资源包）。此处还会显示所选月份的总额 (Gross) 和净额 (Net)。可以通过更改下拉框中的月份来查看不同月份的销售数据。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin-sales.png" alt="Sales 选项卡显示关于付费资源包的销售统计信息">
+<figcaption>Sales 选项卡显示关于付费资源包的销售统计信息</figcaption>
+</figure>
+
+<p>该选项卡仅显示付费资源包。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>列：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Package</strong></td>
+	<td style="text-align:left;">资源包的名称，直接链接到 Asset Store 上的资源包页面。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Price</strong></td>
+	<td style="text-align:left;">产品销售时的价格。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Qty</strong></td>
+	<td style="text-align:left;">该资源包的购买数量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Refunds</strong></td>
+	<td style="text-align:left;">该资源包的已完成退款金额。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Chargebacks</strong></td>
+	<td style="text-align:left;">该资源包已完成的退单拒付退款金额。退单拒付是指信用卡提供商要求零售商弥补欺诈交易或有争议交易的损失。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Gross</strong></td>
+	<td style="text-align:left;">该资源包销售所赚取的总金额。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>First</strong></td>
+	<td style="text-align:left;">所选月份内该资源包的第一次购买日期。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Last</strong></td>
+	<td style="text-align:left;">所选月份内该资源包的最后一次购买日期。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="downloads"></a></p>
+
+<h2>Downloads</h2>
+
+<p><strong>Downloads</strong> 选项卡显示用户下载特定资源的次数。此处仅包括付费资源，但可能与特定月份的资源销售额不匹配，因为用户可能不会立即下载数据，并且可能在整个使用期内多次下载数据。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin-downloads.png" alt="Downloads 选项卡显示关于免费资源包下载的统计信息">
+<figcaption>Downloads 选项卡显示关于免费资源包下载的统计信息</figcaption>
+</figure>
+
+<p>该选项卡仅显示免费资源包。付费资源包显示在 <a href="#sales">Sales</a> 选项卡中。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>列：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Package</strong></td>
+	<td style="text-align:left;">可供免费下载的资源包名称。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Downloads</strong></td>
+	<td style="text-align:left;">该资源包的下载次数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>First</strong></td>
+	<td style="text-align:left;">所选月份内该资源包的第一次下载日期。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Last</strong></td>
+	<td style="text-align:left;">所选月份内该资源包的最后一次下载日期。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="revenue"></a></p>
+
+<h2>Revenue</h2>
+
+<p><strong>Revenue</strong> 选项卡显示每个月赚取的收入，以及 Unity 向您付款的时间。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin-revenue.png" alt="">
+</figure>
+
+<p><a name="verify-invoice"></a></p>
+
+<h2>Verify Invoice</h2>
+
+<p><strong>Verify Invoice</strong> 选项卡让您可以输入 Asset Store 客户的发票号码以验证该发票是否有效。此处还显示该发票的所有已退款的资源包。</p>
+
+<p>有关向客户退款的更多信息，请参阅<a href="AssetStoreRefunding.html">向客户退款</a>。</p>
+
+<p><a name="vouchers"></a></p>
+
+<h2>Vouchers</h2>
+
+<p><strong>Vouchers</strong> 选项卡让您可以生成兑换券兑换码，然后将其提供给客户。兑换券可让客户免费下载付费资源包。此选项卡还显示已发放的所有兑换券。</p>
+
+<p>有关如何为付费资源包创建兑换券的更多信息，请参阅<a href="AssetStoreVouchers.html">发放兑换券</a>。</p>
+
+<p><a name="users"></a></p>
+
+<h2>Users</h2>
+
+<p>可以在 <strong>Users</strong> 选项卡上管理发布团队的成员。</p>
+
+<p>有关管理团队成员的更多信息，请参阅<a href="AssetStoreUsers.html">管理您的发布团队</a>。</p>
+
+<p><a name="payout"></a></p>
+
+<h2>Payout</h2>
+
+<p><strong>Payout</strong> 选项卡让您可以轻松访问 Unity ID 页面，您可以在其中管理发布者帐户所赚取收入的付款选项。</p>
+
+<p>有关设置付款资料和税务信息的更多信息，请参阅<a href="AssetStorePayouts.html">获取收入</a>。</p>
+
+<p><a name="info"></a></p>
+
+<h2>Info</h2>
+
+<p><strong>Info</strong> 选项卡让您可以编辑发布者帐户的资料。首次<a href="AssetStoreCreateAcct.html">创建发布者帐户</a>时会显示此选项卡，但是您可以随时返回来更新信息。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin-info.png" alt="Publisher Information 选项卡包含若干部分，可以在其中更新头像、位置和其他信息">
+<figcaption>Publisher Information 选项卡包含若干部分，可以在其中更新头像、位置和其他信息</figcaption>
+</figure>
+
+<p><strong>Info</strong> 选项卡包含若干部分，可以在其中添加或编辑有关帐户的一般信息（并非任何具体资源包的特定信息）：</p>
+
+<ul>
+<li><a href="#Profile">Profile</a></li>
+<li><a href="#Promo">Promo</a></li>
+<li><a href="#About">About</a></li>
+<li><a href="#Social">Social links</a></li>
+<li><a href="#Google">Google Analytics</a></li>
+</ul>
+
+<p>可以单击显示的链接 (<strong>A</strong>) 以直接转至每个部分。</p>
+
+<p>完成后，单击 <strong>Save and Preview</strong> 按钮 (<strong>B</strong>) 以提交您的更改。</p>
+
+<p><a name="Profile"></a></p>
+
+<h3>Profile</h3>
+
+<p>使用 Profile 部分可以更新帐户的头像、名称、网站、电子邮件地址和电话号码。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin-info1.png" alt="在 Profile 部分中可以添加联系信息">
+<figcaption>在 Profile 部分中可以添加联系信息</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>标签：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<a name="ProfilePicture"></a><strong>Profile picture</strong>
+</td>
+	<td style="text-align:left;">可以上传任何徽标或品牌图像，只要它们不令人反感或粗俗，并且您有使用权限。不得使用 Unity 的徽标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="ProfilePublisherName"></a><strong>Publisher Name</strong>
+</td>
+	<td style="text-align:left;">输入与您的发布者帐户关联的名称。该名称会显示在您帐户在 Asset Store 中的任何位置（内部和外部）。<br><br>确保此名称不违反任何商标或品牌。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="ProfileWebsite"></a><strong>Website</strong>
+</td>
+	<td style="text-align:left;">输入您的网站主页的位置。网站或职务信息必须是职业页面和联系方式页面。您可以将自己的 Unity Connect 个人资料用作网站（可以完成 90%）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="ProfileCustomerSupport"></a><strong>Customer Support</strong>
+</td>
+	<td style="text-align:left;">输入网站支持页面的 URL 以及电子邮件地址，客户可将其用来与您联系以获取资源包帮助。<br><br>有关更多信息，请参阅<a href="AssetStoreSupport.html">为您的客户提供支持</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Business Contact</strong></td>
+	<td style="text-align:left;">输入您的业务联系信息。此信息仅供内部使用，不会公开披露。我们需要就促销或其他业务相关问题与您联系时，才使用此信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Technical Contact</strong></td>
+	<td style="text-align:left;">输入您的技术联系信息。此信息仅供内部使用，不会公开披露。我们需要就技术问题与您联系时，才使用此信息。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Promo"></a></p>
+
+<h3>Promo</h3>
+
+<p>使用 Promo 部分可以输入促销图片、视频和消息，从而吸引潜在客户访问您的帐户页面。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin-info2.png" alt="Promo 部分让您可以将消息、图片和视频添加到您的发布者帐户">
+<figcaption>Promo 部分让您可以将消息、图片和视频添加到您的发布者帐户</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>标签：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Promo media</strong></td>
+	<td style="text-align:left;">上传图片、视频文件或链接，从而在 Publisher Account 页面上用于吸引客户浏览您的资源包。此内容通常是访问者首先看到的，用于向用户介绍您的品牌、作品以及您本人。您可以经常更改此内容，将其用于营销目的。<br><br>要添加文件，可以拖放文件，或者单击 <strong>Choose File</strong> 按钮来从计算机中选择文件。<br><br>要添加链接，可以输入 URL 并单击 <strong>Upload link</strong> 按钮。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Promo headline</strong></td>
+	<td style="text-align:left;">用简短句子描述您的资源或品牌。使用此标题行可以吸引潜在客户的注意力。这是可选字段。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Promo paragraph</strong></td>
+	<td style="text-align:left;">输入一段文字来更详细地描述您创建的资源类型。请利用此空间进行自我品牌营销。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="About"></a></p>
+
+<h3>About</h3>
+
+<p>使用 <strong>About</strong> 部分可以添加有关您本人的任何信息，例如您的工作经验或爱好，这些信息可以帮助您在个人层面上与用户建立更多联系。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin-info3.png" alt="About 部分让您可以添加自己的传记信息和历史信息">
+<figcaption><strong>About</strong> 部分让您可以添加自己的传记信息和历史信息</figcaption>
+</figure>
+
+<p><a name="Social"></a></p>
+
+<h3>Social Media</h3>
+
+<p>使用 <strong>Social Media</strong> 部分可以添加外部链接，从而让用户可以通过其他方式了解您的作品、提问或与您的社区进行联系。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin-info4.png" alt="社交媒体可让您与用户建立联系">
+<figcaption>社交媒体可让您与用户建立联系</figcaption>
+</figure>
+
+<p>从下拉菜单 (<strong>A</strong>) 中选择要链接到的社交媒体渠道 (<strong>C</strong>)，最多可选择五个。右侧会出现一个文本框 (<strong>B</strong>)，可用于添加您拥有的相关社交媒体帐户的完整 URL。例如，可以为 YouTube 页面添加如下链接：<code>https://www.youtube.com/user/&lt;your_id&gt;</code>。</p>
+
+<p><a name="Google"></a></p>
+
+<h3>Google Analytics</h3>
+
+<p>使用 <strong>Google Analytics</strong> 部分可以将您的产品页面和发布者页面连接到您的 Google Analytics 帐户，从而跟踪页面浏览量和购买量。Unity 不支持配置或使用 Google Analytics。有关更多信息，请参阅 <a href="http://www.google.com/analytics/">Google Analytics 网站</a>。</p>
+
+<figure>
+<img src="../uploads/Main/AssetStoreAdmin-info5.png" alt="Google Analytics 部分可让您将该帐户关联到您的 Google Analytics 帐户">
+<figcaption>Google Analytics 部分可让您将该帐户关联到您的 Google Analytics 帐户</figcaption>
+</figure>
+
+<p>有关如何将 Google Analytics 帐户关联到发布者帐户的更多信息，请参阅<a href="AssetStoreAnalytics.html">将帐户关联到 Google Analytics</a>。</p>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetStoreUsers.html"></a></span><div class="tip">管理您的发布团队</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PlatformSpecific.html"></a></span><div class="tip">平台开发</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

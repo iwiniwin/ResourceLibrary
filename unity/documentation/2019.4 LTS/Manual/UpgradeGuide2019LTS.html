@@ -1,0 +1,515 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="升级到 Unity 2019 LTS - Unity 手册">
+<title>升级到 Unity 2019 LTS - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/upgrade2019-assetpipe01.png">
+<meta name="description" content="本页面列出了从任何 Unity 2018 版本升级到 2019 LTS 时在 Unity 2019 中可能对现有项目造成影响的更改。如果要从 Unity 2017 版本升级，请首先参阅升级到 Unity 2018 LTS 指南。">
+<meta property="og:description" content="本页面列出了从任何 Unity 2018 版本升级到 2019 LTS 时在 Unity 2019 中可能对现有项目造成影响的更改。如果要从 Unity 2017 版本升级，请首先参阅升级到 Unity 2018 LTS 指南。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UpgradeGuide2019LTS';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UpgradeGuide2019LTS.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UpgradeGuide2019LTS.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UpgradeGuide2019LTS.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UpgradeGuide2019LTS.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UpgradeGuide2019LTS.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UpgradeGuide2019LTS.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UpgradeGuide2019LTS.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UpgradeGuide2019LTS.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UpgradeGuide2019LTS.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UpgradeGuide2019LTS.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UpgradeGuide2019LTS.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UpgradeGuide2019LTS.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UpgradeGuide2019LTS.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UpgradeGuide2019LTS.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UpgradeGuide2019LTS.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UpgradeGuide2019LTS.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UpgradeGuide2019LTS.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UpgradeGuide2019LTS.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UpgradeGuide2019LTS.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UpgradeGuide2019LTS.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UpgradeGuide2019LTS.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UpgradeGuide2019LTS.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UpgradeGuide2019LTS.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UpgradeGuide2019LTS.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UpgradeGuide2019LTS.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UpgradeGuide2019LTS.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UpgradeGuide2019LTS.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UpgradeGuide2019LTS.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UpgradeGuide2019LTS.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UpgradeGuide2019LTS.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UpgradeGuide2019LTS.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UpgradeGuide2019LTS.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UpgradeGuide2019LTS.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UpgradeGuide2019LTS.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UpgradeGuide2019LTS.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UpgradeGuide2019LTS.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UpgradeGuide2019LTS.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UpgradeGuide2019LTS.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UpgradeGuide2019LTS.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UpgradeGuide2019LTS.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UpgradeGuide2019LTS.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UpgradeGuide2019LTS.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UpgradeGuide2019LTS.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UpgradeGuide2019LTS.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UpgradeGuide2019LTS.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UpgradeGuide2019LTS.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UpgradeGuide2019LTS.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UpgradeGuide2019LTS.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li>升级到 Unity 2019 LTS</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="APIUpdater.html"></a></span><div class="tip">使用 API Updater</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide2018LTS.html"></a></span><div class="tip">升级到 Unity 2018 LTS</div>
+</div>
+</div></div>
+<h1>升级到 Unity 2019 LTS</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a name="TopOfPage"></a>
+本页面列出了从任何 Unity 2018 版本升级到 2019 LTS 时在 Unity 2019 中可能对现有项目造成影响的更改。如果要从 Unity 2017 版本升级，请首先参阅<a href="UpgradeGuide2018LTS.html">升级到 Unity 2018 LTS</a> 指南。</p>
+
+<p>请注意，<strong>2019 LTS</strong> 也称为 <strong>2019.4</strong>。</p>
+
+<h3>页面大纲</h3>
+
+<ul>
+<li><a href="#URP">轻量级渲染管线 (LWRP) 变为通用渲染管线 (URP)</a></li>
+<li><a href="#ShaderUtil">ShaderUtil 更新</a></li>
+<li><a href="#AnimationJobs">动画 C# 作业</a></li>
+<li><a href="#SRP">可编程渲染管线 (SRP) API 更改</a></li>
+<li><a href="#Addressables">可寻址资源</a></li>
+<li><a href="#NewImport">新的资源导入管线</a></li>
+<li><a href="#Tilemap">Tilemap Editor 现在是一个包</a></li>
+<li><a href="#SpriteTooling">SpriteTooling 现在是一个包</a></li>
+<li><a href="#UnityUI">Unity UI 现在是一个包</a></li>
+<li><a href="#UIElements">UI Elements 现在是标准功能，而非实验性功能</a></li>
+<li><a href="#NET">.NET 3.5 Equivalent 脚本运行时已删除</a></li>
+<li><a href="#Lighting">光照改进</a></li>
+<li><a href="#CompatibilityAttribute">UnityAPICompatibilityVersionAttribute 构造函数更改</a></li>
+<li><a href="#SystemRequirements">更改的系统要求</a></li>
+<li><a href="#Multiplayer">多玩家 (UNet) 高级 API 已移入包中</a></li>
+</ul>
+
+<hr>
+
+<p><a name="URP"></a></p>
+
+<h3>轻量级渲染管线 (LWRP) 变为通用渲染管线 (URP)</h3>
+
+<p>现在，轻量级渲染管线 (LWRP) 在 Unity 2019.3 和更高版本中变为通用渲染管线 (URP)。</p>
+
+<p>如果您的项目使用 LWRP，则需要升级项目以使用 URP。有关升级过程的逐步操作指南，请参阅 <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/index.html?subfolder=/manual/upgrade-lwrp-to-urp.html">LWRP 到 URP 升级指南</a>。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="ShaderUtil"></a></p>
+
+<h3>ShaderUtil 更新</h3>
+
+<p><code>ShaderUtil.ClearShaderErrors()</code> 已替换为 <code>ShaderUtil.ClearShaderMessages()</code> 以确保命名一致性，现在已标记为“过时”。在 Unity 2019.4 中打开现有项目脚本时，它们会自动升级。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="AnimationJobs"></a></p>
+
+<h3>动画 C# 作业</h3>
+
+<p>动画 C# 作业已移出实验性命名空间（从 UnityEngine.Experimental.Animations 移至 UnityEngine.Animations）。</p>
+
+<p>Unity 2019.4 自动更新您的大多数脚本，但具有以下 Animator 作业扩展方法的脚本除外：</p>
+
+<ul>
+<li>BindStreamTransform</li>
+<li>BindStreamProperty</li>
+<li>BindCustomStreamProperty</li>
+<li>BindSceneTransform</li>
+<li>BindSceneProperty</li>
+<li>OpenAnimationStream</li>
+<li>CloseAnimationStream</li>
+<li>ResolveAllStreamHandles</li>
+<li>ResolveAllSceneHandles</li>
+</ul>
+
+<p>必须手动将 using <code>UnityEngine.Animations;</code> 语句添加到这些脚本。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="SRP"></a></p>
+
+<h3>可编程渲染管线 (SRP) API 更改</h3>
+
+<p>未记录在册的 <code>RenderPipeline.beginCameraRendering</code> 和 <code>RenderPipeline.beginFrameRendering</code> 事件已被删除。应该用 <code>RenderPipelineManager</code> 类中的事件替换这些事件。</p>
+
+<p>RenderPipeline 静态保护的函数 <code>BeginFrameRendering</code> 和 <code>BeginCameraRendering</code> 已被删除。必须将这些函数替换为参数中接受 <code>ScriptableRenderContext</code> 的签名。另外，现在还必须调用 <code>EndCameraRendering</code> 和 <code>EndFrameRendering</code> 方法。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="Addressables"></a></p>
+
+<h3>可寻址资源</h3>
+
+<p>现在已弃用 <code>AsyncLoad</code>。请改用 <a href="../ScriptReference/AssetBundle.LoadAssetAsync.html">Async.LoadAssetAsync</a>。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="NewImport"></a></p>
+
+<h3>新的资源导入管线</h3>
+
+<p>新的资源导入管线可在 Unity 2019.3 及更高版本中使用。如果已有现成的项目，则可以使用 Editor 中的 __Project Settings 窗口__来升级到新的资源导入管线：</p>
+
+<figure>
+<img src="../uploads/Main/upgrade2019-assetpipe01.png" alt="">
+</figure>
+
+<figure>
+<img src="../uploads/Main/upgrade2019-assetpipe02.png" alt="">
+</figure>
+
+<p>选择 <strong>Version 2</strong> 将告诉编辑器您现在要对该项目使用新的资源导入管线，然后重新启动您的项目就会使用新的资源导入管线代码将项目重新导入。从本质上讲，这一过程与删除 Library 文件夹具有相同的效果，但不会删除这个文件夹。切换为使用资源导入管线 V2 时，原始资源导入管线的导入结果不会被删除，因为 V2 会创建自己的文件夹结构来存储导入结果。
+在 Unity 2019.2 或更早版本中创建的项目在默认情况下仍将使用原始资源导入管线。首次在 Unity 2019.3 中打开此类项目时，可以选择升级到新的资源导入管线。如果您拒绝这样做，则项目将继续使用原始的资源导入管线。此外，所选版本会存储在项目的 EditorSettings.asset 文件中，因此可以进行版本控制。</p>
+
+<figure>
+<img src="../uploads/Main/upgrade2019-assetpipe03.png" alt="">
+</figure>
+
+<h4>使用新资源导入管线创建的新项目</h4>
+
+<p>使用 Unity 2019.3 或更高版本创建新项目时，新的资源导入管线已成为新的默认工作方式。创建的所有新项目都将使用新管线。</p>
+
+<h4>新资源导入管线的行为变化</h4>
+
+<p><strong>同一资源的多个版本缓存在 Library 文件夹中</strong> <br>
+在 Unity 2019.2 之前（具有原始的资源导入管线），Library 文件夹包含资源的 GUID 作为文件名。因此，从一个平台切换到另一个平台将使 <strong>Library</strong> 文件夹中的导入结果无效，从而导致每次切换平台时都要重新导入。</p>
+
+<figure>
+<img src="../uploads/Main/upgrade2019-assetpipe04.png" alt="">
+</figure>
+
+<h4>资源导入管线 V1</h4>
+
+<p>如果您每天必须在平台之间来回切换多次，这可能很容易就用去数小时时间，具体取决于您的项目规模。
+一些开发者已经找到这个问题的解决方法，例如在计算机上按平台创建项目副本，但是这样做的扩展性不是很好。
+在新的资源导入管线中，我们删除了 GUID 到文件名的映射。由于会跟踪特定资源的依赖关系，因此我们能够通过哈希算法将所有这些数据整合在一起，从而创建资源导入结果的修订版。这样，我们就可以对每个资源进行多次修订，意味着我们不再受限于 GUID 到文件名的映射。没有这样的要求后，我们可以拥有在不同配置之间都有效的导入结果。为了实现快速平台切换，我们可以为每个平台提供一个导入结果，因此，在来回切换平台时，导入结果便已经存在，这样可以使平台切换比使用资源导入管线 V1 快许多个数量级。</p>
+
+<figure>
+<img src="../uploads/Main/upgrade2019-assetpipe05.png" alt="">
+</figure>
+
+<h4>资源导入管线 V2</h4>
+
+<p><strong>缓存和 Unity Accelerator</strong> <br>
+大多数导入器进行了大量改进工作，旨在改善它们的确定性并对缓存产生积极影响。这意味着，如果使用 Unity Accelerator，则导入结果将被上传到集中的存储位置，其他机器可以连接到该位置并因为同一资源在另一台机器上已经完成处理而受益。现在可以缓存具有动态依赖项的资源（例如，嵌套预制件、着色器等）。有关导入器及其关联文件的更全面列表，请查看新的 AssetDatabase 手册页</p>
+
+<p><strong>缓存脚本化导入器 (Scripted Importer)：</strong> <br>
+具有已注册依赖项的 ScriptedImporter 和导入器并未与旧的资源导入管线一起缓存。</p>
+
+<blockquote>
+<p><em>以前的行为</em></p>
+
+<blockquote>
+<p>使用旧的资源导入管线时，平台的切换会使所有导入无效，因为导入结果基于 GUID，因此每次切换平台都会覆盖导入结果。</p>
+</blockquote>
+
+<p><em>新的行为</em></p>
+
+<blockquote>
+<p>在新的资源导入管线中，切换平台不会使导入无效，因为磁盘上代表导入结果的文件是其自身内容的哈希，所以可以确保切换平台时内容不同并生成新文件，这样会保留两个版本的导入结果，只需在一个或另一个之间切换即可，而无需导入任何内容。</p>
+</blockquote>
+</blockquote>
+
+<h4>调用 OnPostProcessAllAssets 的次数</h4>
+
+<p>在旧的资源导入管线中，对 <code>OnPostProcessAllAssets</code> 函数的调用次数是不确定的。这意味着对于相同的更改，可以一次或多次调用此函数。新的资源导入管线中将对检测到的脚本更改（.cs 文件）进行一次 <code>OnPostProcessAllAssets</code> 调用，而对非脚本更改（如 .png、.fbx、.wav 文件）再进行一次调用。</p>
+
+<h4>同步脚本编译</h4>
+
+<p>在旧的资源导入管线中，可能会触发编译并在进行编译时使链条进入运行模式。在某些情况下，这可以节省大量时间，因为非同步编译可能导致不确定的结果。新的资源导入管线已对此进行了更改，由资源导入管线驱动脚本编译的大多数工作，因此现在需要确定性方法，从而锁定编辑器，直到脚本编译完成为止。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="Tilemap"></a></p>
+
+<h3>Tilemap Editor 现在是一个包</h3>
+
+<p>Tilemap Editor 现在是一个包。该包将自动安装在使用 2D 项目模板创建的新 Unity 项目中。有关安装包的更多信息，请参阅<a href="upm-ui-actions.html">添加和删除包</a>。</p>
+
+<p>已将所有公共类移到 UnityEditor.Tilemaps 命名空间。Unity 将引用这些类的脚本编译到 “Unity.2D.Tilemap.Editor” 程序集定义资源中。它们如下：</p>
+
+<ul>
+<li>GridBrush</li>
+<li>GridBrushEditorBase</li>
+<li>GridBrushEditor</li>
+<li>GridSelection</li>
+</ul>
+
+<p>Unity 将尝试在脚本中使用 <code>using</code> 语句来更新相关的瓦片地图，但是请检查并在必要时进行更改。</p>
+
+<p>如果要使用属于程序集定义的脚本来引用瓦片地图工具类，应将“Unity.2D.Tilemap.Editor”程序集定义添加为程序集定义下的程序集定义引用。Unity 可能已经自动为您进行此设置，但如果尚未设置，请进行更改。</p>
+
+<figure>
+<img src="../uploads/Main/upgrade20192-tilemap.png" alt="Tilemap Editor 的程序集定义">
+<figcaption>Tilemap Editor 的程序集定义</figcaption>
+</figure>
+
+<p>如果您预编译的程序集引用早期 Unity 版本的瓦片地图工具类，则由于这些更改，您在使用它们时会遇到问题。如果可能，请根据新的瓦片地图工具程序集来更新并重新编译这些程序集。</p>
+
+<p>如果您预编译的程序集引用早期 Unity 版本的瓦片地图工具类，您需要更新并重新编译这些程序集以引用新的瓦片地图工具程序集。</p>
+
+<p>导入预编译的程序集时，这些问题的示例如下（作为 Console 窗口中的错误）：</p>
+
+<p>Failed to extract {Class in Precompiled Assembly} class of base type UnityEditor.GridBrush when inspecting {Precompiled Assembly}
+Unloading broken assembly {Precompiled Assembly}, this assembly can cause crashes in the runtime</p>
+
+<p>这些错误可能是因为从某个瓦片地图工具类（例如 GridBrush）继承而引起的。</p>
+
+<p>使用预编译的程序集时，这些问题的示例如下（作为 Console 窗口中的错误）：</p>
+
+<pre><code>TypeLoadException: Could not resolve type with token 01000011 (from typeref, class/assembly UnityEditor.GridBrush, UnityEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)
+Error: Could not load signature of {Method in Precompiled Assembly) due to: Could not resolve type with token 01000011 (from typeref, class/assembly UnityEditor.GridBrush, UnityEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null) assembly:UnityEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null type:UnityEditor.GridBrush member:(null) signature:&lt;none&gt;
+</code></pre>
+
+<p>这些错误可能是因为创建或调用瓦片地图工具类（例如 GridBrush）的某个方法而引起的。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="SpriteTooling"></a></p>
+
+<h3>SpriteTooling 现在是一个包</h3>
+
+<p>Sprite Tooling（Sprite Editor 窗口）现在是一个包。有关安装包的更多信息，请参阅<a href="#upm-ui-actions">添加和删除包</a>。</p>
+
+<ul>
+<li>默认情况下未将此包添加到新的 Unity 项目中，除非新项目是使用 2D 项目模板创建的。</li>
+<li>升级到 Unity 2019.1 后，此包会添加到预先存在的 Unity 项目（2019.1 及更早版本）中。如果您的项目没有使用 2D 精灵，并且不需要使用 Sprite Tooling，您可以删除此包。</li>
+<li>作为将 Sprite Tooling 转换为包的一部分，已删除实验性名称空间。如果您的项目有脚本引用与 Sprite Tooling 相关的类，请确保升级后它们使用正确的命名空间，例如在必要时添加“using UnityEditor.U2D.Sprites”。</li>
+<li>如果要使用属于程序集定义的脚本来引用精灵类，需要将“Unity.2D.Sprite.Editor”程序集定义添加为程序集定义下的程序集定义引用。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/upgrade20192-sprite.png" alt="Sprite Tooling 的程序集定义">
+<figcaption>Sprite Tooling 的程序集定义</figcaption>
+</figure>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="UnityUI"></a></p>
+
+<h3>Unity UI 现在是一个包</h3>
+
+<p>Unity UI (UGUI) 现在是一个包 (com.unity.ugui)。可以从 Package Manager（菜单：Window &gt; Package Manager）访问它。</p>
+
+<p>Unity UI 是 Unity 随附的核心包。您无需将其安装在新项目中。
+当您将使用 2019.2b1 和更早版本创建的现有 Unity 项目升级到 Unity 2019.2 时，会自动添加此包。
+程序集定义会自动获得对 uGUI 程序集的引用。
+如果在较旧的 Unity 版本之上安装 Unity 2019.2，请确保已删除 \Editor\Data\UnityExtensions\Unity 中的 GUISystem 文件夹。否则，您可能会收到类重新定义错误。
+Unity UI 源代码不再发布到 BitBucket，因为 Unity 会随该包一起提供这些代码。
+Unity UI API 文档不再出现在主要的脚本 API 参考中。您可以从 Unity UI 包文档的“脚本 API”部分访问它。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="UIElements"></a></p>
+
+<h3>UI Elements 现在是标准功能，而非实验性功能</h3>
+
+<p>请参阅 <a href="https://docs.google.com/document/d/1mdMtTQVUkzQi7UIBXf1Eg1FzP7krmLVXCt-NwXm1APQ/">UI Elements 2019.1 升级指南</a>以了解更多信息。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="NET"></a></p>
+
+<h3>.NET 3.5 Equivalent 脚本运行时已删除</h3>
+
+<p>已删除用于脚本运行时版本 (Scripting Runtime Version) 的 .NET 3.5 Equivalent 选项。在 2019.2 中打开项目时，项目会自动迁移以使用 .NET 4.x Equivalent 选项。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="Lighting"></a></p>
+
+<h3>光照改进</h3>
+
+<p>在 2019.1 之前，Indirect Intensity 滑动条仅在使用渐进光照贴图 (Progressive Lightmapper) 时影响光照贴图。对于 Enlighten，该滑动条适用于光照探针和光照贴图。现在所有后端都会将 Indirect Intensity 值应用于光照贴图和光照探针。
+再次对光照进行烘焙时，您可能会注意到，如果修改了 Indirect Intensity 值，探针会显得更亮。
+在升级后，最好在重新烘焙光照贴图之前清除烘焙数据 (Clear Baked Data)。</p>
+
+<figure>
+<img src="../uploads/Main/upGuideLighting01.png" alt="">
+</figure>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="CompatibilityAttribute"></a></p>
+
+<h3>UnityAPICompatibilityVersionAttribute 构造函数更改</h3>
+
+<p>接受单个字符串的构造函数现在已弃用。请参阅<a href="../ScriptReference/UnityAPICompatibilityVersionAttribute-ctor.html">文档</a>以了解关于支持的重载的信息。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="SystemRequirements"></a></p>
+
+<h3>更改的系统要求</h3>
+
+<p>以 Unity 2019 LTS 创建的项目需要 macOS 10.12 或 Ubuntu 16.04 或更高版本。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+
+<p><a name="Multiplayer"></a></p>
+
+<h3>多玩家 (UNet) 高级 API 已移入包中</h3>
+
+<p>已将多玩家高级 API 从扩展移入到包中。这不会影响 NetworkTransport 类（低级 API）。已将 Unity 引擎中的所有依赖项移入到包中。这意味着高级 API 现在是独立的，只是目前无法迁移性能分析器中的某些挂钩。</p>
+
+<p>包含高级 API 的更早项目将自动添加该包以防止编译器错误。新项目不会发生此情况，您可以根据需要从 Package Manager 窗口中添加该包。请参阅多玩家高级 API <a href="https://docs.unity3d.com/Packages/com.unity.multiplayer-hlapi@latest/index.html?subfolder=/api">文档</a>。</p>
+
+<p><a href="#TopOfPage">回到顶部</a></p>
+<!-- area:none -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="APIUpdater.html"></a></span><div class="tip">使用 API Updater</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide2018LTS.html"></a></span><div class="tip">升级到 Unity 2018 LTS</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

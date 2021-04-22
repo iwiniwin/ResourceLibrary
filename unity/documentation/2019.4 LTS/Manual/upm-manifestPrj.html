@@ -1,0 +1,306 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="项目清单 - Unity 手册">
+<title>项目清单 - Unity 手册</title>
+<meta name="description" content="Unity 加载项目时，Unity Package Manager 会读取项目清单，以便计算要加载的包的列表。当用户通过 Package Manager 窗口安装或卸载包时，Package Manager 会将这些更改存储在项目清单文件中。项目清单文件通过依赖关系对象来管理包的列表。">
+<meta property="og:description" content="Unity 加载项目时，Unity Package Manager 会读取项目清单，以便计算要加载的包的列表。当用户通过 Package Manager 窗口安装或卸载包时，Package Manager 会将这些更改存储在项目清单文件中。项目清单文件通过依赖关系对象来管理包的列表。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'upm-manifestPrj';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/upm-manifestPrj.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/upm-manifestPrj.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/upm-manifestPrj.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/upm-manifestPrj.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/upm-manifestPrj.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/upm-manifestPrj.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/upm-manifestPrj.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/upm-manifestPrj.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/upm-manifestPrj.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/upm-manifestPrj.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/upm-manifestPrj.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/upm-manifestPrj.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/upm-manifestPrj.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/upm-manifestPrj.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/upm-manifestPrj.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/upm-manifestPrj.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/upm-manifestPrj.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/upm-manifestPrj.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/upm-manifestPrj.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/upm-manifestPrj.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/upm-manifestPrj.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/upm-manifestPrj.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/upm-manifestPrj.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/upm-manifestPrj.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/upm-manifestPrj.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/upm-manifestPrj.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/upm-manifestPrj.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/upm-manifestPrj.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/upm-manifestPrj.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/upm-manifestPrj.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/upm-manifestPrj.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/upm-manifestPrj.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/upm-manifestPrj.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/upm-manifestPrj.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/upm-manifestPrj.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/upm-manifestPrj.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/upm-manifestPrj.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/upm-manifestPrj.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/upm-manifestPrj.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/upm-manifestPrj.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/upm-manifestPrj.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/upm-manifestPrj.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/upm-manifestPrj.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/upm-manifestPrj.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/upm-manifestPrj.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/upm-manifestPrj.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/upm-manifestPrj.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/upm-manifestPrj.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PackagesList.html">包</a></li>
+<li><a href="Packages.html">Unity 的 Package Manager</a></li>
+<li>项目清单</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-assets.html"></a></span><div class="tip">访问包资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-dependencies.html"></a></span><div class="tip">依赖关系</div>
+</div>
+</div></div>
+<h1>项目清单</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 加载项目时，Unity Package Manager 会读取项目清单，以便计算要加载的包的列表。当用户通过 <a href="upm-ui.html">Package Manager 窗口</a>安装或卸载包时，Package Manager 会将这些更改存储在项目清单文件中。项目清单文件通过<a href="#dependencies">依赖关系</a>对象来管理包的列表。</p>
+
+<p>此外，项目清单还可以作为 Package Manager 的配置文件。它存储一个或多个包注册表的位置。对于 Git 包，项目清单还提供了一个锁定对象，用于定义提交哈希和修订号，以确保 Package Manager 始终安装完全相同的依赖项。</p>
+
+<p>您可以在 Unity 项目根文件夹下的 <code>Packages</code> 文件夹中找到名为 <code>manifest.json</code> 的项目清单文件。与<a href="upm-manifestPkg.html">包清单文件</a>类似，项目清单文件使用 JSON（JavaScript 对象表示法）语法。</p>
+
+<h2>属性</h2>
+
+<p>所有属性均为可选。但是，如果您的项目清单文件不包含任何值，则不会加载 <strong>Package Manager</strong> 窗口，并且 Package Manager 不会加载任何包。</p>
+
+<p><strong>提示</strong>：任何时候，都可以从 <a href="upm-errors.html#Reset">Unity 帮助主菜单</a>中选择 <strong>Reset packages to defaults</strong> 来解决注册表问题。但请注意，此操作将重置您对项目中的包所做的所有更改，因此最好将这种策略用作最后的选择。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键</strong></th>
+	<th style="text-align:left;"><strong>JSON 类型</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<a name="dependencies"></a><strong>dependencies</strong>
+</td>
+	<td style="text-align:left;">对象</td>
+	<td style="text-align:left;">项目中可用包的列表。清单中的此条目使用映射结构列出与项目所需<a href="upm-manifestPkg.html#version">版本</a>关联的<a href="upm-manifestPkg.html#name">包名称</a>。<br><br>请参阅<a href="upm-dependencies.html">依赖关系</a>部分了解有关所有受支持模式的更详细概述。<br><br><strong>注意</strong>：该列表不包括间接依赖项（也就是其他包需要的包）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="registry"></a><strong>registry</strong>
+</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">Unity Package Manager 主注册表的 URL。这将覆盖默认的注册表 URL (<code>https://packages.unity.com</code>)。<br><br><strong>注意</strong>：如果您用自己的注册表覆盖默认注册表，则会失去对官方 Unity 包的访问权限。但如果您想使用自己的私有包集合来扩充 Unity 包库，请设置 <strong>scopedRegistries</strong> 属性以改用某一范围内的注册表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="scopedRegistries"></a><strong>scopedRegistries</strong>
+</td>
+	<td style="text-align:left;">对象数组</td>
+	<td style="text-align:left;">指定除了默认注册表之外的自定义注册表。这样允许您托管自己的包。<br><br>请参阅<a href="upm-scoped.html">范围注册表</a>一节以了解更多详细信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>lock</strong></td>
+	<td style="text-align:left;">对象</td>
+	<td style="text-align:left;">用提交哈希和所选修订版本描述 Git 包解析信息。Package Manager 将自动更新此属性。这样可以保证 Package Manager 安装完全相同的依赖项。<br><br>该属性是为 Git 包保留的属性，但是其他功能未来可能会使用该属性，以保证确定性的包版本解析。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="testables"></a><strong>testables</strong>
+</td>
+	<td style="text-align:left;">字符串数组</td>
+	<td style="text-align:left;">列出您要包含在 <a href="testing-editortestsrunner.html">Unity Test Runner</a> 中的包名称。有关更多信息，请参阅<a href="cus-tests.html">向包添加测试</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>项目清单示例</h2>
+
+<pre><code class="json">{
+  "registry": "https://my.registry.com",
+  "scopedRegistries": [{
+    "name": "My internal registry",
+    "url": "https://my.internal.registry.com",
+    "scopes": [
+      "com.company"
+    ]
+  }],
+  "dependencies": {
+    "com.unity.package-1": "1.0.0",
+    "com.unity.package-2": "2.0.0",
+    "com.unity.package-3": "3.0.0",
+    "com.unity.my-local-package": "file:/path/to/com.unity.my-local-package",
+    "com.unity.my-git-package": "https://my.repository/my-package.git#v1.2.3"
+  },
+  "lock": {
+    "com.unity.my-git-package": {
+       "hash": "9e72f9d5a6a3dadc38d813d8399e1b0e86781a49",
+       "revision": "v1.2.3"
+    }
+  },
+  "testables": [ "com.unity.package-1", "com.unity.package-2" ]
+}
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-assets.html"></a></span><div class="tip">访问包资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-dependencies.html"></a></span><div class="tip">依赖关系</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

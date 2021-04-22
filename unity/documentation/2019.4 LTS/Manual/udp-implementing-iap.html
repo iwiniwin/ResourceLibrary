@@ -1,0 +1,438 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用 UDP 包实现应用内购 - Unity 手册">
+<title>使用 UDP 包实现应用内购 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/UDPManagingGame_07.png">
+<meta name="description" content="Unity 建议在 UDP 控制台中添加和管理 IAP 商品。UDP 控制台中的 IAP 目录是提交到商店后端系统的真实信息来源。此外，UDP 控制台可让你：">
+<meta property="og:description" content="Unity 建议在 UDP 控制台中添加和管理 IAP 商品。UDP 控制台中的 IAP 目录是提交到商店后端系统的真实信息来源。此外，UDP 控制台可让你：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'udp-implementing-iap';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/udp-implementing-iap.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/udp-implementing-iap.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/udp-implementing-iap.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/udp-implementing-iap.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/udp-implementing-iap.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/udp-implementing-iap.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/udp-implementing-iap.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/udp-implementing-iap.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp-implementing-iap.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/udp-implementing-iap.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp-implementing-iap.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp-implementing-iap.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp-implementing-iap.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp-implementing-iap.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp-implementing-iap.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp-implementing-iap.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp-implementing-iap.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp-implementing-iap.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp-implementing-iap.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp-implementing-iap.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp-implementing-iap.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp-implementing-iap.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp-implementing-iap.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp-implementing-iap.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp-implementing-iap.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/udp-implementing-iap.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/udp-implementing-iap.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/udp-implementing-iap.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/udp-implementing-iap.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/udp-implementing-iap.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/udp-implementing-iap.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp-implementing-iap.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/udp-implementing-iap.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp-implementing-iap.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp-implementing-iap.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp-implementing-iap.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp-implementing-iap.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp-implementing-iap.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp-implementing-iap.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp-implementing-iap.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp-implementing-iap.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp-implementing-iap.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp-implementing-iap.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp-implementing-iap.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp-implementing-iap.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp-implementing-iap.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp-implementing-iap.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp-implementing-iap.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="udp.html">Unity 分发平台</a></li>
+<li>使用 UDP 包实现应用内购</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp-distribution.html"></a></span><div class="tip">使用 UDP 分发游戏</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-sandbox-testing.html"></a></span><div class="tip">在 UDP 沙盒中测试游戏</div>
+</div>
+</div></div>
+<h1>使用 UDP 包实现应用内购</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 建议在 UDP 控制台中添加和管理 IAP 商品。UDP 控制台中的 <a href="udp.html#iap-catalog">IAP 目录</a>是提交到商店后端系统的真实信息来源。此外，UDP 控制台可让你：</p>
+
+<ul>
+<li>管理多个 IAP 价格和货币</li>
+<li>添加多种语言的描述</li>
+<li>通过 CSV 文件批量上传商品（支持多种货币和语言）</li>
+</ul>
+
+<p><strong>注意</strong>：如果仅使用 UDP 包，仍应在 Unity 编辑器中创建至少一个 IAP 商品以测试其是否能够与 UDP 控制台正确同步。
+如果使用的是 Unity IAP 包（使用无代码实现方法），必须在 Unity 编辑器中添加每个 IAP 商品，并全部上传到 UDP 控制台。如果使用的是 Unity IAP 包，并且已通过代码实现了 IAP，请在 UDP 控制台中创建 IAP 商品。</p>
+
+<p>如果在游戏客户端中有一个 IAP 目录，则 UDP 可以使它在 Unity 编辑器和 UDP 控制台之间保持同步。</p>
+
+<p><a name="managing-iap"></a></p>
+
+<h2>在 UDP 控制台上管理应用内购</h2>
+
+<p>在 <a href="https://distribute.dashboard.unity.com/">UDP 控制台</a>中，通过“我的游戏”页面导航到游戏。
+在“游戏信息”页面中，选择<strong>编辑信息</strong>按钮以进入编辑模式。要保存更改，请选择<strong>保存</strong>。要放弃更改，请选择<strong>取消</strong>。
+此部分涉及如何从 UDP 控制台编辑、创建和删除 IAP 商品。</p>
+
+<figure>
+<img src="../uploads/Main/UDPManagingGame_07.png" alt="">
+</figure>
+
+<p><a name="create"></a></p>
+
+<h3>创建新的 IAP 商品</h3>
+
+<p>要在 UDP 控制台中创建新的 IAP 商品，请执行以下操作：</p>
+
+<p>1.在“游戏信息”页面上选择<strong>编辑信息</strong>。
+1.选择<strong>添加项目</strong>以创建新商品。
+1.指定并保存<a href="udp-reference.html#iap">商品信息</a>。
+ 1.遵循商品 ID 的要求，以确保它们对应用商店而言有效。
+ 1.确保在游戏中定义的 IAP 商品使用的是 IAP 目录中设置的<strong>产品 ID (Product ID)</strong>。
+1.选择<strong>管理金额和货币</strong>以便：
+ 1.将 IAP 价格从 USD 转换为其他货币。
+ 1.调整这些货币的价格。
+1.选择<strong>保存</strong>以保存更改。</p>
+
+<p><strong>注意</strong>：如果要创建大量 IAP 商品，请考虑使用<a href="#bulk">批量 IAP 导入</a>功能一次创建所有 IAP 商品，包括本地化描述和多种货币的定价。</p>
+
+<p>如果使用 UDP 包，则在控制台中添加的所有新 IAP 商品都将同步到 Unity 项目。你无需重新构建游戏即可包含这些商品。</p>
+
+<p><a name="edit"></a></p>
+
+<h3>编辑 IAP 描述</h3>
+
+<p>要编辑 IAP 描述，请按照以下步骤操作。</p>
+
+<p>1.在“游戏信息”页面上选择<strong>编辑信息</strong>。
+1.通过语言下拉选单选择要编辑描述的语言。
+1.在“应用内购”部分中，选择铅笔图标以编辑现有的 IAP 商品。
+1.编辑 IAP 商品信息：
+ 1.<strong>产品名称</strong>：IAP 商品的名称
+ 1.<strong>描述</strong>：IAP 商品的简要描述
+1.选择<strong>保存</strong>以保存更改。</p>
+
+<p><strong>注意</strong>：上述步骤仅针对所选语言编辑 IAP 商品信息。如果要支持大量 IAP 商品和语言，请考虑使用<a href="#bulk">批量 IAP 导入</a>功能导入此信息。</p>
+
+<h3>编辑 IAP 价格和货币</h3>
+
+<p>1.在“游戏信息”页面上选择<strong>编辑信息</strong>。
+1.针对某个 IAP 商品选择<strong>管理金额和货币</strong>以便：
+ 1.更改 IAP 价格。
+ 1.将价格从 USD 转换为其他货币。
+ 1.调整这些货币的价格。
+1.选择<strong>保存</strong>以保存更改。</p>
+
+<p><strong>提示</strong>：要将货币设置为常用货币，请选择相应货币代码旁边的星形图标。这会将货币固定在列表的顶部。取消选择星形图标即可取消固定。</p>
+
+<p><strong>注意</strong>：如果要支持大量 IAP 商品和货币，可使用<strong>转换</strong>功能根据为每个 IAP 商品设置的美元金额将所有 IAP 价格自动转换为全球货币。此操作将覆盖先前设置的任何本地价格。</p>
+
+<p>或者，使用<a href="#bulk">批量 IAP 导入</a>功能一次导入所有这些信息。</p>
+
+<h3>删除 IAP 商品</h3>
+
+<p>1.在“游戏信息”页面上选择<strong>编辑信息</strong>。
+1.选择垃圾桶图标以删除 IAP 商品。
+1.选择<strong>保存</strong>以保存更改。</p>
+
+<h3>批量导入 IAP 商品</h3>
+
+<p>1.在“游戏信息”页面上选择<strong>编辑信息</strong>。
+1.在“应用内购”面板的右上角选择<strong>导入目录</strong>。<br>有关此功能的完整介绍，请参阅“批量 IAP 导入”。
+1.选择<strong>保存</strong>以保存更改。</p>
+
+<h3>从 Google Play 导入游戏信息</h3>
+
+<p>如果你已经在 Google Play 上发布了游戏，可使用游戏的 Google Play URL 导入基本信息：</p>
+
+<p>1.选择<strong>从 Google Play 导入</strong>。
+1.将游戏的 Google Play URL 粘贴到输入框中。
+1.要指定需要专门导入的语言，请使用包含语言后缀的 Google Play URL（例如，意大利语应使用 <code>&amp;hl=it</code>）。<br>如果你的 Google Play URL 不包含语言后缀，则 UDP 会获取你当前正在 UDP 控制台中编辑的语言（如果已在 Google Play 上设置）的信息。
+1.选择<strong>导入</strong>。
+1.仔细检查结果，因为在某些情况下，计算机的 IP 地址可能最终决定使用哪种语言。</p>
+
+<p><a name="bulk"></a></p>
+
+<h2>批量 IAP 导入</h2>
+
+<p>如果有很多 IAP 商品，可使用批量 IAP 导入功能来简化 IAP 目录的管理。这样，就可以将包含所有 IAP 商品详细信息（包括多种货币的价格和多种语言的描述）的 CSV 文件以常规 UDP 格式和 Google Play 格式上传到 UDP 控制台。</p>
+
+<p>Unity 建议你仍在 Unity 编辑器中添加 IAP 商品以进行测试，从而确保可以在沙盒环境中购买 IAP 商品。</p>
+
+<p><strong>注意</strong>：如果你的 CSV 文件包含多种语言，请在导入 CSV 文件之前<a href="#udp-distribution.html#languages">添加支持的语言</a>。</p>
+
+<p>本节介绍如何通过 CSV 批量导入 IAP 商品。</p>
+
+<h3>实现要求</h3>
+
+<h4>添加新的 IAP 商品</h4>
+
+<p>仅当实现了 UDP 后，才仅应使用批量 IAP 导入功能添加新的 IAP 商品：</p>
+
+<ul>
+<li>使用 UDP 包</li>
+<li>使用 Unity IAP（代码实现）</li>
+</ul>
+
+<p>Unity 建议你仍在 Unity 编辑器中添加 IAP 商品以进行测试，从而确保可以在沙盒环境中购买 IAP 商品。</p>
+
+<h4>添加本地化描述和价格</h4>
+
+<p>对于所有实现，你都可以使用批量 IAP 导入功能为现有 IAP 商品分配更多语言的描述和更多货币的价格。</p>
+
+<h4>使用 UDP 包</h4>
+
+<p>可使用批量 IAP 导入功能来完全重新定义游戏的 IAP 目录，而无需重新构建游戏。</p>
+
+<p>只需以良好的工作顺序完成 UDP 实现。</p>
+
+<h4>使用 Unity IAP（代码实现）</h4>
+
+<p>使用 Unity IAP 时，只能将 IAP 目录从编辑器同步到 UDP 控制台。</p>
+
+<p>如果要通过批量 IAP 上传功能将游戏的 IAP 目录上传到 UDP 控制台，则应准备好你的游戏，以便从 UDP 控制台而不是从游戏客户端的默认 IAP 目录获取 IAP 商品信息。</p>
+
+<p>要允许游戏从 UDP 控制台获取 IAP 目录，请不要在代码中调用任何 IAP 商品检索方法。</p>
+
+<p>如需了解更多信息，请参阅<a href="https://docs.unity3d.com/Packages/com.unity.purchasing.udp@2.1/manual/games-with-iap.html#query-iap">查询 IAP 库存</a>。</p>
+
+<h3>下载 CSV 模板</h3>
+
+<p>UDP 提供了一个 CSV 模板用于批量导入 IAP 商品。此模板采用 CSV 文件的常规 UDP 格式。</p>
+
+<p>1.在<strong>游戏信息</strong>页面上选择<strong>编辑信息</strong>。
+2.找到<strong>应用内购</strong>面板。
+3.选择<strong>导入目录</strong>。
+4.选择<strong>下载模板</strong>。</p>
+
+<h3>填写 CSV 文件</h3>
+
+<p>CSV 文件使用逗号 (,) 和分号 (;) 来分隔数据值。逗号用于分隔主数据值，而分号用于分隔子值。</p>
+
+<p>每个 IAP 商品必须完全显示在 CSV 文件内的一行中。</p>
+
+<p>必须以提供的模板的确切<a href="udp-reference.html#csv">格式</a>输入数据。</p>
+
+<h3>上传 CSV 文件</h3>
+
+<p>1.在<strong>游戏信息</strong>页面上选择<strong>编辑信息</strong>。
+2.找到<strong>应用内购</strong>部分。
+3.选择<strong>导入目录</strong>。
+4.选择<strong>上传 CSV</strong> 或将 CSV 文件拖放到指定框中。
+5.选择<strong>导入</strong>以将 IAP 目录上传到 UDP 控制台。</p>
+
+<p><strong>注意</strong>：上传 CSV 文件会完全覆盖此修订版的 IAP 目录。UDP 控制台仅使用 CSV 文件中包含的信息；而先前通过 UDP 控制台输入的其他任何 IAP 信息都会丢失。</p>
+
+<h3>导出 CSV 文件</h3>
+
+<p>要重用或修改现有的 IAP 目录，请执行以下操作：</p>
+
+<p>1.在“游戏信息”页面上选择<strong>编辑信息</strong>。
+1.找到“应用内购”部分。
+1.选择<strong>导出目录</strong>。<br>此时会将现有的 IAP 目录导出为常规 UDP 格式的 CSV 文件。
+1.修改 CSV 文件。
+1.上传 CSV 文件。</p>
+
+<p>仅当 IAP 目录中包含 IAP 商品时，才显示<strong>导出目录</strong>按钮，并且此按钮仅在编辑模式下可见。下图显示了“应用内购”部分中的此按钮。</p>
+
+<figure>
+<img src="../uploads/Main/UDPBulkImport_06.png" alt="">
+</figure>
+
+<p><a name="google"></a></p>
+
+<h2>从 Google Play 格式导入 IAP 商品</h2>
+
+<p>UDP 还支持 Google Play 格式的 CSV 文件。</p>
+
+<p>要使用 Google Play CSV 文件导入 IAP 商品，请执行以下操作：</p>
+
+<p>1.在<strong>游戏信息</strong>页面上选择<strong>编辑信息</strong>。
+1.找到<strong>应用内购</strong>部分。
+1.单击<strong>导入目录</strong>。
+1.选中 <strong>Google Play 格式的 CSV 文件</strong>复选框。
+1.选择“上传 CSV”或将 CSV 文件拖放到指定框中。
+ 1.在 <strong>Google Play 默认货币</strong>字段中，选择游戏的默认货币。
+1.选择<strong>导入</strong>以将 IAP 目录上传到 UDP 控制台。</p>
+
+<h3>价格</h3>
+
+<p>Google Play 按国家/地区设置价格，UDP 按货币设置价格。因此，导入操作会将国家/地区映射到货币。
+如果对于一个 IAP 商品，你使用相同的货币（例如，欧洲国家/地区的欧元 EUR）为不同的国家/地区设置了不同的价格，则 UDP 会使用列表中的第一个国家/地区作为货币的国家/地区。如果有多个国家/地区列出美元 (USD)，则会使用美国区域设置。</p>
+
+<p>UDP 不支持 Google Play 的定价模板。此设置会被忽略。UDP 只使用 CSV 文件中提供的本地价格。</p>
+
+<h3>默认货币</h3>
+
+<p>UDP 使用美元作为其默认货币。如果未在 Google Play 上设置美元定价，UDP 会将 Google Play 默认定价和货币转换为美元，并以此作为 UDP 的默认定价。</p>
+
+<p>在 CSV 文件中设置的本地价格以其各自的货币进行维护。</p>
+
+<p>对于未在 CSV 文件中明确设置的国家/地区，UDP 会将 Google Play 默认定价和货币转换为其各自的货币。</p>
+
+<h3>IAP 商品</h3>
+
+<p>无法从 CSV 文件确定 IAP 商品的类型（消耗品/非消耗品）；你需要向 UDP 指定每个 IAP 商品的类型。</p>
+
+<p>UDP 不支持自动转换 (Auto-Translate)。此设置会被忽略。UDP 只使用 CSV 文件中提供的本地化描述。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp-distribution.html"></a></span><div class="tip">使用 UDP 分发游戏</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-sandbox-testing.html"></a></span><div class="tip">在 UDP 沙盒中测试游戏</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

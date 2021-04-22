@@ -1,0 +1,541 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Profiler 窗口入门 - Unity 手册">
+<title>Profiler 窗口入门 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/profiler-window-layout.png">
+<meta name="description" content="要访问 Unity 性能分析器 (Unity Profiler)，请选择 Window &gt; Analysis &gt; Profiler__，或使用键盘快捷键 Ctrl+7__（macOS 上为 __Command+7__）。">
+<meta property="og:description" content="要访问 Unity 性能分析器 (Unity Profiler)，请选择 Window &gt; Analysis &gt; Profiler__，或使用键盘快捷键 Ctrl+7__（macOS 上为 __Command+7__）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'ProfilerWindow';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/ProfilerWindow.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/ProfilerWindow.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/ProfilerWindow.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/ProfilerWindow.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/ProfilerWindow.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/ProfilerWindow.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/ProfilerWindow.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/ProfilerWindow.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ProfilerWindow.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ProfilerWindow.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ProfilerWindow.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ProfilerWindow.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ProfilerWindow.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ProfilerWindow.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ProfilerWindow.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ProfilerWindow.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ProfilerWindow.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ProfilerWindow.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ProfilerWindow.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ProfilerWindow.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ProfilerWindow.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ProfilerWindow.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ProfilerWindow.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ProfilerWindow.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ProfilerWindow.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/ProfilerWindow.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/ProfilerWindow.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/ProfilerWindow.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/ProfilerWindow.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/ProfilerWindow.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/ProfilerWindow.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ProfilerWindow.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ProfilerWindow.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ProfilerWindow.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ProfilerWindow.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ProfilerWindow.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ProfilerWindow.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ProfilerWindow.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ProfilerWindow.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ProfilerWindow.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ProfilerWindow.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ProfilerWindow.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ProfilerWindow.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ProfilerWindow.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ProfilerWindow.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ProfilerWindow.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ProfilerWindow.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ProfilerWindow.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="analysis.html">分析</a></li>
+<li><a href="Profiler.html">性能分析器概述</a></li>
+<li>Profiler 窗口入门</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Profiler.html"></a></span><div class="tip">性能分析器概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="profiler-profiling-applications.html"></a></span><div class="tip">应用程序性能分析</div>
+</div>
+</div></div>
+<h1>Profiler 窗口入门</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>要访问 Unity 性能分析器 (Unity Profiler)，请选择 <strong>Window &gt; Analysis &gt; Profiler__，或使用键盘快捷键 </strong>Ctrl+7__（macOS 上为 __Command+7__）。</p>
+
+<p>性能分析器记录应用程序性能的多个方面并显示相关信息。使用此信息可以做出有关应用程序中可能需要优化的事项的明智决策，并确认所做的优化是否产生预期结果。</p>
+
+<p>默认情况下，性能分析器记录并保留游戏的最后 300 帧，并显示有关每一帧的详细信息。可以在 Preferences 窗口（菜单：__File &gt; Preferences__）中增加其记录的帧数（至多 2,000 帧）。<strong>注意：</strong>如果将此设置增加到很大的帧数，则性能分析器的开销和内存使用量可能产生更大的性能影响。</p>
+
+<p>可以检查脚本代码，以及应用程序如何使用某些资源（这可能会降低应用程序速度）。还可以比较应用程序在不同设备上的性能。性能分析器具有几个不同的<a href="#modules">性能分析器模块</a>，这些模块可以添加到性能分析会话中，从而获取有关渲染、内存和音频等方面的更多信息。</p>
+
+<p>本页涵盖以下主题：</p>
+
+<ul>
+<li><a href="#layout">Profiler 窗口布局</a></li>
+<li>
+<a href="#controls">性能分析器控件</a>
+
+<ul>
+<li><a href="#deep-profiling">深度性能分析</a></li>
+</ul>
+</li>
+<li>
+<a href="#modules">性能分析器模块</a>
+
+<ul>
+<li><a href="#module-overhead">性能分析器模块开销</a></li>
+<li><a href="#frame-charts">性能分析器帧图表</a></li>
+</ul>
+</li>
+<li><a href="#command-line">命令行参数</a></li>
+</ul>
+
+<p><a name="layout"></a></p>
+
+<h2>Profiler 窗口布局</h2>
+
+<p>Profiler 窗口布局如下：</p>
+
+<figure>
+<img src="../uploads/Main/profiler-window-layout.png" alt="Profiler 窗口，其中已选中 CPU Usage Profiler 模块">
+<figcaption>Profiler 窗口，其中已选中 CPU Usage Profiler 模块</figcaption>
+</figure>
+
+<ul>
+<li>
+<strong>A：</strong><a href="#module">性能分析器模块</a>。这是可以在应用程序中接受性能分析的所有模块的列表。使用此区域顶部的下拉菜单可以在窗口中添加和删除模块。</li>
+<li>
+<strong>B：</strong><a href="#controls">性能分析器控件</a>。使用这些控件可以设置要从哪个设备进行性能分析以及 Unity 应该执行哪种性能分析，可以在帧之间进行导航，还可以开始记录数据。</li>
+<li>
+<strong>C：</strong><strong>帧图表</strong>。此区域包含性能分析器进行性能分析的每个模块的图表。首次打开性能分析器时，该区域为空白；开始对应用程序进行性能分析时，该区域中将填充信息。</li>
+<li>
+<strong>D：</strong><strong>模块详细信息面板</strong>。此窗口区域中的信息根据所选择的模块而异。例如，选择 CPU Usage Profiler 模块时，此区域包含详细的时间轴和切换到 Hierarchy 视图的选项。选择 Rendering Profiler 模块时，此区域显示调试信息列表。首次打开性能分析器时，该区域为空白；开始对应用程序进行性能分析时，该区域中将填充信息。</li>
+</ul>
+
+<p><a name="controls"></a></p>
+
+<h2>性能分析器控件</h2>
+
+<figure>
+<img src="../uploads/Main/ProfilerControls.png" alt="">
+</figure>
+
+<p>性能分析器控件位于 Profiler 窗口顶部的工具栏中。使用这些控件可开始或停止记录性能分析器数据以及浏览分析的帧。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>控件</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Attach to Player</strong></td>
+	<td style="text-align:left;">选择对应用程序进行性能分析时所在的目标。默认设置为 <strong>Playmode</strong>。也可以选择 <strong>Editor</strong> 以对 Unity Editor 进行性能分析并显示 Editor 当前在使用的资源。<br> <br> Unity 还自动检测网络上正在运行或通过 USB 连接的所有设备，并将这些设备显示在下拉选单中。单击下拉选单中的 <strong>Enter IP</strong> 可手动输入设备的 IP 地址，以便在该设备上对应用程序进行性能分析。有关更多信息，请参阅<a href="profiler-profiling-applications.html">应用程序性能分析</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Record</strong></td>
+	<td style="text-align:left;">启用此设置可以在运行应用程序时记录活跃模块的性能分析信息。如果未启用此按钮，则在运行应用程序时，性能分析器不会收集任何数据。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Back arrow</strong></td>
+	<td style="text-align:left;">向后导航一帧。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Forward arrow</strong></td>
+	<td style="text-align:left;">向前导航一帧。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Current Frame</strong></td>
+	<td style="text-align:left;">单击 <strong>Current Frame</strong> 按钮时，帧指示线会跳到最后记录的帧，并且性能分析器进入 Current Frame 模式。性能分析器在此模式下收集数据时，它会停留在当前帧上并实时显示收集的数据。再次单击该按钮将退出 Current Frame 模式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Frame number</strong></td>
+	<td style="text-align:left;">指示当前在性能分析器中查看的帧的编号。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Clear</strong></td>
+	<td style="text-align:left;">从 Profiler 窗口擦除所有数据。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Clear on Play</strong></td>
+	<td style="text-align:left;">启用此设置后，下次单击 Player 窗口中的 Play 或连接到新的目标设备时，可从 Profiler 窗口擦除所有数据。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Deep Profile</strong></td>
+	<td style="text-align:left;">启用此设置可对所有 C# 方法进行性能分析。启用此设置后，Unity 会将检测功能添加到所有 Mono 调用，然后便可以对脚本进行更详细的调查。请参阅<a href="#deep-profiling">深度性能分析</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Call Stacks</strong></td>
+	<td style="text-align:left;">要记录用于脚本内存分配的调用栈，请单击此开关。启用此选项时，性能分析器记录的帧具有 GC.Alloc 样本中的信息；即使在 <strong>Deep Profile</strong> 未激活的情况下，完整调用栈上的这些样本也会导致托管脚本分配。有关更多信息，请参阅“CPU Usage Profiler 模块”页面的<a href="ProfilerCPU.html#allocation-callstacks">分配调用栈</a>部分。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Load</strong></td>
+	<td style="text-align:left;">将已保存的性能分析器数据加载到 Profiler 窗口中。还可以加载播放器通过 <a href="../ScriptReference/Profiling.Profiler-logFile.html">Profiler.logFile</a> API 写出到文件的二进制性能分析数据。<br> <br> 按住 Shift 按钮并单击 <strong>Load</strong> 按钮可将文件内容附加到当前性能分析帧。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Save</strong></td>
+	<td style="text-align:left;">将性能分析器数据保存到 Project 文件夹中的 .data 文件中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>上下文菜单</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Color Blind Mode</td>
+	<td style="text-align:left;">启用此设置可使性能分析器在其图形中使用更高对比度的颜色。这样可以增强红绿色盲（例如绿色盲、红色盲或蓝色盲）用户的视觉感知度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Show stats for “current” frame</td>
+	<td style="text-align:left;">默认情况下，选择 <strong>Current Frame</strong> 按钮并进入 Current Frame 模式时，帧指示线不会随当前帧统计信息显示相关注释。这是因为统计信息注释可能导致难以实时查看数据。要显示注释，请启用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Preferences</td>
+	<td style="text-align:left;">打开 <strong>Preferences</strong> 菜单以调整特定于性能分析器的属性。</td>
+</tr>
+</tbody>
+</table>
+
+<p>为了保持低开销，Unity 仅每隔五帧重绘一次 Editor UI。这样会导致更新过程略有卡顿。</p>
+
+<p><a name="deep-profiling"></a></p>
+
+<h3>深度性能分析</h3>
+
+<p>通常，性能分析器仅对用 <a href="../ScriptReference/Unity.Profiling.ProfilerMarker.html">ProfilerMarker</a> 显式包裹的代码时序进行性能分析。这包括从引擎原生代码到脚本代码的调用（例如 <code>MonoBehaviour</code> 的 <code>Start</code>、<code>Update</code> 或类似方法）的第一个调用栈深度。</p>
+
+<p>如果未向您自己的代码添加更显式的 <code>ProfilerMarker</code> 检测，您可以视为脚本代码的子样本的唯一其他样本是回调到 Unity API 中的样本（如果已对该 API 进行检测）。带有性能开销的大多数 API 调用都会经过检测。例如，通过 <code>Camera.main</code> API 访问主摄像机的操作被注册为“<code>FindMainCamera</code>”样本。</p>
+
+<p>启用 <strong>Deep Profile</strong> 设置后，性能分析器会对脚本代码的每个部分进行性能分析，并记录所有函数调用，至少包括进入任何 Unity API 中的第一个调用栈深度。此信息可用于帮助您确定代码对应用程序性能的影响，但这会带来很大的开销。</p>
+
+<p>对应用程序进行深度性能分析时，Unity 会将性能分析器检测功能注入到所有脚本方法中，从而记录所有函数调用。这有助于了解应用程序代码在哪些方面花费最多的时间。</p>
+
+<p>深度性能分析是资源密集型操作，会耗用大量内存。因此，在进行性能分析时，应用程序运行速度显著降低。深度性能分析更适合用简单脚本编写的小游戏。如果使用的是复杂脚本代码，则应用程序可能根本无法使用深度性能分析。对于许多较大的应用程序，深度性能分析可能会使 Unity 耗尽内存。</p>
+
+<p>如果遇到问题，导致性能分析器的太多样本存储在环形缓冲区（用于将样本流式传输到性能分析器）中，Unity 将显示一条错误消息。为了增加环形缓冲区的大小，可以调整进行性能分析的播放器的 <a href="../ScriptReference/Profiling.Profiler-maxUsedMemory.html">Profiler.maxUsedMemory</a> 属性。</p>
+
+<p>如果深度性能分析导致应用程序的帧率下降太多而无法运行，您可以手动对脚本代码块进行性能分析，此方法的开销小于深度性能分析。使用 <a href="../ScriptReference/Unity.Profiling.ProfilerMarker.html">ProfilerMarker</a> 可以手动添加标记脚本块所需的检测。这些会显示在 <a href="ProfilerCPU.html">CPU Usage Profiler 模块</a>中。</p>
+
+<p>如果要找出产生 GC.Alloc 样本的调用栈而不想进行深度性能分析，可以开启__分配调用栈__的收集。启用性能分析器控件中的 <strong>Call Stacks</strong> 设置，然后可以在 Timeline 视图中选择 GC.Alloc 样本，或者使用 Hierarchy 视图中的 <strong>Show Related Objects</strong> 面板来查找这些样本的调用栈。有关更多信息，请参阅 <a href="ProfilerCPU.html#allocation-callstacks">CPU Profiler 模块</a>页面中关于分配调用栈的文档。</p>
+
+<p><a name="modules"></a></p>
+
+<h2>性能分析器模块</h2>
+
+<p>Profiler 窗口的顶部被分为几个性能分析器模块，这些模块对游戏的特定方面进行性能分析。对应用程序进行性能分析时，Unity 在相应图表中显示与每个模块相关的数据。</p>
+
+<p><strong>CPU Usage</strong> 模块最能够体现应用程序在每帧中花费的时间。其他模块收集更具体的数据，有助于检查更具体的方面或监测应用程序的重要信息，例如内存消耗、渲染或音频统计信息。</p>
+
+<p>每个模块都有自己的图表。选择模块时，模块详细信息面板将显示在窗口的底部，可用于检查该模块收集的详细数据。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>性能分析器模块</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>CPU Usage</strong></td>
+	<td style="text-align:left;">概要显示应用程序在哪些方面花费最多时间（涉及物理、脚本、动画和垃圾收集等多个方面）。该模块包含有关应用程序的大量性能分析信息，您可以使用这些信息来决定进一步使用哪些其他模块来调查应用程序中的更具体问题。该模块始终处于激活状态（即使您将其关闭）。请参阅 <a href="ProfilerCPU.html">CPU Usage Profiler 模块</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>GPU Usage</strong></td>
+	<td style="text-align:left;">显示与图形处理有关的信息。默认情况下，此模块处于非激活状态，因为它的开销较大。请参阅 <a href="ProfilerGPU.html">GPU Usage Profiler 模块</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>渲染</strong></td>
+	<td style="text-align:left;">显示有关 Unity 如何在应用程序中渲染图形的信息，包括有关静态和动态批处理、SetPass 和 Draw 调用、三角形和顶点的信息。请参阅 <a href="ProfilerRendering.html">Rendering Profiler 模块</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Memory</strong></td>
+	<td style="text-align:left;">显示有关 Unity 如何在应用程序中分配内存的信息。这尤其适合用于查看脚本分配 (GC.Alloc) 如何引起垃圾收集或者是应用程序的资源内存使用量随时间变化的趋势。请参阅 <a href="ProfilerMemory.html">Memory Profiler 模块</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Audio</strong></td>
+	<td style="text-align:left;">显示应用程序中的音频相关信息，例如何时播放音频源以及播放的音频源数量、音频系统需要的 CPU 使用率以及 Unity 为其分配的内存量。请参阅 <a href="ProfilerAudio.html">Audio Profiler 模块</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Video</strong></td>
+	<td style="text-align:left;">显示应用程序中的<a href="VideoPlayer.html">视频</a>相关信息。请参阅 <a href="profiler-vide-profiler-module">Video Profiler 模块</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Physics</strong></td>
+	<td style="text-align:left;">显示应用程序中物理引擎已进行的物理处理的相关信息。请参阅 <a href="ProfilerPhysics.html">Physics Profiler 模块</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Physics (2D)</strong></td>
+	<td style="text-align:left;">与 Physics Profiler 模块类似，此模块显示应用程序中物理引擎已进行的 2D 物理处理的相关信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Network Messages</strong><br>（已弃用）</td>
+	<td style="text-align:left;">显示有关<a href="UNetUsingHLAPI.html">多玩家高级 API</a> 发送或接收的较低级数据包和消息的信息。<br> <strong>注意：</strong>多玩家高级 API 已被弃用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Network Operations</strong><br>（已弃用）</td>
+	<td style="text-align:left;">显示有关多玩家高级 API 发送和接收的消息中含有哪些类型或操作的详细信息，例如已传输的 SyncVar 或命令的数量。<br> <strong>注意：</strong>多玩家高级 API 已被弃用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UI</strong></td>
+	<td style="text-align:left;">显示有关 Unity 如何为应用程序处理 UI 批处理的信息，包括 Unity 为何以及如何对项目进行批处理。请参阅 <a href="ProfilerUI.html">UI Profiler 模块</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UI Details</strong></td>
+	<td style="text-align:left;">与 UI 模块类似，此模块的图表添加有关批处理和顶点计数的数据，以及标记（包含有关触发 UI 变化的用户输入事件的信息）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Global Illumination</strong></td>
+	<td style="text-align:left;">显示有关 Unity 在应用程序中的全局光照 (Global Illumination) 光照子系统中花费的 CPU 资源的信息。请参阅 <a href="ProfilerGI.html">Global Illumination Profiler 窗口</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="module-overhead"></a></p>
+
+<h3>性能分析器模块开销</h3>
+
+<p>某些性能分析器模块具有大量的数据收集开销，例如 GPU、UI 和 Audio Profiler 模块。为了防止这些模块影响应用程序的性能，可以通过在 <strong>Profiler Module</strong> 下拉选单中取消选择这些模块来将它们停用。这样可从窗口删除模块，让性能分析器停止收集该模块的数据，并减少性能分析器的开销。</p>
+
+<p>这不适用于 CPU Usage 模块，该模块始终会收集数据（即使该模块处于非激活状态），因为其他模块依赖这些数据。</p>
+
+<p>要添加模块，请选择 <strong>Profiler Module</strong> 下拉选单，然后选择要激活的性能分析器。从下拉选单选择性能分析器模块后，这个模块开始收集数据，但是在非激活时段内不显示任何数据。</p>
+
+<p>为了避免 GPU Profiler 模块的开销，默认情况下该模块处于非激活状态。GPU Profiler 模块必须在应用程序启动时处于激活状态，才能挂接到图形驱动程序。如果稍后添加，在大多数平台上均无效，并且性能分析器显示消息：“GPU profiling is not supported by the graphics card driver (or it was disabled because of driver bugs)”。</p>
+
+<p>如果您指示性能分析器收集数据并通过 <a href="../ScriptReference/Profiling.Profiler-logFile.html">Profiler.logFile</a> API 而不是通过 Profiler 窗口将数据发送到磁盘，您可以通过 <a href="../ScriptReference/Profiling.Profiler.SetAreaEnabled.html">Profiler.SetAreaEnabled()</a> 来关闭性能分析器模块。</p>
+
+<p>某些通过外部 IDE 来调试脚本的设置也可能产生开销。为了避免发生此开销并获得更准确的测量值，请禁用 <strong>Editor Attaching</strong> 设置（菜单：__Preferences &gt; External Tools__）。同样，对构建播放器进行性能分析时，请打开 <strong>Build Settings</strong> 并禁用 <strong>Script Debugging</strong> 以避免发生此开销。</p>
+
+<p><a name="frame-charts"></a></p>
+
+<h3>性能分析器帧图表</h3>
+
+<p>Profiler 窗口的上半部分逐帧显示随时间推移的性能数据。运行应用程序时，性能分析器会记录每帧的数据。默认情况下，Profiler 窗口显示其进行性能分析的最近 300 帧的历史记录。可以在 <strong>Preferences</strong> 窗口中增加性能分析器进行性能分析的帧的数量（最多为 2,000 帧）。</p>
+
+<p>在 Profiler 窗口的性能分析器帧图表区域中单击时，将出现一条白线来突出显示应用程序的一帧。要在帧之间导航，请使用 Profiler 窗口的工具栏中的<a href="#controls">传输控件</a>。</p>
+
+<p>Unity 自动管理图表的垂直刻度，而且图表会尝试填充窗口的垂直空间。要查看图表中的更多详细信息，可以删除其他性能分析器模块，也可以拖动图表和详细统计信息区域之间的分隔线来增大图表的屏幕区域。</p>
+
+<p>要在图表中切换指标的隐藏和显示，请在相关模块中单击相应标签旁的有色方块。这样可以方便找到出现尖峰的原因。在堆积图表（例如 CPU Usage Profiler 的图表）中，可以将指标标签重新排序以影响堆积顺序。这样可以使干扰较多的指标更加明显，从而使图表更清晰。</p>
+
+<p>每个性能分析器模块收集不同的性能数据指标并将它们显示在单独的图表中。单击某个帧时，Unity 在 Profiler 窗口下半部分的模块详细信息面板中显示有关该帧的更多详细信息。此窗口中的详细信息类型会因选择的性能分析器模块而异。有关每个模块在此区域中显示的特定详细信息的更多信息，请参阅<a href="#modules">性能分析器模块</a>的单独文档。</p>
+
+<p><a name="command-line"></a></p>
+
+<h2>命令行参数</h2>
+
+<p>如果从命令行（例如 Windows 上的命令提示符，macOS 上的终端，Linux Shell，或者 Android 的 adb）启动构建的播放器或 Unity Editor，可以传递命令行参数来配置一些性能分析器设置。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>命令行参数</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>-deepprofiling</code></td>
+	<td style="text-align:left;">在构建的播放器中启用深度性能分析。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-profiler-enable</code></td>
+	<td style="text-align:left;">对播放器或 Editor 的启动进行性能分析。将此参数与播放器一起使用时，效果与在 Build Settings 中启用 <strong>Autoconnect Profiler</strong> 选项来构建播放器的效果相同。<br> <br> 将此参数与 Editor 一起使用时，在 Editor 启动时会开始在 Profiler 窗口中收集和显示性能分析器信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-profiler-log-file &lt;Path/To/Log/File.raw&gt;</code></td>
+	<td style="text-align:left;">此参数用于设置性能分析器，使其在启动时将性能分析数据流式传输到 .raw 文件。对播放器和 Editor 都有效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-profiler-capture-frame-count &lt;NumberOfFrames&gt;</code></td>
+	<td style="text-align:left;">此参数用于设置启动后流式传输到 .raw 文件时要在性能分析中捕获的帧数量。仅对播放器有效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>-profiler-maxusedmemory</code></td>
+	<td style="text-align:left;">
+<code>maxUsedMemory</code> 的默认值是 16MB（对于播放器）和 256MB（对于 Editor）。可以在启动时使用此参数将 <code>maxUsedMemory</code> 参数设置为自定义大小（例如，<code>-profiler-maxusedmemory 16777216</code>）。此大小以字节为单位。</td>
+</tr>
+</tbody>
+</table>
+<!-- area:core -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Profiler.html"></a></span><div class="tip">性能分析器概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="profiler-profiling-applications.html"></a></span><div class="tip">应用程序性能分析</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,823 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="纹理串流 API - Unity 手册">
+<title>纹理串流 API - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/StreamingController.png">
+<meta name="description" content="本页包含以下部分：">
+<meta property="og:description" content="本页包含以下部分：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'TextureStreaming-API';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/TextureStreaming-API.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/TextureStreaming-API.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/TextureStreaming-API.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/TextureStreaming-API.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/TextureStreaming-API.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/TextureStreaming-API.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/TextureStreaming-API.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/TextureStreaming-API.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/TextureStreaming-API.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/TextureStreaming-API.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/TextureStreaming-API.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/TextureStreaming-API.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/TextureStreaming-API.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/TextureStreaming-API.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/TextureStreaming-API.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/TextureStreaming-API.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/TextureStreaming-API.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/TextureStreaming-API.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/TextureStreaming-API.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/TextureStreaming-API.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/TextureStreaming-API.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/TextureStreaming-API.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/TextureStreaming-API.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/TextureStreaming-API.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/TextureStreaming-API.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/TextureStreaming-API.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/TextureStreaming-API.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/TextureStreaming-API.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/TextureStreaming-API.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/TextureStreaming-API.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/TextureStreaming-API.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/TextureStreaming-API.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/TextureStreaming-API.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/TextureStreaming-API.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/TextureStreaming-API.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/TextureStreaming-API.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/TextureStreaming-API.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/TextureStreaming-API.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/TextureStreaming-API.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/TextureStreaming-API.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/TextureStreaming-API.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/TextureStreaming-API.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/TextureStreaming-API.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/TextureStreaming-API.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/TextureStreaming-API.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/TextureStreaming-API.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/TextureStreaming-API.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/TextureStreaming-API.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="OptimizingGraphicsPerformance.html">优化图形性能</a></li>
+<li><a href="TextureStreaming.html">纹理串流 (Texture Streaming)</a></li>
+<li>纹理串流 API</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-StreamingController.html"></a></span><div class="tip">串流控制器 (Streaming Controller)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LinearLighting.html"></a></span><div class="tip">颜色空间</div>
+</div>
+</div></div>
+<h1>纹理串流 API</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页包含以下部分：</p>
+
+<ul>
+<li><a href="#Overview">概述</a></li>
+<li><a href="#ControlTextureStreaming">控制纹理串流系统</a></li>
+<li><a href="#ControlCameras">控制纹理串流的摄像机</a></li>
+<li><a href="#LoadSpecificMipmap">加载特定 Mipmap</a></li>
+<li><a href="#Debugging">调试纹理串流</a></li>
+</ul>
+
+<p><a name="Overview"> </a></p>
+
+<h2>概述</h2>
+
+<p>使用 API 可对 Unity 串流纹理的方式进行更有力的控制。您可以覆盖要为特定纹理加载的 Mipmap 级别，而纹理串流系统将自动管理所有其他纹理。在特定的游戏项目中，您可能知道 Unity 需要完全加载某些纹理。例如，远距离快速移动或者使用瞬间摄像机切换镜头，可能会导致明显的纹理质量变化，而纹理串流系统会将 Mipmap 从磁盘串流到内存。为了减少这个问题，可以使用 API 在新的摄像机位置预加载 Mipmap。</p>
+
+<p>要对纹理启用和控制纹理串流，请使用以下属性：</p>
+
+<ul>
+<li><a href="../ScriptReference/TextureImporter-streamingMipmaps.html">TextureImporter.streamingMipmaps</a></li>
+<li><a href="../ScriptReference/TextureImporter-streamingMipmapsPriority.html">TextureImporter.streamingMipmapsPriority</a></li>
+<li><a href="../ScriptReference/IHVImageFormatImporter-streamingMipmaps.html">IHVImageFormatImporter.streamingMipmaps</a></li>
+<li><a href="../ScriptReference/IHVImageFormatImporter-streamingMipmapsPriority.html">IHVImageFormatImporter.streamingMipmapsPriority</a></li>
+</ul>
+
+<p>纹理串流可自动减小纹理的大小，直到它们符合纹理串流__内存预算 (Memory Budget)<strong>。纹理的 </strong>Mipmap 优先级 (Mip Map Priority)__ 数值大致是__内存预算 (Memory Budget)__ 的 Mipmap 偏移。例如，优先级为 2 时，纹理串流系统尝试使用比优先级为 0 的其他纹理高出两个 Mip 级别的 Mipmap。负值也有效。如果无法实现，则会使用更低的 Mip 级别来适应__内存预算 (Memory Budget)__。</p>
+
+<p><a name="ControlTextureStreaming"> </a></p>
+
+<h2>控制纹理串流系统</h2>
+
+<p>以下属性在运行时为只读：</p>
+
+<ul>
+<li><a href="../ScriptReference/SystemInfo-supportsMipStreaming.html">SystemInfo.supportsMipStreaming</a></li>
+<li><a href="../ScriptReference/Texture2D-streamingMipmaps.html">Texture2D.streamingMipmaps</a></li>
+<li><a href="../ScriptReference/Texture2D-streamingMipmapsPriority.html">Texture2D.streamingMipmapsPriority</a></li>
+</ul>
+
+<p>要控制运行时的行为，请使用以下静态属性：</p>
+
+<ul>
+<li><p><a href="../ScriptReference/QualitySettings-streamingMipmapsActive.html">QualitySettings.streamingMipmapsActive</a></p></li>
+<li><p><a href="../ScriptReference/QualitySettings-streamingMipmapsMemoryBudget.html">QualitySettings.streamingMipmapsMemoryBudget</a>（默认为 512 MB）</p></li>
+<li><p><a href="../ScriptReference/QualitySettings-streamingMipmapsRenderersPerFrame.html">QualitySettings.streamingMipmapsRenderersPerFrame</a>（默认为 512）</p></li>
+<li><p><a href="../ScriptReference/QualitySettings-streamingMipmapsMaxLevelReduction.html">QualitySettings.streamingMipmapsMaxLevelReduction</a>（默认为 2）</p></li>
+<li><p><a href="../ScriptReference/QualitySettings-streamingMipmapsMaxFileIORequests.html">QualitySettings.streamingMipmapsMaxFileIORequests</a>（默认为 1024）</p></li>
+<li><p><a href="../ScriptReference/Texture-streamingTextureDiscardUnusedMips.html">Texture2D.streamingTextureDiscardUnusedMips</a></p></li>
+</ul>
+
+<p>要通过脚本控制 Unity 缓存未使用的 Mip 级别的方式，请使用 <a href="../ScriptReference/Texture-streamingTextureDiscardUnusedMips.html">Texture2D.streamingTextureDiscardUnusedMips</a>。一种很有效的做法是在初始测试中将此属性设置为 <code>true</code> 来检查指标，并设置 <strong>Memory Budget__（如果启用了 </strong>Texture Streaming__，则在 <a href="class-QualitySettings.html">Quality 设置</a>中进行此设置，或者通过 <a href="../ScriptReference/QualitySettings-streamingMipmapsMemoryBudget.html">QualitySettings.streamingMipmapsMemoryBudget</a> 进行设置），否则 Unity 不会丢弃任何 Mip。默认情况下，__Memory Budget__ 设置为 512MB。</p>
+
+<p><a name="ControlCameras"> </a></p>
+
+<h2>控制纹理串流的摄像机</h2>
+
+<p>在 Quality 设置 (<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Quality</strong>) 中，使用 <strong>Add All Cameras</strong> 指定 Unity 是否应该为项目中的所有摄像机计算纹理串流。默认情况下会启用此选项。</p>
+
+<p>为了更精细地控制哪些摄像机处于活动状态，请在与 Camera 组件相同的游戏对象上使用 <a href="class-StreamingController.html">Streaming Controller</a> 组件。这会直接从 Camera 组件获取位置和摄像机设置（如 __Field of View__）。</p>
+
+<p>如果禁用了摄像机，除非启用 Streaming Controller 并处于预加载状态，否则 Unity 不会为摄像机计算纹理串流。启用了 Streaming Controller 或关联的摄像机时，或者如果 Streaming Controller 处于预加载状态，则 Unity 将为此摄像机计算纹理串流。如果禁用了 Streaming Controller，则 Unity 将不会为此摄像机计算纹理串流。</p>
+
+<figure>
+<img src="../uploads/Main/StreamingController.png" alt="Streaming Controller 组件">
+<figcaption>Streaming Controller 组件</figcaption>
+</figure>
+
+<p>Streaming Controller 组件包含 <strong>Mip Map Bias</strong> 设置。要通过 API 来控制此设置，请使用 <a href="../ScriptReference/StreamingController-streamingMipmapBias.html">StreamingController.streamingMipmapBias</a>。</p>
+
+<p>使用此设置可以强制 Unity 加载比纹理串流系统为这些纹理选择的更高或更低的 Mipmap 级别。使用数字字段来设置 Unity 应用于 Mipmap 级别的偏移。Unity 可将此偏移添加到在此摄像机中可见的所有纹理。</p>
+
+<h3>摄像机切换镜头</h3>
+
+<p>从一个位置切换到另一个位置时，纹理串流系统需要一定的时间将所需纹理串流到 Unity。要在某个禁用的目标摄像机位置触发预加载，请在目标摄像机的 Streaming Controller 组件上调用 <a href="../ScriptReference/StreamingController.SetPreloading.html">StreamingController.SetPreloading</a>。可指定一个超时来结束预加载阶段。要在预加载阶段结束时自动启用摄像机，请在脚本中将 <code>activateCameraOnTimeout</code> 标志设置为 true。要在从某个摄像机切换到新摄像机之后禁用此摄像机，请以 <code>disableCameraCuttingFrom</code> 参数传递该摄像机。</p>
+
+<pre><code>void StreamingController.SetPreloading(float timeoutSeconds=0.0f, bool activateCameraOnTimeout=false, Camera disableCameraCuttingFrom=null)
+</code></pre>
+
+<p>要取消或查询预加载状态，请使用下列方法：</p>
+
+<ul>
+<li><a href="../ScriptReference/StreamingController.CancelPreloading.html">StreamingController.CancelPreloading</a></li>
+<li><a href="../ScriptReference/StreamingController.IsPreloading.html">StreamingController.IsPreloading</a></li>
+</ul>
+
+<p>要确定纹理串流系统是否仍在加载纹理，可以查询以下属性：</p>
+
+<ul>
+<li><a href="../ScriptReference/Texture-streamingTextureLoadingCount.html">Texture.streamingTextureLoadingCount</a></li>
+<li><a href="../ScriptReference/Texture-streamingTexturePendingLoadCount.html">Texture.streamingTexturePendingLoadCount</a></li>
+</ul>
+
+<p>请注意，启用摄像机与这些属性变为非零值之间存在延迟。这种延迟是因为纹理串流系统使用时间切片处理技术来计算 Mipmap。鉴于此原因，在摄像机切换镜头时，应该在切换镜头之前等待一个最短时间。纹理预算和场景移动会导致连续的纹理串流，所以还需要设置在切换镜头之前的最长等待时间。</p>
+
+<p><a name="LoadSpecificMipmap"> </a></p>
+
+<h2>加载特定 Mipmap</h2>
+
+<p>要覆盖特定纹理的 Mip 级别计算，请使用 <a href="../ScriptReference/Texture2D-requestedMipmapLevel.html">Texture2D.requestedMipmapLevel</a>。这是一个精确的 Mip 级别，范围从 0 到特定纹理的最高 Mip 级别或者是 <strong>Max Level Reduction</strong> 值（如果该值更大）。0 表示最高分辨率的 Mip。</p>
+
+<p>要检查您请求的 Mip 级别是否已加载，请使用 <a href="../ScriptReference/Texture2D.IsRequestedMipmapLevelLoaded.html">Texture2D.IsRequestedMipmapLevelLoaded</a>。</p>
+
+<p>如果不再希望覆盖所请求的 Mip 级别，而是希望系统继续计算 Mipmap 级别，请使用 <a href="../ScriptReference/Texture2D.ClearRequestedMipmapLevel.html">Texture2D.ClearRequestedMipmapLevel</a> 来重置值。</p>
+
+<p>要估算网格上的 UV 密度，请使用以下代码行：</p>
+
+<pre><code>float Mesh.GetUVDistributionMetric(int uvSetIndex)
+</code></pre>
+
+<p>可以使用 UV 分布指标根据摄像机的位置来计算所需的 Mipmap 级别。请参阅 <a href="../ScriptReference/Mesh.GetUVDistributionMetric.html">Mesh.GetUVDistributionMetric</a> 以查看代码示例。</p>
+
+<p>要覆盖系统并强制加载所有 Mip，请使用 <a href="../ScriptReference/Texture-streamingTextureForceLoadAll.html">Texture.streamingTextureForceLoadAll</a>。</p>
+
+<h3>相关的 API 方法</h3>
+
+<p>要获取和设置分配给某一材质的纹理，请使用：</p>
+
+<ul>
+<li><a href="../ScriptReference/Material.GetTexture.html">Material.GetTexture</a></li>
+<li><a href="../ScriptReference/Material.SetTexture.html">Material.SetTexture</a></li>
+</ul>
+
+<p>要获取某一材质中的所有纹理属性，请使用：</p>
+
+<ul>
+<li><a href="../ScriptReference/Material.GetTexturePropertyNames.html">Material.GetTexturePropertyNames</a></li>
+<li><a href="../ScriptReference/Material.GetTexturePropertyNameIDs.html">Material.GetTexturePropertyNameIDs</a></li>
+</ul>
+
+<p><a name="Debugging"> </a></p>
+
+<h2>调试纹理串流</h2>
+
+<p>Unity 具有内置的纹理串流调试视图模式。要访问此模式，请单击 <a href="ViewModes.html">Scene 视图控制下拉菜单</a>，然后选择 <strong>Texture Streaming</strong>。此视图模式根据游戏对象在纹理串流系统中的状态将游戏对象显示为以下颜色：</p>
+
+<ul>
+<li>__绿色__表示由于纹理串流系统而降低了 Mipmap 的纹理。</li>
+<li>__红色__表示由于纹理串流系统没有足够资源来加载全部 Mipmap 而减少了 Mipmap 的纹理。</li>
+<li>__蓝色__表示未设置为串流的纹理，或者在没有渲染器计算 Mip 级别的情况下的纹理。</li>
+</ul>
+
+<h3>通过脚本调试</h3>
+
+<p>要为调试模式上传材质属性，请使用 <a href="../ScriptReference/Texture.SetStreamingTextureMaterialDebugProperties.html">Texture.SetStreamingTextureMaterialDebugProperties</a>。</p>
+
+<p>要为调试模式上传材质属性，请使用以下属性：</p>
+
+<ul>
+<li><a href="../ScriptReference/Texture-currentTextureMemory.html">Texture.currentTextureMemory</a></li>
+<li><a href="../ScriptReference/Texture-desiredTextureMemory.html">Texture.desiredTextureMemory</a></li>
+<li><a href="../ScriptReference/Texture-totalTextureMemory.html">Texture.totalTextureMemory</a></li>
+<li><a href="../ScriptReference/Texture-targetTextureMemory.html">Texture.targetTextureMemory</a></li>
+<li><a href="../ScriptReference/Texture-nonStreamingTextureMemory.html">Texture.nonStreamingTextureMemory</a></li>
+</ul>
+
+<p>要获取与纹理串流系统交互的纹理或渲染器的数量信息，请使用以下属性：</p>
+
+<ul>
+<li><a href="../ScriptReference/Texture-streamingMipmapUploadCount.html">Texture.streamingMipmapUploadCount</a></li>
+<li><a href="../ScriptReference/Texture-nonStreamingTextureCount.html">Texture.nonStreamingTextureCount</a></li>
+<li><a href="../ScriptReference/Texture-streamingTextureCount.html">Texture.streamingTextureCount</a></li>
+<li><a href="../ScriptReference/Texture-streamingRendererCount.html">Texture.streamingRendererCount</a></li>
+</ul>
+
+<p>要获取有关 Mipmap 级别的信息，请使用以下属性：</p>
+
+<ul>
+<li><a href="../ScriptReference/Texture2D-desiredMipmapLevel.html">Texture2D.desiredMipmapLevel</a></li>
+<li><a href="../ScriptReference/Texture2D-loadingMipmapLevel.html">Texture2D.loadingMipmapLevel</a></li>
+<li><a href="../ScriptReference/Texture2D-loadedMipmapLevel.html">Texture2D.loadedMipmapLevel</a></li>
+</ul>
+
+<h3>光照贴图</h3>
+
+<p>可以使用纹理串流系统来串流光照贴图。可以直接编辑纹理设置，但在 Unity 重新生成光照贴图时，纹理设置会重置为默认值。<a href="class-PlayerSettings.html">Player 设置</a> (<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>) 中提供了如下两个控件来设置生成的光照贴图的串流和优先级：__Lightmap Streaming Enabled__ 和 <strong>Streaming Priority</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/TextureStreaming-API-LightMaps.png" alt="Edit &amp;gt; Project Settings &amp;gt; Player &amp;gt; Other Settings">
+<figcaption><strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong> &gt; <strong>Other Settings</strong></figcaption>
+</figure>
+
+<h3>播放模式</h3>
+
+<p>默认情况下，在播放模式下会启用纹理串流。但是，在播放模式下运行时，Editor 开销会导致统计信息出现偏差。要获取精确数字，请在目标设备上测试应用程序。</p>
+
+<p>如果在运行模式下启用了纹理串流，但在编辑模式下未启用（或者是相反的情况），则切换到运行模式和从运行模式退出时所花费的时间会稍长一些。要在运行模式下禁用纹理串流，请选择 Editor 设置 (<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Editor</strong>)，导航到 <strong>Streaming Settings__，并禁用 </strong>Enabled Texture Streaming in Play Mode__。这会阻止 Unity 卸载和重新加载 Mipmap 数据，并且应该会加快运行模式工作流程。</p>
+
+<figure>
+<img src="../uploads/Main/StreamingSettings2019-1.png" alt="Edit &amp;gt; Project Settings &amp;gt; Editor &amp;gt; Streaming Settings">
+<figcaption><strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Editor</strong> &gt; <strong>Streaming Settings</strong></figcaption>
+</figure>
+
+<h3>调试状态脚本</h3>
+
+<p>将以下脚本添加到场景中的游戏对象以显示纹理串流状态。如果希望确定要设置的正确内存预算，此脚本非常有用。</p>
+
+<pre><code>Shader "Show Texture Streaming" {
+    Properties {
+        _MainTex ("", 2D) = "white" {}
+        _Control ("Control (RGBA)", 2D) = "red" {}
+        _Splat3 ("Layer 3 (A)", 2D) = "white" {}
+        _Splat2 ("Layer 2 (B)", 2D) = "white" {}
+        _Splat1 ("Layer 1 (G)", 2D) = "white" {}
+        _Splat0 ("Layer 0 (R)", 2D) = "white" {}
+        _BaseMap ("", 2D) = "white" {}
+        _Cutoff ("Cutoff", float) = 0.5
+    }
+
+
+CGINCLUDE
+// Common code used by most of the things below
+# include "UnityCG.cginc"
+struct v2f {
+    float4 pos : SV_POSITION;
+    float2 uv : TEXCOORD0;
+};
+uniform float4 _MainTex_ST;
+uniform float4 _MainTex_TexelSize;
+uniform float4 _MainTex_MipInfo;
+
+UNITY_DECLARE_TEX2D(_MainTex);
+UNITY_DECLARE_TEX2D(_SceneViewMipcolorsTexture);
+
+uint GetMipCount(Texture2D tex)
+{
+# if defined(SHADER_API_D3D11) || defined(SHADER_API_D3D12) || defined(SHADER_API_D3D11_9X) || defined(SHADER_API_XBOXONE) || defined(SHADER_API_PSSL)
+    #define MIP_COUNT_SUPPORTED 1
+# endif
+# if (defined(SHADER_API_OPENGL) || defined(SHADER_API_VULKAN)) &amp;&amp; !defined(SHADER_STAGE_COMPUTE)
+    // OpenGL only supports textureSize for width, height, depth
+    // textureQueryLevels (GL_ARB_texture_query_levels) needs OpenGL 4.3 or above and doesn't compile in compute shaders
+    // tex.GetDimensions converted to textureQueryLevels
+    #define MIP_COUNT_SUPPORTED 1
+# endif
+    // Metal doesn't support high enough OpenGL version
+
+# if defined(MIP_COUNT_SUPPORTED)
+    uint mipLevel, width, height, mipCount;
+    mipLevel = width = height = mipCount = 0;
+    tex.GetDimensions(mipLevel, width, height, mipCount);
+    return mipCount;
+# else
+    return 0;
+# endif
+}
+
+float4 GetStreamingMipColor(uint mipCount, float4 mipInfo)
+{
+    // alpha is amount to blend with source color (0.0 = use original, 1.0 = use new color)
+
+    // mipInfo :
+    // x = quality setings minStreamingMipLevel
+    // y = original mip count for texture
+    // z = desired on screen mip level
+    // w = loaded mip level
+    uint originalTextureMipCount = uint(mipInfo.y);
+
+    // If material/shader mip info (original mip level) has not been set it’s either not a streamed texture 
+    // or no renderer is updating it
+    if (originalTextureMipCount == 0)
+        return float4(0.0, 0.0, 1.0, 0.5);
+
+    uint desiredMipLevel = uint(mipInfo.z);
+    uint mipCountDesired = uint(originalTextureMipCount)-uint(desiredMipLevel);
+    if (mipCount == 0)
+    {
+        // Can't calculate, use the passed value
+        mipCount = originalTextureMipCount - uint(mipInfo.w);
+    }
+
+    if (mipCount &lt; mipCountDesired)
+    {
+        // red tones when not at the desired mip level (reduction due to budget). Brighter is further from original, alpha 0 when at desired
+        float ratioToDesired = float(mipCount) / float(mipCountDesired);
+        return float4(1.0, 0.0, 0.0, 1.0 - ratioToDesired);
+    }
+    else if (mipCount &gt;= originalTextureMipCount)
+    {
+        // original color when at (or beyond) original mip count
+        return float4(1.0, 1.0, 1.0, 0.0);
+    }
+    else
+    {
+        // green tones when not at the original mip level. Brighter is closer to original, alpha 0 when at original
+        float ratioToOriginal = float(mipCount) / float(originalTextureMipCount);
+        return float4(0.0, 1.0, 0.0, 1.0 - ratioToOriginal);
+    }
+}
+
+float3 GetDebugStreamingMipColorBlended(float3 originalColor, Texture2D tex, float4 mipInfo)
+{
+    uint mipCount = GetMipCount(tex);
+    float4 mipColor = GetStreamingMipColor(mipCount, mipInfo);
+    return lerp(originalColor, mipColor.rgb, mipColor.a);
+}
+
+
+v2f vert( appdata_base v ) {
+    v2f o;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = TRANSFORM_TEX(v.texcoord,_MainTex);
+    
+    return o;
+}
+
+fixed4 frag(v2f i) : COLOR
+{
+    fixed4 col = UNITY_SAMPLE_TEX2D(_MainTex, i.uv);
+    half4 res;
+    res.rgb = GetDebugStreamingMipColorBlended(col.rgb, _MainTex, _MainTex_MipInfo);
+    res.a = col.a;
+    return res;
+}
+
+struct v2fGrass {
+    float4 pos : SV_POSITION;
+    fixed4 color : COLOR;
+    float2 uv : TEXCOORD0;
+};
+
+fixed4 fragGrass(v2fGrass i) : COLOR
+{
+    fixed4 col = UNITY_SAMPLE_TEX2D(_MainTex, i.uv);
+    half4 res;
+    res.rgb = GetDebugStreamingMipColorBlended(col.rgb, _MainTex, _MainTex_MipInfo);
+    res.a = col.a * i.color.a;
+    return res;
+}
+ENDCG
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="Opaque" }
+    Pass {
+CGPROGRAM
+
+// As both normal opaque shaders and terrain splat shaders
+// have "Opaque" render type, we need to do some voodoo
+// to make both work.
+
+# pragma vertex vertWTerrain
+# pragma fragment fragWTerrain
+# pragma target 2.0
+# pragma exclude_renderers gles
+
+struct v2fterr {
+    float4 pos : SV_POSITION;
+    float2 uvnormal : TEXCOORD0;
+    float4 uv[3] : TEXCOORD2;
+    float nonterrain  : TEXCOORD5;
+};
+
+uniform float4 _Splat0_ST,_Splat1_ST,_Splat2_ST,_Splat3_ST,_Splat4_ST;
+uniform float4 _Splat0_TexelSize,_Splat1_TexelSize,_Splat2_TexelSize,_Splat3_TexelSize,_Splat4_TexelSize;
+uniform float4 _BaseMap_TexelSize;
+
+v2fterr vertWTerrain( appdata_base v ) {
+    v2fterr o;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    // assume it's not a terrain if _Splat0_TexelSize is not set up.
+    float nonterrain = _Splat0_TexelSize.z==0.0 ? 1:0;
+    // collapse/don't draw terrain's add pass in this mode, since it looks really bad if first pass
+    // and add pass blink depending on which gets drawn first with this replacement shader
+    // TODO: make it display mips properly even for two-pass terrains. 
+    o.pos *= _MainTex_TexelSize.z==0.0 &amp;&amp; _Splat0_TexelSize.z!=0.0 ? 0 : 1;
+    // normal texture UV
+    o.uvnormal = TRANSFORM_TEX(v.texcoord,_MainTex);
+    // terrain splat UVs
+    float2 baseUV = v.texcoord.xy;
+    o.uv[0].xy = baseUV;
+    o.uv[0].zw = half2(0,0);
+    o.uv[1].xy = TRANSFORM_TEX (baseUV, _Splat0);
+    o.uv[1].zw = TRANSFORM_TEX (baseUV, _Splat1);
+    o.uv[2].xy = TRANSFORM_TEX (baseUV, _Splat2);
+    o.uv[2].zw = TRANSFORM_TEX (baseUV, _Splat3);
+    
+    o.nonterrain = nonterrain;
+    return o;
+}
+UNITY_DECLARE_TEX2D(_Control);
+UNITY_DECLARE_TEX2D(_Splat0);
+UNITY_DECLARE_TEX2D(_Splat1);
+UNITY_DECLARE_TEX2D(_Splat2);
+UNITY_DECLARE_TEX2D(_Splat3);
+UNITY_DECLARE_TEX2D(_BaseMap);
+fixed4 fragWTerrain(v2fterr i) : COLOR
+{
+    // sample regular texture
+    fixed4 colnormal = UNITY_SAMPLE_TEX2D(_MainTex, i.uvnormal);
+    
+    // sample splatmaps
+    half4 splat_control = UNITY_SAMPLE_TEX2D(_Control, i.uv[0].xy);
+    half3 splat_color = splat_control.r * UNITY_SAMPLE_TEX2D(_Splat0, i.uv[1].xy).rgb;
+    splat_color += splat_control.g * UNITY_SAMPLE_TEX2D(_Splat1, i.uv[1].zw).rgb;
+    splat_color += splat_control.b * UNITY_SAMPLE_TEX2D(_Splat2, i.uv[2].xy).rgb;
+    splat_color += splat_control.a * UNITY_SAMPLE_TEX2D(_Splat3, i.uv[2].zw).rgb;
+    
+    // lerp between normal and splatmaps
+    half3 col = lerp(splat_color, colnormal.rgb, (half)i.nonterrain);
+
+    half4 res;
+    // TODO: Take splat mips into account
+    res.rgb = GetDebugStreamingMipColorBlended(col.rgb, _MainTex, _MainTex_MipInfo);
+    res.a = colnormal.a;
+    
+    return res;
+}
+ENDCG
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="Transparent" }
+    Pass {
+        Cull Off
+CGPROGRAM
+# pragma vertex vert
+# pragma fragment frag
+# pragma target 2.0
+# pragma exclude_renderers gles
+ENDCG
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TransparentCutout" }
+    Pass {
+        AlphaTest Greater [_Cutoff]
+CGPROGRAM
+# pragma vertex vert
+# pragma fragment frag
+# pragma target 2.0
+# pragma exclude_renderers gles
+ENDCG
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TreeBark" }
+    Pass {
+CGPROGRAM
+# pragma vertex vertTreeBark
+# pragma fragment frag
+# pragma target 2.0
+# pragma exclude_renderers gles
+# include "UnityCG.cginc"
+# include "UnityBuiltin3xTreeLibrary.cginc"
+v2f vertTreeBark (appdata_full v) {
+    v2f o;
+    TreeVertBark(v);
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TreeLeaf" }
+    Pass {
+CGPROGRAM
+# pragma vertex vertTreeLeaf
+# pragma fragment frag
+# pragma target 2.0
+# pragma exclude_renderers gles
+# include "UnityCG.cginc"
+# include "UnityBuiltin3xTreeLibrary.cginc"
+v2f vertTreeLeaf (appdata_full v) {
+    v2f o;
+    TreeVertLeaf (v);
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+        AlphaTest GEqual [_Cutoff]
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TreeOpaque" }
+    Pass {
+CGPROGRAM
+# pragma vertex vertTree
+# pragma fragment frag
+# pragma target 2.0
+# pragma exclude_renderers gles
+# include "TerrainEngine.cginc"
+struct appdata {
+    float4 vertex : POSITION;
+    fixed4 color : COLOR;
+    float2 texcoord : TEXCOORD0;
+};
+v2f vertTree( appdata v ) {
+    v2f o;
+    TerrainAnimateTree(v.vertex, v.color.w);
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+    }
+} 
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TreeTransparentCutout" }
+    Pass {
+        Cull Off
+CGPROGRAM
+# pragma vertex vertTree
+# pragma fragment frag
+# pragma target 2.0
+# pragma exclude_renderers gles
+# include "TerrainEngine.cginc"
+struct appdata {
+    float4 vertex : POSITION;
+    fixed4 color : COLOR;
+    float4 texcoord : TEXCOORD0;
+};
+v2f vertTree( appdata v ) {
+    v2f o;
+    TerrainAnimateTree(v.vertex, v.color.w);
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+        AlphaTest GEqual [_Cutoff]
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TreeBillboard" }
+    Pass {
+        Cull Off
+        ZWrite Off
+CGPROGRAM
+# pragma vertex vertTree
+# pragma fragment frag
+# pragma target 2.0
+# pragma exclude_renderers gles
+# include "TerrainEngine.cginc"
+v2f vertTree (appdata_tree_billboard v) {
+    v2f o;
+    TerrainBillboardTree(v.vertex, v.texcoord1.xy, v.texcoord.y);
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv.x = v.texcoord.x;
+    o.uv.y = v.texcoord.y &amp;gt; 0;
+    return o;
+}
+ENDCG
+        
+        SetTexture [_MainTex] { combine primary, texture }
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="GrassBillboard" }
+    Pass {
+        Cull Off
+CGPROGRAM
+# pragma vertex vertGrass
+# pragma fragment fragGrass
+# pragma target 2.0
+# pragma exclude_renderers gles
+# include "TerrainEngine.cginc"
+v2fGrass vertGrass (appdata_full v) {
+    v2fGrass o;
+    WavingGrassBillboardVert (v);
+    o.color = v.color;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+        AlphaTest Greater [_Cutoff]
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="Grass" }
+    Pass {
+        Cull Off
+CGPROGRAM
+# pragma vertex vertGrass
+# pragma fragment fragGrass
+# pragma target 2.0
+# pragma exclude_renderers gles
+# include "TerrainEngine.cginc"
+v2fGrass vertGrass (appdata_full v) {
+    v2fGrass o;
+    WavingGrassVert (v);
+    o.color = v.color;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+        AlphaTest Greater [_Cutoff]
+    }
+}
+
+Fallback Off
+}
+</code></pre>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-StreamingController.html"></a></span><div class="tip">串流控制器 (Streaming Controller)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LinearLighting.html"></a></span><div class="tip">颜色空间</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

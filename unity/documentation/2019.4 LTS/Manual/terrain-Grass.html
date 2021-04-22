@@ -1,0 +1,282 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="草和其他细节 - Unity 手册">
+<title>草和其他细节 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/TerrainWithGrass.jpg">
+<meta name="description" content="__地形__上可能有草丛和其他小对象（如岩石）覆盖在其表面上。Unity 使用纹理四边形或完整网格渲染这些对象，具体取决于您需要的细节级别和性能。草和其他细节当前仅在内置渲染管线和通用渲染管线 (URP) 中有效。">
+<meta property="og:description" content="__地形__上可能有草丛和其他小对象（如岩石）覆盖在其表面上。Unity 使用纹理四边形或完整网格渲染这些对象，具体取决于您需要的细节级别和性能。草和其他细节当前仅在内置渲染管线和通用渲染管线 (URP) 中有效。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'terrain-Grass';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/terrain-Grass.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/terrain-Grass.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/terrain-Grass.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/terrain-Grass.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/terrain-Grass.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/terrain-Grass.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/terrain-Grass.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/terrain-Grass.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/terrain-Grass.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/terrain-Grass.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/terrain-Grass.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/terrain-Grass.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/terrain-Grass.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/terrain-Grass.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/terrain-Grass.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/terrain-Grass.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/terrain-Grass.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/terrain-Grass.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/terrain-Grass.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/terrain-Grass.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/terrain-Grass.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/terrain-Grass.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/terrain-Grass.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/terrain-Grass.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/terrain-Grass.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/terrain-Grass.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/terrain-Grass.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/terrain-Grass.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/terrain-Grass.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/terrain-Grass.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/terrain-Grass.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/terrain-Grass.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/terrain-Grass.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/terrain-Grass.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/terrain-Grass.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/terrain-Grass.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/terrain-Grass.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/terrain-Grass.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/terrain-Grass.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/terrain-Grass.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/terrain-Grass.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/terrain-Grass.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/terrain-Grass.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/terrain-Grass.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/terrain-Grass.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/terrain-Grass.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/terrain-Grass.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/terrain-Grass.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="CreatingEnvironments.html">创建环境</a></li>
+<li><a href="script-Terrain.html">地形</a></li>
+<li>草和其他细节</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-WindZone.html"></a></span><div class="tip">风区（Wind Zones）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="terrain-Heightmaps.html"></a></span><div class="tip">使用高度贴图</div>
+</div>
+</div></div>
+<h1>草和其他细节</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__地形__上可能有草丛和其他小对象（如岩石）覆盖在其表面上。Unity 使用纹理四边形或完整网格渲染这些对象，具体取决于您需要的细节级别和性能。草和其他细节当前仅在<a href="built-in-render-pipeline.html">内置渲染管线</a>和<a href="universal-render-pipeline.html">通用渲染管线</a> (URP) 中有效。</p>
+
+<figure>
+<img src="../uploads/Main/TerrainWithGrass.jpg" alt="有草的地形">
+<figcaption>有草的地形</figcaption>
+</figure>
+
+<p>可启用纹理四边形的 <strong>Billboard</strong> 属性，使其自动面向摄像机。这是在游戏开发中实现良好草丛效果的常见方式。</p>
+
+<p>对于细节网格，可以将 <strong>Render Mode</strong> 属性设置为 <strong>Vertex Lit</strong> 或 <strong>Grass</strong>。</p>
+
+<ul>
+<li>选择 <strong>Vertex Lit</strong> 可创建具有真实法线的顶点光照网格，这些网格不会在风中移动。</li>
+<li>选择 <strong>Grass</strong> 可创建使用地形法线的顶点光照网格，这些网格会在风中移动。</li>
+</ul>
+
+<h2>启用细节</h2>
+
+<p>要启用草和细节绘制，请选择工具栏上的 <strong>Paint Details</strong> 按钮。</p>
+
+<figure>
+<img src="../uploads/Main/TerrainDetailsPaintTool.png" alt="Terrain Inspector 中的 Paint Details 按钮">
+<figcaption>Terrain Inspector 中的 Paint Details 按钮</figcaption>
+</figure>
+
+<p>最初，地形没有可用的草或细节。在 Inspector 中，单击 <strong>Edit Details</strong> 按钮可显示带有 <strong>Add Grass Texture</strong> 和 <strong>Add Detail Mesh</strong> 选项的菜单。单击任一选项将弹出一个窗口，在其中可以选择要添加到地形以便进行绘制的__资源__。</p>
+
+<p>对于草，该窗口如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/TerrainGrassAddWindow.png" alt="Add Grass Texture 窗口">
+<figcaption>Add Grass Texture 窗口</figcaption>
+</figure>
+
+<p><strong>Detail Texture</strong> 是表示草的纹理。您可以从 <strong>Asset Store</strong> 下载纹理，也可以创建自己的纹理。纹理是一个小图像，图像中的空白区域的 Alpha 设置为零。请注意，这里的“草”(Grass) 是一个通用术语；纹理可以表示花朵或人造物体（如铁丝网）。</p>
+
+<p><strong>Min Width</strong>、<strong>Max Width</strong>、<strong>Min Height</strong> 和 <strong>Max Height</strong> 值可指定生成的草丛的大小上限和下限。为了创建逼真的外观，草是以随机“噪点”图案生成的，有裸露斑块散布在草地上。</p>
+
+<p><strong>Noise Spread</strong> 值控制着裸露与草丛斑块的近似大小，值越高表示给定区域内的变化越大。Unity 使用<em>柏林噪声 (Perlin noise)</em> 算法生成噪点；__Noise Spread__ 是指在地形上的 x、y 位置与噪点图像之间应用的缩放。通常认为，交替的草地斑块处于中心位置比处于边缘位置更“健康”，而 <strong>Healthy Color</strong> 和 <strong>Dry Color</strong> 中设置的颜色表示草丛的健康状态。</p>
+
+<p>最后，当启用 <strong>Billboard</strong> 选项时，草的图像将旋转，因此它们将始终面向__摄像机__。当您希望显示密集的草地时，此选项很有用，因为草丛是二维的，不能从侧面看到。然而，对于稀疏的草，草丛个体的旋转对于观察者来说可能会变得很明显，产生奇怪的效果。</p>
+
+<p>对于细节网格，例如岩石，窗口如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/TerrainDetailAddWindow.png" alt="Add Detail Mesh 窗口">
+<figcaption>Add Detail Mesh 窗口</figcaption>
+</figure>
+
+<p>使用 <strong>Add Detail Mesh</strong> 可从项目中选择预制件。Unity 在 <strong>Min Width</strong> 和 <strong>Max Width</strong> 值以及 <strong>Min Height</strong> 和 <strong>Max Height</strong> 值之间对其随机缩放。Unity 对 x 轴和 z 轴使用宽度缩放，而对 y 轴使用高度缩放。<strong>Noise Spread</strong>、<strong>Healthy Color</strong> 和 <strong>Dry Color</strong> 值的作用与它们对草的作用相同。</p>
+
+<p>可将 <strong>Render Mode</strong> 设置为 <strong>Vertex Lit</strong> 或 <strong>Grass</strong>。</p>
+
+<ul>
+<li>在 <strong>Vertex Lit</strong> 模式中，Unity 将细节对象渲染为场景中的实体顶点光照游戏对象。</li>
+<li>在 <strong>Grass</strong> 模式中，Unity 以类似草的方式使用光照渲染场景中细节对象的实例。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–11–25 页面已修订</span></p></li>
+<li><p><span class="page-history">添加了关于渲染管线的信息</span></p></li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-WindZone.html"></a></span><div class="tip">风区（Wind Zones）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="terrain-Heightmaps.html"></a></span><div class="tip">使用高度贴图</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="XR - Unity 手册">
+<title>XR - Unity 手册</title>
+<meta name="description" content="XR 是一个统称，包括以下类型的应用程序：">
+<meta property="og:description" content="XR 是一个统称，包括以下类型的应用程序：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'XR';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/XR.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/XR.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/XR.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/XR.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/XR.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/XR.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/XR.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/XR.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/XR.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/XR.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/XR.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/XR.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/XR.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/XR.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/XR.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/XR.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/XR.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/XR.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/XR.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/XR.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/XR.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/XR.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/XR.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/XR.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/XR.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/XR.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/XR.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/XR.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/XR.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/XR.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/XR.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/XR.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/XR.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/XR.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/XR.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/XR.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/XR.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/XR.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/XR.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/XR.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/XR.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/XR.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/XR.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/XR.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/XR.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/XR.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/XR.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/XR.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li>XR</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp-troubleshooting.html"></a></span><div class="tip">UDP 故障排除</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AROverview.html"></a></span><div class="tip">Unity AR 开发入门</div>
+</div>
+</div></div>
+<h1>XR</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>XR 开发的新手？从这里开始。</h2>
+
+<p>XR 是一个统称，包括以下类型的应用程序：</p>
+
+<ul>
+<li>虚拟现实 (VR)：这种应用程序模拟一个用户周围完全不同的环境。</li>
+<li>混合现实 (MR)：这种应用程序将其自身的环境与用户的现实环境相结合，并允许彼此交互。</li>
+<li>增强现实 (AR)：这种应用程序在现实世界的数字视图上将内容分层。</li>
+</ul>
+
+<h2>官方支持的平台</h2>
+
+<p>Unity 与战略合作伙伴紧密合作，以确保创作者在为 Unity 支持的平台开发内容时获得所需的所有支持。这涉及深度平台集成、Unity 引擎改进以及每个平台的 XR 技术堆栈优化。</p>
+
+<p>从 2019.3 开始，Unity 官方支持以下 XR 平台：</p>
+
+<ul>
+<li>ARKit</li>
+<li>ARCore</li>
+<li>Microsoft HoloLens</li>
+<li>Windows Mixed Reality</li>
+<li>Magic Leap</li>
+<li>Oculus</li>
+<li>PlayStation VR</li>
+</ul>
+
+<p>注意：Valve 和 Google 已使用 Unity 的 XR SDK 为 OpenVR 和 Cardboard 分别开发了自己的插件。这些插件与 Unity 2019.3 及更高版本兼容。有关更多信息，请参阅 <a href="VROverview.html">VR 开发入门</a>页面。</p>
+
+<h2>Unity XR 插件框架</h2>
+
+<p>Unity 开发了一个名为 XR SDK 的新插件框架，该框架使 XR 提供程序可与 Unity 引擎集成并充分利用其功能。这种基于插件的方法提高了 Unity 的能力，可以快速修复错误，从平台合作伙伴分发 SDK 更新，以及支持新的 XR 设备和运行时，而无需修改核心引擎。了解更多相关信息：</p>
+
+<ul>
+<li>要了解如何升级到新框架，请参阅<a href="configuring-project-for-xr.html">针对 XR 配置 Unity 项目</a>页面。</li>
+<li>要了解有关新框架的运行方式，请参阅 <a href="XRPluginArchitecture.html">XR 插件框架</a>页面。</li>
+</ul>
+
+<h2>弃用内置 XR 平台集成</h2>
+
+<p>在 2019.3 中，Unity 已过渡到新的插件框架以支持 XR 平台集成。因此，内置的 XR 平台集成已被标记为已弃用。<strong>这些集成在 2019.3 中仍可使用，并将在 2019.4 中继续有效。</strong>Unity 不会为这些集成开发任何新功能，但是将继续提供重要的错误修复。</p>
+
+<p>内置的集成及其相应的文档如下所示：</p>
+
+<ul>
+<li>
+<a href="https://docs.unity3d.com/Packages/com.unity.xr.windowsmr.metro@latest">Windows Mixed Reality</a>（HoloLens 和 Windows MR 设备）</li>
+<li>
+<a href="https://docs.unity3d.com/Packages/com.unity.xr.oculus.android@latest">Oculus Android</a> 和 <a href="https://docs.unity3d.com/Packages/com.unity.xr.oculus.standalone@latest">Oculus Desktop</a>
+</li>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.xr.openvr.standalone@latest">OpenVR (Desktop)</a></li>
+<li>
+<a href="https://docs.unity3d.com/Packages/com.unity.xr.googlevr.android@2.0/manual/index.html">Google VR Android</a> 和 <a href="https://docs.unity3d.com/Packages/com.unity.xr.googlevr.ios@2.0/manual/index.html">Google VR iOS</a>
+</li>
+<li>
+<a href="https://docs.unity3d.com/Packages/com.ptc.vuforia.engine@8.5/manual/index.html">Vuforia Engine AR</a> (1)</li>
+</ul>
+
+<p><strong>注意：</strong>(1) 从 2019.3 开始，Vuforia Engine 内置包 (Vuforia Engine AR) 将不再原生分发，也不再直接由 Unity 支持。您将继续能够通过 <a href="https://developer.vuforia.com/">Vuforia 开发者门户网站</a>下载新版本的 Vuforia Engine for Unity。</p>
+
+<h2>Unity 中的 AR 开发</h2>
+
+<p><a href="AROverview.html">AR 概述</a>页面详细介绍了创建 AR 应用程序的入门知识，列出了您需要下载的包，并提供了指向其他文档的相关链接。Unity 建议下载 <strong>AR Foundation</strong> 和 <strong>XR Management</strong> 包，以便为 Unity 支持的手持式和可穿戴式 AR 设备创建应用程序。</p>
+
+<h2>Unity 中的 VR 开发</h2>
+
+<p><a href="VROverview.html">VR 概述</a>页面详细介绍了创建 VR 应用程序的入门知识，列出了您需要下载的包，并提供了指向其他文档的相关链接。首先，Unity 建议下载 <strong>XR Management</strong> 和 <strong>XR Interaction Toolkit</strong> <strong>(Preview)</strong> 包，以便为 Unity 支持的 VR 设备创建应用程序。</p>
+
+<h2>Unity Package Manager</h2>
+
+<p>Unity 的大多数 XR 功能都可在<a href="PackagesList.html">包</a>中找到，这些包可通过 <a href="Packages.html">Package Manager</a>（从 Unity 的主菜单中选择 <strong>Window &gt; Package Manager</strong>）进行安装。Package Manager 窗口显示有关每个包的详细信息。</p>
+
+<p><strong>注意：</strong>要查看预览包，请单击 Package Manager 窗口中的 <strong>Advanced</strong> 下拉菜单，然后选择 <strong>Show Preview Packages</strong>。</p>
+
+<p>有关要下载的包的完整列表，请参阅 <a href="AROverview.html">AR 概述</a>和 <a href="VROverview.html">VR 概述</a>页面。</p>
+
+<h2>API 用法示例</h2>
+
+<p>此 AR Foundation Samples <a href="https://github.com/Unity-Technologies/arfoundation-samples">GitHub 代码仓库</a>包含有关如何使用 Unity AR Foundation API 的示例。</p>
+
+<h2>其他 Unity 资源</h2>
+
+<ul>
+<li><a href="https://learn.unity.com/search?k=%5B%22tag%3A5900b95a090915001e654b47%22%5D">Unity Learn 中的 AR/VR 教程</a></li>
+<li><a href="https://forum.unity.com/forums/ar-vr-xr-discussion.80/">Unity AR/VR 论坛</a></li>
+<li><a href="https://docs.unity3d.com/2019.3/Documentation/Manual/system-requirements.html#xr">XR 平台系统要求</a></li>
+<li><a href="https://unity3d.com/what-is-xr-glossary">XR 专用术语表</a></li>
+<li><a href="https://docs.unity3d.com/Manual/SinglePassStereoRendering.html">AR/VR 的渲染</a></li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp-troubleshooting.html"></a></span><div class="tip">UDP 故障排除</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AROverview.html"></a></span><div class="tip">Unity AR 开发入门</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="启动画面 (Splash Screen) - Unity 手册">
+<title>启动画面 (Splash Screen) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/SplashScreenSettings.png">
+<meta name="description" content="Unity Editor 允许为项目配置启动画面。能在多大程度上自定义 Unity 启动画面取决于持有的 Unity 订阅；根据所持有的是 Unity Personal、Unity Plus 还是 Unity Pro，可以完全禁用 Unity 启动画面，禁用 Unity 徽标，添加自己的徽标以及其他选项。">
+<meta property="og:description" content="Unity Editor 允许为项目配置启动画面。能在多大程度上自定义 Unity 启动画面取决于持有的 Unity 订阅；根据所持有的是 Unity Personal、Unity Plus 还是 Unity Pro，可以完全禁用 Unity 启动画面，禁用 Unity 徽标，添加自己的徽标以及其他选项。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-PlayerSettingsSplashScreen';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PlayerSettingsSplashScreen.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-PlayerSettingsSplashScreen.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PlayerSettingsSplashScreen.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-PlayerSettingsSplashScreen.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-PlayerSettingsSplashScreen.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-PlayerSettingsSplashScreen.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-PlayerSettingsSplashScreen.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-PlayerSettingsSplashScreen.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PlayerSettingsSplashScreen.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PlayerSettingsSplashScreen.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PlayerSettingsSplashScreen.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettingsSplashScreen.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PlayerSettingsSplashScreen.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettingsSplashScreen.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettingsSplashScreen.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettingsSplashScreen.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettingsSplashScreen.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettingsSplashScreen.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettingsSplashScreen.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettingsSplashScreen.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettingsSplashScreen.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettingsSplashScreen.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettingsSplashScreen.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettingsSplashScreen.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettingsSplashScreen.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-PlayerSettingsSplashScreen.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-PlayerSettingsSplashScreen.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-PlayerSettingsSplashScreen.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-PlayerSettingsSplashScreen.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-PlayerSettingsSplashScreen.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-PlayerSettingsSplashScreen.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PlayerSettingsSplashScreen.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PlayerSettingsSplashScreen.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PlayerSettingsSplashScreen.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettingsSplashScreen.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PlayerSettingsSplashScreen.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettingsSplashScreen.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettingsSplashScreen.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettingsSplashScreen.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettingsSplashScreen.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettingsSplashScreen.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettingsSplashScreen.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettingsSplashScreen.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettingsSplashScreen.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettingsSplashScreen.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettingsSplashScreen.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettingsSplashScreen.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettingsSplashScreen.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="comp-ManagerGroup.html">Project Settings</a></li>
+<li><a href="class-PlayerSettings.html">Player</a></li>
+<li>启动画面 (Splash Screen)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PlayerSettings.html"></a></span><div class="tip">Player</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PresetManager.html"></a></span><div class="tip">Preset Manager</div>
+</div>
+</div></div>
+<h1>启动画面 (Splash Screen)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity Editor 允许为项目配置启动画面。能在多大程度上自定义 Unity 启动画面取决于持有的 Unity 订阅；根据所持有的是 Unity Personal、Unity Plus 还是 Unity Pro，可以完全禁用 Unity 启动画面，禁用 Unity 徽标，添加自己的徽标以及其他选项。</p>
+
+<p>还可以使用 Unity <a href="UISystem.html">UI 系统</a>制作自己的介绍性画面或动画，以便在第一个<a href="CreatingScenes.html">场景</a>中介绍项目。这些可以作为 Unity 启动画面的补充或替代，具体取决于所持有的订阅。</p>
+
+<p>Unity 启动画面在所有平台上都是一致的。它会迅速显示，在显示的同时，第一个场景在后台异步加载。这与您自己的介绍性画面或动画有所不同，您自己的画面或动画可能需要一段时间才能出现；这是因为 Unity 必须首先加载整个引擎和第一个场景，然后才会显示它们。</p>
+
+<p><strong>注意：</strong>Unity 将这些选项直接复制到 <em>Package.appxmanifest</em> 文件。</p>
+
+<h2>订阅限制</h2>
+
+<p>Unity Pro 和 Plus 订阅对 Unity 启动画面的自定义没有限制。</p>
+
+<p>Unity Personal 订阅具有以下限制：</p>
+
+<ul>
+<li>无法禁用 Unity 启动画面。</li>
+<li>无法禁用 Unity 徽标。</li>
+<li>不透明度级别可以设置为最小值 0.5。</li>
+</ul>
+
+<h2>Unity 启动画面设置</h2>
+
+<p>要访问 Unity Splash Screen 设置，请从 Unity 主菜单中打开 <strong>Edit</strong> &gt; <strong>Project Settings__，然后选择 </strong>Player__ 类别。然后展开 <strong>Splash Image</strong> 部分并向下滚动到 <strong>Splash Screen</strong> 属性。</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings.png" alt="启动画面 (Splash Screen) 设置">
+<figcaption>启动画面 (Splash Screen) 设置</figcaption>
+</figure>
+
+<p>此屏幕上包含以下部分：</p>
+
+<p><img src="../uploads/Main/LetterCircle_A.png" alt="A"> <a href="#Preview">Preview</a></p>
+
+<p><img src="../uploads/Main/LetterCircle_B.png" alt="B"> <a href="#Style">Style</a></p>
+
+<p><img src="../uploads/Main/LetterCircle_C.png" alt="C"><a href="#Animation">Animation</a></p>
+
+<p><img src="../uploads/Main/LetterCircle_D.png" alt="D"> <a href="#Logos">Logos</a></p>
+
+<p><img src="../uploads/Main/LetterCircle_E.png" alt="E"> <a href="#Background">Background</a></p>
+
+<p><a name="Preview"></a></p>
+
+<h3>Preview</h3>
+
+<p>启用 <strong>Show Splash Screen</strong> 选项可在游戏开始时显示启动画面。如果使用的是 Unity Personal 订阅，则无法禁用此选项。</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings-Preview.png" alt="Splash Screen 和 Preview 设置">
+<figcaption>Splash Screen 和 Preview 设置</figcaption>
+</figure>
+
+<p>使用 <strong>Preview</strong> 按钮可在 Game 视图中查看启动画面的预览。预览反映了 Game 视图的分辨率和宽高比。使用多个 Game 视图可同时预览多种不同的分辨率和宽高比。这对于模拟启动画面在多个不同设备上的外观特别有用。</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenPreviews.jpg" alt="图 A：__预览__ - 多个预览">
+<figcaption>图 A：__预览__ - 多个预览</figcaption>
+</figure>
+
+<p><a name="Style"></a></p>
+
+<h3>Style</h3>
+
+<p>使用 <strong>Splash Style</strong> 设置可控制 Unity 品牌的风格。</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings-Style.png" alt="Style 设置">
+<figcaption>Style 设置</figcaption>
+</figure>
+
+<p>从 <strong>Splash Style</strong> 下拉菜单中选择 <strong>Light on Dark__（默认设置）或 </strong>Dark on White__。</p>
+
+<figure>
+<img src="../uploads/Main/LogoStylesSideBySide.png" alt="图 B：__Splash Style__ - 左侧是 Light on Dark 样式。右侧是 Dark on Light 样式。">
+<figcaption>图 B：__Splash Style__ - 左侧是 Light on Dark 样式。右侧是 Dark on Light 样式。</figcaption>
+</figure>
+
+<p><a name="Animation"></a></p>
+
+<h3>Animation</h3>
+
+<p>使用 <strong>Animation</strong> 设置可定义启动画面在屏幕上的显示和消失方式。</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings-Animation.png" alt="Animation 设置">
+<figcaption>Animation 设置</figcaption>
+</figure>
+
+<p>从 <strong>Animation</strong> 下拉菜单中选择以下值之一：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>值</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Static</strong></td>
+	<td style="text-align:left;">不应用动画。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Dolly</strong></td>
+	<td style="text-align:left;">徽标和背景可以变焦以创建视觉推拉变焦效果。此为默认值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom</strong></td>
+	<td style="text-align:left;">配置背景和徽标变焦以实现修改后的推拉变焦效果。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Logos"></a></p>
+
+<h3>Logos</h3>
+
+<p>使用 <strong>Logos</strong> 部分中的设置可自定义应用程序在徽标。</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings-Logos.png" alt="Logos 设置">
+<figcaption>Logos 设置</figcaption>
+</figure>
+
+<p>默认情况下，您的应用程序与 Unity 一起采用联合品牌徽标。如果使用的是 Unity Personal 订阅，则无法禁用此选项。如果使用的是 Unity Pro 或 Plus 订阅，则可以禁用 <strong>Show Unity Logo</strong> 选项以从应用程序中删除 Unity 徽标。</p>
+
+<p>如果使用 Unity 联合品牌，则可以从 <strong>Draw Mode</strong> 下拉框中选择以下值之一来控制显示方式：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>值</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Unity Logo Below</strong></td>
+	<td style="text-align:left;">在显示的所有徽标下方绘制 Unity 联合品牌徽标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>All Sequential</strong></td>
+	<td style="text-align:left;">将 Unity 联合品牌徽标作为徽标插入到 <strong>Logos</strong> 列表中。</td>
+</tr>
+</tbody>
+</table>
+
+<p>可以自定义在启动画面上显示的徽标列表：</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenLogos.png" alt="图 C：__Logos__ - 徽标列表和 Logo Duration 设置">
+<figcaption>图 C：__Logos__ - 徽标列表和 <strong>Logo Duration</strong> 设置</figcaption>
+</figure>
+
+<p>每个徽标必须是精灵资源。将 <strong>Sprite Mode</strong> 设置为 <em>Single</em> 可以将整个精灵用作图标。如果要更改徽标的宽高比，请将 <strong>Sprite Mode</strong> 设置为 <em>Multiple</em> 并使用 <a href="SpriteEditor.html">Sprite Editor</a> 编辑尺寸。</p>
+
+<p>要添加和删除徽标，请使用加号 (+) 和减号 (-) 按钮。</p>
+
+<p>要对徽标重新排序，请在列表中对徽标执行拖放操作。</p>
+
+<p>可以通过设定 <strong>Logo Duration</strong> 设置来控制每个精灵资源在屏幕上显示的时间长度。应使用介于 2 秒和 10 秒之间的值。</p>
+
+<p>如果 Logos 列表中的条目未分配徽标精灵资源，则在该条目的持续时间内不会显示任何徽标。据此可以在两个徽标之间创建延迟时间。</p>
+
+<p>启动画面的整个持续时间是所有徽标的时间总和加上 0.5 秒的淡出时间。如果第一个场景未准备好播放，这一时间可能会更长，在这种情况下，启动画面仅显示背景图像或颜色，然后在第一个场景准备好播放时淡出。</p>
+
+<p><a name="Background"></a></p>
+
+<h3>Background</h3>
+
+<p>使用 <strong>Background</strong> 部分中的设置可自定义应用程序启动画面的背景。</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings-Background.png" alt="Logos 设置">
+<figcaption>Logos 设置</figcaption>
+</figure>
+
+<h4>Overlay Opacity</h4>
+
+<p>调整 <strong>Overlay Opacity</strong> 设置的强度以使徽标突出显示。这会影响背景颜色和图像颜色，具体取决于 <a href="#Style">Splash Style</a> 的设置。</p>
+
+<p>可以将不透明度设置为较小的数字来减弱此效果。也可以通过将其设置为 0 来完全禁用该效果。例如，如果启动画面样式为 <strong>Light on Dark__，并且使用白色背景，那么当 </strong>Overlay Opacity__ 设置为 1 时背景变为灰色，__Overlay Opacity__ 设置为 0 时背景变为白色。在 Unity Personal 订阅中，此选项的最小值为 0.5。</p>
+
+<h4>Background Color</h4>
+
+<p>在未设置背景图像时设置__背景颜色 (Background Color)<strong>。请注意，实际背景颜色可能会受到 </strong>Overlay Opacity__ 设置的影响，并且可能与指定的颜色不匹配。</p>
+
+<h4>Background Image</h4>
+
+<p>在 <strong>Background Image</strong> 设置中指定对背景图像的引用，而不是使用颜色背景。Unity 会调整背景图像来使其填满屏幕。图像将均匀缩放，直至适应屏幕的宽度和高度。这意味着图像的某些部分可能会以一定宽高比延伸到屏幕边缘之外。要调整背景图像对宽高比的响应，请在 Sprite Editor 中更改精灵的 <strong>Position</strong> 值。</p>
+
+<h4>Alternate Portrait Image</h4>
+
+<p>使用 <strong>Alternate Portrait Image</strong> 可设置纵向宽高比的图像（例如，纵向模式下的移动设备）。如果没有指定 <strong>Alternate Portrait Image</strong> 精灵，那么 Unity Editor 会将指定为__Background Image__ 的精灵用于纵向和横向模式。</p>
+
+<p>可以在 <a href="SpriteEditor.html">Sprite Editor</a> 中调整精灵的 <strong>Position</strong> 和尺寸，从而控制启动画面上背景图像的宽高比和位置。在以下示例中，相同的图像用于横向和纵向布局；但是，纵向位置已经过调整。</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSpriteEdit.jpg" alt="图 D：__Background Image__ - 对于横向和纵向布局使用了相同的背景图像">
+<figcaption>图 D：__Background Image__ - 对于横向和纵向布局使用了相同的背景图像</figcaption>
+</figure>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PlayerSettings.html"></a></span><div class="tip">Player</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PresetManager.html"></a></span><div class="tip">Preset Manager</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Input Manager - Unity 手册">
+<title>Input Manager - Unity 手册</title>
+<meta name="description" content="The Input Manager window allows you to define input axes and their associated actions for your Project. To access it, from Unity&amp;#8217;s main menu, go to Edit &gt; Project Settings, then select Input Manager from teh navigation on the right.">
+<meta property="og:description" content="The Input Manager window allows you to define input axes and their associated actions for your Project. To access it, from Unity&amp;#8217;s main menu, go to Edit &gt; Project Settings, then select Input Manager from teh navigation on the right.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-InputManager';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-InputManager.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-InputManager.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-InputManager.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-InputManager.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-InputManager.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-InputManager.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-InputManager.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-InputManager.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-InputManager.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-InputManager.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-InputManager.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-InputManager.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-InputManager.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-InputManager.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-InputManager.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-InputManager.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-InputManager.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-InputManager.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-InputManager.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-InputManager.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-InputManager.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-InputManager.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-InputManager.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-InputManager.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-InputManager.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-InputManager.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-InputManager.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-InputManager.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-InputManager.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-InputManager.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-InputManager.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-InputManager.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-InputManager.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-InputManager.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-InputManager.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-InputManager.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-InputManager.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-InputManager.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-InputManager.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-InputManager.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-InputManager.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-InputManager.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-InputManager.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-InputManager.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-InputManager.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-InputManager.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-InputManager.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-InputManager.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Input.html">输入</a></li>
+<li>Input Manager</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Input.html"></a></span><div class="tip">输入</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileInput.html"></a></span><div class="tip">移动设备输入</div>
+</div>
+</div></div>
+<h1>Input Manager</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <strong>Input Manager</strong> window allows you to define input axes and their associated actions for your Project. To access it, from Unity’s main menu, go to <strong>Edit &gt; Project Settings</strong>, then select <strong>Input Manager</strong> from teh navigation on the right.</p>
+
+<p>Input Manager 使用以下类型的控件：</p>
+
+<ul>
+<li>
+<strong>键</strong>指物理键盘上的任何键，例如 W、Shift 键或空格键。</li>
+<li>
+<strong>按钮</strong>指物理控制器（例如游戏手柄）上的任何按钮，例如 Xbox One 控制器上的 X 按钮。</li>
+<li>
+<strong>虚拟轴</strong>被映射到控件（例如按钮或键）。用户激活控件后，该轴会收到 [–1..1] 范围中的某个值。您可以将该值用于您的脚本。</li>
+</ul>
+
+<h2>虚拟轴</h2>
+
+<p>默认情况下，创建的每个项目都创建了若干输入轴。通过这些轴可以立即在项目中使用键盘、鼠标和游戏杆输入。</p>
+
+<p>要查看有关这些轴的更多信息，请打开 <strong>Input Manager</strong> 窗口，然后单击任何轴名称旁边的箭头以展开其属性。</p>
+
+<p>每个输入轴具有以下属性：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>名称</strong></td>
+	<td style="text-align:left;">轴名称。使用此名称可以通过脚本来访问轴。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Descriptive Name, Descriptive Negative Name</strong></td>
+	<td style="text-align:left;">这些值已弃用，不起作用。以前在启动时会在 Rebind Controls 屏幕上为用户显示这些值，但该屏幕也已弃用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Negative Button, Positive Button</strong></td>
+	<td style="text-align:left;">用于分别沿负向和正向推动轴的控件。这些控件可以是键盘上的键，也可以是游戏杆或鼠标上的按钮。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alt Negative Button, Alt Positive Button</strong></td>
+	<td style="text-align:left;">用于分别沿负向和正向推动轴的备用控件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Gravity</strong></td>
+	<td style="text-align:left;">不存在输入时，轴下降到中性点的速度（以单位/秒表示）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Dead</strong></td>
+	<td style="text-align:left;">在应用程序对移动操作进行记录之前，用户需要移动模拟摇杆的距离。在运行时，所有模拟设备在该范围内的输入将被视为 null。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sensitivity</strong></td>
+	<td style="text-align:left;">轴向目标值移动的速度（以单位/秒表示）。仅用于数字设备。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Snap</strong></td>
+	<td style="text-align:left;">如果启用此属性，按下对应于反方向的按钮时，轴值将重置为零。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>类型</strong></td>
+	<td style="text-align:left;">这是控制此轴的输入类型。从以下值中进行选择：<br><br>- 键或鼠标按钮 (Key or Mouse button)<br>- 鼠标移动 (Mouse Movement)<br>- 游戏杆轴 (Joystick Axis)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Axis</strong></td>
+	<td style="text-align:left;">这是用于控制此轴的连接设备的轴。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>JoyNum</strong></td>
+	<td style="text-align:left;">这是控制此轴的连接游戏杆。可以选择特定游戏杆，或查询所有游戏杆的输入。</td>
+</tr>
+</tbody>
+</table>
+
+<p>轴值可能为：</p>
+
+<ul>
+<li>对于游戏杆和键盘输入，–1 到 1 之间的值。这些轴的中性位置为 0。某些类型的控件（例如键盘上的按钮）对输入强度不敏感，因此它们不能产生 –1、0 或 1 以外的值。</li>
+<li>对于鼠标输入，鼠标增量（鼠标在最后一帧中移动的程度）。用户快速移动鼠标时，鼠标输入轴的这些值可能大于 1 或小于 –1。</li>
+</ul>
+
+<h3>添加、删除和复制虚拟轴</h3>
+
+<p>要添加虚拟轴，请增加 <strong>Size</strong> 字段中的数值。这样就会在列表底部创建一个新轴。新轴将复制列表中前一个轴的属性。</p>
+
+<p>要删除虚拟轴，可执行以下操作之一：</p>
+
+<ul>
+<li>减小 <strong>Size</strong> 字段中的数值。这样将删除列表中的最后一个轴。</li>
+<li>右键单击任何轴，然后选择 <strong>Delete Array Element</strong>。<br>
+<strong>注意：</strong>无法撤消此操作。</li>
+</ul>
+
+<p>要复制虚拟轴，请右键单击该轴并选择 <strong>Duplicate Array Element</strong>。</p>
+
+<h3>将虚拟轴映射到控件</h3>
+
+<p>要将键或按钮映射到轴，请在 Input Manager 中的 <strong>Positive Button</strong> 或 <strong>Negative Button</strong> 属性中输入其名称。</p>
+
+<p>键名称遵循以下命名约定：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键系列</strong></th>
+	<th style="text-align:left;"><strong>命名约定</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">字母键</td>
+	<td style="text-align:left;">
+<code>a</code>, <code>b</code>, <code>c</code>…</td>
+</tr>
+<tr>
+	<td style="text-align:left;">数字键</td>
+	<td style="text-align:left;">
+<code>1</code>, <code>2</code>, <code>3</code>…</td>
+</tr>
+<tr>
+	<td style="text-align:left;">箭头键</td>
+	<td style="text-align:left;">
+<code>up</code>, <code>down</code>, <code>left</code>, <code>right</code>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;">小键盘按键</td>
+	<td style="text-align:left;">
+<code>[1]</code>, <code>[2]</code>, <code>[3]</code>, <code>[+]</code>, <code>[equals]</code>…</td>
+</tr>
+<tr>
+	<td style="text-align:left;">修饰键</td>
+	<td style="text-align:left;">
+<code>right shift</code>, <code>left shift</code>, <code>right ctrl</code>, <code>left ctrl</code>, <code>right alt</code>, <code>left alt</code>, <code>right cmd</code>, <code>left cmd</code>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;">特殊键</td>
+	<td style="text-align:left;">
+<code>backspace</code>, <code>tab</code>, <code>return</code>, <code>escape</code>, <code>space</code>, <code>delete</code>, <code>enter</code>, <code>insert</code>, <code>home</code>, <code>end</code>, <code>page up</code>, <code>page down</code>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;">功能键</td>
+	<td style="text-align:left;">
+<code>f1</code>, <code>f2</code>, <code>f3</code>…</td>
+</tr>
+</tbody>
+</table>
+
+<p>将鼠标按钮命名为：<code>mouse 0、mouse 1、mouse 2</code>，以此类推。</p>
+
+<p>游戏杆按钮遵循以下命名约定：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>按钮原点</strong></th>
+	<th style="text-align:left;"><strong>命名约定</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">任何游戏杆上的一个特定按钮</td>
+	<td style="text-align:left;">
+<code>joystick button 0</code>, <code>joystick button 1</code>, <code>joystick button 2</code>…</td>
+</tr>
+<tr>
+	<td style="text-align:left;">一个特定游戏杆上的一个特定按钮</td>
+	<td style="text-align:left;">
+<code>joystick 1 button 0</code>, <code>joystick 1 button 1</code>, <code>joystick 2 button 0</code>…</td>
+</tr>
+</tbody>
+</table>
+
+<p>还可以使用 <a href="../ScriptReference/Input.GetKey.html"><code>Input.GetKey</code></a> 和上文指定的命名约定来查询特定键或按钮的输入。例如：</p>
+
+<pre><code class="csharp">Input.GetKey("a");
+</code></pre>
+
+<p>访问键的另一方法是使用 <a href="../ScriptReference/KeyCode.html"><code>KeyCode</code></a> 枚举。</p>
+
+<h3>在脚本中使用虚拟轴</h3>
+
+<p>要通过脚本访问虚拟轴，可以使用轴名称。</p>
+
+<p>例如，要查询水平轴的当前值并将其存储在变量中，可以使用 <a href="../ScriptReference/Input.GetAxis.html"><code>Input.GetAxis</code></a>，如下所示：</p>
+
+<pre><code class="csharp">float horizontalInput = Input.GetAxis ("Horizontal");
+</code></pre>
+
+<p>对于描述事件而非移动操作的轴（例如，游戏中武器开火），请改用 <a href="../ScriptReference/Input.GetButtonDown.html"><code>Input.GetButtonDown</code></a>。</p>
+
+<p>如果两个或多个轴同名，查询将返回具有最大绝对值的轴。这样就可以将多个输入设备分配给一个轴名称。</p>
+
+<p>例如，可以创建两个名为 Horizontal 的轴，并将一个轴分配给键盘输入，将另一个轴分配给游戏杆输入。如果用户正在使用游戏杆，则输入来自游戏杆，键盘输入为 null。否则，输入来自键盘，游戏杆输入为 null。因此，可以编写一个脚本来涵盖多个控制器的输入。</p>
+
+<p><strong>示例</strong></p>
+
+<p>可以使用 <strong>Horizontal</strong> 和 <strong>Vertical</strong> 轴的输入以及 <a href="../ScriptReference/Transform.Translate.html"><code>transform.Translate</code></a> 方法来移动 XZ 空间中的游戏对象（前移、后移、左移或右移）。在附加到待移动游戏对象的脚本上，将以下代码添加到脚本的 <code>update()</code> 方法中：</p>
+
+<pre><code>float moveSpeed = 10;
+//Define the speed at which the object moves.
+
+float horizontalInput = Input.GetAxis("Horizontal");
+//Get the value of the Horizontal input axis.
+
+float verticalInput = Input.GetAxis("Vertical");
+//Get the value of the Vertical input axis.
+
+transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
+//Move the object to XYZ coordinates defined as horizontalInput, 0, and verticalInput respectively.
+</code></pre>
+
+<p><a href="../ScriptReference/Time-deltaTime.html"><code>Time.deltaTime</code></a> 表示自上一帧以来经过的时间。将 <code>moveSpeed</code> 变量乘以 <code>Time.deltaTime</code> 可确保游戏对象在每一帧匀速移动。</p>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Input.html"></a></span><div class="tip">输入</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileInput.html"></a></span><div class="tip">移动设备输入</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

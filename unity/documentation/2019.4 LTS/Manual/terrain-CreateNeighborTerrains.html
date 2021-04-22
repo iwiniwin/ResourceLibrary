@@ -1,0 +1,282 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Create Neighbor Terrains - Unity 手册">
+<title>Create Neighbor Terrains - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/1.3.1-CreateNeighborTerrains_grey.png">
+<meta name="description" content="Create Neighbor Terrains 工具用于快速创建自动连接的相邻地形瓦片。在 Terrain Inspector 中，单击 Create Neighbor Terrains 图标。">
+<meta property="og:description" content="Create Neighbor Terrains 工具用于快速创建自动连接的相邻地形瓦片。在 Terrain Inspector 中，单击 Create Neighbor Terrains 图标。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'terrain-CreateNeighborTerrains';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/terrain-CreateNeighborTerrains.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/terrain-CreateNeighborTerrains.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/terrain-CreateNeighborTerrains.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/terrain-CreateNeighborTerrains.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/terrain-CreateNeighborTerrains.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/terrain-CreateNeighborTerrains.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/terrain-CreateNeighborTerrains.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/terrain-CreateNeighborTerrains.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/terrain-CreateNeighborTerrains.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/terrain-CreateNeighborTerrains.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/terrain-CreateNeighborTerrains.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/terrain-CreateNeighborTerrains.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/terrain-CreateNeighborTerrains.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/terrain-CreateNeighborTerrains.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/terrain-CreateNeighborTerrains.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/terrain-CreateNeighborTerrains.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/terrain-CreateNeighborTerrains.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/terrain-CreateNeighborTerrains.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/terrain-CreateNeighborTerrains.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/terrain-CreateNeighborTerrains.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/terrain-CreateNeighborTerrains.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/terrain-CreateNeighborTerrains.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/terrain-CreateNeighborTerrains.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/terrain-CreateNeighborTerrains.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/terrain-CreateNeighborTerrains.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/terrain-CreateNeighborTerrains.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/terrain-CreateNeighborTerrains.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/terrain-CreateNeighborTerrains.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/terrain-CreateNeighborTerrains.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/terrain-CreateNeighborTerrains.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/terrain-CreateNeighborTerrains.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/terrain-CreateNeighborTerrains.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/terrain-CreateNeighborTerrains.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/terrain-CreateNeighborTerrains.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/terrain-CreateNeighborTerrains.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/terrain-CreateNeighborTerrains.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/terrain-CreateNeighborTerrains.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/terrain-CreateNeighborTerrains.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/terrain-CreateNeighborTerrains.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/terrain-CreateNeighborTerrains.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/terrain-CreateNeighborTerrains.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/terrain-CreateNeighborTerrains.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/terrain-CreateNeighborTerrains.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/terrain-CreateNeighborTerrains.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/terrain-CreateNeighborTerrains.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/terrain-CreateNeighborTerrains.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/terrain-CreateNeighborTerrains.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/terrain-CreateNeighborTerrains.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="CreatingEnvironments.html">创建环境</a></li>
+<li><a href="script-Terrain.html">地形</a></li>
+<li>Create Neighbor Terrains</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="terrain-UsingTerrains.html"></a></span><div class="tip">创建和编辑地形</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="terrain-Tools.html"></a></span><div class="tip">地形工具</div>
+</div>
+</div></div>
+<h1>Create Neighbor Terrains</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>Create Neighbor Terrains</strong> 工具用于快速创建自动连接的相邻地形瓦片。在 <strong>Terrain Inspector</strong> 中，单击 <strong>Create Neighbor Terrains</strong> 图标。</p>
+
+<figure>
+<img src="../uploads/Main/1.3.1-CreateNeighborTerrains_grey.png" alt="Terrain Inspector 中的 Create Neighbor Terrains 工具">
+<figcaption>Terrain Inspector 中的 Create Neighbor Terrains 工具</figcaption>
+</figure>
+
+<p>选择此工具时，Unity 会突出显示所选地形瓦片周围的区域，指示可以在哪些空间内放置新连接的瓦片。</p>
+
+<figure>
+<img src="../uploads/Main/1.3.1-create-neighbor-terrains.png" alt="可在其中创建新地形区块的空间">
+<figcaption>可在其中创建新地形区块的空间</figcaption>
+</figure>
+
+<p>选中 <strong>Fill Heightmap Using Neighbors</strong> 复选框可使用相邻地形瓦片的高度贴图交叉混合来填充新地形瓦片的高度贴图，从而确保新瓦片边缘的高度与相邻瓦片匹配。</p>
+
+<p>从 <strong>Fill Heightmap Address Mode</strong> 下拉菜单中选择一个属性以确定如何对相邻瓦片的高度贴图进行交叉混合：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Clamp</strong></td>
+	<td style="text-align:left;">Unity 在相邻地形瓦片（与新瓦片共享边框）边缘上的高度之间执行交叉混合。每个地形瓦片最多包含四个相邻瓦片：顶部、底部、左侧和右侧。如果四个相邻空间都没有瓦片，则沿着该相应边框的高度将设为零。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mirror</strong></td>
+	<td style="text-align:left;">Unity 会为每个相邻地形瓦片生成镜像，并对这些瓦片的高度贴图进行交叉混合以生成新瓦片的高度贴图。如果四个相邻空间都没有瓦片，则该特定瓦片位置的高度将设为零。</td>
+</tr>
+</tbody>
+</table>
+
+<p>要创建新的地形瓦片，请单击现有瓦片旁的任何可用空间。Editor 会在与所选地形相同的组中创建新的地形瓦片，并复制其连接到的瓦片的设置。此外还会创建新的 <a href="../ScriptReference/TerrainData.html">TerrainData</a> 资源。</p>
+
+<p>默认情况下，Unity 在地形区块的 <a href="terrain-OtherSettings.html">Terrain Settings</a> 中启用 <strong>Auto connect</strong>。启用 <strong>Auto connect</strong> 后，地形系统会自动管理相邻地形区块之间的连接，并且区块会自动连接到具有相同 <strong>Grouping ID</strong> 的所有邻居。</p>
+
+<figure>
+<img src="../uploads/Main/1.3.1-TerrainSettings_grey.png" alt="地形区块的地形设置 (Terrain Settings)">
+<figcaption>地形区块的地形设置 (Terrain Settings)</figcaption>
+</figure>
+
+<p>在极少数情况下，如果更改 <strong>Grouping ID__，或者为一个或多个瓦片禁用 </strong>Auto connect__，则可能会丢失瓦片之间的连接。要重新创建地形瓦片之间的连接，请单击 <strong>Reconnect</strong> 按钮。仅当两个相邻的瓦片具有相同的 <strong>Grouping ID</strong> 以及两个瓦片都启用了 <strong>Auto Connect</strong> 的情况下，__Reconnect__ 才会连接这两个瓦片。</p>
+
+<p>通过连接一个组中的地形瓦片，可以使用其他工具绘制纹理或以无缝方式调整该组的高度贴图。在运行时，地形系统会自动将所连接瓦片的曲面细分与法线贴图融合。这样可确保它们显示为一块地形而没有接缝或瑕疵。</p>
+
+<p>如果尝试通过一次笔划在两个未连接的区块之间绘制，Unity 会将这些区块视为单独的区块，因此应用的任何效果可能仅显示在一个区块上，或者在每个区块上显示结果不同。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–04–17 页面已修订</span></p></li>
+<li><p><span class="page-history">更新了内容以反映新的 UI 和选项</span></p></li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="terrain-UsingTerrains.html"></a></span><div class="tip">创建和编辑地形</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="terrain-Tools.html"></a></span><div class="tip">地形工具</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

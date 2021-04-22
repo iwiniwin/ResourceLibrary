@@ -1,0 +1,453 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="通过命令行界面使用 CCD - Unity 手册">
+<title>通过命令行界面使用 CCD - Unity 手册</title>
+<meta name="description" content="本节包含有关如何通过命令行界面 (CLI) 使用 Cloud Content Delivery (CCD) 的完整示例，包括以下主题：">
+<meta property="og:description" content="本节包含有关如何通过命令行界面 (CLI) 使用 Cloud Content Delivery (CCD) 的完整示例，包括以下主题：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UnityCCDCLIWalkthrough';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityCCDCLIWalkthrough.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UnityCCDCLIWalkthrough.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityCCDCLIWalkthrough.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UnityCCDCLIWalkthrough.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UnityCCDCLIWalkthrough.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UnityCCDCLIWalkthrough.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UnityCCDCLIWalkthrough.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UnityCCDCLIWalkthrough.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnityCCDCLIWalkthrough.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnityCCDCLIWalkthrough.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityCCDCLIWalkthrough.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityCCDCLIWalkthrough.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityCCDCLIWalkthrough.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityCCDCLIWalkthrough.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityCCDCLIWalkthrough.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityCCDCLIWalkthrough.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityCCDCLIWalkthrough.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityCCDCLIWalkthrough.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityCCDCLIWalkthrough.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityCCDCLIWalkthrough.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityCCDCLIWalkthrough.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityCCDCLIWalkthrough.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityCCDCLIWalkthrough.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityCCDCLIWalkthrough.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityCCDCLIWalkthrough.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UnityCCDCLIWalkthrough.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UnityCCDCLIWalkthrough.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UnityCCDCLIWalkthrough.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UnityCCDCLIWalkthrough.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UnityCCDCLIWalkthrough.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UnityCCDCLIWalkthrough.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnityCCDCLIWalkthrough.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnityCCDCLIWalkthrough.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityCCDCLIWalkthrough.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityCCDCLIWalkthrough.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityCCDCLIWalkthrough.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityCCDCLIWalkthrough.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityCCDCLIWalkthrough.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityCCDCLIWalkthrough.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityCCDCLIWalkthrough.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityCCDCLIWalkthrough.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityCCDCLIWalkthrough.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityCCDCLIWalkthrough.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityCCDCLIWalkthrough.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityCCDCLIWalkthrough.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityCCDCLIWalkthrough.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityCCDCLIWalkthrough.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityCCDCLIWalkthrough.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityCCD.html">Unity Cloud Content Delivery</a></li>
+<li>通过命令行界面使用 CCD</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCCDDashboard.html"></a></span><div class="tip">Unity CCD Develop Dashboard</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAP.html"></a></span><div class="tip">﻿Unity IAP</div>
+</div>
+</div></div>
+<h1>通过命令行界面使用 CCD</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本节包含有关如何通过命令行界面 (CLI) 使用 Cloud Content Delivery (CCD) 的完整示例，包括以下主题：</p>
+
+<ul>
+<li><a href="#authentication">身份验证</a></li>
+<li><a href="#creating-a-bucket">创建存储桶</a></li>
+<li><a href="#creating-entries-in-the-bucket">从一组本地文件创建条目</a></li>
+<li><a href="#creating-a-release">创建发布版本</a></li>
+<li><a href="#managing-badges">管理标示</a></li>
+</ul>
+
+<h2>身份验证<a name="authentication"></a>
+</h2>
+
+<p>使用 API 密钥来登录服务。如需有关查找 API 密钥的帮助，请参阅<a href="UnityCCDCLI.html#getting-started">准备开始</a>部分。</p>
+
+<pre><code>$ ucd auth login XXXXXXXXXXXX
+Login successful.
+</code></pre>
+
+<p>使用 <code>auth info</code> 命令验证是否已登录。</p>
+
+<pre><code>$ ucd auth info
+Current user: Joe Smith
+</code></pre>
+
+<h2>创建存储桶<a name="creating-a-bucket"></a>
+</h2>
+
+<p>创建您的第一个存储桶。存储桶与单个项目相关联。此示例的 Project ID 为 <code>e1942cea-12df-4220-aa6d-f8c9c3ab7526</code>，但您需要使用实际的 Project ID 之一。如需有关查找 Project ID 的帮助，请参阅<a href="UnityCCDCLI.html#getting-started">准备开始</a>部分。</p>
+
+<p>列出此项目的存储桶（此时应为空）。</p>
+
+<pre><code>$ ucd buckets listCos
+No buckets found for project.
+</code></pre>
+
+<p>为此项目创建一个名为 <code>example_bucket</code> 的存储桶：</p>
+
+<pre><code>$ ucd buckets create e1942cea-12df-4220-aa6d-f8c9c3ab7526 example_bucket
+Created bucket: example_bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf)
+</code></pre>
+
+<p>存储桶和条目名称区分大小写。</p>
+
+<p>要查看新创建的存储桶，请再次列出此项目的存储桶：</p>
+
+<pre><code>$ ucd buckets listCos
+Buckets for project (e1942cea-12df-4220-aa6d-f8c9c3ab7526):
+- example_bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf)
+</code></pre>
+
+<p>为了使创建条目和发布版本更加容易，请将新创建的存储桶保存到本地配置中（不要在每次操作中作为 CLI 参数提供）。从上面的存储桶创建消息中复制存储桶的 GUID（不是存储桶名称）（此示例中为 <code>aee9ee5f-fa01-46d3-a293-731d15f066cf</code>）：</p>
+
+<pre><code>$ ucd config set bucket aee9ee5f-fa01-46d3-a293-731d15f066cf
+Successfully switched to bucket aee9ee5f-fa01-46d3-a293-731d15f066cf.
+Currently active project: e1942cea-12df-4220-aa6d-f8c9c3ab7526.
+Currently active bucket: aee9ee5f-fa01-46d3-a293-731d15f066cf (example_bucket).
+</code></pre>
+
+<p>CCD 会自动在您指定的存储桶上执行与条目和发布版本有关的所有命令。</p>
+
+<h2>在存储桶中创建条目<a name="creating-entries-in-the-bucket"></a>
+</h2>
+
+<p>列出此新创建的存储桶中的条目（应为空）：</p>
+
+<pre><code>$ ucd entries list
+No Entries found for current bucket.
+</code></pre>
+
+<p>同步包含生成的 AssetBundle 的本地文件夹中的所有文件：</p>
+
+<pre><code>$ ucd entries syncCos ./ServerData/StandaloneOSX
+Calculating...
+Added Entry: catalog_2019.07.30.18.24.34.hash
+Added Entry: catalog_2019.07.30.18.24.34.json
+Added Entry: remotedemodata_green.bundle
+Added Entry: remotedemodata_mat1.bundle
+Added Entry: remotedemodata_sphere.bundle
+Added Entry: remotedemodata_unitylogo.bundle
+Added Entry: remotedemodata_unitylogoprefab.bundle
+Added Entry: remotedemodata_scenes_scene2.bundle
+Added Entry: remotedemodata_scenes_scene.bundle
+Added Entry: spaceshooterdata_done_asteroid01.bundle
+Added Entry: spaceshooterdata_done_asteroid02.bundle
+Added Entry: spaceshooterdata_done_asteroid03.bundle
+Added Entry: spaceshooterdata_done_bolt-enemy.bundle
+Added Entry: spaceshooterdata_done_bolt.bundle
+Added Entry: spaceshooterdata_done_enemyship.bundle
+Added Entry: spaceshooterdata_done_player.bundle
+Added Entry: spaceshooterdata_engines_enemy.bundle
+Added Entry: spaceshooterdata_engines_player.bundle
+Added Entry: spaceshooterdata_explosion_asteroid.bundle
+Added Entry: spaceshooterdata_explosion_enemy.bundle
+Added Entry: spaceshooterdata_explosion_player.bundle
+Added Entry: spaceshooterdata_starfield.bundle
+Complete!Bytes uploaded: 5346781
+</code></pre>
+
+<p>这会将文件作为条目添加到存储桶。您可以列出存储桶的内容，并查看有关每个条目的一些基本信息：</p>
+
+<pre><code>$ ucd entries list
+22 entries for current bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf):
+2019-08-21 14:27:03       167915 spaceshooterdata_starfield.bundle
+2019-08-21 14:27:00       573539 spaceshooterdata_explosion_player.bundle
+2019-08-21 14:26:56       412235 spaceshooterdata_explosion_enemy.bundle
+2019-08-21 14:26:52       382630 spaceshooterdata_explosion_asteroid.bundle
+2019-08-21 14:26:49       177018 spaceshooterdata_engines_player.bundle
+2019-08-21 14:26:45       157215 spaceshooterdata_engines_enemy.bundle
+2019-08-21 14:26:42      1085518 spaceshooterdata_done_player.bundle
+2019-08-21 14:26:38      1070297 spaceshooterdata_done_enemyship.bundle
+2019-08-21 14:26:34        27178 spaceshooterdata_done_bolt.bundle
+2019-08-21 14:26:31        28362 spaceshooterdata_done_bolt-enemy.bundle
+2019-08-21 14:26:28       231658 spaceshooterdata_done_asteroid03.bundle
+2019-08-21 14:26:24       221450 spaceshooterdata_done_asteroid02.bundle
+2019-08-21 14:26:20       227842 spaceshooterdata_done_asteroid01.bundle
+2019-08-21 14:26:17        23016 remotedemodata_scenes_scene.bundle
+2019-08-21 14:26:13        23064 remotedemodata_scenes_scene2.bundle
+2019-08-21 14:26:10        10568 remotedemodata_unitylogoprefab.bundle
+2019-08-21 14:26:07       462522 remotedemodata_unitylogo.bundle
+2019-08-21 14:26:03         7864 remotedemodata_sphere.bundle
+2019-08-21 14:26:00         6320 remotedemodata_mat1.bundle
+2019-08-21 14:25:57         6320 remotedemodata_green.bundle
+2019-08-21 14:25:53        44218 catalog_2019.07.30.18.24.34.json
+2019-08-21 14:25:50           32 catalog_2019.07.30.18.24.34.hash
+</code></pre>
+
+<p>要获取有关特定条目的更多详细信息，请使用带有条目路径的 <code>entries info</code> 命令：</p>
+
+<pre><code>$ ucd entries info spaceshooterdata_starfield.bundle`
+
+Entry Info:
+Path: spaceshooterdata_starfield.bundle
+Id: 8ac46783-be01-4a47-b23e-74233fc7cc09
+Last Modified: 2019-08-21 14:27:03
+  Content Size: 167915
+  Content Hash: 4a3ad5b69bd489699d1909e8868a7cb1
+  Content Type: application/octet-stream
+  Content Link: …
+  Labels:
+  Metadata:
+  Current Version: aa0304db-fd9f-4772-9549-dfeb44cc6d6f
+</code></pre>
+
+<p>您的游戏客户端现在可以使用与条目关联的路径来请求存储桶中单个文件的内容。向位于 <code>&lt;project_guid&gt;.client-api.unity3dusercontent.com</code> 的特定于项目的子域发出所有游戏客户端请求。所有 URL 都在请求路径中以 /client_api/v1/ 开头。这些客户端请求均不需要身份验证。</p>
+
+<p>要按路径获取条目（如 <code>spaceshooterdata_starfield.bundle</code>）的内容，请输入：</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p>
+
+<p>或者要按条目 ID 获取条目的内容，请输入：</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/entries/8ac46783-be01-4a47-b23e-74233fc7cc09/content/</code></p>
+
+<h2>创建发布版本<a name="creating-a-release"></a>
+</h2>
+
+<p>从条目的当前状态创建发布版本：</p>
+
+<pre><code>$ ucd releases create
+Created release (#1) in bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf).
+  Id: 80653663-eb39-45e7-9323-e34b23df0d75
+  Created: 2019-08-21 14:27:30
+  ...
+</code></pre>
+
+<p>因此，即使您以后更新或删除这些条目，也可以在请求内容时使用这些条目的这些确切版本。</p>
+
+<p>要获取有关发布版本的更多详细信息，请使用 <code>releases info</code> 命令并提供刚创建的发布版本的 ID：</p>
+
+<pre><code>$ ucd releases info 80653663-eb39-45e7-9323-e34b23df0d75
+
+Release #1:
+  Id: 80653663-eb39-45e7-9323-e34b23df0d75
+  Created: 2019-08-21 14:27:30
+  Content Size: 123456
+  Content Hash: b62343cb3582a7de1286dd3cf23c3592
+  Notes:
+  Metadata: 
+  Entries:
+  - remotedemodata_scenes_scene2.bundle  (version: d7c69bc0-5c0b-4625-8a7d-94a4972aa236)
+  - remotedemodata_unitylogo.bundle  (version: 97d3659f-0b74-403a-be67-02641ce2dc91)
+  - spaceshooterdata_done_enemyship.bundle  (version: edcedc81-80b6-4006-9732-0444898fcffa)
+  - remotedemodata_unitylogoprefab.bundle  (version: 4edfa2be-7fae-44c9-bb45-f601cc1130db)
+  - spaceshooterdata_done_bolt-enemy.bundle  (version: ef36bfa8-8b24-4b81-a329-b3fad0a0939b)
+  ...
+</code></pre>
+
+<p>要获取您在此存储桶中生成的所有发布版本的列表，请输入：</p>
+
+<pre><code>$ ucd releases list
+Releases for current bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf): 
+  2019-08-21 14:27:30  #1 (80653663-eb39-45e7-9323-e34b23df0d75)
+</code></pre>
+
+<p>现在，您可以直接引用此发布版本中包含的内容。这样可以确保您获得 CCD 用于生成发布版本的确切内容集，即使您稍后在存储桶中更改条目也是如此。</p>
+
+<p>要按路径获取条目（如 <code>spaceshooterdata_starfield.bundle</code>）的内容，请输入：</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/releases/80653663-eb39-45e7-9323-e34b23df0d75/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p>
+
+<p>或者要按条目 ID 获取条目的内容，请输入：</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/releases/80653663-eb39-45e7-9323-e34b23df0d75/entries/8ac46783-be01-4a47-b23e-74233fc7cc09/content/</code></p>
+
+<p>您还可以请求与存储桶中最新发布版本相对应的内容，因此客户端不需要每次 CCD 生成新的发布版本时都进行更改。为此，请更新请求以使用 <code>release_by_badge</code> 路径，并指定一个标示名称 <code>latest</code>（请参阅<a href="#managing-badges">管理标示</a>）。例如：</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/release_by_badge/latest/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p>
+
+<h2>管理标示 <a name="managing-badges"></a>
+</h2>
+
+<p>生成发布版本后，您可以应用一个可唯一标识该发布版本的标示。一个标示只能指向某个存储桶中的单个发布版本，但是您可以在发布版本之间移动标示。在运行时，您可以使用标示名称而不是特定的发布版本 ID 来查询内容，从而在工作流程中提供更大的灵活性。</p>
+
+<p>例如，您可以将一个名为 <code>qa_latest</code> 的标示应用于最新发布版本以供您的 QA 团队使用，并将该标示作为流程的一部分移至每个新的发布版本（手动或自动）。</p>
+
+<p>要将名为 <code>my_first_badge</code> 的标示添加到在<a href="#creating-a-release">创建发布版本</a>中生成的发布版本，请输入：</p>
+
+<pre><code>$ ucd badges add my_first_badge 80653663-eb39-45e7-9323-e34b23df0d75
+Added badge 'my_first_badge' to release (80653663-eb39-45e7-9323-e34b23df0d75).
+</code></pre>
+
+<p>要列出您在此存储桶中应用的所有标示，请输入：</p>
+
+<pre><code>$ ucd badges list
+Badges for current bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf): 
+  2020-01-07 12:55:41  my_first_badge  (80653663-eb39-45e7-9323-e34b23df0d75)
+</code></pre>
+
+<p>与该标示引用的发布版本相关联的内容已准备就绪以供下载。您可以通过类似于按条目 ID 直接下载内容的方式来执行此下载操作。</p>
+
+<p>要按路径获取条目（如 <code>spaceshooterdata_starfield.bundle</code>）的内容，请输入：</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/release_by_badge/my_first_badge/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p>
+
+<p>或者要按条目 ID 获取条目的内容，请输入：</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/release_by_badge/my_first_badge/entries/8ac46783-be01-4a47-b23e-74233fc7cc09/content/</code></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCCDDashboard.html"></a></span><div class="tip">Unity CCD Develop Dashboard</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAP.html"></a></span><div class="tip">﻿Unity IAP</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

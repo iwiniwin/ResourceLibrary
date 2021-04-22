@@ -1,0 +1,300 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="离线/手动激活 - Unity 手册">
+<title>离线/手动激活 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/communicationProblem.png">
+<meta name="description" content="当 Unity 无法联系许可证服务器时，在线激活通常会失败。这可能是因为您无法访问 Internet，防火墙或代理设置导致连接遭到阻止，或 Unity 许可证服务器已宕机。如需详细了解发生此问题的原因，请参阅下面的故障排除。">
+<meta property="og:description" content="当 Unity 无法联系许可证服务器时，在线激活通常会失败。这可能是因为您无法访问 Internet，防火墙或代理设置导致连接遭到阻止，或 Unity 许可证服务器已宕机。如需详细了解发生此问题的原因，请参阅下面的故障排除。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'ManualActivationGuide';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/ManualActivationGuide.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/ManualActivationGuide.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/ManualActivationGuide.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/ManualActivationGuide.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/ManualActivationGuide.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/ManualActivationGuide.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/ManualActivationGuide.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/ManualActivationGuide.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ManualActivationGuide.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ManualActivationGuide.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ManualActivationGuide.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ManualActivationGuide.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ManualActivationGuide.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ManualActivationGuide.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ManualActivationGuide.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ManualActivationGuide.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ManualActivationGuide.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ManualActivationGuide.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ManualActivationGuide.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ManualActivationGuide.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ManualActivationGuide.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ManualActivationGuide.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ManualActivationGuide.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ManualActivationGuide.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ManualActivationGuide.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/ManualActivationGuide.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/ManualActivationGuide.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/ManualActivationGuide.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/ManualActivationGuide.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/ManualActivationGuide.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/ManualActivationGuide.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ManualActivationGuide.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ManualActivationGuide.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ManualActivationGuide.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ManualActivationGuide.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ManualActivationGuide.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ManualActivationGuide.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ManualActivationGuide.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ManualActivationGuide.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ManualActivationGuide.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ManualActivationGuide.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ManualActivationGuide.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ManualActivationGuide.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ManualActivationGuide.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ManualActivationGuide.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ManualActivationGuide.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ManualActivationGuide.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ManualActivationGuide.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="GettingStartedInstallingUnity.html">安装 Unity</a></li>
+<li><a href="LicensesAndActivation.html">许可证和激活</a></li>
+<li>离线/手动激活</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="OnlineActivationGuide.html"></a></span><div class="tip">在线激活</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ManagingYourUnityLicense.html"></a></span><div class="tip">管理许可证</div>
+</div>
+</div></div>
+<h1>离线/手动激活</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>当 Unity 无法联系许可证服务器时，在线激活通常会失败。这可能是因为您无法访问 Internet，防火墙或代理设置导致连接遭到阻止，或 Unity 许可证服务器已宕机。如需详细了解发生此问题的原因，请参阅下面的<a href="#Troubleshooting">故障排除</a>。</p>
+
+<p>在线激活失败时，Unity Editor 会自动尝试执行手动激活。本页面提供在计算机上手动激活 Unity 的分步说明。<strong>您仍然需要访问一台已接入互联网的计算机</strong>，但这台计算机不一定要是尝试激活 Unity 的计算机。</p>
+
+<p>本文档假设您已经下载并安装了 Unity。要下载 Unity，您需要连接互联网。请访问 <a href="https://unity3d.com/get-unity/download">Unity 下载页面</a>获取最新版本。如果您不确定需要哪种类型的许可证，请访问 <a href="https://store.unity.com/">Unity Store</a> 并查看 Unity Personal、Plus 和 Pro 版本的比较。</p>
+
+<h2>步骤 1：获取许可证请求文件</h2>
+
+<p>1.打开 Unity。当 Unity 无法联系许可证服务器时，将在 License Management 窗口中显示一条消息，指出“No network connection”。
+<img src="../uploads/Main/communicationProblem.png" alt=""></p>
+
+<p>1.单击 <strong>Manual Activation</strong>。</p>
+
+<p>1.单击 <strong>Save License Request</strong>。
+<img src="../uploads/Main/wouldYouLikeToSave.png" alt=""></p>
+
+<p>1.将文件保存在自选的目录中。务必记住保存文件的位置。单击 <strong>Save</strong> 时，Unity 会显示一条通知，其中显示“License request file saved successfully”。</p>
+
+<p>此许可证请求文件与用于生成该文件的计算机相关联。此许可证文件在任何其他计算机上都不起作用；而且，如果重新格式化这台计算机或进行某些硬件更改，该文件将无法识别这台计算机。</p>
+
+<h2>步骤 2：请求许可证</h2>
+
+<p>现在您已获得许可证请求文件，接下来的步骤需要访问互联网。如果您的计算机未接入互联网，则可以在已联网的计算机上激活许可证，方法是将文件复制到另一台计算机，按照以下步骤激活许可证，然后将文件复制回您的计算机即可使用 Unity。</p>
+
+<p>1.访问 <a href="https://license.unity3d.com/"> Unity 许可证 Manual Activation 网页</a>。单击 <strong>Browse</strong> 按钮，选择先前在步骤 1 中创建的许可证请求文件，然后单击 <strong>Next</strong></p>
+
+<pre><code>![](../uploads/Main/manualactivationwindow.png) 
+</code></pre>
+
+<p>1.选择要激活的许可证类型。</p>
+
+<pre><code>![](../uploads/Main/activateyourlicense.png) 
+</code></pre>
+
+<p>1.输入序列号，然后单击 <strong>Next</strong>。</p>
+
+<pre><code>![注意：此窗口已隐藏序列号。](../uploads/Main/manualActivation.png)
+</code></pre>
+
+<p>1.单击 <strong>Download license file</strong>。</p>
+
+<pre><code>![](../uploads/Main/youAreAlmostDone.png) 
+</code></pre>
+
+<p>此时会将许可证下载到用于浏览该网站的计算机上。如果要激活 Unity 的是另一台计算机，而不是这台接入互联网的计算机，请记住将许可证传输到要激活 Unity 的计算机上。</p>
+
+<p>有些浏览器可能会在许可证文件名后面附加“.xml”。如果是这种情况，则在将许可证文件加载到 Unity 中之前，您需要从文件名中删除此扩展名。</p>
+
+<h2>步骤 3：激活许可证</h2>
+
+<p>现在已拥有许可证文件，因此可以激活您的 Unity 帐户。</p>
+
+<p>再次打开 Unity 并返回 License Management 页面。</p>
+
+<figure>
+<img src="../uploads/Main/loadLicense.png" alt="">
+</figure>
+
+<p>单击 <strong>Load License</strong>，然后选择在步骤 2 中下载的许可证请求文件。如果许可证加载成功，Unity 将显示“Thank you!”消息。单击 <strong>Start Using Unity</strong> 继续。</p>
+
+<p><a name="Troubleshooting"></a></p>
+
+<h2>故障排除</h2>
+
+<p>如果在激活过程中遇到任何错误代码或其他问题，可能是由以下原因引起的：</p>
+
+<ul>
+<li>您的计算机可能无法访问互联网。在这种情况下，可能需要手动激活许可证。可以在<a href="ManualActivationGuide.html">手动激活 (Manual Activation)</a> 文档中找到有关具体操作的说明。</li>
+<li>您的防火墙/代理或互联网安全设置可能阻止 Unity 发送和接收有关许可证文件的数据。</li>
+<li>您可能在计算机上不具有正确的读/写权限来保存许可证文件。要解决此问题，可能需要将这些权限授予在尝试激活许可证时所使用的用户帐户。这是工作场所和学校特别常见的问题；请联系 IT 管理员，了解是否存在可能阻止激活过程正常进行的限制。</li>
+<li>重大的操作系统更改或更新可能会影响您的计算机 ID，这会导致许可证停止识别您的计算机。请参阅 Unity 知识库文章：<a href="https://support.unity3d.com/hc/en-us/articles/205698949-I-have-just-updated-installed-a-new-Operating-System-Why-is-my-license-failing-to-activate-">我刚刚更新/安装了一个新的操作系统。为什么我的许可证无法激活？(I Have Just Updated/Installed A New Operating System.Why Is My License Failing To Activate?)</a>
+</li>
+<li>Unity 的许可证服务器可能已宕机。请参阅 <a href="https://status.cloud.unity3d.com/">Unity Cloud System Status Page</a> 以查看所有 Unity 服务器的最新状态。</li>
+</ul>
+
+<p>有关所有潜在错误以及如何解决这些错误的信息，请参阅 <a href="https://support.unity3d.com/hc/en-us/sections/202242003-Activations-and-Management">Unity 支持知识库</a>。如果找不到解决方案，请联系 <a href="https://support.unity3d.com/hc/en-us/requests/new?ticket_form_id=65905">Unity 客户服务部</a>以获得更多帮助。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-history">在 Unity 2017.2 中更新了许可证激活方法</span></li>
+</ul>
+<!-- area:none -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="OnlineActivationGuide.html"></a></span><div class="tip">在线激活</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ManagingYourUnityLicense.html"></a></span><div class="tip">管理许可证</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Triggers 模块 - Unity 手册">
+<title>Triggers 模块 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/PartSysTriggersModule.png">
+<meta name="description" content="内置粒子系统的 Triggers 模块可用于基于粒子与场景中一个或多个碰撞体的相互作用来访问和修改粒子。启用此模块时，粒子系统将在附加的脚本上调用 OnParticleTrigger() 回调，因此可以根据粒子相对于场景中碰撞体的位置来访问粒子列表。">
+<meta property="og:description" content="内置粒子系统的 Triggers 模块可用于基于粒子与场景中一个或多个碰撞体的相互作用来访问和修改粒子。启用此模块时，粒子系统将在附加的脚本上调用 OnParticleTrigger() 回调，因此可以根据粒子相对于场景中碰撞体的位置来访问粒子列表。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'PartSysTriggersModule';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/PartSysTriggersModule.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/PartSysTriggersModule.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/PartSysTriggersModule.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/PartSysTriggersModule.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/PartSysTriggersModule.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/PartSysTriggersModule.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/PartSysTriggersModule.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/PartSysTriggersModule.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/PartSysTriggersModule.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/PartSysTriggersModule.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/PartSysTriggersModule.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/PartSysTriggersModule.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/PartSysTriggersModule.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/PartSysTriggersModule.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/PartSysTriggersModule.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/PartSysTriggersModule.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/PartSysTriggersModule.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/PartSysTriggersModule.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/PartSysTriggersModule.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/PartSysTriggersModule.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/PartSysTriggersModule.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/PartSysTriggersModule.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/PartSysTriggersModule.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/PartSysTriggersModule.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/PartSysTriggersModule.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/PartSysTriggersModule.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/PartSysTriggersModule.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/PartSysTriggersModule.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/PartSysTriggersModule.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/PartSysTriggersModule.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/PartSysTriggersModule.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/PartSysTriggersModule.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/PartSysTriggersModule.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/PartSysTriggersModule.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/PartSysTriggersModule.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/PartSysTriggersModule.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/PartSysTriggersModule.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/PartSysTriggersModule.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/PartSysTriggersModule.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/PartSysTriggersModule.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/PartSysTriggersModule.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/PartSysTriggersModule.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/PartSysTriggersModule.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/PartSysTriggersModule.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/PartSysTriggersModule.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/PartSysTriggersModule.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/PartSysTriggersModule.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/PartSysTriggersModule.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="ParticleSystems.html">粒子系统</a></li>
+<li><a href="Built-inParticleSystem.html">内置粒子系统</a></li>
+<li><a href="PartSysReference.html">组件和模块</a></li>
+<li><a href="ParticleSystemModules.html">粒子系统模块</a></li>
+<li>Triggers 模块</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysCollisionModule.html"></a></span><div class="tip">Collision 模块</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysSubEmitModule.html"></a></span><div class="tip">Sub Emitters 模块</div>
+</div>
+</div></div>
+<h1>Triggers 模块</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>内置粒子系统的 Triggers 模块可用于基于粒子与场景中一个或多个碰撞体的相互作用来访问和修改粒子。启用此模块时，粒子系统将在附加的脚本上调用 <a href="../ScriptReference/MonoBehaviour.OnParticleTrigger.html">OnParticleTrigger()</a> 回调，因此可以根据粒子相对于场景中碰撞体的位置来访问粒子列表。</p>
+
+<figure>
+<img src="../uploads/Main/PartSysTriggersModule.png" alt="粒子系统 Triggers 模块">
+<figcaption>粒子系统 Triggers 模块</figcaption>
+</figure>
+
+<h2>使用 Triggers 模块</h2>
+
+<p>首先，指定粒子可与场景中的哪些碰撞体进行碰撞。为此，请将一个或多个碰撞体分配给 <strong>Colliders</strong> 列表属性。要增加列表中的碰撞体数量，请单击 Colliders 列表下方的 Add (+) 按钮。要从列表中移除某个碰撞体，请选择该碰撞体，然后单击 Remove (-) 按钮。如果尚未将碰撞体分配给列表的索引，则可以使用空条目右侧较小的 Add (+) 按钮来创建和分配新的碰撞体。这将创建一个新的游戏对象作为粒子系统的子项，并将球形碰撞体附加到该游戏对象，然后将碰撞体分配给空条目。</p>
+
+<p>添加碰撞体后，可指定当粒子满足传递特定触发事件类型的条件时将执行的操作。事件类型有四种，它们描述了粒子如何与碰撞体相互作用。这些事件类型如下：</p>
+
+<ul>
+<li>
+<strong>Inside</strong>：粒子在碰撞体的边界内。</li>
+<li>
+<strong>Outside</strong>：粒子在碰撞体的边界外。</li>
+<li>
+<strong>Enter</strong>：粒子进入碰撞体的边界。</li>
+<li>
+<strong>Exit</strong>：粒子退出碰撞体的边界。</li>
+</ul>
+
+<p>在 Inspector 中，每种事件类型都有一个下拉选单，可让您选择当粒子通过触发事件的条件时粒子将发生什么情况。选项包括：</p>
+
+<ul>
+<li>
+<strong>Callback</strong>：允许您在 OnParticleTrigger() 回调函数中访问粒子。</li>
+<li>
+<strong>Kill</strong>：销毁粒子。您无法在 OnParticleTrigger() 回调函数中访问粒子。</li>
+<li>
+<strong>Ignore</strong>：忽略粒子。您无法在 OnParticleTrigger() 回调函数中访问粒子。</li>
+</ul>
+
+<h3>在 OnParticleTrigger() 中访问粒子</h3>
+
+<p>如果选择 <strong>Callback</strong> 作为对某一触发事件的反应，则可以从附加的脚本访问满足事件条件的粒子。为此，首先需要将 <code>OnParticleTrigger()</code> 函数添加到附加的脚本。在此函数中，调用 <a href="../ScriptReference/ParticlePhysicsExtensions.GetTriggerParticles.html">ParticlePhysicsExtensions.GetTriggerParticles()</a> 函数可获取满足触发事件条件的粒子列表。此函数接受 <a href="../ScriptReference/ParticleSystemTriggerEventType.html">ParticleSystemTriggerEventType</a>（用于指定需要获取粒子的触发事件，即 <strong>Inside</strong>、<strong>Outside</strong>、<strong>Enter</strong> 还是 <strong>Exit</strong>）以及一个<a href="../ScriptReference/ParticleSystem.Particle.html">粒子</a>列表（函数将向其中填充结果）。从这一列表中，可以访问、修改或销毁任何粒子。</p>
+
+<p>有关该 API 以及如何使用该 API 的更多信息，请参阅<a href="#Example">下文的示例</a>。</p>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Inside</strong></td>
+	<td style="text-align:left;">指定粒子系统在粒子位于碰撞体内的每一帧对粒子采取的操作。选项包括：<br>• <strong>Callback</strong>：将粒子添加到可在 OnParticleTrigger() 回调中获取的列表中<br>• <strong>Kill</strong>：销毁粒子。<br>• <strong>Ignore</strong>：忽略粒子。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Outside</strong></td>
+	<td style="text-align:left;">指定粒子系统在粒子位于碰撞体外的每一帧对粒子采取的操作。选项包括：<br>• <strong>Callback</strong>：将粒子添加到可在 OnParticleTrigger() 回调中获取的列表中<br>• <strong>Kill</strong>：销毁粒子。<br>• <strong>Ignore</strong>：忽略粒子。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enter</strong></td>
+	<td style="text-align:left;">指定粒子系统在粒子进入碰撞体的帧对粒子采取的操作。选项包括：<br>• <strong>Callback</strong>：将粒子添加到可在 OnParticleTrigger() 回调中获取的列表中<br>• <strong>Kill</strong>：销毁粒子。<br>• <strong>Ignore</strong>：忽略粒子。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Exit</strong></td>
+	<td style="text-align:left;">指定粒子系统在粒子退出碰撞体的帧对粒子采取的操作。选项包括：<br>• <strong>Callback</strong>：将粒子添加到可在 OnParticleTrigger() 回调中获取的列表中<br>• <strong>Kill</strong>：销毁粒子。<br>• <strong>Ignore</strong>：忽略粒子。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Radius Scale</strong></td>
+	<td style="text-align:left;">粒子的碰撞体边界。允许您更紧密地将粒子的碰撞体边界匹配到粒子的视觉外观。如果粒子为圆形且其纹理具有淡入淡出效果，这将很有用，因为默认粒子碰撞体将在粒子达到视觉效果之前位于触发器内。请注意，当事件实际触发时，此设置不会更改，但是可以延迟或提前达到触发器的视觉效果。<br><br>• 输入 <strong>1</strong> 可以使粒子碰撞体保持同一大小，并使事件在粒子接触碰撞体时发生 <br>• 输入小于 <strong>1</strong> 的值可以使粒子碰撞体更小，并使触发看起来是在粒子穿透碰撞体之前发生 <br>• 输入大于 <strong>1</strong> 的值可以使粒子碰撞体更大，并使触发看起来是在粒子穿透碰撞体之后发生</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Visualize Bounds</strong></td>
+	<td style="text-align:left;">指示是否在 Scene 视图中显示每个粒子的碰撞体边界。启用此属性可显示碰撞体边界，而禁用则可隐藏碰撞体边界。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Example"></a></p>
+
+<h2>示例</h2>
+
+<p>下面的示例会导致粒子在进入碰撞体的边界时变为红色，然后在离开碰撞体的边界时变为绿色。</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+[ExecuteInEditMode]
+public class TriggerScript : MonoBehaviour
+{
+    ParticleSystem ps;
+
+    // 这些列表用于包含与每帧的触发条件
+    // 匹配的粒子。
+    List&lt;ParticleSystem.Particle&gt; enter = new List&lt;ParticleSystem.Particle&gt;();
+    List&lt;ParticleSystem.Particle&gt; exit = new List&lt;ParticleSystem.Particle&gt;();
+
+    void OnEnable()
+    {
+        ps = GetComponent&lt;ParticleSystem&gt;();
+    }
+
+    void OnParticleTrigger()
+    {
+        // 获取与此帧的触发条件匹配的粒子
+        int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
+        int numExit = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Exit, exit);
+
+        // iterate through the particles which entered the trigger and make them red
+        for (int i = 0; i &lt; numEnter; i++)
+        {
+            ParticleSystem.Particle p = enter[i];
+            p.startColor = new Color32(255, 0, 0, 255);
+            enter[i] = p;
+        }
+
+        // 迭代离开触发器的粒子并使它们变绿
+        for (int i = 0; i &lt; numExit; i++)
+        {
+            ParticleSystem.Particle p = exit[i];
+            p.startColor = new Color32(0, 255, 0, 255);
+            exit[i] = p;
+        }
+
+        // 将修改后的粒子重新分配回粒子系统
+        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
+        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Exit, exit);
+    }
+}
+
+</code></pre>
+
+<p>请查看以下图像以了解此示例的结果：</p>
+
+<figure>
+<img src="../uploads/Main/PartSysTriggersModule-ExampleEditorView.jpg" alt="Editor 视图">
+<figcaption>Editor 视图</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PartSysTriggersModule-ExampleGameView.jpg" alt="Game 视图">
+<figcaption>Game 视图</figcaption>
+</figure>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysCollisionModule.html"></a></span><div class="tip">Collision 模块</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysSubEmitModule.html"></a></span><div class="tip">Sub Emitters 模块</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

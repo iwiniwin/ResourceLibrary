@@ -1,0 +1,420 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="故障排除 - Unity 手册">
+<title>故障排除 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/PackageManagerUI-StatusBar_Network.png">
+<meta name="description" content="本节提供有关以下问题的信息：">
+<meta property="og:description" content="本节提供有关以下问题的信息：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'upm-errors';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/upm-errors.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/upm-errors.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/upm-errors.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/upm-errors.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/upm-errors.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/upm-errors.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/upm-errors.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/upm-errors.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/upm-errors.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/upm-errors.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/upm-errors.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/upm-errors.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/upm-errors.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/upm-errors.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/upm-errors.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/upm-errors.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/upm-errors.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/upm-errors.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/upm-errors.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/upm-errors.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/upm-errors.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/upm-errors.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/upm-errors.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/upm-errors.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/upm-errors.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/upm-errors.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/upm-errors.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/upm-errors.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/upm-errors.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/upm-errors.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/upm-errors.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/upm-errors.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/upm-errors.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/upm-errors.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/upm-errors.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/upm-errors.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/upm-errors.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/upm-errors.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/upm-errors.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/upm-errors.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/upm-errors.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/upm-errors.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/upm-errors.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/upm-errors.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/upm-errors.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/upm-errors.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/upm-errors.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/upm-errors.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PackagesList.html">包</a></li>
+<li><a href="Packages.html">Unity 的 Package Manager</a></li>
+<li>故障排除</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-conflicts-override.html"></a></span><div class="tip">覆盖 Unity 的冲突解决方式</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-network.html"></a></span><div class="tip">网络问题</div>
+</div>
+</div></div>
+<h1>故障排除</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本节提供有关以下问题的信息：</p>
+
+<ul>
+<li><a href="#Errors">Package Manager 窗口中的错误消息</a></li>
+<li><a href="#Missing">Package Manager 缺失或者窗口无法打开</a></li>
+<li><a href="#Upgrade">将 Unity 升级到新版本后出现的问题</a></li>
+<li><a href="#Failed">包安装失败</a></li>
+<li><a href="#Unrecognized">无法识别包</a></li>
+<li><a href="#HostFXR">Windows 上加载 hostfxr.dll 时出错</a></li>
+<li><a href="#Reset">重置项目的包配置</a></li>
+<li><a href="#ssh-add">Git URL 的身份验证问题</a></li>
+</ul>
+
+<p>如果遇到与网络有关的问题，也可以运行 Unity Package Manager <strong>Diagnostics</strong> 工具。有关更多信息，请参阅<a href="upm-network.html">网络问题</a>。</p>
+
+<p><a name="Errors"></a></p>
+
+<h2>Package Manager 窗口中的错误消息</h2>
+
+<p>在 Package Manager 遇到问题时，<a href="upm-ui.html">Package Manager 窗口</a>中会显示错误指示符：</p>
+
+<ul>
+<li>
+<p><strong>系统范围的问题</strong></p>
+
+<p><a href="upm-ui-list.html#StatusBar">状态栏</a>中显示的错误消息表示 Package Manager 检测到与特定包无关的问题。例如，如果 Package Manager 无法访问<a href="upm-concepts.html#Registry">包注册表服务器</a>，则将在状态栏中显示以下消息：</p>
+
+<figure>
+<img src="../uploads/Main/PackageManagerUI-StatusBar_Network.png" alt="网络错误消息">
+<figcaption>网络错误消息</figcaption>
+</figure>
+
+<p>如果您的网络无法访问包注册表服务器，可能是因为网络存在连接问题。您或系统管理员<a href="upm-network.html">修复网络错误</a>后，状态栏将清空。</p>
+
+<p>如果您的网络连接正常，但是您没有登录 <a href="https://id.unity.com/">Unity 帐户</a>，则 Package Manager 不会显示任何资源包。尝试使用 <strong>My Assets</strong> 范围时，Package Manager 会在状态栏中显示错误：</p>
+
+<figure>
+<img src="../uploads/Main/PackageManagerUI-StatusBar_UnityID.png" alt="已注销 Unity 帐户">
+<figcaption>已注销 Unity 帐户</figcaption>
+</figure>
+
+<p>在<a href="upm-ui-list.html">列表视图</a>中单击 <strong>Sign in</strong> 按钮可通过 <a href="GettingStartedUnityHub.html">Unity Hub</a> 登录到您的 Unity 帐户。</p>
+</li>
+<li>
+<p><strong>包特有的问题</strong></p>
+
+<p>如果特定的包在加载或安装时出现问题（例如，在确定要加载的包版本时），则损坏的包旁边的<a href="upm-ui-list.html">包列表</a>中将显示错误图标 (<img src="../uploads/Main/PackageManagerUI-errorflag.png" alt="">) <strong>(A)</strong>。要找出问题所在，请打开损坏的包的<a href="upm-ui-details.html">详细信息视图</a>以查看详细的错误消息 <strong>(B)</strong>：</p>
+
+<figure>
+<img src="../uploads/Main/PackageManagerUI-StatusBar_Dependency.png" alt="依赖关系错误消息">
+<figcaption>依赖关系错误消息</figcaption>
+</figure>
+</li>
+</ul>
+
+<p><a name="Missing"></a></p>
+
+<h2>Package Manager 缺失或者窗口无法打开</h2>
+
+<p>如果您的 <code>package.manifest</code> 文件有格式错误，则在 Unity 控制台中将出现类似以下错误：</p>
+
+<pre><code>Failed to resolve packages: The file [&lt;project-path&gt;/Packages/manifest.json] is not valid JSON:
+  Unexpected token '}' at 44:1
+  }
+</code></pre>
+
+<p>您可以使用错误消息中包含的信息来修复 JSON。您可以使用许多在线验证器来更正问题。保存更正的文件后，Unity 将重新加载 <strong>Package Manager</strong> 窗口。</p>
+
+<p>从 2019.3 开始，您的 <code>package.manifest</code> 文件不应包含对 <strong>com.unity.package-manager-ui</strong> 包的任何引用。可<a href="#Reset">重置项目的包配置</a>或从清单的依赖关系列表中删除以下行：</p>
+
+<pre><code class="json">    "com.unity.package-manager-ui": "2.1.1",
+</code></pre>
+
+<p>如果 <strong>Package Manager</strong> 窗口仍然缺失，请重新启动 Unity。</p>
+
+<p>如果仍然遇到问题，请检查项目清单是否使用 <strong>“exclude”</strong> 作为包版本。这是 <a href="upm-manifestPrj.html#dependencies">dependencies</a> 属性的过时值。如果找到类似这些的行，请删除整行。Package Manager 仅安装在项目中作为依赖项显式包含的包，因此，一旦删除该条目，Package Manager 将忽略并且不会安装该包。</p>
+
+<p>如果 Package Manager 仍然无法加载，请遵循<a href="#Unrecognized">无法识别包</a>和<a href="#Reset">重置项目的包配置</a>下的步骤进行操作。</p>
+
+<p><a name="Upgrade"></a></p>
+
+<h2>将 Unity 升级到新版本后出现的问题</h2>
+
+<p>当您将项目升级到更高的 Unity 版本时，Package Manager 会自动将不兼容的包更新为更高的兼容版本。但是，如果您的包不能编译，则 Package Manager 会在控制台中显示错误消息。</p>
+
+<p>要处理这些消息，请阅读错误消息并尽可能解决所有问题。例如，一个包可能缺少对另一个包或版本的依赖。在这种情况下，您可以尝试自己安装该包。</p>
+
+<p>您也可以按照以下顺序来尝试每个解决方案，直到找到可行的解决方案：</p>
+
+<ul>
+<li>备份项目下的 <code>Packages</code> 文件夹，然后再删除该文件夹。</li>
+<li>备份项目的 <code>Packages</code> 文件夹中的包来源文件，然后将它们删除，只留下 <code>manifest.json</code> 文件。然后尝试重新加载项目。</li>
+<li>创建一个新的空项目。如果 Package Manager 窗口加载成功，请将失败项目中的 <code>Library/PackageCache/com.unity.package-manager-ui@&lt;version&gt;</code> 文件夹替换为新创建的项目中的同一个文件夹。</li>
+<li>作为最后的选择，您可以<a href="#Reset">重置项目</a>（重置为默认的包配置），然后将包逐个添加回来，直到问题得到解决为止。</li>
+</ul>
+
+<p><a name="Failed"></a></p>
+
+<h2>包安装失败</h2>
+
+<p>如果您尝试从注册表安装新的包但无法安装，可能是由于权限问题所致。</p>
+
+<p>必须对缓存文件夹具有完整权限：</p>
+
+<ul>
+<li>Windows：<code>C:\Users\yourname\AppData\Local\Unity\cache</code>
+</li>
+<li>MacOS：<code>~/Users/Library/Unity/cache</code>
+</li>
+</ul>
+
+<p>可能是网络存在问题。检查您的<a href="upm-network.html#Firewall">防火墙</a>和<a href="upm-network.html#Proxy">代理</a>设置。</p>
+
+<p>有时，学校、政府机关或受网络保护的工作场所等机构环境会设置代理服务器来控制网络与互联网之间的通信，并使用自己的服务器证书，而 Unity 或 Package Manager 无法识别这些证书。请与您的网络管理员联系。</p>
+
+<p><a name="Unrecognized"></a></p>
+
+<h2>无法识别包</h2>
+
+<p>如果看到很多编译错误，可能表明 Unity 无法识别现有项目中的包。在这种情况下，可能缺少 .NET 组件。</p>
+
+<p>对于 Windows：</p>
+
+<p>1.下载并安装 <a href="https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio">Visual Studio 2017 版本 15.9.0</a> 或更高版本，并在 <strong>Other Toolsets</strong> 下面选中 <strong>.NET Core cross-platform development workload</strong>。
+2.下载并安装 <a href="https://dotnet.microsoft.com/download">.NET SDK v2.2.101</a> 组件。</p>
+
+<p>对于 MacOS：</p>
+
+<p>1.下载并安装 <a href="https://dotnet.microsoft.com/download">.NET SDK v2.2.101</a> 组件。</p>
+
+<p>2.在 Visual Studio 中安装所有建议的更新</p>
+
+<p>3.使用 <a href="https://brew.sh/">homebrew</a> 来计划和安装 <strong>mono</strong>：</p>
+
+<pre><code>```shell
+  brew update
+    brew install mono # optional
+    brew upgrade mono
+```
+</code></pre>
+
+<p>4.如有必要，删除项目下的 <code>Library/obj/temp</code> 文件夹，然后重新启动 Unity。</p>
+
+<p>5.如果仍然遇到困难，请尝试重新启动计算机。</p>
+
+<p><a name="HostFXR"></a></p>
+
+<h2>Windows 上加载 hostfxr.dll 时出错</h2>
+
+<p>如果控制台报告说找到了 <code>hostfxr.dll</code> 库，但 Unity 无法从 <code>C:\&lt;path_to_app&gt;\hostfxr.dll</code> 加载该库，那么可以通过安装 <a href="https://support.microsoft.com/en-ca/help/2999226/update-for-universal-c-runtime-in-windows">KB2999226</a> 和 <a href="https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot">KB2533623</a> 补丁在 Windows 7 或 Windows Server 2008 R2 上修正此错误。</p>
+
+<p><a name="Reset"></a></p>
+
+<h2>重置项目的包配置</h2>
+
+<p>如果一个项目有太多的包问题，则可以将项目重置为 Unity 的 Editor 版本的<strong>默认包配置</strong>。此操作将重置项目中的所有包。这可能无法解决问题的根源，但是可以帮助您找出问题所在。</p>
+
+<p><strong>注意：</strong>您无法撤消对包配置的重置操作，因此请确保首先备份 <code>manifest.json</code> 文件，或者确保您的项目处于源代码控制之下。此外，还可以采取其他预防措施，包括：<a href="#Cloning">克隆项目</a>，在克隆版本上测试操作之后再继续。</p>
+
+<p>要恢复为默认包配置，请从 <strong>Help</strong> 菜单中选择 <strong>Reset Packages to defaults</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/upm-errors-reset.png" alt="Help &gt; Reset Packages to defaults">
+<figcaption>Help &gt; Reset Packages to defaults</figcaption>
+</figure>
+
+<p><a name="Cloning"></a></p>
+
+<h3>重置项目的克隆版本</h3>
+
+<p>在执行最终更改之前，您也可以测试是否可以恢复为默认包：</p>
+
+<p>1.要克隆项目，请复制粘贴项目文件夹，然后重命名项目文件夹以便于识别（例如，如果您的项目名为 <code>MyProject</code>，则可以使用类似 <code>clone_MyProject</code> 的名称）。</p>
+
+<p>2.加载新克隆的项目。</p>
+
+<p>3.从 Help 菜单中，选择 <strong>Reset Packages to defaults</strong>。</p>
+
+<pre><code>根据项目的大小，这可能需要几分钟。
+</code></pre>
+
+<p>4.检查是否成功重置了包。如果成功，则表示您可以安全地对原始项目执行操作。</p>
+
+<p><a name="ssh-add"></a></p>
+
+<h2>Git URL 的身份验证问题</h2>
+
+<p>如果使用 SSH 协议<a href="upm-git.html#Git-SSH">通过 Git URL 来安装包</a>，即使您正在后台运行 <strong>ssh-agent</strong> 并且您的 PID 环境变量已正确设置，也可能会遇到来自 Git 的身份验证错误。</p>
+
+<p>尽管您的脚本可以在后台成功启动 <strong>ssh-agent</strong>，但是导出的环境变量仅适用于运行脚本的 Bash shell 以及之后由该脚本启动的任何子进程。这是因为您的脚本无法更改父进程、无关进程或先前创建的子进程中的环境变量。即使脚本位于 <code>.bashrc</code> 中，也只会在 Bash shell 中执行。</p>
+
+<p>通过双击 Unity 图标或使用 Hub 启动 Unity 或 Unity Hub（在 Windows 和 macOS 中）时，不会在 shell 中运行，因此不会执行脚本。这意味着 Unity Editor 进程不会设置这些变量，因此 Unity 调用的 Git 进程最终也不会设置这些变量。</p>
+
+<p>要解决此问题，可以执行以下操作之一：</p>
+
+<ul>
+<li>首先打开 Bash shell（在打开 Hub 之前），然后从该 shell 中<a href="https://docs.unity3d.com/Manual/CommandLineArguments.html">手动启动 Unity Editor</a>。</li>
+<li>如果您使用的是 Windows，则可以使用 <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx">setx</a> 命令在 Hub 进程启动之前在 Windows 注册表中永久设置环境变量。如果您可以确保脚本在启动时运行一次，并且 Hub 不会与 Windows 一起启动，则此解决方案最有效。例如：</li>
+</ul>
+
+<pre><code class="bash">  # Expose env variables to native windows
+    setx SSH_AGENT_PID "$SSH_AGENT_PID"
+    setx SSH_AUTH_SOCK "$SSH_AUTH_SOCK"
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-conflicts-override.html"></a></span><div class="tip">覆盖 Unity 的冲突解决方式</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-network.html"></a></span><div class="tip">网络问题</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

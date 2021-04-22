@@ -1,0 +1,285 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="网格 - Unity 手册">
+<title>网格 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/Tris.png">
+<meta name="description" content="__网格__构成了 3D 世界的很大一部分。Unity 提供了一个称为 ProBuilder 的建模工具，另外还有一些 Asset Store 建模插件，例如 Mesh Deformer、UModeler 和 Mesh Editor。而且 Unity 与大多数 3D 建模软件之间有很好的交互性。">
+<meta property="og:description" content="__网格__构成了 3D 世界的很大一部分。Unity 提供了一个称为 ProBuilder 的建模工具，另外还有一些 Asset Store 建模插件，例如 Mesh Deformer、UModeler 和 Mesh Editor。而且 Unity 与大多数 3D 建模软件之间有很好的交互性。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-Mesh';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-Mesh.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-Mesh.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-Mesh.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-Mesh.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-Mesh.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-Mesh.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-Mesh.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-Mesh.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-Mesh.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-Mesh.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-Mesh.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-Mesh.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-Mesh.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-Mesh.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-Mesh.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-Mesh.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-Mesh.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-Mesh.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-Mesh.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-Mesh.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-Mesh.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-Mesh.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-Mesh.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-Mesh.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-Mesh.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-Mesh.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-Mesh.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-Mesh.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-Mesh.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-Mesh.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-Mesh.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-Mesh.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-Mesh.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-Mesh.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-Mesh.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-Mesh.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-Mesh.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-Mesh.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-Mesh.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-Mesh.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-Mesh.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-Mesh.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-Mesh.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-Mesh.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-Mesh.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-Mesh.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-Mesh.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-Mesh.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="Shaders.html">网格、材质、着色器和纹理</a></li>
+<li><a href="comp-MeshGroup.html">网格组件</a></li>
+<li>网格</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="comp-MeshGroup.html"></a></span><div class="tip">网格组件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-MeshFilter.html"></a></span><div class="tip">网格过滤器 (Mesh Filter)</div>
+</div>
+</div></div>
+<h1>网格</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__网格__构成了 3D 世界的很大一部分。Unity 提供了一个称为 <a href="https://docs.unity3d.com/Packages/com.unity.probuilder@latest/index.html">ProBuilder</a> 的建模工具，另外还有一些 <a href="http://unity3d.com/unity/asset-store/">Asset Store</a> 建模插件，例如 <strong>Mesh Deformer</strong>、<strong>UModeler</strong> 和 <strong>Mesh Editor</strong>。而且 Unity 与大多数 3D 建模软件之间有很好的交互性。</p>
+
+<p>Unity 支持三角或四边的多边形网格，因此必须将 Nurbs、Nurms 和 Subdiv 表面转换为多边形。</p>
+
+<figure>
+<img src="../uploads/Main/Tris.png" alt="">
+</figure>
+
+<h2>纹理</h2>
+
+<p>Unity 遵循特定的搜索计划在导入时自动查找网格使用的纹理。首先，导入器在与网格相同的文件夹中或任何父文件夹中查找名为 Textures 的子文件夹。如果此过程失败，Unity 将对项目中的所有纹理执行穷尽搜索。虽然速度只是稍慢，但穷尽搜索的主要缺点是项目中可能有两个或多个同名的纹理。在这种情况下，不能保证 Unity 可以找到合适的纹理。</p>
+
+<figure>
+<img src="../uploads/Main/Mesh-TextureImportHierarchy.png" alt="纹理放置在资源级别或更高级别的 Textures 文件夹中">
+<figcaption>纹理放置在资源级别或更高级别的 <strong>Textures</strong> 文件夹中</figcaption>
+</figure>
+
+<p><strong>(A)</strong> 可能找到纹理的地方</p>
+
+<p><strong>(B)</strong> 正在导入的网格</p>
+
+<h2>材质生成和分配</h2>
+
+<figure>
+<img src="../uploads/Main/Mesh-ImportMaterials.png" alt="Import Settings 窗口 Materials 选项卡上的 Material Creation Mode 设置为 Standard">
+<figcaption>Import Settings 窗口 Materials 选项卡上的 Material Creation Mode 设置为 Standard</figcaption>
+</figure>
+
+<p>如果从 <strong>Material Creation Mode</strong> 下拉菜单中选择 <strong>Standard</strong> 或 <strong>Import via MaterialDescription (Experimental)</strong>，然后从 <strong>Location</strong> 下拉菜单中选择 __Use Embedded Materials__，Unity 将执行以下操作：</p>
+
+<p>1.根据 <a href="FBXImporter-Materials.html#naming">Naming</a> 设置为 Unity 材质选择一个名称。
+2.查找具有该名称的现有材质。材质搜索范围由 <a href="FBXImporter-Materials.html#search">Search</a> 设置进行定义。
+3.将找到的任何现有材质用于导入的场景。如果 Unity 找不到匹配的材质，则将生成一个新的材质。</p>
+
+<p>有关更多信息，请参阅 <a href="FBXImporter-Materials.html">Materials 选项卡</a>参考页面。</p>
+
+<h2>碰撞体</h2>
+
+<p>Unity 使用两种主要类型的碰撞体：网格碰撞体和原始碰撞体。网格碰撞体是使用导入网格数据的组件，可由 Unity 用于环境碰撞。在 Model 选项卡上启用 <a href="FBXImporter-Model.html#meshprops">Generate Colliders</a> 后，Unity 会在您将网格添加到场景中时自动添加一个网格碰撞体，以便物理系统将其视为实体。</p>
+
+<p>如果游戏对象正在移动（例如汽车），则无法使用网格碰撞体。必须改用原始碰撞体。此情况下应禁用 <strong>Generate Colliders</strong> 设置。</p>
+
+<h2>动画</h2>
+
+<p>可从模型文件<a href="ImportingModelFiles.html">导入动画</a>。请先遵循<a href="HOWTO-exportFBX.html">从 3D 建模软件导出 FBX 文件</a>的指南，再将文件导入 Unity。</p>
+
+<h2>法线贴图和角色</h2>
+
+<p>如果一个角色具有从模型的复杂多边形版本生成的法线贴图，则应导入<a href="FBXImporter-Model.html#geoprops">平滑角</a>为 180 度的游戏质量版本。这样可以防止由于切线分裂而导致光照中出现看起来奇怪的接缝。如果使用这些设置后仍然存在接缝，请从 <strong>Tangents</strong> 下拉菜单中选择 <a href="FBXImporter-Model.html#geoprops">Calculate Legacy With Split Tangents</a>。如果是将灰度图像转换为法线贴图，则无需担心这一点。</p>
+
+<h2>混合形状</h2>
+
+<p>如需了解如何将混合形状从 3D 建模应用程序导入 Unity 中，请参阅 <strong>Model Import Settings</strong> 窗口 <a href="FBXImporter-Model.html#BlendShapesImportProperties">Model 选项卡</a>的相关文档。</p>
+
+<h2>提示</h2>
+
+<ul>
+<li><p>尽可能将网格合并在一起。这些网格应该尽可能共享材质和纹理。这种做法可大幅提升性能。</p></li>
+<li><p>如果需要在 Unity 中进一步设置游戏对象（添加物理设置、脚本或其他组件），请确保在 3D 应用程序中妥善命名游戏对象。使用 <em>pCube17</em> 或 <em>Box42</em> 之类的名称可能会很费力。</p></li>
+<li><p>使网格在 3D 建模应用程序中的世界原点居中。这样可以使网格更容易在 Unity 中定位。</p></li>
+<li><p>如果网格没有顶点颜色，Unity 会在第一次渲染网格时自动将全白色顶点颜色数组添加到网格。</p></li>
+<li>
+<p>Unity Editor 显示太多顶点或三角形（与 3D 建模应用程序中的原始模型相比）。</p>
+
+<p>这是正常的。您正在查看的是实际发送到 GPU 进行渲染的顶点/三角形数量。除了材质要求发送两次这些顶点/三角形的情况之外，其他诸如硬法线和非连续 UV 的元素与 3D 建模应用程序显示的情况相比会显著增加顶点/三角形数量。三角形在 3D 和 UV 空间中都需要处于连续状态以形成条带，因此当有 UV 接缝时，必须使三角形退化以形成条带，而这会增加计数。</p>
+</li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="comp-MeshGroup.html"></a></span><div class="tip">网格组件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-MeshFilter.html"></a></span><div class="tip">网格过滤器 (Mesh Filter)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

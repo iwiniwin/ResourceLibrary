@@ -1,0 +1,948 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="特定于平台的覆盖的纹理压缩格式 - Unity 手册">
+<title>特定于平台的覆盖的纹理压缩格式 - Unity 手册</title>
+<meta name="description" content="Unity 支持许多常见的图像格式作为导入纹理的源文件（例如 JPG、PNG、PSD 和 TGA）。但是，3D 图形硬件（例如显卡或移动设备）在实时渲染期间不会使用这些格式。这种硬件要求纹理以专门格式进行压缩，这些格式针对快速纹理采样进行了优化。不同的平台和设备分别都有自己的专有格式。">
+<meta property="og:description" content="Unity 支持许多常见的图像格式作为导入纹理的源文件（例如 JPG、PNG、PSD 和 TGA）。但是，3D 图形硬件（例如显卡或移动设备）在实时渲染期间不会使用这些格式。这种硬件要求纹理以专门格式进行压缩，这些格式针对快速纹理采样进行了优化。不同的平台和设备分别都有自己的专有格式。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-TextureImporterOverride';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-TextureImporterOverride.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-TextureImporterOverride.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-TextureImporterOverride.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-TextureImporterOverride.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-TextureImporterOverride.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-TextureImporterOverride.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-TextureImporterOverride.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-TextureImporterOverride.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-TextureImporterOverride.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-TextureImporterOverride.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-TextureImporterOverride.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-TextureImporterOverride.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-TextureImporterOverride.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-TextureImporterOverride.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-TextureImporterOverride.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-TextureImporterOverride.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-TextureImporterOverride.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-TextureImporterOverride.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-TextureImporterOverride.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-TextureImporterOverride.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-TextureImporterOverride.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-TextureImporterOverride.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-TextureImporterOverride.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-TextureImporterOverride.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-TextureImporterOverride.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-TextureImporterOverride.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-TextureImporterOverride.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-TextureImporterOverride.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-TextureImporterOverride.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-TextureImporterOverride.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-TextureImporterOverride.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-TextureImporterOverride.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-TextureImporterOverride.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-TextureImporterOverride.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-TextureImporterOverride.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-TextureImporterOverride.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-TextureImporterOverride.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-TextureImporterOverride.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-TextureImporterOverride.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-TextureImporterOverride.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-TextureImporterOverride.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-TextureImporterOverride.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-TextureImporterOverride.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-TextureImporterOverride.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-TextureImporterOverride.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-TextureImporterOverride.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-TextureImporterOverride.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-TextureImporterOverride.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="Shaders.html">网格、材质、着色器和纹理</a></li>
+<li><a href="Textures.html">纹理</a></li>
+<li><a href="ImportingTextures.html">导入纹理</a></li>
+<li>特定于平台的覆盖的纹理压缩格式</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TextureTypes.html"></a></span><div class="tip">纹理类型</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-RenderTexture.html"></a></span><div class="tip">渲染纹理</div>
+</div>
+</div></div>
+<h1>特定于平台的覆盖的纹理压缩格式</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 支持许多常见的图像格式作为导入<a href="class-TextureImporter.html">纹理</a>的源文件（例如 JPG、PNG、PSD 和 TGA）。但是，3D 图形硬件（例如显卡或移动设备）在实时渲染期间不会使用这些格式。这种硬件要求纹理以专门格式进行压缩，这些格式针对快速纹理采样进行了优化。不同的平台和设备分别都有自己的专有格式。</p>
+
+<p>默认情况下，Unity Editor 会自动将纹理转换为最合适的格式，以匹配您选择的构建目标，而且构建中仅包含转换后的纹理。源资源文件保留为原始格式，位于项目的 <code>Assets</code> 文件夹中。但是，大多数平台支持多种纹理压缩格式，可供您进行选择。</p>
+
+<p>Unity 为每个平台设置了默认格式，但您可以覆盖默认格式并为某些纹理选择不同的压缩格式（例如，如果使用纹理作为遮罩，只有一个通道，则可以选择使用 BC4 格式来降低文件大小，但同时保持质量）。</p>
+
+<p>本页包含以下信息：</p>
+
+<ul>
+<li><a href="#texture-compression-concepts">纹理压缩概念</a></li>
+<li><a href="#default-formats">受支持平台的默认格式</a></li>
+<li><a href="#all-supported-formats">所有支持的纹理压缩格式</a></li>
+<li>
+<a href="#mobile-webgl-formats">移动端和 WebGL 特有格式</a>
+
+<ul>
+<li><a href="#notes-on-ios">关于 iOS 的注意事项</a></li>
+<li><a href="#notes-on-tvos">关于 tvOS 的注意事项</a></li>
+<li><a href="#notes-on-android">关于 Android 的注意事项</a></li>
+</ul>
+</li>
+</ul>
+
+<p><br> </p>
+
+<p>有关导入纹理以及如何设置覆盖的一般信息，请参阅<a href="class-TextureImporter.html">纹理导入设置 (Texture Import Settings)</a>。</p>
+
+<p><a name="texture-compression-concepts"></a></p>
+
+<h2>纹理压缩概念</h2>
+
+<p>本页用到了以下概念：</p>
+
+<p>1.<strong>RGB</strong> 是一种颜色模型，其中红色、绿色和蓝色通过各种方式叠加在一起以再现各种颜色。
+2.<strong>RGBA</strong> 是具有 Alpha 通道的 <strong>RGB</strong> 版本，支持混合和不透明度更改。
+3.<strong>每像素位数 (bpp)</strong> 表示单个像素所需的存储量。该值越低，可以在 GPU 的缓存中存储的像素越多，从而可以更快地访问纹理。
+4.<strong>可变比特率 (VBR)</strong> 表示每像素的位数不是固定值，而是取决于实际内容。VBR 仅适用于 <strong>Crunch 压缩</strong>，仅限于磁盘上的纹理大小。内存中的大小与使用基础纹理格式时的大小相同（例如，RGB Compressed DXT1 对应 RGB Crunched DXT1）。
+5.<strong>Crunch 压缩</strong>是一种基于 DXT 或 ETC 纹理压缩的有损压缩格式（压缩过程中会丢失部分数据）。在运行时，纹理在 CPU 上解压缩为 DXT 或 ETC，然后上传到 GPU。Crunch 压缩有助于纹理在磁盘上使用尽可能少的空间，但对于运行时内存使用量没有影响。Crunch 纹理可能需要很长时间进行压缩，但在运行时的解压缩速度非常快。</p>
+
+<p><a name="default-formats"></a></p>
+
+<h2>受支持平台的默认格式</h2>
+
+<p>下表显示了每个平台使用的默认格式。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>平台</strong></th>
+	<th style="text-align:left;"><strong>颜色模型</strong></th>
+	<th style="text-align:left;"><strong>无</strong></th>
+	<th style="text-align:left;"><strong>正常质量（默认设置）</strong></th>
+	<th style="text-align:left;"><strong>高质量</strong></th>
+	<th style="text-align:left;"><strong>低质量（更高性能）</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Windows、Linux、macOS、PS4、XBox One</strong></td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">RGB(A) Compressed BC7</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">RGB(A) Compressed BC7</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">HDR</td>
+	<td style="text-align:left;">RGBA Half</td>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>WebGL</strong></td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Android</strong>（仅当在构建设置中启用了 <strong>Don’t override</strong> 时）</td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">RGB Compressed ETC</td>
+	<td style="text-align:left;">RGB Compressed ETC</td>
+	<td style="text-align:left;">RGB Compressed ETC</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>iOS</strong></td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">RGB Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">RGB Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">RGB Compressed PVRTC 2 位</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">RGBA Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">RGBA Compressed PVRTC 2 位</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>tvOS</strong></td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">RGB Compressed ASTC 6x6 块</td>
+	<td style="text-align:left;">RGB Compressed ASTC 4x4 块</td>
+	<td style="text-align:left;">RGB Compressed ASTC 8x8 块</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA Compressed ASTC 6x6 块</td>
+	<td style="text-align:left;">RGBA Compressed ASTC 4x4 块</td>
+	<td style="text-align:left;">RGBA Compressed ASTC 8x8 块</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default</strong></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA 16 位</td>
+	<td style="text-align:left;">RGBA 16 位</td>
+	<td style="text-align:left;">RGBA 16 位</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="all-supported-formats"></a></p>
+
+<h2>所有支持的纹理压缩格式</h2>
+
+<p>下表显示了每个平台上可用的纹理压缩格式选项以及磁盘上生成的压缩文件大小（基于 256x256 像素图像）。</p>
+
+<p>选择纹理压缩格式需要在文件大小、质量和压缩时间之间取得平衡：质量越高，文件越大。为了获得最佳性能，尤其是在移动设备上，请使用应用程序的目标硬件所支持的每像素位数最少的格式，只要该格式能够提供足够的视觉质量即可。</p>
+
+<p>不同平台有不同的硬件，并经优化后可最有效地处理特定压缩格式。使用目标平台支持的纹理压缩格式时，GPU 可以直接使用该格式，并且平台不用消耗任何资源即可将纹理解压缩为支持的格式。这样可以提高应用程序的性能。</p>
+
+<p>如果使用目标平台不支持的纹理压缩格式，纹理将解压缩为 RGBA 32 位（除非另有说明）并与压缩纹理一起存储在内存中。这会增加纹理加载时间并使用额外的内存，这意味着选择不兼容的格式可能会影响应用程序的性能。</p>
+
+<p>下表显示了每种压缩格式支持的平台。</p>
+
+<p><strong>注意：</strong>在内存中的大小基于 256x256 像素纹理。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>纹理压缩格式</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+	<th style="text-align:left;"><strong>在内存中的大小</strong></th>
+	<th style="text-align:left;"><strong>Windows</strong></th>
+	<th style="text-align:left;"><strong>Linux</strong></th>
+	<th style="text-align:left;"><strong>Mac</strong></th>
+	<th style="text-align:left;"><strong>PS4</strong></th>
+	<th style="text-align:left;"><strong>Xbox One</strong></th>
+	<th style="text-align:left;"><strong>Android</strong></th>
+	<th style="text-align:left;"><strong>iOS</strong></th>
+	<th style="text-align:left;"><strong>tvOS</strong></th>
+	<th style="text-align:left;"><strong>WebGL</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">压缩无符号标准化整数 RGB 纹理。</td>
+	<td style="text-align:left;">32KB / 4 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (1)</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">部分 (2)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Crunched DXT1</td>
+	<td style="text-align:left;">RGB 压缩 DXT1，以及额外的 Crunch 压缩。</td>
+	<td style="text-align:left;">VBR</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (1)</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">部分 (2)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">压缩无符号标准化整数 RGBA 纹理。</td>
+	<td style="text-align:left;">64KB / 8 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (1)</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">部分 (2)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Crunched DXT5</td>
+	<td style="text-align:left;">RGBA 压缩 DXT5，以及额外的 Crunch 压缩。</td>
+	<td style="text-align:left;">VBR</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (1)</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">部分 (2)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+	<td style="text-align:left;">压缩无符号浮点/高动态范围 (HDR) RGB 纹理。</td>
+	<td style="text-align:left;">64KB / 8 bpp</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB(A) Compressed BC7</td>
+	<td style="text-align:left;">高质量压缩无符号标准化整数 RGB 或 RGBA 纹理。</td>
+	<td style="text-align:left;">64KB / 8 bpp</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB 16 位</td>
+	<td style="text-align:left;">未压缩格式，65536 色，无 Alpha。使用比压缩格式更多的内存，但可能更适合没有渐变的 UI 或清晰纹理。</td>
+	<td style="text-align:left;">128KB / 16 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">真实色彩，无 Alpha。</td>
+	<td style="text-align:left;">192KB / 24 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB9e5 32 位共享指数浮点</td>
+	<td style="text-align:left;">浮点 / 高动态范围 (HDR) 纹理，无 Alpha 通道。</td>
+	<td style="text-align:left;">256 KB / 32 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (4)</td>
+	<td style="text-align:left;">部分 (4)</td>
+	<td style="text-align:left;">部分 (4)</td>
+	<td style="text-align:left;">部分 (4)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Alpha 8</td>
+	<td style="text-align:left;">高质量未压缩 Alpha 通道。</td>
+	<td style="text-align:left;">64KB / 8 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">R 8</td>
+	<td style="text-align:left;">高质量未压缩单通道纹理。</td>
+	<td style="text-align:left;">64KB / 8 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (5)</td>
+	<td style="text-align:left;">部分 (5)</td>
+	<td style="text-align:left;">部分 (5)</td>
+	<td style="text-align:left;">部分 (5)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">R 16 位</td>
+	<td style="text-align:left;">超高质量未压缩单通道纹理。</td>
+	<td style="text-align:left;">128KB / 16 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (6)</td>
+	<td style="text-align:left;">部分 (6)</td>
+	<td style="text-align:left;">部分 (6)</td>
+	<td style="text-align:left;">否</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA 16 位</td>
+	<td style="text-align:left;">低质量真实色彩。</td>
+	<td style="text-align:left;">128KB / 16 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">真实色彩，并有 Alpha。</td>
+	<td style="text-align:left;">256KB / 32 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Half</td>
+	<td style="text-align:left;">半精度浮点 / 高动态范围 (HDR) RGBA 格式。</td>
+	<td style="text-align:left;">512KB / 64bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (7)</td>
+	<td style="text-align:left;">部分 (7)</td>
+	<td style="text-align:left;">部分 (7)</td>
+	<td style="text-align:left;">部分 (7)</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意：</strong></p>
+
+<p>1.仅限在 Nvidia Tegra GPU 上。
+2.在不支持 sRGB DXT 的 Web 浏览器上使用<a href="LinearLighting.html">线性渲染</a>，纹理在运行时被解压缩为 RGBA32。
+3.Windows Direct3D 11、Windows OpenGL 4 和 macOS Metal。在具有 Direct3D 10 着色器模型 4 和 OpenGL 3 GPU 的平台 (Windows) 上以及在 macOS OpenGL 上，BC6H 纹理被解压缩为 RGBA Half，而 BC7 纹理被解压缩为 RGBA32。
+4.在 iOS 和 tvOS 上需要 Metal；在 Android 上需要 Vulkan、OpenGL ES 3.0 或 Nvidia Tegra；WebGL 2。
+5.在 iOS 和 tvOS 上需要 Metal；在 Android 上需要 Vulkan、OpenGL ES 3.0 或 <a href="https://opengles.gpuinfo.org/listreports.php?extension=GL_EXT_texture_rg">GL_EXT_texture_rg</a> 扩展；需要 WebGL 2。
+6.在 iOS 和 tvOS 上需要 Metal；在 Android 上需要 Vulkan、OpenGL ES 3.0 和 <a href="https://opengles.gpuinfo.org/listreports.php?extension=GL_EXT_texture_norm16">GL_EXT_texture_norm16</a> 扩展。
+7.在 iOS 和 tvOS 上需要 Metal；在 Android 上需要 Vulkan、OpenGL ES 3.0 或 <a href="https://opengles.gpuinfo.org/listreports.php?extension=GL_OES_texture_half_float">GL_OES_texture_half_float</a> 扩展；需要 WebGL 2 或 WebGL 上的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_texture_half_float">OES_texture_half_float</a> 扩展。</p>
+
+<p>可从 DDS 文件导入纹理，但仅支持 DXT、BC 压缩格式或未压缩像素格式。</p>
+
+<p><a name="mobile-webgl-formats"></a></p>
+
+<h2>移动端和 WebGL 特有格式</h2>
+
+<p>下表中的格式仅在 Android、iOS、tvOS 和 WebGL 上受支持。</p>
+
+<p><strong>注意：</strong>大小基于 256x256 像素纹理。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>纹理压缩格式</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+	<th style="text-align:left;"><strong>大小</strong></th>
+	<th style="text-align:left;"><strong>Android</strong></th>
+	<th style="text-align:left;"><strong>iOS</strong></th>
+	<th style="text-align:left;"><strong>tvOS</strong></th>
+	<th style="text-align:left;"><strong>WebGL</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">RGB Compressed ETC</td>
+	<td style="text-align:left;">压缩 RGB 纹理。所有 OpenGL ES 2.0 GPU 都支持该格式。</td>
+	<td style="text-align:left;">32KB / 4 bpp</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (1)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Crunched ETC</td>
+	<td style="text-align:left;">RGB 压缩 ETC，以及额外的 Crunch 压缩。</td>
+	<td style="text-align:left;">VBR</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (1)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed ETC2</td>
+	<td style="text-align:left;">压缩 RGB 纹理。</td>
+	<td style="text-align:left;">32KB / 4 bpp</td>
+	<td style="text-align:left;">部分 (2)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (1)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+	<td style="text-align:left;">压缩 RGBA 纹理。所有 OpenGL ES 3.0 GPU 都支持该格式。</td>
+	<td style="text-align:left;">64KB / 8 bpp</td>
+	<td style="text-align:left;">部分 (2)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (1)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Crunched ETC2</td>
+	<td style="text-align:left;">RGBA 压缩 ETC2，以及额外的 Crunch 压缩。</td>
+	<td style="text-align:left;">VBR</td>
+	<td style="text-align:left;">部分 (2)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (1)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB + 1 位 Alpha Compressed ETC2 4 位</td>
+	<td style="text-align:left;">采用 Alpha 通道的压缩 RGBA 纹理被限制为完全不透明或完全透明。</td>
+	<td style="text-align:left;">32KB / 4 bpp</td>
+	<td style="text-align:left;">部分 (2)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (1)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RG Compressed EAC 8 位</td>
+	<td style="text-align:left;">高质量压缩 RG（双通道）纹理。</td>
+	<td style="text-align:left;">64KB / 8 bpp</td>
+	<td style="text-align:left;">部分 (2)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (1)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">R Compressed EAC 4 位</td>
+	<td style="text-align:left;">高质量压缩 R（单通道）纹理。</td>
+	<td style="text-align:left;">32KB / 4 bpp</td>
+	<td style="text-align:left;">部分 (2)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (3)</td>
+	<td style="text-align:left;">部分 (1)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB(A) Compressed ASTC</td>
+	<td style="text-align:left;">可变块大小压缩 RGB 或 RGBA 纹理。所有 OpenGL ES 3.1 和 Vulkan GPU 都支持该格式。</td>
+	<td style="text-align:left;">12x12：7744 字节 / 0.89 bpp<br><br>10x10：10816 字节 / 1.28 bpp<br><br>8x8：16KB / 2 bpp<br><br>6x6：29584 字节 / 3.56 bpp<br><br>5x5：43264 字节 / 5.12 bpp<br><br>4x4：64KB / 8 bpp</td>
+	<td style="text-align:left;">部分 (4)</td>
+	<td style="text-align:left;">部分 (5)</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">部分 (6)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB(A) Compressed ASTC HDR</td>
+	<td style="text-align:left;">可变块大小压缩无符号浮点/高动态范围 (HDR) RGB 或 RGBA 纹理。</td>
+	<td style="text-align:left;">12x12：7744 字节 / 0.89 bpp<br><br>10x10：10816 字节 / 1.28 bpp<br><br>8x8：16KB / 2 bpp<br><br>6x6：29584 字节 / 3.56 bpp<br><br>5x5：43264 字节 / 5.12 bpp<br><br>4x4：64KB / 8 bpp</td>
+	<td style="text-align:left;">部分 (7)</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">否</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed PVRTC 2 位 (8)</td>
+	<td style="text-align:left;">高压缩 RGB 纹理。</td>
+	<td style="text-align:left;">16KB / 2 bpp</td>
+	<td style="text-align:left;">部分 (9)</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed PVRTC 2 位</td>
+	<td style="text-align:left;">高压缩 RGBA 纹理。</td>
+	<td style="text-align:left;">16KB / 2 bpp</td>
+	<td style="text-align:left;">部分 (9)</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">压缩 RGB 纹理。</td>
+	<td style="text-align:left;">32KB / 4 bpp</td>
+	<td style="text-align:left;">部分 (9)</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">压缩 RGBA 纹理。</td>
+	<td style="text-align:left;">32KB / 4 bpp</td>
+	<td style="text-align:left;">部分 (9)</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意：</strong></p>
+
+<p>1.只有少部分浏览器在 WebGL 上支持 ETC1 和 ETC2/EAC。
+2.运行 OpenGL ES 2 时，Android 不支持ETC2。在这种情况下，纹理在运行时解压缩为 <a href="android-BuildProcess.html">Android Build Settings</a> 中的 <strong>ETC2 fallback</strong> 指定的格式，或者 <a href="class-TextureImporter.html#fallback">Platform-specific overrides</a> 面板的 Android 选项卡上指定的格式。
+3.运行 OpenGL ES 2 时，iOS 和 tvOS 不支持 ETC2。
+4.需要 <a href="https://opengles.gpuinfo.org/listreports.php?extension=GL_KHR_texture_compression_astc_ldr">GL_KHR_texture_compression_astc_ldr</a> 扩展或 Vulkan 支持。
+5.需要 A8 GPU 或更高版本。
+6.需要 <a href="https://docs.w3cub.com/dom/webgl_compressed_texture_astc/">WEBGL_compressed_texture_astc</a> 扩展。
+7.需要 <a href="https://opengles.gpuinfo.org/listreports.php?extension=GL_KHR_texture_compression_astc_hdr">GL_KHR_texture_compression_astc_hdr</a> 扩展。如果不支持此扩展，则纹理将在运行时解压缩为 RGB9E5 格式，从而失去了 Alpha 通道。
+8.所有 PVRTC 格式都需要具有<strong>二次幂尺寸</strong>的<strong>正方形</strong>纹理。
+9.仅限在 PowerVR GPU 上。</p>
+
+<p><a name="notes-on-ios"></a></p>
+
+<h3>关于 iOS 的注意事项</h3>
+
+<p>选择默认的纹理压缩设置 (PVRTC) 可获得更大的兼容性。如果您的应用程序不包含 OpenGL ES 2 支持，则可以选择一种 ASTC 格式。这些格式提供更好的质量和灵活性，并且压缩速度比 PVRTC 快。</p>
+
+<p><a name="notes-on-tvos"></a></p>
+
+<h3>关于 tvOS 的注意事项</h3>
+
+<p>Unity 仅支持具有 Metal 支持的 tvOS 设备。该平台上的默认纹理压缩格式是 ASTC。如果手动添加 OpenGL ES 2，请确保将纹理压缩格式更改为 PVRTC 或 ETC，以免在运行时进行纹理解压缩。</p>
+
+<p><a name="notes-on-android"></a></p>
+
+<h3>关于 Android 的注意事项</h3>
+
+<h4>常规纹理</h4>
+
+<p>除非您的应用程序针对的是特定硬件（例如 Nvidia Tegra 或 Imagination PowerVR），否则必须在几种压缩格式和未压缩格式之间进行选择，这种情况下需要考虑不同的取舍因素：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>格式</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+	<th style="text-align:left;"><strong>支持</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">ASTC</td>
+	<td style="text-align:left;">最灵活的格式，允许您使用不同的块大小来微调文件大小和产生的质量。</td>
+	<td style="text-align:left;">在运行 Vulkan 或 OpenGL ES 3.1 的所有设备上以及在运行 OpenGL ES 3.0 的部分设备上受支持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ETC2/EAC</td>
+	<td style="text-align:left;">OpenGL ES 3.0 的标准纹理压缩格式。产生的图像质量非常高，并且支持一到四分量纹理数据。OpenGL ES 2 设备不支持这种格式，因此纹理在运行时被解压缩为 <a href="class-TextureImporter.html#fallback">ETC2 fallback</a> 指定的格式。</td>
+	<td style="text-align:left;">在 OpenGL ES 3.0 上受支持。<br>在 OpenGL ES 2 上不受支持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ETC</td>
+	<td style="text-align:left;">基于块的纹理压缩格式。图像被分成 4×4 的块，并且每个块使用固定的位数进行编码。缺点是没有直接的 Alpha 通道支持，因此不适合具有透明度信息的纹理。Unity 提供了一种自动处理纹理的方法，这种方法将 <a href="HOWTO-alphamaps.html">Alpha 通道</a>放在纹理图集内（可以在精灵上使用打包标签来指定这一点）。<br><br>为此，请在导入<a href="class-SpriteAtlas.html">精灵图集</a>时为纹理启用特定于 Android 的 <a href="class-TextureImporter.html#splitalpha">Split Alpha Channel</a> 选项。Unity 会将生成的图集拆分为两个纹理，其中一个纹理含有 RGB 数据，另一个纹理含有在所有三个 (RGB) 通道中重复的 Alpha 通道数据，然后在渲染管线的最后部分将这两个纹理组合起来。</td>
+	<td style="text-align:left;">在所有 Android 设备上都受支持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA 16 位</td>
+	<td style="text-align:left;">具有 Alpha 通道的未压缩格式。这种格式占用的内存是 ETC2 的两倍。对于没有强渐变且像素完美的 UI，这是一种相当不错的格式。</td>
+	<td style="text-align:left;">在所有设备上都受支持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">未压缩的格式，可提供最高质量并具有 Alpha 通道支持。与 ETC2 相比，这种格式需要四倍的内存。这种格式适合外观最佳、像素完美的 UI。</td>
+	<td style="text-align:left;">在所有设备上都受支持。</td>
+</tr>
+</tbody>
+</table>
+
+<h4>HDR 纹理</h4>
+
+<p>对于高动态范围 (HDR) 纹理，请从以下格式中进行选择：</p>
+
+<ul>
+<li>ASTC HDR 是 Android 设备上唯一可用于 HDR 纹理的压缩格式。这种格式需要 Vulkan 或 <a href="https://opengles.gpuinfo.org/listreports.php?extension=GL_KHR_texture_compression_astc_hdr">GL_KHR_texture_compression_astc_hdr</a> 支持。与低动态范围纹理一样，这是最灵活的格式。</li>
+<li>RGB9e5 是一种打包格式，不含 Alpha 通道。所有运行 Vulkan 或 OpenGL ES 3.0 的设备以及搭载 Nvidia Tegra GPU 的设备都支持这种格式。</li>
+<li>RGBA Half 是半精度的未压缩浮点格式。这种格式占用的内存是 RGB9e5 的两倍，但具有一个 Alpha 通道，并且受到大多数设备的支持。</li>
+</ul>
+
+<h4>以不同的 APK 发布到多种设备</h4>
+
+<p>您可以发布以不同硬件为目标的多个 <a href="https://en.wikipedia.org/wiki/Android_application_package">Android 包</a> (APK)。例如，要发布两个单独的 APK（一个适用于支持 OpenGL ES 3.0 及更高版本的设备，另一个适用于仅支持 OpenGL ES 2.0 的设备），请按照以下步骤操作：</p>
+
+<p><strong>1.构建一个以 OpenGL ES 3 为目标的 APK。</strong></p>
+
+<p>1.访问 Android 的 <a href="class-PlayerSettingsAndroid.html">Player Settings</a>（菜单：<strong>Edit &gt; Project Settings &gt; Player Settings</strong>，然后选择 Android 类别）。
+2.向下滚动到 <strong>Graphics APIs</strong> 部分。
+3.确保 OpenGL ES 2 不在列表中。
+4.构建 APK（菜单：<strong>File &gt; Build Settings</strong>，然后单击 <strong>Build</strong>）。</p>
+
+<p><strong>2.构建一个以 OpenGL ES 2 为目标的单独 APK。</strong></p>
+
+<p>1.访问 Android Player Settings。
+2.向下滚动到 <strong>Graphics APIs</strong> 部分。
+3.在列表中添加 OpenGL ES 2 并删除 OpenGL ES 3 和 Vulkan。
+4.构建 APK。</p>
+
+<p><strong>3.将这两个 APK 发布到 Google Play 应用商店。</strong></p>
+
+<p>当用户下载应用程序时，Google Play 应用商店会自动为其设备安装最相关的 APK。</p>
+
+<p>有关发布多个 APK 文件的更多信息，请参阅 Android 开发者文档中的以下主题：</p>
+
+<ul>
+<li><a href="https://developer.android.com/google/play/publishing/multiple-apks.html">发布多个 APK</a></li>
+<li>
+<a href="https://developer.android.com/google/play/filters.html">Google Play 应用商店 APK 过滤</a>。</li>
+</ul>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> 中添加了适用于 WebGL 的线性渲染 <span class="search-words">NewIn20172</span></span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 版中更新了 Crunch 压缩格式 <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 中停止了 Tizen 和三星电视 (Samsung TV) 支持 <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> 中添加了适用于 Android 的 ASTC HDR 纹理压缩 <span class="search-words">NewIn20191</span></span></p></li>
+<li><p><span class="page-history">针对 Unity <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.3</a> 更新了内容 <span class="search-words">NewIn20193</span></span></p></li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TextureTypes.html"></a></span><div class="tip">纹理类型</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-RenderTexture.html"></a></span><div class="tip">渲染纹理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

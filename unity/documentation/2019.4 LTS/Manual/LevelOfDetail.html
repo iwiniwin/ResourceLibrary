@@ -1,0 +1,270 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="网格的细节级别 (LOD) - Unity 手册">
+<title>网格的细节级别 (LOD) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/LOD0Image.png">
+<meta name="description" content="本页包含有关网格的细节级别 (LOD) 的信息。有关着色器的 LOD 的信息，请参阅 SubShader LOD 值。
+细节级别 (LOD) 技术可减少 Unity 渲染远距离网格所需的 GPU 运算量。">
+<meta property="og:description" content="本页包含有关网格的细节级别 (LOD) 的信息。有关着色器的 LOD 的信息，请参阅 SubShader LOD 值。
+细节级别 (LOD) 技术可减少 Unity 渲染远距离网格所需的 GPU 运算量。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'LevelOfDetail';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/LevelOfDetail.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/LevelOfDetail.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/LevelOfDetail.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/LevelOfDetail.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/LevelOfDetail.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/LevelOfDetail.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/LevelOfDetail.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/LevelOfDetail.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LevelOfDetail.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/LevelOfDetail.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LevelOfDetail.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LevelOfDetail.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LevelOfDetail.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/LevelOfDetail.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/LevelOfDetail.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/LevelOfDetail.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/LevelOfDetail.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/LevelOfDetail.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/LevelOfDetail.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/LevelOfDetail.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/LevelOfDetail.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/LevelOfDetail.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/LevelOfDetail.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/LevelOfDetail.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/LevelOfDetail.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/LevelOfDetail.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/LevelOfDetail.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/LevelOfDetail.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/LevelOfDetail.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/LevelOfDetail.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/LevelOfDetail.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LevelOfDetail.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/LevelOfDetail.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LevelOfDetail.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LevelOfDetail.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LevelOfDetail.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/LevelOfDetail.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/LevelOfDetail.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/LevelOfDetail.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/LevelOfDetail.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/LevelOfDetail.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/LevelOfDetail.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/LevelOfDetail.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/LevelOfDetail.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/LevelOfDetail.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/LevelOfDetail.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/LevelOfDetail.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/LevelOfDetail.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li>高级渲染功能</li>
+<li>网格的细节级别 (LOD)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HDRColorPicker.html"></a></span><div class="tip">HDR 拾色器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-LODGroup.html"></a></span><div class="tip">LOD 组</div>
+</div>
+</div></div>
+<h1>网格的细节级别 (LOD)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页包含有关网格的细节级别 (LOD) 的信息。有关着色器的 LOD 的信息，请参阅 <a href="SL-ShaderLOD.html">SubShader LOD 值</a>。
+细节级别 (LOD) 技术可减少 Unity 渲染远距离网格所需的 GPU 运算量。</p>
+
+<p>当场景中的某个游戏对象距离摄像机很远时，与距离摄像机很近的游戏对象相比，可以看到的细节将会减少。但默认情况下，Unity 会使用相同数量的三角形来渲染两个远近不同距离的游戏对象。这可能会浪费 GPU 运算资源，从而影响场景中的性能。</p>
+
+<p>LOD 技术允许 Unity 根据与摄像机的距离来相应减少为游戏对象渲染的三角形数量。要使用此技术，游戏对象必须具有大量网格，这些网格的几何体的细节级别逐渐降低。这些网格称为 LOD 级别。游戏对象离摄像机越远，Unity 渲染的 LOD 细节级别越低。此技术减轻了这些远处游戏对象给硬件带来的负担，因此可以提高渲染性能。</p>
+
+<p>要了解如何在 Unity 中使用 LOD，必须首先了解什么是 LOD 级别以及它们的工作方式。</p>
+
+<h2>LOD 级别</h2>
+
+<p>LOD 级别是一个网格，用于定义 Unity 为游戏对象的几何体渲染的细节级别。当游戏对象使用 LOD 时，Unity 将根据游戏对象与摄像机的距离来显示该游戏对象的相应 LOD 级别。</p>
+
+<p>每个 LOD 级别都存在于单独的游戏对象中，每个游戏对象都有一个显示该 LOD 级别的 Mesh Renderer 组件。对于最低级别的细节，可以使用公告牌资源 (Billboard Asset)，这种情况下 Unity 将显示公告牌资源而不是 3D 网格。Unity 根据需要显示和隐藏这些游戏对象。LOD 级别必须是相关的游戏对象的子游戏对象。</p>
+
+<p>下图显示了 LOD 级别如何根据与摄像机的距离而变化。</p>
+
+<figure>
+<img src="../uploads/Main/LOD0Image.png" alt="处于 LOD 0 时，摄像机显示包含大量小三角形的网格。处于 LOD 1 时，摄像机显示的网格中三角形的数量大幅减少，而且三角形的大小大幅增大。">
+<figcaption>处于 LOD 0 时，摄像机显示包含大量小三角形的网格。处于 LOD 1 时，摄像机显示的网格中三角形的数量大幅减少，而且三角形的大小大幅增大。</figcaption>
+</figure>
+
+<h2>在 Unity 中设置 LOD</h2>
+
+<p>要使用 LOD，必须有一个包含 <a href="class-LODGroup.html">LOD Group</a> 组件的游戏对象。LOD Group 组件提供了相应控件来定义 LOD 在此游戏对象上的行为方式，并会引用 Unity 为每个 LOD 级别显示或隐藏的游戏对象。请参阅 <a href="class-LODGroup.html">LOD 组 (LOD Group)</a> 以了解有关该组件中的属性的详细信息。</p>
+
+<p>可以通过两种方法在 Unity 中设置 LOD：</p>
+
+<ul>
+<li>可以在外部 3D 建模应用程序中配置 LOD 级别，然后 Unity 可以自动为您创建和配置所需的游戏对象和组件。有关正确配置的详细信息，请参阅<a href="importing-lod-meshes.html">导入 LOD 网格</a>。</li>
+<li>可以手动创建带有 LOD Group 组件的游戏对象，并手动配置 LOD 级别。</li>
+</ul>
+
+<h2>配置 LOD 级别</h2>
+
+<p>要手动配置 Unity 显示每个 LOD 级别时依据的摄像机距离，请使用 <a href="class-LODGroup.html">LOD Group 组件的选择栏</a>。</p>
+
+<p>LOD Group 组件最多接受八个 LOD 级别。<strong>LOD 0</strong> 最接近摄像机，因此是细节级别最高的 LOD 级别。</p>
+
+<h2>项目级别的 LOD 设置</h2>
+
+<p>在 <a href="class-QualitySettings.html">Quality settings</a> 窗口中，可以配置影响项目中所有游戏对象的 LOD 设置。</p>
+
+<p>有两个 LOD 设置可供配置：</p>
+
+<ul>
+<li>
+<strong>Maximum LOD Level</strong>：从构建中排除高于指定 LOD 级别的网格。</li>
+<li>
+<strong>LOD Bias</strong>：决定了处于阈值距离时选用更高还是更低的 LOD 级别。</li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HDRColorPicker.html"></a></span><div class="tip">HDR 拾色器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-LODGroup.html"></a></span><div class="tip">LOD 组</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

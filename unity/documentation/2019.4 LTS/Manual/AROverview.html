@@ -1,0 +1,325 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity AR 开发入门 - Unity 手册">
+<title>Unity AR 开发入门 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/ARFoundationSupportedPlatforms.png">
+<meta name="description" content="为了实现 AR 开发入门，Unity 建议使用 AR Foundation 为 Unity 支持的手持式 AR 设备和可穿戴 AR 设备创建应用程序。">
+<meta property="og:description" content="为了实现 AR 开发入门，Unity 建议使用 AR Foundation 为 Unity 支持的手持式 AR 设备和可穿戴 AR 设备创建应用程序。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'AROverview';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/AROverview.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/AROverview.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/AROverview.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/AROverview.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/AROverview.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/AROverview.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/AROverview.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/AROverview.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AROverview.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AROverview.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AROverview.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AROverview.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AROverview.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AROverview.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AROverview.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AROverview.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AROverview.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AROverview.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AROverview.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AROverview.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AROverview.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AROverview.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AROverview.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AROverview.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AROverview.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/AROverview.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/AROverview.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/AROverview.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/AROverview.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/AROverview.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/AROverview.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AROverview.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AROverview.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AROverview.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AROverview.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AROverview.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AROverview.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AROverview.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AROverview.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AROverview.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AROverview.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AROverview.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AROverview.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AROverview.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AROverview.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AROverview.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AROverview.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AROverview.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li>Unity AR 开发入门</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="XR.html"></a></span><div class="tip">XR</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VROverview.html"></a></span><div class="tip">Unity VR 开发入门</div>
+</div>
+</div></div>
+<h1>Unity AR 开发入门</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>为了实现 AR 开发入门，Unity 建议使用 AR Foundation 为 Unity 支持的手持式 AR 设备和可穿戴 AR 设备创建应用程序。</p>
+
+<p>AR Foundation 允许您在 Unity 中以多平台方式使用增强现实平台。该软件包可提供一个供 Unity 开发者使用的界面，但并未自行实现任何 AR 功能。</p>
+
+<p>要在目标设备上使用 AR Foundation，您还需要为 Unity 正式支持的每个目标平台下载并安装单独的软件包：</p>
+
+<ul>
+<li>Android 上的 <a href="https://docs.unity3d.com/Packages/com.unity.xr.arcore@latest">ARCore XR 插件</a>
+</li>
+<li>iOS 上的 <a href="https://docs.unity3d.com/Packages/com.unity.xr.arkit@latest">ARKit XR 插件</a>
+</li>
+<li>Magic Leap 上的 <a href="https://docs.unity3d.com/Packages/com.unity.xr.magicleap@latest">Magic Leap XR 插件</a>
+</li>
+<li>HoloLens 上的 <a href="https://docs.unity3d.com/Packages/com.unity.xr.windowsmr@latest">Windows XR 插件</a>
+</li>
+</ul>
+
+<p>有关如何使用 XR 插件管理系统来配置项目的说明，请参阅<a href="configuring-project-for-xr.html">针对 XR 配置 Unity 项目</a>页面。</p>
+
+<p>AR Foundation 支持以下功能：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>功能</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">设备跟踪</td>
+	<td style="text-align:left;">跟踪设备在物理空间中的位置和方向。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">射线投射</td>
+	<td style="text-align:left;">通常用于确定虚拟内容的显示位置，即射线（通过原点和方向来定义）与 AR 设备检测和/或跟踪到的真实世界特征相交的位置。Unity 的一些内置功能允许在 AR 应用程序中使用射线投射。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">平面检测</td>
+	<td style="text-align:left;">检测水平和垂直表面（例如咖啡桌、墙壁）的大小和位置。这些表面被称为“平面”。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">参考点</td>
+	<td style="text-align:left;">跟踪平面和特征点随时间变化的位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">点云检测</td>
+	<td style="text-align:left;">检测所捕获的摄像机图像中在视觉上明显不同的特征，并使用这些点来了解设备相对于周围世界的位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">手势</td>
+	<td style="text-align:left;">根据人的手，将手势识别为输入事件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">面部跟踪</td>
+	<td style="text-align:left;">访问面部标志（这是检测到的面部的网格化表示）以及混合形状信息（可以将这些信息馈入到面部动画绑定中）。面部管理器 (Face Manager) 可以配置用于面部跟踪的设备，并为每个检测到的面部创建游戏对象。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2D 图像跟踪</td>
+	<td style="text-align:left;">检测环境中的特定 2D 图像。跟踪图像管理器 (Tracked Image Manager) 自动创建游戏对象来表示所有识别到的图像。可以根据是否存在特定图像来更改 AR 应用程序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">3D 对象跟踪</td>
+	<td style="text-align:left;">将真实世界对象的数字表示形式导入到 Unity 应用程序中，并在环境中检测这些对象。跟踪对象管理器 (Tracked Object Manager) 为每个检测到的物理对象创建游戏对象，从而使应用程序可以根据是否存在特定的真实世界对象而改变。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">环境探针</td>
+	<td style="text-align:left;">检测环境特定区域中的光照和颜色信息，这有助于使 3D 内容与周围环境无缝融合。环境探针管理器 (Environment Probe Manager) 使用此信息在 Unity 中自动创建立方体贴图。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">网格</td>
+	<td style="text-align:left;">生成与物理空间相对应的三角形网格，因此更能够与物理环境的表示形式进行交互和/或在视觉上覆盖细节。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2D 和 3D 身体跟踪</td>
+	<td style="text-align:left;">提供摄像机取景框中识别的人体的 2D（屏幕空间）或 3D（世界空间）表示。在 2D 检测中会使用包含 17 个关节的层级视图以屏幕空间坐标来表示人体。在 3D 检测中会使用包含 93 个关节的层级视图以世界空间变换组件来表示人体。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">人体分段</td>
+	<td style="text-align:left;">人体子系统 (Human Body Subsystem) 为应用程序提供人体模板和深度分段图像。模板分段图像针对每个像素确定该像素是否包含一个人物。对于与识别到的人物相关的每个像素，深度分段图像包含与设备的估计距离。将这些分段图像一起使用可以使渲染的 3D 内容被真实世界的人体逼真地遮挡。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">遮挡</td>
+	<td style="text-align:left;">将到物理世界中对象的距离应用于渲染的 3D 内容，从而实现物理对象与虚拟对象的逼真混合。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">参与者跟踪</td>
+	<td style="text-align:left;">在共享 AR 会话中跟踪其他设备的位置和方向。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>AR 平台支持</h2>
+
+<p>AR Foundation 不会自行实现任何 AR 功能，而是会定义一个多平台 API，允许开发者使用多个平台通用的功能。</p>
+
+<p>AR Foundation 可跨不同平台支持以下功能：</p>
+
+<figure>
+<img src="../uploads/Main/ARFoundationSupportedPlatforms.png" alt="">
+</figure>
+
+<p>有关如何下载和使用 AR Foundation 的更多信息，请参阅 <a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@latest">AR Foundation 软件包文档</a>。</p>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="XR.html"></a></span><div class="tip">XR</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VROverview.html"></a></span><div class="tip">Unity VR 开发入门</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

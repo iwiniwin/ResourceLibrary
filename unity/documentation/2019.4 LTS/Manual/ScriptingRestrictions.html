@@ -1,0 +1,443 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="脚本限制 - Unity 手册">
+<title>脚本限制 - Unity 手册</title>
+<meta name="description" content="Unity 致力于在支持的所有平台之间提供通用的脚本 API 和体验。但是，有些平台存在固有的限制。为帮助您了解这些限制并支持跨平台代码，下表描述了每个平台和脚本后端适用的限制：">
+<meta property="og:description" content="Unity 致力于在支持的所有平台之间提供通用的脚本 API 和体验。但是，有些平台存在固有的限制。为帮助您了解这些限制并支持跨平台代码，下表描述了每个平台和脚本后端适用的限制：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'ScriptingRestrictions';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/ScriptingRestrictions.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/ScriptingRestrictions.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/ScriptingRestrictions.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/ScriptingRestrictions.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/ScriptingRestrictions.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/ScriptingRestrictions.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/ScriptingRestrictions.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/ScriptingRestrictions.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ScriptingRestrictions.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ScriptingRestrictions.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ScriptingRestrictions.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ScriptingRestrictions.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ScriptingRestrictions.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ScriptingRestrictions.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ScriptingRestrictions.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ScriptingRestrictions.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ScriptingRestrictions.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ScriptingRestrictions.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ScriptingRestrictions.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ScriptingRestrictions.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ScriptingRestrictions.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ScriptingRestrictions.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ScriptingRestrictions.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ScriptingRestrictions.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ScriptingRestrictions.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/ScriptingRestrictions.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/ScriptingRestrictions.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/ScriptingRestrictions.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/ScriptingRestrictions.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/ScriptingRestrictions.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/ScriptingRestrictions.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/ScriptingRestrictions.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/ScriptingRestrictions.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/ScriptingRestrictions.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/ScriptingRestrictions.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/ScriptingRestrictions.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/ScriptingRestrictions.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/ScriptingRestrictions.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/ScriptingRestrictions.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/ScriptingRestrictions.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/ScriptingRestrictions.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/ScriptingRestrictions.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/ScriptingRestrictions.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/ScriptingRestrictions.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/ScriptingRestrictions.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/ScriptingRestrictions.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/ScriptingRestrictions.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/ScriptingRestrictions.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingConcepts.html">脚本概述</a></li>
+<li>脚本限制</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GenericFunctions.html"></a></span><div class="tip">通用函数</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="script-Serialization.html"></a></span><div class="tip">脚本序列化</div>
+</div>
+</div></div>
+<h1>脚本限制</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 致力于在支持的所有平台之间提供通用的脚本 API 和体验。但是，有些平台存在固有的限制。为帮助您了解这些限制并支持跨平台代码，下表描述了每个平台和脚本后端适用的限制：</p>
+
+<h2>.NET 4.x 等效脚本运行时</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>平台（脚本后端）</em></strong></th>
+	<th style="text-align:left;"><strong><em>提前编译</em></strong></th>
+	<th style="text-align:left;"><strong><em>无线程</em></strong></th>
+	<th style="text-align:left;"><strong><em>.NET Core 类库子集</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Android (IL2CPP)</td>
+	<td style="text-align:left;">✔</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Android (Mono)</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">iOS (IL2CPP)</td>
+	<td style="text-align:left;">✔</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">PlayStation 4 (IL2CPP)</td>
+	<td style="text-align:left;">✔</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">PlayStation Vita (IL2CPP)</td>
+	<td style="text-align:left;">✔</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">独立平台 (IL2CPP)</td>
+	<td style="text-align:left;">✔</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">独立平台 (Mono)</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Switch (IL2CPP)</td>
+	<td style="text-align:left;">✔</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">通用 Windows 平台 (IL2CPP)</td>
+	<td style="text-align:left;">✔</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">通用 Windows 平台 (.NET)</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">✔</td>
+</tr>
+<tr>
+	<td style="text-align:left;">WebGL (IL2CPP)</td>
+	<td style="text-align:left;">✔</td>
+	<td style="text-align:left;">✔</td>
+	<td style="text-align:left;" colspan="2"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">WiiU (Mono)</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">XBox One (IL2CPP)</td>
+	<td style="text-align:left;">✔</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="AOT"></a> </p>
+
+<h2>提前编译</h2>
+
+<p>有些平台不允许生成运行时代码。因此，任何依赖于在目标设备上即时 (JIT) 编译的托管代码都将失败。相反，需要提前 (AOT) 编译所有托管代码。通常，这种区别并不重要，但在少数特定情况下，AOT 平台需要额外注意。</p>
+
+<h3>System.Reflection.Emit</h3>
+
+<p>AOT 平台无法实现 <code>System.Reflection.Emit</code> 命名空间中的任何方法。<code>System.Reflection</code> 的其余部分是可接受的，只要编译器可以推断通过反射使用的代码需要在运行时存在。</p>
+
+<h3>序列化</h3>
+
+<p>AOT 平台可能会由于使用了反射而遇到序列化和反序列化问题。如果仅通过反射将某个类型或方法作为序列化或反序列化的一部分使用，则 AOT 编译器无法检测到需要为该类型或方法生成代码。</p>
+
+<h3>通用虚拟方法</h3>
+
+<p>通用方法要求编译器做一些额外的工作，将开发人员编写的代码扩展到设备上执行的代码。例如，对于具有 <code>int</code> 或 <code>double</code> 类型的 <code>List</code>，需要不同代码。虚拟方法在运行时而不是编译时确定行为，存在虚拟方法时，编译器可在不完全明显的地方轻松地要求从源代码生成运行时代码。</p>
+
+<p>以下代码示例在 JIT 平台上完全按预期工作（向控制台输出一次“Message value: Zero”）：</p>
+
+<pre><code>using UnityEngine;
+using System;
+
+public class AOTProblemExample : MonoBehaviour, IReceiver
+{
+    public enum AnyEnum 
+    {
+        Zero,
+        One,
+    }
+
+    void Start() 
+    {
+        // 微妙的触发器：管理器的类型*必须*是
+        // IManager（而不是 Manager）才能触发 AOT 问题。
+        IManager manager = new Manager();
+        manager.SendMessage(this, AnyEnum.Zero);
+    }
+
+    public void OnMessage&lt;T&gt;(T value) 
+    {
+        Debug.LogFormat("Message value: {0}", value);
+    }
+}
+
+public class Manager : IManager 
+{
+    public void SendMessage&lt;T&gt;(IReceiver target, T value) {
+        target.OnMessage(value);
+    }
+}
+
+public interface IReceiver
+{
+    void OnMessage&lt;T&gt;(T value);
+}
+
+public interface IManager 
+{
+    void SendMessage&lt;T&gt;(IReceiver target, T value);
+}
+</code></pre>
+
+<p>但是，使用 IL2CPP 脚本后端在 AOT 平台上执行此代码时，发生以下异常：</p>
+
+<pre><code>ExecutionEngineException: Attempting to call method 'AOTProblemExample::OnMessage&lt;AOTProblemExample+AnyEnum&gt;' for which no ahead of time (AOT) code was generated.
+  at Manager.SendMessage[T] (IReceiver target, .T value) [0x00000] in &lt;filename unknown&gt;:0 
+  at AOTProblemExample.Start () [0x00000] in &lt;filename unknown&gt;:0
+</code></pre>
+
+<p>同样，Mono 脚本后端提供以下类似的异常：</p>
+
+<pre><code>  ExecutionEngineException: Attempting to JIT compile method 'Manager:SendMessage&lt;AOTProblemExample/AnyEnum&gt; (IReceiver,AOTProblemExample/AnyEnum)' while running with --aot-only.
+    at AOTProblemExample.Start () [0x00000] in &lt;filename unknown&gt;:0
+</code></pre>
+
+<p>AOT 编译器不会意识到自己应该为 <code>T</code> 为 <code>AnyEnum</code> 的泛型方法 <code>OnMessage</code> 生成代码，所以它会继续往下，跳过该方法。调用该方法时，运行时无法找到要执行的正确代码，因此返回此错误消息。</p>
+
+<p>要解决像这样的 AOT 问题，可以强制编译器生成适当的代码。可以向 <code>AOTProblemExample</code> 类添加以下示例方法：</p>
+
+<pre><code>public void UsedOnlyForAOTCodeGeneration() 
+{
+    // IL2CPP 只需要这一行。
+    OnMessage(AnyEnum.Zero);
+
+    //Mono 也需要这一行。请注意，我们
+    // 直接在 Manager 而不是 IManager 接口上调用。
+    new Manager().SendMessage(null, AnyEnum.Zero);
+
+    //包含一个异常，这样我们就可以确定是否调用过该方法。
+    throw new InvalidOperationException("This method is used for AOT code generation only.Do not call it at runtime.");
+}
+</code></pre>
+
+<p>当编译器遇到 <code>T</code> 为 <code>AnyEnum</code> 的 <code>OnMessage</code> 的显式调用时，它会生成运行时执行的正确代码。不需要调用 <code>UsedOnlyForAOTCodeGeneration</code> 方法；该方法的存在只是为了让编译器看到而已。</p>
+
+<h3>从原生代码调用托管方法</h3>
+
+<p>需要编组到 C 函数指针以便可以从原生代码调用的托管方法会在 AOT 平台上有一些重构：</p>
+
+<ul>
+<li>托管方法必须是静态方法</li>
+<li>托管方法必须具有 <code>[MonoPInvokeCallback]</code> 属性</li>
+</ul>
+
+<p><a name="threads"></a> </p>
+
+<h2>无线程</h2>
+
+<p>有些平台不支持使用线程，因此任何使用 <code>System.Threading</code> 命名空间的托管代码都将在运行时失败。此外，.NET 类库的某些部分存在对线程的隐式依赖。一个常用的例子是 <code>System.Timers.Timer</code> 类，它依赖于对线程的支持。</p>
+
+<h2>异常过滤器</h2>
+
+<p>IL2CPP 不支持 C# 异常过滤器。应该将依赖于异常过滤器的代码修改为正确的 <code>catch</code> 块。</p>
+
+<h2>TypedReference</h2>
+
+<p>IL2CPP 不支持 <code>System.TypedReference</code> 类型和 <code>__makeref</code> C# 关键字。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-history">删除了三星电视支持。</span></li>
+<li><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20183">2018.3</a> 中已弃用 .Net 3.5 脚本运行时 <span class="search-words">NewIn20183</span></span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GenericFunctions.html"></a></span><div class="tip">通用函数</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="script-Serialization.html"></a></span><div class="tip">脚本序列化</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

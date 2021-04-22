@@ -1,0 +1,297 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="AssetDatabase 批处理 - Unity 手册">
+<title>AssetDatabase 批处理 - Unity 手册</title>
+<meta name="description" content="使用批处理可以减少在代码中更改资源时所需的时间和处理量。">
+<meta property="og:description" content="使用批处理可以减少在代码中更改资源时所需的时间和处理量。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'AssetDatabaseBatching';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetDatabaseBatching.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/AssetDatabaseBatching.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/AssetDatabaseBatching.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/AssetDatabaseBatching.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/AssetDatabaseBatching.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/AssetDatabaseBatching.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/AssetDatabaseBatching.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/AssetDatabaseBatching.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetDatabaseBatching.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetDatabaseBatching.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetDatabaseBatching.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetDatabaseBatching.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetDatabaseBatching.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetDatabaseBatching.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetDatabaseBatching.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetDatabaseBatching.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetDatabaseBatching.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetDatabaseBatching.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetDatabaseBatching.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetDatabaseBatching.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetDatabaseBatching.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetDatabaseBatching.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetDatabaseBatching.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetDatabaseBatching.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetDatabaseBatching.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/AssetDatabaseBatching.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/AssetDatabaseBatching.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/AssetDatabaseBatching.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/AssetDatabaseBatching.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/AssetDatabaseBatching.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/AssetDatabaseBatching.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/AssetDatabaseBatching.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/AssetDatabaseBatching.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/AssetDatabaseBatching.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AssetDatabaseBatching.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/AssetDatabaseBatching.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AssetDatabaseBatching.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AssetDatabaseBatching.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AssetDatabaseBatching.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AssetDatabaseBatching.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AssetDatabaseBatching.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AssetDatabaseBatching.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AssetDatabaseBatching.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AssetDatabaseBatching.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AssetDatabaseBatching.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AssetDatabaseBatching.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AssetDatabaseBatching.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/AssetDatabaseBatching.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AssetWorkflow.html">资源工作流程</a></li>
+<li><a href="AssetDatabase.html">资源数据库</a></li>
+<li>AssetDatabase 批处理</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetDatabaseRefreshing.html"></a></span><div class="tip">刷新资源数据库</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundlesIntro.html"></a></span><div class="tip">AssetBundle</div>
+</div>
+</div></div>
+<h1>AssetDatabase 批处理</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用批处理可以减少在代码中更改资源时所需的时间和处理量。</p>
+
+<p>如果在代码中对多个资源进行更改（例如，复制或移动资源文件），则资源数据库 (Asset Database) 的默认行为是依次处理每个更改，并对资源执行完整的“刷新”过程，然后再转到下一行代码。</p>
+
+<p>以下示例中将更改三个资源。执行的操作是复制 Asset1、移动 Asset2 和删除 Asset3：</p>
+
+<pre><code>AssetDatabase.CopyAsset("Assets/Asset1.txt", "Assets/Text/Asset1.txt");
+AssetDatabase.MoveAsset("Assets/Asset2.txt", "Assets/Text/Asset2.txt");
+AssetDatabase.DeleteAsset("Assets/Asset3.txt");
+</code></pre>
+
+<p>如果不进行批处理，Unity 会在处理每个更改后移到下一行代码。这不仅会花费不必要的时间，还会触发许多回调（如果使用批处理的话，则可以避免）。</p>
+
+<p>另一种替代做法是可以指定资源数据库应该一次性处理一组操作。为此，需要告诉资源数据库在您进行更改之前暂停其正常行为，然后在您更改完成后告诉它恢复。</p>
+
+<p>具体而言，如果您要执行以下任意多项操作，则应尝试使用批处理：</p>
+
+<ul>
+<li>AssetDatabase.ImportAsset</li>
+<li>AssetDatabase.MoveAsset</li>
+<li>AssetDatabase.CopyAsset</li>
+<li>AddObjectToAsset</li>
+</ul>
+
+<h2>处理操作的方法</h2>
+
+<p>要指定资源数据库应该一次性处理一组操作，可以使用以下方法：<a href="../ScriptReference/AssetDatabase.StartAssetEditing.html">AssetDatabase.StartAssetEditing</a> 和 <a href="../ScriptReference/AssetDatabase.StopAssetEditing.html">AssetDatabase.StopAssetEditing</a>。</p>
+
+<p><strong>AssetDatabase.StartAssetEditing</strong></p>
+
+<p>此方法告诉资源数据库您正在开始对资源进行编辑。资源数据库进入暂停状态，并在您调用相应的 <strong>StopAssetEditing</strong> 方法告诉您已完成之前，不会对资源进行任何进一步的更改。</p>
+
+<p><strong>AssetDatabase.StopAssetEditing</strong></p>
+
+<p>完成所有的资源更改后，请调用此方法告诉资源数据库处理您的更改并恢复其立即自动处理更改的正常行为。然后，资源数据库以批处理方式处理您在 <code>StartAssetEditing</code> 和 <code>StopAssetEditing</code> 之间进行的更改，这种处理方法比逐个处理的速度要快。</p>
+
+<h3>嵌套调用 StartAssetEditing 和 StopAssetEditing</h3>
+
+<p>如果您对 <code>StartAssetEditing</code> 进行了多次调用，必须对 <code>StopAssetEditing</code> 进行相应次数的调用，使资源数据库恢复其自动处理更改的正常行为。</p>
+
+<p>这是因为这些函数会递增和递减计数器，而不是充当简单的开/关功能。调用 <code>StartAssetEditing</code> 将递增计数器，而调用 <code>StopAssetEditing</code> 将递减计数器。当计数器达到零时，资源数据库将恢复其正常行为。</p>
+
+<p>Unity 使用计数器而不是简单开/关布尔值的原因是，通过使用计数器，如果您的代码执行多个嵌套的“start”和“stop”对，内部对不会意外地过早恢复资源数据库的正常行为。相反，每对会将计数器加一或减一，并且如果您的代码正确嵌套，则对 <code>StopAssetEditing</code> 的最终外部调用会将计数器设置为零。</p>
+
+<p><strong>注意：</strong>您的代码绝不应该使计数器降到零以下。这样做会产生错误。</p>
+
+<h2>示例</h2>
+
+<p>以下示例显示了这些方法的推荐使用方式：</p>
+
+<pre><code class="using UnityEngine;">using UnityEditor;
+public class StartStopAssetEditingExample : MonoBehaviour
+{
+    [MenuItem("APIExamples/StartStopAssetEditing")]
+    static void CallAssetDatabaseAPIsBetweenStartStopAssetEditing()
+    {
+        try
+        {
+            //将资源数据库置于大多数 API
+            //都暂停导入的状态
+            AssetDatabase.StartAssetEditing();
+            AssetDatabase.CopyAsset("Assets/Asset1.txt", "Assets/Text/Asset1.txt");
+            AssetDatabase.MoveAsset("Assets/Asset2.txt", "Assets/Text/Asset2.txt");
+            AssetDatabase.DeleteAsset("Assets/Asset3.txt");
+        }
+        finally
+        {
+            //在 "finally" 代码块中添加
+            //对 StopAssetEditing 的调用可确保
+            //在离开此函数时重置 AssetDatabase 状态
+            AssetDatabase.StopAssetEditing();
+        }
+    }
+}
+</code></pre>
+
+<h2>使用 try…finally 进行资源编辑</h2>
+
+<p>调用 <code>AssetDatabase.StartAssetEditing</code> 时，Unity 会将整个 Editor 的 AssetDatabase 置于暂停状态。因此，如果您没有对 AssetDatabase.<code>StopAssetEditing</code> 进行相应的调用，则在涉及任何与资源相关的操作（导入、刷新等）时，Editor 会看起来无响应，并需要重新启动 Editor 以恢复其正常运行状态。</p>
+
+<p>不使用 <code>try</code> …<code>finally</code> 代码块时，如果任何用于修改资源的代码导致了错误，则可能会阻止调用 <code>StopAssetEditing</code>。为了避免这种情况，请将这些调用与 <code>StartAssetEditing</code> 一起包裹在一个 <code>try</code>…<code>finally</code> 代码块中，然后将资源修改代码包含在 <code>try</code> 代码块中，而将 <code>StopAssetEditing</code> 调用放在 <code>finally</code> 代码块中。这样可以确保，如果在 <code>try</code> 代码块中进行更改时发生了任何异常，仍可以保证将会调用 <code>AssetDatabase.StopAssetEditing</code>。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetDatabaseRefreshing.html"></a></span><div class="tip">刷新资源数据库</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundlesIntro.html"></a></span><div class="tip">AssetBundle</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

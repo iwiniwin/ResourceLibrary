@@ -1,0 +1,378 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity Analytics A/B 测试 - Unity 手册">
+<title>Unity Analytics A/B 测试 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/UnityAnalyticsABTesting3.png">
+<meta name="description" content="Note: Unity Remote Config is now available as a preview package. Remote Config is an improved offering that allows you to change the behavior and appearance of your game without requiring a new binary. You can remotely enable or disable features, change the specifics of your game to target specific audiences, or run special events by scheduling new content releases.">
+<meta property="og:description" content="Note: Unity Remote Config is now available as a preview package. Remote Config is an improved offering that allows you to change the behavior and appearance of your game without requiring a new binary. You can remotely enable or disable features, change the specifics of your game to target specific audiences, or run special events by scheduling new content releases.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UnityAnalyticsABTesting';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityAnalyticsABTesting.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UnityAnalyticsABTesting.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityAnalyticsABTesting.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UnityAnalyticsABTesting.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UnityAnalyticsABTesting.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UnityAnalyticsABTesting.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UnityAnalyticsABTesting.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UnityAnalyticsABTesting.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnityAnalyticsABTesting.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnityAnalyticsABTesting.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityAnalyticsABTesting.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityAnalyticsABTesting.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityAnalyticsABTesting.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityAnalyticsABTesting.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityAnalyticsABTesting.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityAnalyticsABTesting.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityAnalyticsABTesting.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityAnalyticsABTesting.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityAnalyticsABTesting.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityAnalyticsABTesting.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityAnalyticsABTesting.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityAnalyticsABTesting.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityAnalyticsABTesting.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityAnalyticsABTesting.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityAnalyticsABTesting.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UnityAnalyticsABTesting.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UnityAnalyticsABTesting.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UnityAnalyticsABTesting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UnityAnalyticsABTesting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UnityAnalyticsABTesting.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UnityAnalyticsABTesting.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnityAnalyticsABTesting.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnityAnalyticsABTesting.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityAnalyticsABTesting.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityAnalyticsABTesting.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityAnalyticsABTesting.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityAnalyticsABTesting.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityAnalyticsABTesting.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityAnalyticsABTesting.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityAnalyticsABTesting.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityAnalyticsABTesting.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityAnalyticsABTesting.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityAnalyticsABTesting.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityAnalyticsABTesting.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityAnalyticsABTesting.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityAnalyticsABTesting.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityAnalyticsABTesting.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityAnalyticsABTesting.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li>Unity Analytics A/B 测试</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsRemoteSettingsTesting.html"></a></span><div class="tip">测试 Remote Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsMonetization.html"></a></span><div class="tip">变现</div>
+</div>
+</div></div>
+<h1>Unity Analytics A/B 测试</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><em><strong>Note</strong>: <a href="https://unity.com/remote-config">Unity Remote Config</a> is now available as a preview package. Remote Config is an improved offering that allows you to change the behavior and appearance of your game without requiring a new binary. You can remotely enable or disable features, change the specifics of your game to target specific audiences, or run special events by scheduling new content releases.</em></p>
+
+<p>A/B 测试是一项受控实验，让不同的玩家组测试游戏某些方面的变化。进行测试的游戏方面可以是基本方面（比如输入控制方案），也可以是美观方面（比如不同的颜色处理），或者介于两者之间的其他方面。借助 A/B 测试可以比较在实验过程中收集的关键指标，从而帮助您分析哪种变化的效果更好。</p>
+
+<p><strong>A/B 测试的工作原理</strong></p>
+
+<p>Unity Analytics A/B 测试根据实验中定义的变体将玩家进行分组。每个组都可以看到为该变体组指定的游戏处理。一个处理是指一个或多个 <a href="https://docs.unity3d.com/Manual/UnityAnalyticsRemoteSettings.html">Remote Settings</a>（在每个变体组中需要为这些设置分配唯一的值）。在运行时，A/B 测试服务根据指定的变体分配比例，将玩家随机分配到其中一组。玩家将接收所在组的 Remote Settings 值。然后，您的应用程序使用这些 Remote Settings 让玩家体验您希望测试的游戏方面。</p>
+
+<p>A/B 测试的关键要素包括：</p>
+
+<ul>
+<li><p><strong>实验</strong> — 通过向不同玩家组展示不同处理来执行的测试。</p></li>
+<li><p><strong>变体</strong> — 定义玩家组数量以及如何将玩家分配到这些组。一个必不可少的变体是对照组。</p></li>
+<li><p><strong>处理</strong> — 定义用于实验的 Remote Settings 以及每个变体的特定设置值。</p></li>
+<li><p><strong>目标</strong> — 希望通过实验改进的 Analytics 指标。一项实验在多个变体组之间比较目标指标，旨在发现哪种处理具有最理想效果。</p></li>
+</ul>
+
+<p>可以同时进行多个实验，但是应注意不同实验不能相互影响，因为一些玩家会同时看到两个实验的实验处理。例如，如果在一个实验中运行一项测试来比较入门教程中的步骤排序，而运行另一项测试来测试教程节奏，那么将很难确定哪个实验导致了结果出现变化。这个示例可能非常显而易见，但即使是游戏中不相关部分的测试也可能相互影响。测试的游戏部分越基础以及实验组越大，实验相互影响的几率就越大。</p>
+
+<p>应从 Unity Analytics Dashboard 创建并运行 A/B 测试。还必须使用 <a href="UnityAnalyticsRemoteSettings.html">Remote Settings</a> API 实现应用程序中的实验处理。</p>
+
+<h1>创建实验</h1>
+
+<p>要创建实验，请执行以下操作：</p>
+
+<p>1.访问项目的 Analytics Dashboard。</p>
+
+<p>2.单击 <strong>A/B Testing</strong> 以打开 A/B Testing 页面。</p>
+
+<p>3.单击 <strong>Create Experiment</strong> 按钮。</p>
+
+<pre><code>此时将打开 __Create new experiment__ 对话框。
+
+![](../uploads/Main/UnityAnalyticsABTesting0.png)
+</code></pre>
+
+<p>4.输入实验的名称。</p>
+
+<p>5.单击 <strong>Create</strong>。</p>
+
+<p>创建实验后，必须定义目标、变体和处理。</p>
+
+<h2>选择实验目标</h2>
+
+<p>实验目标用于定义实验处理旨在影响的分析指标。可以选择：</p>
+
+<ul>
+<li><p><strong>Day 1 Retention</strong> — 在第一次玩游戏后的第一天再玩游戏的用户的百分比。</p></li>
+<li><p><strong>Day 7 Retention</strong> — 在第一次玩游戏后的第七天再玩游戏的用户的百分比。</p></li>
+</ul>
+
+<p>实验生成的<a href="#reports">报告</a>将显示实验变体之间的指标差异。选择的目标还会影响为了收集有统计意义的数据而必须运行实验的时长。例如，与测量 Day 1 Retention 的实验相比，测量 Day 7 Retention 的实验需要更长的运行时间。</p>
+
+<p>要选择实验，请执行以下操作目标：</p>
+
+<p>1.单击 <strong>Select Experiment Goal</strong> 按钮。</p>
+
+<pre><code>![](../uploads/Main/UnityAnalyticsABTesting1.png)
+</code></pre>
+
+<p>2.从下拉列表中选择目标。</p>
+
+<pre><code>![](../uploads/Main/UnityAnalyticsABTesting2.png)
+</code></pre>
+
+<p>3.单击 <strong>Save</strong>。</p>
+
+<h2>设置实验变体</h2>
+
+<p>使用实验的 <strong>Variants</strong> 部分可以定义 A/B 测试的玩家组，并指定测试服务分配给每个组的玩家比例。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting3.png" alt="Variants 部分">
+<figcaption>Variants 部分</figcaption>
+</figure>
+
+<p>对照组 (<strong>Control</strong>) 必须始终存在。对照组应获得当前或默认的游戏体验。该组提供与其他组的结果进行比较的基础。</p>
+
+<p>要添加更多变体，请单击此部分顶部的 <strong>ADD</strong> 按钮。为该组指定一个名称和一个分配比例。所有组的分配比例总和必须达到 100%。<strong>Estimate</strong> 列显示每天预期应分配给每个变体的玩家数。</p>
+
+<p>要删除变体，请单击其名称旁边的垃圾桶图标。</p>
+
+<p>完成实验所需的预计时间基于达到统计上有效的样本数所需的时间。应用程序通常拥有的玩家 (DAU) 越多，分配给实验变体的玩家就越多，预计时间就越短。</p>
+
+<p>按需设置变体后，单击 <strong>Save</strong>。</p>
+
+<h2>设置实验处理</h2>
+
+<p>使用 <strong>Treatments</strong> 部分可以定义实验中使用的设置，并为每个组分配单独的设置值。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting4.png" alt="Treatments 部分">
+<figcaption>Treatments 部分</figcaption>
+</figure>
+
+<p>单击 <strong>ADD</strong> 按钮为实验添加设置。</p>
+
+<p>可以使用 Release 配置中的现有 Remote Settings，只要这些设置当前未用于进行的任何其他实验。请注意，Remote Settings 页面仅显示用于对照组的默认值。只能在 A/B Testing 页面上查看或更改变体设置。</p>
+
+<p>不访问 Remote Settings 页面也可以创建新设置。A/B 测试中创建的设置不会显示在 Remote Settings 页面中。如果希望在实验完成后继续使用某个设置，可以创建同名的 Remote Settings。</p>
+
+<p>定义完处理后，单击 <strong>Save</strong>。</p>
+
+<h2>实现处理</h2>
+
+<p>使用 <a href="UnityAnalyticsRemoteSettingsUsing.html">Remote Settings API</a> 可以在运行时访问实验中定义的值。访问游戏中的设置时，请 Treatments 部分中显示的设置名称作为关键字。可以在<a href="UnityAnalyticsRemoteSettingsScripting.html">代码</a>中实现 Remote Settings，也可以使用 <a href="UnityAnalyticsRemoteSettingsComponent.html">Remote Settings 组件</a>来访问和应用 Unity Inspector 窗口中的设置值。</p>
+
+<h1>管理实验</h1>
+
+<p>创建至少一个实验后，A/B Testing 页面将以列表的形式显示实验。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting5.png" alt="实验列表">
+<figcaption>实验列表</figcaption>
+</figure>
+
+<p><strong>要启动实验，请执行以下操作：</strong></p>
+
+<p>1.单击处于 <strong>Not Started</strong> 状态的实验的名称。</p>
+
+<p>2.单击 <strong>Start Experiment</strong> 按钮。</p>
+
+<p>__注意：__实验开始后，不能再进行更改，因为这将使测试结果无效。</p>
+
+<p><strong>要停止实验，请执行以下操作：</strong></p>
+
+<p>1.单击处于 <strong>Running</strong> 状态的实验的名称。</p>
+
+<p>2.单击 <strong>Stop Experiment</strong> 按钮。</p>
+
+<p>__注意：__无法重新启动实验。</p>
+
+<p><strong>要查看报告，请执行以下操作：</strong></p>
+
+<p>1.单击处于 <strong>Ended</strong> 状态的实验的名称。</p>
+
+<p>2.Reporting 部分将显示实验结果。</p>
+
+<p><a name="reports"></a></p>
+
+<h1>报告</h1>
+
+<p>实验完成后，使用 Reports 部分可以查看实验结果。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting6.png" alt="Reports 部分">
+<figcaption>Reports 部分</figcaption>
+</figure>
+
+<p>报告中会列出变体组、为实验目标记录的指标以及每个变体与对照组的比较情况。（显著性等级使用标准统计学显著性水平 (5%)。）</p>
+
+<ul>
+<li>
+<span class="page-edit">2018–08–01 页面已发布</span>
+
+<ul>
+<li><span class="page-edit">截至 2018–08–01，服务与 Unity 5.5 之后的版本兼容，但是版本兼容性可能会发生变化。</span></li>
+<li><span class="page-history">2018.1 中的新功能</span></li>
+</ul>
+</li>
+</ul>
+<!-- area:monetization -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsRemoteSettingsTesting.html"></a></span><div class="tip">测试 Remote Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsMonetization.html"></a></span><div class="tip">变现</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

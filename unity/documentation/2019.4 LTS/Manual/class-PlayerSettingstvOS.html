@@ -1,0 +1,783 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Apple TV Player 设置 - Unity 手册">
+<title>Apple TV Player 设置 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/class-PlayerSettingstvOS.png">
+<meta name="description" content="本页面将详细介绍 tvOS 特有的 Player 设置。有关常规 Player 设置的描述，请参阅 Player。">
+<meta property="og:description" content="本页面将详细介绍 tvOS 特有的 Player 设置。有关常规 Player 设置的描述，请参阅 Player。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-PlayerSettingstvOS';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PlayerSettingstvOS.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-PlayerSettingstvOS.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PlayerSettingstvOS.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-PlayerSettingstvOS.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-PlayerSettingstvOS.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-PlayerSettingstvOS.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-PlayerSettingstvOS.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-PlayerSettingstvOS.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PlayerSettingstvOS.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PlayerSettingstvOS.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PlayerSettingstvOS.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettingstvOS.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PlayerSettingstvOS.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettingstvOS.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettingstvOS.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettingstvOS.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettingstvOS.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettingstvOS.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettingstvOS.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettingstvOS.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettingstvOS.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettingstvOS.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettingstvOS.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettingstvOS.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettingstvOS.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-PlayerSettingstvOS.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-PlayerSettingstvOS.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-PlayerSettingstvOS.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-PlayerSettingstvOS.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-PlayerSettingstvOS.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-PlayerSettingstvOS.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PlayerSettingstvOS.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PlayerSettingstvOS.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PlayerSettingstvOS.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettingstvOS.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PlayerSettingstvOS.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettingstvOS.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettingstvOS.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettingstvOS.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettingstvOS.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettingstvOS.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettingstvOS.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettingstvOS.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettingstvOS.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettingstvOS.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettingstvOS.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettingstvOS.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettingstvOS.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="AppleTV.html">Apple TV</a></li>
+<li>Apple TV Player 设置</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BuildSettingstvOS.html"></a></span><div class="tip">tvOS 构建设置</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl.html"></a></span><div class="tip">WebGL</div>
+</div>
+</div></div>
+<h1>Apple TV Player 设置</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面将详细介绍 tvOS 特有的 <strong>Player</strong> 设置。有关常规 <strong>Player</strong> 设置的描述，请参阅 <a href="class-PlayerSettings.html#general">Player</a>。</p>
+
+<figure>
+<img src="../uploads/Main/class-PlayerSettingstvOS.png" alt="tvOS 平台的 Player 设置">
+<figcaption>tvOS 平台的 Player 设置</figcaption>
+</figure>
+
+<p>您可以在以下部分找到这些属性的文档：</p>
+
+<ul>
+<li><a href="#Icon">Icon</a></li>
+<li><a href="#Resolution">Resolution and Presentation</a></li>
+<li><a href="#Splash">Splash Image</a></li>
+<li><a href="#Debugging">Debugging and crash reporting</a></li>
+<li><a href="#Other">Other Settings</a></li>
+</ul>
+
+<p><a name="Icon"></a></p>
+
+<h2>Icon</h2>
+
+<p>使用 <strong>Icon</strong> 设置可自定义您的 Apple TV 应用程序的品牌标记。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSettvOSIcon.png" alt="">
+</figure>
+
+<p>Apple TV 图像包含两个图层到五个图层。Unity 为 Apple TV 图标提供两个图层。</p>
+
+<p><strong>注意</strong>：有关为 Apple TV 分层图像的详细信息，请参阅 Apple 开发者文档的<a href="https://developer.apple.com/design/human-interface-guidelines/tvos/icons-and-images/layered-images/">分层图像 (Layered Images)</a> 部分。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>App icons</strong></td>
+	<td style="text-align:left;">为每种分辨率（1280x768、800x480 和 400x240）构建您希望在 <a href="https://developer.apple.com/design/human-interface-guidelines/tvos/overview/home-screen/">AppleTV 主屏幕</a>上显示的自定义图标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Top Shelf icons</strong></td>
+	<td style="text-align:left;">为每种宽高比和分辨率（4640x1440、2320x720、3840x1440 和 1920x720）构建您希望在 <a href="https://developer.apple.com/design/human-interface-guidelines/tvos/overview/top-shelf/">AppleTV 顶层</a>上显示的自定义图标。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Resolution"></a></p>
+
+<h2>Resolution and Presentation</h2>
+
+<figure>
+<img src="../uploads/Main/PlayerSettvOSResPres.png" alt="tvOS 平台的 Resolution Scaling 播放器设置">
+<figcaption>tvOS 平台的 Resolution Scaling 播放器设置</figcaption>
+</figure>
+
+<p>启用 <strong>Disable Depth and Stencil</strong> 选项可禁用深度和模板缓冲区。</p>
+
+<p><a name="Splash"></a></p>
+
+<h2>Splash Image</h2>
+
+<p>除了<a href="class-PlayerSettingsSplashScreen.html">通用 Splash Screen</a> 设置，还有两个用于 tvOS 平台的额外设置：</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSettvOSSplash.png" alt="tvOS 平台的启动画面设置">
+<figcaption>tvOS 平台的启动画面设置</figcaption>
+</figure>
+
+<p>使用 <strong>AppleTV (1x)</strong> 和 <strong>AppleTV (2x)</strong> 属性可设置 <a href="https://developer.apple.com/design/human-interface-guidelines/tvos/app-architecture/loading/">Apple TV 静态启动画面</a>。</p>
+
+<p><a name="Debugging"></a></p>
+
+<h2>Debugging and crash reporting</h2>
+
+<figure>
+<img src="../uploads/Main/PlayerSetiOSDebugCrash.png" alt="tvOS 平台上的 Debugging and crash reporting 部分">
+<figcaption>tvOS 平台上的 Debugging and crash reporting 部分</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Enable Internal Profiler (Deprecated)</strong></td>
+	<td style="text-align:left;">启用内部性能分析器，它可收集应用程序的性能数据并将报告输出至控制台。报告包含每个 Unity 子系统在每帧上执行时所用的毫秒数。数据是针对 30 帧所求的平均值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>On .Net UnhandledException</strong></td>
+	<td style="text-align:left;">对 .NET 未处理异常所采取的操作。提供的选项为 <em>Crash_（应用程序几乎崩溃并且强制 tvOS 生成可通过应用程序用户提交到 iTunes 并由开发人员检查的崩溃报告）和 </em>Silent Exit_（应用程序成功退出）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Log Obj-C Uncaught Exceptions</strong></td>
+	<td style="text-align:left;">启用一个自定义 Objective-C 未捕获异常处理程序，此处理程序会将异常信息输出至控制台。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Crash Report API</strong></td>
+	<td style="text-align:left;">启用自定义崩溃报告程序以捕获崩溃。脚本可通过 CrashReport API 使用崩溃日志。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Other"></a></p>
+
+<h2>Other Settings</h2>
+
+<p>此部分可以自定义一系列选项，这些选项分为以下几组：</p>
+
+<ul>
+<li><a href="#Rendering">Rendering</a></li>
+<li><a href="#Identification">Identification</a></li>
+<li><a href="#Configuration">Configuration</a></li>
+<li><a href="#Optimization">Optimization</a></li>
+<li><a href="#Logging">Logging</a></li>
+<li><a href="#Legacy">Legacy</a></li>
+</ul>
+
+<p><a name="Rendering"></a></p>
+
+<h3>Rendering</h3>
+
+<p>使用这些设置可自定义 Unity 针对独立平台渲染游戏的方式。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetiOSOther-Rendering.png" alt="tvOS 平台的 Rendering Player 设置">
+<figcaption>tvOS 平台的 Rendering Player 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Color Space</strong></td>
+	<td style="text-align:left;">选择应该用于渲染的颜色空间，选项为：_Gamma_ 或 <em>Linear</em>。<br>请参阅<a href="LinearLighting.html">线性渲染概述</a>以了解这两者之间的区别。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Graphics API</strong></td>
+	<td style="text-align:left;">禁用此选项可手动选择和重新排序图形 API。此选项在默认情况下为启用状态，并包含 <strong>Metal</strong>。还可以添加 <strong>OpenGLES2</strong> 和 <strong>OpenGLES3</strong> 作为不支持 Metal 的设备的后备选项；但是，这两个选项均已弃用，不应再使用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Color Gamut</strong></td>
+	<td style="text-align:left;">可以为 iOS 平台添加或删除<a href="https://en.wikipedia.org/wiki/Gamut">色域</a>以用于渲染。单击加号 (+) 图标查看可用色域的列表。色域定义了给定设备（如监视器或屏幕）可以使用的所有颜色范围。sRGB 色域是默认色域（也是必需色域）。<br>如果目标设备是具备宽色域显示屏的新款 tvOS 设备，请使用 <em>DisplayP3</em> 充分利用显示能力。对于旧设备，使用 <em>Metal Editor Support</em> 作为后备选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Metal Editor Support</strong></td>
+	<td style="text-align:left;">启用此选项可在 Unity Editor 中使用 Metal API，并释放更快速的着色器迭代以定位 Metal API。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Metal API Validation</strong></td>
+	<td style="text-align:left;">如果需要调试着色器问题，请启用此选项。<br><strong>注意：</strong>验证会提高 CPU 使用率，因此仅在进行调试时使用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Metal Write-Only Backbuffer</strong></td>
+	<td style="text-align:left;">允许在非默认设备方向上提高性能。此属性会在后缓冲区上设置 frameBufferOnly 标志，因此会阻止从后缓冲区的回读，但可实现一定程度的驱动程序优化。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Force hard shadows on Metal</strong></td>
+	<td style="text-align:left;">启用此选项可强制 Unity 在 Metal 中对阴影使用点采样。这样会降低阴影质量，但应该能提供更好的性能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Memoryless Depth</strong></td>
+	<td style="text-align:left;">选择何时使用<a href="../ScriptReference/RenderTextureMemoryless.Depth.html">无记忆渲染纹理</a>。无记忆渲染纹理在渲染时临时存储在区块内存中，而不是存储在 CPU 或 GPU 内存中。这可减少应用的内存使用量，但您无法读取或写入这些渲染纹理。<br><strong>注意：</strong>只有 tvOS、tvOS 10.0+ Metal 和 Vulkan 上支持无记忆渲染纹理。在其他平台上，渲染纹理受读/写保护并存储在 CPU 或 GPU 内存中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Unused</em></td>
+	<td style="text-align:left;">从不使用无记忆帧缓冲区深度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Forced</em></td>
+	<td style="text-align:left;">始终使用无记忆帧缓冲区深度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Automatic</em></td>
+	<td style="text-align:left;">让 Unity 决定何时使用无记忆帧缓冲区深度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Multithreaded Rendering</strong></td>
+	<td style="text-align:left;">启用此选项可使用多线程渲染。仅 Metal 支持此功能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Static Batching</strong></td>
+	<td style="text-align:left;">启用此选项可使用静态批处理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Dynamic Batching</strong></td>
+	<td style="text-align:left;">选中此复选框可在构建中使用<a href="DrawCallBatching.html">动态批处理</a>（默认情况下启用）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Compute Skinning</strong></td>
+	<td style="text-align:left;">启用此选项可使用 DX11/ES3 GPU 计算蒙皮，这样可以释放 CPU 资源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Graphics Jobs (Experimental)</strong></td>
+	<td style="text-align:left;">启用此选项可指示 Unity 将图形任务（渲染循环）卸载到在其他 CPU 核心上运行的工作线程。此功能旨在减少主线程上 <code>Camera.Render</code> 所花费的时间，该时间通常成为瓶颈。<br><strong>注意：</strong>此功能是实验性的。此功能可能无法为项目带来性能提升，并可能引入新的崩溃。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmap Encoding</strong></td>
+	<td style="text-align:left;">选择 <em>Low Quality</em>、<em>Normal Quality</em> 或 <em>High Quality</em> 来设置光照贴图编码。此设置影响光照贴图的编码方案和压缩格式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmap Streaming Enabled</strong></td>
+	<td style="text-align:left;">启用此选项可根据需要仅加载光照贴图 Mipmap 以渲染当前游戏摄像机。此值适用于生成的光照贴图纹理。<br><strong>注意：</strong>要使用此设置，必须启用 <a href="class-QualitySettings.html#texStream">Texture Streaming Quality</a> 设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Streaming Priority</strong></td>
+	<td style="text-align:left;">设置光照贴图 Mipmap 串流优先级以解决资源冲突。Unity 将这些值应用于生成的光照贴图纹理。<br>正数提供更高的优先级。有效值范围为 –128 到 127。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Frame Timing Stats</strong></td>
+	<td style="text-align:left;">启用此选项可收集 CPU/GPU 帧时序统计信息。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Identification"></a></p>
+
+<h3>Identification</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetiOSOther-Identification.png" alt="tvOS 平台的 Identification 设置">
+<figcaption>tvOS 平台的 Identification 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Bundle Identifier</strong></td>
+	<td style="text-align:left;">输入您正在构建的游戏或产品的资源调配配置文件。标识符的基本结构是 <strong>com.CompanyName.ProductName</strong>。此结构可能会根据您居住的地方而有所不同，因此始终默认为 Apple 为您的开发者帐户提供的字符串。您的 ProductName 已在您的资源调配证书中设置。<br>此值在关联的 <em>info.plist</em> 文件中显示为 <code>CFBundleIdentifier</code>。请参阅 Apple 开发者文档的 <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#/apple_ref/doc/uid/20001431-102070">CFBundleIdentifier</a> 部分以了解更多信息。<br><strong>注意</strong>：iOS、tvOS 和 Android 共享此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Version</strong></td>
+	<td style="text-align:left;">输入捆绑包的 release-version-number 字符串（例如，4.3.6）。此信息在关联的 <em>info.plist</em> 文件中显示为 <code>CFBundleShortVersionString</code>。<br>请参阅 Apple 开发者文档的 <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">CFBundleShortVersionString</a> 部分以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Build</strong></td>
+	<td style="text-align:left;">输入此应用版本的内部版本号。此信息在关联的 <em>info.plist</em> 文件中显示为 <code>CFBundleVersion</code>。<br>请参阅 Apple 开发者文档的 <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">CFBundleVersion</a> 部分以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Signing Team ID</strong></td>
+	<td style="text-align:left;">输入您的 Apple Developer Team ID。您可以在 Apple 开发者网站上的 <a href="https://help.apple.com/xcode/mac/current/#/devaf282080a?sub=dev8877b4398">Xcode Help</a> 下找到此信息。这将为生成的 Xcode 项目设置 Team ID，从而允许开发者使用 Build and Run 功能。必须在此处设置 Apple Developer Team ID 才能为应用程序自动签名。有关更多信息，请参阅<a href="https://help.apple.com/xcode/mac/current/#/dev60b6fbbc7">创建团队资源调配配置文件 (Creating Your Team Provisioning Profile)</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Automatically Sign</strong></td>
+	<td style="text-align:left;">启用此选项可允许 Xcode 自动为您的构建版本签名。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Configuration"></a></p>
+
+<h3>配置</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSettvOSOther-Configuration.png" alt="tvOS 平台的 Configuration 设置">
+<figcaption>tvOS 平台的 Configuration 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Scripting Runtime Version</strong></td>
+	<td style="text-align:left;">选择要在项目中使用的 .NET 运行时。有关更多详细信息，请参阅 Microsoft 的 <a href="https://docs.microsoft.com/en-us/dotnet/">.NET 文档</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.NET 3.5 Equivalent (Deprecated)</em></td>
+	<td style="text-align:left;">一个实现 .NET 3.5 API 的 .NET 运行时。此功能已弃用，不应再使用。请使用 .NET 4。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.NET 4.x Equivalent</em></td>
+	<td style="text-align:left;">一个实现 .NET 4 API 的 .NET 运行时。此 API 比 .NET 3.5 更新，因此提供对更多 API 的访问、与更多外部库兼容并支持 C# 6。这是默认脚本运行时。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="backend"></a><strong>Scripting Backend</strong>
+</td>
+	<td style="text-align:left;">选择要使用的脚本后端。tvOS 未启用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>API Compatibility Level</strong></td>
+	<td style="text-align:left;">API 兼容性级别有两个选项：<em>.NET 4.0</em> 或 <em>.NET Standard 2.0</em>。<br><strong>提示：</strong>如果您遇到第三方程序集的问题，可以尝试下文的 <a href="#apiComp">API Compatibility Level</a> 部分中的建议。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>C++ Compiler Configuration</strong></td>
+	<td style="text-align:left;">选择在编译 IL2CPP 生成的代码时使用的 C++ 编译器配置。tvOS 未启用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="on-demand"></a><strong>Use on Demand Resource</strong>
+</td>
+	<td style="text-align:left;">启用此选项可使用按需资源。<br>此设置对 tvOS 无效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="Accelerometer"></a><strong>Accelerometer Frequency</strong>
+</td>
+	<td style="text-align:left;">定义加速度计采样的频率。如果选择 <em>Disabled_，则不会进行采样。否则，可以选择 </em>15Hz<em>、</em>30Hz<em>、60Hz</em> 和 <em>100Hz</em> 频率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Camera Usage Description</strong></td>
+	<td style="text-align:left;">输入在 tvOS 设备上访问摄像头的原因。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Location Usage Description</strong></td>
+	<td style="text-align:left;">输入访问 tvOS 设备位置的原因。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Microphone Usage Description</strong></td>
+	<td style="text-align:left;">输入在 tvOS 设备上访问麦克风的原因。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Mute Other Audio Sources</strong></td>
+	<td style="text-align:left;">如果希望 Unity 应用程序从后台运行的应用程序中停止音频，请启用此选项。否则，来自后台应用程序的音频继续与 Unity 应用程序一起播放。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Requires Persistent WiFi</strong></td>
+	<td style="text-align:left;">启用此选项可要求 Wi-Fi 连接。tvOS 在应用程序运行时保持有效的 Wi-Fi 连接。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Allow downloads over HTTP (nonsecure)</strong></td>
+	<td style="text-align:left;">启用此选项可允许通过 HTTP 下载内容。推荐使用 HTTPS，这也是默认设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Supported URL schemes</strong></td>
+	<td style="text-align:left;">
+<a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#/apple_ref/doc/uid/TP40007072-CH6-SW1">支持的 URL 方案</a>列表。<br>要添加新方案，请增大 <strong>Size</strong> 属性的值，然后在出现的新 <strong>Element</strong> 框中设置对要加载的资源的引用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Target SDK</strong></td>
+	<td style="text-align:left;">选择游戏所针对的 SDK。选项包括 <em>Device SDK</em> 和 <em>Simulator SDK</em>。<br><strong>注意：</strong>请务必选择正确的 SDK。例如，如果选择 Device SDK 但是之后在 Xcode 中以 Simulator 为目标，那么构建将失败，并显示大量错误消息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Target minimum tvOS Version</strong></td>
+	<td style="text-align:left;">定义运行游戏所需要的最低 tvOS 版本。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Architecture</strong></td>
+	<td style="text-align:left;">选择目标架构。对于 tvOS，此设置未启用，因为此设置会根据为 <strong>Target SDK</strong> 属性设置的值自动更改。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Require Extended Game Controller</strong></td>
+	<td style="text-align:left;">如果应用程序需要游戏控制器，请启用此选项。有关更多信息，请参阅 Apple 开发者文档的<a href="https://developer.apple.com/design/human-interface-guidelines/tvos/remote-and-controllers/game-controllers/">游戏控制器 (Game Controllers)</a> 部分。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Scripting Define Symbols</strong></td>
+	<td style="text-align:left;">设置自定义编译标志。有关更多详细信息，请参阅<a href="PlatformDependentCompilation.html">平台相关的编译</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Allow ‘unsafe’ Code</strong></td>
+	<td style="text-align:left;">允许在预定义的程序集（例如，<code>Assembly-CSharp.dll</code>）中编译<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unsafe">“不安全”的 C# 代码</a>。<br>对于程序集定义文件 (<code>.asmdef</code>)，请单击其中一个 <code>.asmdef</code> 文件，并在出现的 Inspector 窗口中启用该选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Active Input Handling</strong></td>
+	<td style="text-align:left;">选择您希望如何处理来自用户的输入。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Input Manager</em></td>
+	<td style="text-align:left;">使用传统的 <a href="class-InputManager.html">Input</a> 窗口。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Input System (Preview)</em></td>
+	<td style="text-align:left;">使用<a href="../ScriptReference/Input.html">输入</a>系统。输入系统作为此版本的预览包提供。要试用输入系统的预览版，请安装 <a href="https://github.com/Unity-Technologies/InputSystem">InputSystem 包</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Both</em></td>
+	<td style="text-align:left;">并排使用两个系统。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="apiComp"></a></p>
+
+<h5>API Compatibility Level</h5>
+
+<p>可为所有目标选择 mono API 兼容性级别。有时，第三方 .NET 库会使用 .NET 兼容性级别之外的功能。为了解在这种情况下可能发生的问题以及如何以最佳方案修复问题，请尝试以下解决方案：</p>
+
+<p>1.安装适用于 Windows 的 <a href="http://www.airsquirrels.com/reflector/">Reflector</a>。
+2.将出现问题的相关 API 兼容性级别的 .NET 程序集拖到 Reflector 中。这些程序集位于 <code>Frameworks/Mono/lib/mono/YOURSUBSET/</code> 下。
+3.拖入第三方程序集。
+4.右键单击第三方程序集并选择 <strong>Analyze</strong>。
+5.在分析报告中，检查 <strong>Depends on</strong> 部分。此报告以红色突出显示第三方程序集所依赖的但在您选择的 .NET 兼容性级别中不可用的任何内容。</p>
+
+<p><a name="Optimization"></a></p>
+
+<h3>Optimization</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetiOSOther-Optimization.png" alt="tvOS 平台的 Optimization 设置">
+<figcaption>tvOS 平台的 Optimization 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Prebake Collision Meshes</strong></td>
+	<td style="text-align:left;">启用此选项可在构建时将碰撞数据添加到网格。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Keep Loaded Shaders Alive</strong></td>
+	<td style="text-align:left;">启用此选项可防止卸载着色器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Preloaded Assets</strong></td>
+	<td style="text-align:left;">设置一个资源数组，供播放器在启动时加载。<br>要添加新资源，请增大 <strong>Size</strong> 属性的值，然后在出现的新 <strong>Element</strong> 框中设置对要加载的资源的引用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>AOT compilation options</strong></td>
+	<td style="text-align:left;">提前 (AOT) 编译的附加选项。这有助于<a href="iphone-playerSizeOptimization.html">优化构建的 tvOS 播放器的大小</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Strip Engine Code</strong></td>
+	<td style="text-align:left;">启用代码剥离。此设置仅适用于 <em>IL2CPP</em> <a href="#backend">脚本后端</a>。<br>大多数游戏都不会使用所有必需的 DLL。启用 <strong>Strip Engine Code</strong> 选项后，可以剥离掉未使用的部分以减小 tvOS 设备上构建的播放器的大小。如果您的游戏使用的类通常会被您当前选择的选项删除，那么在进行构建时，将看到一条调试消息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Managed Stripping Level</strong></td>
+	<td style="text-align:left;">选择 Unity 剥离未使用的托管 (C#) 代码时的激进程度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Normal</em></td>
+	<td style="text-align:left;">删除无法访问的托管代码以减少构建大小和 .NET/IL2CPP 构建时间。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Aggressive</em></td>
+	<td style="text-align:left;">以比正常情况更激进的模式运行 UnityLinker，因此将进一步减少代码大小甚至比 Normal 选项可以实现的效果更强。然而，这种进一步的缩减可能伴随着取舍。有关更多信息，请参阅 <a href="../ScriptReference/ManagedStrippingLevel.html">ManagedStrippingLevel</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="scriptCallOpt"></a><strong>Script Call Optimization</strong>
+</td>
+	<td style="text-align:left;">选择如何在运行时选择性地禁用异常处理以提高速度。有关详细信息，请参阅 <a href="iphone-iOS-Optimization.html">iOS 优化</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Slow and Safe</em></td>
+	<td style="text-align:left;">使用完整的异常处理（使用 Mono 脚本后端时会对设备的性能有一些影响）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Fast but no Exceptions</em></td>
+	<td style="text-align:left;">不为设备上的异常提供数据（使用 Mono 脚本后端时游戏运行速度更快）。<br><strong>注意</strong>：将此选项与 <em>IL2CPP</em> <a href="#backend">脚本后端</a> 一起使用不会影响性能；但是，使用此选项可以避免发布版本中出现未定义的行为。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Vertex Compression</strong></td>
+	<td style="text-align:left;">设置每个通道的顶点压缩。例如，可以为除位置和光照贴图 UV 之外的所有内容启用压缩。为每个导入对象设置的整个网格压缩将覆盖在对象上设置顶点压缩。所有其他内容都遵循这些顶点压缩设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Optimize Mesh Data</strong></td>
+	<td style="text-align:left;">启用此选项可从网格中删除应用于网格的材质不需要的所有数据（例如切线、法线、颜色和 UV）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Logging"></a></p>
+
+<h3>Logging</h3>
+
+<p>选择在特定上下文中允许的日志记录类型。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Logging.png" alt="tvOS 平台的 Logging 设置">
+<figcaption>tvOS 平台的 Logging 设置</figcaption>
+</figure>
+
+<p>选中运行脚本时 (<strong>ScriptOnly</strong>)、始终 (<strong>Full</strong>) 或从不 (<strong>None</strong>) 条件下对应于每个 Log Type（__Error<strong>、</strong>Assert<strong>、</strong>Warning<strong>、</strong>Log__ 和 __Exception__）的复选框。</p>
+
+<p><a name="Legacy"></a> </p>
+
+<h3>Legacy</h3>
+
+<p>启用 <strong>Clamp BlendShapes (Deprecated)</strong> 选项可在 <a href="class-SkinnedMeshRenderer.html">SkinnedMeshRenderers</a> 中钳制混合形状权重的范围。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Legacy.png" alt="tvOS 平台的 Legacy 设置">
+<figcaption>tvOS 平台的 Legacy 设置</figcaption>
+</figure>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–11–28 页面已修订</span></p></li>
+<li><p><span class="page-history">在 Unity 2019.1 中添加了输入系统预览</span></p></li>
+<li><p><span class="page-history">在 Unity 2019.3 将 GPU Skinning 重命名为 Compute Skinning</span></p></li>
+<li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20193">2019.3</a> 将 GPU Skinning 重命名为 Compute Skinning<span class="search-words">NewIn20193</span></span></p></li>
+<li><p><span class="page-history">在 <a href="../Manual/30_search.html?q=newin20193">Unity 2019.3</a> 中已弃用 OpenGLES2/3</span></p></li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BuildSettingstvOS.html"></a></span><div class="tip">tvOS 构建设置</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl.html"></a></span><div class="tip">WebGL</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

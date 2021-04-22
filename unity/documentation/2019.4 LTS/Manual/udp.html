@@ -1,0 +1,587 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity 分发平台 - Unity 手册">
+<title>Unity 分发平台 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/UDPOverview_01.png">
+<meta name="description" content="Unity 分发平台 (UDP) 让你可以通过单个中心将游戏分发到多个应用商店。UDP 使用每个商店的专用应用内购 (In-App Purchase) SDK 重新打包 Android 构建版本，从而使游戏与各个应用商店兼容。你可以从 UDP 控制台中管理你的所有商店提交内容。">
+<meta property="og:description" content="Unity 分发平台 (UDP) 让你可以通过单个中心将游戏分发到多个应用商店。UDP 使用每个商店的专用应用内购 (In-App Purchase) SDK 重新打包 Android 构建版本，从而使游戏与各个应用商店兼容。你可以从 UDP 控制台中管理你的所有商店提交内容。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'udp';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/udp.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/udp.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/udp.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/udp.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/udp.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/udp.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/udp.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/udp.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/udp.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/udp.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/udp.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/udp.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/udp.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/udp.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/udp.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/udp.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li>Unity 分发平台</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityMultiplayerService.html"></a></span><div class="tip">Multiplayer 服务</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-getting-started.html"></a></span><div class="tip">开始使用 UDP</div>
+</div>
+</div></div>
+<h1>Unity 分发平台</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>概述</h2>
+
+<p>Unity 分发平台 (UDP) 让你可以通过单个中心将游戏分发到多个应用商店。UDP 使用每个商店的专用应用内购 (In-App Purchase) SDK 重新打包 Android 构建版本，从而使游戏与各个应用商店兼容。你可以从 UDP 控制台中管理你的所有商店提交内容。</p>
+
+<p><img src="../uploads/Main/UDPOverview_01.png" alt=""> <br>
+UDP 概览</p>
+
+<p>你可以使用 UDP 分发付费游戏和带有 IAP 的游戏。</p>
+
+<h2>UDP 控制台</h2>
+
+<p>UDP 控制台是基于 Web 的门户，你可以在其中准备游戏以便提交到多个应用商店。在 UDP 控制台中可以执行以下操作：</p>
+
+<ul>
+<li><a href="udp-distribution.html#edit">管理游戏的信息</a></li>
+<li><a href="udp-implementing-iap.html#edit">编辑游戏的应用内购</a></li>
+<li><a href="udp-managing-and-publishing.html#publish">将游戏发布到多个应用商店</a></li>
+<li><a href="udp-reference.html#reporting">查看游戏在所有 UDP 商店中的表现</a></li>
+</ul>
+
+<p>Learn more about the <a href="udp-distribution.html#console">UDP console interface</a>.</p>
+
+<h2>UDP client</h2>
+
+<p>要使用 UDP，游戏必须具有 UDP 客户端，包括 UDP 客户端 ID。这样可以在 UDP 服务中标识游戏。<a href="udp-distribution.html#create">在 UDP 上创建游戏时</a>会生成该 ID，并且必须将该游戏链接到 <a href="https://docs.unity3d.com/Packages/com.unity.purchasing.udp@2.1/manual/getting-started.html#linking">Unity 项目</a>。
+要取消 Unity 项目与 UDP 客户端的链接，请在 UDP 控制台的“<a href="udp-reference.html#integrate">集成信息</a>”部分中移除相应的 Unity 项目 ID。</p>
+
+<h2>UDP 沙盒</h2>
+
+<p>UDP 包内有一个沙盒环境，用作 UDP 游戏的测试商店。在游戏中实现 UDP SDK 时，UDP 构建版本便可以将沙盒用作测试环境。必须先<a href="udp-sandbox-testing.html">在沙盒中测试游戏</a>，以便验证 UDP 和 IAP（如果适用）实现是否正常，然后才能将游戏提交到实际的商店。</p>
+
+<p>沙盒测试可帮助确定在最初的 UDP 实现过程中出现的任何问题。未解决的问题可能会阻碍 UDP 为商店重新打包游戏，或导致 UDP 重新打包存在问题的游戏。这可能导致商店拒绝你的游戏或玩家无法完成交易。</p>
+
+<h2>具有应用内购的商店</h2>
+
+<p>应用内购 (IAP) 可让你从游戏内向玩家出售内容。你只需要通过 UDP 实现应用内购。然后，UDP 会自动将游戏重新打包到特定于商店的构建版本中。</p>
+
+<p>在游戏客户端和服务器端都可以实现 UDP。对于离线游戏，你只需在游戏客户端中实现 UDP。对于在线游戏，还可以在服务器端实现 UDP。</p>
+
+<ul>
+<li>在游戏客户端中实现 UDP 应用内购<br>游戏客户端中的实现包括初始化 UDP SDK 以及与 UDP 的应用内购流程集成。</li>
+<li>在服务器端实现 UDP 应用内购<br>服务器端的实现可让你向 UDP 服务器查询订单、接收回调通知并返回确认信息。</li>
+</ul>
+
+<p>了解如何：</p>
+
+<ul>
+<li><a href="udp-implementing-iap.html#managing-iap">在 UDP 控制台上管理应用内购</a></li>
+<li>在编辑器中实现应用内购
+
+<ul>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.purchasing.udp@2.1/manual/games-with-iap.html">使用 UDP 包</a></li>
+<li><a href="udp-service-interoperability.html#iap">使用 Unity IAP</a></li>
+</ul>
+</li>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.purchasing.udp@2.1/manual/games-with-iap.html#server-side">在服务器端实现应用内购</a></li>
+</ul>
+
+<h3>IAP 商品类型</h3>
+
+<p>UDP 仅支持消耗品和非消耗品类型的 IAP 商品。不支持订阅商品。</p>
+
+<p><a name="non-consumable"></a></p>
+
+<h4>非消耗品类型的 IAP 商品</h4>
+
+<p>非消耗商品会产生永久性效果。玩家只能购买一次这种商品。</p>
+
+<p><a name="consumable"></a></p>
+
+<h4>消耗品类型的 IAP 商品</h4>
+
+<p>可消耗商品会产生暂时的效果，例如游戏币和额外的经验值。玩家可多次购买这种商品。</p>
+
+<p>用户购买了可消耗商品后，必须先消耗，然后才能再次购买。通过消耗可以确保购买的商品已成功交付。</p>
+
+<p>要<a href="https://docs.unity3d.com/Packages/com.unity.purchasing.udp@2.1/manual/games-with-iap.html#consume">消耗商品</a>，游戏需要向 UDP SDK 发送一个 Consume 请求。在商品被消耗后，游戏应交付该商品。这样可以防止重复交付商品。</p>
+
+<p><a name="iap-catalog"></a></p>
+
+<h3>IAP 目录</h3>
+
+<p>IAP 目录是游戏中实现的 IAP 商品库存。对于每个 IAP 商品，需要定义：</p>
+
+<ul>
+<li>描述</li>
+<li>价格</li>
+<li>消耗类型</li>
+<li>商品 ID</li>
+</ul>
+
+<p>重新打包游戏并将其提交到商店后，UDP 会将你的 IAP 目录与商店的后端同步。然后，游戏可以从商店的后端查询 IAP 库存。</p>
+
+<p>玩家购买 IAP 商品时，游戏会要求商店确认 IAP 目录。必须在游戏中正确实现 UDP，此步骤才能顺利进行。</p>
+
+<p>UDP 控制台上的 IAP 目录是提交到商店后端系统的真实信息来源。</p>
+
+<p>为了成功实现，请遵循 <a href="https://docs.unity3d.com/Packages/com.unity.purchasing.udp@2.1/manual/games-with-iap.html">UDP 实现指南</a>。为确保 IAP 正常运行，请<a href="https://docs.unity3d.com/Packages/com.unity.purchasing.udp@2.1/manual/building-your-game.html#testing">在 UDP 沙盒环境中测试游戏</a>。</p>
+
+<h2>付费游戏</h2>
+
+<p>你可以通过 UDP 将付费游戏（也称为付费下载游戏）分发到支持付费游戏的商店。随后，你可以在 UDP 控制台的<a href="udp-reference.html#reporting">“报告”控制面板</a>中查看付费游戏的收入。</p>
+
+<p>了解如何通过 UDP 分发付费游戏。</p>
+
+<h2>所有权</h2>
+
+<p>UDP 游戏属于某个 <a href="https://docs.unity3d.com/Manual/OrgsManagingyourOrganization.html">Unity 组织</a>，而不属于任何个人用户。一个组织的所有用户都可以访问该组织的 UDP 游戏。权限因组织中具体用户的角色而异。</p>
+
+<p>你还可以将不在组织中的用户添加到特定项目。应在 Unity Dashboard 中的 <strong>Project</strong> &gt; <strong>Settings</strong> &gt; <strong>Users</strong> 下添加用户。</p>
+
+<p>你可以在 Unity 组织中将任务划分到 Unity 编辑器用户和非编辑器用户，例如：</p>
+
+<ul>
+<li>
+<strong>发布管理员</strong>（非编辑器用户）
+
+<ul>
+<li>在 UDP 控制台上创建新游戏</li>
+<li>向<strong>开发者</strong>传递执行 UDP 实现所需的参数</li>
+<li>整合分发所需的材料</li>
+<li>开始向组织希望将游戏分发到的商店注册</li>
+</ul>
+</li>
+<li>
+<strong>开发者</strong>（编辑器用户）
+
+<ul>
+<li>在项目中实现 UDP</li>
+<li>构建并测试游戏 APK</li>
+<li>将游戏构建版本部署到 UDP 控制台</li>
+</ul>
+</li>
+<li>
+<strong>发布管理员</strong>
+
+<ul>
+<li>创建游戏发布</li>
+<li>完成提交到商店的工作</li>
+</ul>
+</li>
+</ul>
+
+<p><a name="permissions"></a></p>
+
+<h3>与项目相关的权限</h3>
+
+<p>获得项目访问权限的组织成员和个人都可以处理 Unity 项目。</p>
+
+<p>与项目相关的权限决定了你可以在 Unity 编辑器中和 UDP 控制台中对于特定 Unity 项目访问哪些 UDP 功能。这适用于：</p>
+
+<ul>
+<li>项目所属组织的成员（具有组织级别的权限）</li>
+<li>仅获得项目访问权限的个人（具有项目级别的权限）</li>
+</ul>
+
+<p>下表列出了 Unity 编辑器中的用户、管理员和所有者具有哪些与项目相关的 UDP 权限。对于项目级别和组织级别的权限，这些都是相同的。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;">用户</th>
+	<th style="text-align:left;">管理员</th>
+	<th style="text-align:left;">所有者</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">生成新的 UDP 客户端</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">将 Unity 项目链接到 UDP 客户端</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">修改 UDP 设置</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">创建或修改 IAP</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+</tbody>
+</table>
+
+<p>下表列出了 UDP 控制台中的用户、管理员和所有者具有哪些与项目相关的 UDP 权限。对于项目级别和组织级别的权限，这些都是相同的。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;">用户</th>
+	<th style="text-align:left;">管理员</th>
+	<th style="text-align:left;">所有者</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">生成新的 UDP 客户端</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">在游戏列表中存档游戏</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Delete a game in game list</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Edit a game revision</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">将 Unity 项目链接到 UDP 客户端</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">取消 Unity 项目与 UDP 客户端的链接</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">发布游戏修订版</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">将游戏注册到商店</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">将游戏发布到商店</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">高级页面操作</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">“状态”页访问和操作</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+</tbody>
+</table>
+
+<h3>与组织相关的权限</h3>
+
+<p>与组织相关的权限决定了你可以在组织中访问哪些 UDP 功能。这些功能通常仅限于组织成员，即，仅被授予对特定项目具有访问权限的个人不具有组织级别的权限。这一规则的例外情况如下：</p>
+
+<ul>
+<li>项目所有者可以查看“报告”控制面板</li>
+<li>任何项目角色都可以在游戏列表中查看他们有权访问的项目</li>
+</ul>
+
+<p>下表列出了用户、管理员和所有者具有哪些与组织相关的额外权限。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;" colspan="3">项目级别</th>
+	<th style="text-align:left;" colspan="3">组织级别</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">用户</td>
+	<td style="text-align:left;">管理员</td>
+	<td style="text-align:left;">所有者</td>
+	<td style="text-align:left;">用户</td>
+	<td style="text-align:left;">管理员</td>
+	<td style="text-align:left;">所有者</td>
+</tr>
+<tr>
+	<td style="text-align:left;">查看“报告”控制面板</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">访问游戏列表</td>
+	<td style="text-align:left;">是*</td>
+	<td style="text-align:left;">是*</td>
+	<td style="text-align:left;">是*</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">编辑公司简介</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">将组织注册到商店</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">No</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意</strong>：项目级别的用户可以访问拥有该项目的主体组织内的游戏，以及他们可以在自己的组织内访问的任何其他项目。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityMultiplayerService.html"></a></span><div class="tip">Multiplayer 服务</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-getting-started.html"></a></span><div class="tip">开始使用 UDP</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

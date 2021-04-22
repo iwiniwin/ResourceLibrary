@@ -1,0 +1,358 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="事件响应 - Unity 手册">
+<title>事件响应 - Unity 手册</title>
+<meta name="description" content="可让视觉元素以两种方式对接收的事件做出反应：">
+<meta property="og:description" content="可让视觉元素以两种方式对接收的事件做出反应：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UIE-Events-Handling';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UIE-Events-Handling.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UIE-Events-Handling.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UIE-Events-Handling.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UIE-Events-Handling.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UIE-Events-Handling.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UIE-Events-Handling.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UIE-Events-Handling.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UIE-Events-Handling.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-Events-Handling.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UIE-Events-Handling.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-Events-Handling.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-Events-Handling.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-Events-Handling.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-Events-Handling.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-Events-Handling.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-Events-Handling.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-Events-Handling.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-Events-Handling.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-Events-Handling.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-Events-Handling.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-Events-Handling.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-Events-Handling.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-Events-Handling.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-Events-Handling.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-Events-Handling.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UIE-Events-Handling.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UIE-Events-Handling.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UIE-Events-Handling.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UIE-Events-Handling.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UIE-Events-Handling.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UIE-Events-Handling.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-Events-Handling.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UIE-Events-Handling.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-Events-Handling.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-Events-Handling.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-Events-Handling.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-Events-Handling.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-Events-Handling.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-Events-Handling.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-Events-Handling.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-Events-Handling.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-Events-Handling.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-Events-Handling.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-Events-Handling.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-Events-Handling.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-Events-Handling.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-Events-Handling.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-Events-Handling.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UIToolkits.html">用户界面 (UI)</a></li>
+<li><a href="UIElements.html">UIElements 开发者指南</a></li>
+<li><a href="UIE-Events.html">事件系统</a></li>
+<li>事件响应</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Events-Dispatching.html"></a></span><div class="tip">分发事件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Events-DragAndDrop.html"></a></span><div class="tip">支持拖放</div>
+</div>
+</div></div>
+<h1>事件响应</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>可让视觉元素以两种方式对接收的事件做出反应：</p>
+
+<ul>
+<li>对事件回调进行注册。</li>
+<li>实现默认操作。</li>
+</ul>
+
+<p>应该对事件回调进行注册还是实现默认操作，取决于许多因素。</p>
+
+<p>例如，如果将现有类的对象实例化，并希望实例在接收事件时以特定方式做出反应，则唯一的选择是在此实例上注册回调。</p>
+
+<p>但是，如果从 VisualElement 派生新类，并希望该类的所有实例以相同方式对事件做出反应，则可以使用构造函数在该类的所有实例上注册回调，或者实现该类的默认操作。</p>
+
+<p>回调和默认操作之间的重要区别如下：</p>
+
+<ul>
+<li>必须在类的实例上注册回调。默认操作在类上实现为虚拟函数。</li>
+<li>传播路径上的所有元素都会执行回调。仅对事件目标执行默认操作。</li>
+</ul>
+
+<p>可以调用 <code>event.PreventDefault()</code> 来阻止执行默认操作。无法取消某些事件类型，这意味着无法取消其默认操作。即使对于无法取消的事件，也可以调用 <code>event.StopPropagation()</code> 或 <code>event.StopImmediatePropagation()</code> 来阻止执行回调。</p>
+
+<p>应该将默认操作视为特定类型的元素在接收事件时应该具有的行为。</p>
+
+<p>例如，复选框应通过切换单击事件的状态来响应该事件。应通过覆盖默认操作虚拟函数（而不是在所有复选框上注册回调）来实现此行为。</p>
+
+<p>通常，应该优先使用默认操作实现元素中正常需要的行为。这样确保了可以通过在附加到实例的回调中调用 <code>PreventDefault()</code> 来逐个实例取消默认元素行为。</p>
+
+<p>将行为实现为默认操作的其他好处在于，执行这些行为时不需要在回调注册表中进行查找，并且无回调的实例在涓滴/冒泡传播过程中得到优化。</p>
+
+<p>为了获得更大灵活性，可在事件分发过程中的以下两个时刻执行事件目标的默认操作：</p>
+
+<ul>
+<li>在涓滴与冒泡传播阶段之间，刚执行目标回调之后，通过覆盖 <code>ExecuteDefaultActionsAtTarget()</code>；</li>
+<li>在事件分发过程结束时，通过覆盖 <code>ExecuteDefaultActions()</code>。</li>
+</ul>
+
+<p>如有可能，尽量在 <code>ExecuteDefaultActions()</code> 中实现类的默认操作。这样可以给类用户提供更多覆盖这些操作的选择：他们可以在事件传播过程的涓滴阶段或冒泡阶段调用 <code>PreventDefault()</code>。</p>
+
+<p>但是，有时必须确保在类上执行默认操作的事件不会传播到元素的父级。例如，文本字段收到修改字段值的键按下事件。这些键按下事件不会传播到父级，例如，父级可能使用 Delete 键来删除内容。在此情况下，请使用 <code>ExecuteDefaultActionsAtTarget()</code> 实现默认操作并调用 <code>StopPropagation()</code>。这样可以确保回调在冒泡阶段不会处理该事件。</p>
+
+<p>只有事件目标才执行默认操作。如果元素由于事件传播过程而接收事件，则不执行默认操作。如果您希望自己的类响应以其子项或父级为目标的事件，必须在该类的每个实例上注册回调。有时，这是必要的，但是为了更好的可扩展性和更好的性能，请尽量避免在类的每个实例上注册回调。</p>
+
+<h2>对事件回调进行注册</h2>
+
+<p>要向视觉元素的特定实例添加自定义行为，必须为触发自定义行为的事件注册回调。</p>
+
+<p>注册事件回调的优点是允许自定义现有类的单个实例的行为。注册事件回调的缺点是执行时间更长，所以性能更差。执行需要更长时间的原因在于，无论何时收到事件，都要检查注册的事件以确定应该执行哪个回调。</p>
+
+<p>例如，以下代码为 <code>MouseDownEvent</code> 注册两个回调：</p>
+
+<pre><code class="csharp">    // 对鼠标按下事件注册回调
+        myElement.RegisterCallback&lt;MouseDownEvent&gt;(MyCallback);
+        // 同上，而且将一些用户数据发送到回调
+        myElement.RegisterCallback&lt;MouseDownEvent, MyType&gt;(MyCallbackWithData, myData);
+</code></pre>
+
+<p>回调签名应如下所示：</p>
+
+<pre><code class="csharp">void MyCallback(MouseDownEvent evt) { /* ... */ }
+void MyCallbackWithData(MouseDownEvent evt, MyType data) { /* ... */ }
+</code></pre>
+
+<p>可为事件注册任意数量的回调。但是，回调注册系统会阻止对给定的事件和传播阶段多次注册相同的回调函数。通过调用 <code>myElement.UnregisterCallback()</code> 方法，可从 <code>VisualElement</code> 中移除回调。</p>
+
+<p>传播路径上除了目标之外的每个元素都接收该事件两次：一次在涓滴阶段，另一次在冒泡阶段。要避免执行两次已注册的回调，请使用可选的 <code>RegisterCallback</code> 来指定在哪个阶段执行回调。</p>
+
+<p>默认情况下，在目标阶段和冒泡阶段执行已注册的回调。此默认行为可确保父元素在其子元素之后做出反应。例如，如果希望父级先做出反应来覆盖其子项的行为，可使用 <code>TrickleDown.TrickleDown</code> 选项来注册回调：</p>
+
+<pre><code class="csharp">    // 为涓滴阶段注册回调
+        myElement.RegisterCallback&lt;MouseDownEvent&gt;(MyCallback, TrickleDown.TrickleDown);
+</code></pre>
+
+<p>此代码将通知分发程序在目标阶段和涓滴阶段执行回调。</p>
+
+<h2>实现默认操作</h2>
+
+<p>默认操作适用于该类的所有实例。这意味着会为元素收到的每个事件调用一个或两个方法。</p>
+
+<p>实现默认操作的类也可以在该类的实例上注册回调。</p>
+
+<p>事件类实现在处理事件之前或之后执行的行为。事件类通过覆盖 <code>EventBase</code> 类的 <code>PreDispatch()</code> 方法或 <code>PostDispatch()</code> 来达到此目的。由于会对事件进行排队，所以这些方法可以在处理事件（而不是发出事件）后更新状态或执行任务。例如，<code>BlurEvent</code> 更改当前聚焦的元素，然后处理该元素。</p>
+
+<p>为了实现默认操作，需要派生 <code>VisualElement</code> 的新子类并实现 <code>ExecuteDefaultActionAtTarget()</code> 和/或 <code>ExecuteDefaultAction()</code> 方法。</p>
+
+<p>默认操作是视觉元素子类的每个实例在接收事件时执行的操作。可以覆盖 <code>ExecuteDefaultActionAtTarget()</code> 和 <code>ExecuteDefaultAction()</code> 来自定义默认操作：</p>
+
+<pre><code class="csharp">override void ExecuteDefaultActionAtTarget(EventBase evt)
+{
+    // 不要忘记调用基础函数。
+    base.ExecuteDefaultActionAtTarget(evt);
+
+    if (evt.GetEventTypeId() == MouseDownEvent.TypeId())
+    {
+        //...
+    }
+    else if (evt.GetEventTypeId() == MouseUpEvent.TypeId())
+    {
+        //...
+    }
+    //更多事件类型
+}
+</code></pre>
+
+<p>为了实现更大灵活性，应在 <code>ExecuteDefaultAction()</code> 中实现默认操作。这允许用户在必要时停止或阻止默认操作的执行。</p>
+
+<p>如果希望在父级回调之前执行目标默认操作，请在 <code>ExecuteDefaultActionAtTarget()</code> 中实现默认操作。</p>
+
+<h1>事件处理顺序</h1>
+
+<p>事件发生时，将沿着视觉元素树中的传播路径发送事件。假设事件类型要求遵循事件传播的所有阶段，事件将发送到每个视觉元素。事件处理顺序如下：</p>
+
+<p>1.针对从根元素往下到事件目标父级的元素执行事件回调。这是分发过程的<em>涓滴阶段</em>。
+2.针对事件目标执行事件回调。这是分发过程的<em>目标阶段</em>。
+3.调用目标 <code>ExecuteDefaultActionAtTarget()</code>。
+4.针对从事件目标父级往上到根的元素执行事件回调。这是分发过程的<em>冒泡阶段</em>。
+5.调用目标 <code>ExecuteDefaultAction()</code>。</p>
+
+<p>在沿着传播路径发送事件时，<code>Event.currentTarget</code> 更新为当前正在处理事件的元素。这意味着，在事件回调函数中，<code>Event.currentTarget</code> 是对回调注册的元素，而 <code>Event.target</code> 是发生事件的元素。</p>
+
+<h2>停止事件传播并取消默认操作</h2>
+
+<p>可以使用回调来停止、阻止和取消操作的执行。然而，无法阻止 <code>EventBase.PreDispatch()</code> 和 <code>EventBase.PostDispatch()</code> 方法的执行。</p>
+
+<p>以下方法影响事件传播和默认操作：</p>
+
+<ul>
+<li>
+<code>StopImmediatePropagation()</code> 立即停止事件传播过程。不会为此事件执行其他回调。但是，仍然执行 <code>ExecuteDefaultActionAtTarget()</code> 和 <code>ExecuteDefaultAction()</code> 默认操作。</li>
+<li>
+<code>StopPropagation()</code> 在当前元素的上次回调后停止事件传播过程。这将确保当前元素的所有回调都得到执行，但是其他元素不会再对事件做出反应。仍然会执行 <code>ExecuteDefaultActionAtTarget()</code> 和 <code>ExecuteDefaultAction()</code> 默认操作。</li>
+<li>
+<code>PreventDefaultAction()</code> 阻止会调用 <code>ExecuteDefaultActionAtTarget()</code> 和
+ <code>ExecuteDefaultAction()</code> 默认操作。<code>PreventDefaultAction()</code> 不会阻止其他回调的执行。此外，如果在冒泡阶段调用 <code>PreventDefaultAction()</code>，则不会阻止 <code>ExecuteDefaultActionAtTarget()</code> 默认操作，因为已经执行该操作。在涓滴阶段已执行 <code>ExecuteDefaultActionAtTarget()</code> 默认操作。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–11–02 页面已修订</span></li>
+</ul>
+<!-- area:authoring -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Events-Dispatching.html"></a></span><div class="tip">分发事件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Events-DragAndDrop.html"></a></span><div class="tip">支持拖放</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

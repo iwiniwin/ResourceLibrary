@@ -1,0 +1,500 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Gradle for Android - Unity 手册">
+<title>Gradle for Android - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/gradlebuildsettings.png">
+<meta name="description" content="Gradle 是一种 Android 构建系统，可自动执行许多构建过程并预防许多常见的构建错误。在 Unity 中，Gradle 可减少 DEX（Dalvik 可执行文件格式）文件中的方法引用数量，这意味着可降低遇到 DEX 限制问题的可能性。">
+<meta property="og:description" content="Gradle 是一种 Android 构建系统，可自动执行许多构建过程并预防许多常见的构建错误。在 Unity 中，Gradle 可减少 DEX（Dalvik 可执行文件格式）文件中的方法引用数量，这意味着可降低遇到 DEX 限制问题的可能性。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'android-gradle-overview';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/android-gradle-overview.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/android-gradle-overview.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/android-gradle-overview.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/android-gradle-overview.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/android-gradle-overview.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/android-gradle-overview.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/android-gradle-overview.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/android-gradle-overview.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/android-gradle-overview.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/android-gradle-overview.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/android-gradle-overview.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/android-gradle-overview.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/android-gradle-overview.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/android-gradle-overview.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/android-gradle-overview.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/android-gradle-overview.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/android-gradle-overview.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/android-gradle-overview.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/android-gradle-overview.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/android-gradle-overview.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/android-gradle-overview.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/android-gradle-overview.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/android-gradle-overview.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/android-gradle-overview.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/android-gradle-overview.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/android-gradle-overview.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/android-gradle-overview.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/android-gradle-overview.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/android-gradle-overview.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/android-gradle-overview.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/android-gradle-overview.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/android-gradle-overview.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/android-gradle-overview.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/android-gradle-overview.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/android-gradle-overview.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/android-gradle-overview.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/android-gradle-overview.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/android-gradle-overview.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/android-gradle-overview.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/android-gradle-overview.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/android-gradle-overview.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/android-gradle-overview.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/android-gradle-overview.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/android-gradle-overview.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/android-gradle-overview.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/android-gradle-overview.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/android-gradle-overview.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/android-gradle-overview.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="android-BuildProcess.html">构建 Android 应用程序</a></li>
+<li>Gradle for Android</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AndroidMobileCustomizeSplashScreen.html"></a></span><div class="tip">自定义 Android 启动画面</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-manifest.html"></a></span><div class="tip">Android 清单</div>
+</div>
+</div></div>
+<h1>Gradle for Android</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Gradle 是一种 Android 构建系统，可自动执行许多构建过程并预防许多常见的构建错误。在 Unity 中，Gradle 可减少 DEX（Dalvik 可执行文件格式）文件中的方法引用数量，这意味着可降低遇到 DEX 限制问题的可能性。</p>
+
+<p>Unity 将 Gradle 用于所有 Android 构建。可以在 Unity 中构建输出包（.apk、.aab），也可以从 Unity 导出 Gradle 项目，然后通过外部工具（如 Android Studio）进行构建。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Unity 版本</strong></th>
+	<th style="text-align:left;"><strong>Gradle 版本</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">2017.1, 2017.2</td>
+	<td style="text-align:left;">2.14</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2017.4 到 2017.4.16（含）</td>
+	<td style="text-align:left;">4.0.1</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2017.（从 2017.4.17 开始）</td>
+	<td style="text-align:left;">4.6</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2018.1</td>
+	<td style="text-align:left;">4.0.1</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2018.2</td>
+	<td style="text-align:left;">4.2.1</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2018.3、2018.4 到 2018.4.3f1（含）以及 2019.1 到 2019.1.6f1（含）</td>
+	<td style="text-align:left;">4.6</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2018.4（从 2018.4.4f1 开始）、2019.1（从 2019.1.7f1 开始）、2019.2 和 2019.3</td>
+	<td style="text-align:left;">5.1.1</td>
+</tr>
+</tbody>
+</table>
+
+<p>了解更多相关信息：</p>
+
+<ul>
+<li>Gradle，请参阅 <a href="https://docs.gradle.org/current/userguide/userguide.html#getting-started">Gradle 用户手册</a>。</li>
+<li>构建输出包 (.apk)，请参阅 Android 开发者文档中有关<a href="https://developer.android.com/studio/build/index.html">配置构建</a>的部分。</li>
+<li>构建输出包 (.aab)，请参阅 Android 开发者文档中有关 <a href="https://developer.android.com/guide/app-bundle/">Android 应用程序捆绑包</a>的部分。</li>
+</ul>
+
+<h2>构建或导出 Gradle 项目</h2>
+
+<p>要构建 Gradle 项目，请执行以下步骤：</p>
+
+<p>1.在 Unity Editor 中，打开项目的 Build Settings 窗口（菜单：<strong>File</strong> &gt; <strong>Build Settings</strong>）。
+2.在 <strong>Platform</strong> 列表中，确保将 <strong>Android</strong> 选为构建目标。如果 Android 不是当前构建目标，请在 <strong>Platform</strong> 列表中选择 Android，然后选择 <strong>Switch Platform</strong> 按钮。</p>
+
+<figure>
+<img src="../uploads/Main/gradlebuildsettings.png" alt="Android 的 Build Settings">
+<figcaption>Android 的 Build Settings</figcaption>
+</figure>
+
+<p>选择：</p>
+
+<ul>
+<li>
+<strong>Build</strong> 按钮，用于生成 .apk 文件。</li>
+<li>
+<strong>Build and Run</strong> 按钮，用于生成 .apk 文件，将其部署到连接的设备，然后运行。</li>
+</ul>
+
+<p>要将 Unity 项目导出为 Gradle 项目，请启用 <strong>Export Project</strong> 设置，然后选择 <strong>Export</strong> 按钮。进行此操作后，Unity 会在指定文件夹中生成 Gradle 项目，不会构建 .apk 文件。将此项目导入 Android Studio 或另一外部工具以进行进一步修改或在其中进行构建。</p>
+
+<h2>导出的 Gradle 项目结构</h2>
+
+<p>Unity 2019.3 和更高版本所创建的 Gradle 项目具有两个模块：</p>
+
+<ul>
+<li>
+<strong>UnityLibrary</strong> 模块：包含 Unity 运行时和项目数据。该模块是可以集成到其他任何 Gradle 项目中的一种库。这个模块可以用于将 Unity 嵌入现有的 Android 应用程序中。</li>
+<li>
+<strong>Launcher</strong> 模块：包含应用程序的名称及其所有图标。这是一个可启动 Unity 的简单 Android 应用程序模块。您可以将其替换为自己的应用程序。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/gradleprojectstructure.png" alt="Android 的 Build Settings">
+<figcaption>Android 的 Build Settings</figcaption>
+</figure>
+
+<h2>build.gradle 模板</h2>
+
+<p>Gradle 模板描述并配置如何使用 Gradle 来构建 Android 应用程序。每个 Gradle 模板代表一个 Gradle 项目。Gradle 项目可以包括和依赖于其他 Gradle 项目。</p>
+
+<p>Gradle 模板包含以下文件：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>文件</strong></th>
+	<th style="text-align:left;"><strong>位置</strong></th>
+	<th style="text-align:left;"><strong>包含</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><em>baseProjectTemplate.gradle</em></td>
+	<td style="text-align:left;">在导出的项目中，_root/build.gradle_ 文件夹</td>
+	<td style="text-align:left;">所含的配置会在其他所有模板/Gradle 项目之间共享（代码仓库以及对 Android Gradle 插件的依赖关系）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><em>launcherTemplate.gradle</em></td>
+	<td style="text-align:left;">在导出的项目中，_root/launcher/build.gradle_ 文件夹</td>
+	<td style="text-align:left;">包含有关如何构建 Android 应用程序的指令（捆绑、签名、APK 拆分）。它依赖于 unityLibrary 项目并输出 .apk 文件或应用程序捆绑包。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><em>mainTemplate.gradle</em></td>
+	<td style="text-align:left;">在导出的项目中，_root/unityLibrary/build.gradle_ 文件夹</td>
+	<td style="text-align:left;">包含关于如何将 Unity 构建为库的指令。输出 <em>.aar</em> 文件。在 Unity Editor 中，可以用自定义模板来覆盖 Unity 模板。请参阅本页的<strong>提供自定义 Gradle 构建模板</strong>部分以了解更多详细信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><em>libTemplate.gradle</em></td>
+	<td style="text-align:left;">因情况而异</td>
+	<td style="text-align:left;">如果 Unity 项目包含 <a href="AndroidAARPlugins.html">Android 库项目</a>作为插件，则会使用此文件。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>自定义 Gradle 构建</h2>
+
+<p>在 Player Settings 窗口的 <strong>Publishing Settings</strong> 部分中可以提供自定义 Gradle 构建模板并选择缩小选项。</p>
+
+<figure>
+<img src="../uploads/Main/PublishingSettingsGradle.png" alt="Player Settings 窗口的 Publishing Settings 部分中特定于 Gradle 的设置">
+<figcaption>Player Settings 窗口的 <strong>Publishing Settings</strong> 部分中特定于 Gradle 的设置</figcaption>
+</figure>
+
+<h3>提供自定义 Gradle 构建模板</h3>
+
+<p>从 Unity 构建 APK 时，可以将自定义 <em>build.gradle</em> 文件用于 <strong>unityLibrary</strong> 模块。该文件包含<strong>模板变量</strong>中指定的特定构建指令。有关模板变量的列表，请参阅下一部分。</p>
+
+<p>要将您自己的 <em>build.gradle</em> 文件用于 <strong>unityLibrary</strong> 模块，请执行以下操作：</p>
+
+<p>1.在 Unity Editor 中，打开 <a href="http://mdeditor.infra.hq.unity3d.com/#class-PlayerSettingsAndroid">Player</a> 设置（菜单：<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>），然后选择 <strong>Android</strong>。
+2.在 <strong>Publishing Settings</strong> 部分中，启用 <strong>Custom Gradle Template</strong> 设置。</p>
+
+<p>随后，Unity 在项目的 <em>Assets/Plugins/Android/</em> 文件夹中生成默认的 <em>mainTemplate.gradle</em> 文件。新文件的路径也显示在 Player Settings 中的 <strong>Custom Gradle Template</strong> 选项之下。双击 Project 视图中的 <em>mainTemplate.gradle</em> 文件，从而在外部文本编辑器中打开此文件。</p>
+
+<figure>
+<img src="../uploads/Main/MainTemplateGradleFileN.png" alt="Project 视图中，unityLibrary 模块的 mainTemplate.gradle 文件">
+<figcaption>Project 视图中，<strong>unityLibrary</strong> 模块的 <em>mainTemplate.gradle</em> 文件</figcaption>
+</figure>
+
+<p>您也可以创建自己的 <em>settings.gradle</em> 文件。为此，需要在项目的 <em>Assets/Plugins/Android/</em> 文件夹中手动创建 <em>settingsTemplate.gradle</em> 文件。Unity 会使用此文件来包含您的库项目。除非您要覆盖此过程，否则您的文件需要包含以下行：</p>
+
+<pre><code>INCLUDES
+</code></pre>
+
+<p>Unity 将此行替换为项目的所有库的 include 指令。</p>
+
+<h2>IPostGenerateGradleAndroidProject</h2>
+
+<p><a href="SciptRef:Android.IPostGenerateGradleAndroidProject.html">IPostGenerateGradleAndroidProject</a> 返回 <strong>unityLibrary</strong> 模块的路径。这使得一切都与 Unity 2019.3 之前的版本保持相似，无需任何进一步更改，这意味着 Unity 可以在各版本之间以一致的方式访问应用程序的清单和资源。</p>
+
+<h3>模板变量</h3>
+
+<p><em>mainTemplate.gradle</em> 文件可以包含以下变量：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>变量：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">DEPS</td>
+	<td style="text-align:left;">项目依赖项（即，项目使用的库）的列表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">APIVERSION</td>
+	<td style="text-align:left;">构建针对的 API 版本（例如 25）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MINSDKVERSION</td>
+	<td style="text-align:left;">最低 API 版本（例如，25）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">BUILDTOOLS</td>
+	<td style="text-align:left;">使用的 SDK 构建工具（例如 25.0.1）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">TARGETSDKVERSION</td>
+	<td style="text-align:left;">目标 API 版本（例如，25）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">APPLICATIONID</td>
+	<td style="text-align:left;">Android 应用程序 ID（例如，com.mycompany.myapp）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MINIFY_DEBUG</td>
+	<td style="text-align:left;">允许为调试版本缩小（true 或 false）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">PROGUARD_DEBUG</td>
+	<td style="text-align:left;">在调试版本中，使用 proguard 进行缩小（true 或 false）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MINIFY_RELEASE</td>
+	<td style="text-align:left;">允许为发布版本缩小（true 或 false）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">PROGUARD_RELEASE</td>
+	<td style="text-align:left;">在发布版本中，使用 proguard 进行缩小（true 或 false）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">USER_PROGUARD</td>
+	<td style="text-align:left;">自定义用户 proguard 文件（例如 _proguard-user.txt_）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">SIGN</td>
+	<td style="text-align:left;">完成 <code>signingConfigs</code> 部分（如果该构建已签名）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">SIGNCONFIG</td>
+	<td style="text-align:left;">设置为 <code>signingConfig signingConfig.release</code>（如果该构建已签名）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">DIR_GRADLEPROJECT</td>
+	<td style="text-align:left;">Unity 创建 Gradle 项目的目录。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">DIR_UNITYPROJECT</td>
+	<td style="text-align:left;">Unity 项目的目录。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>缩小</h3>
+
+<p>可以使用 Proguard 缩小选项来缩小和优化您的应用程序。要激活此选项，请执行以下步骤：</p>
+
+<p>1.打开 <a href="http://mdeditor.infra.hq.unity3d.com/#class-PlayerSettingsAndroid">Player</a> 设置（菜单：<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>），然后选择 <strong>Android</strong>。
+2.在 <strong>Publishing Settings</strong> 部分中的 <strong>Minify</strong> 下，为发布版本和/或调试版本选择 <strong>Proguard</strong>。</p>
+
+<p><strong>注意：</strong>Proguard 可能会剥离应用程序所需的重要代码，因此请谨慎使用这些选项。</p>
+
+<p>要生成自定义 <em>proguard.txt</em> 文件，请启用 Player Settings 的 <strong>Publishing Settings</strong> 部分中的 <strong>User Proguard File</strong> 设置。这样会立即在项目的 <em>Assets/Plugins/Android/</em> 文件夹中生成 <em>proguard.txt</em> 文件。</p>
+
+<p>要了解有关 ProGuard 的更多信息，请参阅 <a href="https://www.guardsquare.com/en/products/proguard/manual/usage">ProGuard 手册</a>。</p>
+
+<h2>使用 Gradle 进行构建时的错误</h2>
+
+<p>如果在使用 Gradle 为应用程序进行 Android 版本构建时发生错误，Unity 将显示“错误”对话框。请选择 <strong>Troubleshoot</strong> 按钮，在系统的浏览器中打开有关 <a href="http://mdeditor.infra.hq.unity3d.com/#android-gradle-troubleshooting">Gradle 故障排除</a> 的 Unity 文档。</p>
+
+<hr>
+
+<ul>
+<li>
+<span class="page-history">在 <a href="https://docs.unity3d.com/Manual/30_search.html?q=newin20193">2019.3</a> 中添加了“Unity 用作 Android 库”。</span><span class="search-words">NewIn20193</span>
+</li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AndroidMobileCustomizeSplashScreen.html"></a></span><div class="tip">自定义 Android 启动画面</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-manifest.html"></a></span><div class="tip">Android 清单</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

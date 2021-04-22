@@ -1,0 +1,302 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="OpenGL Core - Unity 手册">
+<title>OpenGL Core - Unity 手册</title>
+<meta name="description" content="OpenGL Core 是可支持 Windows、MacOS X 和 Linux 平台最新 OpenGL 功能的后端。这包括从 OpenGL 3.2 到 OpenGL 4.5，具体取决于 OpenGL 驱动程序支持情况。">
+<meta property="og:description" content="OpenGL Core 是可支持 Windows、MacOS X 和 Linux 平台最新 OpenGL 功能的后端。这包括从 OpenGL 3.2 到 OpenGL 4.5，具体取决于 OpenGL 驱动程序支持情况。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'OpenGLCoreDetails';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/OpenGLCoreDetails.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/OpenGLCoreDetails.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/OpenGLCoreDetails.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/OpenGLCoreDetails.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/OpenGLCoreDetails.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/OpenGLCoreDetails.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/OpenGLCoreDetails.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/OpenGLCoreDetails.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/OpenGLCoreDetails.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/OpenGLCoreDetails.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/OpenGLCoreDetails.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/OpenGLCoreDetails.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/OpenGLCoreDetails.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/OpenGLCoreDetails.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/OpenGLCoreDetails.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/OpenGLCoreDetails.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/OpenGLCoreDetails.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/OpenGLCoreDetails.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/OpenGLCoreDetails.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/OpenGLCoreDetails.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/OpenGLCoreDetails.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/OpenGLCoreDetails.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/OpenGLCoreDetails.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/OpenGLCoreDetails.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/OpenGLCoreDetails.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/OpenGLCoreDetails.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/OpenGLCoreDetails.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/OpenGLCoreDetails.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/OpenGLCoreDetails.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/OpenGLCoreDetails.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/OpenGLCoreDetails.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/OpenGLCoreDetails.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/OpenGLCoreDetails.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/OpenGLCoreDetails.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/OpenGLCoreDetails.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/OpenGLCoreDetails.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/OpenGLCoreDetails.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/OpenGLCoreDetails.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/OpenGLCoreDetails.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/OpenGLCoreDetails.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/OpenGLCoreDetails.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/OpenGLCoreDetails.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/OpenGLCoreDetails.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/OpenGLCoreDetails.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/OpenGLCoreDetails.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/OpenGLCoreDetails.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/OpenGLCoreDetails.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/OpenGLCoreDetails.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li>高级渲染功能</li>
+<li><a href="GraphicsAPIs.html">图形 API 支持</a></li>
+<li>OpenGL Core</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Metal.html"></a></span><div class="tip">Metal</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-ComputeShader.html"></a></span><div class="tip">计算着色器</div>
+</div>
+</div></div>
+<h1>OpenGL Core</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>OpenGL Core 是可支持 Windows、MacOS X 和 Linux 平台最新 OpenGL 功能的后端。这包括从 OpenGL 3.2 到 OpenGL 4.5，具体取决于 OpenGL 驱动程序支持情况。</p>
+
+<h2>启用 OpenGL Core</h2>
+
+<p>要将 OpenGL Core 设置为 Editor 或独立平台播放器中的默认图形 API，请选择 <strong>Player</strong> 设置（菜单：__Edit &gt; Project Settings__，然后选择 <strong>Player</strong> 类别），并导航到 <strong>Other Settings</strong>。禁用 <strong>Auto Graphics API for Windows</strong> 属性，并从列表中选择 <strong>OpenGLCore</strong>。有关更多详细信息，请参阅[图形 API 支持](Graphics APIs)。</p>
+
+<h2>OpenGL 要求</h2>
+
+<p>OpenGL Core 的最低要求如下：</p>
+
+<ul>
+<li><p>Mac OS X 10.8 (OpenGL 3.2)、MacOSX 10.9（OpenGL 3.2 到 4.1）</p></li>
+<li><p>Windows 搭载 NVIDIA 最低 2006 (GeForce 8)、AMD 最低 2006 (Radeon HD 2000)、Intel 最低 2012 (HD 4000 / IvyBridge)（OpenGL 3.2 到 OpenGL 4.5）</p></li>
+<li><p>Linux（OpenGL 3.2 到 OpenGL 4.5）</p></li>
+</ul>
+
+<h2>macOS OpenGL 驱动程序限制</h2>
+
+<p>用于 Editor 和独立平台的 macOS OpenGL 后端支持 OpenGL 3.x 和 4.x 功能，如曲面细分和几何着色器。</p>
+
+<p>但是，由于 Apple 将 OS X 桌面上的 OpenGL 版本限制为最高 4.1，因此并不支持所有 DirectX 11 功能（例如无序访问视图或计算着色器）。这意味着，以着色器级别 5.0 为目标（包含 #pragma 目标 50）的所有着色器将无法在 OS X 上加载。</p>
+
+<p>因此引入了新的着色器目标级别：#pragma 目标 gl4.1。此目标级别至少需要 OpenGL 4.1 或 DirectX 11.0 着色器级别 5（桌面端）或 OpenGL ES 3.1 + Android 扩展包（移动端）。</p>
+
+<h2>OpenGL Core 功能</h2>
+
+<p>新的 OpenGL 后端引入了许多新功能（以前主要是 DX11/GLES3）：</p>
+
+<ul>
+<li>计算着色器（以及 ComputeBuffer 和“随机写入”渲染纹理）</li>
+<li>曲面细分和几何着色器</li>
+<li>间接绘制（Graphics.DrawProcedural 和 Graphics.DrawProceduralIndirect）</li>
+<li>高级混合模式</li>
+</ul>
+
+<h2>着色器更改</h2>
+
+<p>使用现有 <span class="docs-keyword">#pragma</span> 目标时，它们会映射到以下 GL 级别：</p>
+
+<ul>
+<li>#pragma 目标 4.0 // OpenGL ES 3.1、桌面版 OpenGL 3.x、DX Shader Model 4.0</li>
+<li>#pragma 目标 gl4.1 // 桌面版 OpenGL 4.1、SM 4.0 + 曲面细分（匹配 MacOSX 10.9 功能）</li>
+<li>#pragma 目标 5.0 // OpenGL ES 3.1 + Android 扩展包、桌面版 OpenGL &gt;= 4.2、DX Shader Model 5.0</li>
+</ul>
+
+<p>要让着色器平台使用或不使用特定着色器，可使用以下 <span class="docs-keyword">#pragma</span> only_renderers / exclude_renderers 目标：</p>
+
+<ul>
+<li>
+<strong>#pragma only_renderers glcore</strong>：仅针对桌面版 GL 进行编译。与 ES 3 目标一样，这也可扩展到包含所有桌面 GL 版本，这些版本中的基本着色器将支持 GL 2.x，而需要 SM5.0 功能的着色器需要 OpenGL 4.2+。</li>
+</ul>
+
+<h2>OpenGL Core 配置文件命令行参数</h2>
+
+<p>可使用命令行参数通过 OpenGL 启动 Editor 或播放器：</p>
+
+<ul>
+<li>
+<strong>-force-opengl</strong>：使用旧版 OpenGL 后端</li>
+<li>
+<strong>-force-glcore</strong>：使用新版 OpenGL 后端。通过使用此参数，Unity 将检测平台支持的所有功能，从而在运行时使用可能最好的 OpenGL 版本和所有可用的 OpenGL 扩展</li>
+<li>
+<strong>-force-glcoreXY</strong>：XY 可以是 32、33、40、41、42、43、44 或 45；每个数字代表 OpenGL 的特定版本。如果平台不支持 OpenGL 的特定版本，Unity 将回退到支持的版本</li>
+<li>
+<strong>-force-clamped</strong>：请求 Unity 不使用 OpenGL 扩展，这样可确保多个平台将执行相同的代码路径。这是一种测试某个问题是否特定于平台（例如驱动程序错误）的方法。</li>
+</ul>
+
+<h2>原生 OpenGL ES 桌面版命令行参数</h2>
+
+<p>OpenGL ES 图形 API 适用于配备了 Intel 或 NVIDIA GPU 且驱动程序支持 OpenGL ES 的 Windows 机器。</p>
+
+<ul>
+<li>
+<strong>-force-gles</strong>：在 OpenGL ES 模式下使用新版 OpenGL 后端。通过使用此参数，Unity 将检测平台支持的所有功能，从而在运行时使用可能最好的 OpenGL ES 版本和所有可用的 OpenGL ES 扩展</li>
+<li>
+<strong>-force-glesXY</strong>：XY 可以是 20、30、31、31aep 或 3.2；每个数字代表 OpenGL ES 的特定版本。如果平台不支持 OpenGL ES 的特定版本，Unity 将回退到支持的版本。如果平台不支持 OpenGL ES，Unity 将回退到另一个图形 API。</li>
+<li>
+<strong>-force-clamped</strong>：请求 Unity 不使用 OpenGL 扩展，这样可确保多个平台将执行相同的代码路径。这是一种测试某个问题是否特定于平台（例如驱动程序错误）的方法。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–06–02 页面已修订</span></li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Metal.html"></a></span><div class="tip">Metal</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-ComputeShader.html"></a></span><div class="tip">计算着色器</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="公告牌渲染器 (Billboard Renderer) - Unity 手册">
+<title>公告牌渲染器 (Billboard Renderer) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/BillboardRenderer.png">
+<meta name="description" content="公告牌渲染器可以渲染公告牌资源。公告牌是一种以更简单的方式绘制远离摄像机的复杂 3D 网格的细节级别 (LOD) 方法。网格远离摄像机时，网格在屏幕上的尺寸很小，这意味着无需全面详细绘制网格。实际上，可以将复杂的 3D 网格替换为 2D 公告牌表示形式。">
+<meta property="og:description" content="公告牌渲染器可以渲染公告牌资源。公告牌是一种以更简单的方式绘制远离摄像机的复杂 3D 网格的细节级别 (LOD) 方法。网格远离摄像机时，网格在屏幕上的尺寸很小，这意味着无需全面详细绘制网格。实际上，可以将复杂的 3D 网格替换为 2D 公告牌表示形式。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-BillboardRenderer';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-BillboardRenderer.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-BillboardRenderer.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-BillboardRenderer.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-BillboardRenderer.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-BillboardRenderer.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-BillboardRenderer.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-BillboardRenderer.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-BillboardRenderer.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-BillboardRenderer.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-BillboardRenderer.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-BillboardRenderer.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-BillboardRenderer.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-BillboardRenderer.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-BillboardRenderer.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-BillboardRenderer.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-BillboardRenderer.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-BillboardRenderer.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-BillboardRenderer.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-BillboardRenderer.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-BillboardRenderer.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-BillboardRenderer.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-BillboardRenderer.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-BillboardRenderer.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-BillboardRenderer.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-BillboardRenderer.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-BillboardRenderer.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-BillboardRenderer.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-BillboardRenderer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-BillboardRenderer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-BillboardRenderer.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-BillboardRenderer.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-BillboardRenderer.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-BillboardRenderer.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-BillboardRenderer.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-BillboardRenderer.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-BillboardRenderer.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-BillboardRenderer.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-BillboardRenderer.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-BillboardRenderer.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-BillboardRenderer.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-BillboardRenderer.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-BillboardRenderer.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-BillboardRenderer.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-BillboardRenderer.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-BillboardRenderer.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-BillboardRenderer.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-BillboardRenderer.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-BillboardRenderer.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="comp-Effects.html">视觉效果组件</a></li>
+<li>公告牌渲染器 (Billboard Renderer)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TrailRenderer.html"></a></span><div class="tip">轨迹渲染器 (Trail Renderer)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-BillboardAsset.html"></a></span><div class="tip">公告牌资源</div>
+</div>
+</div></div>
+<h1>公告牌渲染器 (Billboard Renderer)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>公告牌渲染器可以渲染<a href="class-BillboardAsset.html">公告牌资源</a>。公告牌是一种以更简单的方式绘制远离摄像机的复杂 3D 网格的细节级别 (LOD) 方法。网格远离摄像机时，网格在屏幕上的尺寸很小，这意味着无需全面详细绘制网格。实际上，可以将复杂的 3D 网格替换为 2D 公告牌表示形式。</p>
+
+<p>某些功能（例如 SpeedTree）可导出公告牌资源，但您也可以自行创建公告牌资源。有关如何创建公告牌资源的信息，请参阅<a href="class-BillboardAsset.html">公告牌资源 (BillboardAssets)</a> 手册页和 <a href="../ScriptReference/BillboardAsset.html">BillboardAsset</a> 脚本参考页。</p>
+
+<h2>属性</h2>
+
+<p>此组件的属性分为以下几部分：</p>
+
+<ul>
+<li><a href="#General">General</a></li>
+<li><a href="#Lighting">Lighting</a></li>
+<li><a href="#Probes">Probes</a></li>
+<li><a href="#AdditionalSettings">Additional settings</a></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BillboardRenderer.png" alt="">
+</figure>
+
+<p><a name="General"></a></p>
+
+<h3>General</h3>
+
+<p>此部分包含组件根目录中的一般属性。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Billboard</strong></td>
+	<td style="text-align:left;">指定此组件渲染的<a href="class-BillboardAsset.html">公告牌资源</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Lighting"></a></p>
+
+<h3>Lighting</h3>
+
+<p><strong>Lighting</strong> 部分包含指定此公告牌渲染器如何在 Unity 中与光照交互的属性。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Cast Shadows</strong></td>
+	<td style="text-align:left;">指定在合适的<a href="class-Light.html">光源</a>照射在网格上时网格是否以及如何投射阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>On</strong></td>
+	<td style="text-align:left;">阴影投射的光源照在网格上时，网格将投射阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Off</strong></td>
+	<td style="text-align:left;">网格不会投射阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Two Sided</strong></td>
+	<td style="text-align:left;">网格从任一侧投射双面阴影。Enlighten（已弃用）和渐进光照贴图 (Progressive Lightmapper) 不支持双面阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Shadows Only</strong></td>
+	<td style="text-align:left;">网格的阴影可见，但网格本身不可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Receive Shadows</strong></td>
+	<td style="text-align:left;">启用此选项可使网格显示任何投射在网格上的阴影。仅当使用<a href="CPUProgressiveLightmapper">渐进光照贴图</a>时才支持这个选项。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Probes"></a></p>
+
+<h3>Probes</h3>
+
+<p><strong>Probes</strong> 部分包含与光照探针 (Light Probes) 和反射探针 (Reflection Probes) 有关的属性。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Light Probes</strong></td>
+	<td style="text-align:left;">设置此渲染器如何从<a href="LightProbes.html">光照探针</a>系统接收光照。<br><br>有关更多信息，请参阅<a href="LightProbes.html">光照探针</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Off</strong></td>
+	<td style="text-align:left;">渲染器不使用任何插值光照探针。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Blend Probes</strong></td>
+	<td style="text-align:left;">渲染器使用一个插值光照探针。这是默认值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Use Proxy Volume</strong></td>
+	<td style="text-align:left;">渲染器使用插值光照探针的 3D 网格。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Custom Provided</strong></td>
+	<td style="text-align:left;">渲染器从 <a href="../ScriptReference/MaterialPropertyBlock.html">MaterialPropertyBlock</a> 提取光照探针着色器 uniform 值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Proxy Volume Override</strong></td>
+	<td style="text-align:left;">设置对另一个具有 Light Probe Proxy Volume 组件的游戏对象的引用。<br><br>仅当 <strong>Light Probes</strong> 设置为 <strong>Use Proxy Volume</strong> 时，此属性才可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Reflection Probes</strong></td>
+	<td style="text-align:left;">设置渲染器如何从<a href="class-ReflectionProbe.html">反射探针</a>系统接收反射。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Off</strong></td>
+	<td style="text-align:left;">禁用反射探针。Unity 将天空盒用于反射。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Blend Probes</strong></td>
+	<td style="text-align:left;">启用反射探针。混合仅在反射探针之间发生。在室内环境中，如果角色可能在具有不同光照设置的区域之间过渡，此设置会很有用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Blend Probes and Skybox</strong></td>
+	<td style="text-align:left;">启用反射探针。混合发生在反射探针之间或反射探针与默认反射之间。这对于室外环境很有用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Simple</strong></td>
+	<td style="text-align:left;">启用反射探针，但存在两个重叠的探针体积时，反射探针之间不会发生混合。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="AdditionalSettings"></a></p>
+
+<h3>Additional Settings</h3>
+
+<p>此部分包含其他渲染属性。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Motion Vectors</strong></td>
+	<td style="text-align:left;">设置是否使用运动矢量来跟踪此渲染器从一帧到下一帧的每像素屏幕空间运动。使用此信息可以应用后期处理效果，例如运动模糊。<br><br>请注意，并非所有平台都支持运动矢量。请参阅 <a href="SystemInfo-supportsMotionVectors">SystemInfo.supportsMotionVectors</a> 以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Camera Motion Only</strong></td>
+	<td style="text-align:left;">仅使用摄像机移动来跟踪运动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Per Object Motion</strong></td>
+	<td style="text-align:left;">使用特定通道来跟踪此渲染器的运动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Force No Motion</strong></td>
+	<td style="text-align:left;">不跟踪运动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Dynamic Occlusion</strong></td>
+	<td style="text-align:left;">启用 <strong>Dynamic Occlusion</strong> 后，线渲染器在摄像机的视图中被静态渲染器 (Static Occluder) 阻挡时，Unity 会剔除线渲染器。默认情况下启用 Dynamic Occlusion。<br><br>禁用 <strong>Dynamic Occlusion</strong> 后，线渲染器在摄像机的视图中被静态渲染器 (Static Occluder) 阻挡时，Unity 不剔除线渲染器。禁用 Dynamic Occlusion 可以实现诸如在墙后绘制角色轮廓之类的效果。<br><br>请参阅有关<a href="OcclusionCulling.html">遮挡剔除</a>的文档以了解更多信息。</td>
+</tr>
+</tbody>
+</table>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TrailRenderer.html"></a></span><div class="tip">轨迹渲染器 (Trail Renderer)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-BillboardAsset.html"></a></span><div class="tip">公告牌资源</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

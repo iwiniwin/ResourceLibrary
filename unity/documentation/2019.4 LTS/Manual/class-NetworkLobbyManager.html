@@ -1,0 +1,384 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Network Lobby Manager - Unity 手册">
+<title>Network Lobby Manager - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/NetworkLobbyManager.png">
+<meta name="description" content="NetworkLobbyManager 是一种专用类型的 NetworkManager，可在进入游戏的主游戏场景之前提供多人游戏大厅。此组件可用于设置网络的以下属性：">
+<meta property="og:description" content="NetworkLobbyManager 是一种专用类型的 NetworkManager，可在进入游戏的主游戏场景之前提供多人游戏大厅。此组件可用于设置网络的以下属性：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-NetworkLobbyManager';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-NetworkLobbyManager.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-NetworkLobbyManager.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-NetworkLobbyManager.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-NetworkLobbyManager.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-NetworkLobbyManager.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-NetworkLobbyManager.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-NetworkLobbyManager.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-NetworkLobbyManager.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-NetworkLobbyManager.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-NetworkLobbyManager.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-NetworkLobbyManager.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-NetworkLobbyManager.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-NetworkLobbyManager.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-NetworkLobbyManager.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-NetworkLobbyManager.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-NetworkLobbyManager.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-NetworkLobbyManager.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-NetworkLobbyManager.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-NetworkLobbyManager.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-NetworkLobbyManager.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-NetworkLobbyManager.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-NetworkLobbyManager.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-NetworkLobbyManager.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-NetworkLobbyManager.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-NetworkLobbyManager.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-NetworkLobbyManager.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-NetworkLobbyManager.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-NetworkLobbyManager.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-NetworkLobbyManager.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-NetworkLobbyManager.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-NetworkLobbyManager.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-NetworkLobbyManager.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-NetworkLobbyManager.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-NetworkLobbyManager.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-NetworkLobbyManager.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-NetworkLobbyManager.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-NetworkLobbyManager.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-NetworkLobbyManager.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-NetworkLobbyManager.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-NetworkLobbyManager.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-NetworkLobbyManager.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-NetworkLobbyManager.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-NetworkLobbyManager.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-NetworkLobbyManager.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-NetworkLobbyManager.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-NetworkLobbyManager.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-NetworkLobbyManager.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-NetworkLobbyManager.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UNet.html">多玩家和联网</a></li>
+<li><a href="UNetReference.html">Multiplayer 组件参考</a></li>
+<li>Network Lobby Manager</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-NetworkIdentity.html"></a></span><div class="tip">Network Identity</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-NetworkLobbyPlayer.html"></a></span><div class="tip">Network Lobby Player</div>
+</div>
+</div></div>
+<h1>Network Lobby Manager</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<strong>注意</strong>：已弃用 UNet，未来会将其从 Unity 中删除。一个新系统正在开发中。如需了解更多信息和后续步骤，请参阅此<a href="https://blogs.unity3d.com/2018/08/02/evolving-multiplayer-games-beyond-unet/">博客文章</a>以及<a href="https://support.unity3d.com/hc/en-us/articles/360001252086-UNet-Deprecation-FAQ">常见问题解答 (FAQ)</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>NetworkLobbyManager 是一种专用类型的 NetworkManager，可在进入游戏的主游戏场景之前提供多人游戏大厅。此组件可用于设置网络的以下属性：</p>
+
+<ul>
+<li>玩家最大限制</li>
+<li>所有玩家准备好后自动开始</li>
+<li>用于阻止玩家加入正在进行的游戏的选项</li>
+<li>支持“Couch Multiplayer”（即每个客户端有多个玩家）</li>
+<li>可自定义玩家在大厅选择选项的方式</li>
+</ul>
+
+<p>NetworkLobbyManager 有两种类型的玩家对象：</p>
+
+<p>LobbyPlayer 对象</p>
+
+<ul>
+<li>每个玩家一个</li>
+<li>客户端连接时或添加玩家时创建</li>
+<li>在客户端断开连接之前一直存在</li>
+<li>保留就绪标志和配置数据</li>
+<li>处理大厅中的命令</li>
+<li>应使用 NetworkLobbyPlayer 组件</li>
+</ul>
+
+<p>GamePlayer 对象</p>
+
+<ul>
+<li>每个玩家一个</li>
+<li>启动游戏场景时创建</li>
+<li>重新进入大厅时被销毁</li>
+<li>处理游戏中的命令</li>
+</ul>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>showLobbyGUI</strong></td>
+	<td style="text-align:left;">显示大厅的开发者 OnGUI 控件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>maxPlayers</strong></td>
+	<td style="text-align:left;">大厅中允许的最大玩家数量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>maxPlayersPerConnection</strong></td>
+	<td style="text-align:left;">允许为每个客户端连接添加的最大玩家数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>lobbyPlayerPrefab</strong></td>
+	<td style="text-align:left;">当玩家进入大厅时为玩家创建的预制件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>gamePlayerPrefab</strong></td>
+	<td style="text-align:left;">当游戏启动时为玩家创建的预制件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>lobbyScene</strong></td>
+	<td style="text-align:left;">要用于大厅的场景。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>playScene</strong></td>
+	<td style="text-align:left;">要用于主要游戏的场景。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<ul>
+<li>lobbyPlayerPrefab 字段应该由一个包含 NetworkLobbyPlayer 组件的对象填充。</li>
+<li>Lobby Manager 有一个 GUI。请参阅多人游戏大厅资源包。</li>
+</ul>
+
+<h1>Network Lobby Manager</h1>
+
+<p>Network Lobby Manager 是一种专用类型的 NetworkManager，可在进入游戏的主游戏场景之前提供易于使用的多人游戏大厅。</p>
+
+<p>Network Lobby Manager 具有许多内置功能，这些功能对于多人游戏来说很常见。例如，它支持设置最大玩家数量限制，在所有玩家准备就绪时自动启动游戏，以及防止玩家加入正在进行的游戏的选项。Network Lobby Manager 还支持“Couch Multiplayer”，让多个玩家使用同一个客户端一起玩游戏。</p>
+
+<figure>
+<img src="../uploads/Main/NetworkLobbyManager.png" alt="Network Lobby Manager 组件">
+<figcaption>Network Lobby Manager 组件</figcaption>
+</figure>
+
+<p>|<strong><em>属性：</em></strong> |<strong><em>功能：</em></strong> |
+|:—|:—|
+|<strong>Show Lobby GUI</strong>|启用此属性可显示大厅的开发者 GUI 控件。此属性仅用于方便开发者。您应该为玩家创建您自己的 <span class="no tooltip">UI</span> 以便在完成的游戏中使用。|<br>
+|<strong>Max Players</strong>|大厅中允许的最大玩家数量。|<br>
+|<strong>Max Players Per Connection</strong>|允许为每个客户端连接添加的最大玩家数。|<br>
+|<strong>Min Players</strong>|大厅需要的玩家的最低数量。|<br>
+|<strong>Lobby Player Prefab</strong>|当玩家进入大厅时为玩家创建的预制件。|<br>
+|<strong>Game Player Prefab</strong>|当游戏启动时为玩家创建的预制件。|<br>
+|<strong>Lobby Scene</strong>|要用于大厅的场景。|<br>
+|<strong>Play Scene</strong>|要用于主要游戏的场景。|
+|||
+|:–|:–|
+|<strong>Network Info</strong>|可以展开 Inspector 的此部分来访问与网络相关的设置，如下所示|
+|<strong>Use Web Sockets</strong>|在作为主机运行时，启用此设置会使主机监听 WebSocket 连接，而不是普通传输层连接，以便 WebGL 客户端可以连接到主机（如果为 WebGL 平台构建游戏）。游戏中的这些 WebGL 实例不能充当主机（无论是在“对等托管”模式下还是在“仅服务器”模式下）。因此，要使多人游戏的 WebGL 实例能够找到彼此并一起玩游戏，必须使用可公开访问的 IP 地址，托管 LAN 模式下运行的游戏的“仅服务器”实例，并且必须启用此选项。默认情况下会取消勾选此复选框。|
+|<strong>Network Address</strong>|当前使用的网络地址。对于客户端，这是已连接到的服务器的地址。对于服务器，这是本地地址。默认设置为“localhost”。|
+|<strong>Network Port</strong>|当前使用的网络端口。对于客户端，这是已连接到的服务器的端口。对于服务器，这是监听端口。默认情况下，该值设置为 7777。|
+|<strong>Server Bind To IP</strong>|告知服务器是否绑定到特定 IP 地址。如果不勾选此复选框，则不会有任何要绑定到的特定 IP 地址 (IP_ANY)。默认情况下会取消勾选此复选框。如果您的服务器有多个网络地址（例如，内部 LAN、外部互联网、VPN），并且您希望游戏采用特定 IP 地址，请使用此属性。|
+|<strong>Server Bind Address</strong>|只有在勾选了 Server Bind To IP 复选框时，此字段才可见。使用此字段可输入服务器应该绑定到的特定 IP 地址。|
+|<strong>Script CRC Check</strong>|启用此属性后，Unity 将检查客户端和服务器是否使用匹配的脚本。此属性可用于确保客户端的过时版本无法连接到服务器的最新（更新）版本。默认情况下会勾选此复选框。具体原理是在服务器与客户端之间执行 <a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check">CRC 校验</a>，从而确保 NetworkBehaviour 脚本匹配。这可能不适合某些情况，例如，当您故意对客户端和服务器使用不同的 Unity 项目时。但是，在大多数其他情况下，此属性应该保持启用。|
+|<strong>Max Delay</strong>|延迟缓冲消息的最长时间（以秒为单位）。默认为 0.01 秒，这意味着数据包最多将延迟 10 毫秒。将此属性设置为零将禁用 HLAPI 连接缓冲功能。默认情况下，该值设置为 0.01。|
+|<strong>Max Buffered Packets</strong>|<a href="../ScriptReference/Networking.NetworkConnection.html">NetworkConnection</a> 可为每个通道缓冲的最大数据包数量。这对应于 <a href="../ScriptReference/Networking.ChannelOption.MaxPendingBuffers.html">ChannelOption.MaxPendingBuffers</a> 通道选项。默认情况下，该值设置为 16。|
+|<strong>Packet Fragmentation</strong>|这允许 <code>NetworkConnection</code> 实例分割大于 <code>maxPacketSize</code> 的数据包，最大为 64K。这可能导致在发送大数据包时出现延迟。默认情况下会勾选此复选框。 |
+|<strong>MatchMaker Host URI</strong>|MatchMaker 服务器的主机地址。默认情况下，指向位于 mm.unet.unity3d.com 的全球 Unity Multiplayer 服务，通常您不需要更改此设置。Unity 会自动将游戏玩家分组到全球各地的区域服务器中，这确保了在多人游戏中同一地区的玩家之间实现快速响应。例如，这意味着来自欧洲、美国和亚洲的玩家通常最终会与来自同一区域的其他玩家一起玩游戏。可以覆盖此值来显式控制游戏连接到的区域服务器。如果想让玩家选择加入所在区域之外的服务器，可以通过编写脚本来实现。例如，如果美国的“玩家 A”想要连接到由欧洲“玩家 B”通过 Matchmaker 创建的比赛，他们需要能够在游戏中设置所需的区域。因此，需要编写一个 UI 功能，允许玩家选择此设置。要了解更多信息和区域服务器 URI，请参阅有关 <a href="../ScriptReference/Networking.Match.NetworkMatch-baseUri.html">NetworkMatch.baseUri</a> 的 API 参考文档。|
+|<strong>MatchMaker Port</strong>|Matchmaker 服务器的主机端口。默认指向端口 443，通常不需要更改此设置。|
+|<strong>Match Name</strong>|定义当前比赛的名称。默认设置为“default”。|
+|<strong>Maximum Match Size</strong>|定义当前比赛中的最大玩家数量。默认情况下，该值设置为 4。|
+|<strong>SpawnInfo</strong>|可以展开 Inspector 的此部分来访问与生成相关的设置，如下所示|
+|<strong>Player Prefab</strong>|定义 Unity 在服务器上创建玩家游戏对象时应该使用的默认预制件。Unity 将在服务器上 <a href="../ScriptReference/Networking.MsgType.AddPlayer.html">AddPlayer</a> 的默认处理程序中创建玩家游戏对象。实现 (OnServerAddPlayer)[https://docs.unity3d.com/ScriptReference/Networking.NetworkManager.OnServerAddPlayer.html] 可覆盖这种行为。|
+|<strong>Auto Create Player</strong>|如果希望在连接时以及在场景改变时 Unity 自动创建玩家游戏对象，请勾选此复选框。默认情况下会勾选此复选框。注意，如果使用的是 MigrationManager，并且不启用 Auto Create Player，则需要在客户端重新连接时调用 <a href="../ScriptReference/Networking.ClientScene.SendReconnectMessage.html">ClientScene.SendReconnectMessage</a>。|
+|<strong>Player Spawn Method</strong>|定义 Unity 应该如何决定生成新玩家游戏对象的位置。默认设置为 Random。|
+|    Random|选择 Random 可根据随机选择的 startPositions 生成玩家。|
+|    Round Robin|选择 Round Robin 可循环使用预设列表中的 startPositions。|
+|<strong>Registered Spawnable Prefabs</strong>|使用此列表添加您希望 Network Manager 可以识别的预制件，以便它可以生成这些预制件。也可以通过编写脚本来添加和删除这些预制件。|
+|<strong>Advanced Configuration</strong>|勾选此复选框可在 Network Manager Inspector 窗口中显示高级配置选项。|
+|    Max Connections|定义要支持的最大并发网络连接数量。默认情况下，该值设置为 4。|
+|    Qos Channels|这是一个列表，其中包含当前 Network Manager 所具有的不同通信通道以及每个通道的服务质量 (QoS) 设置。使用此列表可添加或删除通道以及调整其 QoS 设置。也可以通过编写脚本来配置这些通道。有关每个 QoS 选项的描述，请参阅 <a href="../ScriptReference/Networking.QosType.html">QosType</a>。|
+|    Timeouts||
+|        Min Update Timeout|设置网络线程在前后两次网络消息发送之间等待的最短时间（以毫秒为单位）。网络线程不会立即发送多人游戏网络消息。而是按照固定频率检查每个连接是否有要发送的内容。默认设置为 10ms。请参阅关于 <a href="../ScriptReference/Networking.ConnectionConfig.MinUpdateTimeout.html">MinUpdateTimeout</a> 的 API 参考文档以了解更多信息。|
+|        Connect Timeout|定义 Unity 应在等待多长时间之后再尝试下一次连接（以毫秒为单位）。默认设置为 2000ms。请参阅关于 <a href="../ScriptReference/Networking.ConnectionConfig.ConnectTimeout.html">ConnectTimeout</a> 的 API 参考文档以了解更多信息。|
+|        Disconnect Timeout|Unity 在多长时间之后认为某个连接已经断开（以毫秒为单位）。默认设置为 2000ms。请参阅关于 <a href="../ScriptReference/Networking.ConnectionConfig.DisconnectTimeout.html">DisconnectTimeout</a> 的 API 参考文档以了解更多信息。|
+|        Ping Timeout|发送 ping 命令（也称为“保持活动状态”数据包）的时间间隔（以毫秒为单位）。ping 超时时间应该设为 Disconnect Timeout 持续时间的大约三分之一到四分之一，这样，只有在服务器无法从客户端接收到至少三个 ping 之后，Unity 才会认为客户端已经断开连接。默认设置为 500ms。请参阅关于 <a href="../ScriptReference/Networking.ConnectionConfig.PingTimeout.html">ConnectionConfig.PingTimeout</a> 的 API 参考文档以了解更多信息。|
+|    Global Config|这些设置与 Reactor 有关。Reactor 是多人游戏系统的一部分，负责从底层操作系统接收网络数据包，并将它们传递到多人游戏系统进行处理。|
+|        Thread Awake Timeout|Reactor 使用的超时持续时间（以毫秒为单位）。Reactor 如何使用这个值取决于选择的 Reactor Model（见下文）。默认设置为 1ms。|
+|        Reactor Model|选择要使用的 Reactor 类型。Reactor Model 定义了 Unity 读取传入数据包的方式。对于大多数游戏和应用程序，默认的 Select Reactor 是合适的设置。如果希望以处理网络消息时的少许延迟为代价降低 CPU 使用率和提高电池续航时间，请使用 Fix Rate Reactor。|
+|        Select Reactor|此模型使用 <code>select()</code> API，这意味着网络线程在数据包可用后立即“唤醒”（变为活动状态）。使用这种方法意味着游戏会尽可能快地获得数据。这是 Reactor Model 的默认设置。|
+|        Fix Rate Reactor|使用该模型可以通过手动方式让网络线程在给定的时间内睡眠（具体时间是由 Thread Awake Timeout 中的值定义），然后再检查是否有传入的数据包等待处理。|
+|        Reactor Max Recv Messages|设置接收队列中存储的最大消息数量。默认设置为 1024 条消息。|
+|        Reactor Max Sent Messages|设置发送队列中存储的最大消息数量。默认设置为 1024 条消息。|
+|<strong>Use Network Simulator</strong>|勾选此复选框便可以使用网络模拟器。网络模拟器引入了基于以下设置的模拟延迟和丢包：|
+|    Simulated Average Latency|要模拟的延迟时间量（以毫秒为单位）。|
+|    Simulated Packet Loss|要模拟的丢包量（以百分比为单位）。|</p>
+<!-- area:cloud -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-NetworkIdentity.html"></a></span><div class="tip">Network Identity</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-NetworkLobbyPlayer.html"></a></span><div class="tip">Network Lobby Player</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

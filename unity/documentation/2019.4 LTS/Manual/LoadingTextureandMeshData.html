@@ -1,0 +1,324 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="加载纹理和网格数据 - Unity 手册">
+<title>加载纹理和网格数据 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/C:/Mercurial/Manual/2020.1/content/uploads/Main/AsyncUploadQualitySettings.png">
+<meta name="description" content="Unity 可从磁盘加载纹理和网格数据，并以两种不同方式将数据上传到 GPU：同步或异步。这两个过程称为同步上传管线和异步上传管线。">
+<meta property="og:description" content="Unity 可从磁盘加载纹理和网格数据，并以两种不同方式将数据上传到 GPU：同步或异步。这两个过程称为同步上传管线和异步上传管线。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'LoadingTextureandMeshData';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/LoadingTextureandMeshData.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/LoadingTextureandMeshData.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/LoadingTextureandMeshData.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/LoadingTextureandMeshData.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/LoadingTextureandMeshData.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/LoadingTextureandMeshData.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/LoadingTextureandMeshData.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/LoadingTextureandMeshData.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LoadingTextureandMeshData.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/LoadingTextureandMeshData.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LoadingTextureandMeshData.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LoadingTextureandMeshData.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LoadingTextureandMeshData.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/LoadingTextureandMeshData.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/LoadingTextureandMeshData.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/LoadingTextureandMeshData.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/LoadingTextureandMeshData.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/LoadingTextureandMeshData.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/LoadingTextureandMeshData.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/LoadingTextureandMeshData.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/LoadingTextureandMeshData.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/LoadingTextureandMeshData.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/LoadingTextureandMeshData.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/LoadingTextureandMeshData.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/LoadingTextureandMeshData.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/LoadingTextureandMeshData.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/LoadingTextureandMeshData.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/LoadingTextureandMeshData.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/LoadingTextureandMeshData.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/LoadingTextureandMeshData.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/LoadingTextureandMeshData.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LoadingTextureandMeshData.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/LoadingTextureandMeshData.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LoadingTextureandMeshData.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LoadingTextureandMeshData.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LoadingTextureandMeshData.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/LoadingTextureandMeshData.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/LoadingTextureandMeshData.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/LoadingTextureandMeshData.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/LoadingTextureandMeshData.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/LoadingTextureandMeshData.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/LoadingTextureandMeshData.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/LoadingTextureandMeshData.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/LoadingTextureandMeshData.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/LoadingTextureandMeshData.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/LoadingTextureandMeshData.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/LoadingTextureandMeshData.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/LoadingTextureandMeshData.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li>高级渲染功能</li>
+<li>加载纹理和网格数据</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CullingGroupAPI.html"></a></span><div class="tip">CullingGroup API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OptimizingGraphicsPerformance.html"></a></span><div class="tip">优化图形性能</div>
+</div>
+</div></div>
+<h1>加载纹理和网格数据</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 可从磁盘加载纹理和网格数据，并以两种不同方式将数据上传到 GPU：同步或异步。这两个过程称为同步上传管线和异步上传管线。</p>
+
+<p>当 Unity 使用同步上传管线时，在加载和上传数据时无法执行其他任务。这种情况下可能会导致应用程序出现明显的暂停。当 Unity 使用异步上传管线时，数据在后台加载和上传，同时可以执行其他任务。</p>
+
+<p>如果某个纹理或网格适合异步上传管线，则 Unity 会自动使用异步上传管线。如果某个纹理或网格不适合异步上传管线，则 Unity 会自动使用同步上传管线。</p>
+
+<h2>工作原理</h2>
+
+<p>同步和异步上传管线之间的主要区别是 Unity 在构建时保存数据的位置，这会影响 Unity 在运行时加载数据的方式。</p>
+
+<p>在同步上传管线中，Unity 必须在单个帧中同时加载纹理或网格的元数据（标头数据）和纹素或顶点数据（二进制数据）。在异步上传管线中，Unity 必须在单个帧中仅加载标头数据，并可以在后续帧中将二进制数据流式传输到 GPU。</p>
+
+<p>在同步上传管线中：</p>
+
+<ul>
+<li>在构建时，Unity 将网格或纹理的标头数据和二进制数据都写入同一 .res 文件。</li>
+<li>在运行时，当应用程序需要纹理或网格的时候，Unity 将该纹理或网格的标头数据和二进制数据从 .res 文件加载到内存中。当所有数据都位于内存中时，Unity 随后将二进制数据从内存上传到 GPU。加载和上传操作主要发生在主线程上的单个帧中。</li>
+</ul>
+
+<p>在异步上传管线中：</p>
+
+<ul>
+<li>在构建时，Unity 将标头数据写入到一个 .res 文件，而将二进制数据写入到另一个单独的 .resS 文件。</li>
+<li>在运行时，当应用程序需要纹理或网格的时候，Unity 将标头数据从 .res 文件加载到内存中。当标头数据位于内存中时，Unity 随后使用固定大小的环形缓冲区将二进制数据从 .resS 文件流式传输到 GPU。Unity 使用多个线程通过几个帧流式传输二进制数据。请注意，在 Unity 已了解 GPU 硬件的某些游戏主机平台上，Unity 会跳过环形缓冲区并直接加载到 GPU 内存中。</li>
+</ul>
+
+<h2>纹理和网格数据适合的上传管线</h2>
+
+<p>如果满足以下条件，纹理适合异步上传管线：</p>
+
+<ul>
+<li>纹理未启用读/写权限。</li>
+<li>纹理不在 Resources 文件夹中。</li>
+<li>如果构建目标是 Android，在项目的构建设置 (Build Settings) 中启用了 LZ4 压缩。</li>
+</ul>
+
+<p>请注意，如果使用 <code>LoadImage(byte[] data)</code> 来加载纹理，即使满足上述条件，仍会强制 Unity 使用同步上传管线。</p>
+
+<p>如果满足以下条件，网格适合异步上传管线：</p>
+
+<ul>
+<li>网格未启用读/写权限。</li>
+<li>网格不在 Resources 文件夹中。</li>
+<li>网格没有 <a href="../ScriptReference/Mesh-blendShapeCount.html">BlendShape</a>。</li>
+<li>Unity 尚未将动态批处理 (Dynamic Batching) 应用于网格，原因是网格不适合进行动态批处理，或者是因为禁用了动态批处理。有关动态批处理的更多信息，请参阅<a href="DrawCallBatching.html">绘制调用批处理</a>。</li>
+<li>粒子系统、地形或网格碰撞体不需要网格顶点/索引数据。</li>
+<li>网格没有<a href="../ScriptReference/Mesh.boneWeights.html">骨骼权重</a>。</li>
+<li>网格<a href="../ScriptReference/MeshTopology.html">拓扑</a>不是<a href="../ScriptReference/MeshTopology.Quads.html">四边形</a>。</li>
+<li>网格资源的 <a href="../ScriptReference/ModelImporter-meshCompression.html">meshCompression</a> 设置为 <a href="../ScriptReference/ModelImporterMeshCompression.Off.html">Off</a>。
+如果构建目标是 Android，在项目的构建设置 (Build Settings) 中启用了 LZ4 压缩。</li>
+</ul>
+
+<p>在所有其他情况下，Unity 会同步加载纹理和网格。</p>
+
+<h2>如何识别 Unity 所使用的上传管线</h2>
+
+<p>可使用<a href="Profiler.html">性能分析器</a>或其他性能分析工具通过观察线程活动和性能分析器标记来确定 Unity 在何时使用了异步上传管线。</p>
+
+<p>以下内容表明 Unity 正在使用异步上传管线来上传纹理或网格：</p>
+
+<ul>
+<li>
+<code>AsyncUploadManager.ScheduleAsyncRead</code>、<code>AsyncReadManager.ReadFile</code> 和 <code>Async.DirectTextureLoadBegin</code> 性能分析器标记。</li>
+<li>
+<code>AsyncRead</code> 线程上的活动。</li>
+</ul>
+
+<p>如果没有看到此活动，则表明 Unity 没有使用异步上传管线。</p>
+
+<p>请注意，以下性能分析器标记并不表示 Unity 正在使用异步上传管线；Unity 调用它们来检查是否需要进行任何异步上传工作：</p>
+
+<ul>
+<li><code>Initialization.AsyncUploadTimeSlicedUpdate</code></li>
+<li><code>AsyncUploadManager.AsyncResourceUpload</code></li>
+<li><code>AsyncUploadManager.ScheduleAsyncCommands</code></li>
+</ul>
+
+<h2>配置异步上传管线</h2>
+
+<p>可配置异步上传管线的以下设置。请注意，无法配置同步上传管线的设置。</p>
+
+<figure>
+<img src="C:/Mercurial/Manual/2020.1/content/uploads/Main/AsyncUploadQualitySettings.png" alt="Quality settings 中的 Async Upload 设置">
+<figcaption>Quality settings 中的 Async Upload 设置</figcaption>
+</figure>
+
+<h3>Async Upload Buffer</h3>
+
+<p>Unity 重复使用单个环形缓冲区将纹理和网格数据流式传输到 GPU。如此将减少所需的内存分配次数。</p>
+
+<p><strong>Async Upload Buffer</strong> 决定了此环形缓冲区的大小（以 MB 为单位）。该值的最小大小为 2，最大大小为 512。</p>
+
+<p>Unity 会自动调整缓冲区的大小以适应当前加载的最大纹理或网格。这可能是一个缓慢的操作，尤其是在 Unity 必须多次执行该操作的情况下；例如，如果要加载许多大于默认缓冲区大小的纹理，则属于这种情况。为了减少 Unity 必须调整缓冲区大小的次数，请设置该值以适合您期望加载的最大值。通常这是场景中最大的纹理。</p>
+
+<p>可在 Quality settings 窗口中或使用 <a href="../ScriptReference/QualitySettings-asyncUploadBufferSize.html">QualitySettings.asyncUploadBufferSize</a> API 来配置该值。</p>
+
+<h3>Async Upload Time Slice</h3>
+
+<p><strong>Async Upload Time Slice</strong> 是 CPU 将纹理或网格数据上传到 GPU 时花费的时间量（以毫秒/帧为单位）。</p>
+
+<p>较大的值表示数据将更快地在 GPU 上准备就绪，但是 CPU 将在这些帧期间花费更多时间进行上传操作。请注意，只有在缓冲区中有数据等待上传到 GPU 时，Unity 才使用此时间进行上传；如果没有等待的数据，Unity 可以将此时间用于其他操作。</p>
+
+<p>可在 Quality settings 窗口中或使用 <a href="../ScriptReference/QualitySettings-asyncUploadTimeSlice.html">QualitySettings.asyncUploadTimeSlice</a> API 来配置该值。</p>
+
+<h2>其他信息</h2>
+
+<p>有关异步上传纹理和网格数据的更多信息，请参阅 Unity 博客文章：<a href="https://blogs.unity3d.com/2018/10/08/optimizing-loading-performance-understanding-the-async-upload-pipeline">优化加载性能：了解异步上传管线 (Optimizing loading performance: Understanding the Async Upload Pipeline)</a>。</p>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CullingGroupAPI.html"></a></span><div class="tip">CullingGroup API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OptimizingGraphicsPerformance.html"></a></span><div class="tip">优化图形性能</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

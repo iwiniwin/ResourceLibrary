@@ -1,0 +1,344 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Multiplayer 加密插件 - Unity 手册">
+<title>Multiplayer 加密插件 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/UNetMultiplayerEncryption.svg">
+<meta name="description" content="Unity Multiplayer 可以使用加密插件，以便通过网络发送的所有数据先通过加密插件，然后再进行发送。这样可以防止通过数据包操纵和攻击专用游戏服务器的方式进行游戏作弊。">
+<meta property="og:description" content="Unity Multiplayer 可以使用加密插件，以便通过网络发送的所有数据先通过加密插件，然后再进行发送。这样可以防止通过数据包操纵和攻击专用游戏服务器的方式进行游戏作弊。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UNetEncryptionPlugins';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UNetEncryptionPlugins.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UNetEncryptionPlugins.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UNetEncryptionPlugins.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UNetEncryptionPlugins.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UNetEncryptionPlugins.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UNetEncryptionPlugins.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UNetEncryptionPlugins.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UNetEncryptionPlugins.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UNetEncryptionPlugins.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UNetEncryptionPlugins.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UNetEncryptionPlugins.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UNetEncryptionPlugins.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UNetEncryptionPlugins.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UNetEncryptionPlugins.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UNetEncryptionPlugins.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UNetEncryptionPlugins.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UNetEncryptionPlugins.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UNetEncryptionPlugins.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UNetEncryptionPlugins.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UNetEncryptionPlugins.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UNetEncryptionPlugins.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UNetEncryptionPlugins.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UNetEncryptionPlugins.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UNetEncryptionPlugins.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UNetEncryptionPlugins.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UNetEncryptionPlugins.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UNetEncryptionPlugins.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UNetEncryptionPlugins.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UNetEncryptionPlugins.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UNetEncryptionPlugins.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UNetEncryptionPlugins.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UNetEncryptionPlugins.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UNetEncryptionPlugins.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UNetEncryptionPlugins.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UNetEncryptionPlugins.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UNetEncryptionPlugins.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UNetEncryptionPlugins.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UNetEncryptionPlugins.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UNetEncryptionPlugins.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UNetEncryptionPlugins.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UNetEncryptionPlugins.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UNetEncryptionPlugins.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UNetEncryptionPlugins.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UNetEncryptionPlugins.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UNetEncryptionPlugins.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UNetEncryptionPlugins.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UNetEncryptionPlugins.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UNetEncryptionPlugins.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UNet.html">多玩家和联网</a></li>
+<li>Multiplayer 加密插件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-NetworkServerSimple.html"></a></span><div class="tip">NetworkServerSimple</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityWebRequest.html"></a></span><div class="tip">UnityWebRequest</div>
+</div>
+</div></div>
+<h1>Multiplayer 加密插件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity Multiplayer 可以使用加密插件，以便通过网络发送的所有数据先通过加密插件，然后再进行发送。这样可以防止通过数据包操纵和攻击专用游戏服务器的方式进行游戏作弊。</p>
+
+<p>Unity Multiplayer 没有内置的加密插件，因此您必须提供自己的插件来实现加密算法并实现下文进一步列出的必需功能。</p>
+
+<p>下图说明了 Unity Multiplayer 如何使用您的加密插件（如果您提供了该插件）。</p>
+
+<figure>
+<img src="../uploads/Main/UNetMultiplayerEncryption.svg" alt="将加密插件与 Unity Multiplayer 配合使用时的数据流">
+<figcaption>将加密插件与 Unity Multiplayer 配合使用时的数据流</figcaption>
+</figure>
+
+<h2><strong>如何使用加密插件</strong></h2>
+
+<p>为了指示游戏或应用程序使用加密插件，必须调用 <code>UnityEngine.Networking.NetworkTransport.LoadEncryptionLibrary(path)</code>，其中 <code>path</code> 是所编译插件的路径。在 Windows 中，此路径一般为：<code>string.Format("{0}/Plugins/UnetEncryption.dll", Application.dataPath)</code>。</p>
+
+<p>调用此函数时，Unity 会检查该文件是否存在以及它是否实现了所有必需功能（在下文列出）。这些是 Unity Multiplayer 系统本身将调用的函数。如果您创建自己的加密插件，可能需要添加从 C# 代码调用的更多函数。例如，需要将算法初始化或为插件提供密钥值。可以按照通常的方式对可从 C# 调用的<a href="NativePlugins.html">原生插件</a>执行此操作。</p>
+
+<p>注意：在游戏的构建版本中，插件的位置不一定与 Assets 文件夹中的位置相同，并且该位置在目标平台之间可能不同。您可能需要编写代码来检测当前的运行时环境，并根据检测结果选择正确路径。</p>
+
+<p>可从 <a href="https://github.com/Unity-Technologies/UnetEncryptionExample">Unity GitHub</a> 获得示例加密插件和示例 Unity 项目。提供这些示例是为了展示如何实现您自己的插件。</p>
+
+<h2><strong>必需函数</strong></h2>
+
+<p>您创建或使用的任何加密插件都必须提供以下函数。如果 Unity 未定义这些函数，它将无法加载插件。这些是 Unity 运行时本身将调用的函数。插件通常会提供_额外_函数，以便从用户的 C# 代码调用这些函数来实现多种目的，比如注册密钥。</p>
+
+<h3>对数据进行加密</h3>
+
+<pre><code>int UNetEncryptionLib_Encrypt(
+    void * payload,
+    int payload_len,
+    void * dest,
+    int &amp; dest_len,
+    int connection_id,
+    bool isConnect);
+</code></pre>
+
+<p>此函数执行加密任务。每当通过网络发送数据包时，Unity 的网络功能都将调用此函数。</p>
+
+<h4>参数</h4>
+
+<ul>
+<li>payload 是要加密的数据。</li>
+<li>payload_len 是 <em>payload</em> 缓冲区的长度（以字节为单位）。</li>
+<li>dest 是插件应将加密数据写入到的缓冲区。</li>
+<li>dest_len 是 dest 缓冲区的容量（以字节为单位）。插件必须将此值替换为_实际写入_ dest 的字节数。</li>
+<li>connection_id 是该连接的本地标识符。</li>
+<li>如果此数据包是连接请求，则 isConnect 为 true。如果此参数为 true，必须提前（通过游戏代码）告知插件要使用哪个密钥。如果此参数为 false，插件应该已经具有从该值到要使用的密钥之间的映射。请参阅示例插件以了解实现方式。</li>
+</ul>
+
+<h4>返回值</h4>
+
+<p>成功时，<code>Encrypt</code> 必须返回零。如果返回任何其他值，运行时将丢弃数据包而不发送。</p>
+
+<h3>对数据进行解密</h3>
+
+<pre><code>int UNetEncryptionLib_Decrypt(
+    void * payload,
+    int payload_len,
+    void * dest,
+    int &amp; dest_len,
+    int &amp; key_id);
+</code></pre>
+
+<p>此函数执行解密任务。每当从网络接收数据包时，Unity 的网络功能都将调用此函数。</p>
+
+<h4>参数</h4>
+
+<ul>
+<li>
+<code>payload</code> 是接收的数据包。</li>
+<li>
+<code>payload_len</code> 是 payload 缓冲区的长度（以字节为单位）。</li>
+<li>
+<code>dest</code> 是插件应将解密数据写入到的缓冲区。</li>
+<li>
+<code>dest_len</code> 是 dest 缓冲区的容量（以字节为单位）。插件必须将此值替换为_实际写入_ dest 的字节数。</li>
+<li>
+<code>key_id</code> 是一个整数标识符。插件应编写一个值来唯一标识所使用的解密密钥。在服务器上，如果接受新连接，则将该值传回到 <code>ConnectionIdAssigned</code>。</li>
+</ul>
+
+<h4>返回值</h4>
+
+<p>成功时，<code>Decrypt</code> 必须返回零。如果返回任何其他值，将丢弃数据包而不做进一步处理。</p>
+
+<h3>SafeMaxPacketSize</h3>
+
+<pre><code>unsigned short UNetEncryptionLib_SafeMaxPacketSize(
+    unsigned short mtu);
+</code></pre>
+
+<p>应该从游戏调用此函数以修改 <code>ConnectionConfig.PacketSize</code>（也称为_最大传输单元_，即 MTU），然后调用 <code>NetworkTransport.AddHost</code>。</p>
+
+<p>例如，您的游戏可能通常使用 1000 字节的 MTU。如果 <code>ConnectionConfig.PacketSize</code> 设置为 1000 字节，然后将其传递到 <code>NetworkTransport.AddHost</code>（通过 <code>HostConfig.DefaultConfig</code>），则 NetworkTransport 层会通过单个数据包发送不超过 1000 字节的明文。</p>
+
+<p>加密插件通常会由于放置在有效负载之前的标头信息以及将有效负载舍入为加密块大小而增加一些开销。例如，如果您要发送 18 字节的明文，并且插件需要添加 49 字节的标头并使用 AES 来加密块大小为 16 字节的数据，则该算法将产生一个 81 字节的数据包（18 字节的明文字节将舍入为 32 字节的密文，然后再添加 49 字节的标头）。</p>
+
+<p>Unity 会调用此函数来确保即将发送的数据包不会超出允许的发送限制（需要考虑网络 MTU 和加密算法的密文扩展和填充）。</p>
+
+<h4>参数</h4>
+
+<ul>
+<li>
+<code>mtu</code> 是最大传输单元。这是您希望插件生成的最大数据包大小。</li>
+</ul>
+
+<h4>返回值</h4>
+
+<p>为了使插件生成不大于 MTU 的数据包，应该向单次 Encrypt 调用提供的最大明文量。</p>
+
+<p>必须在连接配置中设置最大数据包大小，从而告诉 Unity Multiplayer 拆分数据，使数据符合您的加密要求。如果您发现自己的某些消息无法通过网络成功传输，可能是由于这些消息超出最大数据包大小而被丢弃。</p>
+
+<h3>ConnectionIdAssigned</h3>
+
+<pre><code>void UNetEncryptionLib_ConnectionIdAssigned(
+    int key_id,
+    unsigned short connection_id);
+</code></pre>
+
+<p>已接受新连接并向其分配 ID 后将在服务器上调用此函数。</p>
+
+<h4>参数</h4>
+
+<ul>
+<li>
+<code>key_id</code> 是由该数据包对应的先前 <code>Decrypt</code> 调用写入的密钥标识符。</li>
+<li>
+<code>connection_id</code> 是从现在开始将使用的连接 ID。具体而言，在将数据包发送回客户端时，作为后续 <code>Encrypt</code> 调用的参数。</li>
+</ul>
+<!-- area:cloud -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-NetworkServerSimple.html"></a></span><div class="tip">NetworkServerSimple</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityWebRequest.html"></a></span><div class="tip">UnityWebRequest</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

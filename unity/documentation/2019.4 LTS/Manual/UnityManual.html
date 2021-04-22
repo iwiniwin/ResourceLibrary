@@ -1,0 +1,373 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity 用户手册 (2019.4 LTS) - Unity 手册">
+<title>Unity 用户手册 (2019.4 LTS) - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/StructEditor.jpg">
+<meta name="description" content="使用 Unity Editor 可创建 2D 和 3D 游戏、应用程序和体验。请从 unity3d.com 下载 Editor。">
+<meta property="og:description" content="使用 Unity Editor 可创建 2D 和 3D 游戏、应用程序和体验。请从 unity3d.com 下载 Editor。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UnityManual';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityManual.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UnityManual.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityManual.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UnityManual.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UnityManual.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UnityManual.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UnityManual.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UnityManual.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnityManual.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnityManual.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityManual.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityManual.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityManual.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityManual.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityManual.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityManual.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityManual.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityManual.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityManual.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityManual.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityManual.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityManual.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityManual.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityManual.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityManual.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UnityManual.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UnityManual.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UnityManual.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UnityManual.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UnityManual.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UnityManual.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UnityManual.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/UnityManual.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityManual.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityManual.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityManual.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityManual.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityManual.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityManual.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityManual.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityManual.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityManual.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityManual.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityManual.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityManual.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityManual.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityManual.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityManual.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul><li>Unity 用户手册 (2019.4 LTS)</li></ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityManual.html"></a></span><div class="tip">Unity 用户手册 (2019.4 LTS)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityManual.html"></a></span><div class="tip">Unity 用户手册 (2019.4 LTS)</div>
+</div>
+</div></div>
+<h1>Unity 用户手册 (2019.4 LTS)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用 Unity Editor 可创建 2D 和 3D 游戏、应用程序和体验。请从 <a href="https://unity3d.com/unity">unity3d.com</a> 下载 Editor。</p>
+
+<p>Unity 用户手册可帮助您了解如何使用 Unity Editor 及其相关服务。您可以从头到尾阅读该手册，或将其用作参考。</p>
+
+<p>如果这是第一次使用 Unity，请查看有关<a href="UnityOverview.html">使用 Unity</a> 的介绍性文档，并观看 <a href="https://unity3d.com/learn/tutorials">Unity 教程</a>。</p>
+<div class="frontpage-topsection"> 
+
+<p><strong>新增功能</strong></p>
+
+<ul>
+<li>2019 技术周期中引入的功能：<a href="WhatsNew2019.html">2019 中的新功能</a>
+</li>
+<li>从旧版 Unity 升级 Unity 项目：<a href="UpgradeGuide2019LTS.html">升级指南</a>
+</li>
+</ul>
+</div>
+<div class="frontpage-topsection"> 
+
+<p><strong>包</strong></p>
+
+<ul>
+<li>了解包：<a href="Packages.html">使用 Package Manager</a>
+</li>
+<li>查找特定包的文档：<a href="pack-safe.html">已验证包</a>和<a href="pack-preview.html">预览包</a>
+</li>
+<li>了解如何构建自定义包：<a href="CustomPackages.html">创建自定义包</a>
+</li>
+</ul>
+</div>
+<div class="frontpage-topsection"> 
+
+<p><strong>最佳实践和专家指南</strong></p>
+
+<ul>
+<li>Unity 支持工程师总结的最佳实践：<a href="BestPracticeGuides.html">最佳实践指南</a>
+</li>
+<li>Unity 开发人员用自己的语言创作的专家指南：<a href="ExpertGuides.html">专家指南</a>
+</li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="frontpage-divider"></div>
+
+<h3>Unity 用户手册的组成部分</h3>
+<div class="frontpage-section">
+<a href="UnityOverview.html"><img src="../uploads/Main/StructEditor.jpg" alt="Main.UnityOverview"></a>
+
+<h3><a href="UnityOverview.html">在 Unity 中操作</a></h3>
+
+<p>Unity Editor 的完整介绍。</p>
+</div>
+<div class="frontpage-section">
+<a href="Unity2D.html"><img src="../uploads/Main/struct2d.jpg" alt="Main.Unity2D"></a>
+
+<h3><a href="Unity2D.html">Unity 2D</a></h3>
+
+<p>Unity Editor 的所有 2D 特定功能，包括游戏运行过程、精灵和物理系统。</p>
+</div>
+<div class="frontpage-section">
+<a href="Graphics.html"><img src="../uploads/Main/StructGraphics.jpg" alt="Main.Graphics"></a>
+
+<h3><a href="Graphics.html">图形</a></h3>
+
+<p>Unity Editor 的视觉因素，包括摄像机和光照。</p>
+</div>
+<div class="frontpage-section">
+<a href="PhysicsSection.html"><img src="../uploads/Main/StructPhysics.jpg" alt="Main.PhysicsSection"></a>
+
+<h3><a href="PhysicsSection.html">物理系统</a></h3>
+
+<p>模拟 3D 运动、质量、重力和碰撞。</p>
+</div>
+<div class="frontpage-section">
+<a href="UNet.html"><img src="../uploads/Main/StructUNet.png" alt="Main.UNet"></a>
+
+<h3><a href="UNet.html">网络</a></h3>
+
+<p>如何实现玩家多人联网和网络。</p>
+</div>
+<div class="frontpage-section">
+<a href="ScriptingSection.html"><img src="../uploads/Main/StructScripting.jpg" alt="Main.ScriptingSection"></a>
+
+<h3><a href="ScriptingSection.html">脚本</a></h3>
+
+<p>使用 Unity Editor 中的脚本进行游戏编程。</p>
+</div>
+<div class="frontpage-section">
+<a href="Audio.html"><img src="../uploads/Main/StructAudio.jpg" alt="Main.Audio"></a>
+
+<h3><a href="Audio.html">音频</a></h3>
+
+<p>Unity Editor 中的音频，包括剪辑、音频源、监听器、导入和声音设置。</p>
+</div>
+<div class="frontpage-section">
+<a href="AnimationSection.html"><img src="../uploads/Main/StructAnimation.jpg" alt="Main.AnimationSection"></a>
+
+<h3><a href="AnimationSection.html">动画</a></h3>
+
+<p>Unity Editor 中的动画。</p>
+</div>
+<div class="frontpage-section">
+<a href="UIToolkits.html"><img src="../uploads/Main/StructUI.jpg" alt="Main.UISystem"></a>
+
+<h3><a href="UIToolkits.html">UI</a></h3>
+
+<p>Unity Editor 中提供的用户界面工具包。</p>
+</div>
+<div class="frontpage-section">
+<a href="Navigation.html"><img src="../uploads/Main/StructNavigation.jpg" alt="Main.Navigation"></a>
+
+<h3><a href="Navigation.html">导航</a></h3>
+
+<p>Unity Editor 中的导航，包括 AI 和寻路。</p>
+</div>
+<div class="frontpage-section">
+<a href="UnityServices.html"><img src="../uploads/Main/ServicesSection.png" alt="Main.Services"></a>
+
+<h3><a href="UnityServices.html">Unity Services</a></h3>
+</div>
+<div class="frontpage-section">
+<a href="VROverview.html"><img src="../uploads/Main/StructVR.jpg" alt="Main.VROverview"></a>
+
+<h3><a href="VROverview.html">虚拟现实</a></h3>
+</div>
+<div class="frontpage-section">
+<a href="ContributingToUnity.html"><img src="../uploads/Main/StructContributingToUnity.jpg" alt="Main.ContributingToUnity"></a>
+
+<h3><a href="ContributingToUnity.html">参与 Unity 开源项目</a></h3>
+
+<p>就 Unity Editor 的某些源代码提供修改建议。</p>
+</div>
+<div class="frontpage-section">
+<a href="PlatformSpecific.html"><img src="../uploads/Main/StructPlatformSpecific.jpg" alt="Main.PlatformSpecific"></a>
+
+<h3><a href="PlatformSpecific.html">特定于平台的信息</a></h3>
+
+<p>使用 Unity Editor 面向多种非桌面平台和 Web 平台进行项目开发时需要注意的特定信息。</p>
+</div>
+<div class="frontpage-section">
+<a href="LegacyTopics.html"><img src="../uploads/Main/StructLegacyTopics.jpg" alt="Main.LegacyTopics"></a>
+
+<h3><a href="LegacyTopics.html">旧版主题</a></h3>
+如果要维护旧项目，可参考这些主题。
+</div>
+<div class="clear"></div>
+
+<p><br></p>
+
+<h3>其他信息源</h3>
+
+<ul>
+<li><p><a href="https://answers.unity3d.com/">Unity Answers</a> 或 <a href="https://forum.unity3d.com/">Unity Forums</a> - 在这里可以提问和搜索答案。</p></li>
+<li><p><a href="https://support.unity3d.com">Unity 知识库</a> - 向 Unity 支持团队提出的问题的答案集合。</p></li>
+<li><p><a href="https://unity3d.com/learn/tutorials">教程</a> - 关于使用 Unity Editor 的分步操作视频和书面指南。</p></li>
+<li><p><a href="https://unityads.unity3d.com/help/index">Unity Ads Knowledge Base</a> - 关于在游戏中添加广告的指南。</p></li>
+<li><p><a href="https://unity3d.com/asset-store/help">Asset Store 帮助</a> - 关于 Asset Store 内容共享的帮助。</p></li>
+</ul>
+
+<h3>已知问题</h3>
+
+<p>该功能不能按预期工作？这可能是已知问题。请检查__问题跟踪系统 (Issue Tracker)__：<a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>。</p>
+<!-- area:none -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityManual.html"></a></span><div class="tip">Unity 用户手册 (2019.4 LTS)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityManual.html"></a></span><div class="tip">Unity 用户手册 (2019.4 LTS)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

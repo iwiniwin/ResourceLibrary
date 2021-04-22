@@ -1,0 +1,1124 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Android Player 设置 - Unity 手册">
+<title>Android Player 设置 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/class-PlayerSettingsAndroid.png">
+<meta name="description" content="本页面将详细介绍 Android 平台特有的 Player 设置。有关常规 Player 设置的描述，请参阅 Player 设置。">
+<meta property="og:description" content="本页面将详细介绍 Android 平台特有的 Player 设置。有关常规 Player 设置的描述，请参阅 Player 设置。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'class-PlayerSettingsAndroid';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PlayerSettingsAndroid.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/class-PlayerSettingsAndroid.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/class-PlayerSettingsAndroid.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/class-PlayerSettingsAndroid.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/class-PlayerSettingsAndroid.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/class-PlayerSettingsAndroid.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/class-PlayerSettingsAndroid.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/class-PlayerSettingsAndroid.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PlayerSettingsAndroid.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PlayerSettingsAndroid.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PlayerSettingsAndroid.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettingsAndroid.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PlayerSettingsAndroid.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettingsAndroid.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettingsAndroid.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettingsAndroid.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettingsAndroid.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettingsAndroid.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettingsAndroid.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettingsAndroid.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettingsAndroid.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettingsAndroid.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettingsAndroid.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettingsAndroid.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettingsAndroid.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/class-PlayerSettingsAndroid.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/class-PlayerSettingsAndroid.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/class-PlayerSettingsAndroid.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/class-PlayerSettingsAndroid.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/class-PlayerSettingsAndroid.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/class-PlayerSettingsAndroid.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/class-PlayerSettingsAndroid.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/class-PlayerSettingsAndroid.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/class-PlayerSettingsAndroid.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettingsAndroid.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/class-PlayerSettingsAndroid.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettingsAndroid.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettingsAndroid.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettingsAndroid.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettingsAndroid.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettingsAndroid.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettingsAndroid.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettingsAndroid.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettingsAndroid.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettingsAndroid.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettingsAndroid.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettingsAndroid.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettingsAndroid.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">平台开发</a></li>
+<li><a href="android.html">Android</a></li>
+<li>Android Player 设置</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityRemote5.html"></a></span><div class="tip">Unity Remote</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-BuildProcess.html"></a></span><div class="tip">构建 Android 应用程序</div>
+</div>
+</div></div>
+<h1>Android Player 设置</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面将详细介绍 Android 平台特有的 <strong>Player</strong> 设置。有关常规 <strong>Player</strong> 设置的描述，请参阅 <a href="class-PlayerSettings.html#general">Player</a> 设置。</p>
+
+<figure>
+<img src="../uploads/Main/class-PlayerSettingsAndroid.png" alt="Android Player 设置">
+<figcaption>Android Player 设置</figcaption>
+</figure>
+
+<p>有关属性的描述根据 Player UI 中的相应部分进行分组：</p>
+
+<ul>
+<li><a href="#Icon">Icon</a></li>
+<li><a href="#Resolution">Resolution and Presentation</a></li>
+<li><a href="#Splash">Splash Image</a></li>
+<li><a href="#Other">Other Settings</a></li>
+<li><a href="#Publishing">Publishing Settings</a></li>
+<li><a href="#XR">XR Settings</a></li>
+</ul>
+
+<p><a name="Icon"></a></p>
+
+<h2>Icon</h2>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidIcon.png" alt="Android Player 设置的 Icon 部分">
+<figcaption>Android Player 设置的 Icon 部分</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Adaptive</strong></td>
+	<td style="text-align:left;">设置应用程序中 Android 自适应图标的纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Round</strong></td>
+	<td style="text-align:left;">设置应用程序中 Android 圆形图标的纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Legacy</strong></td>
+	<td style="text-align:left;">设置应用程序中 Android 旧版图标的纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Android Banner</strong></td>
+	<td style="text-align:left;">为 Android TV 版本启用自定义横幅。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Resolution"></a></p>
+
+<h2>Resolution and Presentation</h2>
+
+<p>使用 <strong>Resolution and Presentation</strong> 部分可以自定义屏幕外观的各个方面。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidResPres.png" alt="Android 平台的 Resolution and Presentation 设置">
+<figcaption>Android 平台的 Resolution and Presentation 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Start in fullscreen mode</strong></td>
+	<td style="text-align:left;">加载启动画面或第一个场景时隐藏导航栏。如果未设置此选项，则在加载启动画面或第一个场景加载时将显示导航栏。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Render outside safe area</strong></td>
+	<td style="text-align:left;">启用此选项可允许使用所有可用的屏幕空间（包括显示屏缺口（凹口）区域）进行渲染。有关更多信息，请参阅 Android 开发者网站上的<a href="https://developer.android.com/guide/topics/display-cutout">显示屏凹口支持</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Optimized Frame Pacing</strong></td>
+	<td style="text-align:left;">启用此选项可允许 Unity 均匀分配帧以减少帧率变化，从而使游戏过程更流畅。</td>
+</tr>
+</tbody>
+</table>
+
+<p>Resolution and Presentation 中的其他属性按照以下几部分进行分组：</p>
+
+<ul>
+<li><a href="#Scaling">Resolution Scaling</a></li>
+<li><a href="#Aspect">Supported Aspect Ratio</a></li>
+<li><a href="#Orientation">Orientation</a></li>
+<li><a href="#supportedOris">Allowed Orientations for Auto Rotation</a></li>
+<li><a href="#OtherRes">Other</a></li>
+</ul>
+
+<p><a name="Scaling"></a></p>
+
+<h3>Resolution Scaling</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidResPres-Scaling.png" alt="Android 平台的 Resolution Scaling 设置">
+<figcaption>Android 平台的 Resolution Scaling 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Resolution Scaling Mode</strong></td>
+	<td style="text-align:left;">允许将缩放设置为等于或低于屏幕原始分辨率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>FixedDPI</em></td>
+	<td style="text-align:left;">允许将设备的屏幕分辨率缩放为低于其原始分辨率，并显示 <strong>Target DPI</strong> 属性。使用此属性可优化性能和电池续航时间，或者针对特定的 DPI 设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Disabled</em></td>
+	<td style="text-align:left;">确保不应用缩放，并且游戏渲染屏幕原始分辨率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Target DPI</strong></td>
+	<td style="text-align:left;">设置游戏画面的分辨率。如果设备的屏幕原始 DPI 高于此值，则 Unity 会降低游戏画面分辨率以匹配此设置。缩放的计算公式为 <code>min(Target DPI * Factor / Screen DPI, 1)</code>。<strong>Factor</strong> 由 <a href="class-QualitySettings.html">Quality</a> 设置中的 <strong>Resolution Scaling Fixed DPI Factor</strong> 进行控制。<br><strong>注意：</strong>仅当 <strong>Resolution Scaling Mode</strong> 设置为 <strong>Fixed DPI</strong> 时才会显示此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Blit Type</strong></td>
+	<td style="text-align:left;">控制是否使用 blit 将最终图像渲染到屏幕。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Always</em></td>
+	<td style="text-align:left;">（始终 blit）使 Unity 渲染到屏幕外缓冲区，然后复制到系统帧缓冲区。此选项兼容大部分设备，但通常比 <strong>Never</strong> blit 设置更慢。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Never</em></td>
+	<td style="text-align:left;">（从不 blit）使 Unity 渲染到 OS 提供的帧缓冲区。如果在应用程序运行时出现导致此操作失败的情况，应用程序将向设备日志输出一次性警告。<strong>Never</strong> blit 通常比 <strong>Always</strong> blit 更快，但无法兼容所有设备。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Auto</em></td>
+	<td style="text-align:left;">尽可能使 Unity 渲染到 OS 提供的帧缓冲区。如果满足阻止应用程序渲染到系统帧缓冲区的条件，则应用程序将切换到屏幕外渲染并向设备控制台发出警告。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Aspect"></a></p>
+
+<h3>Supported Aspect Ratio</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidResPres-Aspect.png" alt="Android 平台的 Aspect Ratio Mode 设置">
+<figcaption>Android 平台的 Aspect Ratio Mode 设置</figcaption>
+</figure>
+
+<p>为设备设置 <strong>Aspect Ratio Mode</strong>。可以选择 <em>Legacy Wide Screen (1.86)</em>、<em>Native Aspect Ratio</em> 和 <em>Custom</em>。选择 <em>Custom</em> 时，会出现 <strong>Up To</strong> 字段。</p>
+
+<p>使用 <strong>Up To</strong> 属性设置自定义的最大屏幕宽度。仅当 <strong>Aspect Ratio Mode</strong> 设置为 <em>Custom</em> 时，此属性才可用。</p>
+
+<p><a name="Orientation"></a></p>
+
+<h3>Orientation</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidResPresOri.png" alt="Android 平台的 Default Orientation 设置">
+<figcaption>Android 平台的 Default Orientation 设置</figcaption>
+</figure>
+
+<p>从 <strong>Default Orientation</strong> 下拉菜单中选择游戏的屏幕方向：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Portrait</strong></td>
+	<td style="text-align:left;">主屏幕按钮显示在底部。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Portrait Upside Down</strong></td>
+	<td style="text-align:left;">主屏幕按钮显示在顶部。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Landscape Left</strong></td>
+	<td style="text-align:left;">主屏幕按钮显示在右侧。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Landscape Right</strong></td>
+	<td style="text-align:left;">主屏幕按钮显示在左侧。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Rotation</strong></td>
+	<td style="text-align:left;">允许屏幕自动旋转到 <strong>Allowed Orientations for Auto Rotation</strong> 设置指定的任何方向。此为默认值。</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意</strong>：iOS 和 Android 设备共享此设置。</p>
+
+<p>将方向设置为 <strong>Auto Rotation</strong> 时，将显示 <strong>Allowed Orientations for Auto Rotation</strong> 部分。</p>
+
+<p><a name="supportedOris"></a></p>
+
+<h3>Allowed Orientations for Auto Rotation</h3>
+
+<p>仅当 <strong>Default Orientation</strong> 设置为 <strong>Auto Rotation</strong> 时才会显示此部分。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetiOSResPresOriSupp.png" alt="Android 平台的 Allowed Orientations for Auto Rotation Player 设置">
+<figcaption>Android 平台的 Allowed Orientations for Auto Rotation Player 设置</figcaption>
+</figure>
+
+<p>由于 <strong>Auto Rotation</strong> 会更改屏幕方向以匹配设备，您可能希望限制允许的屏幕方向（例如，将设备锁定为横向）。</p>
+
+<p>通过选中本部分中的复选框，启用要允许的每个方向：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Portrait</strong></td>
+	<td style="text-align:left;">允许纵向方向。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Portrait Upside Down</strong></td>
+	<td style="text-align:left;">允许纵向上下翻转方向。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Landscape Right</strong></td>
+	<td style="text-align:left;">允许横向右侧方向（主屏幕按钮位于<strong>左侧</strong>）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Landscape Left</strong></td>
+	<td style="text-align:left;">允许横向左侧方向（主屏幕按钮位于<strong>右侧</strong>）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="OtherRes"></a></p>
+
+<h3>Other</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSettingAndroidResPres-Other.png" alt="Android 平台的其他 Resolution and Presentation 设置">
+<figcaption>Android 平台的其他 Resolution and Presentation 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Use 32-bit Display Buffer</strong></td>
+	<td style="text-align:left;">启用此选项可创建显示缓冲区以保存 32 位颜色值（默认为 16 位）。如果在<a href="PostProcessingOverview.html">后期处理效果</a>中看到条带或需要 Alpha，请使用此选项，因为这些效果使用与显示缓冲区相同的格式创建<a href="class-RenderTexture.html">渲染纹理</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Disable Depth and Stencil</strong></td>
+	<td style="text-align:left;">启用此选项可禁用深度和模板缓冲区。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Render Over Native UI</strong></td>
+	<td style="text-align:left;">如果希望 Unity 在 Android 或 iOS 上的 UI 之上渲染，请启用此选项。摄像机的 Clear Flags 必须设置为 Solid color，并且 Alpha 小于 1，此属性才能生效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show Loading Indicator</strong></td>
+	<td style="text-align:left;">选择应如何显示加载指示符。选项为 <em>Don’t Show</em>、<em>Large</em>、<em>Inversed Large</em>、<em>Small</em> 和 <em>Inversed Small</em>。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Splash"></a></p>
+
+<h2>Splash Image</h2>
+
+<p>在<a href="class-PlayerSettingsSplashScreen.html">通用 Splash Screen 设置</a>之上，可以使用 <strong>Virtual Reality Splash Image</strong> 设置来指定<a href="XR.html">虚拟现实</a>显示的自定义启动画面。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidSplash.png" alt="Android 平台播放器的启动画面设置">
+<figcaption>Android 平台播放器的启动画面设置</figcaption>
+</figure>
+
+<p>以下是通用 Splash Screen 设置，可以设置特定于 Android 的 <strong>Static Splash Image</strong> 选项。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidSplashStory.png" alt="Android Player 平台上的 Use Storyboard for Launch Screen 选项">
+<figcaption>Android Player 平台上的 Use Storyboard for Launch Screen 选项</figcaption>
+</figure>
+
+<p>使用 <strong>Android Splash Screen</strong> 属性可指定应该用于 Android 启动画面的纹理。启动画面图像的标准大小为 320x480。</p>
+
+<p>从 <strong>Splash Scaling</strong> 下拉菜单中选择您希望 Unity 如何缩放启动画面以适合设备的屏幕。选项包括：</p>
+
+<ul>
+<li><strong>Center (only scale down)</strong></li>
+<li><strong>Scale to Fit (letter-boxed)</strong></li>
+<li><strong>Scale to Fill (cropped)</strong></li>
+</ul>
+
+<p><a name="Other"></a></p>
+
+<h2>Other Settings</h2>
+
+<p>此部分可以自定义一系列选项，这些选项分为以下几组：</p>
+
+<ul>
+<li><a href="#Rendering">Rendering</a></li>
+<li><a href="#Vulkan">Vulkan Settings</a></li>
+<li><a href="#Identification">Identification</a></li>
+<li><a href="#Configuration">Configuration</a></li>
+<li><a href="#Optimization">Optimization</a></li>
+<li><a href="#Logging">Logging</a></li>
+<li><a href="#Legacy">Legacy</a></li>
+</ul>
+
+<p><a name="Rendering"></a></p>
+
+<h3>渲染</h3>
+
+<p>使用这些设置可自定义 Unity 针对 Android 平台渲染游戏的方式。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidRender.png" alt="Android 平台的 Rendering 设置">
+<figcaption>Android 平台的 Rendering 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Color Space</strong></td>
+	<td style="text-align:left;">选择应该用于渲染的颜色空间，选项为：__Gamma__ 或 <strong>Linear</strong>。<br>请参阅<a href="LinearLighting.html">线性渲染概述</a>以了解这两者之间的区别。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Graphics API</strong></td>
+	<td style="text-align:left;">禁用此选项可手动选择和重新排序图形 API。(<a href="https://developer.android.com/guide/topics/graphics/opengl.html">OpenGL</a>)。默认情况下会启用此选项，并且 Unity 会尝试 GLES3.2。如果设备不支持 GLES3.2，Unity 将回退到 GLES3.1、GLES3 或 GLES2。如果列表中只有 GLES3，则会出现其他复选框：__Require ES3.1<strong>、</strong>Require ES3.1+AEP__ 和 <strong>Require ES3.2</strong>。这些选项允许您强制使用相应的图形 API。<br> <strong>重要信息</strong>：仅当 GLES2 不在列表中并且 <a href="#minAPIlevel">Minimum API Level</a> 设置为 JellyBean（API 级别 18）或更高版本时，Unity 才会将 GLES3/GLES3.1/AEP/3.2 要求添加到 Android 清单中。只有在这种情况下，应用程序才不会显示在不受支持设备上的 Google Play 应用商店中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Color Gamut</strong></td>
+	<td style="text-align:left;">可以为 Android 平台添加或删除色域以用于渲染。单击加号 (+) 图标查看可用色域的列表。色域定义了给定设备（如监视器或屏幕）可以使用的所有颜色范围。sRGB 色域是默认色域（也是必需色域）。如果目标设备是具备宽色域显示屏的设备，请使用 DisplayP3 充分利用显示能力。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Multithreaded Rendering</strong></td>
+	<td style="text-align:left;">启用此选项可将 Unity 的主线程中的图形 API 调用移动到单独的工作线程。这有助于提高主线程上 CPU 使用率很高的应用程序的性能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Static Batching</strong></td>
+	<td style="text-align:left;">启用此选项可在构建中使用<a href="DrawCallBatching.html">静态批处理</a>（默认情况下启用）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Dynamic Batching</strong></td>
+	<td style="text-align:left;">启用此选项可在构建中使用<a href="DrawCallBatching.html">动态批处理</a>（默认情况下启用）。<br><strong>注意</strong>：当<a href="ScriptableRenderPipeline.html">可编程渲染管线</a>激活时，动态批处理无效，所以仅当 Graphics Settings 中未设置编程渲染管线资源时，此设置才可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Compute Skinning</strong></td>
+	<td style="text-align:left;">启用此选项可使用 GPU 计算蒙皮，这样可以释放 CPU 资源。在支持 OpenGL ES 3.1 或 Vulkan 的设备上都支持计算蒙皮。要了解有关 GPU 计算蒙皮的更多信息，请参阅<a href="https://en.wikipedia.org/wiki/Skeletal_animation">关于骨骼动画的 Wikipedia 页面</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics Jobs</strong></td>
+	<td style="text-align:left;">启用此选项可指示 Unity 将图形任务（渲染循环）卸载到在其他 CPU 核心上运行的工作线程。这可以减少主线程上 <a href="../ScriptReference/Camera.Render.html">Camera.Render</a> 所花费的时间，该时间通常成为瓶颈。<br><strong>注意</strong>：Unity 目前仅在使用 <a href="https://www.khronos.org/vulkan/">Vulkan</a> 时支持图形作业 (Graphics Jobs)，使用 <a href="https://developer.android.com/guide/topics/graphics/opengl.html">OpenGL</a> ES 时此设置无效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Encoding</strong></td>
+	<td style="text-align:left;">选择 <em>Low Quality</em>、<em>Normal Quality</em> 或 <em>High Quality</em> 来设置光照贴图编码。此设置影响光照贴图的编码方案和压缩格式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Streaming Enabled</strong></td>
+	<td style="text-align:left;">启用此选项可以仅根据需要加载光照贴图 Mipmap。要渲染当前游戏摄像机，Unity 会在生成纹理时将此值应用于光照贴图纹理。<br><strong>注意</strong>：要使用此值，请启用 <a href="class-QualitySettings.html#texStream">Texture Streaming Quality 设置</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Streaming Priority</strong></td>
+	<td style="text-align:left;">定义在争用资源时的光照贴图 Mipmap 串流优先级。有效范围是 –127 到 128，其中正数表示更高的优先级。仅当选中 Lightmap Streaming Enabled 时，此设置才可用。要使用此值，请启用 <a href="class-QualitySettings.html#texStream">Texture Streaming Quality 设置</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Protect Graphics Memory</strong></td>
+	<td style="text-align:left;">选中此框可强制仅通过受硬件保护的路径显示图形缓冲区。仅适用于支持该选项的设备。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Frame Timing Stats</strong></td>
+	<td style="text-align:left;">收集有关帧在 CPU 和 GPU 上花费的时间的统计信息。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Vulkan"></a></p>
+
+<h3>Vulkan Settings</h3>
+
+<p>启用 <strong>SRGB Write Mode</strong> 选项可允许 Vulkan 渲染器上的 Graphics.SetSRGBWrite() 在帧期间切换 sRGB 写模式。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Vulkan.png" alt="Android 平台的 Vulkan Player 设置">
+<figcaption>Android 平台的 Vulkan Player 设置</figcaption>
+</figure>
+
+<p><strong>注意：</strong>启用此功能可能会降低性能，尤其是基于区块的 GPU。</p>
+
+<p><a name="Identification"></a></p>
+
+<h3>Identification</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidIdentification.png" alt="Android 平台的 Identification 设置">
+<figcaption>Android 平台的 Identification 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Package Name</strong></td>
+	<td style="text-align:left;">设置应用程序 ID，用于在设备和 Google Play 应用商店中唯一标识您的应用程序。标识符的基本结构是 <strong>com.CompanyName.AppName__，也可以任意选择。iOS 和 Android 共享此设置。|
+|</strong>Version__</td>
+	<td style="text-align:left;">输入捆绑包的构建版本号，用于标识捆绑包的迭代（已发布或未发布）。版本以通用格式指定，该格式包含以点号分隔的数字的字符串（例如，4.3.2）。（在 iOS 和 Android 之间共享。）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bundle Version Code</strong></td>
+	<td style="text-align:left;">内部版本号。此数字仅用于确定一个版本是否比另一个版本更新，数字更大表示版本越新。这不是向用户显示的版本号；向用户显示的版本号由 <code>versionName</code> 属性设置。该值必须设置为整数，例如“100”。您可以根据需要定义，只要每个后续版本具有更高的数字即可。<br><br>例如，它可以是构建版本号。或者，可以通过在低 16 位和高 16 位分别编码“x”和“y”将“x.y”格式的版本号转换为整数。或者，每次发布新版本时，只需将数字加一。<br><br>如果启用了 <strong>Split APKs by target architecture__，请将此数字保持在 100000 以下。每个 APK 必须具有唯一的版本代码，因此 Unity 为 ARMv7 添加 100000，为 ARM64 添加 200000。|
+|<a name="minAPIlevel"></a></strong>Minimum API Level<strong>|运行应用程序所需的最低 Android 版本（API 级别）。|
+|</strong>Target API Level__</td>
+	<td style="text-align:left;">编译应用程序针对的目标 Android 版本（API 级别）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Configuration"></a></p>
+
+<h3>Configuration</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidConfiguration.png" alt="Android 平台的 Configuration 设置">
+<figcaption>Android 平台的 Configuration 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="backend"></a><strong>Scripting Backend</strong>
+</td>
+	<td style="text-align:left;">选择要使用的脚本后端。脚本后端确定 Unity 如何在项目中编译和执行 C# 代码。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Mono</em></td>
+	<td style="text-align:left;">将 C# 代码编译为 .NET 公共中间语言 (CIL) 并使用公共语言运行时执行该 CIL。有关更多信息，请参阅 <a href="https://www.mono-project.com/">Mono Project</a> 网站。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>IL2CPP</em></td>
+	<td style="text-align:left;">将 C# 代码编译为 CIL，将 CIL 转换为 C++，然后将该 C++ 编译为本机机器代码，该代码在运行时直接执行。请参阅 <a href="IL2CPP.html">IL2CPP</a> 以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>API Compatibility Level</strong></td>
+	<td style="text-align:left;">选择可以在项目中使用的 .NET API 运行时。此设置可能会影响与第三方库的兼容性。<br><strong>提示</strong>：如果您遇到第三方程序集的问题，可以尝试下文的 <a href="#apiComp">API Compatibility Level</a> 部分中的建议。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.Net 2.0</em></td>
+	<td style="text-align:left;">.Net 2.0 库。最高的 .net 兼容性，最大的文件大小。属于已弃用的 .NET 3.5 运行时。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.Net 2.0 Subset</em></td>
+	<td style="text-align:left;">完整 .net 兼容性的子集，最小的文件大小。属于已弃用的 .NET 3.5 运行时。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.Net Standard 2.0</em></td>
+	<td style="text-align:left;">兼容 <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">.NET Standard 2.0</a>。生成较小的构建并具有完整的跨平台支持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.Net 4.x</em></td>
+	<td style="text-align:left;">兼容 .NET Framework 4（包括 .NET Standard 2.0 配置文件中的所有内容以及其他 API）。如果使用的库需要访问 .NET Standard 2.0 中未包含的 API，请选择此选项。生成更大的构建，并且任何可用的其他 API 不一定在所有平台上都受支持。有关更多信息，请参阅<a href="dotnetProfileAssemblies.html">引用其他类库程序集</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>C++ Compiler Configuration</strong></td>
+	<td style="text-align:left;">选择在编译 IL2CPP 生成的代码时使用的 C++ 编译器配置。<br><strong>注意</strong>：除非 <strong>Scripting Backend</strong> 设置为 <em>IL2CPP_，否则此属性被禁用。|
+|<strong>Use incremental GC</strong>||使用增量式垃圾回收器，这种垃圾回收器将垃圾收集工作分布在多个帧上，因此可以在帧持续时间中减少与 gc 相关的峰值。|
+|<strong>Mute Other Audio Sources</strong> ||如果希望 Unity 应用程序从后台运行的应用程序中停止音频，请启用此选项。否则，来自后台应用程序的音频继续与 Unity 应用程序一起播放。|
+|<strong>Target Architectures</strong> ||选择要允许在哪些 CPU 上运行应用程序（32 位 ARM、64 位 ARM 和 32 位 Intel）。<br><strong>注意：</strong>在 64 位环境中运行 Android 应用程序具有性能优势，且 64 位应用程序可以寻址超过 4 GB 的内存空间。|
+|<strong>Split APKs by target architecture (Experimental)</strong> ||启用此选项可为 <strong>Target Architectures</strong> 中选择的每个 CPU 架构创建单独的 APK。因此，Google Play 应用商店用户的下载文件将变小。这是 Google Play 应用商店的特色功能，在其他应用商店中可能无效。有关更多详细信息，请参阅<a href="https://developer.android.com/google/play/publishing/multiple-apks.html">多 APK 支持 (Multiple APK Support)</a>。|
+|<strong>Install Location</strong> ||指定设备上的应用程序安装位置（有关详细信息，请参阅<a href="http://developer.android.com/guide/appendix/install-location.html">有关安装位置的 Android 开发者文档</a>。|
+||</em>Automatic_</td>
+	<td style="text-align:left;">让操作系统决定。用户可以来回移动应用程序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Prefer External</em></td>
+	<td style="text-align:left;">如果可能，将应用程序安装到外部存储（SD 卡）。操作系统不保证会安装到外部存储；如果不能，该应用程序将安装到内部内存。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Force Internal</em></td>
+	<td style="text-align:left;">强制将应用程序安装到内部内存。用户将无法将应用程序移动到外部存储。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Internet Access</strong></td>
+	<td style="text-align:left;">选择是否始终将网络 (<code>INTERNET</code>) 权限添加到 <a href="android-manifest.html">Android 清单</a>（即使您没有使用任何网络 API）。默认情况下，对于开发版设置为 <em>Require</em>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Auto</em></td>
+	<td style="text-align:left;">仅当使用了网络 API 时才会添加互联网访问权限。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Require</em></td>
+	<td style="text-align:left;">始终添加互联网访问权限。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Write Permission</strong></td>
+	<td style="text-align:left;">选择是否启用对外部存储（例如 SD 卡）的写访问权限，并为 Android 清单添加相应的权限。默认情况下，对于开发版设置为 <em>External(SDCard)</em>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Internal</em></td>
+	<td style="text-align:left;">仅授予对内部存储的写入权限。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>External(SDCard)</em></td>
+	<td style="text-align:left;">启用对外部存储的写入权限。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Filter Touches When Obscured</strong></td>
+	<td style="text-align:left;">启用此选项可忽略另一个可见窗口覆盖 Unity 应用程序时收到的触摸操作。这是为了防止点击劫持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Sustained Performance Mode</strong></td>
+	<td style="text-align:left;">启用此选项可在较长时间内设置可预测且一致的设备性能级别，而无需考虑热节流。启用此设置时，整体性能可能会降低。基于 <a href="https://developer.android.com/about/versions/nougat/android-7.0.html#sustained_performance_api">Android Sustained Performance API</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Maximum Java Heap Size</strong></td>
+	<td style="text-align:left;">设置用户可以构建的最大 Java 堆大小（以兆字节为单位）。默认为 4096。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Low Accuracy Location</strong></td>
+	<td style="text-align:left;">启用此选项可改用 Android 位置 API 提供的低精度值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Android TV Compatibility</strong></td>
+	<td style="text-align:left;">启用此选项可将应用程序标记为兼容 Android TV。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Android Game</em></td>
+	<td style="text-align:left;">启用此选项可将输出包 (APK) 标记为游戏而非常规应用程序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Android Gamepad Support Level</em></td>
+	<td style="text-align:left;">选择应用程序为游戏手柄提供的支持程度。选项为 <strong>Works with D-Pad</strong>、<strong>Supports Gamepad</strong> 和 <strong>Requires Gamepad</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Warn about App Bundle size</strong></td>
+	<td style="text-align:left;">启用此选项可以在 <a href="https://developer.android.com/platform/technology/app-bundle">Android App Bundle</a> 超过特定阈值时收到警告。默认情况下会选择此选项，仅当在<a href="android-BuildProcess.html">构建设置 (Build settings)</a> 中启用了 <strong>Build App Bundle (Google Play)</strong> 选项时，才能配置此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>App Bundle size threshold</em></td>
+	<td style="text-align:left;">输入以 Mb 为单位的大小。当 App Bundle 超过此大小时，Unity 将显示警告。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Scripting Define Symbols</strong></td>
+	<td style="text-align:left;">设置自定义编译标志。有关更多详细信息，请参阅<a href="PlatformDependentCompilation.html">平台相关的编译</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Allow ‘unsafe’ Code</strong></td>
+	<td style="text-align:left;">允许在预定义的程序集（例如，<code>Assembly-CSharp.dll</code>）中编译<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unsafe">“不安全”的 C# 代码</a>。<br>对于程序集定义文件 (<code>.asmdef</code>)，请单击其中一个 <code>.asmdef</code> 文件，并在出现的 Inspector 窗口中启用该选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Active Input Handling</strong></td>
+	<td style="text-align:left;">选择您希望如何处理来自用户的输入。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Input Manager</em></td>
+	<td style="text-align:left;">使用传统的 <a href="class-InputManager.html">Input</a> 设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Input System (Preview)</em></td>
+	<td style="text-align:left;">使用较新的<a href="../ScriptReference/Input.html">输入</a>系统。输入系统作为此版本的预览包提供。要试用输入系统的预览版，请安装 <a href="https://github.com/Unity-Technologies/InputSystem">InputSystem 包</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Both</em></td>
+	<td style="text-align:left;">并排使用两个系统。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="apiComp"></a></p>
+
+<h4>API Compatibility Level</h4>
+
+<p>可为所有目标选择 mono API 兼容性级别。有时，第三方 .NET 库会使用 .NET 兼容性级别之外的功能。为了解在这种情况下可能发生的问题以及如何以最佳方案修复问题，请尝试以下解决方案：</p>
+
+<p>1.安装适用于 Windows 的 <a href="http://www.airsquirrels.com/reflector/">Reflector</a>。
+2.将出现问题的相关 API 兼容性级别的 .NET 程序集拖到 Reflector 中。这些程序集位于 <code>Frameworks/Mono/lib/mono/YOURSUBSET/</code> 下。
+3.拖入第三方程序集。
+4.右键单击第三方程序集并选择 <strong>Analyze</strong>。
+5.在分析报告中，检查 <strong>Depends on</strong> 部分。此报告以红色突出显示第三方程序集所依赖的但在您选择的 .NET 兼容性级别中不可用的任何内容。</p>
+
+<p><a name="Optimization"></a></p>
+
+<h3>Optimization</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidOptimization.png" alt="Android 平台的 Optimization 设置">
+<figcaption>Android 平台的 Optimization 设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Prebake Collision Meshes</strong></td>
+	<td style="text-align:left;">启用此选项可在构建时将碰撞数据添加到网格。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Keep Loaded Shaders Alive</strong></td>
+	<td style="text-align:left;">启用此选项可防止卸载着色器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Preloaded Assets</strong></td>
+	<td style="text-align:left;">设置一个资源数组，供播放器在启动时加载。<br>要添加新资源，请增大 <strong>Size</strong> 属性的值，然后在出现的新 <strong>Element</strong> 框中设置对要加载的资源的引用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>Strip Engine Code__（仅限 IL2CPP）||指定 Unity Linker 工具是否删除项目不使用的 Unity 引擎功能的代码。|
+|</strong>Managed Stripping Level<strong>||定义 Unity 剥离未使用的托管 (C#) 代码时的激进程度。<br>当 Unity 构建游戏或应用程序时，Unity Linker 进程可以从项目中使用的托管动态链接库中剥离未使用的代码。剥离代码可以使生成的可执行文件显著减小，但有时可能会错误地删除实际在使用的代码。此设置允许您选择 Unity 删除未使用代码时应采取的激进程度。|
+||<em>Disabled_（仅限 Mono）|不要剥离任何代码。（使用 IL2CPP 时会始终启用托管代码剥离。）|
+||</em>Normal<em>|删除无法访问的托管代码以减少构建大小和 Mono/IL2CPP 构建时间。|
+||</em>Aggressive_（实验性功能）|比 <em>Normal</em> 选项更激进地删除代码。代码大小进一步降低，但这种额外降低可能会产生副作用。例如，某些方法可能在调试器中不再可见，并且可以剥离通过反射访问的代码。您可以创建自定义 link.xml 文件以保留特定的类和方法。有关更多信息，请参阅<a href="IL2CPP-BytecodeStripping">使用 IL2CPP 进行托管字节码剥离</a>。|
+|<strong>Enable Internal profiler (Deprecated)</strong>||启用此选项可在测试项目时从 Android SDK 的 <a href="https://developer.android.com/studio/command-line/logcat.html">adblogcat</a> 输出中获取设备中的性能分析器数据。此选项适用于开发版。|
+|<a name="scriptCallOpt"></a></strong>Script Call Optimization__</td>
+	<td style="text-align:left;">选择如何在运行时选择性地禁用异常处理以提高速度。有关详细信息，请参阅 <a href="iphone-iOS-Optimization.html">iOS 优化</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Slow and Safe</em></td>
+	<td style="text-align:left;">使用完整的异常处理（使用 Mono 脚本后端时会对设备的性能有一些影响）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Fast but no Exceptions</em></td>
+	<td style="text-align:left;">不为设备上的异常提供数据（使用 Mono 脚本后端时游戏运行速度更快）。<br><strong>注意</strong>：如果将此选项与 IL2CPP <a href="#backend">脚本后端</a>一起使用，不会影响性能；但是，使用此选项可以避免发布版本中出现未定义的行为。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Vertex Compression</strong></td>
+	<td style="text-align:left;">设置每个通道的顶点压缩。例如，可以为除位置和光照贴图 UV 之外的所有内容启用压缩。为每个导入对象设置的整个网格压缩将覆盖在对象上设置顶点压缩。所有其他内容都遵循这些顶点压缩设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Optimize Mesh Data</strong></td>
+	<td style="text-align:left;">启用此选项可从网格中删除应用于网格的材质不需要的所有数据（例如切线、法线、颜色和 UV）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Logging"></a></p>
+
+<h3>Logging</h3>
+
+<p>选择在特定上下文中允许的日志记录类型。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Logging.png" alt="Android 平台的 Logging 设置">
+<figcaption>Android 平台的 Logging 设置</figcaption>
+</figure>
+
+<p>选中运行脚本时 (<strong>ScriptOnly</strong>)、始终 (<strong>Full</strong>) 或从不 (<strong>None</strong>) 条件下对应于每个 Log Type（__Error<strong>、</strong>Assert<strong>、</strong>Warning<strong>、</strong>Log__ 和 __Exception__）的复选框。</p>
+
+<p><a name="Legacy"></a> </p>
+
+<h3>Legacy</h3>
+
+<p>启用 <strong>Clamp BlendShapes (Deprecated)</strong> 选项可在 <a href="class-SkinnedMeshRenderer.html">SkinnedMeshRenderers</a> 中钳制混合形状权重的范围。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Legacy.png" alt="Android 平台的 Legacy 设置">
+<figcaption>Android 平台的 Legacy 设置</figcaption>
+</figure>
+
+<p><a name="Publishing"></a></p>
+
+<h2>Publishing Settings</h2>
+
+<p>使用这些设置可自定义 Android 应用程序的构建。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetAndroidPublish.png" alt="">
+</figure>
+
+<p><strong>注意：</strong>出于安全考虑，Unity 不会在此页面上保存密码。默认情况下，未签名的调试密钥库位于 MacOS 上的 <code>~/.android/debug.keystore</code> 和 Windows 上的 <code>%USERPROFILE%\.android\debug.keystore</code> 中。</p>
+
+<p><a name="keystore"></a></p>
+
+<h3>Keystore</h3>
+
+<p>要使用现有的<a href="https://developer.android.com/training/articles/keystore.html">密钥库</a>，请执行以下操作：</p>
+
+<p>1.启用 <strong>Use Existing Keystore</strong> 选项。
+2.单击 <strong>Browse Keystore</strong> 按钮，然后从文件系统中选择密钥库。
+3.在 <strong>Keystore password</strong> 中输入您的密码。</p>
+
+<p>或者，可以创建一个新密码：</p>
+
+<p>1.启用 <strong>Create a new keystore</strong> 选项。
+2.在 <strong>Keystore password</strong> 中输入密码。
+3.在 <strong>Confirm password</strong> 中重新输入密码。</p>
+
+<h3>Key</h3>
+
+<p>从 <strong>Alias</strong> 下拉菜单中选择您的密钥。</p>
+
+<p>选择后，可以在 <strong>Password</strong> 中输入密码。</p>
+
+<h3>Build</h3>
+
+<p>启用 <strong>Custom Gradle Template</strong> 选项可自定义 Gradle 构建过程，方法是自行提供对 Gradle 构建文件的更改，该文件位于以下位置：<br><code>Assets/Plugins/Android/mainTemplate.gradle</code>。</p>
+
+<p>启用 <strong>User Proguard File</strong> 选项可使用 <a href="https://www.guardsquare.com/en/products/proguard/manual/usage">Proguard</a> 文件来缩小和优化您的应用程序。有关更多信息，请参阅 <a href="android-gradle-overview.html">Gradle for Android</a>。此文件位于以下位置：<br><code>Assets/Plugins/Android/proguard-user.txt</code></p>
+
+<h3>Minify</h3>
+
+<p>指定希望使用 <strong>Proguard</strong> 还是 <strong>Gradle (Experimental)</strong> 选项进行缩小，还是选择 <strong>None</strong> 不进行缩小。从 <strong>Release</strong> 和 <strong>Debug</strong> 下拉菜单中选择其中一个选项。</p>
+
+<p>启用 <strong>Split Application Binary</strong> 选项可将输出包拆分为主包 (APK) 和扩展包 (OBB) 包。要将大于 100 MB 的应用程序发布到 Google Play 应用商店，必须启用此选项。</p>
+
+<p><a name="XR"></a></p>
+
+<h2>XR Settings</h2>
+
+<p><strong>注意：</strong>对 XR SDK 的内置支持已被弃用，在 Unity 的未来版本中将不再使用。请改用 Unity XR 插件系统。有关更多信息，请参阅 <a href="XRPluginArchitecture.html">XR 插件架构</a>。</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetiOSXR.png" alt="Android Player 的 XR Settings">
+<figcaption>Android Player 的 XR Settings</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="VRsupport"></a><strong>Virtual Reality Supported</strong>
+</td>
+	<td style="text-align:left;">如果您的应用程序是虚拟现实应用程序，请启用此选项，然后将所需的 VR SDK 添加到列表中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Virtual Reality SDKs</strong></td>
+	<td style="text-align:left;">在列表中添加和删除虚拟现实 SDK。此列表仅在启用 <strong>Virtual Reality Supported</strong> 时可用。<br>要将 SDK 添加到列表中，请单击加号 (+) 按钮。<br>要从列表中删除 SDK，请选择它，然后单击减号 (-) 按钮。<br>某些 SDK 提供了额外设置，这些设置显示在此处。有关详细信息，请参阅 <a href="XR-SDK_overviews">XR SDK</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Stereo Rendering Mode</strong></td>
+	<td style="text-align:left;">选择要为虚拟现实设备渲染的方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Multi Pass</em></td>
+	<td style="text-align:left;">这是正常的渲染模式。Unity 渲染场景两次：首先渲染左眼图像；然后再次为右眼图像。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Single Pass Multiview or Instanced (Preview)</em></td>
+	<td style="text-align:left;">将两个眼睛图像同时渲染到一个打包的渲染纹理中。这意味着整个场景只渲染一次，这大大减少了 CPU 处理时间。</td>
+</tr>
+</tbody>
+</table>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><span class="page-history">5.5 版中的更新功能</span></li>
+<li><span class="page-history">在 2017.3 版中添加了 <strong>Sustained Performance Mode</strong> 属性</span></li>
+<li><span class="page-history">在 2018.1 版中添加了 .NET 4.x 运行时</span></li>
+<li><span class="page-history">在 2018.2 版中添加了 Android <strong>Multiple APK</strong> 功能</span></li>
+<li><span class="page-history">在 <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> 中为 Android 添加了 OpenGL ES 3.2 支持 <span class="search-words">NewIn20191</span></span></li>
+<li><span class="page-history">在 Unity 2019.1 中添加了输入系统预览</span></li>
+<li><span class="page-history">在 Unity 2019.1 中添加了 <strong>Render outside safe area</strong></span></li>
+<li><span class="page-history">在 Unity 2019.2 中添加了 Warn about App Bundle size 选项</span></li>
+<li><span class="page-history">在 Unity 2019.3 将 GPU Skinning 重命名为 Compute Skinning</span></li>
+<li><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20193">2019.3</a> 中删除了 Vuforia</span></li>
+<li><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20193">2019.3</a> 中已弃用对内置 XR SDK 的支持。<span class="search-words">NewIn20193</span></span></li>
+</ul>
+<!-- area:platforms -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityRemote5.html"></a></span><div class="tip">Unity Remote</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-BuildProcess.html"></a></span><div class="tip">构建 Android 应用程序</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="创建渲染管线资源和渲染管线实例 - Unity 手册">
+<title>创建渲染管线资源和渲染管线实例 - Unity 手册</title>
+<meta name="description" content="如果您要创建自己的可编程渲染管线 (SRP)，您的项目必须包含：">
+<meta property="og:description" content="如果您要创建自己的可编程渲染管线 (SRP)，您的项目必须包含：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'srp-creating-render-pipeline-asset-and-render-pipeline-instance';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="render-pipelines.html">渲染管线</a></li>
+<li><a href="ScriptableRenderPipeline.html">可编程渲染管线</a></li>
+<li>创建渲染管线资源和渲染管线实例</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="srp-custom-getting-started.html"></a></span><div class="tip">创建自定义的可编程渲染管线</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="srp-setting-render-pipeline-asset.html"></a></span><div class="tip">设置激活的渲染管线资源</div>
+</div>
+</div></div>
+<h1>创建渲染管线资源和渲染管线实例</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>如果您要创建自己的<a href="ScriptableRenderPipeline.html">可编程渲染管线</a> (SRP)，您的项目必须包含：</p>
+
+<ul>
+<li>一个继承自 <a href="../ScriptReference/Rendering.RenderPipelineAsset.html">RenderPipelineAsset</a> 并覆盖其 <code>CreatePipeline()</code> 方法的脚本。此脚本用于定义渲染管线资源。</li>
+<li>一个继承自 <a href="../ScriptReference/Rendering.RenderPipeline.html">RenderPipeline</a> 并覆盖其 <code>Render()</code> 方法的脚本。此脚本用于定义渲染管线实例。</li>
+<li>一个从 <a href="../ScriptReference/Rendering.RenderPipelineAsset.html">RenderPipelineAsset</a> 脚本创建的渲染管线资源。此资源充当渲染管线实例的工厂类。</li>
+</ul>
+
+<p>因为这些元素非常紧密相关，所以应该同时创建它们。</p>
+
+<h2>创建基本渲染管线资源和渲染管线实例</h2>
+
+<p>以下示例显示了如何为实例化渲染管线实例的基本自定义渲染管线资源创建脚本、如何创建可定义渲染管线实例的脚本以及如何创建渲染管线资源本身。</p>
+
+<p>1.创建一个名为 <em>ExampleRenderPipelineAsset.cs</em> 的 C# 脚本。
+2.将以下代码复制并粘贴到新脚本中：</p>
+
+<pre><code>```C#
+using UnityEngine;
+using UnityEngine.Rendering;
+
+// CreateAssetMenu 属性让您可以在 Unity Editor 中创建此类的实例。
+[CreateAssetMenu(menuName = "Rendering/ExampleRenderPipelineAsset")]
+public class ExampleRenderPipelineAsset : RenderPipelineAsset
+{
+    // Unity 在渲染第一帧之前调用此方法。
+    // 如果渲染管线资源上的设置改变，Unity 将销毁当前的渲染管线实例，并在渲染下一帧之前再次调用此方法。
+    protected override RenderPipeline CreatePipeline() {
+        // 实例化此自定义 SRP 用于渲染的渲染管线。
+        return new ExampleRenderPipelineInstance();
+    }
+}
+```
+</code></pre>
+
+<p>3.创建一个名为 <em>ExampleRenderPipelineInstance.cs</em> 的 C# 脚本。
+4.将以下代码复制并粘贴到新脚本中：</p>
+
+<pre><code>```C#
+using UnityEngine;
+using UnityEngine.Rendering;
+
+public class ExampleRenderPipelineInstance : RenderPipeline
+{
+    public ExampleRenderPipelineInstance() {
+    }
+
+    // 对于当前正在渲染的每个 CameraType，Unity 每帧调用一次此方法。
+    protected override void Render (ScriptableRenderContext context, Camera[] cameras) {
+        // 可以在此处编写自定义渲染代码。通过自定义此方法可以自定义 SRP。
+    }
+}
+</code></pre>
+
+<p>```</p>
+
+<p>5.在 Project 视图中，单击添加 (+) 按钮，或者打开上下文菜单并导航至 <strong>Create</strong>，然后选择 <strong>Rendering</strong> &gt; <strong>Example Render Pipeline Asset</strong>。Unity 在 Project 视图中创建新的渲染管线资源。</p>
+
+<h2>创建可配置的渲染管线资源和渲染管线实例</h2>
+
+<p>默认情况下，渲染管线资源存储有关用于渲染的渲染管线实例以及 Editor 中使用的默认材质和着色器的信息。在 <code>RenderPipelineAsset</code> 脚本中，您可以扩展渲染管线资源以存储更多数据，并且可以在项目中拥有多个具有不同配置的不同渲染管线资源。例如，可使用渲染管线资源来保存每个不同硬件层的配置数据。高清渲染管线 (HDRP) 和通用渲染管线 (URP) 包含这方面的示例。</p>
+
+<p>以下示例显示了如何创建 <code>RenderPipelineAsset</code> 脚本（该脚本使用公共数据来定义渲染管线资源，而公共数据则可以通过 Inspector 针对每个实例加以设置）和渲染管线实例（该实例在其构造函数中接收渲染管线资源，并使用此渲染管线资源的数据）。</p>
+
+<p>1.创建一个名为 <em>ExampleRenderPipelineAsset.cs</em> 的 C# 脚本。
+2.将以下代码复制并粘贴到新脚本中：</p>
+
+<pre><code>```C#
+using UnityEngine;
+using UnityEngine.Rendering;
+
+// CreateAssetMenu 属性让您可以在 Unity Editor 中创建此类的实例。
+[CreateAssetMenu(menuName = "Rendering/ExampleRenderPipelineAsset")]
+public class ExampleRenderPipelineAsset : RenderPipelineAsset
+{
+    // 可以在 Inspector 中为每个渲染管线资源定义此数据
+    public Color exampleColor;
+    public string exampleString;
+
+        // Unity 在渲染第一帧之前调用此方法。
+       // 如果渲染管线资源上的设置改变，Unity 将销毁当前的渲染管线实例，并在渲染下一帧之前再次调用此方法。
+    protected override RenderPipeline CreatePipeline() {
+        //  实例化此自定义 SRP 用于渲染的渲染管线，然后传递对此渲染管线资源的引用。
+        // 然后，渲染管线实例可以访问上方定义的配置数据。
+        return new ExampleRenderPipelineInstance(this);
+    }
+}
+```
+</code></pre>
+
+<p>3.创建一个名为 <em>ExampleRenderPipelineInstance.cs</em> 的 C# 脚本。
+4.将以下代码复制并粘贴到新脚本中：</p>
+
+<pre><code>```C#
+using UnityEngine;
+using UnityEngine.Rendering;
+
+public class ExampleRenderPipelineInstance : RenderPipeline
+{
+    // 使用此变量来引用传递给构造函数的渲染管线资源
+    private ExampleRenderPipelineAsset renderPipelineAsset;
+
+    // 构造函数将 ExampleRenderPipelineAsset 类的实例作为其参数。
+    public ExampleRenderPipelineInstance(ExampleRenderPipelineAsset asset) {
+        renderPipelineAsset = asset;
+    }
+
+    // 对于当前正在渲染的每个 CameraType，Unity 每帧调用一次此方法。
+    protected override void Render(ScriptableRenderContext context, Camera[] cameras) {
+        //这是使用渲染管线资源数据的示例。
+        Debug.Log(renderPipelineAsset.exampleString);
+
+            // 可以在此处编写自定义渲染代码。通过自定义此方法可以自定义 SRP。
+    }
+}
+
+```
+</code></pre>
+
+<p>5.在 Project 视图中，单击添加 (+) 按钮，或者打开上下文菜单并导航至 <strong>Create</strong>，然后选择 <strong>Rendering</strong> &gt; <strong>Example Render Pipeline Asset</strong>。Unity 在 Project 视图中创建新的渲染管线资源。</p>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="srp-custom-getting-started.html"></a></span><div class="tip">创建自定义的可编程渲染管线</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="srp-setting-render-pipeline-asset.html"></a></span><div class="tip">设置激活的渲染管线资源</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

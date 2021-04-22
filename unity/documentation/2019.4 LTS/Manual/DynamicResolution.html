@@ -1,0 +1,371 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="动态分辨率 - Unity 手册">
+<title>动态分辨率 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/uploads/Main/DynamicResolution.png">
+<meta name="description" content="动态分辨率是一种摄像机设置，允许动态缩放单个渲染目标，以便减少 GPU 上的工作负载。在应用程序的帧率降低的情况下，可以逐渐缩小分辨率来保持帧率稳定。如果性能数据表明由于应用程序受 GPU 限制而导致帧率即将降低，则 Unity 会触发此缩放。还可以手动触发缩放，方法是抢占应用程序中 GPU 资源消耗特别高的部分，并通过脚本控制缩放。如果缩放逐渐进行，动态分辨率几乎不可察觉。">
+<meta property="og:description" content="动态分辨率是一种摄像机设置，允许动态缩放单个渲染目标，以便减少 GPU 上的工作负载。在应用程序的帧率降低的情况下，可以逐渐缩小分辨率来保持帧率稳定。如果性能数据表明由于应用程序受 GPU 限制而导致帧率即将降低，则 Unity 会触发此缩放。还可以手动触发缩放，方法是抢占应用程序中 GPU 资源消耗特别高的部分，并通过脚本控制缩放。如果缩放逐渐进行，动态分辨率几乎不可察觉。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'DynamicResolution';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.3',version_string: '2020.3',supported: true},{version: '2020.2',version_string: '2020.2',supported: false},{version: '2020.1',version_string: '2020.1',supported: false},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/DynamicResolution.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/DynamicResolution.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/DynamicResolution.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/DynamicResolution.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/DynamicResolution.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/DynamicResolution.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/DynamicResolution.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/DynamicResolution.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/DynamicResolution.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/DynamicResolution.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/DynamicResolution.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/DynamicResolution.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/DynamicResolution.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/DynamicResolution.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/DynamicResolution.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/DynamicResolution.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/DynamicResolution.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/DynamicResolution.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/DynamicResolution.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/DynamicResolution.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/DynamicResolution.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/DynamicResolution.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/DynamicResolution.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/DynamicResolution.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/DynamicResolution.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/DynamicResolution.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/DynamicResolution.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/DynamicResolution.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/DynamicResolution.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/DynamicResolution.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/DynamicResolution.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/DynamicResolution.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.3" href="/cn/2020.3/Manual/DynamicResolution.html">2020.3</a></li>
+<li class=""><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/DynamicResolution.html">2020.2</a></li>
+<li class=""><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/DynamicResolution.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/DynamicResolution.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/DynamicResolution.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/DynamicResolution.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/DynamicResolution.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/DynamicResolution.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/DynamicResolution.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/DynamicResolution.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/DynamicResolution.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/DynamicResolution.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/DynamicResolution.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/DynamicResolution.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/DynamicResolution.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/DynamicResolution.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="CamerasOverview.html">摄像机</a></li>
+<li>动态分辨率</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="occlusion-culling-additional-resources.html"></a></span><div class="tip">有关遮挡剔除的其他资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CamerasReference.html"></a></span><div class="tip">摄像机参考</div>
+</div>
+</div></div>
+<h1>动态分辨率</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>动态分辨率是一种摄像机设置，允许动态缩放单个渲染目标，以便减少 GPU 上的工作负载。在应用程序的帧率降低的情况下，可以逐渐缩小分辨率来保持帧率稳定。如果性能数据表明由于应用程序受 GPU 限制而导致帧率即将降低，则 Unity 会触发此缩放。还可以手动触发缩放，方法是抢占应用程序中 GPU 资源消耗特别高的部分，并通过脚本控制缩放。如果缩放逐渐进行，动态分辨率几乎不可察觉。</p>
+
+<h2>支持的平台</h2>
+
+<p>Unity 在 Xbox One、PS4、Nintendo Switch、iOS、macOS 和 tvOS（仅限 Metal）、Android（仅限 Vulkan）、Windows 独立平台和 UWP（仅限 DirectX 12）上支持动态分辨率。</p>
+
+<h2>对渲染目标的影响</h2>
+
+<p>使用动态分辨率，Unity 不会重新分配渲染目标。从概念上讲，Unity 会缩放渲染目标；但实际上，Unity 使用锯齿，而且缩小的渲染目标仅使用原始渲染目标的一小部分。Unity 以全分辨率分配渲染目标，然后动态分辨率系统会缩小渲染目标并再次备份，使用的是原始目标的一部分而不是重新分配新目标。</p>
+
+<h2>缩放渲染目标</h2>
+
+<p>使用动态分辨率时，渲染目标具有 <a href="../ScriptReference/RenderTextureCreationFlags.DynamicallyScalable.html">DynamicallyScalable</a> 标志。可通过设置此标志来指明 Unity 是否应该将此渲染纹理作为动态分辨率过程的一部分进行缩放。摄像机还具有 <a href="../ScriptReference/Camera-allowDynamicResolution.html">allowDynamicResolution</a> 标志，使用该标志可以这样设置动态分辨率：在只想将动态分辨率应用于不太复杂的场景时，无需覆盖渲染目标。</p>
+
+<figure>
+<img src="../uploads/Main/DynamicResolution.png" alt="">
+</figure>
+
+<h2>MRT 缓冲区</h2>
+
+<p>在 Camera 组件上启用 <strong>Allow Dynamic Resolution</strong> 时，Unity 会缩放该摄像机的所有目标。</p>
+
+<h2>控制缩放</h2>
+
+<p>可以通过 <a href="../ScriptReference/ScalableBufferManager.html">ScalableBufferManager</a> 控制缩放。借助 <a href="../ScriptReference/ScalableBufferManager.html">ScalableBufferManager</a>，可以控制已标记由动态分辨率系统进行扩展的所有渲染目标的动态宽度和高度缩放。</p>
+
+<p>例如，假设应用程序以理想的帧率运行，但在某些情况下，由于粒子增多、后期效果和屏幕复杂性等多重因素的影响，GPU 性能会下降。Unity <a href="../ScriptReference/FrameTimingManager.html">FrameTimingManager</a> 可以检测 CPU 或 GPU 性能何时开始下降。因此，可使用 <code>FrameTimingManager</code> 计算新的所需宽度和高度缩放以将帧率保持在所需范围内，并将缩放降低到该值以保持性能稳定（立即进行或在设定的帧数内逐渐进行）。当屏幕复杂度降低并且 GPU 性能稳定时，可将宽度和高度缩放提高到事先计算出的 GPU 可以处理的值。</p>
+
+<h2>示例</h2>
+
+<p>以下示例脚本演示了 API 的基本用法。将该脚本添加到场景中的摄像机，然后在 Camera 设置中选中 <strong>Allow Dynamic Resolution</strong>。还需要打开 <strong>Player</strong> 设置（菜单：__Edit &gt; Project Settings__，然后选择 <strong>Player</strong> 类别）并选中 <strong>Enable Frame Timing Stats</strong> 复选框。</p>
+
+<p>单击鼠标或用一根手指点击屏幕，分别将高度和宽度分辨率降低 <code>scaleWidthIncrement</code> 和 <code>scaleHeightIncrement</code> 变量中的大小。用两根手指点击会以相同的增量提高分辨率。</p>
+
+<pre><code>using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class DynamicResolutionTest : MonoBehaviour
+{
+    public Text screenText;
+
+    FrameTiming[] frameTimings = new FrameTiming[3];
+
+    public float maxResolutionWidthScale = 1.0f;
+    public float maxResolutionHeightScale = 1.0f;
+    public float minResolutionWidthScale = 0.5f;
+    public float minResolutionHeightScale = 0.5f;
+    public float scaleWidthIncrement = 0.1f;
+    public float scaleHeightIncrement = 0.1f;
+
+    float m_widthScale = 1.0f;
+    float m_heightScale = 1.0f;
+
+    // 跨帧保持的动态分辨率算法变量
+    uint m_frameCount = 0;
+
+    const uint kNumFrameTimings = 2;
+
+    double m_gpuFrameTime;
+    double m_cpuFrameTime;
+
+    // 使用此函数进行初始化
+    void Start()
+    {
+        int rezWidth = (int)Mathf.Ceil(ScalableBufferManager.widthScaleFactor * Screen.currentResolution.width);
+        int rezHeight = (int)Mathf.Ceil(ScalableBufferManager.heightScaleFactor * Screen.currentResolution.height);
+        screenText.text = string.Format("Scale: {0:F3}x{1:F3}\nResolution: {2}x{3}\n",
+            m_widthScale,
+            m_heightScale,
+            rezWidth,
+            rezHeight);
+    }
+
+    // 每帧调用一次 Update
+    void Update()
+    {
+        float oldWidthScale = m_widthScale;
+        float oldHeightScale = m_heightScale;
+
+        // 一根手指降低分辨率
+        if (Input.GetButtonDown("Fire1"))
+        {
+            m_heightScale = Mathf.Max(minResolutionHeightScale, m_heightScale - scaleHeightIncrement);
+            m_widthScale = Mathf.Max(minResolutionWidthScale, m_widthScale - scaleWidthIncrement);
+        }
+
+        // 两根手指提高分辨率
+        if (Input.GetButtonDown("Fire2"))
+        {
+            m_heightScale = Mathf.Min(maxResolutionHeightScale, m_heightScale + scaleHeightIncrement);
+            m_widthScale = Mathf.Min(maxResolutionWidthScale, m_widthScale + scaleWidthIncrement);
+        }
+
+        if (m_widthScale != oldWidthScale || m_heightScale != oldHeightScale)
+        {
+            ScalableBufferManager.ResizeBuffers(m_widthScale, m_heightScale);
+        }
+        DetermineResolution();
+        int rezWidth = (int)Mathf.Ceil(ScalableBufferManager.widthScaleFactor * Screen.currentResolution.width);
+        int rezHeight = (int)Mathf.Ceil(ScalableBufferManager.heightScaleFactor * Screen.currentResolution.height);
+        screenText.text = string.Format("Scale: {0:F3}x{1:F3}\nResolution: {2}x{3}\nScaleFactor: {4:F3}x{5:F3}\nGPU: {6:F3} CPU: {7:F3}",
+            m_widthScale,
+            m_heightScale,
+            rezWidth,
+            rezHeight,
+            ScalableBufferManager.widthScaleFactor,
+            ScalableBufferManager.heightScaleFactor,
+            m_gpuFrameTime,
+            m_cpuFrameTime);
+    }
+
+    // 估算下一帧时间并在必要时更新分辨率缩放。
+    private void DetermineResolution()
+    {
+        ++m_frameCount;
+        if (m_frameCount &lt;= kNumFrameTimings)
+        {
+            return;
+        }
+        FrameTimingManager.CaptureFrameTimings();
+        FrameTimingManager.GetLatestTimings(kNumFrameTimings, frameTimings);
+        if (frameTimings.Length &lt; kNumFrameTimings)
+        {
+            Debug.LogFormat("Skipping frame {0}, didn't get enough frame timings.",
+                m_frameCount);
+
+            return;
+        }
+
+        m_gpuFrameTime = (double)frameTimings[0].gpuFrameTime;
+        m_cpuFrameTime = (double)frameTimings[0].cpuFrameTime;
+    }
+}
+</code></pre>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li>
+<a href="../ScriptReference/FrameTimingManager.html">FrameTimingManager</a> 脚本类参考。</li>
+<li>
+<a href="../ScriptReference/ScalableBufferManager.html">ScalableBufferManager</a> 脚本类参考。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–09–20 页面已发布</span></p></li>
+<li><p><span class="page-history">在 2017.4 版中添加了有关动态分辨率的文档</span></p></li>
+<li><p><span class="page-history">在 2019.1 中添加了对 macOS（仅限 Metal）、Windows 独立平台和 UWP（仅限 DirectX 12）的动态分辨率支持</span></p></li>
+</ul>
+<!-- area:graphics -->
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="occlusion-culling-additional-resources.html"></a></span><div class="tip">有关遮挡剔除的其他资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CamerasReference.html"></a></span><div class="tip">摄像机参考</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>
