@@ -9,11 +9,16 @@ import json
 import time
 
 DEFAULT_TEMP_PATH = "__update_temp"
+DEFAULT_CACHE_PATH = "__update_cache"
+DEFAULT_RESULT_PATH = "update_gen_result"
 LOW_VERSION_TAG = "low"
 HIGH_VERSION_TAG = "high"
 DIFF_TAG = "diff"
 PATCH_SUFFIX = ".zpf"
+
 cur_temp_path = DEFAULT_TEMP_PATH
+cur_cache_path = DEFAULT_CACHE_PATH
+cur_result_path = DEFAULT_RESULT_PATH
 
 def unzip_file(src, dst):
     zip = zipfile.ZipFile(src, "r")
@@ -35,6 +40,17 @@ def write_file(content, path):
     file.write(content)
     file.close()
 
+def read_json(file_path):
+    content = None
+    try:
+        with open(file_path, "r", encoding = "utf_8_sig") as load_f:
+            content = json.loads(load_f.read())
+    except Exception as e:
+        log(e)
+        on_execute_error("'%s' json parsing failed"%file_path)
+
+    return content
+
 def get_md5(filepath):
     f = open(filepath,'rb')  
     md5obj = hashlib.md5()  
@@ -51,7 +67,7 @@ def get_dir_size(directory):
 
 def reset_dir(directory):
     if os.path.exists(directory):
-        shutil.rmtree(directory)
+        shutil.rmtree(directory, ignore_errors=True)
     os.makedirs(directory)  
 
 def check_file_parent(filepath):
@@ -60,6 +76,7 @@ def check_file_parent(filepath):
         os.makedirs(directory)
 
 def fix_path(path):
+    if len(path) == 0: return path
     path = path.replace(r'\/'.replace(os.sep, ''), os.sep)
     if path[-1] == os.sep:
         return path[:-1]
@@ -123,11 +140,8 @@ def generate_patch(low_asset_path, high_asset_path, patch_path):
 def get_version(asset_path):
     file_path = join(asset_path, "ZeusSetting", "BuildinSetting", "HotfixLocalConfig.json")
     check_path_exist(file_path)
-    version = None
-    with open(file_path, "r", encoding = "utf_8_sig") as load_f:
-        version = json.loads(load_f.read())["ver"]
-
-    version = "300"
+    version = read_json(file_path)["ver"]
+    version = "900"  # todomark
     if version is None or not version.isdigit():
         on_execute_error("read '%s' version failed, ver is '%s'"%(file_path,version))
     return version
@@ -165,33 +179,33 @@ def generate_json(json_file, params):
     write_file(json_str, json_file)
 
 def generate(args):
-    server_path = args["root"]
     channel = args["channel"]
     target_apk_path = args["apk"]
 
     log("start generate ...")
 
-    server_path = fix_path(server_path)
     check_path_exist(target_apk_path)
-
     # 读取目标版本
     asset_path = get_asset_path(target_apk_path, "target_apk_unzip")
     target_ver_name = get_version(asset_path)
 
     log("read target version : %s"%target_ver_name)
 
-    channel_path = join(server_path, channel)
-    if not os.path.exists(channel_path):
-        log("create channel : %s"%channel)
-        os.mkdir(channel_path)
+    if not os.path.exists(cur_cache_path):
+        os.mkdir(cur_cache_path)
 
-    target_ver_path = join(channel_path, target_ver_name)
-    if os.path.exists(target_ver_path):
-        on_execute_error("'%s' already exists"%target_ver_path)
+    cache_channel_path = join(cur_cache_path, channel)
+    if not os.path.exists(cache_channel_path):
+        log("create channel for caching : %s"%channel)
+        os.mkdir(cache_channel_path)
+
+    cache_target_path = join(cache_channel_path, target_ver_name)
+    if os.path.exists(cache_target_path):
+        on_execute_error("'%s' already exists"%cache_target_path)
     
     vers = []
-    for name in os.listdir(channel_path):
-        path = join(channel_path, name)
+    for name in os.listdir(cache_channel_path):
+        path = join(cache_channel_path, name)
         if os.path.isdir(path) and name.isdigit():
             ver = int(name)
             target_ver = int(target_ver_name)
@@ -205,10 +219,23 @@ def generate(args):
 
     log("pre-check completed")
 
+    # 缓存目标版本
+    os.mkdir(cache_target_path)
+    shutil.copyfile(target_apk_path, join(cache_target_path, target_ver_name + ".apk"))
+    cache_asset_path = join(cache_target_path, "assets")
+    shutil.copytree(asset_path, cache_asset_path)
+
+    log("cache version(%s) completed"%target_ver_name)
+
+
     # 准备目标版本
+    reset_dir(cur_result_path)
+    # 创建频道
+    channel_path = join(cur_result_path, channel)
+    os.mkdir(channel_path)
+    # 创建频道/目标版本
+    target_ver_path = join(channel_path, target_ver_name)
     os.mkdir(target_ver_path)
-    target_asset_path = join(target_ver_path, "assets")
-    shutil.copytree(asset_path, target_asset_path)
     target_json_file = join(target_ver_path, target_ver_name + ".json")
     generate_json(target_json_file, {"channel" : channel, "version" : target_ver_name})
 
@@ -218,11 +245,12 @@ def generate(args):
     for ver in vers:
         ver_name = str(ver)
         ver_path = join(channel_path, ver_name)
-        ver_asset_path = join(ver_path, "assets")
+        os.mkdir(ver_path)
         temp_patch_path = join(cur_temp_path, "temp.patch")
         ver_json_file = join(ver_path, ver_name + ".json")
+        cache_ver_asset_path = join(cache_channel_path, ver_name, "assets")
+        has_diff = generate_patch(cache_ver_asset_path, cache_asset_path, temp_patch_path)
         patch_md5 = None
-        has_diff = generate_patch(ver_asset_path, target_asset_path, temp_patch_path)
         if has_diff:
             patch_md5 = get_md5(temp_patch_path)
             ver_patch_path = join(ver_path, patch_md5 + PATCH_SUFFIX)
@@ -287,7 +315,7 @@ def log(msg):
 
 def get_params(argv):
     try:
-        opts, args = getopt.getopt(argv, "r:c:a:t:", ["root=", "channel=", "apk=", "type=", "opentime=", "appstore=", "subappstore=", "temppath=", "help"])
+        opts, args = getopt.getopt(argv, "c:a:t:", ["channel=", "apk=", "type=", "opentime=", "appstore=", "subappstore=", "temppath=", "help"])
     except getopt.GetoptError as e:
         on_arg_error(e.msg)
     params = {}
@@ -295,8 +323,6 @@ def get_params(argv):
         if opt == "--help":  
             usage() #处理参数 
             sys.exit(2)  
-        elif opt in ("-r", "--root"):
-            params["root"] = arg
         elif opt in ("-c", "--channel"):
             params["channel"] = arg
         elif opt in ("-a", "--apk"):
@@ -309,30 +335,30 @@ def get_params(argv):
             params[opt[2:]] = arg
     return params
 
-def main(argv):
-    params = get_params(argv)
-    
+def check_params(params):
     if("channel" not in params):
         on_arg_error("lack of channel")
-    if("root" not in params):
-        on_arg_error("lack of root path")
     if("apk" not in params):
         on_arg_error("lack of apk path")
     if "type" not in params: 
         on_arg_error("lack of update type")
-    if not params["type"].isdigit():
+    if params["channel"] == "":
+        on_arg_error("channel cannot be empty string")
+    if not isinstance(params["type"], int) and not params["type"].isdigit():
         on_arg_error("type must be an integer")
-    if not (int(params["type"]) >=1 and int(params["type"]) <= 4):
+    if not (int(params["type"]) >= 1 and int(params["type"]) <= 4):
         on_arg_error("type must be an integer in (1, 2, 3, 4)")
 
+def main(params):
+    check_params(params)
     generate(params)
 
 if __name__ == "__main__":
-    main(sys.argv[1:])   
-    # tt = "E:/PerfectWorld/Server/Android_test/300"
-    # if os.path.exists(tt):
-    #     shutil.rmtree(tt)
-    # generate("E:/PerfectWorld/Server", "Android_test", "C:/Users/user/Downloads/GGame_nosdk_0.0.1_6389_debug.apk")
+    config_path = "update_config.json"
+    if os.path.exists(config_path):  # 读取配置文件
+        main(read_json(config_path))
+    else:
+        main(get_params(sys.argv[1:]))  # 读取命令行参数
 
 
 
