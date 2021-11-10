@@ -6,11 +6,13 @@ import hashlib
 import zipfile
 import shutil
 import json
+import time
 
 DEFAULT_TEMP_PATH = "__update_temp"
 LOW_VERSION_TAG = "low"
 HIGH_VERSION_TAG = "high"
 DIFF_TAG = "diff"
+PATCH_SUFFIX = ".zpf"
 cur_temp_path = DEFAULT_TEMP_PATH
 
 def unzip_file(src, dst):
@@ -20,6 +22,7 @@ def unzip_file(src, dst):
 
 def zip_file(src, dst):
     f = zipfile.ZipFile(dst, "w", zipfile.ZIP_DEFLATED)
+
     for current, subfolder, files in os.walk(src):
         fpath = current.replace(src, "")
         fpath = fpath and fpath + os.sep or ""
@@ -56,6 +59,17 @@ def check_file_parent(filepath):
     if directory != "" and not os.path.exists(directory):
         os.makedirs(directory)
 
+def fix_path(path):
+    path = path.replace(r'\/'.replace(os.sep, ''), os.sep)
+    if path[-1] == os.sep:
+        return path[:-1]
+    else:
+        return path
+
+def check_path_exist(path):
+    if not os.path.exists(path):
+        on_execute_error("'%s' does not exist"%path)
+
 def get_asset_path_from_apk(apk_path, tag):
     path = join(cur_temp_path, tag)
     reset_dir(path)
@@ -66,14 +80,10 @@ def get_asset_path_from_apk(apk_path, tag):
     return asset_path
 
 def get_asset_path(path, tag):
-    if not os.path.exists(path):
-        on_execute_error("'%s' does not exist"%path)
+    check_path_exist(path)
     if os.path.isdir(path):
         # 认为直接是asset路径
-        if path[-1] == "/" or path[-1] == "\\":
-            return path[:-1]
-        else:
-            return path
+        return fix_path(path)
     suffix = os.path.splitext(path)[-1]
     if suffix == ".apk":
         return get_asset_path_from_apk(path, tag)
@@ -91,8 +101,7 @@ def generate_diff(low_asset_path, high_asset_path):
             diff_file_path = join(diff_path, short_path)
 
             if os.path.exists(low_file_path):
-                md5 = get_md5(high_file_path)
-                if get_md5(low_file_path) != md5:
+                if getsize(low_file_path) != getsize(high_file_path) or get_md5(low_file_path) != get_md5(high_file_path):
                     # 文件改变
                     check_file_parent(diff_file_path)
                     shutil.copyfile(high_file_path, diff_file_path)
@@ -102,55 +111,164 @@ def generate_diff(low_asset_path, high_asset_path):
                 shutil.copyfile(high_file_path, diff_file_path)
     return diff_path
 
-def generate_patch(low_version_path, high_version_path, patch_path):
-    low_asset_path = get_asset_path(low_version_path, LOW_VERSION_TAG)
-    high_asset_path = get_asset_path(high_version_path, HIGH_VERSION_TAG)
+def generate_patch(low_asset_path, high_asset_path, patch_path):
     diff_path = generate_diff(low_asset_path, high_asset_path)
+    diff_count = len(os.listdir(diff_path))
+    if diff_count == 0:
+        return False  # 没有差异
     check_file_parent(patch_path)
     zip_file(diff_path, patch_path)
+    return True
 
-def generate_json(params):
-    patch_path = params["patch"]
-    diff_path = join(cur_temp_path, DIFF_TAG)
+def get_version(asset_path):
+    file_path = join(asset_path, "ZeusSetting", "BuildinSetting", "HotfixLocalConfig.json")
+    check_path_exist(file_path)
+    version = None
+    with open(file_path, "r", encoding = "utf_8_sig") as load_f:
+        version = json.loads(load_f.read())["ver"]
 
-    if not os.path.exists(patch_path):
-        on_execute_error("'%s' does not exist"%patch_path)
-    if not os.path.exists(diff_path):
-        on_execute_error("'%s' does not exist"%diff_path)
+    version = "300"
+    if version is None or not version.isdigit():
+        on_execute_error("read '%s' version failed, ver is '%s'"%(file_path,version))
+    return version
 
-    json_file = params["jsonfile"]
+
+def generate_json(json_file, params):
     content = {
-        "Channel" : params["channel"],
-        "Version": "278",
-        "PatchConfigData" : {
+        "Channel": params["channel"],
+        "Version": params["version"]
+    }
+    if "patch_path" in params:
+        
+        check_path_exist(params["patch_path"])
+        check_path_exist(params["diff_path"])
+
+        patch_md5 = params.get("patch_md5", get_md5(params["patch_path"]))
+        content["PatchConfigData"] = {
             "Type": int(params["type"]),
-            "SourceVersion": "278",
-            "TargetVersion": "283",
-            "OpenTime": params.get("opentime", ""),
-            "AppStoreUrl": "https://play.google.com/store/apps/details?id=com.ryipgx.tom",
-            "SubChannelAppStoreUrl": "",
-            "PatchMd5": get_md5(patch_path),
-            "PatchPath": "Android_publish/278/98181dba8f29d5ded9f2ad8e48026b76.zpf",
-            "PatchSize": getsize(patch_path),
-            "PatchContentSize": get_dir_size(diff_path),
+            "SourceVersion": params["version"],
+            "TargetVersion": params["target_version"],
+            "OpenTime": params["opentime"],
+            "AppStoreUrl": params["app_store_url"],
+            "SubChannelAppStoreUrl": params["sub_channel_app_store_url"],
+            "PatchMd5": patch_md5,
+            "PatchPath": "%s/%s/%s%s"%(params["channel"], params["version"], patch_md5, PATCH_SUFFIX),
+            "PatchSize": getsize(params["patch_path"]),
+            "PatchContentSize": get_dir_size(params["diff_path"]),
             "FpPatchMd5": "",
             "FpPatchPath": "",
             "FpPatchSize": 0,
             "FpPatchContentSize": 0
-        },
-    }
+        }
     json_str = json.dumps(content, indent="    ")
     check_file_parent(json_file)
     write_file(json_str, json_file)
 
+def generate(args):
+    server_path = args["root"]
+    channel = args["channel"]
+    target_apk_path = args["apk"]
+
+    log("start generate ...")
+
+    server_path = fix_path(server_path)
+    check_path_exist(target_apk_path)
+
+    # 读取目标版本
+    asset_path = get_asset_path(target_apk_path, "target_apk_unzip")
+    target_ver_name = get_version(asset_path)
+
+    log("read target version : %s"%target_ver_name)
+
+    channel_path = join(server_path, channel)
+    if not os.path.exists(channel_path):
+        log("create channel : %s"%channel)
+        os.mkdir(channel_path)
+
+    target_ver_path = join(channel_path, target_ver_name)
+    if os.path.exists(target_ver_path):
+        on_execute_error("'%s' already exists"%target_ver_path)
+    
+    vers = []
+    for name in os.listdir(channel_path):
+        path = join(channel_path, name)
+        if os.path.isdir(path) and name.isdigit():
+            ver = int(name)
+            target_ver = int(target_ver_name)
+            if ver > target_ver:
+                on_execute_error("there is a version(%s) larger than the target(%s)"%(ver, target_ver))
+            elif ver < target_ver:
+                ver_asset_path = join(path, "assets")
+                check_path_exist(ver_asset_path)
+                vers.append(ver)
+    vers.sort()
+
+    log("pre-check completed")
+
+    # 准备目标版本
+    os.mkdir(target_ver_path)
+    target_asset_path = join(target_ver_path, "assets")
+    shutil.copytree(asset_path, target_asset_path)
+    target_json_file = join(target_ver_path, target_ver_name + ".json")
+    generate_json(target_json_file, {"channel" : channel, "version" : target_ver_name})
+
+    log("target version(%s) is generated"%target_ver_name)
+
+    # 处理每个低版本
+    for ver in vers:
+        ver_name = str(ver)
+        ver_path = join(channel_path, ver_name)
+        ver_asset_path = join(ver_path, "assets")
+        temp_patch_path = join(cur_temp_path, "temp.patch")
+        ver_json_file = join(ver_path, ver_name + ".json")
+        patch_md5 = None
+        has_diff = generate_patch(ver_asset_path, target_asset_path, temp_patch_path)
+        if has_diff:
+            patch_md5 = get_md5(temp_patch_path)
+            ver_patch_path = join(ver_path, patch_md5 + PATCH_SUFFIX)
+            shutil.move(temp_patch_path, ver_patch_path)
+            generate_json(ver_json_file, {
+                "patch_path" : ver_patch_path,
+                "patch_md5" : patch_md5,
+                "diff_path" : join(cur_temp_path, DIFF_TAG),
+
+                "channel" : channel,
+                "version" : ver_name,
+                "type" : 3,  # 更新类型
+                "target_version" : target_ver_name,
+                "opentime" : args.get("opentime", ""),
+                "app_store_url" : args.get("appstore", ""),
+                "sub_channel_app_store_url" : args.get("subappstore", "")
+            })
+        else:
+            generate_json(ver_json_file, {
+                "channel" : channel,
+                "version" : ver_name,
+            })
+
+        # 清除老的zpf文件
+        for name in os.listdir(ver_path):
+            if name.endswith(PATCH_SUFFIX) and (patch_md5 is None or name != (patch_md5 + PATCH_SUFFIX)):
+                os.remove(join(ver_path, name))  
+
+        log("version(%s) update completed, has diff : %s"%(ver_name, has_diff))
+            
+    log("generate finish.")
+                
+
+
 def usage():
     print("""Usage: python %s -l path -h path -p path [options] 
-    -l path     : low version path (also --low)
-    -h path     : high version path (also --high)
-    -p path     : patch file path (also --patch)
+    -r              : 根目录 (also --root)
+    -c              : 频道名称 (also --channel)
+    -a              : 目标apk文件路径 (also --apk)
+    -t              : 更新类型 (1 : AppStore | 2 : Force | 3 : Recommend | 4 : AppStoreRecommend) (also --type)
 Available options are:
-    --temppath  : temp path
-    -help       : print this help message and exit"""%sys.argv[0])
+    --opentime      : 定期开启时间
+    --appstore      : 商店URL
+    --subappstore   : 包名对应商店地址
+    --temppath      : temp path
+    --help          : print this help message and exit"""%sys.argv[0])
 
 def on_arg_error(msg):
     print_error(msg)
@@ -164,9 +282,12 @@ def on_execute_error(msg):
 def print_error(msg):
     print("Error: " + msg)
 
+def log(msg):
+    print(msg)
+
 def get_params(argv):
     try:
-        opts, args = getopt.getopt(argv, "l:h:p:", ["low=", "high=", "patch=", "temppath=", "jsonfile=", "channel=", "type=", "opentime=", "help"])
+        opts, args = getopt.getopt(argv, "r:c:a:t:", ["root=", "channel=", "apk=", "type=", "opentime=", "appstore=", "subappstore=", "temppath=", "help"])
     except getopt.GetoptError as e:
         on_arg_error(e.msg)
     params = {}
@@ -174,12 +295,14 @@ def get_params(argv):
         if opt == "--help":  
             usage() #处理参数 
             sys.exit(2)  
-        elif opt in ("-l", "--low"):
-            params["low"] = arg
-        elif opt in ("-h", "--high"):
-            params["high"] = arg
-        elif opt in ("-p", "--patch"):
-            params["patch"] = arg
+        elif opt in ("-r", "--root"):
+            params["root"] = arg
+        elif opt in ("-c", "--channel"):
+            params["channel"] = arg
+        elif opt in ("-a", "--apk"):
+            params["apk"] = arg
+        elif opt in ("-t", "--type"):
+            params["type"] = arg
         elif opt == "--temppath": 
              cur_temp_path = arg
         elif opt[:2] == "--":
@@ -189,26 +312,27 @@ def get_params(argv):
 def main(argv):
     params = get_params(argv)
     
-    if("low" not in params):
-        on_arg_error("lack of low version path")
-    if("high" not in params):
-        on_arg_error("lack of high version path")
-    if("patch" not in params):
-        on_arg_error("lack of patch file path")
+    if("channel" not in params):
+        on_arg_error("lack of channel")
+    if("root" not in params):
+        on_arg_error("lack of root path")
+    if("apk" not in params):
+        on_arg_error("lack of apk path")
+    if "type" not in params: 
+        on_arg_error("lack of update type")
+    if not params["type"].isdigit():
+        on_arg_error("type must be an integer")
+    if not (int(params["type"]) >=1 and int(params["type"]) <= 4):
+        on_arg_error("type must be an integer in (1, 2, 3, 4)")
 
-    generate_patch(params["low"], params["high"], params["patch"])
-
-    if "jsonfile" in params:
-        if "channel" not in params:
-            on_arg_error("lack of channel when generating json")
-        if "type" not in params:
-            on_arg_error("lack of type when generating json")
-        if not params["type"].isdigit():
-            on_arg_error("type must be an integer")
-        generate_json(params)
+    generate(params)
 
 if __name__ == "__main__":
-    main(sys.argv[1:])    
+    main(sys.argv[1:])   
+    # tt = "E:/PerfectWorld/Server/Android_test/300"
+    # if os.path.exists(tt):
+    #     shutil.rmtree(tt)
+    # generate("E:/PerfectWorld/Server", "Android_test", "C:/Users/user/Downloads/GGame_nosdk_0.0.1_6389_debug.apk")
 
 
 
