@@ -71,7 +71,7 @@ def reset_dir(directory, del_self = False):
     if os.path.exists(directory):  # 可能文件占用导致删除失败，多试一次
         shutil.rmtree(directory, ignore_errors=True)
     if os.path.exists(directory):
-        on_execute_error("can't delete '%s'")
+        on_execute_error("can't delete '%s'"%directory)
     if not del_self:
         os.makedirs(directory)  
 
@@ -112,6 +112,11 @@ def get_asset_path(path, tag):
     else:
         on_execute_error("can't resolve asset path from '%s'"%path)
 
+def copy_diff_file(path, diff_file_path):
+    check_file_parent(diff_file_path)
+    shutil.copyfile(path, diff_file_path)
+    os.utime(diff_file_path, (1636620017, 1636620017))  # 避免访问时间不同，导致相同内容的zip文件md5不同
+
 def generate_diff(low_asset_path, high_asset_path):
     diff_path = join(cur_temp_path, DIFF_TAG)
     reset_dir(diff_path)
@@ -125,12 +130,10 @@ def generate_diff(low_asset_path, high_asset_path):
             if os.path.exists(low_file_path):
                 if getsize(low_file_path) != getsize(high_file_path) or get_md5(low_file_path) != get_md5(high_file_path):
                     # 文件改变
-                    check_file_parent(diff_file_path)
-                    shutil.copyfile(high_file_path, diff_file_path)
+                    copy_diff_file(high_file_path, diff_file_path)
             else:
                 # 新增文件
-                check_file_parent(diff_file_path)
-                shutil.copyfile(high_file_path, diff_file_path)
+                copy_diff_file(high_file_path, diff_file_path)
     return diff_path
 
 def generate_patch(low_asset_path, high_asset_path, patch_path):
