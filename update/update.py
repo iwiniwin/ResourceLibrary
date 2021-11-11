@@ -68,6 +68,10 @@ def get_dir_size(directory):
 def reset_dir(directory):
     if os.path.exists(directory):
         shutil.rmtree(directory, ignore_errors=True)
+    if os.path.exists(directory):  # 可能文件占用导致删除失败，多试一次
+        shutil.rmtree(directory, ignore_errors=True)
+    if os.path.exists(directory):
+        on_execute_error("can't delete '%s'")
     os.makedirs(directory)  
 
 def check_file_parent(filepath):
@@ -141,7 +145,6 @@ def get_version(asset_path):
     file_path = join(asset_path, "ZeusSetting", "BuildinSetting", "HotfixLocalConfig.json")
     check_path_exist(file_path)
     version = read_json(file_path)["ver"]
-    version = "900"  # todomark
     if version is None or not version.isdigit():
         on_execute_error("read '%s' version failed, ver is '%s'"%(file_path,version))
     return version
@@ -152,28 +155,44 @@ def generate_json(json_file, params):
         "Channel": params["channel"],
         "Version": params["version"]
     }
-    if "patch_path" in params:
-        
-        check_path_exist(params["patch_path"])
-        check_path_exist(params["diff_path"])
-
-        patch_md5 = params.get("patch_md5", get_md5(params["patch_path"]))
-        content["PatchConfigData"] = {
-            "Type": int(params["type"]),
+    if "type" in params:
+        update_type = params["type"]
+        patch_config_data = {
+            "Type": update_type,
             "SourceVersion": params["version"],
             "TargetVersion": params["target_version"],
             "OpenTime": params["opentime"],
             "AppStoreUrl": params["app_store_url"],
             "SubChannelAppStoreUrl": params["sub_channel_app_store_url"],
-            "PatchMd5": patch_md5,
-            "PatchPath": "%s/%s/%s%s"%(params["channel"], params["version"], patch_md5, PATCH_SUFFIX),
-            "PatchSize": getsize(params["patch_path"]),
-            "PatchContentSize": get_dir_size(params["diff_path"]),
+            "PatchMd5": "",
+            "PatchPath": "",
+            "PatchSize": 0,
+            "PatchContentSize": 0,
             "FpPatchMd5": "",
             "FpPatchPath": "",
             "FpPatchSize": 0,
             "FpPatchContentSize": 0
         }
+        if "patch_path" in params:
+            check_path_exist(params["patch_path"])
+            check_path_exist(params["diff_path"])
+
+            patch_md5 = params.get("patch_md5", "")
+            if patch_md5 == "":
+                patch_md5 = get_md5(params["patch_path"])
+            patch_config_data["PatchMd5"] = patch_md5
+            patch_config_data["PatchPath"] = "%s/%s/%s%s"%(params["channel"], params["version"], patch_md5, PATCH_SUFFIX)
+            patch_config_data["PatchSize"] = getsize(params["patch_path"])
+            patch_config_data["PatchContentSize"] = get_dir_size(params["diff_path"])
+
+        if params["test"] is True:
+            content["TestingData"] = {}
+            if "idfalist" in params and params["idfalist"] != "":
+                content["TestingData"]["IDFAList"] = params["idfalist"].split(";")
+            content["TestingData"]["PatchConfigData"] = patch_config_data
+        else:
+            content["PatchConfigData"] = patch_config_data
+
     json_str = json.dumps(content, indent="    ")
     check_file_parent(json_file)
     write_file(json_str, json_file)
@@ -187,7 +206,10 @@ def generate(args):
     check_path_exist(target_apk_path)
     # 读取目标版本
     asset_path = get_asset_path(target_apk_path, "target_apk_unzip")
-    target_ver_name = get_version(asset_path)
+
+    target_ver_name = args.get("version", "")
+    if target_ver_name == "":
+        target_ver_name = get_version(asset_path)
 
     log("read target version : %s"%target_ver_name)
 
@@ -219,15 +241,6 @@ def generate(args):
 
     log("pre-check completed")
 
-    # 缓存目标版本
-    os.mkdir(cache_target_path)
-    shutil.copyfile(target_apk_path, join(cache_target_path, target_ver_name + ".apk"))
-    cache_asset_path = join(cache_target_path, "assets")
-    shutil.copytree(asset_path, cache_asset_path)
-
-    log("cache version(%s) completed"%target_ver_name)
-
-
     # 准备目标版本
     reset_dir(cur_result_path)
     # 创建频道
@@ -248,38 +261,74 @@ def generate(args):
         os.mkdir(ver_path)
         temp_patch_path = join(cur_temp_path, "temp.patch")
         ver_json_file = join(ver_path, ver_name + ".json")
-        cache_ver_asset_path = join(cache_channel_path, ver_name, "assets")
-        has_diff = generate_patch(cache_ver_asset_path, cache_asset_path, temp_patch_path)
-        patch_md5 = None
-        if has_diff:
-            patch_md5 = get_md5(temp_patch_path)
-            ver_patch_path = join(ver_path, patch_md5 + PATCH_SUFFIX)
-            shutil.move(temp_patch_path, ver_patch_path)
-            generate_json(ver_json_file, {
-                "patch_path" : ver_patch_path,
-                "patch_md5" : patch_md5,
-                "diff_path" : join(cur_temp_path, DIFF_TAG),
 
+        update_type = int(args["type"])
+        is_test = False
+        if "test" in args:
+            if isinstance(args["test"], bool):
+                is_test = args["test"]
+            elif isinstance(args["test"], str):
+                is_test = args["test"] == "true"
+
+        if update_type == 1:  # 商店更新不需要generate_patch
+            generate_json(ver_json_file, {
                 "channel" : channel,
                 "version" : ver_name,
-                "type" : 3,  # 更新类型
+                "type" : update_type,  # 更新类型
                 "target_version" : target_ver_name,
                 "opentime" : args.get("opentime", ""),
                 "app_store_url" : args.get("appstore", ""),
-                "sub_channel_app_store_url" : args.get("subappstore", "")
+                "sub_channel_app_store_url" : args.get("subappstore", ""),
+                "test" : is_test,
+                "idfalist" : args.get("idfalist", "")
             })
+
+            log("version(%s) update completed, no need diff : type %s"%(ver_name, update_type))
         else:
-            generate_json(ver_json_file, {
-                "channel" : channel,
-                "version" : ver_name,
-            })
+            cache_ver_asset_path = join(cache_channel_path, ver_name, "assets")
+            has_diff = generate_patch(cache_ver_asset_path, asset_path, temp_patch_path)
+            patch_md5 = None
+            if has_diff:
+                patch_md5 = get_md5(temp_patch_path)
+                ver_patch_path = join(ver_path, patch_md5 + PATCH_SUFFIX)
+                shutil.move(temp_patch_path, ver_patch_path)
+                generate_json(ver_json_file, {
+                    "patch_path" : ver_patch_path,
+                    "patch_md5" : patch_md5,
+                    "diff_path" : join(cur_temp_path, DIFF_TAG),
+
+                    "channel" : channel,
+                    "version" : ver_name,
+                    "type" : update_type,  # 更新类型
+                    "target_version" : target_ver_name,
+                    "opentime" : args.get("opentime", ""),
+                    "app_store_url" : args.get("appstore", ""),
+                    "sub_channel_app_store_url" : args.get("subappstore", ""),
+                    "test" : is_test,
+                    "idfalist" : args.get("idfalist", "")
+                })
+            else:
+                generate_json(ver_json_file, {
+                    "channel" : channel,
+                    "version" : ver_name,
+                    "test" : is_test,
+                    "idfalist" : args.get("idfalist", "")
+                })
+
+            log("version(%s) update completed, has diff : %s"%(ver_name, has_diff))
 
         # 清除老的zpf文件
-        for name in os.listdir(ver_path):
-            if name.endswith(PATCH_SUFFIX) and (patch_md5 is None or name != (patch_md5 + PATCH_SUFFIX)):
-                os.remove(join(ver_path, name))  
+        # for name in os.listdir(ver_path):
+        #     if name.endswith(PATCH_SUFFIX) and (patch_md5 is None or name != (patch_md5 + PATCH_SUFFIX)):
+        #         os.remove(join(ver_path, name))  
 
-        log("version(%s) update completed, has diff : %s"%(ver_name, has_diff))
+     # 缓存目标版本
+    os.mkdir(cache_target_path)
+    shutil.copyfile(target_apk_path, join(cache_target_path, target_ver_name + ".apk"))
+    cache_asset_path = join(cache_target_path, "assets")
+    shutil.copytree(asset_path, cache_asset_path)
+
+    log("cache version(%s) completed"%target_ver_name)   
             
     log("generate finish.")
                 
@@ -315,7 +364,7 @@ def log(msg):
 
 def get_params(argv):
     try:
-        opts, args = getopt.getopt(argv, "c:a:t:", ["channel=", "apk=", "type=", "opentime=", "appstore=", "subappstore=", "temppath=", "help"])
+        opts, args = getopt.getopt(argv, "c:a:t:", ["channel=", "apk=", "type=", "opentime=", "appstore=", "subappstore=", "temppath=", "test=", "idfalist=", "version=", "help"])
     except getopt.GetoptError as e:
         on_arg_error(e.msg)
     params = {}
@@ -346,8 +395,12 @@ def check_params(params):
         on_arg_error("channel cannot be empty string")
     if not isinstance(params["type"], int) and not params["type"].isdigit():
         on_arg_error("type must be an integer")
-    if not (int(params["type"]) >= 1 and int(params["type"]) <= 4):
+    update_type = int(params["type"])
+    if not (update_type >= 1 and update_type <= 4):
         on_arg_error("type must be an integer in (1, 2, 3, 4)")
+    if "version" in params:
+        if not isinstance(params["version"], str) or not params["version"].isdigit():
+            on_arg_error("version must be a string type number")
 
 def main(params):
     check_params(params)
