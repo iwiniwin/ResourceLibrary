@@ -65,14 +65,15 @@ def get_dir_size(directory):
         size += sum([getsize(join(root, name)) for name in files])
     return size
 
-def reset_dir(directory):
+def reset_dir(directory, del_self = False):
     if os.path.exists(directory):
         shutil.rmtree(directory, ignore_errors=True)
     if os.path.exists(directory):  # 可能文件占用导致删除失败，多试一次
         shutil.rmtree(directory, ignore_errors=True)
     if os.path.exists(directory):
         on_execute_error("can't delete '%s'")
-    os.makedirs(directory)  
+    if not del_self:
+        os.makedirs(directory)  
 
 def check_file_parent(filepath):
     directory = os.path.split(filepath)[0]
@@ -220,10 +221,6 @@ def generate(args):
     if not os.path.exists(cache_channel_path):
         log("create channel for caching : %s"%channel)
         os.mkdir(cache_channel_path)
-
-    cache_target_path = join(cache_channel_path, target_ver_name)
-    if os.path.exists(cache_target_path):
-        on_execute_error("'%s' already exists"%cache_target_path)
     
     vers = []
     for name in os.listdir(cache_channel_path):
@@ -238,6 +235,11 @@ def generate(args):
                 check_path_exist(ver_asset_path)
                 vers.append(ver)
     vers.sort()
+
+    cache_target_path = join(cache_channel_path, target_ver_name)
+    if os.path.exists(cache_target_path):
+        log("warning : '%s' already exists, prepare to delete cache"%target_ver_name)
+        reset_dir(cache_target_path, True)
 
     log("pre-check completed")
 
