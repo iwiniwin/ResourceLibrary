@@ -15,6 +15,8 @@ LOW_VERSION_TAG = "low"
 HIGH_VERSION_TAG = "high"
 DIFF_TAG = "diff"
 PATCH_SUFFIX = ".zpf"
+DEFAULT_CONFIG_NAME = "config"
+DEFAULT_PATCH_NAME = "patch"
 
 cur_temp_path = DEFAULT_TEMP_PATH
 cur_cache_path = DEFAULT_CACHE_PATH
@@ -249,10 +251,11 @@ def generate(args):
     # 准备目标版本
     reset_dir(cur_result_path)
     # 创建频道
-    channel_path = join(cur_result_path, channel)
-    os.mkdir(channel_path)
+    config_channel_path = join(cur_result_path, DEFAULT_CONFIG_NAME, channel)
+    os.makedirs(config_channel_path)
+    patch_channel_path = join(cur_result_path, DEFAULT_PATCH_NAME, channel)  # patch_channel_path不用立即创建，延迟到有patch文件时检查创建
     # 创建频道/目标版本
-    target_ver_path = join(channel_path, target_ver_name)
+    target_ver_path = join(config_channel_path, target_ver_name)
     os.mkdir(target_ver_path)
     target_json_file = join(target_ver_path, target_ver_name + ".json")
     generate_json(target_json_file, {"channel" : channel, "version" : target_ver_name})
@@ -262,7 +265,7 @@ def generate(args):
     # 处理每个低版本
     for ver in vers:
         ver_name = str(ver)
-        ver_path = join(channel_path, ver_name)
+        ver_path = join(config_channel_path, ver_name)
         os.mkdir(ver_path)
         temp_patch_path = join(cur_temp_path, "temp.patch")
         ver_json_file = join(ver_path, ver_name + ".json")
@@ -295,7 +298,8 @@ def generate(args):
             patch_md5 = None
             if has_diff:
                 patch_md5 = get_md5(temp_patch_path)
-                ver_patch_path = join(ver_path, patch_md5 + PATCH_SUFFIX)
+                ver_patch_path = join(patch_channel_path, ver_name, patch_md5 + PATCH_SUFFIX)
+                check_file_parent(ver_patch_path)
                 shutil.move(temp_patch_path, ver_patch_path)
                 generate_json(ver_json_file, {
                     "patch_path" : ver_patch_path,
