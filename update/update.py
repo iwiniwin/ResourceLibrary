@@ -119,6 +119,16 @@ def copy_diff_file(path, diff_file_path):
     shutil.copyfile(path, diff_file_path)
     os.utime(diff_file_path, (1636620017, 1636620017))  # 避免访问时间不同，导致相同内容的zip文件md5不同
 
+filter_paths = [
+    fix_path("ZeusSetting/BuildinSetting/HotfixLocalConfig.json"),
+]
+
+def is_filtered(path):
+    for filter_path in filter_paths:
+        if filter_path == path:
+            return True
+    return False
+
 def generate_diff(low_asset_path, high_asset_path):
     diff_path = join(cur_temp_path, DIFF_TAG)
     reset_dir(diff_path)
@@ -128,6 +138,9 @@ def generate_diff(low_asset_path, high_asset_path):
             short_path = high_file_path.replace(high_asset_path, "")[1:]
             low_file_path = join(low_asset_path, short_path)
             diff_file_path = join(diff_path, short_path)
+
+            if is_filtered(short_path):
+                continue
 
             if os.path.exists(low_file_path):
                 if getsize(low_file_path) != getsize(high_file_path) or get_md5(low_file_path) != get_md5(high_file_path):
