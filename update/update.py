@@ -100,8 +100,21 @@ def get_asset_path_from_apk(apk_path, tag):
     unzip_file(apk_path, path)
     asset_path = join(path, "assets")
     if not os.path.exists(asset_path):
-        on_execute_error("'%s' does not contain asset path"%apk_path)
+        on_execute_error("'%s' does not contain assets path"%apk_path)
     return asset_path
+
+def get_asset_path_from_aab(aab_path, tag):
+    path = join(cur_temp_path, tag)
+    reset_dir(path)
+    unzip_file(aab_path, path)
+    base_asset_path = join(path, "base", "assets")
+    if not os.path.exists(base_asset_path):
+        on_execute_error("'%s' does not contain base/assets path"%aab_path)
+    install_time_asset_path = join(path, "install_time", "assets")
+    if not os.path.exists(install_time_asset_path):
+        on_execute_error("'%s' does not contain install_time/assets path"%aab_path)
+    shutil.copytree(install_time_asset_path, base_asset_path, dirs_exist_ok=True)
+    return base_asset_path
 
 def get_asset_path(path, tag):
     check_path_exist(path)
@@ -111,6 +124,8 @@ def get_asset_path(path, tag):
     suffix = os.path.splitext(path)[-1]
     if suffix == ".apk":
         return get_asset_path_from_apk(path, tag)
+    elif suffix == ".aab":
+        return get_asset_path_from_aab(path, tag)
     else:
         on_execute_error("can't resolve asset path from '%s'"%path)
 
