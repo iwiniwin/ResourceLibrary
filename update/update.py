@@ -136,11 +136,12 @@ def copy_diff_file(path, diff_file_path):
 
 filter_paths = [
     fix_path("ZeusSetting/BuildinSetting/HotfixLocalConfig.json"),
+    fix_path("bin"),
 ]
 
 def is_filtered(path):
     for filter_path in filter_paths:
-        if filter_path == path:
+        if path.startswith(filter_path):
             return True
     return False
 
