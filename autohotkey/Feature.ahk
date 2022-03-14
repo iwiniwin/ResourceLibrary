@@ -1,10 +1,4 @@
-﻿GroupAdd, WinGroup, ahk_class Progman ;win7桌面
-GroupAdd, WinGroup, ahk_class WorkerW
-
-GroupAdd, WinGroup, ahk_class CabinetWClass ;win7资管
-GroupAdd, WinGroup, ahk_class ExploreWClass
-
-; MsgBox This is ok.  ; 可以用其当做调试语句
+﻿; MsgBox This is ok.  ; 可以用其当做调试语句
 
 ; ------------------------重新设置窗口位置大小
 Resize(x, y, w, h)                        
@@ -102,7 +96,9 @@ FindWithEverything()
 }
 
 ; Ctrl+F在资源管理界面打开Everything并搜索
-#IfWinActive ahk_group WinGroup  
+#IfWinActive ahk_class CabinetWClass  ; CabinetWClass是资源管理界面
+^f:: FindWithEverything()
+#IfWinActive ahk_class Progman  ; Progman是桌面
 ^f:: FindWithEverything()
 #IfWinActive
 
