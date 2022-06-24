@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>记事本</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        html,body{
+            width:100%;
+            height:100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            display:flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .commandZone {
+            margin: 20px 0;
+            border: 1px solid #aaa;
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .editor-container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            outline: none;
+            line-height: 1.8;
+            overflow-y: auto;
+            flex: 1;
+            margin-bottom: 20px;
+        }
+        .editor-container:focus {
+            border: 1px solid #999;
+        }
+        .btn {
+            color: black;
+            padding: 0 5px;
+            display: inline;
+            cursor: pointer;
+            font-size: 14px;
+            height: 22px;
+        }
+        .icon {
+            cursor: pointer;
+            color: #999;
+        }
+        .icon:hover {
+            color: #000;
+        }
+        .tool {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        select {
+            width: 60px;
+            height: 21px;
+        }
+        .editor-editable {
+            position: absolute;
+            right: 0;
+            top: 5px;
+            cursor: pointer;
+        }
+        .form {
+            display: inline;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+        <h1 style="text-align: center; margin: 5px 0;">记事本</h1>
+        <div class="commandZone" id="commandZone"></div>
+        <div class="editor-container" id="editor" contenteditable="false"></div>
+        <iframe id="hideIframe" name="hideIframe" style="display:none;"></iframe>
+</div>
+</body>
+<script>
+    const editBtnHtml = `<button class="btn tool" id="editable">编辑</button>`
+    const saveBtnHtml = `<form class="form" id="saveBtn" action="Handler1.ashx" method="get" target="hideIframe" style="display:none;">
+                <input type="text" id="editorData" name="editorData" style="display:none;" />
+                <button class="btn" type="submit" onclick="onClickSaveBtn()">保存</button>
+        </form>`
+        const defaultHtml = `<h2><font face="STKaiti">Vue.js 是什么</font></h2>
+    <p><i><strong>Vue</strong> 是一套用于构建用户界面的<font color="#42b983"><strong>渐进式框架</strong></font></i>。
+        与其它大型框架不同的是，Vue 被设计为可以<span style="background-color: orange;"><font color="#ffffff">自底向上</font></span>逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。
+        <strike>另一方面</strike>，当与<a href="https://vuejs.bootcss.com/guide/single-file-components.html">现代化的工具链</a>以及各种<a href="https://github.com/vuejs/awesome-vue#libraries--plugins" target="_blank" rel="noopener">支持类库</a>
+        结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
+<p>如果你想在深入学习 Vue 之前对它有更多了解，我们<a id="modal-player" href="https://vuejs.bootcss.com/guide/#">制作了一个视频</a>，带您了解其<u>核心概念</u>和一个<u>示例工程</u>。</p>
+<p>如果你已经是有经验的前端开发者，想知道 Vue 与其它库/框架有哪些区别，请查看<a href="https://vuejs.bootcss.com/guide/comparison.html">对比其它框架</a>。</p>
+
+<hr>
+
+<h2 id="What-is-Vue-js"><font face="Times New Roman">What is Vue.js?</font></h2><p><strong><font size="5">Vue</font></strong>  is a <font color="#42b983"><strong>progressive framework</strong></font> for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with <a href="single-file-components.html">modern tooling</a> and <a href="https://github.com/vuejs/awesome-vue#components--libraries" target="_blank" rel="noopener">supporting libraries</a>.</p>
+<p>If you’d like to learn more about Vue before diving in, we <a id="modal-player" href="#">created a video</a> walking through the core principles and a sample project.</p>
+<p>If you are an experienced frontend developer and want to know how Vue compares to other libraries/frameworks, check out the <a href="comparison.html">Comparison with Other Frameworks</a>.</p>
+
+<hr>
+
+<p><b>无序列表</b></p><ul><li>列表项</li><li>列表项</li><li>列表项</li></ul><p><b>有序列表</b></p><ol><li>列表项</li><li>列表项</li><li>列表项</li></ol>
+
+<p><b>图片</b></p>
+<p><img src="https://alanyf.gitee.io/personal-website/assets/icon/wangyiyun.svg"></p>
+<hr>
+
+<p><font face="Times New Roman" size="4">y = x<sup style="">2</sup> + 4</font></p><p><font face="Times New Roman" size="4"><i>NaOH&nbsp; &nbsp;CH<sub style="">4</sub></i></font></p>
+
+<p><font style="font-size: 16px;"><font style="font-family: Times New Roman;">&nbsp;</font></font><font style="font-size: 18px;"><font style="font-family: Times New Roman;">[</font></font><font style="font-size: 16px;"><font style="font-family: Times New Roman;">Ar</font></font><font style="font-size: 18px;"><font style="font-family: Times New Roman;">]</font></font><font style="font-size: 16px;"><font style="font-family: Times New Roman;">3d</font></font><sup><font style="font-size: 12px;"><font style="font-family: Times New Roman;">10</font></font></sup><font style="font-size: 16px;"><font style="font-family: Times New Roman;">4s</font></font><sup><font style="font-size: 12px;"><font style="font-family: Times New Roman;">2</font></font></sup><font style="font-size: 16px;"><font style="font-family: Times New Roman;">4p</font></font><sup><font style="font-size: 12px;"><font style="font-family: Times New Roman;">6</font></font></sup></p>
+
+<hr>
+
+<p style="text-align: left;"><span style="font-family: &quot;Times New Roman&quot;; font-size: x-large;">左对齐</span></p><p style="text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-size: x-large;">居中对齐</span></p><p style="text-align: right;"><font face="Times New Roman" size="5">右对齐</font></p>
+`;
+
+    const commandMap = {
+        undo: {
+            name: '撤销',
+            command: 'undo',
+        },
+        redo: {
+            name: '重做',
+            command: 'redo',
+        },
+        fontName: {
+            name: '字体名',
+            command: 'fontName',
+            render: () => {
+                const options = [
+                    { label: '微软雅黑', value: 'Microsoft YaHei' },
+                    { label: '新罗马', value: 'Times New Roman' },
+                    { label: '宋体', value: 'SimSun' },
+                    { label: '平方', value: 'PingFang SC' },
+                    { label: '华文楷体', value: 'STKaiti' },
+                    { label: 'Arial', value: 'Arial' },
+                    { label: 'Calibri', value: 'Calibri' },
+                    { label: 'Comic Sans MS', value: 'Comic Sans MS' },
+                    { label: 'Verdana', value: 'Verdana' },
+                ];
+                return selectRender('fontName', options, '字体名');
+            },
+        },
+        fontSize: {
+            name: '字体大小',
+            command: 'fontSize',
+            render: () => {
+                const options = [
+                    { label: '特小', value: '1' },
+                    { label: '小', value: '2' },
+                    { label: '正常', value: '3' },
+                    { label: '略大', value: '4' },
+                    { label: '大', value: '5' },
+                    { label: '很大', value: '6' },
+                    { label: '极大', value: '7' },
+                ];
+                return selectRender('fontSize', options, '字体大小');
+            },
+        },
+        heading: {
+            name: '标题',
+            command: 'heading',
+            render: () => {
+                const options = [
+                    { label: 'H1', value: 'H1' },
+                    { label: 'H2', value: 'H2' },
+                    { label: 'H3', value: 'H3' },
+                    { label: 'H4', value: 'H4' },
+                    { label: 'H5', value: 'H5' },
+                    { label: 'H6', value: 'H6' },
+                ];
+                return selectRender('heading', options, '标题');
+            },
+        },
+        bold: {
+            name: '加粗',
+            command: 'bold',
+        },
+        italic: {
+            name: '斜体',
+            command: 'italic',
+        },
+        underline: {
+            name: '下划线',
+            command: 'underline',
+        },
+        strikeThrough: {
+            name: '删除线',
+            command: 'strikeThrough',
+        },
+        backColor: {
+            name: '背景颜色',
+            command: 'backColor',
+            render: () => {
+                const options = [
+                    { label: '黑', value: 'black' },
+                    { label: '红', value: 'red' },
+                    { label: '橙', value: 'orange' },
+                    { label: '蓝', value: 'blue' },
+                    { label: '绿', value: 'green' },
+                    { label: '白', value: 'white' },
+                    { label: '灰', value: '#999' },
+                    { label: '浅灰', value: '#ddd' },
+                ];
+                return selectRender('backColor', options, '背景颜色');
+            },
+        },
+        foreColor: {
+            name: '字体颜色',
+            command: 'foreColor',
+            render: () => {
+                const options = [
+                    { label: '黑', value: 'black' },
+                    { label: '红', value: 'red' },
+                    { label: '橙', value: 'orange' },
+                    { label: '蓝', value: 'blue' },
+                    { label: '绿', value: 'green' },
+                    { label: '白', value: 'white' },
+                    { label: '灰', value: '#999' },
+                    { label: '浅灰', value: '#ddd' },
+                ];
+                return selectRender('foreColor', options, '字体颜色');
+            },
+        },
+        superscript: {
+            name: '上标',
+            command: 'superscript',
+        },
+        subscript: {
+            name: '下标',
+            command: 'subscript',
+        },
+        justifyCenter: {
+            name: '居中对齐',
+            command: 'justifyCenter',
+        },
+        justifyFull: {
+            name: '两端对齐',
+            command: 'justifyFull',
+        },
+        justifyLeft: {
+            name: '左对齐',
+            command: 'justifyLeft',
+        },
+        justifyRight: {
+            name: '右对齐',
+            command: 'justifyRight',
+        },
+        removeFormat: {
+            name: '清除样式',
+            command: 'removeFormat',
+        },
+        insertHorizontalRule: {
+            name: '分割线',
+            command: 'insertHorizontalRule',
+        },
+        insertUnorderedList: {
+            name: '无序列表',
+            command: 'insertUnorderedList',
+        },
+        insertOrderedList: {
+            name: '有序列表',
+            command: 'insertOrderedList',
+        },
+        increaseFontSize: {
+            name: '字体变大',
+            command: 'increaseFontSize',
+        },
+        decreaseFontSize: {
+            name: '字体变小',
+            command: 'decreaseFontSize',
+        },
+        styleWithCSS: {
+            name: '标记方式',
+            command: 'styleWithCSS',
+            render: () => {
+                const options = [
+                    { label: 'html标签', value: false },
+                    { label: 'css样式', value: true },
+                ];
+                return selectRender('styleWithCSS', options, '标记方式(使用html标签 还是css样式来生成标记)');
+            },
+        },
+        createLink: {
+            name: '插入链接',
+            command: 'createLink',
+        },
+        insertImage: {
+            name: '插入图片',
+            command: 'insertImage',
+        },
+        contentReadOnly: {
+            name: '区域是否可以编辑',
+            command: 'contentReadOnly',
+            render: () => {
+                const options = [
+                    { label: '是', value: true },
+                    { label: '否', value: false },
+                ];
+                return selectRender('contentReadOnly', options, '区域是否可以编辑');
+            },
+        },
+        selectAll: {
+            name: '全选',
+            command: 'selectAll',
+            func: () => {
+                const selection = document.getSelection();
+                const editor = document.getElementById('editor');
+                const range = document.createRange();
+                range.selectNodeContents(editor);
+                selection.removeAllRanges();
+                selection.addRange(range);
+                return true;
+            },
+        },
+        copy: {
+            name: '复制',
+            command: 'copy',
+        },
+    };
+    
+    function execEditorCommand(name, args = null) {
+        const command = commandMap[name];
+        if (command.func) {
+            const ret = command.func(args);
+            if(ret) {
+                return;
+            }
+        }
+        document.execCommand(name, false, args);
+    }
+
+    const selectRender = (commandName, options = [], title = '') => {
+        return `
+            <select class="tool" name="${commandName}" id="${commandName}" title="${title}">
+                ${options.map((e) => `<option class="${commandName}-option" value="${e.value}">${e.label}</option>`)}
+            </select>
+        `;
+    };
+
+    const addEventListener = (commandName) => {
+        const eventNameMap = {
+            fontName: 'change',
+            fontSize: 'change',
+            backColor: 'change',
+            foreColor: 'change',
+            styleWithCSS: 'change',
+            contentReadOnly: 'change',
+            heading: 'change',
+        };
+        const needInputUrl = ['insertImage', 'createLink'];
+        const eventName = eventNameMap[commandName] || 'click';
+        const dom = document.getElementById(commandName);
+        dom && dom.addEventListener(eventName, () => {
+            if (eventName === 'click') {
+                if (needInputUrl.includes(commandName)) {
+                    const value = window.prompt('请输入链接');
+                    execEditorCommand(commandName, value);
+                } else {
+                    execEditorCommand(commandName);
+                }
+            } else if (eventName === 'change') {
+                const className = `${commandName}-option`;
+                const optionSelectedIndex = document.getElementsByClassName(className);
+                const value = optionSelectedIndex[dom.selectedIndex].value;
+                // debugger
+                execEditorCommand(commandName, value);
+            }
+        });
+    };
+
+    const commands = [
+        'selectAll',
+        'copy',
+        'undo',
+        'redo',
+        // 'fontName',
+        // 'fontSize',
+        // 'heading',
+        'bold',
+        'italic',
+        'underline',
+        'strikeThrough',
+        // 'backColor',
+        // 'foreColor',
+        'superscript',
+        'subscript',
+        // 对光标插入位置或者所选内容进行文字对齐
+        'justifyCenter',
+        // 'justifyFull',
+        'justifyLeft',
+        'justifyRight',
+        // 对所选内容去除所有格式
+        'removeFormat',
+        'insertHorizontalRule',
+        'insertUnorderedList',
+        'insertOrderedList',
+        // 'increaseFontSize',
+        // 'decreaseFontSize',
+        // 'createLink',
+        'insertImage',
+        // 标记使用html标签还是css
+        // 'styleWithCSS',
+        // 'contentReadOnly',
+    ];
+
+    const commandZone = document.getElementById('commandZone');
+    const editor = document.getElementById('editor');
+    const hideIframe = document.getElementById('hideIframe');
+
+    const htmlList = commands.map((commandName) => {
+        const command = commandMap[commandName];
+        if (!command) {
+            return '';
+        }
+        if (command.render) {
+            return command.render();
+        }
+        // <button class="btn tool" id="${commandName}">${command.name}</button>
+        return `
+            <button class="btn tool" id="${commandName}">${command.name}</button>
+        `;
+    });
+    htmlList.unshift(saveBtnHtml);
+    htmlList.unshift(editBtnHtml);
+    commandZone.innerHTML =  htmlList.join('\n');
+    editor.innerHTML =  defaultHtml;
+    
+    const editable = document.getElementById('editable');
+    const saveBtn = document.getElementById('saveBtn');
+    function setContentEditable (value) {
+        editor.setAttribute('contentEditable', value);
+        if(value) {
+            editable.style.display = "none";
+            saveBtn.style.display = "inline";
+        } else {
+            editable.style.display = "inline";
+            saveBtn.style.display = "none";
+        }
+    }
+    
+    function onClickSaveBtn() {
+        const ele = document.getElementById("editorData")
+        ele.value = "jjj"
+        
+        setContentEditable(false);
+    }
+    
+    editable.addEventListener('click', (e) => {
+        setContentEditable(true);
+        editor.focus();
+    });
+    
+    hideIframe.addEventListener('load', (e) => {
+        const html = e.target.innerHTML.trim();
+        // var text = $(this).contents().find("body").text(); //获取到的是json的字符串
+        // var text = $(this).contents().find("body").text(); //获取到的是json的字符串
+        // var j = $.parseJSON(text);  //json字符串转换成json对象
+        // const obj = JSON.parse(json);
+        console.log(hideIframe.contentWindow.document.getElementsByTagName("body")[0].innerHTML)
+        // console.log(hideIframe.innerText)
+        // console.log(hideIframe.contents)
+    });
+
+    setTimeout(() => {
+        commands.forEach((commandName) => addEventListener(commandName));
+    }, 100);
+</script>
+</html>
