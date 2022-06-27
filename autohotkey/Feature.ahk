@@ -1,9 +1,6 @@
-﻿GroupAdd, WinGroup, ahk_class Progman ;win7桌面
-GroupAdd, WinGroup, ahk_class WorkerW
+﻿; MsgBox This is ok.  ; 可以用其当做调试语句
 
-GroupAdd, WinGroup, ahk_class CabinetWClass ;win7资管
-GroupAdd, WinGroup, ahk_class ExploreWClass
-
+; ------------------------重新设置窗口位置大小
 Resize(x, y, w, h)                        
 {
     WinRestore A                    ;如果当前窗口为最大化或者最小化状态，直接使用WinMove函数是不能移动和改变其大小的
@@ -11,35 +8,8 @@ Resize(x, y, w, h)
     WinMove, A,,x,y, w, h ;调用WinMove函数，按照设定值改变窗口位置和大小
 }
 
-ResizeByRatio(x_ratio, y_ratio)
-{
-    CoordMode, Mouse, Screen
-    MouseGetPos, xpos, ypos
-    
-    SysGet, Mon1, Monitor, 1
-    SysGet, Mon2, Monitor, 2
-    left:=Mon1Left
-    right:=Mon1Right
-    top:=Mon1Top
-    bottom:=Mon1Bottom
-    ;判断鼠标在哪个屏幕上
-    if(xpos > Mon1Right) {
-        left:=Mon2Left
-        right:=Mon2Right
-        top:=Mon2Top
-        bottom:=Mon2Bottom
-    }
-    ;MsgBox, Left: %left% -- Top: %top% -- Right: %right% -- Bottom %bottom%.
-
-    width:=right-left
-    height:=bottom-top
-
-    w:=width/x_ratio
-    h:=height/y_ratio
-    x:=(width-w)/2+left
-    y:=(height-h)/2+top
-    Resize(x, y, w, h)
-}
+; Ctrl+Alt+1重新设置窗口位置大小
+^!Numpad1:: Resize(430, 180, 1700, 1050)
 
 GetFilename(txt)
 {
@@ -47,7 +17,7 @@ GetFilename(txt)
 	return o
 }
 
-;RunOrActivateOrMinimizeProgram
+; ------------------------打开指定应用
 RAMP(ExePath) {    
 	tExe:=GetFilename(ExePath)
 	if (SubStr(tExe,-3)!=".exe")
@@ -67,6 +37,35 @@ RAMP(ExePath) {
 	}
 	return
 }
+
+OpenBaiduTranslate()
+{
+    RAMP("D:\Tool\BaiduTranslate\baidu-translate-client\百度翻译.exe")
+}
+
+; Ctrl+Up打开百度翻译
+; ^Up:: OpenBaiduTranslate()
+
+; ------------------------复制文本并发送快捷键
+CopyAndSendKey()
+{
+    Send ^{c}
+    ClipWait, 2
+	ifWinExist 沙拉查词-独立查词窗口 ahk_class Chrome_WidgetWin_1
+	{
+		WinActivate
+		Send ^{r}  ; 直接刷新沙拉查词
+	}
+	else
+	{
+		Send !{f}  ; 在chrom中为沙拉查词扩展设置的快捷键为Alt+F
+	}
+	
+}
+; Ctrl+Space复制当前光标选择文字，并发送快捷键打开chrom插件沙拉查词
+F4:: CopyAndSendKey()
+
+; ------------------------在资源管理界面打开Everything并搜索
 
 FindWithEverything()
 {
@@ -93,19 +92,24 @@ FindWithEverything()
             FilePath=d:\
     }
 
-    run "C:\Users\user\Downloads\Everything-1.4.1.1005.x64\Everything.exe" -search "%FilePath%%A_space%"
+    run "D:\Tool\Everything\Everything.exe" -search "%FilePath%%A_space%"
 }
 
-Test()
-{
-    RAMP("D:\APP\BaiduTranslate\baidu-translate-client\百度翻译.exe")
-}
-
-^!Numpad1:: ResizeByRatio(1.45, 1.3)
-
-^Up:: Test()
-
-#IfWinActive ahk_group WinGroup
+; Ctrl+F在资源管理界面打开Everything并搜索
+#IfWinActive ahk_class CabinetWClass  ; CabinetWClass是资源管理界面
 ^f:: FindWithEverything()
+#IfWinActive ahk_class Progman  ; Progman是桌面
+^f:: FindWithEverything()
+#IfWinActive
+
+CloseShaLaWindow()
+{
+	WinClose 沙拉查词-独立查词窗口 ahk_class Chrome_WidgetWin_1
+}
+
+#IfWinActive 沙拉查词-独立查词窗口 ahk_class Chrome_WidgetWin_1
+esc:: CloseShaLaWindow()
+#IfWinActive
+
 
 
