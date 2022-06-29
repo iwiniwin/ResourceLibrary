@@ -106,7 +106,7 @@
                 <input type="text" id="editorData" name="editorData" style="display:none;" />
                 <button class="btn" type="submit" onclick="onClickSaveBtn()">保存</button>
         </form>`
-    const defaultHtml = `<!--CONTENT-CODE-->`;
+    const defaultHtml = String.raw`<!--CONTENT-CODE-->`;
 
     const commandMap = {
         undo: {
@@ -313,6 +313,16 @@
             name: '复制',
             command: 'copy',
         },
+        copyAll: {
+            name: '复制全部',
+            command: 'copyAll',
+            func: () => {
+                commandMap["selectAll"].func();
+                document.execCommand("copy", false);
+                const selection = window.getSelection();
+                selection.removeAllRanges();
+            },
+        }
     };
 
     function execEditorCommand(name, args = null) {
@@ -409,8 +419,7 @@
     ];
 
     const mobileCommands = [
-        'selectAll',
-        'copy',
+        "copyAll",
     ];
 
     const commands = IsMobile() ? mobileCommands : defaultCommands;
