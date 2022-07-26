@@ -1,0 +1,1 @@
+"D:\APP\JetBrainsRider\JetBrains Rider 2022.1.1\bin\rider64.exe" "E:\PerfectWorld\Commands\artifacts\1.log"
